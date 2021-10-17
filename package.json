@@ -1,0 +1,31 @@
+{
+  "name": "@badger/sdk",
+  "version": "1.0.0",
+  "description": "Badger Protocol Typescript SDK",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Badger-Finance/badger-sdk",
+  "author": "Badger Finance",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf ./build",
+    "codegen": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.0",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "tslib": "^2.3.1",
+    "typechain": "^5.2.0",
+    "typescript": "^4.4.4"
+  }
+}
