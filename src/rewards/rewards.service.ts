@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { BadgerSDK } from '..';
+import { BadgerSDK } from '../sdk';
 import {
   BadgerTree,
   BadgerTree__factory,
