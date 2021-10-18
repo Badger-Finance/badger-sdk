@@ -8,3 +8,4 @@ build
 yarn-error.log
 
 src/contracts
+src/graphql/generated

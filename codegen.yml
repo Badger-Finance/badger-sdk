@@ -1,0 +1,14 @@
+overwrite: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+generates:
+  src/graphql/generated/badger.ts:
+    schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts
+    documents:
+      - src/graphql/fragments/sett.fragment.graphql
+      - src/graphql/queries/setts.query.graphql
+    plugins:
+      - typescript
+      - typescript-graphql-request
+      - typescript-operations

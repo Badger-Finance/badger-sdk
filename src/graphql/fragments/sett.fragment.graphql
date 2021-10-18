@@ -1,0 +1,12 @@
+fragment Sett on Sett {
+  id
+  token {
+    id
+    decimals
+  }
+  balance
+  netDeposit
+  netShareDeposit
+  pricePerFullShare
+  totalSupply
+}

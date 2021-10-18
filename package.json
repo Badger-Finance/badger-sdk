@@ -9,12 +9,17 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf ./build",
-    "codegen": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
+    "codegen:graphql": "graphql-codegen -c codegen.yml",
+    "codegen:contracts": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --runInBand --detectOpenHandles"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "1.21.4",
+    "@graphql-codegen/typescript": "1.22.0",
+    "@graphql-codegen/typescript-graphql-request": "3.2.0",
+    "@graphql-codegen/typescript-operations": "1.17.16",
     "@ethersproject/providers": "^5.4.5",
     "@typechain/ethers-v5": "^7.2.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -29,5 +34,10 @@
     "tslib": "^2.3.1",
     "typechain": "^5.2.0",
     "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "graphql": "^15.6.1",
+    "graphql-request": "^3.6.1",
+    "graphql-tag": "^2.12.5"
   }
 }
