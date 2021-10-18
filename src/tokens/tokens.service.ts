@@ -1,20 +1,21 @@
 import { ethers } from 'ethers';
-import { Network } from '../config/enums/network.enum';
 import { Erc20__factory } from '../contracts';
+import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
-import { SdkProvider } from '../types/sdk-provider';
 import { Token } from './interfaces/token.interface';
 
 export class TokensService extends Service {
   private tokens: Record<string, Token>;
 
-  constructor(network: Network, provider: SdkProvider) {
-    super(network, provider);
+  constructor(sdk: BadgerSDK) {
+    super(sdk);
     this.tokens = {};
   }
 
   async loadTokens(addresses: string[]): Promise<Record<string, Token>> {
-    const tokens = await Promise.all(addresses.map(async (addr) => this.loadToken(addr)));
+    const tokens = await Promise.all(
+      addresses.map(async (addr) => this.loadToken(addr)),
+    );
     return Object.fromEntries(tokens.map((token) => [token.address, token]));
   }
 

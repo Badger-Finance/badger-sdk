@@ -1,0 +1,52 @@
+import { ethers } from 'ethers';
+import { BadgerSDK } from '..';
+import { Sett__factory } from '../contracts';
+import { Service } from '../service';
+import { Sett } from './interfaces/sett.interface';
+
+export class SettsService extends Service {
+  private setts: Record<string, Sett>;
+
+  constructor(sdk: BadgerSDK) {
+    super(sdk);
+    this.setts = {};
+  }
+
+  async loadSett(address: string, update = false): Promise<Sett> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    if (!this.setts[checksumAddress] || update) {
+      const sett = Sett__factory.connect(checksumAddress, this.provider);
+      const [
+        name,
+        symbol,
+        decimals,
+        token,
+        available,
+        balance,
+        totalSupply,
+        pricePerFullShare,
+      ] = await Promise.all([
+        sett.name(),
+        sett.symbol(),
+        sett.decimals(),
+        sett.token(),
+        sett.available(),
+        sett.balance(),
+        sett.totalSupply(),
+        sett.getPricePerFullShare(),
+      ]);
+      this.setts[checksumAddress] = {
+        address: checksumAddress,
+        name,
+        symbol,
+        decimals,
+        token,
+        available: available.toNumber(),
+        totalSupply: totalSupply.toNumber(),
+        balance: balance.toNumber(),
+        pricePerFullShare: pricePerFullShare.toNumber(),
+      };
+    }
+    return this.setts[checksumAddress];
+  }
+}

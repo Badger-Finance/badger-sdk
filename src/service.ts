@@ -1,12 +1,15 @@
+import { BadgerSDK } from '.';
 import { Network } from './config/enums/network.enum';
 import { SdkProvider } from './types/sdk-provider';
 
 export abstract class Service {
-  protected network: Network;
-  protected provider: SdkProvider;
+  constructor(protected sdk: BadgerSDK) {}
 
-  constructor(network: Network, provider: SdkProvider) {
-    this.network = network;
-    this.provider = provider;
+  get provider(): SdkProvider {
+    return this.sdk.provider;
+  }
+
+  get network(): Network {
+    return this.sdk.network;
   }
 }

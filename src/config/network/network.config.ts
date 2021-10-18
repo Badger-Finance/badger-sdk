@@ -1,4 +1,4 @@
-import { Network } from "../enums/network.enum";
+import { Network } from '../enums/network.enum';
 
 export abstract class NetworkConfig {
   constructor(
