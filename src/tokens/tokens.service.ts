@@ -3,6 +3,7 @@ import { Erc20__factory } from '../contracts';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { Token } from './interfaces/token.interface';
+import { formatBalance } from './tokens.utils';
 
 export class TokensService extends Service {
   private tokens: Record<string, Token>;
@@ -23,16 +24,18 @@ export class TokensService extends Service {
     const checksumAddress = ethers.utils.getAddress(address);
     if (!this.tokens[checksumAddress]) {
       const token = Erc20__factory.connect(checksumAddress, this.provider);
-      const [name, symbol, decimals] = await Promise.all([
+      const [name, symbol, decimals, supply] = await Promise.all([
         token.name(),
         token.symbol(),
         token.decimals(),
+        token.totalSupply(),
       ]);
       this.tokens[checksumAddress] = {
         address: checksumAddress,
         name,
         symbol,
         decimals,
+        totalSupply: formatBalance(supply, decimals),
       };
     }
     return this.tokens[checksumAddress];

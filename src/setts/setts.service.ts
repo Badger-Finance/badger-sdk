@@ -2,6 +2,7 @@ import { ethers } from 'ethers';
 import { BadgerSDK } from '..';
 import { Sett__factory } from '../contracts';
 import { Service } from '../service';
+import { formatBalance } from '../tokens/tokens.utils';
 import { Sett } from './interfaces/sett.interface';
 
 export class SettsService extends Service {
@@ -41,10 +42,10 @@ export class SettsService extends Service {
         symbol,
         decimals,
         token,
-        available: available.toNumber(),
-        totalSupply: totalSupply.toNumber(),
-        balance: balance.toNumber(),
-        pricePerFullShare: pricePerFullShare.toNumber(),
+        available: formatBalance(available, decimals),
+        totalSupply: formatBalance(totalSupply, decimals),
+        balance: formatBalance(balance, decimals),
+        pricePerFullShare: formatBalance(pricePerFullShare, decimals),
       };
     }
     return this.setts[checksumAddress];

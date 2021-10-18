@@ -1,6 +1,6 @@
 {
   "name": "@badger-dao/sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Badger Protocol Typescript SDK",
   "main": "src/index.ts",
   "repository": "https://github.com/Badger-Finance/badger-sdk",
