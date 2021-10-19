@@ -5,6 +5,7 @@
 # Badger SDK
 
 BadgerDAO is a decentralized autonomous organization focused on bringing Bitcoin to DeFi.
+The Badger SDK provides easy access to the Badger Protocol on any chain, as well as fast access to the Badger API for JavaScript applcations.
 
 ![Version](https://img.shields.io/npm/v/@badger-dao/sdk)
 [![License](https://img.shields.io/npm/l/@badger-dao/sdk)](https://opensource.org/licenses/MIT)
@@ -12,8 +13,25 @@ BadgerDAO is a decentralized autonomous organization focused on bringing Bitcoin
 
 ## Documentation
 
-Add links / refs to docs
+- [Badger API Documentation](https://api.badger.com/docs/)
+
+## Installation
+
+Install the package:
+
+```bash
+yarn add @badger-dao/sdk
+```
 
 ## Getting Started
 
-Add getting started steps
+Utilizing the SDK requires an RPC provider:
+
+```js
+import BadgerSDK from '@badger-dao/sdk';
+
+const provider = new ethers.providers.JsonRpcProvider('https://myrpc.io/');
+const sdk = new BadgerSDK(1, provider);
+// or new BadgerSDK('ethereum', provider);
+// or new BadgerSDK('mainnet', provider);
+```

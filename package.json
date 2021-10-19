@@ -1,8 +1,9 @@
 {
   "name": "@badger-dao/sdk",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Badger Protocol Typescript SDK",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "repository": "https://github.com/Badger-Finance/badger-sdk",
   "author": "Badger DAO",
   "license": "MIT",
@@ -12,13 +13,14 @@
     "sdk"
   ],
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf ./build",
+    "build": "tsc -p .",
+    "clean": "rm -rf ./lib",
     "codegen:graphql": "graphql-codegen -c codegen.yml",
     "codegen:contracts": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --runInBand --detectOpenHandles"
+    "test": "jest --runInBand --detectOpenHandles",
+    "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
     "@ethersproject/providers": "^5.4.5",
