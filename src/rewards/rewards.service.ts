@@ -1,4 +1,3 @@
-import { ethers } from 'ethers';
 import { BadgerSDK } from '../sdk';
 import {
   BadgerTree,
@@ -9,6 +8,9 @@ import {
 import { RegistryKey } from '../registry/enums/registry-key.enum';
 import { Service } from '../service';
 import { EmissionSchedule } from './interfaces/emission-schedule.interface';
+import { Network } from '../config/enums/network.enum';
+import { formatBalance } from '../tokens/tokens.utils';
+import { ClaimOptions } from './interfaces/claim-options.interface';
 
 export class RewardsService extends Service {
   private loading: Promise<void>;
@@ -24,6 +26,24 @@ export class RewardsService extends Service {
     return this.loading;
   }
 
+  async claim(options: ClaimOptions) {
+    const { network } = this.config;
+    if (!this.badgerTree) {
+      throw new Error(`Badger Tree is not defined for ${network}`);
+    }
+    const { tokens, cumulativeAmounts, index, cycle, proof, claimAmounts } =
+      options;
+    const tx = await this.badgerTree.claim(
+      tokens,
+      cumulativeAmounts,
+      index,
+      cycle,
+      proof,
+      claimAmounts,
+    );
+    return tx.wait();
+  }
+
   async loadActiveSchedules(beneficiary: string): Promise<EmissionSchedule[]> {
     const schedules = await this.loadSchedules(beneficiary);
     const now = Number((Date.now() / 1000).toFixed());
@@ -33,8 +53,9 @@ export class RewardsService extends Service {
   }
 
   async loadSchedules(beneficiary: string): Promise<EmissionSchedule[]> {
+    const { network, tokens } = this.config;
     if (!this.rewardsLogger) {
-      throw new Error(`Rewards Logger is not defined for ${this.network}`);
+      throw new Error(`Rewards Logger is not defined for ${network}`);
     }
     const schedules = await this.rewardsLogger.getAllUnlockSchedulesFor(
       beneficiary,
@@ -43,9 +64,10 @@ export class RewardsService extends Service {
       schedules.map(async (schedule) => {
         const { token, totalAmount } = schedule;
         const tokenInfo = await this.sdk.tokens.loadToken(token);
-        const amount = Number(
-          ethers.utils.formatUnits(totalAmount, tokenInfo.decimals),
-        );
+        let amount = formatBalance(totalAmount, tokenInfo.decimals);
+        if (network === Network.Ethereum && token === tokens.DIGG) {
+          amount = await this.sdk.digg.convert(totalAmount);
+        }
         return {
           beneficiary,
           token,

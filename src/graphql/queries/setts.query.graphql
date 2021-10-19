@@ -1,7 +1,0 @@
-query Sett(
-  $id: ID!
-) {
-  sett(id: $id) {
-    ...Sett
-  }
-}

@@ -1,5 +1,5 @@
 import { BadgerSDK } from '.';
-import { Network } from './config/enums/network.enum';
+import { NetworkConfig } from './config/network/network.config';
 import { SdkProvider } from './types/sdk-provider';
 
 export abstract class Service {
@@ -9,7 +9,7 @@ export abstract class Service {
     return this.sdk.provider;
   }
 
-  get network(): Network {
+  get config(): NetworkConfig {
     return this.sdk.network;
   }
 }

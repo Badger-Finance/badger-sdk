@@ -1,12 +1,28 @@
 fragment Sett on Sett {
   id
+  name
+  symbol
+  decimals
+  totalSupply
   token {
     id
+    name
+    symbol
     decimals
+    totalSupply
   }
   balance
+  pricePerFullShare
   netDeposit
   netShareDeposit
-  pricePerFullShare
-  totalSupply
+  grossDeposit
+  grossShareDeposit
+  grossWithdraw
+  grossShareWithdraw
+  controller {
+    id
+  }
+  strategy {
+    id
+  }
 }

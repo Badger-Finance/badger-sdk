@@ -20,7 +20,7 @@ export class ibBTCService extends Service {
 
   async getPricePerFullShare(): Promise<number> {
     if (!this.ibBTC) {
-      throw new Error(`ibBTC is not defined on ${this.network}`);
+      throw new Error(`ibBTC is not defined on ${this.config.network}`);
     }
     const [pricePerFullShare, token] = await Promise.all([
       this.ibBTC.pricePerShare(),
@@ -30,7 +30,7 @@ export class ibBTCService extends Service {
   }
 
   private async init() {
-    if (this.network !== Network.Ethereum) {
+    if (this.config.network !== Network.Ethereum) {
       return;
     }
     this.ibBTC = Ibbtc__factory.connect(

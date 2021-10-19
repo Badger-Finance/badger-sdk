@@ -1,0 +1,8 @@
+query Sett(
+  $id: ID!
+  $block: Block_height
+) {
+  sett(id: $id, block: $block) {
+    ...Sett
+  }
+}
