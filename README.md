@@ -35,3 +35,13 @@ const sdk = new BadgerSDK(1, provider);
 // or new BadgerSDK('ethereum', provider);
 // or new BadgerSDK('mainnet', provider);
 ```
+
+or, utilizing the API requires only a network input:
+
+```js
+import BadgerAPI from '@badger-dao/sdk';
+
+const api = new BadgerAPI(1);
+// or new BadgerAPI('ethereum');
+// or new BadgerAPI('mainnet');
+```

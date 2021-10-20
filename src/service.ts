@@ -10,6 +10,6 @@ export abstract class Service {
   }
 
   get config(): NetworkConfig {
-    return this.sdk.network;
+    return this.sdk.config;
   }
 }

@@ -1,6 +1,6 @@
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
-import { ApiService } from './api/api.service';
+import { BadgerAPI } from './api';
 import { NetworkConfig } from './config/network/network.config';
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
@@ -11,9 +11,9 @@ import { TokensService } from './tokens/tokens.service';
 import { SdkProvider } from './types/sdk-provider';
 export declare class BadgerSDK {
     provider: SdkProvider;
-    network: NetworkConfig;
+    config: NetworkConfig;
     signer?: Signer;
-    readonly api: ApiService;
+    readonly api: BadgerAPI;
     readonly registry: RegistryService;
     readonly tokens: TokensService;
     readonly setts: SettsService;

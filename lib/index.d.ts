@@ -1,3 +1,4 @@
 import { BadgerSDK } from './sdk';
-export { BadgerSDK };
+import { BadgerAPI } from './api';
+export { BadgerSDK, BadgerAPI };
 export default BadgerSDK;
