@@ -2,6 +2,7 @@ import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
 import { BadgerAPI } from './api';
 import { NetworkConfig } from './config/network/network.config';
+import { SUPPORTED_NETWORKS } from './config/network/network.utils';
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
@@ -23,6 +24,7 @@ export class BadgerSDK {
   readonly ibbtc: ibBTCService;
 
   constructor(network: Networkish, public provider: SdkProvider) {
+    this.initialize();
     this.config = NetworkConfig.getConfig(network);
     this.signer = this.provider.getSigner();
 
@@ -37,5 +39,11 @@ export class BadgerSDK {
 
   async ready() {
     return Promise.all([this.registry.ready()]);
+  }
+
+  private initialize() {
+    for (const config of SUPPORTED_NETWORKS) {
+      NetworkConfig.register(config);
+    }
   }
 }

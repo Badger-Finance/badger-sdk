@@ -6,15 +6,14 @@ type Configs = Record<string, NetworkConfig>;
 
 export abstract class NetworkConfig {
   private static configs: Configs = {};
+
   constructor(
     readonly name: string,
     readonly network: Network,
     readonly id: number,
     readonly tokens: ContractRegistry,
     readonly setts: ContractRegistry,
-  ) {
-    NetworkConfig.register(this);
-  }
+  ) {}
 
   static register(config: NetworkConfig) {
     this.configs[config.network] = config;

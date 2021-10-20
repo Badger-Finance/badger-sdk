@@ -98,5 +98,4 @@ const setts = checksumEntries({
   BICVX_OLD: '0xE143aA25Eec81B4Fc952b38b6Bca8D2395481377',
 });
 
-const config = new EthereumConfig();
-export default config;
+export const ETH_CONFIG = new EthereumConfig();
