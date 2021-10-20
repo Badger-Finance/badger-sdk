@@ -3,7 +3,6 @@ import { Currency } from './enums/currency.enum';
 import { PriceSummary } from './interfaces/price-summary.interface';
 import { Network } from '../config/enums/network.enum';
 import { GasPrices } from './interfaces/gas-prices.interface';
-import { VERSION } from '../config/constants';
 import { MerkleProof } from './types/merkle-proof';
 
 const DEFAULT_URL = 'https://staging-api.badger.com/v2';
@@ -15,9 +14,6 @@ export class BadgerAPI {
   constructor(network: Network) {
     this.client = axios.create({
       baseURL: DEFAULT_URL,
-      headers: {
-        'User-Agent': `@badger-dao/sdk/${VERSION}`,
-      },
     });
     this.network = network;
   }
@@ -64,3 +60,9 @@ export class BadgerAPI {
     }
   }
 }
+
+export * from './enums';
+export * from './interfaces';
+export * from './types';
+
+export default BadgerAPI;

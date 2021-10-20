@@ -9,7 +9,7 @@ import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { SettsService } from './setts/setts.service';
 import { TokensService } from './tokens/tokens.service';
-import { SdkProvider } from './config/types/sdk-provider';
+import { SDKProvider } from './config/types/sdk-provider';
 
 export class BadgerSDK {
   public config: NetworkConfig;
@@ -23,7 +23,7 @@ export class BadgerSDK {
   readonly digg: DiggService;
   readonly ibbtc: ibBTCService;
 
-  constructor(network: Networkish, public provider: SdkProvider) {
+  constructor(network: Networkish, public provider: SDKProvider) {
     this.initialize();
     this.config = NetworkConfig.getConfig(network);
     this.signer = this.provider.getSigner();

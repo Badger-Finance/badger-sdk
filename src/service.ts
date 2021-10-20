@@ -1,11 +1,11 @@
 import { BadgerSDK } from '.';
 import { NetworkConfig } from './config/network/network.config';
-import { SdkProvider } from './config/types/sdk-provider';
+import { SDKProvider } from './config/types/sdk-provider';
 
 export abstract class Service {
   constructor(protected sdk: BadgerSDK) {}
 
-  get provider(): SdkProvider {
+  get provider(): SDKProvider {
     return this.sdk.provider;
   }
 

@@ -3,4 +3,4 @@ import {
   JsonRpcProvider,
 } from '@ethersproject/providers';
 
-export type SdkProvider = JsonRpcProvider | JsonRpcBatchProvider;
+export type SDKProvider = JsonRpcProvider | JsonRpcBatchProvider;
