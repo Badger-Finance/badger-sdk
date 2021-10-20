@@ -1,6 +1,6 @@
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
-import { ApiService } from './api/api.service';
+import { BadgerAPI } from './api';
 import { NetworkConfig } from './config/network/network.config';
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
@@ -11,20 +11,28 @@ import { TokensService } from './tokens/tokens.service';
 import { SdkProvider } from './types/sdk-provider';
 
 export class BadgerSDK {
-  public network: NetworkConfig;
+  public config: NetworkConfig;
   public signer?: Signer;
 
-  readonly api = new ApiService(this);
-  readonly registry = new RegistryService(this);
-  readonly tokens = new TokensService(this);
-  readonly setts = new SettsService(this);
-  readonly rewards = new RewardsService(this);
-  readonly digg = new DiggService(this);
-  readonly ibbtc = new ibBTCService(this);
+  readonly api: BadgerAPI;
+  readonly registry: RegistryService;
+  readonly tokens: TokensService;
+  readonly setts: SettsService;
+  readonly rewards: RewardsService;
+  readonly digg: DiggService;
+  readonly ibbtc: ibBTCService;
 
   constructor(network: Networkish, public provider: SdkProvider) {
-    this.network = NetworkConfig.getConfig(network);
+    this.config = NetworkConfig.getConfig(network);
     this.signer = this.provider.getSigner();
+
+    this.api = new BadgerAPI(this.config.network);
+    this.registry = new RegistryService(this);
+    this.tokens = new TokensService(this);
+    this.setts = new SettsService(this);
+    this.rewards = new RewardsService(this);
+    this.digg = new DiggService(this);
+    this.ibbtc = new ibBTCService(this);
   }
 
   async ready() {

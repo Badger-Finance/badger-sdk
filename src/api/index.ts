@@ -1,35 +1,35 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
-import { VERSION } from '../constants';
-import { BadgerSDK } from '../sdk';
-import { Service } from '../service';
 import { Currency } from './enums/currency.enum';
 import { PriceSummary } from './interfaces/price-summary.interface';
+import { Network } from '../config/enums/network.enum';
+import { VERSION } from '../constants';
 
 const DEFAULT_URL = 'https://api.badger.com/v2';
 
-export class ApiService extends Service {
+export class BadgerAPI {
   private readonly client: AxiosInstance;
+  private network: Network;
 
-  constructor(sdk: BadgerSDK) {
-    super(sdk);
+  constructor(network: Network) {
     this.client = axios.create({
       baseURL: DEFAULT_URL,
       headers: {
         'User-Agent': `@badger-dao/sdk/${VERSION}`,
       },
     });
+    this.network = network;
   }
 
   async loadPrices(currency = Currency.USD): Promise<PriceSummary> {
     return this.get('prices', {
-      chain: this.config.network,
+      chain: this.network,
       currency,
     });
   }
 
   async loadProof(address: string): Promise<string[]> {
     return this.get('proofs', {
-      chain: this.config.network,
+      chain: this.network,
       address,
     });
   }
