@@ -4,6 +4,8 @@ import { PriceSummary } from './interfaces/price-summary.interface';
 import { Network } from '../config/enums/network.enum';
 import { GasPrices } from './interfaces/gas-prices.interface';
 import { MerkleProof } from './types/merkle-proof';
+import { Account } from './interfaces/account.interface';
+import { Sett } from './interfaces/sett.interface';
 
 const DEFAULT_URL = 'https://staging-api.badger.com/v2';
 
@@ -22,6 +24,26 @@ export class BadgerAPI {
     return this.get('prices', {
       chain: this.network,
       currency,
+    });
+  }
+
+  async loadSetts(currency = Currency.USD): Promise<Sett[]> {
+    return this.get('setts', {
+      chain: this.network,
+      currency,
+    });
+  }
+
+  async loadSett(address: string, currency = Currency.USD): Promise<Sett> {
+    return this.get(`setts/${address}`, {
+      chain: this.network,
+      currency,
+    });
+  }
+
+  async loadAccount(address: string): Promise<Account> {
+    return this.get(`accounts/${address}`, {
+      chain: this.network,
     });
   }
 
