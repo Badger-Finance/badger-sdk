@@ -8,7 +8,6 @@ export abstract class NetworkConfig {
   private static configs: Configs = {};
 
   constructor(
-    readonly name: string,
     readonly network: Network,
     readonly id: number,
     readonly tokens: ContractRegistry,
@@ -18,7 +17,6 @@ export abstract class NetworkConfig {
   static register(config: NetworkConfig) {
     this.configs[config.network] = config;
     this.configs[config.id] = config;
-    this.configs[config.name] = config;
   }
 
   static getConfig(network: Networkish): NetworkConfig {

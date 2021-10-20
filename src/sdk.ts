@@ -1,8 +1,8 @@
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
 import { BadgerAPI } from './api';
+import { SUPPORTED_NETWORKS } from './config/constants';
 import { NetworkConfig } from './config/network/network.config';
-import { SUPPORTED_NETWORKS } from './config/network/network.utils';
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';

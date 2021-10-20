@@ -1,8 +1,8 @@
 export enum Network {
-  Ethereum = 'mainnet',
+  Ethereum = 'ethereum',
   Polygon = 'polygon',
   Arbitrum = 'arbitrum',
-  BinanceSmartChain = 'binance',
-  Avalance = 'avalanche',
+  BinanceSmartChain = 'binancesmartchain',
+  Avalanche = 'avalanche',
   Fantom = 'fantom',
 }

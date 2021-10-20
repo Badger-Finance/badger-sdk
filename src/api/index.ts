@@ -2,9 +2,10 @@ import axios, { AxiosError, AxiosInstance } from 'axios';
 import { Currency } from './enums/currency.enum';
 import { PriceSummary } from './interfaces/price-summary.interface';
 import { Network } from '../config/enums/network.enum';
-import { VERSION } from '../constants';
+import { GasPrices } from './interfaces/gas-prices.interface';
+import { VERSION } from '../config/constants';
 
-const DEFAULT_URL = 'https://api.badger.com/v2';
+const DEFAULT_URL = 'https://staging-api.badger.com/v2';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
@@ -31,6 +32,12 @@ export class BadgerAPI {
     return this.get('proofs', {
       chain: this.network,
       address,
+    });
+  }
+
+  async loadGasPrices(): Promise<GasPrices> {
+    return this.get('gas', {
+      chain: this.network,
     });
   }
 
