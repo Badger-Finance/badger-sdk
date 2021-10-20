@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { ContractRegistry } from '../../types/contract-registry';
+import { ContractRegistry } from '../types/contract-registry';
 
 export const checksumEntries = (
   registry: ContractRegistry,

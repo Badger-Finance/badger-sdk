@@ -1,5 +1,5 @@
 import { Networkish } from '@ethersproject/networks';
-import { ContractRegistry } from '../../types/contract-registry';
+import { ContractRegistry } from '../types/contract-registry';
 import { Network } from '../enums/network.enum';
 
 type Configs = Record<string, NetworkConfig>;

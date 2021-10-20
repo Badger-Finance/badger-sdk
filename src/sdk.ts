@@ -9,7 +9,7 @@ import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { SettsService } from './setts/setts.service';
 import { TokensService } from './tokens/tokens.service';
-import { SdkProvider } from './types/sdk-provider';
+import { SdkProvider } from './config/types/sdk-provider';
 
 export class BadgerSDK {
   public config: NetworkConfig;

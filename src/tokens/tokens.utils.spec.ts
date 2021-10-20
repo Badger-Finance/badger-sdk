@@ -1,4 +1,4 @@
-import { formatBalance } from "./tokens.utils";
+import { formatBalance } from './tokens.utils';
 
 describe('tokens.utils', () => {
   describe('formatBalance', () => {

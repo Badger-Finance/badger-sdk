@@ -4,6 +4,7 @@ import { PriceSummary } from './interfaces/price-summary.interface';
 import { Network } from '../config/enums/network.enum';
 import { GasPrices } from './interfaces/gas-prices.interface';
 import { VERSION } from '../config/constants';
+import { MerkleProof } from './types/merkle-proof';
 
 const DEFAULT_URL = 'https://staging-api.badger.com/v2';
 
@@ -28,7 +29,7 @@ export class BadgerAPI {
     });
   }
 
-  async loadProof(address: string): Promise<string[]> {
+  async loadProof(address: string): Promise<MerkleProof> {
     return this.get('proofs', {
       chain: this.network,
       address,
