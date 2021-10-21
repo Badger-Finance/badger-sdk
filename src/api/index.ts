@@ -1,9 +1,12 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 import { Currency } from './enums/currency.enum';
-import { PriceSummary } from './interfaces/price-summary.interface';
 import { Network } from '../config/enums/network.enum';
 import { GasPrices } from './interfaces/gas-prices.interface';
 import { MerkleProof } from './types/merkle-proof';
+import { Account } from './interfaces/account.interface';
+import { Sett } from './interfaces/sett.interface';
+import { PriceSummary, TokenConfiguration } from './types';
+import { ProtocolMetrics, ProtocolSummary } from './interfaces';
 
 const DEFAULT_URL = 'https://staging-api.badger.com/v2';
 
@@ -25,6 +28,32 @@ export class BadgerAPI {
     });
   }
 
+  async loadSetts(currency = Currency.USD): Promise<Sett[]> {
+    return this.get('setts', {
+      chain: this.network,
+      currency,
+    });
+  }
+
+  async loadSett(address: string, currency = Currency.USD): Promise<Sett> {
+    return this.get(`setts/${address}`, {
+      chain: this.network,
+      currency,
+    });
+  }
+
+  async loadAccount(address: string): Promise<Account> {
+    return this.get(`accounts/${address}`, {
+      chain: this.network,
+    });
+  }
+
+  async loadTokens(): Promise<TokenConfiguration> {
+    return this.get('tokens', {
+      chain: this.network,
+    });
+  }
+
   async loadProof(address: string): Promise<MerkleProof> {
     return this.get('proofs', {
       chain: this.network,
@@ -35,6 +64,19 @@ export class BadgerAPI {
   async loadGasPrices(): Promise<GasPrices> {
     return this.get('gas', {
       chain: this.network,
+    });
+  }
+
+  async loadProtocolMetrics(): Promise<ProtocolMetrics> {
+    return this.get('metrics', {
+      chain: this.network,
+    });
+  }
+
+  async loadProtocolSummary(currency = Currency.USD): Promise<ProtocolSummary> {
+    return this.get('value', {
+      chain: this.network,
+      currency,
     });
   }
 

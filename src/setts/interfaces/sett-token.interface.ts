@@ -1,6 +1,6 @@
 import { Token } from '../../tokens/interfaces/token.interface';
 
-export interface Sett extends Token {
+export interface SettToken extends Token {
   available: number;
   balance: number;
   totalSupply: number;

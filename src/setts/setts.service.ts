@@ -3,17 +3,17 @@ import { BadgerSDK } from '..';
 import { Sett__factory } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
-import { Sett } from './interfaces/sett.interface';
+import { SettToken } from './interfaces/sett-token.interface';
 
 export class SettsService extends Service {
-  private setts: Record<string, Sett>;
+  private setts: Record<string, SettToken>;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
     this.setts = {};
   }
 
-  async loadSett(address: string, update = false): Promise<Sett> {
+  async loadSett(address: string, update = false): Promise<SettToken> {
     const checksumAddress = ethers.utils.getAddress(address);
     if (!this.setts[checksumAddress] || update) {
       const sett = Sett__factory.connect(checksumAddress, this.provider);
