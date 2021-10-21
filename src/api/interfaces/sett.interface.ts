@@ -5,15 +5,18 @@ import { TokenBalance } from './token-balance.interface';
 import { ValueSource } from './value-source.interface';
 
 export interface Sett {
-  address: string;
+  name: string;
+  value: number;
+  balance: number;
   asset: string;
-  vaultAsset: string;
+  settAsset: string;
   boostable: boolean;
   deprecated: boolean;
   experimental: boolean;
   bouncer: BouncerType;
-  maxApr?: number;
+  apr: number;
   minApr?: number;
+  maxApr?: number;
   pricePerFullShare: number;
   sources: ValueSource[];
   state: SettState;

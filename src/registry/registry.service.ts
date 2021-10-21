@@ -24,7 +24,11 @@ export class RegistryService extends Service {
 
   async get(key: string): Promise<string | undefined> {
     if (!this.entries[key]) {
-      this.entries[key] = await this.registry.get(key);
+      try {
+        this.entries[key] = await this.registry.get(key);
+      } catch {
+        console.error(`Failed to get ${key}`);
+      }
     }
     return this.entries[key];
   }
