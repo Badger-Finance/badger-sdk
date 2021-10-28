@@ -12,4 +12,8 @@ export abstract class Service {
   get config(): NetworkConfig {
     return this.sdk.config;
   }
+
+  get address(): string | undefined {
+    return this.sdk.address;
+  }
 }

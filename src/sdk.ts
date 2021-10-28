@@ -12,8 +12,11 @@ import { TokensService } from './tokens/tokens.service';
 import { SDKProvider } from './config/types/sdk-provider';
 
 export class BadgerSDK {
+  private static initialized = false;
+  private loading: Promise<void>;
   public config: NetworkConfig;
   public signer?: Signer;
+  public address?: string;
 
   readonly api: BadgerAPI;
   readonly registry: RegistryService;
@@ -24,9 +27,15 @@ export class BadgerSDK {
   readonly ibbtc: ibBTCService;
 
   constructor(network: Networkish, public provider: SDKProvider) {
-    this.initialize();
+    if (!BadgerSDK.initialized) {
+      for (const config of SUPPORTED_NETWORKS) {
+        NetworkConfig.register(config);
+      }
+      BadgerSDK.initialized = true;
+    }
     this.config = NetworkConfig.getConfig(network);
     this.signer = this.provider.getSigner();
+    this.loading = this.initialize();
 
     this.api = new BadgerAPI(this.config.network);
     this.registry = new RegistryService(this);
@@ -38,12 +47,14 @@ export class BadgerSDK {
   }
 
   async ready() {
-    return Promise.all([this.registry.ready()]);
+    return Promise.all([this.loading, this.rewards.ready()]);
   }
 
-  private initialize() {
-    for (const config of SUPPORTED_NETWORKS) {
-      NetworkConfig.register(config);
-    }
+  private async initialize() {
+    try {
+      if (this.signer) {
+        this.address = await this.signer.getAddress();
+      }
+    } catch {} // ignore errors from getting address
   }
 }

@@ -1,3 +1,5 @@
+import { TokenBalance } from './token-balance.interface';
+
 export interface SettData {
   address: string;
   name: string;
@@ -9,4 +11,6 @@ export interface SettData {
   earnedValue: number;
   depositedBalance: number;
   withdrawnBalance: number;
+  tokens: TokenBalance[];
+  earnedTokens: TokenBalance[];
 }
