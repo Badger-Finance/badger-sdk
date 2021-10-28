@@ -15,4 +15,4 @@ export const SUPPORTED_NETWORKS = [
   ARB_CONFIG,
 ];
 
-export const VERSION = '1.0.23';
+export const VERSION = '1.0.35';

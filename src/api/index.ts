@@ -1,12 +1,16 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 import { Currency } from './enums/currency.enum';
 import { Network } from '../config/enums/network.enum';
-import { GasPrices } from './interfaces/gas-prices.interface';
+import { GasPrices } from './types/gas-prices';
 import { MerkleProof } from './types/merkle-proof';
 import { Account } from './interfaces/account.interface';
 import { Sett } from './interfaces/sett.interface';
 import { PriceSummary, TokenConfiguration } from './types';
 import { ProtocolMetrics, ProtocolSummary } from './interfaces';
+import { Networkish } from '@ethersproject/networks';
+import { NetworkConfig } from '../config/network/network.config';
+import { SUPPORTED_NETWORKS } from '../config/constants';
+import { UserBoostData } from './interfaces/user-boost-data.interface';
 
 const DEFAULT_URL = 'https://staging-api.badger.com/v2';
 
@@ -14,11 +18,12 @@ export class BadgerAPI {
   private readonly client: AxiosInstance;
   private network: Network;
 
-  constructor(network: Network) {
+  constructor(network: Networkish, baseURL = DEFAULT_URL) {
+    this.initialize();
     this.client = axios.create({
-      baseURL: DEFAULT_URL,
+      baseURL,
     });
-    this.network = network;
+    this.network = NetworkConfig.getConfig(network).network;
   }
 
   async loadPrices(currency = Currency.USD): Promise<PriceSummary> {
@@ -80,6 +85,10 @@ export class BadgerAPI {
     });
   }
 
+  async loadLeaderboard(): Promise<UserBoostData[]> {
+    return this.get('leaderboards/complete');
+  }
+
   private async get<T>(
     path: string,
     params: Record<string, string> = {},
@@ -99,6 +108,12 @@ export class BadgerAPI {
       }
 
       throw error;
+    }
+  }
+
+  private initialize() {
+    for (const config of SUPPORTED_NETWORKS) {
+      NetworkConfig.register(config);
     }
   }
 }
