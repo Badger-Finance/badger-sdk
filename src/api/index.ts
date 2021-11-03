@@ -86,7 +86,9 @@ export class BadgerAPI {
   }
 
   async loadLeaderboard(): Promise<UserBoostData[]> {
-    return this.get('leaderboards/complete');
+    return this.get('leaderboards/complete', {
+      chain: this.network,
+    });
   }
 
   private async get<T>(
