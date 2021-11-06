@@ -12,7 +12,7 @@ import { NetworkConfig } from '../config/network/network.config';
 import { SUPPORTED_NETWORKS } from '../config/constants';
 import { UserBoostData } from './interfaces/user-boost-data.interface';
 
-export const DEFAULT_API_URL = 'https://staging-api.badger.com/v2';
+export const DEFAULT_API_URL = 'https://api.badger.com/v2';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
