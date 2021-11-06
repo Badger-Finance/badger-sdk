@@ -1,6 +1,6 @@
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
-import { BadgerAPI } from './api';
+import { BadgerAPI, DEFAULT_API_URL } from './api';
 import { SUPPORTED_NETWORKS } from './config/constants';
 import { NetworkConfig } from './config/network/network.config';
 import { DiggService } from './digg/digg.service';
@@ -26,7 +26,7 @@ export class BadgerSDK {
   readonly digg: DiggService;
   readonly ibbtc: ibBTCService;
 
-  constructor(network: Networkish, public provider: SDKProvider) {
+  constructor(network: Networkish, public provider: SDKProvider, baseURL = DEFAULT_API_URL) {
     if (!BadgerSDK.initialized) {
       for (const config of SUPPORTED_NETWORKS) {
         NetworkConfig.register(config);
@@ -37,7 +37,7 @@ export class BadgerSDK {
     this.signer = this.provider.getSigner();
     this.loading = this.initialize();
 
-    this.api = new BadgerAPI(this.config.network);
+    this.api = new BadgerAPI(this.config.network, baseURL);
     this.registry = new RegistryService(this);
     this.tokens = new TokensService(this);
     this.setts = new SettsService(this);

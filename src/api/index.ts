@@ -12,13 +12,13 @@ import { NetworkConfig } from '../config/network/network.config';
 import { SUPPORTED_NETWORKS } from '../config/constants';
 import { UserBoostData } from './interfaces/user-boost-data.interface';
 
-const DEFAULT_URL = 'https://staging-api.badger.com/v2';
+export const DEFAULT_API_URL = 'https://staging-api.badger.com/v2';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
   private network: Network;
 
-  constructor(network: Networkish, baseURL = DEFAULT_URL) {
+  constructor(network: Networkish, baseURL = DEFAULT_API_URL) {
     this.initialize();
     this.client = axios.create({
       baseURL,
