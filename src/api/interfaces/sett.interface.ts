@@ -3,6 +3,7 @@ import { SettState } from '../enums/sett-state.enum';
 import { SettStrategy } from './sett-strategy.interface';
 import { TokenBalance } from './token-balance.interface';
 import { ValueSource } from './value-source.interface';
+import { Protocol } from '../enums/protocol.enum';
 
 export interface Sett {
   name: string;
@@ -18,6 +19,7 @@ export interface Sett {
   minApr?: number;
   maxApr?: number;
   pricePerFullShare: number;
+  protocol: Protocol;
   sources: ValueSource[];
   state: SettState;
   tokens: TokenBalance[];
