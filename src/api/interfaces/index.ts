@@ -1,4 +1,5 @@
 export { Account } from './account.interface';
+export { BoostConfig } from './boost-config.interface';
 export { GasFees } from './gas-fees.interface';
 export { Performance } from './performance.interface';
 export { ProtocolMetrics } from './protocol-metrics.interface';

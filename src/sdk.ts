@@ -26,7 +26,11 @@ export class BadgerSDK {
   readonly digg: DiggService;
   readonly ibbtc: ibBTCService;
 
-  constructor(network: Networkish, public provider: SDKProvider, baseURL = DEFAULT_API_URL) {
+  constructor(
+    network: Networkish,
+    public provider: SDKProvider,
+    baseURL = DEFAULT_API_URL,
+  ) {
     if (!BadgerSDK.initialized) {
       for (const config of SUPPORTED_NETWORKS) {
         NetworkConfig.register(config);

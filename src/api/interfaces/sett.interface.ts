@@ -4,6 +4,7 @@ import { SettStrategy } from './sett-strategy.interface';
 import { TokenBalance } from './token-balance.interface';
 import { ValueSource } from './value-source.interface';
 import { Protocol } from '../enums/protocol.enum';
+import { BoostConfig } from './boost-config.interface';
 
 export interface Sett {
   name: string;
@@ -11,9 +12,7 @@ export interface Sett {
   balance: number;
   asset: string;
   settAsset: string;
-  boostable: boolean;
-  deprecated: boolean;
-  experimental: boolean;
+  boost: BoostConfig;
   bouncer: BouncerType;
   apr: number;
   minApr?: number;
