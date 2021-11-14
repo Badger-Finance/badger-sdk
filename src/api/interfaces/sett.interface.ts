@@ -15,6 +15,7 @@ export interface Sett {
   boost: BoostConfig;
   bouncer: BouncerType;
   apr: number;
+  new: boolean;
   minApr?: number;
   maxApr?: number;
   pricePerFullShare: number;
