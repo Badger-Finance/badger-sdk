@@ -1,6 +1,8 @@
 export { Account } from './account.interface';
 export { BoostConfig } from './boost-config.interface';
 export { GasFees } from './gas-fees.interface';
+export { LeaderBoardData } from './leaderboard-data.interface';
+export { LeaderboardSummary } from './leaderboard-summary.interface';
 export { Performance } from './performance.interface';
 export { ProtocolMetrics } from './protocol-metrics.interface';
 export { ProtocolSummary } from './protocol-summary.interface';

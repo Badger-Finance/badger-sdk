@@ -1,3 +1,4 @@
+export { BadgerType } from './badger-type.enum';
 export { BouncerType } from './bouncer-type.enum';
 export { Currency } from './currency.enum';
 export { GasSpeed } from './gas-speed.enum';
