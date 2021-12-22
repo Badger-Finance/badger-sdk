@@ -3,7 +3,7 @@ export interface UserBoostData {
   rank: number;
   boost: number;
   stakeRatio: number;
-  nftMultiplier: number;
+  nftBalance: number;
   nativeBalance: number;
   nonNativeBalance: number;
 }
