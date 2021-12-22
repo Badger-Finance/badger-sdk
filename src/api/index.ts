@@ -13,6 +13,10 @@ import {
   ProtocolSummary,
   Sett,
 } from './interfaces';
+import { GasPrices } from './types/gas-prices';
+import { MerkleProof } from './types/merkle-proof';
+import { Account } from './interfaces/account.interface';
+import { Vault } from './interfaces/vault.interface';
 import { Networkish } from '@ethersproject/networks';
 import { NetworkConfig } from '../config/network/network.config';
 import { SUPPORTED_NETWORKS } from '../config/constants';
@@ -45,7 +49,35 @@ export class BadgerAPI {
     });
   }
 
+<<<<<<< HEAD
   async loadSetts(currency = Currency.USD, network?: Network): Promise<Sett[]> {
+=======
+  async loadVaults(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault[]> {
+    return this.get('vaults', {
+      chain: network ?? this.network,
+      currency,
+    });
+  }
+
+  async loadVault(
+    address: string,
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault> {
+    return this.get(`vaults/${address}`, {
+      chain: network ?? this.network,
+      currency,
+    });
+  }
+
+  async loadSetts(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault[]> {
+>>>>>>> chore: update exports + add husky
     return this.get('setts', {
       chain: network ?? this.network,
       currency,
@@ -56,7 +88,11 @@ export class BadgerAPI {
     address: string,
     currency = Currency.USD,
     network?: Network,
+<<<<<<< HEAD
   ): Promise<Sett> {
+=======
+  ): Promise<Vault> {
+>>>>>>> chore: update exports + add husky
     return this.get(`setts/${address}`, {
       chain: network ?? this.network,
       currency,
@@ -104,7 +140,11 @@ export class BadgerAPI {
     });
   }
 
+<<<<<<< HEAD
   async loadLeaderboardSummary(network?: Network): Promise<LeaderboardSummary> {
+=======
+  async loadLeaderboardSummary(network?: Network): Promise<UserBoostData[]> {
+>>>>>>> chore: update exports + add husky
     return this.get('leaderboards', {
       chain: network ?? this.network,
     });

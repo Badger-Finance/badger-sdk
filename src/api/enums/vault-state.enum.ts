@@ -1,4 +1,4 @@
-export enum SettState {
+export enum VaultState {
   Open = 'open',
   Guarded = 'guarded',
   Experimental = 'experimental',
