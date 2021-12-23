@@ -6,7 +6,7 @@ export interface Vault {
   value: number;
   balance: number;
   asset: string;
-  settAsset: string;
+  vaultAsset: string;
   boost: BoostConfig;
   bouncer: BouncerType;
   apr: number;

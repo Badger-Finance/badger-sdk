@@ -10,6 +10,7 @@ export interface Account {
   data: Record<string, VaultData>;
   claimableBalances: Record<string, string>;
   stakeRatio: number;
+  nftBalance: number;
   nativeBalance: number;
   nonNativeBalance: number;
 }
