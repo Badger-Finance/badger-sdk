@@ -1,10 +1,5 @@
-import { BouncerType } from '../enums';
-import { VaultState } from '../enums/vault-state.enum';
-import { VaultStrategy } from './vault-strategy.interface';
-import { TokenBalance } from './token-balance.interface';
-import { ValueSource } from './value-source.interface';
-import { Protocol } from '../enums/protocol.enum';
-import { BoostConfig } from './boost-config.interface';
+import { BoostConfig, ValueSource, TokenBalance, VaultStrategy } from '.';
+import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
 
 export interface Vault {
   name: string;
@@ -26,4 +21,5 @@ export interface Vault {
   underlyingToken: string;
   vaultToken: string;
   strategy: VaultStrategy;
+  type: VaultType;
 }
