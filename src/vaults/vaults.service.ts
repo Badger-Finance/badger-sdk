@@ -3,19 +3,19 @@ import { BadgerSDK } from '..';
 import { Sett__factory } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
-import { SettToken } from './interfaces/sett-token.interface';
+import { VaultToken } from './interfaces/vault-token.interface';
 
-export class SettsService extends Service {
-  private setts: Record<string, SettToken>;
+export class VaultsService extends Service {
+  private vaults: Record<string, VaultToken>;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
-    this.setts = {};
+    this.vaults = {};
   }
 
-  async loadSett(address: string, update = false): Promise<SettToken> {
+  async loadVault(address: string, update = false): Promise<VaultToken> {
     const checksumAddress = ethers.utils.getAddress(address);
-    if (!this.setts[checksumAddress] || update) {
+    if (!this.vaults[checksumAddress] || update) {
       const sett = Sett__factory.connect(checksumAddress, this.provider);
       const [
         name,
@@ -36,7 +36,7 @@ export class SettsService extends Service {
         sett.totalSupply(),
         sett.getPricePerFullShare(),
       ]);
-      this.setts[checksumAddress] = {
+      this.vaults[checksumAddress] = {
         address: checksumAddress,
         name,
         symbol,
@@ -48,6 +48,6 @@ export class SettsService extends Service {
         pricePerFullShare: formatBalance(pricePerFullShare, decimals),
       };
     }
-    return this.setts[checksumAddress];
+    return this.vaults[checksumAddress];
   }
 }
