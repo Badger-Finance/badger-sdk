@@ -1,4 +1,4 @@
-export interface SettStrategy {
+export interface VaultStrategy {
   address: string;
   withdrawFee: number;
   performanceFee: number;

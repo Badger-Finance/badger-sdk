@@ -1,4 +1,4 @@
-import { SettData } from './sett-data.interface';
+import { VaultData } from './vault-data.interface';
 
 export interface Account {
   address: string;
@@ -7,7 +7,7 @@ export interface Account {
   boost: number;
   boostRank: number;
   multipliers: Record<string, number>;
-  data: Record<string, SettData>;
+  data: Record<string, VaultData>;
   claimableBalances: Record<string, string>;
   stakeRatio: number;
   nativeBalance: number;

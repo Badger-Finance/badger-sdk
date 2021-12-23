@@ -1,4 +1,4 @@
-export interface SettSnapshot {
+export interface VaultSnapshot {
   address: string;
   block: number;
   timestamp: number;

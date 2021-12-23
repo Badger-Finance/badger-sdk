@@ -1,6 +1,6 @@
 import { TokenBalance } from './token-balance.interface';
 
-export interface SettData {
+export interface VaultData {
   address: string;
   name: string;
   symbol: string;

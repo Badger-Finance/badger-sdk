@@ -1,12 +1,12 @@
 import { BouncerType } from '../enums';
-import { SettState } from '../enums/sett-state.enum';
-import { SettStrategy } from './sett-strategy.interface';
+import { VaultState } from '../enums/vault-state.enum';
+import { VaultStrategy } from './vault-strategy.interface';
 import { TokenBalance } from './token-balance.interface';
 import { ValueSource } from './value-source.interface';
 import { Protocol } from '../enums/protocol.enum';
 import { BoostConfig } from './boost-config.interface';
 
-export interface Sett {
+export interface Vault {
   name: string;
   value: number;
   balance: number;
@@ -21,9 +21,9 @@ export interface Sett {
   pricePerFullShare: number;
   protocol: Protocol;
   sources: ValueSource[];
-  state: SettState;
+  state: VaultState;
   tokens: TokenBalance[];
   underlyingToken: string;
-  settToken: string;
-  strategy: SettStrategy;
+  vaultToken: string;
+  strategy: VaultStrategy;
 }

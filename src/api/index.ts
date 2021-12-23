@@ -1,16 +1,22 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
-import { Currency } from './enums/currency.enum';
 import { Network } from '../config/enums/network.enum';
-import { GasPrices } from './types/gas-prices';
-import { MerkleProof } from './types/merkle-proof';
-import { Account } from './interfaces/account.interface';
-import { Sett } from './interfaces/sett.interface';
-import { PriceSummary, TokenConfiguration } from './types';
-import { ProtocolMetrics, ProtocolSummary } from './interfaces';
+import {
+  GasPrices,
+  MerkleProof,
+  PriceSummary,
+  TokenConfiguration,
+} from './types';
+import {
+  Account,
+  LeaderboardSummary,
+  ProtocolMetrics,
+  ProtocolSummary,
+  Vault,
+} from './interfaces';
 import { Networkish } from '@ethersproject/networks';
 import { NetworkConfig } from '../config/network/network.config';
 import { SUPPORTED_NETWORKS } from '../config/constants';
-import { UserBoostData } from './interfaces/user-boost-data.interface';
+import { Currency } from './enums';
 
 export const DEFAULT_API_URL = 'https://api.badger.com/v2';
 
@@ -18,7 +24,10 @@ export class BadgerAPI {
   private readonly client: AxiosInstance;
   private network: Network;
 
-  constructor(network: Networkish, baseURL = DEFAULT_API_URL) {
+  constructor(
+    network: Networkish = Network.Ethereum,
+    baseURL = DEFAULT_API_URL,
+  ) {
     this.initialize();
     this.client = axios.create({
       baseURL,
@@ -26,68 +35,102 @@ export class BadgerAPI {
     this.network = NetworkConfig.getConfig(network).network;
   }
 
-  async loadPrices(currency = Currency.USD): Promise<PriceSummary> {
+  async loadPrices(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<PriceSummary> {
     return this.get('prices', {
-      chain: this.network,
+      chain: network ?? this.network,
       currency,
     });
   }
 
-  async loadSetts(currency = Currency.USD): Promise<Sett[]> {
+  async loadVaults(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault[]> {
+    return this.get('vaults', {
+      chain: network ?? this.network,
+      currency,
+    });
+  }
+
+  async loadVault(
+    address: string,
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault> {
+    return this.get(`vaults/${address}`, {
+      chain: network ?? this.network,
+      currency,
+    });
+  }
+
+  async loadSetts(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault[]> {
     return this.get('setts', {
-      chain: this.network,
+      chain: network ?? this.network,
       currency,
     });
   }
 
-  async loadSett(address: string, currency = Currency.USD): Promise<Sett> {
+  async loadSett(
+    address: string,
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<Vault> {
     return this.get(`setts/${address}`, {
-      chain: this.network,
+      chain: network ?? this.network,
       currency,
     });
   }
 
-  async loadAccount(address: string): Promise<Account> {
+  async loadAccount(address: string, network?: Network): Promise<Account> {
     return this.get(`accounts/${address}`, {
-      chain: this.network,
+      chain: network ?? this.network,
     });
   }
 
-  async loadTokens(): Promise<TokenConfiguration> {
+  async loadTokens(network?: Network): Promise<TokenConfiguration> {
     return this.get('tokens', {
-      chain: this.network,
+      chain: network ?? this.network,
     });
   }
 
-  async loadProof(address: string): Promise<MerkleProof> {
+  async loadProof(address: string, network?: Network): Promise<MerkleProof> {
     return this.get('proofs', {
-      chain: this.network,
+      chain: network ?? this.network,
       address,
     });
   }
 
-  async loadGasPrices(): Promise<GasPrices> {
+  async loadGasPrices(network?: Network): Promise<GasPrices> {
     return this.get('gas', {
-      chain: this.network,
+      chain: network ?? this.network,
     });
   }
 
-  async loadProtocolMetrics(): Promise<ProtocolMetrics> {
+  async loadProtocolMetrics(network?: Network): Promise<ProtocolMetrics> {
     return this.get('metrics', {
-      chain: this.network,
+      chain: network ?? this.network,
     });
   }
 
-  async loadProtocolSummary(currency = Currency.USD): Promise<ProtocolSummary> {
+  async loadProtocolSummary(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<ProtocolSummary> {
     return this.get('value', {
-      chain: this.network,
+      chain: network ?? this.network,
       currency,
     });
   }
 
-  async loadLeaderboard(): Promise<UserBoostData[]> {
-    return this.get('leaderboards/complete', {
-      chain: this.network,
+  async loadLeaderboardSummary(network?: Network): Promise<LeaderboardSummary> {
+    return this.get('leaderboards', {
+      chain: network ?? this.network,
     });
   }
 
@@ -105,6 +148,10 @@ export class BadgerAPI {
 
       if (response) {
         const { status } = response;
+
+        if (status === 404) {
+          return {} as T;
+        }
 
         throw new Error(status.toFixed());
       }
