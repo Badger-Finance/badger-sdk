@@ -1,7 +1,7 @@
 import { Registry, Registry__factory } from '../contracts';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
-import { RegistryVault } from './interfaces/registry-vault.interface';
+import { VaultInfo } from './interfaces/vault-info.interface';
 
 export class RegistryService extends Service {
   private entries: Record<string, string> = {};
@@ -26,7 +26,7 @@ export class RegistryService extends Service {
     return this.entries[key];
   }
 
-  async getProductionVaults(): Promise<RegistryVault[]> {
+  async getProductionVaults(): Promise<VaultInfo[]> {
     return this.registry.getProductionVaults();
   }
 }
