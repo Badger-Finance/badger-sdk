@@ -12,44 +12,44 @@ import {
   BaseContract,
   ContractTransaction,
   CallOverrides,
-} from "ethers";
-import { BytesLike } from "@ethersproject/bytes";
-import { Listener, Provider } from "@ethersproject/providers";
-import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
-import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
+} from 'ethers';
+import { BytesLike } from '@ethersproject/bytes';
+import { Listener, Provider } from '@ethersproject/providers';
+import { FunctionFragment, EventFragment, Result } from '@ethersproject/abi';
+import type { TypedEventFilter, TypedEvent, TypedListener } from './common';
 
 interface Erc20Interface extends ethers.utils.Interface {
   functions: {
-    "name()": FunctionFragment;
-    "totalSupply()": FunctionFragment;
-    "decimals()": FunctionFragment;
-    "balanceOf(address)": FunctionFragment;
-    "symbol()": FunctionFragment;
-    "allowance(address,address)": FunctionFragment;
+    'name()': FunctionFragment;
+    'totalSupply()': FunctionFragment;
+    'decimals()': FunctionFragment;
+    'balanceOf(address)': FunctionFragment;
+    'symbol()': FunctionFragment;
+    'allowance(address,address)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: "name", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'name', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "totalSupply",
-    values?: undefined
+    functionFragment: 'totalSupply',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "decimals", values?: undefined): string;
-  encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
-  encodeFunctionData(functionFragment: "symbol", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'balanceOf', values: [string]): string;
+  encodeFunctionData(functionFragment: 'symbol', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "allowance",
-    values: [string, string]
+    functionFragment: 'allowance',
+    values: [string, string],
   ): string;
 
-  decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'name', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "totalSupply",
-    data: BytesLike
+    functionFragment: 'totalSupply',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "decimals", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "symbol", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "allowance", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'symbol', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'allowance', data: BytesLike): Result;
 
   events: {};
 }
@@ -60,26 +60,26 @@ export class Erc20 extends BaseContract {
   deployed(): Promise<this>;
 
   listeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>
+    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>,
   ): Array<TypedListener<EventArgsArray, EventArgsObject>>;
   off<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   on<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   once<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   removeListener<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   removeAllListeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>
+    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
   ): this;
 
   listeners(eventName?: string): Array<Listener>;
@@ -92,7 +92,7 @@ export class Erc20 extends BaseContract {
   queryFilter<EventArgsArray extends Array<any>, EventArgsObject>(
     event: TypedEventFilter<EventArgsArray, EventArgsObject>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined
+    toBlock?: string | number | undefined,
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
   interface: Erc20Interface;
@@ -106,7 +106,7 @@ export class Erc20 extends BaseContract {
 
     balanceOf(
       _owner: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber] & { balance: BigNumber }>;
 
     symbol(overrides?: CallOverrides): Promise<[string]>;
@@ -114,7 +114,7 @@ export class Erc20 extends BaseContract {
     allowance(
       _owner: string,
       _spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber]>;
   };
 
@@ -131,7 +131,7 @@ export class Erc20 extends BaseContract {
   allowance(
     _owner: string,
     _spender: string,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   callStatic: {
@@ -148,7 +148,7 @@ export class Erc20 extends BaseContract {
     allowance(
       _owner: string,
       _spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
   };
 
@@ -168,7 +168,7 @@ export class Erc20 extends BaseContract {
     allowance(
       _owner: string,
       _spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
   };
 
@@ -181,7 +181,7 @@ export class Erc20 extends BaseContract {
 
     balanceOf(
       _owner: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     symbol(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -189,7 +189,7 @@ export class Erc20 extends BaseContract {
     allowance(
       _owner: string,
       _spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
   };
 }

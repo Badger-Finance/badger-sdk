@@ -13,134 +13,134 @@ import {
   ContractTransaction,
   Overrides,
   CallOverrides,
-} from "ethers";
-import { BytesLike } from "@ethersproject/bytes";
-import { Listener, Provider } from "@ethersproject/providers";
-import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
-import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
+} from 'ethers';
+import { BytesLike } from '@ethersproject/bytes';
+import { Listener, Provider } from '@ethersproject/providers';
+import { FunctionFragment, EventFragment, Result } from '@ethersproject/abi';
+import type { TypedEventFilter, TypedEvent, TypedListener } from './common';
 
 interface RegistryInterface extends ethers.utils.Interface {
   functions: {
-    "add(string,address)": FunctionFragment;
-    "addVersions(string)": FunctionFragment;
-    "addresses(string)": FunctionFragment;
-    "demote(string,address,uint8)": FunctionFragment;
-    "devGovernance()": FunctionFragment;
-    "get(string)": FunctionFragment;
-    "getFilteredProductionVaults(string,uint8)": FunctionFragment;
-    "getProductionVaults()": FunctionFragment;
-    "getVaults(string,address)": FunctionFragment;
-    "governance()": FunctionFragment;
-    "initialize(address)": FunctionFragment;
-    "keys(uint256)": FunctionFragment;
-    "promote(string,address,uint8)": FunctionFragment;
-    "remove(string,address)": FunctionFragment;
-    "set(string,address)": FunctionFragment;
-    "setDev(address)": FunctionFragment;
-    "setGovernance(address)": FunctionFragment;
-    "versions(uint256)": FunctionFragment;
+    'add(string,address)': FunctionFragment;
+    'addVersions(string)': FunctionFragment;
+    'addresses(string)': FunctionFragment;
+    'demote(string,address,uint8)': FunctionFragment;
+    'devGovernance()': FunctionFragment;
+    'get(string)': FunctionFragment;
+    'getFilteredProductionVaults(string,uint8)': FunctionFragment;
+    'getProductionVaults()': FunctionFragment;
+    'getVaults(string,address)': FunctionFragment;
+    'governance()': FunctionFragment;
+    'initialize(address)': FunctionFragment;
+    'keys(uint256)': FunctionFragment;
+    'promote(string,address,uint8)': FunctionFragment;
+    'remove(string,address)': FunctionFragment;
+    'set(string,address)': FunctionFragment;
+    'setDev(address)': FunctionFragment;
+    'setGovernance(address)': FunctionFragment;
+    'versions(uint256)': FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: "add", values: [string, string]): string;
-  encodeFunctionData(functionFragment: "addVersions", values: [string]): string;
-  encodeFunctionData(functionFragment: "addresses", values: [string]): string;
+  encodeFunctionData(functionFragment: 'add', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'addVersions', values: [string]): string;
+  encodeFunctionData(functionFragment: 'addresses', values: [string]): string;
   encodeFunctionData(
-    functionFragment: "demote",
-    values: [string, string, BigNumberish]
+    functionFragment: 'demote',
+    values: [string, string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "devGovernance",
-    values?: undefined
+    functionFragment: 'devGovernance',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "get", values: [string]): string;
+  encodeFunctionData(functionFragment: 'get', values: [string]): string;
   encodeFunctionData(
-    functionFragment: "getFilteredProductionVaults",
-    values: [string, BigNumberish]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "getProductionVaults",
-    values?: undefined
+    functionFragment: 'getFilteredProductionVaults',
+    values: [string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "getVaults",
-    values: [string, string]
+    functionFragment: 'getProductionVaults',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "governance",
-    values?: undefined
-  ): string;
-  encodeFunctionData(functionFragment: "initialize", values: [string]): string;
-  encodeFunctionData(functionFragment: "keys", values: [BigNumberish]): string;
-  encodeFunctionData(
-    functionFragment: "promote",
-    values: [string, string, BigNumberish]
+    functionFragment: 'getVaults',
+    values: [string, string],
   ): string;
   encodeFunctionData(
-    functionFragment: "remove",
-    values: [string, string]
+    functionFragment: 'governance',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "set", values: [string, string]): string;
-  encodeFunctionData(functionFragment: "setDev", values: [string]): string;
+  encodeFunctionData(functionFragment: 'initialize', values: [string]): string;
+  encodeFunctionData(functionFragment: 'keys', values: [BigNumberish]): string;
   encodeFunctionData(
-    functionFragment: "setGovernance",
-    values: [string]
+    functionFragment: 'promote',
+    values: [string, string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "versions",
-    values: [BigNumberish]
+    functionFragment: 'remove',
+    values: [string, string],
+  ): string;
+  encodeFunctionData(functionFragment: 'set', values: [string, string]): string;
+  encodeFunctionData(functionFragment: 'setDev', values: [string]): string;
+  encodeFunctionData(
+    functionFragment: 'setGovernance',
+    values: [string],
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'versions',
+    values: [BigNumberish],
   ): string;
 
-  decodeFunctionResult(functionFragment: "add", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'add', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "addVersions",
-    data: BytesLike
+    functionFragment: 'addVersions',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "addresses", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "demote", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'addresses', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'demote', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "devGovernance",
-    data: BytesLike
+    functionFragment: 'devGovernance',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "get", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'get', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "getFilteredProductionVaults",
-    data: BytesLike
+    functionFragment: 'getFilteredProductionVaults',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "getProductionVaults",
-    data: BytesLike
+    functionFragment: 'getProductionVaults',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "getVaults", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "governance", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "initialize", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "keys", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "promote", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "remove", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "set", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "setDev", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'getVaults', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'governance', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'keys', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'promote', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'remove', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'set', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'setDev', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "setGovernance",
-    data: BytesLike
+    functionFragment: 'setGovernance',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "versions", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'versions', data: BytesLike): Result;
 
   events: {
-    "AddKey(string)": EventFragment;
-    "AddVersion(string)": EventFragment;
-    "DemoteVault(address,string,address,uint8)": EventFragment;
-    "NewVault(address,string,address)": EventFragment;
-    "PromoteVault(address,string,address,uint8)": EventFragment;
-    "RemoveVault(address,string,address)": EventFragment;
-    "Set(string,address)": EventFragment;
+    'AddKey(string)': EventFragment;
+    'AddVersion(string)': EventFragment;
+    'DemoteVault(address,string,address,uint8)': EventFragment;
+    'NewVault(address,string,address)': EventFragment;
+    'PromoteVault(address,string,address,uint8)': EventFragment;
+    'RemoveVault(address,string,address)': EventFragment;
+    'Set(string,address)': EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: "AddKey"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "AddVersion"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "DemoteVault"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "NewVault"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "PromoteVault"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "RemoveVault"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Set"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'AddKey'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'AddVersion'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'DemoteVault'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'NewVault'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'PromoteVault'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'RemoveVault'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Set'): EventFragment;
 }
 
 export type AddKeyEvent = TypedEvent<[string] & { key: string }>;
@@ -183,26 +183,26 @@ export class Registry extends BaseContract {
   deployed(): Promise<this>;
 
   listeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>
+    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>,
   ): Array<TypedListener<EventArgsArray, EventArgsObject>>;
   off<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   on<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   once<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   removeListener<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>
+    listener: TypedListener<EventArgsArray, EventArgsObject>,
   ): this;
   removeAllListeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>
+    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
   ): this;
 
   listeners(eventName?: string): Array<Listener>;
@@ -215,7 +215,7 @@ export class Registry extends BaseContract {
   queryFilter<EventArgsArray extends Array<any>, EventArgsObject>(
     event: TypedEventFilter<EventArgsArray, EventArgsObject>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined
+    toBlock?: string | number | undefined,
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
   interface: RegistryInterface;
@@ -224,12 +224,12 @@ export class Registry extends BaseContract {
     add(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     addVersions(
       version: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     addresses(arg0: string, overrides?: CallOverrides): Promise<[string]>;
@@ -238,7 +238,7 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     devGovernance(overrides?: CallOverrides): Promise<[string]>;
@@ -248,32 +248,30 @@ export class Registry extends BaseContract {
     getFilteredProductionVaults(
       version: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[string[]]>;
 
-    getProductionVaults(
-      overrides?: CallOverrides
-    ): Promise<
+    getProductionVaults(overrides?: CallOverrides): Promise<
       [
         ([string, number, string[]] & {
           version: string;
           status: number;
           list: string[];
-        })[]
+        })[],
       ]
     >;
 
     getVaults(
       version: string,
       author: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[string[]]>;
 
     governance(overrides?: CallOverrides): Promise<[string]>;
 
     initialize(
       newGovernance: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     keys(arg0: BigNumberish, overrides?: CallOverrides): Promise<[string]>;
@@ -282,29 +280,29 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     remove(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     set(
       key: string,
       at: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setDev(
       newDev: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setGovernance(
       _newGov: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     versions(arg0: BigNumberish, overrides?: CallOverrides): Promise<[string]>;
@@ -313,12 +311,12 @@ export class Registry extends BaseContract {
   add(
     version: string,
     vault: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   addVersions(
     version: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   addresses(arg0: string, overrides?: CallOverrides): Promise<string>;
@@ -327,7 +325,7 @@ export class Registry extends BaseContract {
     version: string,
     vault: string,
     status: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   devGovernance(overrides?: CallOverrides): Promise<string>;
@@ -337,12 +335,10 @@ export class Registry extends BaseContract {
   getFilteredProductionVaults(
     version: string,
     status: BigNumberish,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<string[]>;
 
-  getProductionVaults(
-    overrides?: CallOverrides
-  ): Promise<
+  getProductionVaults(overrides?: CallOverrides): Promise<
     ([string, number, string[]] & {
       version: string;
       status: number;
@@ -353,14 +349,14 @@ export class Registry extends BaseContract {
   getVaults(
     version: string,
     author: string,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<string[]>;
 
   governance(overrides?: CallOverrides): Promise<string>;
 
   initialize(
     newGovernance: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   keys(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
@@ -369,29 +365,29 @@ export class Registry extends BaseContract {
     version: string,
     vault: string,
     status: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   remove(
     version: string,
     vault: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   set(
     key: string,
     at: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setDev(
     newDev: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setGovernance(
     _newGov: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   versions(arg0: BigNumberish, overrides?: CallOverrides): Promise<string>;
@@ -400,7 +396,7 @@ export class Registry extends BaseContract {
     add(
       version: string,
       vault: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     addVersions(version: string, overrides?: CallOverrides): Promise<void>;
@@ -411,7 +407,7 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     devGovernance(overrides?: CallOverrides): Promise<string>;
@@ -421,12 +417,10 @@ export class Registry extends BaseContract {
     getFilteredProductionVaults(
       version: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<string[]>;
 
-    getProductionVaults(
-      overrides?: CallOverrides
-    ): Promise<
+    getProductionVaults(overrides?: CallOverrides): Promise<
       ([string, number, string[]] & {
         version: string;
         status: number;
@@ -437,7 +431,7 @@ export class Registry extends BaseContract {
     getVaults(
       version: string,
       author: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<string[]>;
 
     governance(overrides?: CallOverrides): Promise<string>;
@@ -450,13 +444,13 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     remove(
       version: string,
       vault: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     set(key: string, at: string, overrides?: CallOverrides): Promise<void>;
@@ -469,21 +463,21 @@ export class Registry extends BaseContract {
   };
 
   filters: {
-    "AddKey(string)"(key?: null): TypedEventFilter<[string], { key: string }>;
+    'AddKey(string)'(key?: null): TypedEventFilter<[string], { key: string }>;
 
     AddKey(key?: null): TypedEventFilter<[string], { key: string }>;
 
-    "AddVersion(string)"(
-      version?: null
+    'AddVersion(string)'(
+      version?: null,
     ): TypedEventFilter<[string], { version: string }>;
 
     AddVersion(version?: null): TypedEventFilter<[string], { version: string }>;
 
-    "DemoteVault(address,string,address,uint8)"(
+    'DemoteVault(address,string,address,uint8)'(
       author?: null,
       version?: null,
       vault?: null,
-      status?: null
+      status?: null,
     ): TypedEventFilter<
       [string, string, string, number],
       { author: string; version: string; vault: string; status: number }
@@ -493,16 +487,16 @@ export class Registry extends BaseContract {
       author?: null,
       version?: null,
       vault?: null,
-      status?: null
+      status?: null,
     ): TypedEventFilter<
       [string, string, string, number],
       { author: string; version: string; vault: string; status: number }
     >;
 
-    "NewVault(address,string,address)"(
+    'NewVault(address,string,address)'(
       author?: null,
       version?: null,
-      vault?: null
+      vault?: null,
     ): TypedEventFilter<
       [string, string, string],
       { author: string; version: string; vault: string }
@@ -511,17 +505,17 @@ export class Registry extends BaseContract {
     NewVault(
       author?: null,
       version?: null,
-      vault?: null
+      vault?: null,
     ): TypedEventFilter<
       [string, string, string],
       { author: string; version: string; vault: string }
     >;
 
-    "PromoteVault(address,string,address,uint8)"(
+    'PromoteVault(address,string,address,uint8)'(
       author?: null,
       version?: null,
       vault?: null,
-      status?: null
+      status?: null,
     ): TypedEventFilter<
       [string, string, string, number],
       { author: string; version: string; vault: string; status: number }
@@ -531,16 +525,16 @@ export class Registry extends BaseContract {
       author?: null,
       version?: null,
       vault?: null,
-      status?: null
+      status?: null,
     ): TypedEventFilter<
       [string, string, string, number],
       { author: string; version: string; vault: string; status: number }
     >;
 
-    "RemoveVault(address,string,address)"(
+    'RemoveVault(address,string,address)'(
       author?: null,
       version?: null,
-      vault?: null
+      vault?: null,
     ): TypedEventFilter<
       [string, string, string],
       { author: string; version: string; vault: string }
@@ -549,20 +543,20 @@ export class Registry extends BaseContract {
     RemoveVault(
       author?: null,
       version?: null,
-      vault?: null
+      vault?: null,
     ): TypedEventFilter<
       [string, string, string],
       { author: string; version: string; vault: string }
     >;
 
-    "Set(string,address)"(
+    'Set(string,address)'(
       key?: null,
-      at?: null
+      at?: null,
     ): TypedEventFilter<[string, string], { key: string; at: string }>;
 
     Set(
       key?: null,
-      at?: null
+      at?: null,
     ): TypedEventFilter<[string, string], { key: string; at: string }>;
   };
 
@@ -570,12 +564,12 @@ export class Registry extends BaseContract {
     add(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     addVersions(
       version: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     addresses(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -584,7 +578,7 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     devGovernance(overrides?: CallOverrides): Promise<BigNumber>;
@@ -594,7 +588,7 @@ export class Registry extends BaseContract {
     getFilteredProductionVaults(
       version: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     getProductionVaults(overrides?: CallOverrides): Promise<BigNumber>;
@@ -602,14 +596,14 @@ export class Registry extends BaseContract {
     getVaults(
       version: string,
       author: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     governance(overrides?: CallOverrides): Promise<BigNumber>;
 
     initialize(
       newGovernance: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     keys(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -618,29 +612,29 @@ export class Registry extends BaseContract {
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     remove(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     set(
       key: string,
       at: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setDev(
       newDev: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setGovernance(
       _newGov: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     versions(arg0: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
@@ -650,24 +644,24 @@ export class Registry extends BaseContract {
     add(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     addVersions(
       version: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     addresses(
       arg0: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     demote(
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     devGovernance(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -677,63 +671,63 @@ export class Registry extends BaseContract {
     getFilteredProductionVaults(
       version: string,
       status: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     getProductionVaults(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     getVaults(
       version: string,
       author: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     governance(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     initialize(
       newGovernance: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     keys(
       arg0: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     promote(
       version: string,
       vault: string,
       status: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     remove(
       version: string,
       vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     set(
       key: string,
       at: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setDev(
       newDev: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setGovernance(
       _newGov: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     versions(
       arg0: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
   };
 }

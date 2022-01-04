@@ -2,108 +2,108 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { Contract, Signer, utils } from "ethers";
-import { Provider } from "@ethersproject/providers";
-import type { Erc20, Erc20Interface } from "../Erc20";
+import { Contract, Signer, utils } from 'ethers';
+import { Provider } from '@ethersproject/providers';
+import type { Erc20, Erc20Interface } from '../Erc20';
 
 const _abi = [
   {
     constant: true,
     inputs: [],
-    name: "name",
+    name: 'name',
     outputs: [
       {
-        name: "",
-        type: "string",
+        name: '',
+        type: 'string',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "totalSupply",
+    name: 'totalSupply',
     outputs: [
       {
-        name: "",
-        type: "uint256",
+        name: '',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "decimals",
+    name: 'decimals',
     outputs: [
       {
-        name: "",
-        type: "uint8",
+        name: '',
+        type: 'uint8',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [
       {
-        name: "_owner",
-        type: "address",
+        name: '_owner',
+        type: 'address',
       },
     ],
-    name: "balanceOf",
+    name: 'balanceOf',
     outputs: [
       {
-        name: "balance",
-        type: "uint256",
+        name: 'balance',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "symbol",
+    name: 'symbol',
     outputs: [
       {
-        name: "",
-        type: "string",
+        name: '',
+        type: 'string',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [
       {
-        name: "_owner",
-        type: "address",
+        name: '_owner',
+        type: 'address',
       },
       {
-        name: "_spender",
-        type: "address",
+        name: '_spender',
+        type: 'address',
       },
     ],
-    name: "allowance",
+    name: 'allowance',
     outputs: [
       {
-        name: "",
-        type: "uint256",
+        name: '',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
 ];
 
