@@ -7,6 +7,3 @@ lib
 .npmrc
 
 yarn-error.log
-
-src/contracts
-src/graphql/generated
