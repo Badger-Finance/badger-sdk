@@ -13,170 +13,170 @@ import {
   ContractTransaction,
   Overrides,
   CallOverrides,
-} from 'ethers';
-import { BytesLike } from '@ethersproject/bytes';
-import { Listener, Provider } from '@ethersproject/providers';
-import { FunctionFragment, EventFragment, Result } from '@ethersproject/abi';
-import type { TypedEventFilter, TypedEvent, TypedListener } from './common';
+} from "ethers";
+import { BytesLike } from "@ethersproject/bytes";
+import { Listener, Provider } from "@ethersproject/providers";
+import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
+import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
 interface VaultV15Interface extends ethers.utils.Interface {
   functions: {
-    'MANAGEMENT_FEE_HARD_CAP()': FunctionFragment;
-    'MAX_BPS()': FunctionFragment;
-    'PERFORMANCE_FEE_HARD_CAP()': FunctionFragment;
-    'SECS_PER_YEAR()': FunctionFragment;
-    'WITHDRAWAL_FEE_HARD_CAP()': FunctionFragment;
-    'additionalTokensEarned(address)': FunctionFragment;
-    'allowance(address,address)': FunctionFragment;
-    'approve(address,uint256)': FunctionFragment;
-    'assetsAtLastHarvest()': FunctionFragment;
-    'available()': FunctionFragment;
-    'badgerTree()': FunctionFragment;
-    'balance()': FunctionFragment;
-    'balanceOf(address)': FunctionFragment;
-    'decimals()': FunctionFragment;
-    'decreaseAllowance(address,uint256)': FunctionFragment;
-    'deposit(uint256,bytes32[])': FunctionFragment;
-    'depositAll(bytes32[])': FunctionFragment;
-    'depositFor(address,uint256)': FunctionFragment;
-    'earn()': FunctionFragment;
-    'emitNonProtectedToken(address)': FunctionFragment;
-    'getPricePerFullShare()': FunctionFragment;
-    'governance()': FunctionFragment;
-    'guardian()': FunctionFragment;
-    'guestList()': FunctionFragment;
-    'increaseAllowance(address,uint256)': FunctionFragment;
-    'initialize(address,address,address,address,address,address,address,string,string,uint256[4])': FunctionFragment;
-    'keeper()': FunctionFragment;
-    'lastAdditionalTokenAmount(address)': FunctionFragment;
-    'lastHarvestAmount()': FunctionFragment;
-    'lastHarvestedAt()': FunctionFragment;
-    'lifeTimeEarned()': FunctionFragment;
-    'managementFee()': FunctionFragment;
-    'maxManagementFee()': FunctionFragment;
-    'maxPerformanceFee()': FunctionFragment;
-    'maxWithdrawalFee()': FunctionFragment;
-    'name()': FunctionFragment;
-    'pause()': FunctionFragment;
-    'pauseDeposits()': FunctionFragment;
-    'paused()': FunctionFragment;
-    'pausedDeposit()': FunctionFragment;
-    'performanceFeeGovernance()': FunctionFragment;
-    'performanceFeeStrategist()': FunctionFragment;
-    'reportAdditionalToken(address)': FunctionFragment;
-    'reportHarvest(uint256)': FunctionFragment;
-    'setGovernance(address)': FunctionFragment;
-    'setGuardian(address)': FunctionFragment;
-    'setGuestList(address)': FunctionFragment;
-    'setKeeper(address)': FunctionFragment;
-    'setManagementFee(uint256)': FunctionFragment;
-    'setMaxManagementFee(uint256)': FunctionFragment;
-    'setMaxPerformanceFee(uint256)': FunctionFragment;
-    'setMaxWithdrawalFee(uint256)': FunctionFragment;
-    'setPerformanceFeeGovernance(uint256)': FunctionFragment;
-    'setPerformanceFeeStrategist(uint256)': FunctionFragment;
-    'setStrategist(address)': FunctionFragment;
-    'setStrategy(address)': FunctionFragment;
-    'setToEarnBps(uint256)': FunctionFragment;
-    'setTreasury(address)': FunctionFragment;
-    'setWithdrawalFee(uint256)': FunctionFragment;
-    'strategist()': FunctionFragment;
-    'strategy()': FunctionFragment;
-    'sweepExtraToken(address)': FunctionFragment;
-    'symbol()': FunctionFragment;
-    'toEarnBps()': FunctionFragment;
-    'token()': FunctionFragment;
-    'totalSupply()': FunctionFragment;
-    'transfer(address,uint256)': FunctionFragment;
-    'transferFrom(address,address,uint256)': FunctionFragment;
-    'treasury()': FunctionFragment;
-    'unpause()': FunctionFragment;
-    'unpauseDeposits()': FunctionFragment;
-    'version()': FunctionFragment;
-    'withdraw(uint256)': FunctionFragment;
-    'withdrawAll()': FunctionFragment;
-    'withdrawToVault()': FunctionFragment;
-    'withdrawalFee()': FunctionFragment;
+    "MANAGEMENT_FEE_HARD_CAP()": FunctionFragment;
+    "MAX_BPS()": FunctionFragment;
+    "PERFORMANCE_FEE_HARD_CAP()": FunctionFragment;
+    "SECS_PER_YEAR()": FunctionFragment;
+    "WITHDRAWAL_FEE_HARD_CAP()": FunctionFragment;
+    "additionalTokensEarned(address)": FunctionFragment;
+    "allowance(address,address)": FunctionFragment;
+    "approve(address,uint256)": FunctionFragment;
+    "assetsAtLastHarvest()": FunctionFragment;
+    "available()": FunctionFragment;
+    "badgerTree()": FunctionFragment;
+    "balance()": FunctionFragment;
+    "balanceOf(address)": FunctionFragment;
+    "decimals()": FunctionFragment;
+    "decreaseAllowance(address,uint256)": FunctionFragment;
+    "deposit(uint256,bytes32[])": FunctionFragment;
+    "depositAll(bytes32[])": FunctionFragment;
+    "depositFor(address,uint256)": FunctionFragment;
+    "earn()": FunctionFragment;
+    "emitNonProtectedToken(address)": FunctionFragment;
+    "getPricePerFullShare()": FunctionFragment;
+    "governance()": FunctionFragment;
+    "guardian()": FunctionFragment;
+    "guestList()": FunctionFragment;
+    "increaseAllowance(address,uint256)": FunctionFragment;
+    "initialize(address,address,address,address,address,address,address,string,string,uint256[4])": FunctionFragment;
+    "keeper()": FunctionFragment;
+    "lastAdditionalTokenAmount(address)": FunctionFragment;
+    "lastHarvestAmount()": FunctionFragment;
+    "lastHarvestedAt()": FunctionFragment;
+    "lifeTimeEarned()": FunctionFragment;
+    "managementFee()": FunctionFragment;
+    "maxManagementFee()": FunctionFragment;
+    "maxPerformanceFee()": FunctionFragment;
+    "maxWithdrawalFee()": FunctionFragment;
+    "name()": FunctionFragment;
+    "pause()": FunctionFragment;
+    "pauseDeposits()": FunctionFragment;
+    "paused()": FunctionFragment;
+    "pausedDeposit()": FunctionFragment;
+    "performanceFeeGovernance()": FunctionFragment;
+    "performanceFeeStrategist()": FunctionFragment;
+    "reportAdditionalToken(address)": FunctionFragment;
+    "reportHarvest(uint256)": FunctionFragment;
+    "setGovernance(address)": FunctionFragment;
+    "setGuardian(address)": FunctionFragment;
+    "setGuestList(address)": FunctionFragment;
+    "setKeeper(address)": FunctionFragment;
+    "setManagementFee(uint256)": FunctionFragment;
+    "setMaxManagementFee(uint256)": FunctionFragment;
+    "setMaxPerformanceFee(uint256)": FunctionFragment;
+    "setMaxWithdrawalFee(uint256)": FunctionFragment;
+    "setPerformanceFeeGovernance(uint256)": FunctionFragment;
+    "setPerformanceFeeStrategist(uint256)": FunctionFragment;
+    "setStrategist(address)": FunctionFragment;
+    "setStrategy(address)": FunctionFragment;
+    "setToEarnBps(uint256)": FunctionFragment;
+    "setTreasury(address)": FunctionFragment;
+    "setWithdrawalFee(uint256)": FunctionFragment;
+    "strategist()": FunctionFragment;
+    "strategy()": FunctionFragment;
+    "sweepExtraToken(address)": FunctionFragment;
+    "symbol()": FunctionFragment;
+    "toEarnBps()": FunctionFragment;
+    "token()": FunctionFragment;
+    "totalSupply()": FunctionFragment;
+    "transfer(address,uint256)": FunctionFragment;
+    "transferFrom(address,address,uint256)": FunctionFragment;
+    "treasury()": FunctionFragment;
+    "unpause()": FunctionFragment;
+    "unpauseDeposits()": FunctionFragment;
+    "version()": FunctionFragment;
+    "withdraw(uint256)": FunctionFragment;
+    "withdrawAll()": FunctionFragment;
+    "withdrawToVault()": FunctionFragment;
+    "withdrawalFee()": FunctionFragment;
   };
 
   encodeFunctionData(
-    functionFragment: 'MANAGEMENT_FEE_HARD_CAP',
-    values?: undefined,
+    functionFragment: "MANAGEMENT_FEE_HARD_CAP",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'MAX_BPS', values?: undefined): string;
+  encodeFunctionData(functionFragment: "MAX_BPS", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'PERFORMANCE_FEE_HARD_CAP',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(
-    functionFragment: 'SECS_PER_YEAR',
-    values?: undefined,
+    functionFragment: "PERFORMANCE_FEE_HARD_CAP",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'WITHDRAWAL_FEE_HARD_CAP',
-    values?: undefined,
+    functionFragment: "SECS_PER_YEAR",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'additionalTokensEarned',
-    values: [string],
+    functionFragment: "WITHDRAWAL_FEE_HARD_CAP",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'allowance',
-    values: [string, string],
+    functionFragment: "additionalTokensEarned",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'approve',
-    values: [string, BigNumberish],
+    functionFragment: "allowance",
+    values: [string, string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'assetsAtLastHarvest',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'available', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'badgerTree',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'balance', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'balanceOf', values: [string]): string;
-  encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'decreaseAllowance',
-    values: [string, BigNumberish],
+    functionFragment: "approve",
+    values: [string, BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'deposit',
-    values: [BigNumberish, BytesLike[]],
+    functionFragment: "assetsAtLastHarvest",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "available", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "badgerTree",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "balance", values?: undefined): string;
+  encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
+  encodeFunctionData(functionFragment: "decimals", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "decreaseAllowance",
+    values: [string, BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'depositAll',
-    values: [BytesLike[]],
+    functionFragment: "deposit",
+    values: [BigNumberish, BytesLike[]]
   ): string;
   encodeFunctionData(
-    functionFragment: 'depositFor',
-    values: [string, BigNumberish],
-  ): string;
-  encodeFunctionData(functionFragment: 'earn', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'emitNonProtectedToken',
-    values: [string],
+    functionFragment: "depositAll",
+    values: [BytesLike[]]
   ): string;
   encodeFunctionData(
-    functionFragment: 'getPricePerFullShare',
-    values?: undefined,
+    functionFragment: "depositFor",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(functionFragment: "earn", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "emitNonProtectedToken",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'governance',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'guardian', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'guestList', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'increaseAllowance',
-    values: [string, BigNumberish],
+    functionFragment: "getPricePerFullShare",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'initialize',
+    functionFragment: "governance",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "guardian", values?: undefined): string;
+  encodeFunctionData(functionFragment: "guestList", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "increaseAllowance",
+    values: [string, BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "initialize",
     values: [
       string,
       string,
@@ -187,424 +187,424 @@ interface VaultV15Interface extends ethers.utils.Interface {
       string,
       string,
       string,
-      [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-    ],
+      [BigNumberish, BigNumberish, BigNumberish, BigNumberish]
+    ]
   ): string;
-  encodeFunctionData(functionFragment: 'keeper', values?: undefined): string;
+  encodeFunctionData(functionFragment: "keeper", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'lastAdditionalTokenAmount',
-    values: [string],
-  ): string;
-  encodeFunctionData(
-    functionFragment: 'lastHarvestAmount',
-    values?: undefined,
+    functionFragment: "lastAdditionalTokenAmount",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'lastHarvestedAt',
-    values?: undefined,
+    functionFragment: "lastHarvestAmount",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'lifeTimeEarned',
-    values?: undefined,
+    functionFragment: "lastHarvestedAt",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'managementFee',
-    values?: undefined,
+    functionFragment: "lifeTimeEarned",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'maxManagementFee',
-    values?: undefined,
+    functionFragment: "managementFee",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'maxPerformanceFee',
-    values?: undefined,
+    functionFragment: "maxManagementFee",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'maxWithdrawalFee',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'name', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'pause', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'pauseDeposits',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'paused', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'pausedDeposit',
-    values?: undefined,
+    functionFragment: "maxPerformanceFee",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'performanceFeeGovernance',
-    values?: undefined,
+    functionFragment: "maxWithdrawalFee",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "name", values?: undefined): string;
+  encodeFunctionData(functionFragment: "pause", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "pauseDeposits",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "paused", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "pausedDeposit",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'performanceFeeStrategist',
-    values?: undefined,
+    functionFragment: "performanceFeeGovernance",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'reportAdditionalToken',
-    values: [string],
+    functionFragment: "performanceFeeStrategist",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'reportHarvest',
-    values: [BigNumberish],
+    functionFragment: "reportAdditionalToken",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setGovernance',
-    values: [string],
-  ): string;
-  encodeFunctionData(functionFragment: 'setGuardian', values: [string]): string;
-  encodeFunctionData(
-    functionFragment: 'setGuestList',
-    values: [string],
-  ): string;
-  encodeFunctionData(functionFragment: 'setKeeper', values: [string]): string;
-  encodeFunctionData(
-    functionFragment: 'setManagementFee',
-    values: [BigNumberish],
+    functionFragment: "reportHarvest",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setMaxManagementFee',
-    values: [BigNumberish],
+    functionFragment: "setGovernance",
+    values: [string]
+  ): string;
+  encodeFunctionData(functionFragment: "setGuardian", values: [string]): string;
+  encodeFunctionData(
+    functionFragment: "setGuestList",
+    values: [string]
+  ): string;
+  encodeFunctionData(functionFragment: "setKeeper", values: [string]): string;
+  encodeFunctionData(
+    functionFragment: "setManagementFee",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setMaxPerformanceFee',
-    values: [BigNumberish],
+    functionFragment: "setMaxManagementFee",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setMaxWithdrawalFee',
-    values: [BigNumberish],
+    functionFragment: "setMaxPerformanceFee",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setPerformanceFeeGovernance',
-    values: [BigNumberish],
+    functionFragment: "setMaxWithdrawalFee",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setPerformanceFeeStrategist',
-    values: [BigNumberish],
+    functionFragment: "setPerformanceFeeGovernance",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'setStrategist',
-    values: [string],
-  ): string;
-  encodeFunctionData(functionFragment: 'setStrategy', values: [string]): string;
-  encodeFunctionData(
-    functionFragment: 'setToEarnBps',
-    values: [BigNumberish],
-  ): string;
-  encodeFunctionData(functionFragment: 'setTreasury', values: [string]): string;
-  encodeFunctionData(
-    functionFragment: 'setWithdrawalFee',
-    values: [BigNumberish],
+    functionFragment: "setPerformanceFeeStrategist",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'strategist',
-    values?: undefined,
+    functionFragment: "setStrategist",
+    values: [string]
   ): string;
-  encodeFunctionData(functionFragment: 'strategy', values?: undefined): string;
+  encodeFunctionData(functionFragment: "setStrategy", values: [string]): string;
   encodeFunctionData(
-    functionFragment: 'sweepExtraToken',
-    values: [string],
+    functionFragment: "setToEarnBps",
+    values: [BigNumberish]
   ): string;
-  encodeFunctionData(functionFragment: 'symbol', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'toEarnBps', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'token', values?: undefined): string;
+  encodeFunctionData(functionFragment: "setTreasury", values: [string]): string;
   encodeFunctionData(
-    functionFragment: 'totalSupply',
-    values?: undefined,
+    functionFragment: "setWithdrawalFee",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'transfer',
-    values: [string, BigNumberish],
+    functionFragment: "strategist",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "strategy", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "sweepExtraToken",
+    values: [string]
+  ): string;
+  encodeFunctionData(functionFragment: "symbol", values?: undefined): string;
+  encodeFunctionData(functionFragment: "toEarnBps", values?: undefined): string;
+  encodeFunctionData(functionFragment: "token", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "totalSupply",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'transferFrom',
-    values: [string, string, BigNumberish],
-  ): string;
-  encodeFunctionData(functionFragment: 'treasury', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'unpause', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'unpauseDeposits',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'version', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'withdraw',
-    values: [BigNumberish],
+    functionFragment: "transfer",
+    values: [string, BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawAll',
-    values?: undefined,
+    functionFragment: "transferFrom",
+    values: [string, string, BigNumberish]
+  ): string;
+  encodeFunctionData(functionFragment: "treasury", values?: undefined): string;
+  encodeFunctionData(functionFragment: "unpause", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "unpauseDeposits",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "version", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "withdraw",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawToVault',
-    values?: undefined,
+    functionFragment: "withdrawAll",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawalFee',
-    values?: undefined,
+    functionFragment: "withdrawToVault",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawalFee",
+    values?: undefined
   ): string;
 
   decodeFunctionResult(
-    functionFragment: 'MANAGEMENT_FEE_HARD_CAP',
-    data: BytesLike,
+    functionFragment: "MANAGEMENT_FEE_HARD_CAP",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'MAX_BPS', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "MAX_BPS", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'PERFORMANCE_FEE_HARD_CAP',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: 'SECS_PER_YEAR',
-    data: BytesLike,
+    functionFragment: "PERFORMANCE_FEE_HARD_CAP",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'WITHDRAWAL_FEE_HARD_CAP',
-    data: BytesLike,
+    functionFragment: "SECS_PER_YEAR",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'additionalTokensEarned',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'allowance', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'approve', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'assetsAtLastHarvest',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'available', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'badgerTree', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'balance', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'decreaseAllowance',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'deposit', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'depositAll', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'depositFor', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'earn', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'emitNonProtectedToken',
-    data: BytesLike,
+    functionFragment: "WITHDRAWAL_FEE_HARD_CAP",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'getPricePerFullShare',
-    data: BytesLike,
+    functionFragment: "additionalTokensEarned",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'governance', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'guardian', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'guestList', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "allowance", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'increaseAllowance',
-    data: BytesLike,
+    functionFragment: "assetsAtLastHarvest",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'keeper', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "available", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "badgerTree", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "balance", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "decimals", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'lastAdditionalTokenAmount',
-    data: BytesLike,
+    functionFragment: "decreaseAllowance",
+    data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "deposit", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "depositAll", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "depositFor", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "earn", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'lastHarvestAmount',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: 'lastHarvestedAt',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: 'lifeTimeEarned',
-    data: BytesLike,
+    functionFragment: "emitNonProtectedToken",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'managementFee',
-    data: BytesLike,
+    functionFragment: "getPricePerFullShare",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "governance", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "guardian", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "guestList", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "increaseAllowance",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "initialize", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "keeper", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "lastAdditionalTokenAmount",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'maxManagementFee',
-    data: BytesLike,
+    functionFragment: "lastHarvestAmount",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'maxPerformanceFee',
-    data: BytesLike,
+    functionFragment: "lastHarvestedAt",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'maxWithdrawalFee',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'name', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'pause', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'pauseDeposits',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'paused', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'pausedDeposit',
-    data: BytesLike,
+    functionFragment: "lifeTimeEarned",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'performanceFeeGovernance',
-    data: BytesLike,
+    functionFragment: "managementFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'performanceFeeStrategist',
-    data: BytesLike,
+    functionFragment: "maxManagementFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'reportAdditionalToken',
-    data: BytesLike,
+    functionFragment: "maxPerformanceFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'reportHarvest',
-    data: BytesLike,
+    functionFragment: "maxWithdrawalFee",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "pause", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "pauseDeposits",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "paused", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "pausedDeposit",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setGovernance',
-    data: BytesLike,
+    functionFragment: "performanceFeeGovernance",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setGuardian',
-    data: BytesLike,
+    functionFragment: "performanceFeeStrategist",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setGuestList',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'setKeeper', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'setManagementFee',
-    data: BytesLike,
+    functionFragment: "reportAdditionalToken",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setMaxManagementFee',
-    data: BytesLike,
+    functionFragment: "reportHarvest",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setMaxPerformanceFee',
-    data: BytesLike,
+    functionFragment: "setGovernance",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setMaxWithdrawalFee',
-    data: BytesLike,
+    functionFragment: "setGuardian",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setPerformanceFeeGovernance',
-    data: BytesLike,
+    functionFragment: "setGuestList",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "setKeeper", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "setManagementFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setPerformanceFeeStrategist',
-    data: BytesLike,
+    functionFragment: "setMaxManagementFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setStrategist',
-    data: BytesLike,
+    functionFragment: "setMaxPerformanceFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setStrategy',
-    data: BytesLike,
+    functionFragment: "setMaxWithdrawalFee",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setToEarnBps',
-    data: BytesLike,
+    functionFragment: "setPerformanceFeeGovernance",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setTreasury',
-    data: BytesLike,
+    functionFragment: "setPerformanceFeeStrategist",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'setWithdrawalFee',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'strategist', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'strategy', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'sweepExtraToken',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'symbol', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'toEarnBps', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'token', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'totalSupply',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'transfer', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'transferFrom',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'treasury', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'unpause', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'unpauseDeposits',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'version', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'withdraw', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'withdrawAll',
-    data: BytesLike,
+    functionFragment: "setStrategist",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'withdrawToVault',
-    data: BytesLike,
+    functionFragment: "setStrategy",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'withdrawalFee',
-    data: BytesLike,
+    functionFragment: "setToEarnBps",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setTreasury",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "setWithdrawalFee",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "strategist", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "strategy", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "sweepExtraToken",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "symbol", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "toEarnBps", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "token", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "totalSupply",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "transfer", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "transferFrom",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "treasury", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "unpause", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "unpauseDeposits",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "version", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "withdraw", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawAll",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawToVault",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawalFee",
+    data: BytesLike
   ): Result;
 
   events: {
-    'Approval(address,address,uint256)': EventFragment;
-    'Harvested(address,uint256,uint256,uint256)': EventFragment;
-    'PauseDeposits(address)': EventFragment;
-    'Paused(address)': EventFragment;
-    'SetGuardian(address)': EventFragment;
-    'SetGuestList(address)': EventFragment;
-    'SetManagementFee(uint256)': EventFragment;
-    'SetMaxManagementFee(uint256)': EventFragment;
-    'SetMaxPerformanceFee(uint256)': EventFragment;
-    'SetMaxWithdrawalFee(uint256)': EventFragment;
-    'SetPerformanceFeeGovernance(uint256)': EventFragment;
-    'SetPerformanceFeeStrategist(uint256)': EventFragment;
-    'SetStrategy(address)': EventFragment;
-    'SetToEarnBps(uint256)': EventFragment;
-    'SetTreasury(address)': EventFragment;
-    'SetWithdrawalFee(uint256)': EventFragment;
-    'Transfer(address,address,uint256)': EventFragment;
-    'TreeDistribution(address,uint256,uint256,uint256)': EventFragment;
-    'UnpauseDeposits(address)': EventFragment;
-    'Unpaused(address)': EventFragment;
+    "Approval(address,address,uint256)": EventFragment;
+    "Harvested(address,uint256,uint256,uint256)": EventFragment;
+    "PauseDeposits(address)": EventFragment;
+    "Paused(address)": EventFragment;
+    "SetGuardian(address)": EventFragment;
+    "SetGuestList(address)": EventFragment;
+    "SetManagementFee(uint256)": EventFragment;
+    "SetMaxManagementFee(uint256)": EventFragment;
+    "SetMaxPerformanceFee(uint256)": EventFragment;
+    "SetMaxWithdrawalFee(uint256)": EventFragment;
+    "SetPerformanceFeeGovernance(uint256)": EventFragment;
+    "SetPerformanceFeeStrategist(uint256)": EventFragment;
+    "SetStrategy(address)": EventFragment;
+    "SetToEarnBps(uint256)": EventFragment;
+    "SetTreasury(address)": EventFragment;
+    "SetWithdrawalFee(uint256)": EventFragment;
+    "Transfer(address,address,uint256)": EventFragment;
+    "TreeDistribution(address,uint256,uint256,uint256)": EventFragment;
+    "UnpauseDeposits(address)": EventFragment;
+    "Unpaused(address)": EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: 'Approval'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Harvested'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'PauseDeposits'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Paused'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetGuardian'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetGuestList'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetManagementFee'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetMaxManagementFee'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetMaxPerformanceFee'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetMaxWithdrawalFee'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Harvested"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "PauseDeposits"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Paused"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetGuardian"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetGuestList"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetManagementFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetMaxManagementFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetMaxPerformanceFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetMaxWithdrawalFee"): EventFragment;
   getEvent(
-    nameOrSignatureOrTopic: 'SetPerformanceFeeGovernance',
+    nameOrSignatureOrTopic: "SetPerformanceFeeGovernance"
   ): EventFragment;
   getEvent(
-    nameOrSignatureOrTopic: 'SetPerformanceFeeStrategist',
+    nameOrSignatureOrTopic: "SetPerformanceFeeStrategist"
   ): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetStrategy'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetToEarnBps'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetTreasury'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'SetWithdrawalFee'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Transfer'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'TreeDistribution'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'UnpauseDeposits'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Unpaused'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetStrategy"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetToEarnBps"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetTreasury"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "SetWithdrawalFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Transfer"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "TreeDistribution"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "UnpauseDeposits"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Unpaused"): EventFragment;
 }
 
 export type ApprovalEvent = TypedEvent<
@@ -691,26 +691,26 @@ export class VaultV15 extends BaseContract {
   deployed(): Promise<this>;
 
   listeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>,
+    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>
   ): Array<TypedListener<EventArgsArray, EventArgsObject>>;
   off<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   on<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   once<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   removeListener<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   removeAllListeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
+    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>
   ): this;
 
   listeners(eventName?: string): Array<Listener>;
@@ -723,7 +723,7 @@ export class VaultV15 extends BaseContract {
   queryFilter<EventArgsArray extends Array<any>, EventArgsObject>(
     event: TypedEventFilter<EventArgsArray, EventArgsObject>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined,
+    toBlock?: string | number | undefined
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
   interface: VaultV15Interface;
@@ -741,19 +741,19 @@ export class VaultV15 extends BaseContract {
 
     additionalTokensEarned(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     assetsAtLastHarvest(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -771,49 +771,49 @@ export class VaultV15 extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'deposit(uint256,bytes32[])'(
+    "deposit(uint256,bytes32[])"(
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'deposit(uint256)'(
+    "deposit(uint256)"(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'depositAll(bytes32[])'(
+    "depositAll(bytes32[])"(
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'depositAll()'(
-      overrides?: Overrides & { from?: string | Promise<string> },
+    "depositAll()"(
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'depositFor(address,uint256)'(
+    "depositFor(address,uint256)"(
       _recipient: string,
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
-    'depositFor(address,uint256,bytes32[])'(
+    "depositFor(address,uint256,bytes32[])"(
       _recipient: string,
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     getPricePerFullShare(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -827,7 +827,7 @@ export class VaultV15 extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     initialize(
@@ -841,14 +841,14 @@ export class VaultV15 extends BaseContract {
       _name: string,
       _symbol: string,
       _feeConfig: [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     keeper(overrides?: CallOverrides): Promise<[string]>;
 
     lastAdditionalTokenAmount(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<[BigNumber]>;
 
     lastHarvestAmount(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -868,11 +868,11 @@ export class VaultV15 extends BaseContract {
     name(overrides?: CallOverrides): Promise<[string]>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     pauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     paused(overrides?: CallOverrides): Promise<[boolean]>;
@@ -885,87 +885,87 @@ export class VaultV15 extends BaseContract {
 
     reportAdditionalToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     reportHarvest(
       _harvestedAmount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setGovernance(
       _governance: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setKeeper(
       _keeper: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setMaxManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setMaxPerformanceFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setMaxWithdrawalFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setPerformanceFeeGovernance(
       _performanceFeeGovernance: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setPerformanceFeeStrategist(
       _performanceFeeStrategist: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setStrategist(
       _strategist: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setStrategy(
       _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setToEarnBps(
       _newToEarnBps: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setTreasury(
       _treasury: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     setWithdrawalFee(
       _withdrawalFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     strategist(overrides?: CallOverrides): Promise<[string]>;
@@ -974,7 +974,7 @@ export class VaultV15 extends BaseContract {
 
     sweepExtraToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     symbol(overrides?: CallOverrides): Promise<[string]>;
@@ -988,39 +988,39 @@ export class VaultV15 extends BaseContract {
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     treasury(overrides?: CallOverrides): Promise<[string]>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     unpauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     version(overrides?: CallOverrides): Promise<[string]>;
 
     withdraw(
       _shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawAll(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -1038,19 +1038,19 @@ export class VaultV15 extends BaseContract {
 
   additionalTokensEarned(
     arg0: string,
-    overrides?: CallOverrides,
+    overrides?: CallOverrides
   ): Promise<BigNumber>;
 
   allowance(
     owner: string,
     spender: string,
-    overrides?: CallOverrides,
+    overrides?: CallOverrides
   ): Promise<BigNumber>;
 
   approve(
     spender: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   assetsAtLastHarvest(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1068,49 +1068,49 @@ export class VaultV15 extends BaseContract {
   decreaseAllowance(
     spender: string,
     subtractedValue: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'deposit(uint256,bytes32[])'(
+  "deposit(uint256,bytes32[])"(
     _amount: BigNumberish,
     proof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'deposit(uint256)'(
+  "deposit(uint256)"(
     _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'depositAll(bytes32[])'(
+  "depositAll(bytes32[])"(
     proof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'depositAll()'(
-    overrides?: Overrides & { from?: string | Promise<string> },
+  "depositAll()"(
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'depositFor(address,uint256)'(
+  "depositFor(address,uint256)"(
     _recipient: string,
     _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
-  'depositFor(address,uint256,bytes32[])'(
+  "depositFor(address,uint256,bytes32[])"(
     _recipient: string,
     _amount: BigNumberish,
     proof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   earn(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   emitNonProtectedToken(
     _token: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   getPricePerFullShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1124,7 +1124,7 @@ export class VaultV15 extends BaseContract {
   increaseAllowance(
     spender: string,
     addedValue: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   initialize(
@@ -1138,14 +1138,14 @@ export class VaultV15 extends BaseContract {
     _name: string,
     _symbol: string,
     _feeConfig: [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   keeper(overrides?: CallOverrides): Promise<string>;
 
   lastAdditionalTokenAmount(
     arg0: string,
-    overrides?: CallOverrides,
+    overrides?: CallOverrides
   ): Promise<BigNumber>;
 
   lastHarvestAmount(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1165,11 +1165,11 @@ export class VaultV15 extends BaseContract {
   name(overrides?: CallOverrides): Promise<string>;
 
   pause(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   pauseDeposits(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   paused(overrides?: CallOverrides): Promise<boolean>;
@@ -1182,87 +1182,87 @@ export class VaultV15 extends BaseContract {
 
   reportAdditionalToken(
     _token: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   reportHarvest(
     _harvestedAmount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setGovernance(
     _governance: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setGuardian(
     _guardian: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setGuestList(
     _guestList: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setKeeper(
     _keeper: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setManagementFee(
     _fees: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setMaxManagementFee(
     _fees: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setMaxPerformanceFee(
     _fees: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setMaxWithdrawalFee(
     _fees: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setPerformanceFeeGovernance(
     _performanceFeeGovernance: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setPerformanceFeeStrategist(
     _performanceFeeStrategist: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setStrategist(
     _strategist: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setStrategy(
     _strategy: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setToEarnBps(
     _newToEarnBps: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setTreasury(
     _treasury: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   setWithdrawalFee(
     _withdrawalFee: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   strategist(overrides?: CallOverrides): Promise<string>;
@@ -1271,7 +1271,7 @@ export class VaultV15 extends BaseContract {
 
   sweepExtraToken(
     _token: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   symbol(overrides?: CallOverrides): Promise<string>;
@@ -1285,39 +1285,39 @@ export class VaultV15 extends BaseContract {
   transfer(
     recipient: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   transferFrom(
     sender: string,
     recipient: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   treasury(overrides?: CallOverrides): Promise<string>;
 
   unpause(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   unpauseDeposits(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   version(overrides?: CallOverrides): Promise<string>;
 
   withdraw(
     _shares: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawAll(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawToVault(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawalFee(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1335,19 +1335,19 @@ export class VaultV15 extends BaseContract {
 
     additionalTokensEarned(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
     assetsAtLastHarvest(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1365,45 +1365,45 @@ export class VaultV15 extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
-    'deposit(uint256,bytes32[])'(
+    "deposit(uint256,bytes32[])"(
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
-    'deposit(uint256)'(
+    "deposit(uint256)"(
       _amount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
-    'depositAll(bytes32[])'(
+    "depositAll(bytes32[])"(
       proof: BytesLike[],
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
-    'depositAll()'(overrides?: CallOverrides): Promise<void>;
+    "depositAll()"(overrides?: CallOverrides): Promise<void>;
 
-    'depositFor(address,uint256)'(
+    "depositFor(address,uint256)"(
       _recipient: string,
       _amount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
-    'depositFor(address,uint256,bytes32[])'(
+    "depositFor(address,uint256,bytes32[])"(
       _recipient: string,
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     earn(overrides?: CallOverrides): Promise<void>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     getPricePerFullShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1417,7 +1417,7 @@ export class VaultV15 extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
     initialize(
@@ -1431,14 +1431,14 @@ export class VaultV15 extends BaseContract {
       _name: string,
       _symbol: string,
       _feeConfig: [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     keeper(overrides?: CallOverrides): Promise<string>;
 
     lastAdditionalTokenAmount(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     lastHarvestAmount(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1471,17 +1471,17 @@ export class VaultV15 extends BaseContract {
 
     reportAdditionalToken(
       _token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     reportHarvest(
       _harvestedAmount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setGovernance(
       _governance: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setGuardian(_guardian: string, overrides?: CallOverrides): Promise<void>;
@@ -1492,51 +1492,51 @@ export class VaultV15 extends BaseContract {
 
     setManagementFee(
       _fees: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setMaxManagementFee(
       _fees: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setMaxPerformanceFee(
       _fees: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setMaxWithdrawalFee(
       _fees: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setPerformanceFeeGovernance(
       _performanceFeeGovernance: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setPerformanceFeeStrategist(
       _performanceFeeStrategist: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setStrategist(
       _strategist: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setStrategy(_strategy: string, overrides?: CallOverrides): Promise<void>;
 
     setToEarnBps(
       _newToEarnBps: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     setTreasury(_treasury: string, overrides?: CallOverrides): Promise<void>;
 
     setWithdrawalFee(
       _withdrawalFee: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     strategist(overrides?: CallOverrides): Promise<string>;
@@ -1556,14 +1556,14 @@ export class VaultV15 extends BaseContract {
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
     treasury(overrides?: CallOverrides): Promise<string>;
@@ -1584,10 +1584,10 @@ export class VaultV15 extends BaseContract {
   };
 
   filters: {
-    'Approval(address,address,uint256)'(
+    "Approval(address,address,uint256)"(
       owner?: string | null,
       spender?: string | null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, string, BigNumber],
       { owner: string; spender: string; value: BigNumber }
@@ -1596,17 +1596,17 @@ export class VaultV15 extends BaseContract {
     Approval(
       owner?: string | null,
       spender?: string | null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, string, BigNumber],
       { owner: string; spender: string; value: BigNumber }
     >;
 
-    'Harvested(address,uint256,uint256,uint256)'(
+    "Harvested(address,uint256,uint256,uint256)"(
       token?: string | null,
       amount?: null,
       blockNumber?: BigNumberish | null,
-      timestamp?: null,
+      timestamp?: null
     ): TypedEventFilter<
       [string, BigNumber, BigNumber, BigNumber],
       {
@@ -1621,7 +1621,7 @@ export class VaultV15 extends BaseContract {
       token?: string | null,
       amount?: null,
       blockNumber?: BigNumberish | null,
-      timestamp?: null,
+      timestamp?: null
     ): TypedEventFilter<
       [string, BigNumber, BigNumber, BigNumber],
       {
@@ -1632,132 +1632,132 @@ export class VaultV15 extends BaseContract {
       }
     >;
 
-    'PauseDeposits(address)'(
-      pausedBy?: string | null,
+    "PauseDeposits(address)"(
+      pausedBy?: string | null
     ): TypedEventFilter<[string], { pausedBy: string }>;
 
     PauseDeposits(
-      pausedBy?: string | null,
+      pausedBy?: string | null
     ): TypedEventFilter<[string], { pausedBy: string }>;
 
-    'Paused(address)'(
-      account?: null,
+    "Paused(address)"(
+      account?: null
     ): TypedEventFilter<[string], { account: string }>;
 
     Paused(account?: null): TypedEventFilter<[string], { account: string }>;
 
-    'SetGuardian(address)'(
-      newGuardian?: string | null,
+    "SetGuardian(address)"(
+      newGuardian?: string | null
     ): TypedEventFilter<[string], { newGuardian: string }>;
 
     SetGuardian(
-      newGuardian?: string | null,
+      newGuardian?: string | null
     ): TypedEventFilter<[string], { newGuardian: string }>;
 
-    'SetGuestList(address)'(
-      newGuestList?: string | null,
+    "SetGuestList(address)"(
+      newGuestList?: string | null
     ): TypedEventFilter<[string], { newGuestList: string }>;
 
     SetGuestList(
-      newGuestList?: string | null,
+      newGuestList?: string | null
     ): TypedEventFilter<[string], { newGuestList: string }>;
 
-    'SetManagementFee(uint256)'(
-      newManagementFee?: null,
+    "SetManagementFee(uint256)"(
+      newManagementFee?: null
     ): TypedEventFilter<[BigNumber], { newManagementFee: BigNumber }>;
 
     SetManagementFee(
-      newManagementFee?: null,
+      newManagementFee?: null
     ): TypedEventFilter<[BigNumber], { newManagementFee: BigNumber }>;
 
-    'SetMaxManagementFee(uint256)'(
-      newMaxManagementFee?: null,
+    "SetMaxManagementFee(uint256)"(
+      newMaxManagementFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxManagementFee: BigNumber }>;
 
     SetMaxManagementFee(
-      newMaxManagementFee?: null,
+      newMaxManagementFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxManagementFee: BigNumber }>;
 
-    'SetMaxPerformanceFee(uint256)'(
-      newMaxPerformanceFee?: null,
+    "SetMaxPerformanceFee(uint256)"(
+      newMaxPerformanceFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxPerformanceFee: BigNumber }>;
 
     SetMaxPerformanceFee(
-      newMaxPerformanceFee?: null,
+      newMaxPerformanceFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxPerformanceFee: BigNumber }>;
 
-    'SetMaxWithdrawalFee(uint256)'(
-      newMaxWithdrawalFee?: null,
+    "SetMaxWithdrawalFee(uint256)"(
+      newMaxWithdrawalFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxWithdrawalFee: BigNumber }>;
 
     SetMaxWithdrawalFee(
-      newMaxWithdrawalFee?: null,
+      newMaxWithdrawalFee?: null
     ): TypedEventFilter<[BigNumber], { newMaxWithdrawalFee: BigNumber }>;
 
-    'SetPerformanceFeeGovernance(uint256)'(
-      newPerformanceFeeGovernance?: null,
+    "SetPerformanceFeeGovernance(uint256)"(
+      newPerformanceFeeGovernance?: null
     ): TypedEventFilter<
       [BigNumber],
       { newPerformanceFeeGovernance: BigNumber }
     >;
 
     SetPerformanceFeeGovernance(
-      newPerformanceFeeGovernance?: null,
+      newPerformanceFeeGovernance?: null
     ): TypedEventFilter<
       [BigNumber],
       { newPerformanceFeeGovernance: BigNumber }
     >;
 
-    'SetPerformanceFeeStrategist(uint256)'(
-      newPerformanceFeeStrategist?: null,
+    "SetPerformanceFeeStrategist(uint256)"(
+      newPerformanceFeeStrategist?: null
     ): TypedEventFilter<
       [BigNumber],
       { newPerformanceFeeStrategist: BigNumber }
     >;
 
     SetPerformanceFeeStrategist(
-      newPerformanceFeeStrategist?: null,
+      newPerformanceFeeStrategist?: null
     ): TypedEventFilter<
       [BigNumber],
       { newPerformanceFeeStrategist: BigNumber }
     >;
 
-    'SetStrategy(address)'(
-      newStrategy?: string | null,
+    "SetStrategy(address)"(
+      newStrategy?: string | null
     ): TypedEventFilter<[string], { newStrategy: string }>;
 
     SetStrategy(
-      newStrategy?: string | null,
+      newStrategy?: string | null
     ): TypedEventFilter<[string], { newStrategy: string }>;
 
-    'SetToEarnBps(uint256)'(
-      newEarnToBps?: null,
+    "SetToEarnBps(uint256)"(
+      newEarnToBps?: null
     ): TypedEventFilter<[BigNumber], { newEarnToBps: BigNumber }>;
 
     SetToEarnBps(
-      newEarnToBps?: null,
+      newEarnToBps?: null
     ): TypedEventFilter<[BigNumber], { newEarnToBps: BigNumber }>;
 
-    'SetTreasury(address)'(
-      newTreasury?: string | null,
+    "SetTreasury(address)"(
+      newTreasury?: string | null
     ): TypedEventFilter<[string], { newTreasury: string }>;
 
     SetTreasury(
-      newTreasury?: string | null,
+      newTreasury?: string | null
     ): TypedEventFilter<[string], { newTreasury: string }>;
 
-    'SetWithdrawalFee(uint256)'(
-      newWithdrawalFee?: null,
+    "SetWithdrawalFee(uint256)"(
+      newWithdrawalFee?: null
     ): TypedEventFilter<[BigNumber], { newWithdrawalFee: BigNumber }>;
 
     SetWithdrawalFee(
-      newWithdrawalFee?: null,
+      newWithdrawalFee?: null
     ): TypedEventFilter<[BigNumber], { newWithdrawalFee: BigNumber }>;
 
-    'Transfer(address,address,uint256)'(
+    "Transfer(address,address,uint256)"(
       from?: string | null,
       to?: string | null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, string, BigNumber],
       { from: string; to: string; value: BigNumber }
@@ -1766,17 +1766,17 @@ export class VaultV15 extends BaseContract {
     Transfer(
       from?: string | null,
       to?: string | null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, string, BigNumber],
       { from: string; to: string; value: BigNumber }
     >;
 
-    'TreeDistribution(address,uint256,uint256,uint256)'(
+    "TreeDistribution(address,uint256,uint256,uint256)"(
       token?: string | null,
       amount?: null,
       blockNumber?: BigNumberish | null,
-      timestamp?: null,
+      timestamp?: null
     ): TypedEventFilter<
       [string, BigNumber, BigNumber, BigNumber],
       {
@@ -1791,7 +1791,7 @@ export class VaultV15 extends BaseContract {
       token?: string | null,
       amount?: null,
       blockNumber?: BigNumberish | null,
-      timestamp?: null,
+      timestamp?: null
     ): TypedEventFilter<
       [string, BigNumber, BigNumber, BigNumber],
       {
@@ -1802,16 +1802,16 @@ export class VaultV15 extends BaseContract {
       }
     >;
 
-    'UnpauseDeposits(address)'(
-      pausedBy?: string | null,
+    "UnpauseDeposits(address)"(
+      pausedBy?: string | null
     ): TypedEventFilter<[string], { pausedBy: string }>;
 
     UnpauseDeposits(
-      pausedBy?: string | null,
+      pausedBy?: string | null
     ): TypedEventFilter<[string], { pausedBy: string }>;
 
-    'Unpaused(address)'(
-      account?: null,
+    "Unpaused(address)"(
+      account?: null
     ): TypedEventFilter<[string], { account: string }>;
 
     Unpaused(account?: null): TypedEventFilter<[string], { account: string }>;
@@ -1830,19 +1830,19 @@ export class VaultV15 extends BaseContract {
 
     additionalTokensEarned(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     assetsAtLastHarvest(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1860,49 +1860,49 @@ export class VaultV15 extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'deposit(uint256,bytes32[])'(
+    "deposit(uint256,bytes32[])"(
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'deposit(uint256)'(
+    "deposit(uint256)"(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'depositAll(bytes32[])'(
+    "depositAll(bytes32[])"(
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'depositAll()'(
-      overrides?: Overrides & { from?: string | Promise<string> },
+    "depositAll()"(
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'depositFor(address,uint256)'(
+    "depositFor(address,uint256)"(
       _recipient: string,
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
-    'depositFor(address,uint256,bytes32[])'(
+    "depositFor(address,uint256,bytes32[])"(
       _recipient: string,
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     getPricePerFullShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1916,7 +1916,7 @@ export class VaultV15 extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     initialize(
@@ -1930,14 +1930,14 @@ export class VaultV15 extends BaseContract {
       _name: string,
       _symbol: string,
       _feeConfig: [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     keeper(overrides?: CallOverrides): Promise<BigNumber>;
 
     lastAdditionalTokenAmount(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     lastHarvestAmount(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1957,11 +1957,11 @@ export class VaultV15 extends BaseContract {
     name(overrides?: CallOverrides): Promise<BigNumber>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     pauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     paused(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1974,87 +1974,87 @@ export class VaultV15 extends BaseContract {
 
     reportAdditionalToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     reportHarvest(
       _harvestedAmount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setGovernance(
       _governance: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setKeeper(
       _keeper: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setMaxManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setMaxPerformanceFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setMaxWithdrawalFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setPerformanceFeeGovernance(
       _performanceFeeGovernance: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setPerformanceFeeStrategist(
       _performanceFeeStrategist: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setStrategist(
       _strategist: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setStrategy(
       _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setToEarnBps(
       _newToEarnBps: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setTreasury(
       _treasury: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     setWithdrawalFee(
       _withdrawalFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     strategist(overrides?: CallOverrides): Promise<BigNumber>;
@@ -2063,7 +2063,7 @@ export class VaultV15 extends BaseContract {
 
     sweepExtraToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     symbol(overrides?: CallOverrides): Promise<BigNumber>;
@@ -2077,39 +2077,39 @@ export class VaultV15 extends BaseContract {
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     treasury(overrides?: CallOverrides): Promise<BigNumber>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     unpauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     version(overrides?: CallOverrides): Promise<BigNumber>;
 
     withdraw(
       _shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawAll(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<BigNumber>;
@@ -2117,40 +2117,40 @@ export class VaultV15 extends BaseContract {
 
   populateTransaction: {
     MANAGEMENT_FEE_HARD_CAP(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     MAX_BPS(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     PERFORMANCE_FEE_HARD_CAP(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     SECS_PER_YEAR(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     WITHDRAWAL_FEE_HARD_CAP(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     additionalTokensEarned(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     assetsAtLastHarvest(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     available(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2161,7 +2161,7 @@ export class VaultV15 extends BaseContract {
 
     balanceOf(
       account: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     decimals(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2169,53 +2169,53 @@ export class VaultV15 extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'deposit(uint256,bytes32[])'(
+    "deposit(uint256,bytes32[])"(
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'deposit(uint256)'(
+    "deposit(uint256)"(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'depositAll(bytes32[])'(
+    "depositAll(bytes32[])"(
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'depositAll()'(
-      overrides?: Overrides & { from?: string | Promise<string> },
+    "depositAll()"(
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'depositFor(address,uint256)'(
+    "depositFor(address,uint256)"(
       _recipient: string,
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
-    'depositFor(address,uint256,bytes32[])'(
+    "depositFor(address,uint256,bytes32[])"(
       _recipient: string,
       _amount: BigNumberish,
       proof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     getPricePerFullShare(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     governance(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2227,7 +2227,7 @@ export class VaultV15 extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     initialize(
@@ -2241,14 +2241,14 @@ export class VaultV15 extends BaseContract {
       _name: string,
       _symbol: string,
       _feeConfig: [BigNumberish, BigNumberish, BigNumberish, BigNumberish],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     keeper(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     lastAdditionalTokenAmount(
       arg0: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     lastHarvestAmount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2268,11 +2268,11 @@ export class VaultV15 extends BaseContract {
     name(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     pauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     paused(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2280,96 +2280,96 @@ export class VaultV15 extends BaseContract {
     pausedDeposit(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     performanceFeeGovernance(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     performanceFeeStrategist(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     reportAdditionalToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     reportHarvest(
       _harvestedAmount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setGovernance(
       _governance: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setKeeper(
       _keeper: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setMaxManagementFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setMaxPerformanceFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setMaxWithdrawalFee(
       _fees: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setPerformanceFeeGovernance(
       _performanceFeeGovernance: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setPerformanceFeeStrategist(
       _performanceFeeStrategist: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setStrategist(
       _strategist: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setStrategy(
       _strategy: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setToEarnBps(
       _newToEarnBps: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setTreasury(
       _treasury: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     setWithdrawalFee(
       _withdrawalFee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     strategist(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2378,7 +2378,7 @@ export class VaultV15 extends BaseContract {
 
     sweepExtraToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     symbol(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -2392,39 +2392,39 @@ export class VaultV15 extends BaseContract {
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     treasury(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     unpauseDeposits(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     version(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     withdraw(
       _shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawAll(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<PopulatedTransaction>;

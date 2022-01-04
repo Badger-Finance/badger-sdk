@@ -13,247 +13,247 @@ import {
   ContractTransaction,
   Overrides,
   CallOverrides,
-} from 'ethers';
-import { BytesLike } from '@ethersproject/bytes';
-import { Listener, Provider } from '@ethersproject/providers';
-import { FunctionFragment, EventFragment, Result } from '@ethersproject/abi';
-import type { TypedEventFilter, TypedEvent, TypedListener } from './common';
+} from "ethers";
+import { BytesLike } from "@ethersproject/bytes";
+import { Listener, Provider } from "@ethersproject/providers";
+import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
+import type { TypedEventFilter, TypedEvent, TypedListener } from "./common";
 
 interface StrategyV15Interface extends ethers.utils.Interface {
   functions: {
-    'LENDING_POOL()': FunctionFragment;
-    'MAX_BPS()': FunctionFragment;
-    'REWARD()': FunctionFragment;
-    'REWARDS_CONTRACT()': FunctionFragment;
-    'ROUTER()': FunctionFragment;
-    '__BaseStrategy_init(address)': FunctionFragment;
-    'aToken()': FunctionFragment;
-    'autoCompoundRatio()': FunctionFragment;
-    'balanceOf()': FunctionFragment;
-    'balanceOfPool()': FunctionFragment;
-    'balanceOfRewards()': FunctionFragment;
-    'balanceOfWant()': FunctionFragment;
-    'baseStrategyVersion()': FunctionFragment;
-    'deposit()': FunctionFragment;
-    'earn()': FunctionFragment;
-    'emitNonProtectedToken(address)': FunctionFragment;
-    'getName()': FunctionFragment;
-    'getProtectedTokens()': FunctionFragment;
-    'governance()': FunctionFragment;
-    'guardian()': FunctionFragment;
-    'harvest()': FunctionFragment;
-    'initialize(address,address[1])': FunctionFragment;
-    'isProtectedToken(address)': FunctionFragment;
-    'isTendable()': FunctionFragment;
-    'keeper()': FunctionFragment;
-    'pause()': FunctionFragment;
-    'paused()': FunctionFragment;
-    'setWithdrawalMaxDeviationThreshold(uint256)': FunctionFragment;
-    'strategist()': FunctionFragment;
-    'tend()': FunctionFragment;
-    'unpause()': FunctionFragment;
-    'vault()': FunctionFragment;
-    'want()': FunctionFragment;
-    'withdraw(uint256)': FunctionFragment;
-    'withdrawOther(address)': FunctionFragment;
-    'withdrawToVault()': FunctionFragment;
-    'withdrawalMaxDeviationThreshold()': FunctionFragment;
+    "LENDING_POOL()": FunctionFragment;
+    "MAX_BPS()": FunctionFragment;
+    "REWARD()": FunctionFragment;
+    "REWARDS_CONTRACT()": FunctionFragment;
+    "ROUTER()": FunctionFragment;
+    "__BaseStrategy_init(address)": FunctionFragment;
+    "aToken()": FunctionFragment;
+    "autoCompoundRatio()": FunctionFragment;
+    "balanceOf()": FunctionFragment;
+    "balanceOfPool()": FunctionFragment;
+    "balanceOfRewards()": FunctionFragment;
+    "balanceOfWant()": FunctionFragment;
+    "baseStrategyVersion()": FunctionFragment;
+    "deposit()": FunctionFragment;
+    "earn()": FunctionFragment;
+    "emitNonProtectedToken(address)": FunctionFragment;
+    "getName()": FunctionFragment;
+    "getProtectedTokens()": FunctionFragment;
+    "governance()": FunctionFragment;
+    "guardian()": FunctionFragment;
+    "harvest()": FunctionFragment;
+    "initialize(address,address[1])": FunctionFragment;
+    "isProtectedToken(address)": FunctionFragment;
+    "isTendable()": FunctionFragment;
+    "keeper()": FunctionFragment;
+    "pause()": FunctionFragment;
+    "paused()": FunctionFragment;
+    "setWithdrawalMaxDeviationThreshold(uint256)": FunctionFragment;
+    "strategist()": FunctionFragment;
+    "tend()": FunctionFragment;
+    "unpause()": FunctionFragment;
+    "vault()": FunctionFragment;
+    "want()": FunctionFragment;
+    "withdraw(uint256)": FunctionFragment;
+    "withdrawOther(address)": FunctionFragment;
+    "withdrawToVault()": FunctionFragment;
+    "withdrawalMaxDeviationThreshold()": FunctionFragment;
   };
 
   encodeFunctionData(
-    functionFragment: 'LENDING_POOL',
-    values?: undefined,
+    functionFragment: "LENDING_POOL",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'MAX_BPS', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'REWARD', values?: undefined): string;
+  encodeFunctionData(functionFragment: "MAX_BPS", values?: undefined): string;
+  encodeFunctionData(functionFragment: "REWARD", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'REWARDS_CONTRACT',
-    values?: undefined,
+    functionFragment: "REWARDS_CONTRACT",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'ROUTER', values?: undefined): string;
+  encodeFunctionData(functionFragment: "ROUTER", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: '__BaseStrategy_init',
-    values: [string],
+    functionFragment: "__BaseStrategy_init",
+    values: [string]
   ): string;
-  encodeFunctionData(functionFragment: 'aToken', values?: undefined): string;
+  encodeFunctionData(functionFragment: "aToken", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'autoCompoundRatio',
-    values?: undefined,
+    functionFragment: "autoCompoundRatio",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'balanceOf', values?: undefined): string;
+  encodeFunctionData(functionFragment: "balanceOf", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'balanceOfPool',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(
-    functionFragment: 'balanceOfRewards',
-    values?: undefined,
+    functionFragment: "balanceOfPool",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'balanceOfWant',
-    values?: undefined,
+    functionFragment: "balanceOfRewards",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'baseStrategyVersion',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'deposit', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'earn', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'emitNonProtectedToken',
-    values: [string],
-  ): string;
-  encodeFunctionData(functionFragment: 'getName', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'getProtectedTokens',
-    values?: undefined,
+    functionFragment: "balanceOfWant",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'governance',
-    values?: undefined,
+    functionFragment: "baseStrategyVersion",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'guardian', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'harvest', values?: undefined): string;
+  encodeFunctionData(functionFragment: "deposit", values?: undefined): string;
+  encodeFunctionData(functionFragment: "earn", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'initialize',
-    values: [string, [string]],
+    functionFragment: "emitNonProtectedToken",
+    values: [string]
   ): string;
+  encodeFunctionData(functionFragment: "getName", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'isProtectedToken',
-    values: [string],
-  ): string;
-  encodeFunctionData(
-    functionFragment: 'isTendable',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'keeper', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'pause', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'paused', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'setWithdrawalMaxDeviationThreshold',
-    values: [BigNumberish],
+    functionFragment: "getProtectedTokens",
+    values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: 'strategist',
-    values?: undefined,
+    functionFragment: "governance",
+    values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: 'tend', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'unpause', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'vault', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'want', values?: undefined): string;
+  encodeFunctionData(functionFragment: "guardian", values?: undefined): string;
+  encodeFunctionData(functionFragment: "harvest", values?: undefined): string;
   encodeFunctionData(
-    functionFragment: 'withdraw',
-    values: [BigNumberish],
+    functionFragment: "initialize",
+    values: [string, [string]]
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawOther',
-    values: [string],
+    functionFragment: "isProtectedToken",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawToVault',
-    values?: undefined,
+    functionFragment: "isTendable",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "keeper", values?: undefined): string;
+  encodeFunctionData(functionFragment: "pause", values?: undefined): string;
+  encodeFunctionData(functionFragment: "paused", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "setWithdrawalMaxDeviationThreshold",
+    values: [BigNumberish]
   ): string;
   encodeFunctionData(
-    functionFragment: 'withdrawalMaxDeviationThreshold',
-    values?: undefined,
+    functionFragment: "strategist",
+    values?: undefined
+  ): string;
+  encodeFunctionData(functionFragment: "tend", values?: undefined): string;
+  encodeFunctionData(functionFragment: "unpause", values?: undefined): string;
+  encodeFunctionData(functionFragment: "vault", values?: undefined): string;
+  encodeFunctionData(functionFragment: "want", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "withdraw",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawOther",
+    values: [string]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawToVault",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawalMaxDeviationThreshold",
+    values?: undefined
   ): string;
 
   decodeFunctionResult(
-    functionFragment: 'LENDING_POOL',
-    data: BytesLike,
+    functionFragment: "LENDING_POOL",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'MAX_BPS', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'REWARD', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "MAX_BPS", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "REWARD", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'REWARDS_CONTRACT',
-    data: BytesLike,
+    functionFragment: "REWARDS_CONTRACT",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'ROUTER', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "ROUTER", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: '__BaseStrategy_init',
-    data: BytesLike,
+    functionFragment: "__BaseStrategy_init",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'aToken', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "aToken", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'autoCompoundRatio',
-    data: BytesLike,
+    functionFragment: "autoCompoundRatio",
+    data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: 'balanceOfPool',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: 'balanceOfRewards',
-    data: BytesLike,
+    functionFragment: "balanceOfPool",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'balanceOfWant',
-    data: BytesLike,
+    functionFragment: "balanceOfRewards",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'baseStrategyVersion',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'deposit', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'earn', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'emitNonProtectedToken',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'getName', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'getProtectedTokens',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'governance', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'guardian', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'harvest', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'isProtectedToken',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'isTendable', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'keeper', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'pause', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'paused', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'setWithdrawalMaxDeviationThreshold',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'strategist', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'tend', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'unpause', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'vault', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'want', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'withdraw', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'withdrawOther',
-    data: BytesLike,
+    functionFragment: "balanceOfWant",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'withdrawToVault',
-    data: BytesLike,
+    functionFragment: "baseStrategyVersion",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "deposit", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "earn", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "emitNonProtectedToken",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "getName", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "getProtectedTokens",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "governance", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "guardian", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "harvest", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "initialize", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "isProtectedToken",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "isTendable", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "keeper", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "pause", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "paused", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "setWithdrawalMaxDeviationThreshold",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "strategist", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "tend", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "unpause", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "vault", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "want", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "withdraw", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawOther",
+    data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: 'withdrawalMaxDeviationThreshold',
-    data: BytesLike,
+    functionFragment: "withdrawToVault",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawalMaxDeviationThreshold",
+    data: BytesLike
   ): Result;
 
   events: {
-    'Debug(string,uint256)': EventFragment;
-    'Paused(address)': EventFragment;
-    'SetWithdrawalMaxDeviationThreshold(uint256)': EventFragment;
-    'Unpaused(address)': EventFragment;
+    "Debug(string,uint256)": EventFragment;
+    "Paused(address)": EventFragment;
+    "SetWithdrawalMaxDeviationThreshold(uint256)": EventFragment;
+    "Unpaused(address)": EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: 'Debug'): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Paused'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Debug"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Paused"): EventFragment;
   getEvent(
-    nameOrSignatureOrTopic: 'SetWithdrawalMaxDeviationThreshold',
+    nameOrSignatureOrTopic: "SetWithdrawalMaxDeviationThreshold"
   ): EventFragment;
-  getEvent(nameOrSignatureOrTopic: 'Unpaused'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "Unpaused"): EventFragment;
 }
 
 export type DebugEvent = TypedEvent<
@@ -274,26 +274,26 @@ export class StrategyV15 extends BaseContract {
   deployed(): Promise<this>;
 
   listeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>,
+    eventFilter?: TypedEventFilter<EventArgsArray, EventArgsObject>
   ): Array<TypedListener<EventArgsArray, EventArgsObject>>;
   off<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   on<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   once<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   removeListener<EventArgsArray extends Array<any>, EventArgsObject>(
     eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
-    listener: TypedListener<EventArgsArray, EventArgsObject>,
+    listener: TypedListener<EventArgsArray, EventArgsObject>
   ): this;
   removeAllListeners<EventArgsArray extends Array<any>, EventArgsObject>(
-    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>,
+    eventFilter: TypedEventFilter<EventArgsArray, EventArgsObject>
   ): this;
 
   listeners(eventName?: string): Array<Listener>;
@@ -306,7 +306,7 @@ export class StrategyV15 extends BaseContract {
   queryFilter<EventArgsArray extends Array<any>, EventArgsObject>(
     event: TypedEventFilter<EventArgsArray, EventArgsObject>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined,
+    toBlock?: string | number | undefined
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
   interface: StrategyV15Interface;
@@ -324,7 +324,7 @@ export class StrategyV15 extends BaseContract {
 
     __BaseStrategy_init(
       _vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     aToken(overrides?: CallOverrides): Promise<[string]>;
@@ -335,7 +335,9 @@ export class StrategyV15 extends BaseContract {
 
     balanceOfPool(overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    balanceOfRewards(overrides?: CallOverrides): Promise<
+    balanceOfRewards(
+      overrides?: CallOverrides
+    ): Promise<
       [([string, BigNumber] & { token: string; amount: BigNumber })[]] & {
         rewards: ([string, BigNumber] & { token: string; amount: BigNumber })[];
       }
@@ -346,16 +348,16 @@ export class StrategyV15 extends BaseContract {
     baseStrategyVersion(overrides?: CallOverrides): Promise<[string]>;
 
     deposit(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     getName(overrides?: CallOverrides): Promise<[string]>;
@@ -367,18 +369,18 @@ export class StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<[string]>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     initialize(
       _vault: string,
       _wantConfig: [string],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     isProtectedToken(
       token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<[boolean]>;
 
     isTendable(overrides?: CallOverrides): Promise<[boolean]>;
@@ -386,24 +388,24 @@ export class StrategyV15 extends BaseContract {
     keeper(overrides?: CallOverrides): Promise<[string]>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     paused(overrides?: CallOverrides): Promise<[boolean]>;
 
     setWithdrawalMaxDeviationThreshold(
       _threshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     strategist(overrides?: CallOverrides): Promise<[string]>;
 
     tend(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     vault(overrides?: CallOverrides): Promise<[string]>;
@@ -412,20 +414,20 @@ export class StrategyV15 extends BaseContract {
 
     withdraw(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawOther(
       _asset: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<[BigNumber]>;
   };
 
@@ -441,7 +443,7 @@ export class StrategyV15 extends BaseContract {
 
   __BaseStrategy_init(
     _vault: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   aToken(overrides?: CallOverrides): Promise<string>;
@@ -453,7 +455,7 @@ export class StrategyV15 extends BaseContract {
   balanceOfPool(overrides?: CallOverrides): Promise<BigNumber>;
 
   balanceOfRewards(
-    overrides?: CallOverrides,
+    overrides?: CallOverrides
   ): Promise<([string, BigNumber] & { token: string; amount: BigNumber })[]>;
 
   balanceOfWant(overrides?: CallOverrides): Promise<BigNumber>;
@@ -461,16 +463,16 @@ export class StrategyV15 extends BaseContract {
   baseStrategyVersion(overrides?: CallOverrides): Promise<string>;
 
   deposit(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   earn(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   emitNonProtectedToken(
     _token: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   getName(overrides?: CallOverrides): Promise<string>;
@@ -482,13 +484,13 @@ export class StrategyV15 extends BaseContract {
   guardian(overrides?: CallOverrides): Promise<string>;
 
   harvest(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   initialize(
     _vault: string,
     _wantConfig: [string],
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   isProtectedToken(token: string, overrides?: CallOverrides): Promise<boolean>;
@@ -498,24 +500,24 @@ export class StrategyV15 extends BaseContract {
   keeper(overrides?: CallOverrides): Promise<string>;
 
   pause(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   paused(overrides?: CallOverrides): Promise<boolean>;
 
   setWithdrawalMaxDeviationThreshold(
     _threshold: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   strategist(overrides?: CallOverrides): Promise<string>;
 
   tend(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   unpause(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   vault(overrides?: CallOverrides): Promise<string>;
@@ -524,20 +526,20 @@ export class StrategyV15 extends BaseContract {
 
   withdraw(
     _amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawOther(
     _asset: string,
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawToVault(
-    overrides?: Overrides & { from?: string | Promise<string> },
+    overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
   withdrawalMaxDeviationThreshold(
-    overrides?: CallOverrides,
+    overrides?: CallOverrides
   ): Promise<BigNumber>;
 
   callStatic: {
@@ -553,7 +555,7 @@ export class StrategyV15 extends BaseContract {
 
     __BaseStrategy_init(
       _vault: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     aToken(overrides?: CallOverrides): Promise<string>;
@@ -565,7 +567,7 @@ export class StrategyV15 extends BaseContract {
     balanceOfPool(overrides?: CallOverrides): Promise<BigNumber>;
 
     balanceOfRewards(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<([string, BigNumber] & { token: string; amount: BigNumber })[]>;
 
     balanceOfWant(overrides?: CallOverrides): Promise<BigNumber>;
@@ -578,7 +580,7 @@ export class StrategyV15 extends BaseContract {
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     getName(overrides?: CallOverrides): Promise<string>;
@@ -590,18 +592,18 @@ export class StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<string>;
 
     harvest(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<([string, BigNumber] & { token: string; amount: BigNumber })[]>;
 
     initialize(
       _vault: string,
       _wantConfig: [string],
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     isProtectedToken(
       token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<boolean>;
 
     isTendable(overrides?: CallOverrides): Promise<boolean>;
@@ -614,13 +616,13 @@ export class StrategyV15 extends BaseContract {
 
     setWithdrawalMaxDeviationThreshold(
       _threshold: BigNumberish,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<void>;
 
     strategist(overrides?: CallOverrides): Promise<string>;
 
     tend(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<([string, BigNumber] & { token: string; amount: BigNumber })[]>;
 
     unpause(overrides?: CallOverrides): Promise<void>;
@@ -636,14 +638,14 @@ export class StrategyV15 extends BaseContract {
     withdrawToVault(overrides?: CallOverrides): Promise<BigNumber>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
   };
 
   filters: {
-    'Debug(string,uint256)'(
+    "Debug(string,uint256)"(
       name?: null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, BigNumber],
       { name: string; value: BigNumber }
@@ -651,28 +653,28 @@ export class StrategyV15 extends BaseContract {
 
     Debug(
       name?: null,
-      value?: null,
+      value?: null
     ): TypedEventFilter<
       [string, BigNumber],
       { name: string; value: BigNumber }
     >;
 
-    'Paused(address)'(
-      account?: null,
+    "Paused(address)"(
+      account?: null
     ): TypedEventFilter<[string], { account: string }>;
 
     Paused(account?: null): TypedEventFilter<[string], { account: string }>;
 
-    'SetWithdrawalMaxDeviationThreshold(uint256)'(
-      nawMaxDeviationThreshold?: null,
+    "SetWithdrawalMaxDeviationThreshold(uint256)"(
+      nawMaxDeviationThreshold?: null
     ): TypedEventFilter<[BigNumber], { nawMaxDeviationThreshold: BigNumber }>;
 
     SetWithdrawalMaxDeviationThreshold(
-      nawMaxDeviationThreshold?: null,
+      nawMaxDeviationThreshold?: null
     ): TypedEventFilter<[BigNumber], { nawMaxDeviationThreshold: BigNumber }>;
 
-    'Unpaused(address)'(
-      account?: null,
+    "Unpaused(address)"(
+      account?: null
     ): TypedEventFilter<[string], { account: string }>;
 
     Unpaused(account?: null): TypedEventFilter<[string], { account: string }>;
@@ -691,7 +693,7 @@ export class StrategyV15 extends BaseContract {
 
     __BaseStrategy_init(
       _vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     aToken(overrides?: CallOverrides): Promise<BigNumber>;
@@ -709,16 +711,16 @@ export class StrategyV15 extends BaseContract {
     baseStrategyVersion(overrides?: CallOverrides): Promise<BigNumber>;
 
     deposit(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     getName(overrides?: CallOverrides): Promise<BigNumber>;
@@ -730,18 +732,18 @@ export class StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<BigNumber>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     initialize(
       _vault: string,
       _wantConfig: [string],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     isProtectedToken(
       token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     isTendable(overrides?: CallOverrides): Promise<BigNumber>;
@@ -749,24 +751,24 @@ export class StrategyV15 extends BaseContract {
     keeper(overrides?: CallOverrides): Promise<BigNumber>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     paused(overrides?: CallOverrides): Promise<BigNumber>;
 
     setWithdrawalMaxDeviationThreshold(
       _threshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     strategist(overrides?: CallOverrides): Promise<BigNumber>;
 
     tend(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     vault(overrides?: CallOverrides): Promise<BigNumber>;
@@ -775,20 +777,20 @@ export class StrategyV15 extends BaseContract {
 
     withdraw(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawOther(
       _asset: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
   };
 
@@ -805,7 +807,7 @@ export class StrategyV15 extends BaseContract {
 
     __BaseStrategy_init(
       _vault: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     aToken(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -821,26 +823,26 @@ export class StrategyV15 extends BaseContract {
     balanceOfWant(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     baseStrategyVersion(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     deposit(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     earn(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     emitNonProtectedToken(
       _token: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     getName(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     getProtectedTokens(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     governance(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -848,18 +850,18 @@ export class StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     initialize(
       _vault: string,
       _wantConfig: [string],
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     isProtectedToken(
       token: string,
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     isTendable(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -867,24 +869,24 @@ export class StrategyV15 extends BaseContract {
     keeper(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     paused(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     setWithdrawalMaxDeviationThreshold(
       _threshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     strategist(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     tend(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     vault(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -893,20 +895,20 @@ export class StrategyV15 extends BaseContract {
 
     withdraw(
       _amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawOther(
       _asset: string,
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawToVault(
-      overrides?: Overrides & { from?: string | Promise<string> },
+      overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
   };
 }

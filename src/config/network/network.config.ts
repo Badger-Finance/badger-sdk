@@ -11,7 +11,7 @@ export abstract class NetworkConfig {
     readonly network: Network,
     readonly id: number,
     readonly tokens: ContractRegistry,
-    readonly setts: ContractRegistry,
+    readonly vaults: ContractRegistry,
   ) {}
 
   static register(config: NetworkConfig) {
