@@ -80,20 +80,27 @@ export class RewardsService extends Service {
   }
 
   private async init() {
-    const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
-      this.sdk.registry.get(RegistryKey.BadgerTree),
-      this.sdk.registry.get(RegistryKey.RewardsLogger),
-    ]);
-    if (badgerTreeAddress) {
-      this.badgerTree = BadgerTree__factory.connect(
-        badgerTreeAddress,
-        this.provider,
-      );
-    }
-    if (rewardsLoggerAddress) {
-      this.rewardsLogger = RewardsLogger__factory.connect(
-        rewardsLoggerAddress,
-        this.provider,
+    try {
+      const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
+        this.sdk.registry.get(RegistryKey.BadgerTree),
+        this.sdk.registry.get(RegistryKey.RewardsLogger),
+      ]);
+      if (badgerTreeAddress) {
+        this.badgerTree = BadgerTree__factory.connect(
+          badgerTreeAddress,
+          this.provider,
+        );
+      }
+      if (rewardsLoggerAddress) {
+        this.rewardsLogger = RewardsLogger__factory.connect(
+          rewardsLoggerAddress,
+          this.provider,
+        );
+      }
+    } catch (err) {
+      console.log(
+        `Failed to initialize rewards for ${this.sdk.config.network}`,
+        err,
       );
     }
   }
