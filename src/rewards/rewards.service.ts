@@ -81,6 +81,7 @@ export class RewardsService extends Service {
 
   private async init() {
     try {
+      await this.sdk.registry.ready();
       const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
         this.sdk.registry.get(RegistryKey.BadgerTree),
         this.sdk.registry.get(RegistryKey.RewardsLogger),
