@@ -133,14 +133,21 @@ export class VaultsService extends Service {
   }
 
   private async init() {
-    const vaultsInfo = await this.sdk.registry.getProductionVaults();
-    this.vaultsInfo = Object.fromEntries(
-      vaultsInfo.flatMap((info) =>
-        info.list.map((vault): [string, VaultSummary] => [
-          vault,
-          { address: vault, version: info.version, status: info.status },
-        ]),
-      ),
-    );
+    try {
+      const vaultsInfo = await this.sdk.registry.getProductionVaults();
+      this.vaultsInfo = Object.fromEntries(
+        vaultsInfo.flatMap((info) =>
+          info.list.map((vault): [string, VaultSummary] => [
+            vault,
+            { address: vault, version: info.version, status: info.status },
+          ]),
+        ),
+      );
+    } catch (err) {
+      console.log(
+        `Failed to initialize vaults for ${this.sdk.config.network}`,
+        err,
+      );
+    }
   }
 }

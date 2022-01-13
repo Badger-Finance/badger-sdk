@@ -17,4 +17,4 @@ export const SUPPORTED_NETWORKS = [
   AVAX_CONFIG,
 ];
 
-export const VERSION = '1.0.54';
+export const VERSION = '1.0.56';

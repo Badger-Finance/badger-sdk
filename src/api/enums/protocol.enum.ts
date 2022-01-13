@@ -1,4 +1,5 @@
 export enum Protocol {
+  Aave = 'Aave',
   Badger = 'Badger',
   Convex = 'Convex',
   Curve = 'Curve',
