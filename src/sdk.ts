@@ -53,6 +53,7 @@ export class BadgerSDK {
   async ready() {
     return Promise.all([
       this.loading,
+      this.registry.ready(),
       this.rewards.ready(),
       this.vaults.ready(),
     ]);

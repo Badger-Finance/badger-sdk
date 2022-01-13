@@ -134,6 +134,7 @@ export class VaultsService extends Service {
 
   private async init() {
     try {
+      await this.sdk.registry.ready();
       const vaultsInfo = await this.sdk.registry.getProductionVaults();
       this.vaultsInfo = Object.fromEntries(
         vaultsInfo.flatMap((info) =>
