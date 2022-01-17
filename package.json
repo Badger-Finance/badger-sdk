@@ -1,6 +1,6 @@
 {
   "name": "@badger-dao/sdk",
-  "version": "1.0.57",
+  "version": "1.0.58",
   "description": "Badger Protocol Typescript SDK",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -23,6 +23,10 @@
     "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
+    "@0xsequence/indexer": "^0.35.5",
+    "@0xsequence/multicall": "^0.35.5",
+    "@0xsequence/provider": "^0.35.5",
+    "@0xsequence/relayer": "^0.35.5",
     "@ethersproject/providers": "^5.5.0",
     "@graphql-codegen/cli": "1.21.4",
     "@graphql-codegen/typescript": "1.22.0",

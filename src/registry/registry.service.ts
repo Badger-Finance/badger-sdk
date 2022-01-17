@@ -44,7 +44,9 @@ export class RegistryService extends Service {
     try {
       const deployed = await this.provider.getCode(REGISTRY_ADDRESS);
       if (deployed === '0x') {
-        console.log(`No registry deployed for ${this.sdk.config.network}, skipping...`);
+        console.log(
+          `No registry deployed for ${this.sdk.config.network}, skipping...`,
+        );
         return;
       }
       this.registry = Registry__factory.connect(
