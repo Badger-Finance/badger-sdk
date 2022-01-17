@@ -6,4 +6,5 @@ export enum Network {
   Avalanche = 'avalanche',
   Fantom = 'fantom',
   xDai = 'xdai',
+  Local = 'local',
 }
