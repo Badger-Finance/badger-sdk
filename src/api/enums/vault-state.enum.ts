@@ -3,4 +3,5 @@ export enum VaultState {
   Guarded = 'guarded',
   Experimental = 'experimental',
   Deprecated = 'deprecated',
+  New = 'new',
 }

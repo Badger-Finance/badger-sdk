@@ -10,7 +10,6 @@ export interface Vault {
   boost: BoostConfig;
   bouncer: BouncerType;
   apr: number;
-  newVault: boolean;
   minApr?: number;
   maxApr?: number;
   pricePerFullShare: number;
