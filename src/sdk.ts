@@ -10,12 +10,14 @@ import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
 import { SDKProvider } from './config/types/sdk-provider';
+import { providers} from '@0xsequence/multicall';
 
 export class BadgerSDK {
   private static initialized = false;
   private loading: Promise<void>;
   public config: NetworkConfig;
   public signer?: Signer;
+  public multicall: providers.MulticallProvider;
   public address?: string;
 
   readonly api: BadgerAPI;
@@ -38,6 +40,7 @@ export class BadgerSDK {
       BadgerSDK.initialized = true;
     }
     this.config = NetworkConfig.getConfig(network);
+    this.multicall = new providers.MulticallProvider(this.provider);
     this.signer = this.provider.getSigner();
     this.loading = this.initialize();
 
