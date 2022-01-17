@@ -10,7 +10,7 @@ import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
 import { SDKProvider } from './config/types/sdk-provider';
-import { providers} from '@0xsequence/multicall';
+import { providers } from '@0xsequence/multicall';
 
 export class BadgerSDK {
   private static initialized = false;
