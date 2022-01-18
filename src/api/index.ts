@@ -32,7 +32,8 @@ export class BadgerAPI {
     this.client = axios.create({
       baseURL,
     });
-    this.network = NetworkConfig.getConfig(network).network;
+    const lookupNetwork = this.isLocal(network) ? Network.Ethereum : network;
+    this.network = NetworkConfig.getConfig(lookupNetwork).network;
   }
 
   async loadPrices(
@@ -164,6 +165,10 @@ export class BadgerAPI {
     for (const config of SUPPORTED_NETWORKS) {
       NetworkConfig.register(config);
     }
+  }
+
+  private isLocal(network: Networkish): boolean {
+    return network === Network.Local || network === 1337;
   }
 }
 
