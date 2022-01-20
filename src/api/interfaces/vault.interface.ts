@@ -4,6 +4,7 @@ import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
 export interface Vault {
   name: string;
   value: number;
+  available: number;
   balance: number;
   asset: string;
   vaultAsset: string;
