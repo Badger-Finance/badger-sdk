@@ -2,6 +2,7 @@ import { ARB_CONFIG } from './network/arbitrum.config';
 import { AVAX_CONFIG } from './network/avalanche.config';
 import { BSC_CONFIG } from './network/binance.config';
 import { ETH_CONFIG } from './network/ethereum.config';
+import { FTM_CONFIG } from './network/fantom.config';
 import { LOCAL_CONFIG } from './network/local.config';
 import { MATIC_CONFIG } from './network/polygon.config';
 
@@ -17,6 +18,7 @@ export const SUPPORTED_NETWORKS = [
   MATIC_CONFIG,
   ARB_CONFIG,
   AVAX_CONFIG,
+  FTM_CONFIG,
 ];
 
-export const VERSION = '1.0.67';
+export const VERSION = '1.0.68';
