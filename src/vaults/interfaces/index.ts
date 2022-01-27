@@ -1,3 +1,3 @@
 export { VaultPerformance } from './vault-performance.interface';
-export { VaultSummary } from './vault-summary.interface';
+export { VaultRegistration } from './vault-registration.interface';
 export { VaultToken } from './vault-token.interface';

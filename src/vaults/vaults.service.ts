@@ -8,11 +8,11 @@ import {
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
 import { VaultVersion } from './enums/vault-version.enum';
-import { VaultPerformance, VaultSummary, VaultToken } from './interfaces';
+import { VaultPerformance, VaultRegistration, VaultToken } from './interfaces';
 
 export class VaultsService extends Service {
   private loading: Promise<void>;
-  private vaultsInfo: Record<string, VaultSummary>;
+  private vaultsInfo: Record<string, VaultRegistration>;
   private vaults: Record<string, VaultToken>;
 
   constructor(sdk: BadgerSDK) {
@@ -138,7 +138,7 @@ export class VaultsService extends Service {
       const vaultsInfo = await this.sdk.registry.getProductionVaults();
       this.vaultsInfo = Object.fromEntries(
         vaultsInfo.flatMap((info) =>
-          info.list.map((vault): [string, VaultSummary] => [
+          info.list.map((vault): [string, VaultRegistration] => [
             vault,
             { address: vault, version: info.version, status: info.status },
           ]),
