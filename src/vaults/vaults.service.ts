@@ -7,7 +7,7 @@ import {
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
-import { VaultVersion } from './enums/vaul-version.enum';
+import { VaultVersion } from './enums/vault-version.enum';
 import { VaultPerformance, VaultSummary, VaultToken } from './interfaces';
 
 export class VaultsService extends Service {
