@@ -127,7 +127,6 @@ export class VaultsService extends Service {
           const lastAdditionalAmount = await vault.lastAdditionalTokenAmount(
             token,
           );
-          // console.log({ token, rewardTokenDecimals, last });
           return [
             token,
             formatBalance(lastAdditionalAmount, rewardTokenDecimals),
