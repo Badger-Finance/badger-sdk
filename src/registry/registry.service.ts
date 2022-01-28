@@ -40,6 +40,13 @@ export class RegistryService extends Service {
     return this.registry.getProductionVaults();
   }
 
+  async getVaults(version: string, author: string): Promise<string[]> {
+    if (!this.registry) {
+      return [];
+    }
+    return this.registry.getVaults(version, author);
+  }
+
   private async init() {
     try {
       const deployed = await this.provider.getCode(REGISTRY_ADDRESS);
