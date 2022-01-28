@@ -124,7 +124,9 @@ export class VaultsService extends Service {
             const rewardToken = await this.sdk.tokens.loadToken(token);
             rewardTokenDecimals = rewardToken.decimals;
           }
-          const lastAdditionalAmount = await vault.lastAdditionalTokenAmount(token);
+          const lastAdditionalAmount = await vault.lastAdditionalTokenAmount(
+            token,
+          );
           // console.log({ token, rewardTokenDecimals, last });
           return [
             token,
@@ -168,14 +170,16 @@ export class VaultsService extends Service {
      * we use 4 so we can have 3 harvest cycles, the 4th harvest is used as the
      * start of the first cycle
      */
-    const recentTimestamps = [...eventTimestamps].sort((a, b) =>
-      b.sub(a).toNumber(),
-    ).slice(0, 3);
+    const recentTimestamps = [...eventTimestamps]
+      .sort((a, b) => b.sub(a).toNumber())
+      .slice(0, 3);
 
     // previous harvest start is the timestamp of the second most recent harvest
     const previousHarvestTimestamp = recentTimestamps[1];
     const firstHarvestTimestamp = recentTimestamps[recentTimestamps.length - 1];
-    const recentHarvestEvents = harvestEvents.filter((h) => h.args[3].gte(firstHarvestTimestamp));
+    const recentHarvestEvents = harvestEvents.filter((h) =>
+      h.args[3].gte(firstHarvestTimestamp),
+    );
     const harvests = await Promise.all(
       recentHarvestEvents.map(async (d): Promise<TokenBalance> => {
         const { name, decimals, symbol } = await this.sdk.tokens.loadToken(
@@ -213,7 +217,10 @@ export class VaultsService extends Service {
     );
 
     // harvests will always report underlying (thus one asset) and can be summed across
-    const cumulativeHarvest = harvests.reduce((total, harvest) => total += harvest.balance, 0);
+    const cumulativeHarvest = harvests.reduce(
+      (total, harvest) => (total += harvest.balance),
+      0,
+    );
 
     // tree distributions may consist of many tokens and we should sum all of the distributions
     const cumulativeTreeDistributions: Record<string, number> = {};
@@ -224,17 +231,20 @@ export class VaultsService extends Service {
       cumulativeTreeDistributions[harvest.address] += harvest.balance;
     });
 
-    const cumulativeHarvestTimeDelta = recentTimestamps[0].toNumber() - firstHarvestTimestamp.toNumber();
+    const cumulativeHarvestTimeDelta =
+      recentTimestamps[0].toNumber() - firstHarvestTimestamp.toNumber();
 
     const previousHarvestTimeDelta =
       lastHarvestedAt.toNumber() - previousHarvestTimestamp.toNumber();
     const previousHarvest = formatBalance(lastHarvestedAmount, token.decimals);
     const historicBalance = formatBalance(lastAssetsAmount, token.decimals);
-    const basePerformance = 100 *
+    const basePerformance =
+      100 *
       (previousHarvest / historicBalance) *
-      ((ONE_YEAR_MS / 1000) / previousHarvestTimeDelta);
+      (ONE_YEAR_MS / 1000 / previousHarvestTimeDelta);
 
-    const expectedHarvestTimeDelta = (Date.now() / 1000) - lastHarvestedAt.toNumber();
+    const expectedHarvestTimeDelta =
+      Date.now() / 1000 - lastHarvestedAt.toNumber();
     const currentBalance = formatBalance(balance, depositToken.decimals);
     return {
       // general vault information
@@ -243,7 +253,7 @@ export class VaultsService extends Service {
       autoCompoundRatio: autoCompoundRatio.toNumber() / maxBps.toNumber(),
       lifeTimeEarned: formatBalance(lifeTimeEarned, token.decimals),
       basePerformance,
-      
+
       // values pertaining to the expected harvest
       expectedHarvestTimeDelta,
       expectedHarvestAssets,
@@ -252,7 +262,6 @@ export class VaultsService extends Service {
       previousHarvest,
       previousHarvestTimeDelta,
       previousTreeDistribution,
-
 
       // values pertaining to the previous three harvests
       cumulativeHarvest,
