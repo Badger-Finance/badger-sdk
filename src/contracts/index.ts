@@ -10,6 +10,7 @@ export type { RewardsLogger } from './RewardsLogger';
 export type { Sett } from './Sett';
 export type { StrategyV15 } from './StrategyV15';
 export type { VaultV15 } from './VaultV15';
+export type { Byvwbtc } from './Byvwbtc';
 
 export { BadgerTree__factory } from './factories/BadgerTree__factory';
 export { Digg__factory } from './factories/Digg__factory';
@@ -20,3 +21,4 @@ export { RewardsLogger__factory } from './factories/RewardsLogger__factory';
 export { Sett__factory } from './factories/Sett__factory';
 export { StrategyV15__factory } from './factories/StrategyV15__factory';
 export { VaultV15__factory } from './factories/VaultV15__factory';
+export { Byvwbtc__factory } from './factories/Byvwbtc__factory';
