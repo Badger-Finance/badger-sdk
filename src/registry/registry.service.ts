@@ -1,7 +1,7 @@
 import { Registry, Registry__factory } from '../contracts';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
-import { VaultInfo } from './interfaces/vault-info.interface';
+import { RegistryVaultsList } from './interfaces/vaults-list.interface';
 
 export const REGISTRY_ADDRESS = '0xFda7eB6f8b7a9e9fCFd348042ae675d1d652454f';
 
@@ -33,7 +33,7 @@ export class RegistryService extends Service {
     return this.entries[key];
   }
 
-  async getProductionVaults(): Promise<VaultInfo[]> {
+  async getProductionVaultsList(): Promise<RegistryVaultsList[]> {
     if (!this.registry) {
       return [];
     }

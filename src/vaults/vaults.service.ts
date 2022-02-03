@@ -6,12 +6,15 @@ import {
   StrategyV15__factory,
   VaultV15__factory,
 } from '../contracts';
-import { VaultInfo } from '../registry/interfaces/vault-info.interface';
 import { Service } from '../service';
-import { formatBalance } from '../tokens/tokens.utils';
-import { VaultPerformance, VaultRegistration, VaultToken } from './interfaces';
-import { RegistryVault } from './vault';
+import { formatBalance } from '../tokens';
+import {
+  VaultPerformance,
+  VaultRegistration,
+  RegistryVault,
+} from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
+import { Sett } from '../../lib/contracts';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -19,7 +22,7 @@ const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 export class VaultsService extends Service {
   private loading: Promise<void>;
   private vaultsInfo: Record<string, VaultRegistration>;
-  private vaults: Record<string, VaultToken>;
+  private vaults: Record<string, RegistryVault>;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
@@ -32,79 +35,63 @@ export class VaultsService extends Service {
     return this.loading;
   }
 
-  async loadVaults(): Promise<VaultToken[]> {
-    const registry = await this.sdk.registry.getProductionVaults();
+  async loadVaults(): Promise<RegistryVault[]> {
+    const registry = await this.sdk.registry.getProductionVaultsList();
 
-    const registryVaults = registry.flatMap((info) =>
-      info.list.map(
-        (vault) =>
-          new RegistryVault(
-            vault,
-            this.getVaultState(info),
-            this.getVaultVersion(info),
-          ),
-      ),
-    );
-
-    if (Object.keys(this.vaults).length >= registryVaults.length) {
-      return Object.values(this.vaults);
-    }
-
-    const vaultOnChainInfo = await Promise.all(
-      registryVaults.flatMap((registryVault) => {
+    const registryVaultsInfo = registry.flatMap((info) =>
+      info.list.flatMap((address) => {
         // the digg stabilizer is an experimental vault that does not have the standard vault methods and will be removed
         // from the registry
         // TODO: remove once it is removed from registry
-        if (registryVault.address === diggStabilizerVault) {
+        if (address === diggStabilizerVault) {
           return [];
         }
 
-        // the byvWBTC vault wrapper does not have the standard available, balance and price per full share method
-        const isYearnWbtc = registryVault.address === wbtcYearnVault;
+        return [
+          {
+            address,
+            version: info.version,
+            status: info.status,
+          },
+        ];
+      }),
+    );
 
-        if (isYearnWbtc) {
-          const byvWbtc = Byvwbtc__factory.connect(
-            ethers.utils.getAddress(wbtcYearnVault),
-            this.sdk.multicall,
-          );
+    const serializedCachedVaults = JSON.stringify(
+      Object.keys(this.vaults).sort(),
+    );
 
-          return Promise.all([
-            registryVault,
-            byvWbtc.name(),
-            byvWbtc.symbol(),
-            byvWbtc.decimals(),
-            byvWbtc.token(),
-            byvWbtc.totalSupply(),
-            // the available method not available for this vault because it is a wrapper and deposits are re-deposited
-            //directly into yearn vaults
-            0,
-            byvWbtc.totalVaultBalance(ethers.utils.getAddress(wbtcYearnVault)),
-            byvWbtc.pricePerShare(),
-          ]);
-        }
+    const serializedRegistryVaultsAddresses = JSON.stringify(
+      registryVaultsInfo.map((registryVault) => registryVault.address).sort(),
+    );
 
+    if (serializedCachedVaults === serializedRegistryVaultsAddresses) {
+      return Object.values(this.vaults);
+    }
+
+    const vaultsOnChainInfo = await Promise.all(
+      registryVaultsInfo.map((registryVault) => {
         const sett = Sett__factory.connect(
           ethers.utils.getAddress(registryVault.address),
           this.sdk.multicall,
         );
 
         return Promise.all([
-          registryVault,
           sett.name(),
           sett.symbol(),
           sett.decimals(),
           sett.token(),
           sett.totalSupply(),
-          sett.available(),
-          sett.balance(),
-          sett.getPricePerFullShare(),
+          ...this.getVaultVariantData(sett),
         ]);
       }),
     );
 
-    const vaults: VaultToken[] = vaultOnChainInfo.map((vault) => {
+    const registryVaults: RegistryVault[] = [];
+
+    for (let i = 0; i < registryVaultsInfo.length; i++) {
+      const { address, status, version } = registryVaultsInfo[i];
       const [
-        registryVault,
         name,
         symbol,
         decimals,
@@ -113,31 +100,48 @@ export class VaultsService extends Service {
         available,
         balance,
         pricePerFullShare,
-      ] = vault;
-      return {
-        ...registryVault,
+      ] = vaultsOnChainInfo[i];
+
+      registryVaults.push({
+        address,
         name,
-        symbol,
-        decimals,
-        token,
+        version: this.getVaultVersion(version),
+        state: this.getVaultState(status),
         totalSupply: formatBalance(totalSupply, decimals),
         balance: formatBalance(balance, decimals),
         available: formatBalance(available, decimals),
         pricePerFullShare: formatBalance(pricePerFullShare, decimals),
-      };
-    });
-
-    for (const vault of vaults) {
-      if (!this.vaults[vault.address]) {
-        this.vaults[vault.address] = vault;
-      }
+        token: {
+          address: token,
+          name,
+          decimals,
+          symbol,
+        },
+      });
     }
 
-    return vaults;
+    this.vaults = Object.fromEntries(
+      registryVaults.map((registryVault) => [
+        registryVault.address,
+        registryVault,
+      ]),
+    );
+
+    return registryVaults;
   }
 
-  async loadVault(address: string, update = false): Promise<VaultToken> {
+  async loadVault(address: string, update = false): Promise<RegistryVault> {
     const checksumAddress = ethers.utils.getAddress(address);
+    const registry = await this.sdk.registry.getProductionVaultsList();
+
+    const vaultRegistryInfo = registry.find((vaultRegistryItem) =>
+      vaultRegistryItem.list.includes(address),
+    );
+
+    if (!vaultRegistryInfo) {
+      throw new Error('Vault address not found in registry');
+    }
+
     if (!this.vaults[checksumAddress] || update) {
       const sett = Sett__factory.connect(checksumAddress, this.sdk.multicall);
       const [
@@ -159,16 +163,22 @@ export class VaultsService extends Service {
         sett.totalSupply(),
         sett.getPricePerFullShare(),
       ]);
+
       this.vaults[checksumAddress] = {
         address: checksumAddress,
         name,
-        symbol,
-        decimals,
-        token,
         available: formatBalance(available, decimals),
         totalSupply: formatBalance(totalSupply, decimals),
         balance: formatBalance(balance, decimals),
         pricePerFullShare: formatBalance(pricePerFullShare, decimals),
+        state: this.getVaultState(vaultRegistryInfo.status),
+        version: this.getVaultVersion(vaultRegistryInfo.version),
+        token: {
+          address: token,
+          name,
+          decimals,
+          symbol,
+        },
       };
     }
     return this.vaults[checksumAddress];
@@ -187,7 +197,7 @@ export class VaultsService extends Service {
 
     const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
     const vaultToken = await this.loadVault(vault.address);
-    const token = await this.sdk.tokens.loadToken(vaultToken.token);
+    const token = await this.sdk.tokens.loadToken(vaultToken.token.address);
     const strategyAddress = await vault.strategy();
     const strategy = StrategyV15__factory.connect(
       strategyAddress,
@@ -368,7 +378,7 @@ export class VaultsService extends Service {
   private async init() {
     try {
       await this.sdk.registry.ready();
-      const vaultsInfo = await this.sdk.registry.getProductionVaults();
+      const vaultsInfo = await this.sdk.registry.getProductionVaultsList();
       this.vaultsInfo = Object.fromEntries(
         vaultsInfo.flatMap((info) =>
           info.list.map((vault): [string, VaultRegistration] => [
@@ -385,8 +395,33 @@ export class VaultsService extends Service {
     }
   }
 
-  private getVaultVersion(vault: VaultInfo): VaultVersion {
-    switch (vault.version) {
+  /**
+   * some vaults have different way of getting some data, this method abstracts the process of getting them.
+   */
+  private getVaultVariantData(
+    sett: Sett,
+  ): [Promise<BigNumber>, Promise<BigNumber>, Promise<BigNumber>] {
+    const isYearnWbtc = sett.address === wbtcYearnVault;
+
+    // the byvWBTC vault wrapper does not have the standard available, balance and price per full share method
+    if (isYearnWbtc) {
+      const byvWbtc = Byvwbtc__factory.connect(
+        ethers.utils.getAddress(wbtcYearnVault),
+        this.sdk.multicall,
+      );
+
+      return [
+        Promise.resolve(BigNumber.from(0)),
+        byvWbtc.totalVaultBalance(ethers.utils.getAddress(wbtcYearnVault)),
+        byvWbtc.pricePerShare(),
+      ];
+    }
+
+    return [sett.available(), sett.balance(), sett.getPricePerFullShare()];
+  }
+
+  private getVaultVersion(version: string): VaultVersion {
+    switch (version) {
       case VaultVersion.v2:
         return VaultVersion.v2;
       case VaultVersion.v1_5:
@@ -396,8 +431,8 @@ export class VaultsService extends Service {
     }
   }
 
-  private getVaultState(vault: VaultInfo): VaultState {
-    switch (vault.status) {
+  private getVaultState(status: number): VaultState {
+    switch (status) {
       case 2:
         return VaultState.Open;
       case 1:
