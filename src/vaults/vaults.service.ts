@@ -5,6 +5,7 @@ import {
   Sett__factory,
   StrategyV15__factory,
   VaultV15__factory,
+  Sett,
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
@@ -14,7 +15,6 @@ import {
   RegistryVault,
 } from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
-import { Sett } from '../../lib/contracts';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
