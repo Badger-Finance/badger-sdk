@@ -75,7 +75,9 @@ export class VaultsService extends Service {
             byvWbtc.decimals(),
             byvWbtc.token(),
             byvWbtc.totalSupply(),
-            0, //method not available for this vault because it is a wrapper and deposits are re-deposited directly into yearn vaults
+            // the available method not available for this vault because it is a wrapper and deposits are re-deposited
+            //directly into yearn vaults
+            0,
             byvWbtc.totalVaultBalance(ethers.utils.getAddress(wbtcYearnVault)),
             byvWbtc.pricePerShare(),
           ]);
