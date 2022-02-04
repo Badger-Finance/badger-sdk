@@ -3,7 +3,7 @@ import {
   BadgerSDK,
   TokenBalance,
   VaultState,
-  VaultToken,
+  RegistryVault,
   VaultVersion,
 } from '..';
 import {
@@ -17,7 +17,7 @@ import { Service } from '../service';
 import { formatBalance } from '../tokens';
 import { VaultPerformance, VaultRegistration } from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
-import { RegistryVault } from '../registry/interfaces/vault.interface';
+import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -25,7 +25,7 @@ const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 export class VaultsService extends Service {
   private loading: Promise<void>;
   private vaultsInfo: Record<string, VaultRegistration>;
-  private vaults: Record<string, VaultToken>;
+  private vaults: Record<string, RegistryVault>;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
@@ -38,7 +38,7 @@ export class VaultsService extends Service {
     return this.loading;
   }
 
-  async loadVaults(): Promise<VaultToken[]> {
+  async loadVaults(): Promise<RegistryVault[]> {
     const registry = await this.sdk.registry.getProductionVaults();
 
     const registryVaultsInfo = registry.flatMap((info) =>
@@ -82,7 +82,7 @@ export class VaultsService extends Service {
     return registryVaults;
   }
 
-  async loadVault(address: string, update = false): Promise<VaultToken> {
+  async loadVault(address: string, update = false): Promise<RegistryVault> {
     const checksumAddress = ethers.utils.getAddress(address);
     const registry = await this.sdk.registry.getProductionVaults();
 
@@ -315,7 +315,9 @@ export class VaultsService extends Service {
     }
   }
 
-  private async fetchVault(registryVault: RegistryVault): Promise<VaultToken> {
+  private async fetchVault(
+    registryVault: VaultRegistryEntry,
+  ): Promise<RegistryVault> {
     const { address, status, version } = registryVault;
 
     const sett = Sett__factory.connect(
