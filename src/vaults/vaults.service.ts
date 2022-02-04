@@ -343,6 +343,8 @@ export class VaultsService extends Service {
       ...this.getVaultVariantData(sett),
     ]);
 
+    const tokenInfo = await this.sdk.tokens.loadToken(token);
+
     return {
       address,
       name,
@@ -351,8 +353,8 @@ export class VaultsService extends Service {
       version: this.getVaultVersion(version),
       state: this.getVaultState(status),
       totalSupply: formatBalance(totalSupply, decimals),
-      balance: formatBalance(balance, decimals),
-      available: formatBalance(available, decimals),
+      balance: formatBalance(balance, tokenInfo.decimals),
+      available: formatBalance(available, tokenInfo.decimals),
       pricePerFullShare: formatBalance(pricePerFullShare, decimals),
       token: {
         address: token,
