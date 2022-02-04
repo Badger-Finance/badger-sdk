@@ -1,6 +1,6 @@
 import { Token } from '../../tokens';
 import { VaultState } from '../../api';
-import { VaultVersion } from '../../../lib';
+import { VaultVersion } from '../enums';
 
 export interface VaultToken extends Token {
   address: string;
