@@ -43,3 +43,29 @@ import BadgerAPI from '@badger-dao/sdk';
 const api = new BadgerAPI(1);
 // or new BadgerAPI('ethereum');
 ```
+
+## Locally linking the package
+
+In order to link the package first you need to build it:
+
+```bash
+yarn build
+```
+
+then go to the lib folder and create a symlink with [yarn link](https://classic.yarnpkg.com/en/docs/cli/link):
+
+```bash
+cd lib && yarn link
+```
+
+after that, go to the project you want to link the package to and use the symlink you just created:
+
+```bash
+yarn link "@badger-dao/sdk"
+```
+
+If you want to unlink you need to:
+
+```bash
+yarn unlink "@badger-dao/sdk"
+```
