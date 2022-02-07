@@ -356,12 +356,7 @@ export class VaultsService extends Service {
       balance: formatBalance(balance, tokenInfo.decimals),
       available: formatBalance(available, tokenInfo.decimals),
       pricePerFullShare: formatBalance(pricePerFullShare, decimals),
-      token: {
-        address: token,
-        name,
-        decimals,
-        symbol,
-      },
+      token: { ...tokenInfo },
     };
   }
 
