@@ -312,7 +312,7 @@ export class VaultsService extends Service {
   }> {
     const checksumAddress = ethers.utils.getAddress(address);
     const vaultSummary = this.vaultsInfo[checksumAddress];
-    if (!vaultSummary || vaultSummary.version != VaultVersion.v1_5) {
+    if (!vaultSummary || vaultSummary.version !== VaultVersion.v1_5) {
       throw new Error(
         `Cannot load performance for ${vaultSummary.version} vault`,
       );
