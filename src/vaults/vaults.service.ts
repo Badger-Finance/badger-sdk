@@ -310,14 +310,6 @@ export class VaultsService extends Service {
       treeDistributions: unknown[];
     }[];
   }> {
-    const checksumAddress = ethers.utils.getAddress(address);
-    const vaultSummary = this.vaultsInfo[checksumAddress];
-    if (!vaultSummary || vaultSummary.version !== VaultVersion.v1_5) {
-      throw new Error(
-        `Cannot load performance for ${vaultSummary.version} vault`,
-      );
-    }
-
     const timestampInRange = (timestamp: BigNumber): boolean => {
       if (timestamp_gt && !timestamp.gt(timestamp_gt)) {
         return false;
@@ -334,6 +326,7 @@ export class VaultsService extends Service {
       return true;
     };
 
+    const checksumAddress = ethers.utils.getAddress(address);
     const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
     const harvestFilter = vault.filters.Harvested();
     const treeDistributionFilter = vault.filters.TreeDistribution();
