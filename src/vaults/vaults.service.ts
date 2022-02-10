@@ -15,7 +15,11 @@ import {
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
-import { VaultOptions, VaultPerformance, VaultRegistration } from './interfaces';
+import {
+  VaultOptions,
+  VaultPerformance,
+  VaultRegistration,
+} from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
 
@@ -82,23 +86,37 @@ export class VaultsService extends Service {
     return registryVaults;
   }
 
-  async loadVault(address: string, opts?: VaultOptions): Promise<RegistryVault> {
-    const requireRegistry = opts?.requireRegistry || true;
+  async loadVault(
+    address: string,
+    opts?: VaultOptions,
+  ): Promise<RegistryVault> {
+    const requireRegistry = opts && opts.requireRegistry !== undefined ? opts.requireRegistry : true;
     // vaults may be loaded without a registry but require extra information
     if (!requireRegistry && (!opts?.status || !opts.version)) {
-      throw new Error('Status and version fields are required when requireRegistry is false');
+      throw new Error(
+        'Status and version fields are required when requireRegistry is false',
+      );
     }
 
     const checksumAddress = ethers.utils.getAddress(address);
     const vaultsRegistry = await this.sdk.registry.getProductionVaults();
-    const vaultMap = Object.fromEntries(vaultsRegistry.flatMap((i) => i.list.map((v) => {
-      const vaultAddress = ethers.utils.getAddress(v);
-      return [vaultAddress, { address: vaultAddress, status: i.status, version: i.version }];
-    })));
-    let registration = vaultMap[checksumAddress]; 
+    const vaultMap = Object.fromEntries(
+      vaultsRegistry.flatMap((i) =>
+        i.list.map((v) => {
+          const vaultAddress = ethers.utils.getAddress(v);
+          return [
+            vaultAddress,
+            { address: vaultAddress, status: i.status, version: i.version },
+          ];
+        }),
+      ),
+    );
+    let registration = vaultMap[checksumAddress];
 
     if (requireRegistry && !registration) {
-      throw new Error('Requested unregistered vault, try setting requireRegistry to false');
+      throw new Error(
+        `${checksumAddress} is an unregistered vault, try setting requireRegistry to false`,
+      );
     }
 
     // create a pseudo registration for fetching
@@ -111,7 +129,7 @@ export class VaultsService extends Service {
         address: checksumAddress,
         status: opts?.status,
         version: opts?.version,
-      }
+      };
     }
 
     if (!this.vaults[checksumAddress] || opts?.update) {
