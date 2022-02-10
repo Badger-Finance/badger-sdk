@@ -18,6 +18,8 @@ import { formatBalance } from '../tokens';
 import { VaultPerformance, VaultRegistration } from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
+import { ListVaultOptions } from './interfaces/list-vault-options.interface';
+import { keyBy } from '../utils/key-by';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -292,6 +294,96 @@ export class VaultsService extends Service {
       cumulativeHarvest,
       cumulativeTreeDistributions,
       cumulativeHarvestTimeDelta,
+    };
+  }
+
+  async list({
+    address,
+    timestamp_gt,
+    timestamp_gte,
+    timestamp_lt,
+    timestamp_lte,
+  }: ListVaultOptions): Promise<{
+    data: {
+      timestamp: BigNumber;
+      harvests: unknown[];
+      treeDistributions: unknown[];
+    }[];
+  }> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    const vaultSummary = this.vaultsInfo[checksumAddress];
+    if (!vaultSummary || vaultSummary.version != VaultVersion.v1_5) {
+      throw new Error(
+        `Cannot load performance for ${vaultSummary.version} vault`,
+      );
+    }
+
+    const timestampInRange = (timestamp: BigNumber): boolean => {
+      if (timestamp_gt && !timestamp.gt(timestamp_gt)) {
+        return false;
+      }
+      if (timestamp_gte && !timestamp.gte(timestamp_gte)) {
+        return false;
+      }
+      if (timestamp_lt && !timestamp.lt(timestamp_lt)) {
+        return false;
+      }
+      if (timestamp_lte && !timestamp.lte(timestamp_lte)) {
+        return false;
+      }
+      return true;
+    };
+
+    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
+    const harvestFilter = vault.filters.Harvested();
+    const treeDistributionFilter = vault.filters.TreeDistribution();
+
+    // Get harvest and tree distributions for given time range filter
+    const harvestEvents = (await vault.queryFilter(harvestFilter)).filter((h) =>
+      timestampInRange(h.args[3]),
+    );
+    const treeDistributionEvents = (
+      await vault.queryFilter(treeDistributionFilter)
+    ).filter((e) => timestampInRange(e.args[3]));
+
+    const harvestEventsByTimestamps = keyBy(
+      harvestEvents,
+      (harvestEvent) => harvestEvent.args[3],
+    );
+    const treeDistributionEventsByTimestamps = keyBy(
+      treeDistributionEvents,
+      (treeDistributionEvent) => treeDistributionEvent.args[3],
+    );
+
+    // Create timestamps for events
+    const harvestEventsTimestamps = Array.from(
+      harvestEventsByTimestamps.keys(),
+    );
+    const treeDistributionEventsTimestamps = Array.from(
+      treeDistributionEventsByTimestamps.keys(),
+    );
+    const timestamps = Array.from(
+      new Set([
+        ...harvestEventsTimestamps,
+        ...treeDistributionEventsTimestamps,
+      ]),
+    ).sort();
+
+    const data = [];
+    // Map timestamps to events
+    for (const timestamp of timestamps) {
+      const harvests = harvestEventsByTimestamps.get(timestamp) ?? [];
+      const treeDistributions =
+        treeDistributionEventsByTimestamps.get(timestamp) ?? [];
+      data.push({
+        timestamp,
+        harvests,
+        treeDistributions,
+      });
+    }
+
+    return {
+      data,
     };
   }
 
