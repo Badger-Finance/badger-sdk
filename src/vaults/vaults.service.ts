@@ -332,12 +332,16 @@ export class VaultsService extends Service {
     const treeDistributionFilter = vault.filters.TreeDistribution();
 
     // Get harvest and tree distributions for given time range filter
-    const harvestEvents = (await vault.queryFilter(harvestFilter)).filter((h) =>
+    const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
+      vault.queryFilter(harvestFilter),
+      vault.queryFilter(treeDistributionFilter),
+    ]);
+    const harvestEvents = allHarvestEvents.filter((h) =>
       timestampInRange(h.args[3]),
     );
-    const treeDistributionEvents = (
-      await vault.queryFilter(treeDistributionFilter)
-    ).filter((e) => timestampInRange(e.args[3]));
+    const treeDistributionEvents = allTreeDistributionEvents.filter((e) =>
+      timestampInRange(e.args[3]),
+    );
 
     const harvestEventsByTimestamps = keyBy(
       harvestEvents,
