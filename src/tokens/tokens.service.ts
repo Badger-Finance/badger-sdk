@@ -1,16 +1,10 @@
 import { BigNumber, ethers } from 'ethers';
 import { Erc20__factory } from '../contracts';
-import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { Token } from './interfaces/token.interface';
 
 export class TokensService extends Service {
-  private tokens: Record<string, Token>;
-
-  constructor(sdk: BadgerSDK) {
-    super(sdk);
-    this.tokens = {};
-  }
+  private tokens: Record<string, Token> = {};
 
   async loadTokens(addresses: string[]): Promise<Record<string, Token>> {
     const tokens = await Promise.all(

@@ -1,6 +1,5 @@
 import { BigNumber, ethers } from 'ethers';
 import {
-  BadgerSDK,
   TokenBalance,
   VaultState,
   RegistryVault,
@@ -15,7 +14,11 @@ import {
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
-import { VaultPerformance, VaultRegistration } from './interfaces';
+import {
+  VaultOptions,
+  VaultPerformance,
+  VaultRegistration,
+} from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
@@ -25,18 +28,14 @@ const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 
 export class VaultsService extends Service {
-  private loading: Promise<void>;
-  private vaultsInfo: Record<string, VaultRegistration>;
-  private vaults: Record<string, RegistryVault>;
-
-  constructor(sdk: BadgerSDK) {
-    super(sdk);
-    this.vaultsInfo = {};
-    this.vaults = {};
-    this.loading = this.init();
-  }
+  private loading?: Promise<void>;
+  private vaultsInfo: Record<string, VaultRegistration> = {};
+  private vaults: Record<string, RegistryVault> = {};
 
   async ready() {
+    if (!this.loading) {
+      this.loading = this.init();
+    }
     return this.loading;
   }
 
@@ -84,23 +83,54 @@ export class VaultsService extends Service {
     return registryVaults;
   }
 
-  async loadVault(address: string, update = false): Promise<RegistryVault> {
-    const checksumAddress = ethers.utils.getAddress(address);
-    const registry = await this.sdk.registry.getProductionVaults();
-
-    const vaultRegistryInfo = registry.find((vaultRegistryItem) =>
-      vaultRegistryItem.list.includes(address),
-    );
-
-    if (!vaultRegistryInfo) {
-      throw new Error('Vault address not found in registry');
+  async loadVault(
+    address: string,
+    opts?: VaultOptions,
+  ): Promise<RegistryVault> {
+    const requireRegistry = opts && opts.requireRegistry !== undefined ? opts.requireRegistry : true;
+    // vaults may be loaded without a registry but require extra information
+    if (!requireRegistry && (!opts?.status || !opts.version)) {
+      throw new Error(
+        'Status and version fields are required when requireRegistry is false',
+      );
     }
 
-    if (!this.vaults[checksumAddress] || update) {
-      this.vaults[checksumAddress] = await this.fetchVault({
+    const checksumAddress = ethers.utils.getAddress(address);
+    const vaultsRegistry = await this.sdk.registry.getProductionVaults();
+    const vaultMap = Object.fromEntries(
+      vaultsRegistry.flatMap((i) =>
+        i.list.map((v) => {
+          const vaultAddress = ethers.utils.getAddress(v);
+          return [
+            vaultAddress,
+            { address: vaultAddress, status: i.status, version: i.version },
+          ];
+        }),
+      ),
+    );
+    let registration = vaultMap[checksumAddress];
+
+    if (requireRegistry && !registration) {
+      throw new Error(
+        `${checksumAddress} is an unregistered vault, try setting requireRegistry to false`,
+      );
+    }
+
+    // create a pseudo registration for fetching
+    if (!registration) {
+      // check for typescript
+      if (!opts || !opts.status || !opts.version) {
+        throw new Error('Invalid vault options provided');
+      }
+      registration = {
         address: checksumAddress,
-        ...vaultRegistryInfo,
-      });
+        status: opts?.status,
+        version: opts?.version,
+      };
+    }
+
+    if (!this.vaults[checksumAddress] || opts?.update) {
+      this.vaults[checksumAddress] = await this.fetchVault(registration);
     }
 
     return this.vaults[checksumAddress];

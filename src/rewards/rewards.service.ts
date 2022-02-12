@@ -1,4 +1,3 @@
-import { BadgerSDK } from '../sdk';
 import {
   BadgerTree,
   BadgerTree__factory,
@@ -13,16 +12,14 @@ import { formatBalance } from '../tokens/tokens.utils';
 import { ClaimOptions } from './interfaces/claim-options.interface';
 
 export class RewardsService extends Service {
-  private loading: Promise<void>;
+  private loading?: Promise<void>;
   private badgerTree?: BadgerTree;
   private rewardsLogger?: RewardsLogger;
 
-  constructor(sdk: BadgerSDK) {
-    super(sdk);
-    this.loading = this.init();
-  }
-
   async ready() {
+    if (!this.loading) {
+      this.loading = this.init();
+    }
     return this.loading;
   }
 
