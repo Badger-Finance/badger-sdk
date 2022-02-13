@@ -351,6 +351,7 @@ export class VaultsService extends Service {
       }
       return true;
     };
+    const bigNumberToHexString = (n: BigNumber) => n.toHexString();
 
     const checksumAddress = ethers.utils.getAddress(address);
     const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
@@ -369,13 +370,13 @@ export class VaultsService extends Service {
       timestampInRange(e.args[3]),
     );
 
-    const harvestEventsByTimestamps = keyBy(
-      harvestEvents,
-      (harvestEvent) => harvestEvent.args[3],
+    const harvestEventsByTimestamps = keyBy(harvestEvents, (harvestEvent) =>
+      bigNumberToHexString(harvestEvent.args[3]),
     );
     const treeDistributionEventsByTimestamps = keyBy(
       treeDistributionEvents,
-      (treeDistributionEvent) => treeDistributionEvent.args[3],
+      (treeDistributionEvent) =>
+        bigNumberToHexString(treeDistributionEvent.args[3]),
     );
 
     // Create timestamps for events
@@ -399,7 +400,7 @@ export class VaultsService extends Service {
       const treeDistributions =
         treeDistributionEventsByTimestamps.get(timestamp) ?? [];
       data.push({
-        timestamp,
+        timestamp: BigNumber.from(timestamp),
         harvests,
         treeDistributions,
       });
