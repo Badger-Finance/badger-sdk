@@ -1,18 +1,18 @@
 import { ethers } from 'ethers';
 import BadgerSDK from '.';
 
-const BWBTC = '0x711555f2b421da9a86a18dc163d04699310fe297';
+const BCVXCRV = '0x2B5455aac8d64C14786c3a29858E43b5945819C0';
 
 async function testSDK() {
   const sdk = new BadgerSDK(
-    43114,
+    1,
     new ethers.providers.JsonRpcBatchProvider(
-      'https://api.avax.network/ext/bc/C/rpc',
+      'https://eth-mainnet.alchemyapi.io/v2/-8IubgVIbg-UaXks6VLvgsuYujAravb4',
     ),
   );
   await sdk.ready();
 
-  const performance = await sdk.vaults.loadVaultPerformance(BWBTC);
+  const performance = await sdk.vaults.listHarvests({ address: BCVXCRV });
   console.log(performance);
 }
 

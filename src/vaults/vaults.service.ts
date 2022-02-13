@@ -2,10 +2,12 @@ import { BigNumber, ethers } from 'ethers';
 import { TokenBalance, VaultState, RegistryVault, VaultVersion } from '..';
 import {
   Byvwbtc__factory,
-  Sett__factory,
   StrategyV15__factory,
   VaultV15__factory,
-  Sett,
+  Vault__factory,
+  Controller__factory,
+  Strategy__factory,
+  Vault,
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
@@ -353,16 +355,33 @@ export class VaultsService extends Service {
     };
     const bigNumberToHexString = (n: BigNumber) => n.toHexString();
 
+    // TODO: we can abstract this portion out later to a "vault strategy lookup" utility
     const checksumAddress = ethers.utils.getAddress(address);
-    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
-    const harvestFilter = vault.filters.Harvested();
-    const treeDistributionFilter = vault.filters.TreeDistribution();
+    const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
+    const controller = Controller__factory.connect(
+      await vault.controller(),
+      this.sdk.provider,
+    );
+    const strategyAddress = await controller.strategies(await vault.token());
+    console.log(strategyAddress);
+    const strategy = Strategy__factory.connect(
+      strategyAddress,
+      this.sdk.provider,
+    );
+
+    // maybe need to work out if this is changed from v1.5
+    const harvestFilter = strategy.filters.Harvest();
+    const treeDistributionFilter = strategy.filters.TreeDistribution();
 
     // Get harvest and tree distributions for given time range filter
     const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
-      vault.queryFilter(harvestFilter),
-      vault.queryFilter(treeDistributionFilter),
+      strategy.queryFilter(harvestFilter),
+      strategy.queryFilter(treeDistributionFilter),
     ]);
+    console.log({
+      allHarvestEvents,
+      allTreeDistributionEvents,
+    });
     const harvestEvents = allHarvestEvents.filter((h) =>
       timestampInRange(h.args[3]),
     );
@@ -436,7 +455,7 @@ export class VaultsService extends Service {
   ): Promise<RegistryVault> {
     const { address, status, version } = registryVault;
 
-    const sett = Sett__factory.connect(
+    const sett = Vault__factory.connect(
       ethers.utils.getAddress(address),
       this.sdk.multicall,
     );
@@ -480,9 +499,9 @@ export class VaultsService extends Service {
    * some vaults have different way of getting some data, this method abstracts the process of getting them.
    */
   private getVaultVariantData(
-    sett: Sett,
+    vault: Vault,
   ): [Promise<BigNumber>, Promise<BigNumber>, Promise<BigNumber>] {
-    const isYearnWbtc = sett.address === wbtcYearnVault;
+    const isYearnWbtc = vault.address === wbtcYearnVault;
 
     // the byvWBTC vault wrapper does not have the standard available, balance and price per full share method
     if (isYearnWbtc) {
@@ -492,13 +511,14 @@ export class VaultsService extends Service {
       );
 
       return [
+        // TODO: update this to the correct amount
         Promise.resolve(BigNumber.from(0)),
         byvWbtc.totalVaultBalance(ethers.utils.getAddress(wbtcYearnVault)),
         byvWbtc.pricePerShare(),
       ];
     }
 
-    return [sett.available(), sett.balance(), sett.getPricePerFullShare()];
+    return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
   }
 
   private getVaultVersion(version: string): VaultVersion {
