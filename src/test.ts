@@ -12,7 +12,7 @@ async function testSDK() {
   );
   await sdk.ready();
 
-  const performance = await sdk.vaults.list({ address: BCVXCRV });
+  const performance = await sdk.vaults.listHarvests({ address: BCVXCRV });
   console.log(performance);
 }
 

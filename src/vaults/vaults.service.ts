@@ -363,6 +363,7 @@ export class VaultsService extends Service {
       this.sdk.provider,
     );
     const strategyAddress = await controller.strategies(await vault.token());
+    console.log(strategyAddress);
     const strategy = Strategy__factory.connect(
       strategyAddress,
       this.sdk.provider,
@@ -377,6 +378,10 @@ export class VaultsService extends Service {
       vault.queryFilter(harvestFilter),
       vault.queryFilter(treeDistributionFilter),
     ]);
+    console.log({
+      allHarvestEvents,
+      allTreeDistributionEvents
+    });
     const harvestEvents = allHarvestEvents.filter((h) =>
       timestampInRange(h.args[3]),
     );
