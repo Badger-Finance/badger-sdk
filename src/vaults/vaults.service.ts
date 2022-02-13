@@ -20,6 +20,8 @@ import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
 import { keyBy } from '../utils/key-by';
+import { HarvestEvent } from '../contracts/Strategy';
+import { HarvestEventWithTimestamp } from './interfaces/harvest-event-with-timestamp.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -382,15 +384,17 @@ export class VaultsService extends Service {
       allHarvestEvents,
       allTreeDistributionEvents,
     });
-    const harvestEvents = allHarvestEvents.filter((h) =>
-      timestampInRange(h.args[3]),
+    const harvestEventsWithTimestamps =
+      await this.enrichHarvestEventsWithTimestamps(allHarvestEvents);
+    const harvestEvents = harvestEventsWithTimestamps.filter((h) =>
+      timestampInRange(h.timestamp),
     );
     const treeDistributionEvents = allTreeDistributionEvents.filter((e) =>
       timestampInRange(e.args[3]),
     );
 
     const harvestEventsByTimestamps = keyBy(harvestEvents, (harvestEvent) =>
-      bigNumberToHexString(harvestEvent.args[3]),
+      bigNumberToHexString(harvestEvent.timestamp),
     );
     const treeDistributionEventsByTimestamps = keyBy(
       treeDistributionEvents,
@@ -428,6 +432,22 @@ export class VaultsService extends Service {
     return {
       data,
     };
+  }
+
+  private async enrichHarvestEventsWithTimestamps(
+    harvestEvents: HarvestEvent[],
+  ): Promise<HarvestEventWithTimestamp[]> {
+    return Promise.all(
+      harvestEvents.map(async (harvestEvent) => {
+        const block = await this.sdk.provider.getBlock(
+          harvestEvent.args.blockNumber.toHexString(),
+        );
+        return {
+          ...harvestEvent,
+          timestamp: BigNumber.from(block.timestamp),
+        };
+      }),
+    );
   }
 
   private async init() {
