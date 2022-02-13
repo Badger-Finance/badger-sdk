@@ -1,10 +1,5 @@
 import { BigNumber, ethers } from 'ethers';
-import {
-  TokenBalance,
-  VaultState,
-  RegistryVault,
-  VaultVersion,
-} from '..';
+import { TokenBalance, VaultState, RegistryVault, VaultVersion } from '..';
 import {
   Byvwbtc__factory,
   Sett__factory,
@@ -85,7 +80,8 @@ export class VaultsService extends Service {
     address: string,
     opts?: VaultOptions,
   ): Promise<RegistryVault> {
-    const requireRegistry = opts && opts.requireRegistry !== undefined ? opts.requireRegistry : true;
+    const requireRegistry =
+      opts && opts.requireRegistry !== undefined ? opts.requireRegistry : true;
     // vaults may be loaded without a registry but require extra information
     if (!requireRegistry && (!opts?.status || !opts.version)) {
       throw new Error(

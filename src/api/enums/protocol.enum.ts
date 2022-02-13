@@ -6,6 +6,7 @@ export enum Protocol {
   mStable = 'mStable',
   Pancakeswap = 'Pancakeswap',
   Quickswap = 'Quickswap',
+  Solidly = 'Solidly',
   Sushiswap = 'Sushiswap',
   Swapr = 'Swapr',
   Uniswap = 'Uniswap',
