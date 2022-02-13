@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import BadgerSDK from '.';
 
-const BWBTC = '0x711555f2b421da9a86a18dc163d04699310fe297';
+const BCVXCRV = '0x2B5455aac8d64C14786c3a29858E43b5945819C0';
 
 async function testSDK() {
   const sdk = new BadgerSDK(
@@ -12,7 +12,7 @@ async function testSDK() {
   );
   await sdk.ready();
 
-  const performance = await sdk.vaults.list({ address: BWBTC });
+  const performance = await sdk.vaults.list({ address: BCVXCRV });
   console.log(performance);
 }
 
