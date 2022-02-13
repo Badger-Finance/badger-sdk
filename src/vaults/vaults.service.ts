@@ -375,12 +375,12 @@ export class VaultsService extends Service {
 
     // Get harvest and tree distributions for given time range filter
     const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
-      vault.queryFilter(harvestFilter),
-      vault.queryFilter(treeDistributionFilter),
+      strategy.queryFilter(harvestFilter),
+      strategy.queryFilter(treeDistributionFilter),
     ]);
     console.log({
       allHarvestEvents,
-      allTreeDistributionEvents
+      allTreeDistributionEvents,
     });
     const harvestEvents = allHarvestEvents.filter((h) =>
       timestampInRange(h.args[3]),
