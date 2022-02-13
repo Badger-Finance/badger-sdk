@@ -6,6 +6,9 @@ import {
   StrategyV15__factory,
   VaultV15__factory,
   Sett,
+  Vault__factory,
+  Controller__factory,
+  Strategy__factory,
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
@@ -353,10 +356,16 @@ export class VaultsService extends Service {
     };
     const bigNumberToHexString = (n: BigNumber) => n.toHexString();
 
+    // TODO: we can abstract this portion out later to a "vault strategy lookup" utility
     const checksumAddress = ethers.utils.getAddress(address);
-    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
-    const harvestFilter = vault.filters.Harvested();
-    const treeDistributionFilter = vault.filters.TreeDistribution();
+    const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
+    const controller = Controller__factory.connect(await vault.controller(), this.sdk.provider);
+    const strategyAddress = await controller.strategies(await vault.token());
+    const strategy = Strategy__factory.connect(strategyAddress, this.sdk.provider);
+
+    // maybe need to work out if this is changed from v1.5
+    const harvestFilter = strategy.filters.Harvest();
+    const treeDistributionFilter = strategy.filters.TreeDistribution();
 
     // Get harvest and tree distributions for given time range filter
     const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([

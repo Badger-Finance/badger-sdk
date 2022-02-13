@@ -5,14 +5,14 @@ const BWBTC = '0x711555f2b421da9a86a18dc163d04699310fe297';
 
 async function testSDK() {
   const sdk = new BadgerSDK(
-    43114,
+    1,
     new ethers.providers.JsonRpcBatchProvider(
-      'https://api.avax.network/ext/bc/C/rpc',
+      'https://eth-mainnet.alchemyapi.io/v2/-8IubgVIbg-UaXks6VLvgsuYujAravb4',
     ),
   );
   await sdk.ready();
 
-  const performance = await sdk.vaults.loadVaultPerformance(BWBTC);
+  const performance = await sdk.vaults.list({ address: BWBTC });
   console.log(performance);
 }
 
