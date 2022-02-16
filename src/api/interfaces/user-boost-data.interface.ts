@@ -4,6 +4,7 @@ export interface UserBoostData {
   boost: number;
   stakeRatio: number;
   nftBalance: number;
+  bveCvxBalance: number;
   nativeBalance: number;
   nonNativeBalance: number;
 }
