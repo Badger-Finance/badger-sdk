@@ -375,7 +375,6 @@ export class VaultsService extends Service {
       strategy.queryFilter(treeDistributionFilter),
     ]);
 
-    // const harvestEvents
     const [harvestEventsWithTimestamps, treeDistributionEventWithTimestamps] =
       await this.parseHarvestEvents(
         allHarvestEvents,
