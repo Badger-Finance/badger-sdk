@@ -1,9 +1,7 @@
-import { BigNumber } from '@ethersproject/bignumber';
-
 export interface ListVaultOptions {
   address: string;
-  timestamp_gt?: BigNumber;
-  timestamp_gte?: BigNumber;
-  timestamp_lt?: BigNumber;
-  timestamp_lte?: BigNumber;
+  timestamp_gt?: number;
+  timestamp_gte?: number;
+  timestamp_lt?: number;
+  timestamp_lte?: number;
 }
