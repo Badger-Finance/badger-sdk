@@ -12,7 +12,8 @@ import {
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
 import {
-  VaultOptions,
+  LoadVaultOptions,
+  VaultHarvestEvent,
   VaultPerformance,
   VaultRegistration,
 } from './interfaces';
@@ -20,8 +21,12 @@ import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
 import { keyBy } from '../utils/key-by';
-import { HarvestEvent } from '../contracts/Strategy';
-import { HarvestEventWithTimestamp } from './interfaces/harvest-event-with-timestamp.interface';
+import {
+  HarvestEvent,
+  Strategy,
+  TreeDistributionEvent,
+} from '../contracts/Strategy';
+import { VaultTreeDistributionEvent } from './interfaces/vault-tree-distribution-event.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -82,14 +87,15 @@ export class VaultsService extends Service {
     return registryVaults;
   }
 
-  async loadVault(
-    address: string,
-    opts?: VaultOptions,
-  ): Promise<RegistryVault> {
-    const requireRegistry =
-      opts && opts.requireRegistry !== undefined ? opts.requireRegistry : true;
+  async loadVault({
+    address,
+    update,
+    requireRegistry = true,
+    version,
+    status,
+  }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
-    if (!requireRegistry && (!opts?.status || !opts.version)) {
+    if (!requireRegistry && (!status || !version)) {
       throw new Error(
         'Status and version fields are required when requireRegistry is false',
       );
@@ -119,17 +125,17 @@ export class VaultsService extends Service {
     // create a pseudo registration for fetching
     if (!registration) {
       // check for typescript
-      if (!opts || !opts.status || !opts.version) {
+      if (!status || !version) {
         throw new Error('Invalid vault options provided');
       }
       registration = {
         address: checksumAddress,
-        status: opts?.status,
-        version: opts?.version,
+        status,
+        version,
       };
     }
 
-    if (!this.vaults[checksumAddress] || opts?.update) {
+    if (!this.vaults[checksumAddress] || update) {
       this.vaults[checksumAddress] = await this.fetchVault(registration);
     }
 
@@ -147,13 +153,16 @@ export class VaultsService extends Service {
       console.log('Vault not found');
     }
 
-    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
-    const vaultToken = await this.loadVault(vault.address);
+    const vault = VaultV15__factory.connect(
+      checksumAddress,
+      this.sdk.multicall,
+    );
+    const vaultToken = await this.loadVault({ address: vault.address });
     const token = await this.sdk.tokens.loadToken(vaultToken.token.address);
     const strategyAddress = await vault.strategy();
     const strategy = StrategyV15__factory.connect(
       strategyAddress,
-      this.sdk.provider,
+      this.sdk.multicall,
     );
     const tokens = await strategy.getProtectedTokens();
 
@@ -335,43 +344,28 @@ export class VaultsService extends Service {
     timestamp_lte,
   }: ListVaultOptions): Promise<{
     data: {
-      timestamp: BigNumber;
-      harvests: unknown[];
-      treeDistributions: unknown[];
+      timestamp: number;
+      harvests: VaultHarvestEvent[];
+      treeDistributions: VaultTreeDistributionEvent[];
     }[];
   }> {
-    const timestampInRange = (timestamp: BigNumber): boolean => {
-      if (timestamp_gt && !timestamp.gt(timestamp_gt)) {
+    const timestampInRange = (timestamp: number): boolean => {
+      if (timestamp_gt && timestamp <= timestamp_gt) {
         return false;
       }
-      if (timestamp_gte && !timestamp.gte(timestamp_gte)) {
+      if (timestamp_gte && timestamp < timestamp_gte) {
         return false;
       }
-      if (timestamp_lt && !timestamp.lt(timestamp_lt)) {
+      if (timestamp_lt && timestamp >= timestamp_lt) {
         return false;
       }
-      if (timestamp_lte && !timestamp.lte(timestamp_lte)) {
+      if (timestamp_lte && timestamp > timestamp_lte) {
         return false;
       }
       return true;
     };
-    const bigNumberToHexString = (n: BigNumber) => n.toHexString();
 
-    // TODO: we can abstract this portion out later to a "vault strategy lookup" utility
-    const checksumAddress = ethers.utils.getAddress(address);
-    const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
-    const controller = Controller__factory.connect(
-      await vault.controller(),
-      this.sdk.provider,
-    );
-    const strategyAddress = await controller.strategies(await vault.token());
-    console.log(strategyAddress);
-    const strategy = Strategy__factory.connect(
-      strategyAddress,
-      this.sdk.provider,
-    );
-
-    // maybe need to work out if this is changed from v1.5
+    const strategy = await this.getVaultStrategy(address);
     const harvestFilter = strategy.filters.Harvest();
     const treeDistributionFilter = strategy.filters.TreeDistribution();
 
@@ -380,26 +374,27 @@ export class VaultsService extends Service {
       strategy.queryFilter(harvestFilter),
       strategy.queryFilter(treeDistributionFilter),
     ]);
-    console.log({
-      allHarvestEvents,
-      allTreeDistributionEvents,
-    });
-    const harvestEventsWithTimestamps =
-      await this.enrichHarvestEventsWithTimestamps(allHarvestEvents);
+
+    // const harvestEvents
+    const [harvestEventsWithTimestamps, treeDistributionEventWithTimestamps] =
+      await this.parseHarvestEvents(
+        allHarvestEvents,
+        allTreeDistributionEvents,
+      );
     const harvestEvents = harvestEventsWithTimestamps.filter((h) =>
       timestampInRange(h.timestamp),
     );
-    const treeDistributionEvents = allTreeDistributionEvents.filter((e) =>
-      timestampInRange(e.args[3]),
+    const treeDistributionEvents = treeDistributionEventWithTimestamps.filter(
+      (d) => timestampInRange(d.timestamp),
     );
 
-    const harvestEventsByTimestamps = keyBy(harvestEvents, (harvestEvent) =>
-      bigNumberToHexString(harvestEvent.timestamp),
+    const harvestEventsByTimestamps = keyBy(
+      harvestEvents,
+      (harvestEvent) => harvestEvent.timestamp,
     );
     const treeDistributionEventsByTimestamps = keyBy(
       treeDistributionEvents,
-      (treeDistributionEvent) =>
-        bigNumberToHexString(treeDistributionEvent.args[3]),
+      (treeDistributionEvent) => treeDistributionEvent.timestamp,
     );
 
     // Create timestamps for events
@@ -423,7 +418,7 @@ export class VaultsService extends Service {
       const treeDistributions =
         treeDistributionEventsByTimestamps.get(timestamp) ?? [];
       data.push({
-        timestamp: BigNumber.from(timestamp),
+        timestamp,
         harvests,
         treeDistributions,
       });
@@ -434,20 +429,27 @@ export class VaultsService extends Service {
     };
   }
 
-  private async enrichHarvestEventsWithTimestamps(
+  private async parseHarvestEvents(
     harvestEvents: HarvestEvent[],
-  ): Promise<HarvestEventWithTimestamp[]> {
-    return Promise.all(
-      harvestEvents.map(async (harvestEvent) => {
-        const block = await this.sdk.provider.getBlock(
-          harvestEvent.args.blockNumber.toHexString(),
-        );
+    treeDistributionEvents: TreeDistributionEvent[],
+  ): Promise<[VaultHarvestEvent[], VaultTreeDistributionEvent[]]> {
+    const parsedHarvests = await Promise.all(
+      harvestEvents.map(async (event) => {
+        const block = await event.getBlock();
         return {
-          ...harvestEvent,
-          timestamp: BigNumber.from(block.timestamp),
+          timestamp: block.timestamp,
+          block: block.number,
+          harvested: event.args[0],
         };
       }),
     );
+    const parsedTreeDistributions = treeDistributionEvents.map((e) => ({
+      timestamp: Number(e.args[3].toString()),
+      block: e.blockNumber,
+      token: e.args[0],
+      amount: e.args[1],
+    }));
+    return [parsedHarvests, parsedTreeDistributions];
   }
 
   private async init() {
@@ -539,6 +541,17 @@ export class VaultsService extends Service {
     }
 
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
+  }
+
+  private async getVaultStrategy(address: string): Promise<Strategy> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    const vault = Vault__factory.connect(checksumAddress, this.sdk.multicall);
+    const controller = Controller__factory.connect(
+      await vault.controller(),
+      this.sdk.multicall,
+    );
+    const strategyAddress = await controller.strategies(await vault.token());
+    return Strategy__factory.connect(strategyAddress, this.sdk.multicall);
   }
 
   private getVaultVersion(version: string): VaultVersion {

@@ -12,133 +12,133 @@ import {
   PopulatedTransaction,
   Signer,
   utils,
-} from "ethers";
-import { FunctionFragment, Result, EventFragment } from "@ethersproject/abi";
-import { Listener, Provider } from "@ethersproject/providers";
-import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
+} from 'ethers';
+import { FunctionFragment, Result, EventFragment } from '@ethersproject/abi';
+import { Listener, Provider } from '@ethersproject/providers';
+import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from './common';
 
 export interface ByvwbtcInterface extends utils.Interface {
-  contractName: "Byvwbtc";
+  contractName: 'Byvwbtc';
   functions: {
-    "DOMAIN_SEPARATOR()": FunctionFragment;
-    "DOMAIN_TYPEHASH()": FunctionFragment;
-    "PERMIT_TYPEHASH()": FunctionFragment;
-    "acceptAffiliate()": FunctionFragment;
-    "affiliate()": FunctionFragment;
-    "allowance(address,address)": FunctionFragment;
-    "approve(address,uint256)": FunctionFragment;
-    "balanceOf(address)": FunctionFragment;
-    "bestVault()": FunctionFragment;
-    "decimals()": FunctionFragment;
-    "decreaseAllowance(address,uint256)": FunctionFragment;
-    "deposit(uint256,bytes32[])": FunctionFragment;
-    "depositFor(address,uint256)": FunctionFragment;
-    "experimentalMode()": FunctionFragment;
-    "experimentalVault()": FunctionFragment;
-    "guardian()": FunctionFragment;
-    "guestList()": FunctionFragment;
-    "increaseAllowance(address,uint256)": FunctionFragment;
-    "initialize(address,address,string,string,address,bool,address)": FunctionFragment;
-    "manager()": FunctionFragment;
-    "name()": FunctionFragment;
-    "nonces(address)": FunctionFragment;
-    "pause()": FunctionFragment;
-    "paused()": FunctionFragment;
-    "pendingAffiliate()": FunctionFragment;
-    "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": FunctionFragment;
-    "pricePerShare()": FunctionFragment;
-    "registry()": FunctionFragment;
-    "setAffiliate(address)": FunctionFragment;
-    "setGuardian(address)": FunctionFragment;
-    "setGuestList(address)": FunctionFragment;
-    "setManager(address)": FunctionFragment;
-    "setRegistry(address)": FunctionFragment;
-    "setWithdrawalFee(uint256)": FunctionFragment;
-    "setWithdrawalMaxDeviationThreshold(uint256)": FunctionFragment;
-    "shareValue(uint256)": FunctionFragment;
-    "symbol()": FunctionFragment;
-    "token()": FunctionFragment;
-    "totalAssets()": FunctionFragment;
-    "totalSupply()": FunctionFragment;
-    "totalVaultBalance(address)": FunctionFragment;
-    "totalWrapperBalance(address)": FunctionFragment;
-    "transfer(address,uint256)": FunctionFragment;
-    "transferFrom(address,address,uint256)": FunctionFragment;
-    "unpause()": FunctionFragment;
-    "withdraw(uint256)": FunctionFragment;
-    "withdrawalFee()": FunctionFragment;
-    "withdrawalMaxDeviationThreshold()": FunctionFragment;
+    'DOMAIN_SEPARATOR()': FunctionFragment;
+    'DOMAIN_TYPEHASH()': FunctionFragment;
+    'PERMIT_TYPEHASH()': FunctionFragment;
+    'acceptAffiliate()': FunctionFragment;
+    'affiliate()': FunctionFragment;
+    'allowance(address,address)': FunctionFragment;
+    'approve(address,uint256)': FunctionFragment;
+    'balanceOf(address)': FunctionFragment;
+    'bestVault()': FunctionFragment;
+    'decimals()': FunctionFragment;
+    'decreaseAllowance(address,uint256)': FunctionFragment;
+    'deposit(uint256,bytes32[])': FunctionFragment;
+    'depositFor(address,uint256)': FunctionFragment;
+    'experimentalMode()': FunctionFragment;
+    'experimentalVault()': FunctionFragment;
+    'guardian()': FunctionFragment;
+    'guestList()': FunctionFragment;
+    'increaseAllowance(address,uint256)': FunctionFragment;
+    'initialize(address,address,string,string,address,bool,address)': FunctionFragment;
+    'manager()': FunctionFragment;
+    'name()': FunctionFragment;
+    'nonces(address)': FunctionFragment;
+    'pause()': FunctionFragment;
+    'paused()': FunctionFragment;
+    'pendingAffiliate()': FunctionFragment;
+    'permit(address,address,uint256,uint256,uint8,bytes32,bytes32)': FunctionFragment;
+    'pricePerShare()': FunctionFragment;
+    'registry()': FunctionFragment;
+    'setAffiliate(address)': FunctionFragment;
+    'setGuardian(address)': FunctionFragment;
+    'setGuestList(address)': FunctionFragment;
+    'setManager(address)': FunctionFragment;
+    'setRegistry(address)': FunctionFragment;
+    'setWithdrawalFee(uint256)': FunctionFragment;
+    'setWithdrawalMaxDeviationThreshold(uint256)': FunctionFragment;
+    'shareValue(uint256)': FunctionFragment;
+    'symbol()': FunctionFragment;
+    'token()': FunctionFragment;
+    'totalAssets()': FunctionFragment;
+    'totalSupply()': FunctionFragment;
+    'totalVaultBalance(address)': FunctionFragment;
+    'totalWrapperBalance(address)': FunctionFragment;
+    'transfer(address,uint256)': FunctionFragment;
+    'transferFrom(address,address,uint256)': FunctionFragment;
+    'unpause()': FunctionFragment;
+    'withdraw(uint256)': FunctionFragment;
+    'withdrawalFee()': FunctionFragment;
+    'withdrawalMaxDeviationThreshold()': FunctionFragment;
   };
 
   encodeFunctionData(
-    functionFragment: "DOMAIN_SEPARATOR",
-    values?: undefined
+    functionFragment: 'DOMAIN_SEPARATOR',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "DOMAIN_TYPEHASH",
-    values?: undefined
+    functionFragment: 'DOMAIN_TYPEHASH',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "PERMIT_TYPEHASH",
-    values?: undefined
+    functionFragment: 'PERMIT_TYPEHASH',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "acceptAffiliate",
-    values?: undefined
+    functionFragment: 'acceptAffiliate',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "affiliate", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'affiliate', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "allowance",
-    values: [string, string]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "approve",
-    values: [string, BigNumberish]
-  ): string;
-  encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
-  encodeFunctionData(functionFragment: "bestVault", values?: undefined): string;
-  encodeFunctionData(functionFragment: "decimals", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "decreaseAllowance",
-    values: [string, BigNumberish]
+    functionFragment: 'allowance',
+    values: [string, string],
   ): string;
   encodeFunctionData(
-    functionFragment: "deposit",
-    values: [BigNumberish, BytesLike[]]
+    functionFragment: 'approve',
+    values: [string, BigNumberish],
+  ): string;
+  encodeFunctionData(functionFragment: 'balanceOf', values: [string]): string;
+  encodeFunctionData(functionFragment: 'bestVault', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: 'decreaseAllowance',
+    values: [string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "depositFor",
-    values: [string, BigNumberish]
+    functionFragment: 'deposit',
+    values: [BigNumberish, BytesLike[]],
   ): string;
   encodeFunctionData(
-    functionFragment: "experimentalMode",
-    values?: undefined
+    functionFragment: 'depositFor',
+    values: [string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "experimentalVault",
-    values?: undefined
-  ): string;
-  encodeFunctionData(functionFragment: "guardian", values?: undefined): string;
-  encodeFunctionData(functionFragment: "guestList", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "increaseAllowance",
-    values: [string, BigNumberish]
+    functionFragment: 'experimentalMode',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "initialize",
-    values: [string, string, string, string, string, boolean, string]
+    functionFragment: 'experimentalVault',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "manager", values?: undefined): string;
-  encodeFunctionData(functionFragment: "name", values?: undefined): string;
-  encodeFunctionData(functionFragment: "nonces", values: [string]): string;
-  encodeFunctionData(functionFragment: "pause", values?: undefined): string;
-  encodeFunctionData(functionFragment: "paused", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'guardian', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'guestList', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "pendingAffiliate",
-    values?: undefined
+    functionFragment: 'increaseAllowance',
+    values: [string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "permit",
+    functionFragment: 'initialize',
+    values: [string, string, string, string, string, boolean, string],
+  ): string;
+  encodeFunctionData(functionFragment: 'manager', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'name', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'nonces', values: [string]): string;
+  encodeFunctionData(functionFragment: 'pause', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'paused', values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: 'pendingAffiliate',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'permit',
     values: [
       string,
       string,
@@ -146,234 +146,234 @@ export interface ByvwbtcInterface extends utils.Interface {
       BigNumberish,
       BigNumberish,
       BytesLike,
-      BytesLike
-    ]
+      BytesLike,
+    ],
   ): string;
   encodeFunctionData(
-    functionFragment: "pricePerShare",
-    values?: undefined
+    functionFragment: 'pricePerShare',
+    values?: undefined,
   ): string;
-  encodeFunctionData(functionFragment: "registry", values?: undefined): string;
+  encodeFunctionData(functionFragment: 'registry', values?: undefined): string;
   encodeFunctionData(
-    functionFragment: "setAffiliate",
-    values: [string]
+    functionFragment: 'setAffiliate',
+    values: [string],
   ): string;
-  encodeFunctionData(functionFragment: "setGuardian", values: [string]): string;
+  encodeFunctionData(functionFragment: 'setGuardian', values: [string]): string;
   encodeFunctionData(
-    functionFragment: "setGuestList",
-    values: [string]
+    functionFragment: 'setGuestList',
+    values: [string],
   ): string;
-  encodeFunctionData(functionFragment: "setManager", values: [string]): string;
-  encodeFunctionData(functionFragment: "setRegistry", values: [string]): string;
+  encodeFunctionData(functionFragment: 'setManager', values: [string]): string;
+  encodeFunctionData(functionFragment: 'setRegistry', values: [string]): string;
   encodeFunctionData(
-    functionFragment: "setWithdrawalFee",
-    values: [BigNumberish]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "setWithdrawalMaxDeviationThreshold",
-    values: [BigNumberish]
+    functionFragment: 'setWithdrawalFee',
+    values: [BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "shareValue",
-    values: [BigNumberish]
-  ): string;
-  encodeFunctionData(functionFragment: "symbol", values?: undefined): string;
-  encodeFunctionData(functionFragment: "token", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "totalAssets",
-    values?: undefined
+    functionFragment: 'setWithdrawalMaxDeviationThreshold',
+    values: [BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "totalSupply",
-    values?: undefined
+    functionFragment: 'shareValue',
+    values: [BigNumberish],
+  ): string;
+  encodeFunctionData(functionFragment: 'symbol', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'token', values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: 'totalAssets',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "totalVaultBalance",
-    values: [string]
+    functionFragment: 'totalSupply',
+    values?: undefined,
   ): string;
   encodeFunctionData(
-    functionFragment: "totalWrapperBalance",
-    values: [string]
+    functionFragment: 'totalVaultBalance',
+    values: [string],
   ): string;
   encodeFunctionData(
-    functionFragment: "transfer",
-    values: [string, BigNumberish]
+    functionFragment: 'totalWrapperBalance',
+    values: [string],
   ): string;
   encodeFunctionData(
-    functionFragment: "transferFrom",
-    values: [string, string, BigNumberish]
-  ): string;
-  encodeFunctionData(functionFragment: "unpause", values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: "withdraw",
-    values: [BigNumberish]
+    functionFragment: 'transfer',
+    values: [string, BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "withdrawalFee",
-    values?: undefined
+    functionFragment: 'transferFrom',
+    values: [string, string, BigNumberish],
+  ): string;
+  encodeFunctionData(functionFragment: 'unpause', values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: 'withdraw',
+    values: [BigNumberish],
   ): string;
   encodeFunctionData(
-    functionFragment: "withdrawalMaxDeviationThreshold",
-    values?: undefined
+    functionFragment: 'withdrawalFee',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'withdrawalMaxDeviationThreshold',
+    values?: undefined,
   ): string;
 
   decodeFunctionResult(
-    functionFragment: "DOMAIN_SEPARATOR",
-    data: BytesLike
+    functionFragment: 'DOMAIN_SEPARATOR',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "DOMAIN_TYPEHASH",
-    data: BytesLike
+    functionFragment: 'DOMAIN_TYPEHASH',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "PERMIT_TYPEHASH",
-    data: BytesLike
+    functionFragment: 'PERMIT_TYPEHASH',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "acceptAffiliate",
-    data: BytesLike
+    functionFragment: 'acceptAffiliate',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "affiliate", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "allowance", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "bestVault", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "decimals", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'affiliate', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'allowance', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'approve', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'balanceOf', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'bestVault', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "decreaseAllowance",
-    data: BytesLike
+    functionFragment: 'decreaseAllowance',
+    data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: "deposit", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "depositFor", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'deposit', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'depositFor', data: BytesLike): Result;
   decodeFunctionResult(
-    functionFragment: "experimentalMode",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "experimentalVault",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "guardian", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "guestList", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "increaseAllowance",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "initialize", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "manager", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "nonces", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "pause", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "paused", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "pendingAffiliate",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "permit", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "pricePerShare",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "registry", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "setAffiliate",
-    data: BytesLike
+    functionFragment: 'experimentalMode',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "setGuardian",
-    data: BytesLike
+    functionFragment: 'experimentalVault',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'guardian', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'guestList', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'increaseAllowance',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'manager', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'name', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'nonces', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pause', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'paused', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'pendingAffiliate',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'permit', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'pricePerShare',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'registry', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'setAffiliate',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "setGuestList",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "setManager", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "setRegistry",
-    data: BytesLike
+    functionFragment: 'setGuardian',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "setWithdrawalFee",
-    data: BytesLike
+    functionFragment: 'setGuestList',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'setManager', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'setRegistry',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "setWithdrawalMaxDeviationThreshold",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "shareValue", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "symbol", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "token", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "totalAssets",
-    data: BytesLike
+    functionFragment: 'setWithdrawalFee',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "totalSupply",
-    data: BytesLike
+    functionFragment: 'setWithdrawalMaxDeviationThreshold',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'shareValue', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'symbol', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'token', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'totalAssets',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "totalVaultBalance",
-    data: BytesLike
+    functionFragment: 'totalSupply',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "totalWrapperBalance",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "transfer", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "transferFrom",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(functionFragment: "unpause", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "withdraw", data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: "withdrawalFee",
-    data: BytesLike
+    functionFragment: 'totalVaultBalance',
+    data: BytesLike,
   ): Result;
   decodeFunctionResult(
-    functionFragment: "withdrawalMaxDeviationThreshold",
-    data: BytesLike
+    functionFragment: 'totalWrapperBalance',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'transfer', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'transferFrom',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'unpause', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'withdraw', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'withdrawalFee',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'withdrawalMaxDeviationThreshold',
+    data: BytesLike,
   ): Result;
 
   events: {
-    "AcceptAffiliate(address)": EventFragment;
-    "Approval(address,address,uint256)": EventFragment;
-    "Burn(address,uint256)": EventFragment;
-    "Deposit(address,uint256)": EventFragment;
-    "Mint(address,uint256)": EventFragment;
-    "Paused(address)": EventFragment;
-    "PendingAffiliate(address)": EventFragment;
-    "SetExperimentalVault(address)": EventFragment;
-    "SetGuardian(address)": EventFragment;
-    "SetManager(address)": EventFragment;
-    "SetWithdrawalFee(uint256)": EventFragment;
-    "SetWithdrawalMaxDeviationThreshold(uint256)": EventFragment;
-    "Transfer(address,address,uint256)": EventFragment;
-    "Unpaused(address)": EventFragment;
-    "UpdateGuestList(address)": EventFragment;
-    "Withdraw(address,uint256)": EventFragment;
-    "WithdrawalFee(address,uint256)": EventFragment;
+    'AcceptAffiliate(address)': EventFragment;
+    'Approval(address,address,uint256)': EventFragment;
+    'Burn(address,uint256)': EventFragment;
+    'Deposit(address,uint256)': EventFragment;
+    'Mint(address,uint256)': EventFragment;
+    'Paused(address)': EventFragment;
+    'PendingAffiliate(address)': EventFragment;
+    'SetExperimentalVault(address)': EventFragment;
+    'SetGuardian(address)': EventFragment;
+    'SetManager(address)': EventFragment;
+    'SetWithdrawalFee(uint256)': EventFragment;
+    'SetWithdrawalMaxDeviationThreshold(uint256)': EventFragment;
+    'Transfer(address,address,uint256)': EventFragment;
+    'Unpaused(address)': EventFragment;
+    'UpdateGuestList(address)': EventFragment;
+    'Withdraw(address,uint256)': EventFragment;
+    'WithdrawalFee(address,uint256)': EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: "AcceptAffiliate"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Burn"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Deposit"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Mint"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Paused"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "PendingAffiliate"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "SetExperimentalVault"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "SetGuardian"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "SetManager"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "SetWithdrawalFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'AcceptAffiliate'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Approval'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Burn'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Deposit'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Mint'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Paused'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'PendingAffiliate'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'SetExperimentalVault'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'SetGuardian'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'SetManager'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'SetWithdrawalFee'): EventFragment;
   getEvent(
-    nameOrSignatureOrTopic: "SetWithdrawalMaxDeviationThreshold"
+    nameOrSignatureOrTopic: 'SetWithdrawalMaxDeviationThreshold',
   ): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Transfer"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Unpaused"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "UpdateGuestList"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Withdraw"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "WithdrawalFee"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Transfer'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Unpaused'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'UpdateGuestList'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Withdraw'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'WithdrawalFee'): EventFragment;
 }
 
 export type AcceptAffiliateEvent = TypedEvent<[string], { affiliate: string }>;
@@ -476,7 +476,7 @@ export type WithdrawalFeeEvent = TypedEvent<
 export type WithdrawalFeeEventFilter = TypedEventFilter<WithdrawalFeeEvent>;
 
 export interface Byvwbtc extends BaseContract {
-  contractName: "Byvwbtc";
+  contractName: 'Byvwbtc';
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
@@ -486,15 +486,15 @@ export interface Byvwbtc extends BaseContract {
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
     fromBlockOrBlockhash?: string | number | undefined,
-    toBlock?: string | number | undefined
+    toBlock?: string | number | undefined,
   ): Promise<Array<TEvent>>;
 
   listeners<TEvent extends TypedEvent>(
-    eventFilter?: TypedEventFilter<TEvent>
+    eventFilter?: TypedEventFilter<TEvent>,
   ): Array<TypedListener<TEvent>>;
   listeners(eventName?: string): Array<Listener>;
   removeAllListeners<TEvent extends TypedEvent>(
-    eventFilter: TypedEventFilter<TEvent>
+    eventFilter: TypedEventFilter<TEvent>,
   ): this;
   removeAllListeners(eventName?: string): this;
   off: OnEvent<this>;
@@ -510,7 +510,7 @@ export interface Byvwbtc extends BaseContract {
     PERMIT_TYPEHASH(overrides?: CallOverrides): Promise<[string]>;
 
     acceptAffiliate(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     affiliate(overrides?: CallOverrides): Promise<[string]>;
@@ -518,13 +518,13 @@ export interface Byvwbtc extends BaseContract {
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber]>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     balanceOf(account: string, overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -536,31 +536,31 @@ export interface Byvwbtc extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "deposit(uint256,bytes32[])"(
+    'deposit(uint256,bytes32[])'(
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "deposit(bytes32[])"(
+    'deposit(bytes32[])'(
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "depositFor(address,uint256)"(
+    'depositFor(address,uint256)'(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "depositFor(address,uint256,bytes32[])"(
+    'depositFor(address,uint256,bytes32[])'(
       recipient: string,
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     experimentalMode(overrides?: CallOverrides): Promise<[boolean]>;
@@ -574,7 +574,7 @@ export interface Byvwbtc extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     initialize(
@@ -585,7 +585,7 @@ export interface Byvwbtc extends BaseContract {
       _guardian: string,
       _useExperimentalMode: boolean,
       _experimentalVault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     manager(overrides?: CallOverrides): Promise<[string]>;
@@ -595,7 +595,7 @@ export interface Byvwbtc extends BaseContract {
     nonces(arg0: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     paused(overrides?: CallOverrides): Promise<[boolean]>;
@@ -610,7 +610,7 @@ export interface Byvwbtc extends BaseContract {
       v: BigNumberish,
       r: BytesLike,
       s: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     pricePerShare(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -619,42 +619,42 @@ export interface Byvwbtc extends BaseContract {
 
     setAffiliate(
       _affiliate: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setManager(
       _manager: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setRegistry(
       _registry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setWithdrawalFee(
       _fee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     setWithdrawalMaxDeviationThreshold(
       _maxDeviationThreshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     shareValue(
       numShares: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber]>;
 
     symbol(overrides?: CallOverrides): Promise<[string]>;
@@ -662,51 +662,51 @@ export interface Byvwbtc extends BaseContract {
     token(overrides?: CallOverrides): Promise<[string]>;
 
     totalAssets(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber] & { assets: BigNumber }>;
 
     totalSupply(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     totalVaultBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber] & { balance: BigNumber }>;
 
     totalWrapperBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber] & { balance: BigNumber }>;
 
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "withdraw(uint256)"(
+    'withdraw(uint256)'(
       shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
-    "withdraw()"(
-      overrides?: Overrides & { from?: string | Promise<string> }
+    'withdraw()'(
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<[BigNumber]>;
   };
 
@@ -717,7 +717,7 @@ export interface Byvwbtc extends BaseContract {
   PERMIT_TYPEHASH(overrides?: CallOverrides): Promise<string>;
 
   acceptAffiliate(
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   affiliate(overrides?: CallOverrides): Promise<string>;
@@ -725,13 +725,13 @@ export interface Byvwbtc extends BaseContract {
   allowance(
     owner: string,
     spender: string,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   approve(
     spender: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   balanceOf(account: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -743,31 +743,31 @@ export interface Byvwbtc extends BaseContract {
   decreaseAllowance(
     spender: string,
     subtractedValue: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "deposit(uint256,bytes32[])"(
+  'deposit(uint256,bytes32[])'(
     amount: BigNumberish,
     merkleProof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "deposit(bytes32[])"(
+  'deposit(bytes32[])'(
     merkleProof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "depositFor(address,uint256)"(
+  'depositFor(address,uint256)'(
     recipient: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "depositFor(address,uint256,bytes32[])"(
+  'depositFor(address,uint256,bytes32[])'(
     recipient: string,
     amount: BigNumberish,
     merkleProof: BytesLike[],
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   experimentalMode(overrides?: CallOverrides): Promise<boolean>;
@@ -781,7 +781,7 @@ export interface Byvwbtc extends BaseContract {
   increaseAllowance(
     spender: string,
     addedValue: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   initialize(
@@ -792,7 +792,7 @@ export interface Byvwbtc extends BaseContract {
     _guardian: string,
     _useExperimentalMode: boolean,
     _experimentalVault: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   manager(overrides?: CallOverrides): Promise<string>;
@@ -802,7 +802,7 @@ export interface Byvwbtc extends BaseContract {
   nonces(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
   pause(
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   paused(overrides?: CallOverrides): Promise<boolean>;
@@ -817,7 +817,7 @@ export interface Byvwbtc extends BaseContract {
     v: BigNumberish,
     r: BytesLike,
     s: BytesLike,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   pricePerShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -826,42 +826,42 @@ export interface Byvwbtc extends BaseContract {
 
   setAffiliate(
     _affiliate: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setGuardian(
     _guardian: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setGuestList(
     _guestList: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setManager(
     _manager: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setRegistry(
     _registry: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setWithdrawalFee(
     _fee: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   setWithdrawalMaxDeviationThreshold(
     _maxDeviationThreshold: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   shareValue(
     numShares: BigNumberish,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   symbol(overrides?: CallOverrides): Promise<string>;
@@ -874,44 +874,44 @@ export interface Byvwbtc extends BaseContract {
 
   totalVaultBalance(
     account: string,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   totalWrapperBalance(
     account: string,
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   transfer(
     recipient: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   transferFrom(
     sender: string,
     recipient: string,
     amount: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   unpause(
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "withdraw(uint256)"(
+  'withdraw(uint256)'(
     shares: BigNumberish,
-    overrides?: Overrides & { from?: string | Promise<string> }
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
-  "withdraw()"(
-    overrides?: Overrides & { from?: string | Promise<string> }
+  'withdraw()'(
+    overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   withdrawalFee(overrides?: CallOverrides): Promise<BigNumber>;
 
   withdrawalMaxDeviationThreshold(
-    overrides?: CallOverrides
+    overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
   callStatic: {
@@ -928,13 +928,13 @@ export interface Byvwbtc extends BaseContract {
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<boolean>;
 
     balanceOf(account: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -946,31 +946,31 @@ export interface Byvwbtc extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<boolean>;
 
-    "deposit(uint256,bytes32[])"(
+    'deposit(uint256,bytes32[])'(
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
-    "deposit(bytes32[])"(
+    'deposit(bytes32[])'(
       merkleProof: BytesLike[],
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
-    "depositFor(address,uint256)"(
+    'depositFor(address,uint256)'(
       recipient: string,
       amount: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
-    "depositFor(address,uint256,bytes32[])"(
+    'depositFor(address,uint256,bytes32[])'(
       recipient: string,
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     experimentalMode(overrides?: CallOverrides): Promise<boolean>;
@@ -984,7 +984,7 @@ export interface Byvwbtc extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<boolean>;
 
     initialize(
@@ -995,7 +995,7 @@ export interface Byvwbtc extends BaseContract {
       _guardian: string,
       _useExperimentalMode: boolean,
       _experimentalVault: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     manager(overrides?: CallOverrides): Promise<string>;
@@ -1018,7 +1018,7 @@ export interface Byvwbtc extends BaseContract {
       v: BigNumberish,
       r: BytesLike,
       s: BytesLike,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     pricePerShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1037,17 +1037,17 @@ export interface Byvwbtc extends BaseContract {
 
     setWithdrawalFee(
       _fee: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     setWithdrawalMaxDeviationThreshold(
       _maxDeviationThreshold: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<void>;
 
     shareValue(
       numShares: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     symbol(overrides?: CallOverrides): Promise<string>;
@@ -1060,135 +1060,135 @@ export interface Byvwbtc extends BaseContract {
 
     totalVaultBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     totalWrapperBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<boolean>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<boolean>;
 
     unpause(overrides?: CallOverrides): Promise<void>;
 
-    "withdraw(uint256)"(
+    'withdraw(uint256)'(
       shares: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
-    "withdraw()"(overrides?: CallOverrides): Promise<BigNumber>;
+    'withdraw()'(overrides?: CallOverrides): Promise<BigNumber>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<BigNumber>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
   };
 
   filters: {
-    "AcceptAffiliate(address)"(affiliate?: null): AcceptAffiliateEventFilter;
+    'AcceptAffiliate(address)'(affiliate?: null): AcceptAffiliateEventFilter;
     AcceptAffiliate(affiliate?: null): AcceptAffiliateEventFilter;
 
-    "Approval(address,address,uint256)"(
+    'Approval(address,address,uint256)'(
       owner?: string | null,
       spender?: string | null,
-      value?: null
+      value?: null,
     ): ApprovalEventFilter;
     Approval(
       owner?: string | null,
       spender?: string | null,
-      value?: null
+      value?: null,
     ): ApprovalEventFilter;
 
-    "Burn(address,uint256)"(
+    'Burn(address,uint256)'(
       account?: string | null,
-      shares?: null
+      shares?: null,
     ): BurnEventFilter;
     Burn(account?: string | null, shares?: null): BurnEventFilter;
 
-    "Deposit(address,uint256)"(
+    'Deposit(address,uint256)'(
       account?: string | null,
-      amount?: null
+      amount?: null,
     ): DepositEventFilter;
     Deposit(account?: string | null, amount?: null): DepositEventFilter;
 
-    "Mint(address,uint256)"(
+    'Mint(address,uint256)'(
       account?: string | null,
-      shares?: null
+      shares?: null,
     ): MintEventFilter;
     Mint(account?: string | null, shares?: null): MintEventFilter;
 
-    "Paused(address)"(account?: null): PausedEventFilter;
+    'Paused(address)'(account?: null): PausedEventFilter;
     Paused(account?: null): PausedEventFilter;
 
-    "PendingAffiliate(address)"(affiliate?: null): PendingAffiliateEventFilter;
+    'PendingAffiliate(address)'(affiliate?: null): PendingAffiliateEventFilter;
     PendingAffiliate(affiliate?: null): PendingAffiliateEventFilter;
 
-    "SetExperimentalVault(address)"(
-      vault?: null
+    'SetExperimentalVault(address)'(
+      vault?: null,
     ): SetExperimentalVaultEventFilter;
     SetExperimentalVault(vault?: null): SetExperimentalVaultEventFilter;
 
-    "SetGuardian(address)"(guardian?: null): SetGuardianEventFilter;
+    'SetGuardian(address)'(guardian?: null): SetGuardianEventFilter;
     SetGuardian(guardian?: null): SetGuardianEventFilter;
 
-    "SetManager(address)"(manager?: null): SetManagerEventFilter;
+    'SetManager(address)'(manager?: null): SetManagerEventFilter;
     SetManager(manager?: null): SetManagerEventFilter;
 
-    "SetWithdrawalFee(uint256)"(
-      withdrawalFee?: null
+    'SetWithdrawalFee(uint256)'(
+      withdrawalFee?: null,
     ): SetWithdrawalFeeEventFilter;
     SetWithdrawalFee(withdrawalFee?: null): SetWithdrawalFeeEventFilter;
 
-    "SetWithdrawalMaxDeviationThreshold(uint256)"(
-      withdrawalMaxDeviationThreshold?: null
+    'SetWithdrawalMaxDeviationThreshold(uint256)'(
+      withdrawalMaxDeviationThreshold?: null,
     ): SetWithdrawalMaxDeviationThresholdEventFilter;
     SetWithdrawalMaxDeviationThreshold(
-      withdrawalMaxDeviationThreshold?: null
+      withdrawalMaxDeviationThreshold?: null,
     ): SetWithdrawalMaxDeviationThresholdEventFilter;
 
-    "Transfer(address,address,uint256)"(
+    'Transfer(address,address,uint256)'(
       from?: string | null,
       to?: string | null,
-      value?: null
+      value?: null,
     ): TransferEventFilter;
     Transfer(
       from?: string | null,
       to?: string | null,
-      value?: null
+      value?: null,
     ): TransferEventFilter;
 
-    "Unpaused(address)"(account?: null): UnpausedEventFilter;
+    'Unpaused(address)'(account?: null): UnpausedEventFilter;
     Unpaused(account?: null): UnpausedEventFilter;
 
-    "UpdateGuestList(address)"(guestList?: null): UpdateGuestListEventFilter;
+    'UpdateGuestList(address)'(guestList?: null): UpdateGuestListEventFilter;
     UpdateGuestList(guestList?: null): UpdateGuestListEventFilter;
 
-    "Withdraw(address,uint256)"(
+    'Withdraw(address,uint256)'(
       account?: string | null,
-      amount?: null
+      amount?: null,
     ): WithdrawEventFilter;
     Withdraw(account?: string | null, amount?: null): WithdrawEventFilter;
 
-    "WithdrawalFee(address,uint256)"(
+    'WithdrawalFee(address,uint256)'(
       recipient?: string | null,
-      amount?: null
+      amount?: null,
     ): WithdrawalFeeEventFilter;
     WithdrawalFee(
       recipient?: string | null,
-      amount?: null
+      amount?: null,
     ): WithdrawalFeeEventFilter;
   };
 
@@ -1200,7 +1200,7 @@ export interface Byvwbtc extends BaseContract {
     PERMIT_TYPEHASH(overrides?: CallOverrides): Promise<BigNumber>;
 
     acceptAffiliate(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     affiliate(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1208,13 +1208,13 @@ export interface Byvwbtc extends BaseContract {
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     balanceOf(account: string, overrides?: CallOverrides): Promise<BigNumber>;
@@ -1226,31 +1226,31 @@ export interface Byvwbtc extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "deposit(uint256,bytes32[])"(
+    'deposit(uint256,bytes32[])'(
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "deposit(bytes32[])"(
+    'deposit(bytes32[])'(
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "depositFor(address,uint256)"(
+    'depositFor(address,uint256)'(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "depositFor(address,uint256,bytes32[])"(
+    'depositFor(address,uint256,bytes32[])'(
       recipient: string,
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     experimentalMode(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1264,7 +1264,7 @@ export interface Byvwbtc extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     initialize(
@@ -1275,7 +1275,7 @@ export interface Byvwbtc extends BaseContract {
       _guardian: string,
       _useExperimentalMode: boolean,
       _experimentalVault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     manager(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1285,7 +1285,7 @@ export interface Byvwbtc extends BaseContract {
     nonces(arg0: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     paused(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1300,7 +1300,7 @@ export interface Byvwbtc extends BaseContract {
       v: BigNumberish,
       r: BytesLike,
       s: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     pricePerShare(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1309,42 +1309,42 @@ export interface Byvwbtc extends BaseContract {
 
     setAffiliate(
       _affiliate: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setManager(
       _manager: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setRegistry(
       _registry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setWithdrawalFee(
       _fee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     setWithdrawalMaxDeviationThreshold(
       _maxDeviationThreshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     shareValue(
       numShares: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     symbol(overrides?: CallOverrides): Promise<BigNumber>;
@@ -1357,44 +1357,44 @@ export interface Byvwbtc extends BaseContract {
 
     totalVaultBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     totalWrapperBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "withdraw(uint256)"(
+    'withdraw(uint256)'(
       shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
-    "withdraw()"(
-      overrides?: Overrides & { from?: string | Promise<string> }
+    'withdraw()'(
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<BigNumber>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<BigNumber>;
   };
 
@@ -1406,7 +1406,7 @@ export interface Byvwbtc extends BaseContract {
     PERMIT_TYPEHASH(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     acceptAffiliate(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     affiliate(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1414,18 +1414,18 @@ export interface Byvwbtc extends BaseContract {
     allowance(
       owner: string,
       spender: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     approve(
       spender: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     balanceOf(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     bestVault(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1435,31 +1435,31 @@ export interface Byvwbtc extends BaseContract {
     decreaseAllowance(
       spender: string,
       subtractedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "deposit(uint256,bytes32[])"(
+    'deposit(uint256,bytes32[])'(
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "deposit(bytes32[])"(
+    'deposit(bytes32[])'(
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "depositFor(address,uint256)"(
+    'depositFor(address,uint256)'(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "depositFor(address,uint256,bytes32[])"(
+    'depositFor(address,uint256,bytes32[])'(
       recipient: string,
       amount: BigNumberish,
       merkleProof: BytesLike[],
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     experimentalMode(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1473,7 +1473,7 @@ export interface Byvwbtc extends BaseContract {
     increaseAllowance(
       spender: string,
       addedValue: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     initialize(
@@ -1484,7 +1484,7 @@ export interface Byvwbtc extends BaseContract {
       _guardian: string,
       _useExperimentalMode: boolean,
       _experimentalVault: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     manager(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1493,11 +1493,11 @@ export interface Byvwbtc extends BaseContract {
 
     nonces(
       arg0: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     pause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     paused(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1512,7 +1512,7 @@ export interface Byvwbtc extends BaseContract {
       v: BigNumberish,
       r: BytesLike,
       s: BytesLike,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     pricePerShare(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1521,42 +1521,42 @@ export interface Byvwbtc extends BaseContract {
 
     setAffiliate(
       _affiliate: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setGuardian(
       _guardian: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setGuestList(
       _guestList: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setManager(
       _manager: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setRegistry(
       _registry: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setWithdrawalFee(
       _fee: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     setWithdrawalMaxDeviationThreshold(
       _maxDeviationThreshold: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     shareValue(
       numShares: BigNumberish,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     symbol(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -1569,44 +1569,44 @@ export interface Byvwbtc extends BaseContract {
 
     totalVaultBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     totalWrapperBalance(
       account: string,
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
     transfer(
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     transferFrom(
       sender: string,
       recipient: string,
       amount: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     unpause(
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "withdraw(uint256)"(
+    'withdraw(uint256)'(
       shares: BigNumberish,
-      overrides?: Overrides & { from?: string | Promise<string> }
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
-    "withdraw()"(
-      overrides?: Overrides & { from?: string | Promise<string> }
+    'withdraw()'(
+      overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     withdrawalFee(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     withdrawalMaxDeviationThreshold(
-      overrides?: CallOverrides
+      overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
   };
 }
