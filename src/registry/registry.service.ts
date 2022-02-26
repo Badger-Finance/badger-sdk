@@ -1,6 +1,6 @@
 import { Registry, Registry__factory } from '../contracts';
 import { Service } from '../service';
-import { VaultRegistry } from './interfaces/registry.interface';
+import { VaultRegistry } from './interfaces/vault-registry.interface';
 
 export const REGISTRY_ADDRESS = '0xFda7eB6f8b7a9e9fCFd348042ae675d1d652454f';
 

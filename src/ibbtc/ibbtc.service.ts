@@ -6,30 +6,25 @@ import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
 
 export class ibBTCService extends Service {
-  private loading: Promise<void>;
   private ibBTC?: Ibbtc;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
-    this.loading = this.init();
+    this.init();
   }
 
-  async ready() {
-    return this.loading;
-  }
-
-  async getPricePerFullShare(): Promise<number> {
+  async getPricePerFullShare(blockTag?: number): Promise<number> {
     if (!this.ibBTC) {
       throw new Error(`ibBTC is not defined on ${this.config.network}`);
     }
     const [pricePerFullShare, token] = await Promise.all([
-      this.ibBTC.pricePerShare(),
+      this.ibBTC.pricePerShare({ blockTag }),
       this.sdk.tokens.loadToken(this.ibBTC.address),
     ]);
     return formatBalance(pricePerFullShare, token.decimals);
   }
 
-  private async init() {
+  private init() {
     if (this.config.network !== Network.Ethereum) {
       return;
     }

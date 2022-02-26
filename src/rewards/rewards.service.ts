@@ -52,7 +52,7 @@ export class RewardsService extends Service {
   async loadSchedules(beneficiary: string): Promise<EmissionSchedule[]> {
     const { network, tokens } = this.config;
     if (!this.rewardsLogger) {
-      throw new Error(`Rewards Logger is not defined for ${network}`);
+      return [];
     }
     const schedules = await this.rewardsLogger.getAllUnlockSchedulesFor(
       beneficiary,
