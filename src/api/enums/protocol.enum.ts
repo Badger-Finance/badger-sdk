@@ -8,6 +8,7 @@ export enum Protocol {
   Quickswap = 'Quickswap',
   Solidly = 'Solidly',
   Sushiswap = 'Sushiswap',
+  SpookySwap = 'SpookySwap',
   Swapr = 'Swapr',
   Uniswap = 'Uniswap',
   Yearn = 'Yearn',
