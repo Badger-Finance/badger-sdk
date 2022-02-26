@@ -18,7 +18,7 @@ import {
   VaultRegistration,
 } from './interfaces';
 import { ONE_YEAR_MS } from '../config/constants';
-import { VaultRegistryEntry } from '../registry/interfaces/registry-entry.interface';
+import { VaultRegistryEntry } from '../registry/interfaces/vault-registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
 import { keyBy } from '../utils/key-by';
 import {

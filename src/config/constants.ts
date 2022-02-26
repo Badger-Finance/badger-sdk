@@ -21,4 +21,4 @@ export const SUPPORTED_NETWORKS = [
   FTM_CONFIG,
 ];
 
-export const VERSION = '1.0.82';
+export const VERSION = '1.0.84';
