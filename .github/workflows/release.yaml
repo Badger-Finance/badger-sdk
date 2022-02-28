@@ -8,24 +8,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-steps:
-  - uses: actions/checkout@v2
-    with:
-      persist-credentials: false
-  - uses: actions/setup-node@v2
-    with:
-      node-version: '16.x'
-  - name: Install dependencies
-    run: yarn install --frozen-lockfile
-  - name: Build
-    run: yarn build
-  - name: Lint
-    run: yarn lint
-  - name: Test
-    run: yarn test
-  - name: Release
-    run: yarn semantic-release
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
