@@ -30,6 +30,8 @@
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@ethersproject/providers": "^5.5.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@typechain/ethers-v5": "^9.0.0",
     "axios": "^0.23.0",
     "commitlint": "^16.2.1",
@@ -37,6 +39,7 @@
     "graphql": "^15.6.1",
     "graphql-request": "^3.6.1",
     "graphql-tag": "^2.12.5",
+    "semantic-release": "^19.0.2",
     "typechain": "^7.0.0"
   },
   "devDependencies": {
@@ -64,6 +67,15 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   }
 }
