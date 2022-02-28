@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.0.84...v1.1.0) (2022-02-28)
+
+
+### Bug Fixes
+
+* format release action yaml properly ([35c1029](https://github.com/Badger-Finance/badger-sdk/commit/35c10292608c9b93d0e938b47e953bf5734c0cfb))
+
+
+### Features
+
+* use semantic-release and gha to automate releases to npm ([658c420](https://github.com/Badger-Finance/badger-sdk/commit/658c420e694c8ca14e0946c696d6ba810b1278d3))
+
 # 1.0.0 (2022-02-28)
 
 
