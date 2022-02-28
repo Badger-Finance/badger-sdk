@@ -10,6 +10,7 @@ The Badger SDK provides easy access to the Badger Protocol on any chain, as well
 ![Version](https://img.shields.io/npm/v/@badger-dao/sdk)
 [![License](https://img.shields.io/npm/l/@badger-dao/sdk)](https://opensource.org/licenses/MIT)
 [![Service Tests](https://github.com/Badger-Finance/badger-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/Badger-Finance/badger-sdk/actions/workflows/test.yml)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## Documentation
 
