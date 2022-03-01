@@ -153,16 +153,13 @@ export class VaultsService extends Service {
       console.log('Vault not found');
     }
 
-    const vault = VaultV15__factory.connect(
-      checksumAddress,
-      this.sdk.multicall,
-    );
+    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
     const vaultToken = await this.loadVault({ address: vault.address });
     const token = await this.sdk.tokens.loadToken(vaultToken.token.address);
     const strategyAddress = await vault.strategy();
     const strategy = StrategyV15__factory.connect(
       strategyAddress,
-      this.sdk.multicall,
+      this.sdk.provider,
     );
     const tokens = await strategy.getProtectedTokens();
 
@@ -478,7 +475,7 @@ export class VaultsService extends Service {
 
     const sett = Vault__factory.connect(
       ethers.utils.getAddress(address),
-      this.sdk.multicall,
+      this.sdk.provider,
     );
 
     const [
@@ -528,7 +525,7 @@ export class VaultsService extends Service {
     if (isYearnWbtc) {
       const byvWbtc = Byvwbtc__factory.connect(
         ethers.utils.getAddress(wbtcYearnVault),
-        this.sdk.multicall,
+        this.sdk.provider,
       );
 
       return [
@@ -542,15 +539,15 @@ export class VaultsService extends Service {
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
   }
 
-  private async getVaultStrategy(address: string): Promise<Strategy> {
+  async getVaultStrategy(address: string): Promise<Strategy> {
     const checksumAddress = ethers.utils.getAddress(address);
-    const vault = Vault__factory.connect(checksumAddress, this.sdk.multicall);
+    const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
     const controller = Controller__factory.connect(
       await vault.controller(),
-      this.sdk.multicall,
+      this.sdk.provider,
     );
     const strategyAddress = await controller.strategies(await vault.token());
-    return Strategy__factory.connect(strategyAddress, this.sdk.multicall);
+    return Strategy__factory.connect(strategyAddress, this.sdk.provider);
   }
 
   private getVaultVersion(version: string): VaultVersion {

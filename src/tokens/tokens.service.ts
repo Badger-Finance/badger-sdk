@@ -16,7 +16,7 @@ export class TokensService extends Service {
   async loadToken(address: string): Promise<Token> {
     const checksumAddress = ethers.utils.getAddress(address);
     if (!this.tokens[checksumAddress]) {
-      const token = Erc20__factory.connect(checksumAddress, this.sdk.multicall);
+      const token = Erc20__factory.connect(checksumAddress, this.sdk.provider);
       const [name, symbol, decimals] = await Promise.all([
         token.name(),
         token.symbol(),
