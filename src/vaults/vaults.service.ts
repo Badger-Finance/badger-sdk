@@ -539,7 +539,7 @@ export class VaultsService extends Service {
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
   }
 
-  private async getVaultStrategy(address: string): Promise<Strategy> {
+  async getVaultStrategy(address: string): Promise<Strategy> {
     const checksumAddress = ethers.utils.getAddress(address);
     const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
     const controller = Controller__factory.connect(
