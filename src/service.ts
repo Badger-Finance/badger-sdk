@@ -1,11 +1,11 @@
 import { BadgerSDK } from '.';
 import { NetworkConfig } from './config/network/network.config';
-import { SDKProvider } from './config/types/sdk-provider';
+import { providers } from '@0xsequence/multicall';
 
 export abstract class Service {
   constructor(protected sdk: BadgerSDK) {}
 
-  get provider(): SDKProvider {
+  get provider(): providers.MulticallProvider {
     return this.sdk.provider;
   }
 

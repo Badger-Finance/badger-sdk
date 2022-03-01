@@ -1,4 +1,5 @@
 export { Account } from './account.interface';
+export { APIOptions } from './api-options.interface';
 export { BoostConfig } from './boost-config.interface';
 export { GasFees } from './gas-fees.interface';
 export { LeaderBoardData } from './leaderboard-data.interface';
