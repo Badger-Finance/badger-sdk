@@ -121,9 +121,18 @@ export enum BadgerTreeDistribution_OrderBy {
   Sett = 'sett',
 }
 
+/** The block at which the query should be executed. */
 export type Block_Height = {
+  /** Value containing a block hash */
   hash?: Maybe<Scalars['Bytes']>;
+  /** Value containing a block number */
   number?: Maybe<Scalars['Int']>;
+  /**
+   * Value containing the minimum block number.
+   * In the case of `number_gte`, the query will be executed on the latest block only if
+   * the subgraph has progressed to or past the minimum block number.
+   * Defaults to the latest block when omitted.
+   */
   number_gte?: Maybe<Scalars['Int']>;
 };
 
@@ -238,6 +247,7 @@ export enum Erc20_OrderBy {
   TotalSupply = 'totalSupply',
 }
 
+/** Defines the order direction, either ascending or descending */
 export enum OrderDirection {
   Asc = 'asc',
   Desc = 'desc',
@@ -2025,6 +2035,15 @@ export enum _SubgraphErrorPolicy_ {
   Deny = 'deny',
 }
 
+export const TokenFragmentDoc = gql`
+  fragment Token on Token {
+    id
+    name
+    symbol
+    decimals
+    totalSupply
+  }
+`;
 export const SettFragmentDoc = gql`
   fragment Sett on Sett {
     id
@@ -2033,11 +2052,7 @@ export const SettFragmentDoc = gql`
     decimals
     totalSupply
     token {
-      id
-      name
-      symbol
-      decimals
-      totalSupply
+      ...Token
     }
     balance
     pricePerFullShare
@@ -2054,6 +2069,7 @@ export const SettFragmentDoc = gql`
       id
     }
   }
+  ${TokenFragmentDoc}
 `;
 export const SettDocument = gql`
   query Sett($id: ID!, $block: Block_height) {
@@ -2062,6 +2078,56 @@ export const SettDocument = gql`
     }
   }
   ${SettFragmentDoc}
+`;
+export const SettsDocument = gql`
+  query Setts(
+    $block: Block_height
+    $first: Int = 100
+    $orderBy: Sett_orderBy
+    $orderDirection: OrderDirection
+    $where: Sett_filter
+  ) {
+    setts(
+      block: $block
+      first: $first
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Sett
+    }
+  }
+  ${SettFragmentDoc}
+`;
+export const TokenDocument = gql`
+  query Token($id: ID!, $block: Block_height) {
+    token(id: $id, block: $block) {
+      ...Token
+    }
+  }
+  ${TokenFragmentDoc}
+`;
+export const TokensDocument = gql`
+  query Tokens(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: Token_orderBy
+    $orderDirection: OrderDirection
+    $where: Token_filter
+  ) {
+    tokens(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Token
+    }
+  }
+  ${TokenFragmentDoc}
 `;
 
 export type SdkFunctionWrapper = <T>(
@@ -2089,6 +2155,45 @@ export function getSdk(
         'Sett',
       );
     },
+    Setts(
+      variables?: SettsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettsQuery>(SettsDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Setts',
+      );
+    },
+    Token(
+      variables: TokenQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TokenQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TokenQuery>(TokenDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Token',
+      );
+    },
+    Tokens(
+      variables?: TokensQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TokensQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TokensQuery>(TokensDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Tokens',
+      );
+    },
   };
 }
 export type Sdk = ReturnType<typeof getSdk>;
@@ -2108,13 +2213,15 @@ export type SettFragment = { __typename?: 'Sett' } & Pick<
   | 'grossWithdraw'
   | 'grossShareWithdraw'
 > & {
-    token: { __typename?: 'Token' } & Pick<
-      Token,
-      'id' | 'name' | 'symbol' | 'decimals' | 'totalSupply'
-    >;
+    token: { __typename?: 'Token' } & TokenFragment;
     controller?: Maybe<{ __typename?: 'Controller' } & Pick<Controller, 'id'>>;
     strategy?: Maybe<{ __typename?: 'Strategy' } & Pick<Strategy, 'id'>>;
   };
+
+export type TokenFragment = { __typename?: 'Token' } & Pick<
+  Token,
+  'id' | 'name' | 'symbol' | 'decimals' | 'totalSupply'
+>;
 
 export type SettQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -2123,4 +2230,38 @@ export type SettQueryVariables = Exact<{
 
 export type SettQuery = { __typename?: 'Query' } & {
   sett?: Maybe<{ __typename?: 'Sett' } & SettFragment>;
+};
+
+export type SettsQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Sett_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Sett_Filter>;
+}>;
+
+export type SettsQuery = { __typename?: 'Query' } & {
+  setts: Array<{ __typename?: 'Sett' } & SettFragment>;
+};
+
+export type TokenQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type TokenQuery = { __typename?: 'Query' } & {
+  token?: Maybe<{ __typename?: 'Token' } & TokenFragment>;
+};
+
+export type TokensQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Token_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Token_Filter>;
+}>;
+
+export type TokensQuery = { __typename?: 'Query' } & {
+  tokens: Array<{ __typename?: 'Token' } & TokenFragment>;
 };

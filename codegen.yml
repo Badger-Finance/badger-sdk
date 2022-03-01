@@ -7,7 +7,9 @@ generates:
     schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts
     documents:
       - src/graphql/fragments/sett.fragment.graphql
+      - src/graphql/fragments/token.fragment.graphql
       - src/graphql/queries/sett.query.graphql
+      - src/graphql/queries/token.query.graphql
     plugins:
       - typescript
       - typescript-graphql-request

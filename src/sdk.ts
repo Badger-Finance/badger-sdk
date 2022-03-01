@@ -1,16 +1,24 @@
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
+import { providers } from '@0xsequence/multicall';
+
 import { BadgerAPI, DEFAULT_API_URL } from './api';
-import { SUPPORTED_NETWORKS } from './config/constants';
+import { BadgerGraph } from './graphql';
+
 import { NetworkConfig } from './config/network/network.config';
+
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
+
 import { SDKProvider } from './config/types/sdk-provider';
-import { providers } from '@0xsequence/multicall';
+
+import { SUPPORTED_NETWORKS } from './config/constants';
+
+
 
 export class BadgerSDK {
   private static initialized = false;
@@ -21,6 +29,7 @@ export class BadgerSDK {
   public address?: string;
 
   readonly api: BadgerAPI;
+  readonly graph: BadgerGraph;
   readonly registry: RegistryService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
@@ -45,6 +54,7 @@ export class BadgerSDK {
     this.loading = this.initialize();
 
     this.api = new BadgerAPI(this.config.network, baseURL);
+    this.graph = new BadgerGraph(this.config.network);
     this.registry = new RegistryService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);

@@ -4,13 +4,7 @@ fragment Sett on Sett {
   symbol
   decimals
   totalSupply
-  token {
-    id
-    name
-    symbol
-    decimals
-    totalSupply
-  }
+  token { ...Token }
   balance
   pricePerFullShare
   netDeposit

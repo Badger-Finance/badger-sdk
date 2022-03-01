@@ -1,27 +1,28 @@
-query Sett(
+query Token(
   $id: ID!
   $block: Block_height
 ) {
-  sett(id: $id, block: $block) {
-    ...Sett
+  token(id: $id, block: $block) {
+    ...Token
   }
 }
 
-
-query Setts(
+query Tokens(
   $block: Block_height
   $first: Int = 100
-  $orderBy: Sett_orderBy
+  $skip: Int = 0
+  $orderBy: Token_orderBy
   $orderDirection: OrderDirection
-  $where: Sett_filter
+  $where: Token_filter
 ) {
-  setts(
+  tokens(
     block: $block,
     first: $first,
+    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...Sett
+    ...Token
   }
 }
