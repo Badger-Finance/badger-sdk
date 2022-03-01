@@ -8,6 +8,7 @@ import {
 } from './types';
 import {
   Account,
+  APIOptions,
   LeaderboardSummary,
   ProtocolMetrics,
   ProtocolSummary,
@@ -21,14 +22,23 @@ import { Currency } from './enums';
 export const DEFAULT_API_URL = 'https://api.badger.com/v2';
 
 export class BadgerAPI {
+  private static initialized = false;
   private readonly client: AxiosInstance;
   private network: Network;
+  public baseURL: string;
 
-  constructor(
-    network: Networkish = Network.Ethereum,
+  constructor({
+    network = Network.Ethereum,
     baseURL = DEFAULT_API_URL,
-  ) {
-    this.initialize();
+  }: APIOptions) {
+    if (!BadgerAPI.initialized) {
+      for (const config of SUPPORTED_NETWORKS) {
+        NetworkConfig.register(config);
+      }
+      BadgerAPI.initialized = true;
+    }
+
+    this.baseURL = baseURL;
     this.client = axios.create({
       baseURL,
     });
@@ -158,12 +168,6 @@ export class BadgerAPI {
       }
 
       throw error;
-    }
-  }
-
-  private initialize() {
-    for (const config of SUPPORTED_NETWORKS) {
-      NetworkConfig.register(config);
     }
   }
 
