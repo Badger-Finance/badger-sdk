@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.1...v1.1.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* allow updating network + provider, add options constructors ([f42d192](https://github.com/Badger-Finance/badger-sdk/commit/f42d192b3851d4a71bf7decfa2b035a6ea7b4693))
+
 ## [1.1.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.0...v1.1.1) (2022-03-01)
 
 
