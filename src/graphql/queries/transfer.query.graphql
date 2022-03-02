@@ -1,0 +1,29 @@
+query Transfer(
+  $id: ID!
+  $block: Block_height
+) {
+  transfer(id: $id, block: $block) {
+    ...Transfer
+  }
+}
+
+
+query Transfers(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: Transfer_orderBy
+  $orderDirection: OrderDirection
+  $where: Transfer_filter
+) {
+  transfers(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    ...Transfer
+  }
+}

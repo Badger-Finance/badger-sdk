@@ -1,0 +1,19 @@
+query Users(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: User_orderBy
+  $orderDirection: OrderDirection
+  $where: User_filter
+) {
+  users(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    id
+  }
+}

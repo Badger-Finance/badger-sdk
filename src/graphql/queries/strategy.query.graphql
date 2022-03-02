@@ -1,0 +1,29 @@
+query Strategy(
+  $id: ID!
+  $block: Block_height
+) {
+  strategy(id: $id, block: $block) {
+    ...Strategy
+  }
+}
+
+
+query Strategies(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: Strategy_orderBy
+  $orderDirection: OrderDirection
+  $where: Strategy_filter
+) {
+  strategies(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    ...Strategy
+  }
+}

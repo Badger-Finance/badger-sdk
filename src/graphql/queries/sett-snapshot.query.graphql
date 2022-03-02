@@ -1,0 +1,29 @@
+query SettSnapshot(
+  $id: ID!
+  $block: Block_height
+) {
+  settSnapshot(id: $id, block: $block) {
+    ...SettSnapshot
+  }
+}
+
+
+query SettSnapshots(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: SettSnapshot_orderBy
+  $orderDirection: OrderDirection
+  $where: SettSnapshot_filter
+) {
+  settSnapshots(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    ...SettSnapshot
+  }
+}

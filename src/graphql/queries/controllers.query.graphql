@@ -1,0 +1,19 @@
+query Controllers(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: Controller_orderBy
+  $orderDirection: OrderDirection
+  $where: Controller_filter
+) {
+  controllers(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    id
+  }
+}

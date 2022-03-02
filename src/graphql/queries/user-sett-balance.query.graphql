@@ -1,0 +1,29 @@
+query UserSettBalance(
+  $id: ID!
+  $block: Block_height
+) {
+  userSettBalance(id: $id, block: $block) {
+    ...UserSettBalance
+  }
+}
+
+
+query UserSettBalances(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: UserSettBalance_orderBy
+  $orderDirection: OrderDirection
+  $where: UserSettBalance_filter
+) {
+  userSettBalances(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    ...UserSettBalance
+  }
+}

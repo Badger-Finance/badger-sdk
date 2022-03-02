@@ -1,0 +1,17 @@
+fragment SettSnapshot on SettSnapshot {
+  id
+  timestamp
+  name
+  symbol
+  decimals
+  totalSupply
+  token { ...Token }
+  balance
+  pricePerFullShare
+  netDeposit
+  netShareDeposit
+  grossDeposit
+  grossShareDeposit
+  grossWithdraw
+  grossShareWithdraw
+}

@@ -15,6 +15,7 @@ The Badger SDK provides easy access to the Badger Protocol on any chain, as well
 ## Documentation
 
 - [Badger API Documentation](https://api.badger.com/docs/)
+- [Badger Subgraph](https://thegraph.com/hosted-service/subgraph/badger-finance/badger-dao-setts)
 
 ## Installation
 
@@ -29,20 +30,37 @@ yarn add @badger-dao/sdk
 Utilizing the SDK requires an RPC provider:
 
 ```js
-import BadgerSDK from '@badger-dao/sdk';
+import BadgerSDK, { Network } from '@badger-dao/sdk';
 
 const provider = new ethers.providers.JsonRpcProvider('https://myrpc.io/');
-const sdk = new BadgerSDK(1, provider);
-// or new BadgerSDK('ethereum', provider);
+
+const sdk = new BadgerSDK({
+  network: Network.Ethereum,
+  provider
+});
 ```
 
-or, utilizing the API requires only a network input:
+Or, utilizing the API requires only a network input:
 
 ```js
-import BadgerAPI from '@badger-dao/sdk';
+import { BadgerAPI, Network } from '@badger-dao/sdk';
 
-const api = new BadgerAPI(1);
-// or new BadgerAPI('ethereum');
+const api = new BadgerAPI({ network: Network.Ethereum });
+
+await api.loadPrices();
+```
+
+Badger subgraph is also available for use:
+
+```js
+import { BadgerGraph, Network } from '@badger-dao/sdk';
+
+const subgraph = BadgerGraph({ network: Network.Ethereum });
+
+await subgraph.loadSetts({
+  orderBy: 'id',
+  orderDirection: 'asc',
+});
 ```
 
 ## Locally linking the package
@@ -73,4 +91,8 @@ yarn unlink "@badger-dao/sdk"
 
 ## Releasing new version
 
-Releases are determined by the commit messages. Commits beginning with `fix:` will release a new patch version, commits beginning with `feat:` will release a new minor version, and commits beginning with `BREAKING CHANGE:` will release a new major version. The action will run on a push to main.
+Releases are determined by the commit messages. 
+Commits beginning with `fix:` will release a new patch version, commits beginning with 
+`feat:` will release a new minor version, 
+and commits beginning with `BREAKING CHANGE:` will release a new major version. 
+The action will run on a push to main.
