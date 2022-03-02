@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.2...v1.1.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* add apy support fields ([9b64518](https://github.com/Badger-Finance/badger-sdk/commit/9b64518961a41c7d6be976680683d557369a288a))
+
 ## [1.1.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.1...v1.1.2) (2022-03-02)
 
 
