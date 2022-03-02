@@ -13,6 +13,7 @@
     "sdk"
   ],
   "scripts": {
+    "prepare": "husky install",
     "build": "yarn run lint && tsc -p .",
     "clean": "rm -rf ./lib",
     "codegen:graphql": "graphql-codegen -c codegen.yml",
