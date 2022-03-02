@@ -1,0 +1,9 @@
+fragment Strategy on Strategy {
+  id
+  controller {
+    id
+  }
+  sett {
+    id
+  }
+}

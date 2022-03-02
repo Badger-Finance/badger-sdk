@@ -1,0 +1,29 @@
+query BadgerTreeDistribution(
+  $id: ID!
+  $block: Block_height
+) {
+  badgerTreeDistribution(id: $id, block: $block) {
+    ...BadgerTreeDistribution
+  }
+}
+
+
+query BadgerTreeDistributions(
+  $block: Block_height
+  $first: Int = 100
+  $skip: Int = 0
+  $orderBy: BadgerTreeDistribution_orderBy
+  $orderDirection: OrderDirection
+  $where: BadgerTreeDistribution_filter
+) {
+  badgerTreeDistributions(
+    block: $block,
+    first: $first,
+    skip: $skip,
+    where: $where,
+    orderBy: $orderBy,
+    orderDirection: $orderDirection
+  ) {
+    ...BadgerTreeDistribution
+  }
+}

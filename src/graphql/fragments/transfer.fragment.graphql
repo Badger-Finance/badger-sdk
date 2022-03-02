@@ -1,0 +1,14 @@
+fragment Transfer on Transfer {
+  id
+  timestamp
+  sett {
+    id
+  }
+  from {
+    id
+  }
+  to {
+    id
+  }
+  amount
+}

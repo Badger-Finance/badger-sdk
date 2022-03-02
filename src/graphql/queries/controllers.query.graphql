@@ -1,27 +1,19 @@
-query Sett(
-  $id: ID!
-  $block: Block_height
-) {
-  sett(id: $id, block: $block) {
-    ...Sett
-  }
-}
-
-
-query Setts(
+query Controllers(
   $block: Block_height
   $first: Int = 100
-  $orderBy: Sett_orderBy
+  $skip: Int = 0
+  $orderBy: Controller_orderBy
   $orderDirection: OrderDirection
-  $where: Sett_filter
+  $where: Controller_filter
 ) {
-  setts(
+  controllers(
     block: $block,
     first: $first,
+    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...Sett
+    id
   }
 }

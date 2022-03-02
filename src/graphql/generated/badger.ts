@@ -121,9 +121,18 @@ export enum BadgerTreeDistribution_OrderBy {
   Sett = 'sett',
 }
 
+/** The block at which the query should be executed. */
 export type Block_Height = {
+  /** Value containing a block hash */
   hash?: Maybe<Scalars['Bytes']>;
+  /** Value containing a block number */
   number?: Maybe<Scalars['Int']>;
+  /**
+   * Value containing the minimum block number.
+   * In the case of `number_gte`, the query will be executed on the latest block only if
+   * the subgraph has progressed to or past the minimum block number.
+   * Defaults to the latest block when omitted.
+   */
   number_gte?: Maybe<Scalars['Int']>;
 };
 
@@ -238,6 +247,7 @@ export enum Erc20_OrderBy {
   TotalSupply = 'totalSupply',
 }
 
+/** Defines the order direction, either ascending or descending */
 export enum OrderDirection {
   Asc = 'asc',
   Desc = 'desc',
@@ -2025,6 +2035,73 @@ export enum _SubgraphErrorPolicy_ {
   Deny = 'deny',
 }
 
+export const TokenFragmentDoc = gql`
+  fragment Token on Token {
+    id
+    name
+    symbol
+    decimals
+    totalSupply
+  }
+`;
+export const BadgerTreeDistributionFragmentDoc = gql`
+  fragment BadgerTreeDistribution on BadgerTreeDistribution {
+    id
+    timestamp
+    token {
+      ...Token
+    }
+    amount
+    blockNumber
+    strategy {
+      id
+    }
+    sett {
+      id
+    }
+  }
+  ${TokenFragmentDoc}
+`;
+export const SettHarvestFragmentDoc = gql`
+  fragment SettHarvest on SettHarvest {
+    id
+    timestamp
+    token {
+      ...Token
+    }
+    amount
+    blockNumber
+    strategy {
+      id
+    }
+    sett {
+      id
+    }
+  }
+  ${TokenFragmentDoc}
+`;
+export const SettSnapshotFragmentDoc = gql`
+  fragment SettSnapshot on SettSnapshot {
+    id
+    timestamp
+    name
+    symbol
+    decimals
+    totalSupply
+    token {
+      ...Token
+    }
+    balance
+    pricePerFullShare
+    netDeposit
+    netShareDeposit
+    grossDeposit
+    grossShareDeposit
+    grossWithdraw
+    grossShareWithdraw
+  }
+  ${TokenFragmentDoc}
+`;
 export const SettFragmentDoc = gql`
   fragment Sett on Sett {
     id
@@ -2033,11 +2110,7 @@ export const SettFragmentDoc = gql`
     decimals
     totalSupply
     token {
-      id
-      name
-      symbol
-      decimals
-      totalSupply
+      ...Token
     }
     balance
     pricePerFullShare
@@ -2054,6 +2127,162 @@ export const SettFragmentDoc = gql`
       id
     }
   }
+  ${TokenFragmentDoc}
+`;
+export const StrategyFragmentDoc = gql`
+  fragment Strategy on Strategy {
+    id
+    controller {
+      id
+    }
+    sett {
+      id
+    }
+  }
+`;
+export const TransferFragmentDoc = gql`
+  fragment Transfer on Transfer {
+    id
+    timestamp
+    sett {
+      id
+    }
+    from {
+      id
+    }
+    to {
+      id
+    }
+    amount
+  }
+`;
+export const UserSettBalanceFragmentDoc = gql`
+  fragment UserSettBalance on UserSettBalance {
+    id
+    user {
+      id
+    }
+    sett {
+      id
+    }
+    netDeposit
+    netShareDeposit
+    grossDeposit
+    grossShareDeposit
+    grossWithdraw
+    grossShareWithdraw
+  }
+`;
+export const BadgerTreeDistributionDocument = gql`
+  query BadgerTreeDistribution($id: ID!, $block: Block_height) {
+    badgerTreeDistribution(id: $id, block: $block) {
+      ...BadgerTreeDistribution
+    }
+  }
+  ${BadgerTreeDistributionFragmentDoc}
+`;
+export const BadgerTreeDistributionsDocument = gql`
+  query BadgerTreeDistributions(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: BadgerTreeDistribution_orderBy
+    $orderDirection: OrderDirection
+    $where: BadgerTreeDistribution_filter
+  ) {
+    badgerTreeDistributions(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...BadgerTreeDistribution
+    }
+  }
+  ${BadgerTreeDistributionFragmentDoc}
+`;
+export const ControllersDocument = gql`
+  query Controllers(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: Controller_orderBy
+    $orderDirection: OrderDirection
+    $where: Controller_filter
+  ) {
+    controllers(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      id
+    }
+  }
+`;
+export const SettHarvestDocument = gql`
+  query SettHarvest($id: ID!, $block: Block_height) {
+    settHarvest(id: $id, block: $block) {
+      ...SettHarvest
+    }
+  }
+  ${SettHarvestFragmentDoc}
+`;
+export const SettHarvestsDocument = gql`
+  query SettHarvests(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: SettHarvest_orderBy
+    $orderDirection: OrderDirection
+    $where: SettHarvest_filter
+  ) {
+    settHarvests(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...SettHarvest
+    }
+  }
+  ${SettHarvestFragmentDoc}
+`;
+export const SettSnapshotDocument = gql`
+  query SettSnapshot($id: ID!, $block: Block_height) {
+    settSnapshot(id: $id, block: $block) {
+      ...SettSnapshot
+    }
+  }
+  ${SettSnapshotFragmentDoc}
+`;
+export const SettSnapshotsDocument = gql`
+  query SettSnapshots(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: SettSnapshot_orderBy
+    $orderDirection: OrderDirection
+    $where: SettSnapshot_filter
+  ) {
+    settSnapshots(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...SettSnapshot
+    }
+  }
+  ${SettSnapshotFragmentDoc}
 `;
 export const SettDocument = gql`
   query Sett($id: ID!, $block: Block_height) {
@@ -2062,6 +2291,167 @@ export const SettDocument = gql`
     }
   }
   ${SettFragmentDoc}
+`;
+export const SettsDocument = gql`
+  query Setts(
+    $block: Block_height
+    $first: Int = 100
+    $orderBy: Sett_orderBy
+    $orderDirection: OrderDirection
+    $where: Sett_filter
+  ) {
+    setts(
+      block: $block
+      first: $first
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Sett
+    }
+  }
+  ${SettFragmentDoc}
+`;
+export const StrategyDocument = gql`
+  query Strategy($id: ID!, $block: Block_height) {
+    strategy(id: $id, block: $block) {
+      ...Strategy
+    }
+  }
+  ${StrategyFragmentDoc}
+`;
+export const StrategiesDocument = gql`
+  query Strategies(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: Strategy_orderBy
+    $orderDirection: OrderDirection
+    $where: Strategy_filter
+  ) {
+    strategies(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Strategy
+    }
+  }
+  ${StrategyFragmentDoc}
+`;
+export const TokenDocument = gql`
+  query Token($id: ID!, $block: Block_height) {
+    token(id: $id, block: $block) {
+      ...Token
+    }
+  }
+  ${TokenFragmentDoc}
+`;
+export const TokensDocument = gql`
+  query Tokens(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: Token_orderBy
+    $orderDirection: OrderDirection
+    $where: Token_filter
+  ) {
+    tokens(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Token
+    }
+  }
+  ${TokenFragmentDoc}
+`;
+export const TransferDocument = gql`
+  query Transfer($id: ID!, $block: Block_height) {
+    transfer(id: $id, block: $block) {
+      ...Transfer
+    }
+  }
+  ${TransferFragmentDoc}
+`;
+export const TransfersDocument = gql`
+  query Transfers(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: Transfer_orderBy
+    $orderDirection: OrderDirection
+    $where: Transfer_filter
+  ) {
+    transfers(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...Transfer
+    }
+  }
+  ${TransferFragmentDoc}
+`;
+export const UserSettBalanceDocument = gql`
+  query UserSettBalance($id: ID!, $block: Block_height) {
+    userSettBalance(id: $id, block: $block) {
+      ...UserSettBalance
+    }
+  }
+  ${UserSettBalanceFragmentDoc}
+`;
+export const UserSettBalancesDocument = gql`
+  query UserSettBalances(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: UserSettBalance_orderBy
+    $orderDirection: OrderDirection
+    $where: UserSettBalance_filter
+  ) {
+    userSettBalances(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      ...UserSettBalance
+    }
+  }
+  ${UserSettBalanceFragmentDoc}
+`;
+export const UsersDocument = gql`
+  query Users(
+    $block: Block_height
+    $first: Int = 100
+    $skip: Int = 0
+    $orderBy: User_orderBy
+    $orderDirection: OrderDirection
+    $where: User_filter
+  ) {
+    users(
+      block: $block
+      first: $first
+      skip: $skip
+      where: $where
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+    ) {
+      id
+    }
+  }
 `;
 
 export type SdkFunctionWrapper = <T>(
@@ -2076,6 +2466,99 @@ export function getSdk(
   withWrapper: SdkFunctionWrapper = defaultWrapper,
 ) {
   return {
+    BadgerTreeDistribution(
+      variables: BadgerTreeDistributionQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<BadgerTreeDistributionQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<BadgerTreeDistributionQuery>(
+            BadgerTreeDistributionDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'BadgerTreeDistribution',
+      );
+    },
+    BadgerTreeDistributions(
+      variables?: BadgerTreeDistributionsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<BadgerTreeDistributionsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<BadgerTreeDistributionsQuery>(
+            BadgerTreeDistributionsDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'BadgerTreeDistributions',
+      );
+    },
+    Controllers(
+      variables?: ControllersQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<ControllersQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<ControllersQuery>(ControllersDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Controllers',
+      );
+    },
+    SettHarvest(
+      variables: SettHarvestQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettHarvestQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettHarvestQuery>(SettHarvestDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SettHarvest',
+      );
+    },
+    SettHarvests(
+      variables?: SettHarvestsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettHarvestsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettHarvestsQuery>(SettHarvestsDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SettHarvests',
+      );
+    },
+    SettSnapshot(
+      variables: SettSnapshotQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettSnapshotQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettSnapshotQuery>(SettSnapshotDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SettSnapshot',
+      );
+    },
+    SettSnapshots(
+      variables?: SettSnapshotsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettSnapshotsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettSnapshotsQuery>(SettSnapshotsDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SettSnapshots',
+      );
+    },
     Sett(
       variables: SettQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
@@ -2089,9 +2572,179 @@ export function getSdk(
         'Sett',
       );
     },
+    Setts(
+      variables?: SettsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SettsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SettsQuery>(SettsDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Setts',
+      );
+    },
+    Strategy(
+      variables: StrategyQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<StrategyQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<StrategyQuery>(StrategyDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Strategy',
+      );
+    },
+    Strategies(
+      variables?: StrategiesQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<StrategiesQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<StrategiesQuery>(StrategiesDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Strategies',
+      );
+    },
+    Token(
+      variables: TokenQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TokenQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TokenQuery>(TokenDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Token',
+      );
+    },
+    Tokens(
+      variables?: TokensQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TokensQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TokensQuery>(TokensDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Tokens',
+      );
+    },
+    Transfer(
+      variables: TransferQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TransferQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TransferQuery>(TransferDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Transfer',
+      );
+    },
+    Transfers(
+      variables?: TransfersQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<TransfersQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<TransfersQuery>(TransfersDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Transfers',
+      );
+    },
+    UserSettBalance(
+      variables: UserSettBalanceQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<UserSettBalanceQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<UserSettBalanceQuery>(
+            UserSettBalanceDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'UserSettBalance',
+      );
+    },
+    UserSettBalances(
+      variables?: UserSettBalancesQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<UserSettBalancesQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<UserSettBalancesQuery>(
+            UserSettBalancesDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'UserSettBalances',
+      );
+    },
+    Users(
+      variables?: UsersQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<UsersQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<UsersQuery>(UsersDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'Users',
+      );
+    },
   };
 }
 export type Sdk = ReturnType<typeof getSdk>;
+export type BadgerTreeDistributionFragment = {
+  __typename?: 'BadgerTreeDistribution';
+} & Pick<
+  BadgerTreeDistribution,
+  'id' | 'timestamp' | 'amount' | 'blockNumber'
+> & {
+    token: { __typename?: 'Token' } & TokenFragment;
+    strategy?: Maybe<{ __typename?: 'Strategy' } & Pick<Strategy, 'id'>>;
+    sett?: Maybe<{ __typename?: 'Sett' } & Pick<Sett, 'id'>>;
+  };
+
+export type SettHarvestFragment = { __typename?: 'SettHarvest' } & Pick<
+  SettHarvest,
+  'id' | 'timestamp' | 'amount' | 'blockNumber'
+> & {
+    token: { __typename?: 'Token' } & TokenFragment;
+    strategy?: Maybe<{ __typename?: 'Strategy' } & Pick<Strategy, 'id'>>;
+    sett?: Maybe<{ __typename?: 'Sett' } & Pick<Sett, 'id'>>;
+  };
+
+export type SettSnapshotFragment = { __typename?: 'SettSnapshot' } & Pick<
+  SettSnapshot,
+  | 'id'
+  | 'timestamp'
+  | 'name'
+  | 'symbol'
+  | 'decimals'
+  | 'totalSupply'
+  | 'balance'
+  | 'pricePerFullShare'
+  | 'netDeposit'
+  | 'netShareDeposit'
+  | 'grossDeposit'
+  | 'grossShareDeposit'
+  | 'grossWithdraw'
+  | 'grossShareWithdraw'
+> & { token: { __typename?: 'Token' } & TokenFragment };
+
 export type SettFragment = { __typename?: 'Sett' } & Pick<
   Sett,
   | 'id'
@@ -2108,13 +2761,129 @@ export type SettFragment = { __typename?: 'Sett' } & Pick<
   | 'grossWithdraw'
   | 'grossShareWithdraw'
 > & {
-    token: { __typename?: 'Token' } & Pick<
-      Token,
-      'id' | 'name' | 'symbol' | 'decimals' | 'totalSupply'
-    >;
+    token: { __typename?: 'Token' } & TokenFragment;
     controller?: Maybe<{ __typename?: 'Controller' } & Pick<Controller, 'id'>>;
     strategy?: Maybe<{ __typename?: 'Strategy' } & Pick<Strategy, 'id'>>;
   };
+
+export type StrategyFragment = { __typename?: 'Strategy' } & Pick<
+  Strategy,
+  'id'
+> & {
+    controller?: Maybe<{ __typename?: 'Controller' } & Pick<Controller, 'id'>>;
+    sett?: Maybe<{ __typename?: 'Sett' } & Pick<Sett, 'id'>>;
+  };
+
+export type TokenFragment = { __typename?: 'Token' } & Pick<
+  Token,
+  'id' | 'name' | 'symbol' | 'decimals' | 'totalSupply'
+>;
+
+export type TransferFragment = { __typename?: 'Transfer' } & Pick<
+  Transfer,
+  'id' | 'timestamp' | 'amount'
+> & {
+    sett: { __typename?: 'Sett' } & Pick<Sett, 'id'>;
+    from: { __typename?: 'User' } & Pick<User, 'id'>;
+    to: { __typename?: 'User' } & Pick<User, 'id'>;
+  };
+
+export type UserSettBalanceFragment = { __typename?: 'UserSettBalance' } & Pick<
+  UserSettBalance,
+  | 'id'
+  | 'netDeposit'
+  | 'netShareDeposit'
+  | 'grossDeposit'
+  | 'grossShareDeposit'
+  | 'grossWithdraw'
+  | 'grossShareWithdraw'
+> & {
+    user: { __typename?: 'User' } & Pick<User, 'id'>;
+    sett: { __typename?: 'Sett' } & Pick<Sett, 'id'>;
+  };
+
+export type BadgerTreeDistributionQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type BadgerTreeDistributionQuery = { __typename?: 'Query' } & {
+  badgerTreeDistribution?: Maybe<
+    { __typename?: 'BadgerTreeDistribution' } & BadgerTreeDistributionFragment
+  >;
+};
+
+export type BadgerTreeDistributionsQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<BadgerTreeDistribution_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<BadgerTreeDistribution_Filter>;
+}>;
+
+export type BadgerTreeDistributionsQuery = { __typename?: 'Query' } & {
+  badgerTreeDistributions: Array<
+    { __typename?: 'BadgerTreeDistribution' } & BadgerTreeDistributionFragment
+  >;
+};
+
+export type ControllersQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Controller_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Controller_Filter>;
+}>;
+
+export type ControllersQuery = { __typename?: 'Query' } & {
+  controllers: Array<{ __typename?: 'Controller' } & Pick<Controller, 'id'>>;
+};
+
+export type SettHarvestQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type SettHarvestQuery = { __typename?: 'Query' } & {
+  settHarvest?: Maybe<{ __typename?: 'SettHarvest' } & SettHarvestFragment>;
+};
+
+export type SettHarvestsQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<SettHarvest_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<SettHarvest_Filter>;
+}>;
+
+export type SettHarvestsQuery = { __typename?: 'Query' } & {
+  settHarvests: Array<{ __typename?: 'SettHarvest' } & SettHarvestFragment>;
+};
+
+export type SettSnapshotQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type SettSnapshotQuery = { __typename?: 'Query' } & {
+  settSnapshot?: Maybe<{ __typename?: 'SettSnapshot' } & SettSnapshotFragment>;
+};
+
+export type SettSnapshotsQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<SettSnapshot_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<SettSnapshot_Filter>;
+}>;
+
+export type SettSnapshotsQuery = { __typename?: 'Query' } & {
+  settSnapshots: Array<{ __typename?: 'SettSnapshot' } & SettSnapshotFragment>;
+};
 
 export type SettQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -2123,4 +2892,121 @@ export type SettQueryVariables = Exact<{
 
 export type SettQuery = { __typename?: 'Query' } & {
   sett?: Maybe<{ __typename?: 'Sett' } & SettFragment>;
+};
+
+export type SettsQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Sett_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Sett_Filter>;
+}>;
+
+export type SettsQuery = { __typename?: 'Query' } & {
+  setts: Array<{ __typename?: 'Sett' } & SettFragment>;
+};
+
+export type StrategyQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type StrategyQuery = { __typename?: 'Query' } & {
+  strategy?: Maybe<{ __typename?: 'Strategy' } & StrategyFragment>;
+};
+
+export type StrategiesQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Strategy_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Strategy_Filter>;
+}>;
+
+export type StrategiesQuery = { __typename?: 'Query' } & {
+  strategies: Array<{ __typename?: 'Strategy' } & StrategyFragment>;
+};
+
+export type TokenQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type TokenQuery = { __typename?: 'Query' } & {
+  token?: Maybe<{ __typename?: 'Token' } & TokenFragment>;
+};
+
+export type TokensQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Token_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Token_Filter>;
+}>;
+
+export type TokensQuery = { __typename?: 'Query' } & {
+  tokens: Array<{ __typename?: 'Token' } & TokenFragment>;
+};
+
+export type TransferQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type TransferQuery = { __typename?: 'Query' } & {
+  transfer?: Maybe<{ __typename?: 'Transfer' } & TransferFragment>;
+};
+
+export type TransfersQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<Transfer_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<Transfer_Filter>;
+}>;
+
+export type TransfersQuery = { __typename?: 'Query' } & {
+  transfers: Array<{ __typename?: 'Transfer' } & TransferFragment>;
+};
+
+export type UserSettBalanceQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type UserSettBalanceQuery = { __typename?: 'Query' } & {
+  userSettBalance?: Maybe<
+    { __typename?: 'UserSettBalance' } & UserSettBalanceFragment
+  >;
+};
+
+export type UserSettBalancesQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<UserSettBalance_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<UserSettBalance_Filter>;
+}>;
+
+export type UserSettBalancesQuery = { __typename?: 'Query' } & {
+  userSettBalances: Array<
+    { __typename?: 'UserSettBalance' } & UserSettBalanceFragment
+  >;
+};
+
+export type UsersQueryVariables = Exact<{
+  block?: Maybe<Block_Height>;
+  first?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  orderBy?: Maybe<User_OrderBy>;
+  orderDirection?: Maybe<OrderDirection>;
+  where?: Maybe<User_Filter>;
+}>;
+
+export type UsersQuery = { __typename?: 'Query' } & {
+  users: Array<{ __typename?: 'User' } & Pick<User, 'id'>>;
 };

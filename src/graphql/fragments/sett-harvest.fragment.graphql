@@ -1,0 +1,15 @@
+fragment SettHarvest on SettHarvest {
+  id
+  timestamp
+  token {
+    ...Token
+  }
+  amount
+  blockNumber
+  strategy {
+    id
+  }
+  sett {
+    id
+  }
+}

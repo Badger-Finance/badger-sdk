@@ -1,17 +1,24 @@
+import { ethers } from 'ethers';
+import { providers } from '@0xsequence/multicall';
+
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
+
 import { APIOptions, BadgerAPI } from './api';
-import { SUPPORTED_NETWORKS } from './config/constants';
+import { BadgerGraph } from './graphql';
+
 import { NetworkConfig } from './config/network/network.config';
+
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
+
 import { SDKProvider } from './config/types/sdk-provider';
-import { providers } from '@0xsequence/multicall';
-import { ethers } from 'ethers';
+
+import { SUPPORTED_NETWORKS } from './config/constants';
 
 export interface SDKOptions extends APIOptions {
   provider: SDKProvider | string;
@@ -23,13 +30,14 @@ export class BadgerSDK {
 
   public address?: string;
   public api: BadgerAPI;
+  public graph: BadgerGraph;
   public config: NetworkConfig;
   public provider: providers.MulticallProvider;
   public signer?: Signer;
 
+  readonly registry: RegistryService;
   readonly digg: DiggService;
   readonly ibbtc: ibBTCService;
-  readonly registry: RegistryService;
   readonly rewards: RewardsService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
@@ -52,8 +60,13 @@ export class BadgerSDK {
     this.signer = sdkProvider.getSigner();
     this.loading = this.initialize();
     this.config = NetworkConfig.getConfig(network);
-    this.api = new BadgerAPI({ network: this.config.network, baseURL });
-
+    this.api = new BadgerAPI({
+      network: this.config.network,
+      baseURL,
+    });
+    this.graph = new BadgerGraph({
+      network: this.config.network,
+    });
     this.digg = new DiggService(this);
     this.ibbtc = new ibBTCService(this);
     this.registry = new RegistryService(this);
@@ -62,7 +75,7 @@ export class BadgerSDK {
     this.vaults = new VaultsService(this);
   }
 
-  async ready() {
+  ready() {
     return Promise.all([
       this.loading,
       this.registry.ready(),

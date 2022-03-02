@@ -6,4 +6,6 @@ lib
 .env
 .npmrc
 
+launch
+
 yarn-error.log

@@ -1,27 +1,29 @@
-query Sett(
+query Transfer(
   $id: ID!
   $block: Block_height
 ) {
-  sett(id: $id, block: $block) {
-    ...Sett
+  transfer(id: $id, block: $block) {
+    ...Transfer
   }
 }
 
 
-query Setts(
+query Transfers(
   $block: Block_height
   $first: Int = 100
-  $orderBy: Sett_orderBy
+  $skip: Int = 0
+  $orderBy: Transfer_orderBy
   $orderDirection: OrderDirection
-  $where: Sett_filter
+  $where: Transfer_filter
 ) {
-  setts(
+  transfers(
     block: $block,
     first: $first,
+    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...Sett
+    ...Transfer
   }
 }

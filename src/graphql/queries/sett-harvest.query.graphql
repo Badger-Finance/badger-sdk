@@ -1,27 +1,29 @@
-query Sett(
+query SettHarvest(
   $id: ID!
   $block: Block_height
 ) {
-  sett(id: $id, block: $block) {
-    ...Sett
+  settHarvest(id: $id, block: $block) {
+    ...SettHarvest
   }
 }
 
 
-query Setts(
+query SettHarvests(
   $block: Block_height
   $first: Int = 100
-  $orderBy: Sett_orderBy
+  $skip: Int = 0
+  $orderBy: SettHarvest_orderBy
   $orderDirection: OrderDirection
-  $where: Sett_filter
+  $where: SettHarvest_filter
 ) {
-  setts(
+  settHarvests(
     block: $block,
     first: $first,
+    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...Sett
+    ...SettHarvest
   }
 }

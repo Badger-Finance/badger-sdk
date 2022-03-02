@@ -1,27 +1,29 @@
-query Sett(
+query Strategy(
   $id: ID!
   $block: Block_height
 ) {
-  sett(id: $id, block: $block) {
-    ...Sett
+  strategy(id: $id, block: $block) {
+    ...Strategy
   }
 }
 
 
-query Setts(
+query Strategies(
   $block: Block_height
   $first: Int = 100
-  $orderBy: Sett_orderBy
+  $skip: Int = 0
+  $orderBy: Strategy_orderBy
   $orderDirection: OrderDirection
-  $where: Sett_filter
+  $where: Strategy_filter
 ) {
-  setts(
+  strategies(
     block: $block,
     first: $first,
+    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...Sett
+    ...Strategy
   }
 }

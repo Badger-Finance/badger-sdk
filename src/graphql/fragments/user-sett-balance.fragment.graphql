@@ -1,0 +1,15 @@
+fragment UserSettBalance on UserSettBalance {
+  id
+  user {
+    id
+  }
+  sett {
+    id
+  }
+  netDeposit
+  netShareDeposit
+  grossDeposit
+  grossShareDeposit
+  grossWithdraw
+  grossShareWithdraw
+}

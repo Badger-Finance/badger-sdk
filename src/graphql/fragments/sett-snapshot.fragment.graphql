@@ -1,5 +1,6 @@
-fragment Sett on Sett {
+fragment SettSnapshot on SettSnapshot {
   id
+  timestamp
   name
   symbol
   decimals
@@ -13,10 +14,4 @@ fragment Sett on Sett {
   grossShareDeposit
   grossWithdraw
   grossShareWithdraw
-  controller {
-    id
-  }
-  strategy {
-    id
-  }
 }

@@ -1,6 +1,7 @@
 import { BadgerSDK } from './sdk';
 
 export * from './api';
+export * from './graphql';
 export * from './config';
 // TODO: fix namespace resolution issues to expose default contract factories
 // export * from './contracts';
