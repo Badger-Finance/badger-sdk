@@ -2,11 +2,10 @@ import BadgerSDK, { BadgerAPI, BadgerGraph } from '.';
 import { Network } from './config';
 
 const ethAlchemyNodeUrl =
-  'https://eth-mainnet.alchemyapi.io/v2/-8IubgVIbg-UaXks6VLvgsuYujAravb4';
+  'https://cloudflare-eth.com';
 
 describe('BadgerSDK', () => {
   let sdk: BadgerSDK;
-  let isSdkReady: boolean | void;
 
   beforeAll(async () => {
     // eslint-disable-next-line
@@ -17,14 +16,8 @@ describe('BadgerSDK', () => {
       network: Network.Ethereum,
       provider: ethAlchemyNodeUrl,
     });
-
-    isSdkReady = Boolean(await sdk.ready());
   });
 
-  // test('Services are booting properly', async () => {});
-  test('Services are booting properly', async () => {
-    expect(isSdkReady).toBeTruthy();
-  });
   test('Api is a part of SDK, and a standalone app', async () => {
     const badgerApi = new BadgerAPI({ network: Network.Ethereum });
 
