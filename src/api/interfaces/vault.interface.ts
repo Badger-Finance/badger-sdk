@@ -13,9 +13,13 @@ export interface Vault {
   apr: number;
   minApr?: number;
   maxApr?: number;
+  apy: number;
+  minApy?: number;
+  maxApy?: number;
   pricePerFullShare: number;
   protocol: Protocol;
   sources: ValueSource[];
+  sourcesApy: ValueSource[];
   state: VaultState;
   tokens: TokenBalance[];
   underlyingToken: string;
