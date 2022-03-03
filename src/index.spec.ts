@@ -1,8 +1,7 @@
 import BadgerSDK, { BadgerAPI, BadgerGraph } from '.';
 import { Network } from './config';
 
-const ethAlchemyNodeUrl =
-  'https://cloudflare-eth.com';
+const ethAlchemyNodeUrl = 'https://cloudflare-eth.com';
 
 describe('BadgerSDK', () => {
   let sdk: BadgerSDK;

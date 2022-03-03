@@ -111,9 +111,8 @@ export class BadgerAPI {
   }
 
   async loadProof(address: string, network?: Network): Promise<MerkleProof> {
-    return this.get('proofs', {
+    return this.get(`proofs/${address}`, {
       chain: network ?? this.network,
-      address,
     });
   }
 
