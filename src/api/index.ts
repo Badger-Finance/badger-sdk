@@ -122,10 +122,8 @@ export class BadgerAPI {
     });
   }
 
-  async loadProtocolMetrics(network?: Network): Promise<ProtocolMetrics> {
-    return this.get('metrics', {
-      chain: network ?? this.network,
-    });
+  async loadProtocolMetrics(): Promise<ProtocolMetrics> {
+    return this.get('metrics');
   }
 
   async loadProtocolSummary(
