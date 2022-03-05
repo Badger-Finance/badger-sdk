@@ -5,3 +5,4 @@ export { GasSpeed } from './gas-speed.enum';
 export { Protocol } from './protocol.enum';
 export { VaultState } from './vault-state.enum';
 export { VaultType } from './vault-type.enum';
+export { ChartGranularity } from './chart-granularity';
