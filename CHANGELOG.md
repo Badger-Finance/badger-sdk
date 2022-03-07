@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.3...v1.2.0) (2022-03-07)
+
+
+### Bug Fixes
+
+* disable commit hooks for ci ([e55ab36](https://github.com/Badger-Finance/badger-sdk/commit/e55ab363ee4234ea019454064e30ecfa31afa053))
+* Remove unused `chain` parameter from `/metrics` ([aa546a1](https://github.com/Badger-Finance/badger-sdk/commit/aa546a11f85dde8cb73162d5a3cbfd57ee9a0858))
+* Use path parameter for address in `/proofs` ([eff19a4](https://github.com/Badger-Finance/badger-sdk/commit/eff19a4e669ca8b63dc2eacbfe30f71b987d666f))
+
+
+### Features
+
+* complete support for badfer api-v2 ([29c258d](https://github.com/Badger-Finance/badger-sdk/commit/29c258d2b35b3617095c86ba0ae00f7cbec71658))
+
 ## [1.1.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.2...v1.1.3) (2022-03-02)
 
 
