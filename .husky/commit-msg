@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 . "$(dirname "$0")/_/husky.sh"
 
-if [ $CI != true ]; then
+if [[ $CI != true ]]; then
   npx --no-install commitlint --edit $1
 fi;
