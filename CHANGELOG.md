@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.0...v1.2.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* add dca boolean ([494b296](https://github.com/Badger-Finance/badger-sdk/commit/494b296740450ae87babbf8320ca21b07ad47ae1))
+
 # [1.2.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.1.3...v1.2.0) (2022-03-07)
 
 
