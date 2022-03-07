@@ -1,5 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint
-yarn pretty-quick --staged
+if [[ $CI != true ]]; then
+  yarn lint
+  yarn pretty-quick --staged
+fi;
