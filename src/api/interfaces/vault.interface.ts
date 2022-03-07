@@ -26,4 +26,5 @@ export interface Vault {
   vaultToken: string;
   strategy: VaultStrategy;
   type: VaultType;
+  dca: boolean;
 }
