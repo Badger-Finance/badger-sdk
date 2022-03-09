@@ -1,5 +1,5 @@
 import { BoostConfig, ValueSource, TokenBalance, VaultStrategy } from '.';
-import { VaultBehavior } from '../../vaults/enums/vault-behavior.enum';
+import { VaultBehavior } from '../../vaults';
 import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
 
 export interface Vault {
