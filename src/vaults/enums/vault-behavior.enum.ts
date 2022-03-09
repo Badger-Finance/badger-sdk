@@ -4,4 +4,5 @@ export enum VaultBehavior {
   DCA = 'DCA',
   Ecosystem = 'Ecosystem',
   EcosystemHelper = 'Ecosystem Helper',
+  None = 'None',
 }
