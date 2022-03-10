@@ -88,6 +88,10 @@ export class BadgerGraph {
     return this.graphSDK.Transfers(options);
   }
 
+  loadUser(options: gqlGenT.UserQueryVariables): Promise<gqlGenT.UserQuery> {
+    return this.graphSDK.User(options);
+  }
+
   loadUsers(options: gqlGenT.UsersQueryVariables): Promise<gqlGenT.UsersQuery> {
     return this.graphSDK.Users(options);
   }
