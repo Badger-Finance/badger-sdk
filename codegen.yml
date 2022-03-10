@@ -4,7 +4,7 @@ hooks:
     - prettier --write
 generates:
   src/graphql/generated/badger.ts:
-    schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts-fantom
+    schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts
     documents:
       - src/graphql/fragments/badger-tree-distribution.fragment.graphql
       - src/graphql/fragments/sett-harvest.fragment.graphql
