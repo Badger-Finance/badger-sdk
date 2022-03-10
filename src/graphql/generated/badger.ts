@@ -2265,6 +2265,9 @@ export const TransferFragmentDoc = gql`
       id
     }
     amount
+    transaction {
+      id
+    }
   }
 `;
 export const UserSettBalanceFragmentDoc = gql`
@@ -2283,6 +2286,15 @@ export const UserSettBalanceFragmentDoc = gql`
     grossWithdraw
     grossShareWithdraw
   }
+`;
+export const UserFragmentDoc = gql`
+  fragment User on User {
+    id
+    settBalances {
+      ...UserSettBalance
+    }
+  }
+  ${UserSettBalanceFragmentDoc}
 `;
 export const BadgerTreeDistributionDocument = gql`
   query BadgerTreeDistribution($id: ID!, $block: Block_height) {
@@ -2543,6 +2555,14 @@ export const UserSettBalancesDocument = gql`
   }
   ${UserSettBalanceFragmentDoc}
 `;
+export const UserDocument = gql`
+  query User($id: ID!, $block: Block_height) {
+    user(id: $id, block: $block) {
+      ...User
+    }
+  }
+  ${UserFragmentDoc}
+`;
 export const UsersDocument = gql`
   query Users(
     $block: Block_height
@@ -2560,9 +2580,10 @@ export const UsersDocument = gql`
       orderBy: $orderBy
       orderDirection: $orderDirection
     ) {
-      id
+      ...User
     }
   }
+  ${UserFragmentDoc}
 `;
 
 export type SdkFunctionWrapper = <T>(
@@ -2802,6 +2823,19 @@ export function getSdk(
         'UserSettBalances',
       );
     },
+    User(
+      variables: UserQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<UserQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<UserQuery>(UserDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'User',
+      );
+    },
     Users(
       variables?: UsersQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
@@ -2901,6 +2935,7 @@ export type TransferFragment = { __typename?: 'Transfer' } & Pick<
     sett: { __typename?: 'Sett' } & Pick<Sett, 'id'>;
     from: { __typename?: 'User' } & Pick<User, 'id'>;
     to: { __typename?: 'User' } & Pick<User, 'id'>;
+    transaction: { __typename?: 'Transaction' } & Pick<Transaction, 'id'>;
   };
 
 export type UserSettBalanceFragment = { __typename?: 'UserSettBalance' } & Pick<
@@ -2915,6 +2950,12 @@ export type UserSettBalanceFragment = { __typename?: 'UserSettBalance' } & Pick<
 > & {
     user: { __typename?: 'User' } & Pick<User, 'id'>;
     sett: { __typename?: 'Sett' } & Pick<Sett, 'id'>;
+  };
+
+export type UserFragment = { __typename?: 'User' } & Pick<User, 'id'> & {
+    settBalances: Array<
+      { __typename?: 'UserSettBalance' } & UserSettBalanceFragment
+    >;
   };
 
 export type BadgerTreeDistributionQueryVariables = Exact<{
@@ -3113,6 +3154,15 @@ export type UserSettBalancesQuery = { __typename?: 'Query' } & {
   >;
 };
 
+export type UserQueryVariables = Exact<{
+  id: Scalars['ID'];
+  block?: Maybe<Block_Height>;
+}>;
+
+export type UserQuery = { __typename?: 'Query' } & {
+  user?: Maybe<{ __typename?: 'User' } & UserFragment>;
+};
+
 export type UsersQueryVariables = Exact<{
   block?: Maybe<Block_Height>;
   first?: Maybe<Scalars['Int']>;
@@ -3123,5 +3173,5 @@ export type UsersQueryVariables = Exact<{
 }>;
 
 export type UsersQuery = { __typename?: 'Query' } & {
-  users: Array<{ __typename?: 'User' } & Pick<User, 'id'>>;
+  users: Array<{ __typename?: 'User' } & UserFragment>;
 };

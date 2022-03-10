@@ -6,22 +6,3 @@ query Sett(
     ...Sett
   }
 }
-
-
-query Setts(
-  $block: Block_height
-  $first: Int = 100
-  $orderBy: Sett_orderBy
-  $orderDirection: OrderDirection
-  $where: Sett_filter
-) {
-  setts(
-    block: $block,
-    first: $first,
-    where: $where,
-    orderBy: $orderBy,
-    orderDirection: $orderDirection
-  ) {
-    ...Sett
-  }
-}

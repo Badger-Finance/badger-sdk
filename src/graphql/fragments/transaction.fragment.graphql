@@ -1,0 +1,6 @@
+fragment Transaction on Transaction {
+  id
+  transfers {
+    ...Transfer
+  }
+}

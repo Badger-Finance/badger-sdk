@@ -1,0 +1,8 @@
+query User(
+  $id: ID!
+  $block: Block_height
+) {
+  user(id: $id, block: $block) {
+    ...User
+  }
+}

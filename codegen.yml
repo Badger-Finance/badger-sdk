@@ -4,26 +4,30 @@ hooks:
     - prettier --write
 generates:
   src/graphql/generated/badger.ts:
-    schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts
+    schema: https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts-fantom
     documents:
-      - src/graphql/fragments/sett.fragment.graphql
-      - src/graphql/fragments/token.fragment.graphql
-      - src/graphql/fragments/sett-snapshot.fragment.graphql
-      - src/graphql/fragments/user-sett-balance.fragment.graphql
-      - src/graphql/fragments/transfer.fragment.graphql
       - src/graphql/fragments/badger-tree-distribution.fragment.graphql
       - src/graphql/fragments/sett-harvest.fragment.graphql
+      - src/graphql/fragments/sett-snapshot.fragment.graphql
+      - src/graphql/fragments/sett.fragment.graphql
+      - src/graphql/fragments/setts.fragment.graphql
       - src/graphql/fragments/strategy.fragment.graphql
-      - src/graphql/queries/sett.query.graphql
-      - src/graphql/queries/token.query.graphql
-      - src/graphql/queries/sett-snapshot.query.graphql
-      - src/graphql/queries/user-sett-balance.query.graphql
-      - src/graphql/queries/transfer.query.graphql
-      - src/graphql/queries/users.query.graphql
+      - src/graphql/fragments/token.fragment.graphql
+      - src/graphql/fragments/transfer.fragment.graphql
+      - src/graphql/fragments/user-sett-balance.fragment.graphql
+      - src/graphql/fragments/user.fragment.graphql
       - src/graphql/queries/badger-tree-distribution.query.graphql
-      - src/graphql/queries/sett-harvest.query.graphql
-      - src/graphql/queries/strategy.query.graphql
       - src/graphql/queries/controllers.query.graphql
+      - src/graphql/queries/sett-harvest.query.graphql
+      - src/graphql/queries/sett-snapshot.query.graphql
+      - src/graphql/queries/sett.query.graphql
+      - src/graphql/queries/setts.query.graphql
+      - src/graphql/queries/strategy.query.graphql
+      - src/graphql/queries/token.query.graphql
+      - src/graphql/queries/transfer.query.graphql
+      - src/graphql/queries/user-sett-balance.query.graphql
+      - src/graphql/queries/user.query.graphql
+      - src/graphql/queries/users.query.graphql
     plugins:
       - typescript
       - typescript-graphql-request

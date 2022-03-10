@@ -1,19 +1,17 @@
-query Users(
+query Setts(
   $block: Block_height
   $first: Int = 100
-  $skip: Int = 0
-  $orderBy: User_orderBy
+  $orderBy: Sett_orderBy
   $orderDirection: OrderDirection
-  $where: User_filter
+  $where: Sett_filter
 ) {
-  users(
+  setts(
     block: $block,
     first: $first,
-    skip: $skip,
     where: $where,
     orderBy: $orderBy,
     orderDirection: $orderDirection
   ) {
-    ...User
+    ...Sett
   }
 }
