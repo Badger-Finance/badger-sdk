@@ -2,6 +2,7 @@ fragment Sett on Sett {
   id
   name
   symbol
+  available
   decimals
   totalSupply
   token { 
@@ -20,5 +21,6 @@ fragment Sett on Sett {
   }
   strategy {
     id
+    balance
   }
 }
