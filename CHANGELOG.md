@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.2...v1.2.3) (2022-03-10)
+
+
+### Bug Fixes
+
+* add strategy balance to fragment ([67eb6cb](https://github.com/Badger-Finance/badger-sdk/commit/67eb6cb23413acfb9e1844747bd5b6a78eb6bdd9))
+* revert reference graph api ([69c4c17](https://github.com/Badger-Finance/badger-sdk/commit/69c4c17ee580dfea5e685f68199d565ad49c153f))
+
 ## [1.2.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.1...v1.2.2) (2022-03-09)
 
 
