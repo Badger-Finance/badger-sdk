@@ -1,9 +1,16 @@
 fragment Strategy on Strategy {
   id
+  balance
   controller {
     id
   }
   sett {
     id
+  }
+  treeDistributions {
+    ...BadgerTreeDistribution
+  }
+  harvests {
+    ...SettHarvest
   }
 }

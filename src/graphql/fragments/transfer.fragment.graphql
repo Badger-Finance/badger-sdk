@@ -11,4 +11,7 @@ fragment Transfer on Transfer {
     id
   }
   amount
+  transaction {
+    id
+  }
 }

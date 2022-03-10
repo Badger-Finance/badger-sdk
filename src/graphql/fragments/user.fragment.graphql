@@ -1,0 +1,6 @@
+fragment User on User {
+  id
+  settBalances {
+    ...UserSettBalance
+  }
+}
