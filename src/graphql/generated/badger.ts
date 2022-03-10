@@ -2173,6 +2173,7 @@ export const SettFragmentDoc = gql`
     id
     name
     symbol
+    available
     decimals
     totalSupply
     token {
@@ -2895,6 +2896,7 @@ export type SettFragment = { __typename?: 'Sett' } & Pick<
   | 'id'
   | 'name'
   | 'symbol'
+  | 'available'
   | 'decimals'
   | 'totalSupply'
   | 'balance'

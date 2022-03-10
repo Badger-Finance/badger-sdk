@@ -2,6 +2,7 @@ fragment Sett on Sett {
   id
   name
   symbol
+  available
   decimals
   totalSupply
   token { 
