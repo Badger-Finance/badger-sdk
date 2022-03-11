@@ -70,7 +70,9 @@ export class RewardsService extends Service {
         const endNum = end.toNumber();
         const durationNum = duration.toNumber();
 
-        const complitionPercent = Math.round(durationNum / ((endNum - startNum) / 100));
+        const completionPercent = Math.round(
+          durationNum / ((endNum - startNum) / 100),
+        );
 
         return {
           beneficiary,
@@ -78,7 +80,7 @@ export class RewardsService extends Service {
           amount,
           start: startNum,
           end: endNum,
-          compPercent: complitionPercent,
+          compPercent: completionPercent,
         };
       }),
     );
