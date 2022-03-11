@@ -1,7 +1,6 @@
 import axios, { AxiosError, AxiosInstance } from 'axios';
 import { Network } from '../config/enums/network.enum';
 import {
-  DateIsoFormat,
   GasPrices,
   MerkleProof,
   PriceSummary,
@@ -11,7 +10,7 @@ import * as i from './interfaces';
 import { Networkish } from '@ethersproject/networks';
 import { NetworkConfig } from '../config/network/network.config';
 import { SUPPORTED_NETWORKS } from '../config/constants';
-import { ChartGranularity, Currency } from './enums';
+import { Currency } from './enums';
 import { ApiError } from './api.error';
 
 export const DEFAULT_API_URL = 'https://api.badger.com/v2';
@@ -138,15 +137,11 @@ export class BadgerAPI {
   }
 
   loadCharts(
-    settToken: string,
+    { vault, start, end, period, granularity }: i.LoadChartsOptions,
     network?: Network,
-    start?: DateIsoFormat,
-    end?: DateIsoFormat,
-    period?: number,
-    granularity?: ChartGranularity,
   ): Promise<i.VaultSnapshot[]> {
     return this.get('/charts', {
-      id: settToken,
+      id: vault,
       chain: network ?? this.network,
       start,
       end,
