@@ -4,4 +4,5 @@ export interface EmissionSchedule {
   amount: number;
   start: number;
   end: number;
+  compPercent: number;
 }
