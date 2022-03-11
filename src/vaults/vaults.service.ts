@@ -473,7 +473,7 @@ export class VaultsService extends Service {
   ): Promise<RegistryVault> {
     const { address, status, version } = registryVault;
 
-    const sett = Vault__factory.connect(
+    const vault = Vault__factory.connect(
       ethers.utils.getAddress(address),
       this.sdk.provider,
     );
@@ -488,12 +488,12 @@ export class VaultsService extends Service {
       balance,
       pricePerFullShare,
     ] = await Promise.all([
-      sett.name(),
-      sett.symbol(),
-      sett.decimals(),
-      sett.token(),
-      sett.totalSupply(),
-      ...this.getVaultVariantData(sett),
+      vault.name(),
+      vault.symbol(),
+      vault.decimals(),
+      vault.token(),
+      vault.totalSupply(),
+      ...this.getVaultVariantData(vault),
     ]);
 
     const tokenInfo = await this.sdk.tokens.loadToken(token);

@@ -27,7 +27,7 @@ export class BadgerGraph {
     this.network = network;
     this.graphUrl = this.resolveClientUrl(baseURL);
 
-    this.graphClient = new GraphQLClient(this.resolveClientUrl(this.graphUrl));
+    this.graphClient = new GraphQLClient(this.graphUrl);
     this.graphSDK = getSdk(this.graphClient);
   }
 
