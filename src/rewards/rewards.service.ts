@@ -70,9 +70,12 @@ export class RewardsService extends Service {
         const endNum = end.toNumber();
         const durationNum = duration.toNumber();
 
-        const completionPercent = Math.round(
-          durationNum / ((endNum - startNum) / 100),
-        );
+        const currentTimestamp = Date.now() / 1000;
+
+        let completionPercent = 100;
+        if (currentTimestamp < endNum) {
+          completionPercent = Math.round(((currentTimestamp - startNum) / (durationNum / 100)));
+        }
 
         return {
           beneficiary,
