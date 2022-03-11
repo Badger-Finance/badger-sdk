@@ -59,18 +59,31 @@ export class RewardsService extends Service {
     );
     return Promise.all(
       schedules.map(async (schedule) => {
-        const { token, totalAmount } = schedule;
+        const { token, totalAmount, start, end, duration } = schedule;
         const tokenInfo = await this.sdk.tokens.loadToken(token);
         let amount = formatBalance(totalAmount, tokenInfo.decimals);
         if (network === Network.Ethereum && token === tokens.DIGG) {
           amount = await this.sdk.digg.convert(totalAmount);
         }
+
+        const startNum = start.toNumber();
+        const endNum = end.toNumber();
+        const durationNum = duration.toNumber();
+
+        const currentTimestamp = Date.now() / 1000;
+
+        let completionPercent = 100;
+        if (currentTimestamp < endNum) {
+          completionPercent = Math.round(((currentTimestamp - startNum) / (durationNum / 100)));
+        }
+
         return {
           beneficiary,
           token,
           amount,
-          start: schedule.start.toNumber(),
-          end: schedule.end.toNumber(),
+          start: startNum,
+          end: endNum,
+          compPercent: completionPercent,
         };
       }),
     );
