@@ -2192,6 +2192,7 @@ export const SettFragmentDoc = gql`
     }
     strategy {
       id
+      balance
     }
   }
   ${TokenFragmentDoc}
@@ -2910,7 +2911,9 @@ export type SettFragment = { __typename?: 'Sett' } & Pick<
 > & {
     token: { __typename?: 'Token' } & TokenFragment;
     controller?: Maybe<{ __typename?: 'Controller' } & Pick<Controller, 'id'>>;
-    strategy?: Maybe<{ __typename?: 'Strategy' } & Pick<Strategy, 'id'>>;
+    strategy?: Maybe<
+      { __typename?: 'Strategy' } & Pick<Strategy, 'id' | 'balance'>
+    >;
   };
 
 export type StrategyFragment = { __typename?: 'Strategy' } & Pick<
