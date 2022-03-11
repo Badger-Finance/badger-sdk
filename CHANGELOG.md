@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.4...v1.2.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* export vault interface + remove duplicate postfix ([acaf104](https://github.com/Badger-Finance/badger-sdk/commit/acaf10471e311ec262f4bf69d6d2837d7c37d736))
+
 ## [1.2.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.3...v1.2.4) (2022-03-11)
 
 
