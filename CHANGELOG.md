@@ -1,3 +1,12 @@
+## [1.2.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.5...v1.2.6) (2022-03-11)
+
+
+### Bug Fixes
+
+* completion percent for reward schedules ([bcc301f](https://github.com/Badger-Finance/badger-sdk/commit/bcc301fca519a3087c8373766bc2de20c1af7524))
+* extend rw schedules with completion percent ([ffd4736](https://github.com/Badger-Finance/badger-sdk/commit/ffd473610890b08e228086d749ba39d9f7ab39d3))
+* spelling typo ([89ec8a9](https://github.com/Badger-Finance/badger-sdk/commit/89ec8a91a452ddef7e3bb6931cf37bf7faf82b58))
+
 ## [1.2.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.4...v1.2.5) (2022-03-11)
 
 
