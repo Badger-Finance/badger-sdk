@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.3...v1.2.4) (2022-03-11)
+
+
+### Bug Fixes
+
+* update charts endpoint params + update value source vars ([cea3620](https://github.com/Badger-Finance/badger-sdk/commit/cea3620cb5e8bfba611ffb20ae0c989b243c6cee))
+
 ## [1.2.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.2...v1.2.3) (2022-03-10)
 
 
