@@ -8,6 +8,7 @@ import {
   Controller__factory,
   Strategy__factory,
   Vault,
+  Erc20__factory,
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
@@ -27,6 +28,7 @@ import {
   TreeDistributionEvent,
 } from '../contracts/Strategy';
 import { VaultTreeDistributionEvent } from './interfaces/vault-tree-distribution-event.interface';
+import { TransactionStatus } from '../config/enums/transaction-status.enum';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -548,6 +550,63 @@ export class VaultsService extends Service {
     );
     const strategyAddress = await controller.strategies(await vault.token());
     return Strategy__factory.connect(strategyAddress, this.sdk.provider);
+  }
+
+  async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
+    if (!this.sdk.address || !this.sdk.signer) {
+      console.error(`Failed deposit to ${vault}, requires an active signer`);
+      return TransactionStatus.Failure;
+    }
+    const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
+    const depositToken = await vaultContract.token();
+    const depositTokenContract = Erc20__factory.connect(
+      depositToken,
+      this.sdk.provider,
+    );
+    const allowance = await depositTokenContract.allowance(
+      this.sdk.address,
+      vault,
+    );
+    if (amount.gt(allowance)) {
+      try {
+        const approveTx = await depositTokenContract.increaseAllowance(
+          vault,
+          amount,
+        );
+        await approveTx.wait();
+      } catch (err) {
+        console.log(err);
+        return TransactionStatus.Failure;
+      }
+    }
+    try {
+      // TODO: try a look up via badger api if possible for the current address proof
+      const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
+        amount,
+        [],
+      );
+      await depositTx.wait();
+      return TransactionStatus.Success;
+    } catch (err) {
+      console.error(err);
+      return TransactionStatus.Failure;
+    }
+  }
+
+  async withdraw(vault: string, amount: BigNumber): Promise<TransactionStatus> {
+    if (!this.sdk.address || !this.sdk.signer) {
+      console.error(`Failed withdraw to ${vault}, requires an active signer`);
+      return TransactionStatus.Failure;
+    }
+    const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
+    try {
+      const withdrawTx = await vaultContract.withdraw(amount);
+      await withdrawTx.wait();
+      return TransactionStatus.Success;
+    } catch (err) {
+      console.error(err);
+      return TransactionStatus.Failure;
+    }
   }
 
   private getVaultVersion(version: string): VaultVersion {
