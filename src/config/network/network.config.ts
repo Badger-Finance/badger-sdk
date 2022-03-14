@@ -14,9 +14,9 @@ export abstract class NetworkConfig {
     readonly tokens: ContractRegistry,
     readonly vaults: ContractRegistry,
   ) {
-    if (!NETWORK_ID_MAP[network]) throw new Error('Network withoud id');
+    if (!NETWORK_ID_MAP[network]) throw new Error(`Network withoud id ${network}`);
 
-    this.id = <number>NETWORK_ID_MAP[network];
+    this.id = NETWORK_ID_MAP[network];
   }
 
   static register(config: NetworkConfig) {

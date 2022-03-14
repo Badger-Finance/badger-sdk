@@ -25,7 +25,9 @@ export class BadgerGraph {
     baseURL = DEFAULT_API_URL,
   }: GraphOptions) {
     this.network = network;
-    this.graphUrl = this.resolveClientUrl(baseURL);
+    this.graphUrl = baseURL === DEFAULT_API_URL ? (
+      this.resolveClientUrl(baseURL)
+    ) : baseURL;
 
     this.graphClient = new GraphQLClient(this.graphUrl);
     this.graphSDK = getSdk(this.graphClient);

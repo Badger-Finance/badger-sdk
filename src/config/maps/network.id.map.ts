@@ -8,5 +8,5 @@ export const NETWORK_ID_MAP = {
   [Network.Avalanche]: 43114,
   [Network.Fantom]: 250,
   [Network.Local]: 1337,
-  [Network.xDai]: null,
+  [Network.xDai]: 0x64,
 };
