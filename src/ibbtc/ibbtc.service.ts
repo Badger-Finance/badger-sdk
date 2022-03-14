@@ -29,7 +29,7 @@ export class ibBTCService extends Service {
       return;
     }
     this.ibBTC = Ibbtc__factory.connect(
-      '0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F',
+      this.config.tokens['IBBTC'],
       this.provider,
     );
   }

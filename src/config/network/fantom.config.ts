@@ -3,7 +3,7 @@ import { NetworkConfig } from './network.config';
 
 export class FantomConfig extends NetworkConfig {
   constructor() {
-    super(Network.Fantom, 250, {}, {});
+    super(Network.Fantom, {}, {});
   }
 }
 

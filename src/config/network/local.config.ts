@@ -3,7 +3,7 @@ import { NetworkConfig } from './network.config';
 
 export class LocalConfig extends NetworkConfig {
   constructor() {
-    super(Network.Local, 1337, {}, {});
+    super(Network.Local, {}, {});
   }
 }
 

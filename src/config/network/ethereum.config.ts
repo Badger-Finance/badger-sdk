@@ -4,7 +4,7 @@ import { checksumEntries } from './network.utils';
 
 export class EthereumConfig extends NetworkConfig {
   constructor() {
-    super(Network.Ethereum, 1, tokens, setts);
+    super(Network.Ethereum, tokens, setts);
   }
 }
 
