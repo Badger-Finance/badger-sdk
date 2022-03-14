@@ -32,11 +32,9 @@ Utilizing the SDK requires an RPC provider:
 ```js
 import BadgerSDK, { Network } from '@badger-dao/sdk';
 
-const provider = new ethers.providers.JsonRpcProvider('https://myrpc.io/');
-
 const sdk = new BadgerSDK({
   network: Network.Ethereum,
-  provider
+  provider: 'https://myrpc.io/',
 });
 ```
 
@@ -55,7 +53,7 @@ Badger subgraph is also available for use:
 ```js
 import { BadgerGraph, Network } from '@badger-dao/sdk';
 
-const subgraph = BadgerGraph({ network: Network.Ethereum });
+const subgraph = new BadgerGraph({ network: Network.Ethereum });
 
 await subgraph.loadSetts({
   orderBy: 'id',
