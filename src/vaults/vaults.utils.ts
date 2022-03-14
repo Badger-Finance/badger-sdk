@@ -5,7 +5,7 @@ import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
  * Parse Vault v1 harvest related events.
  * @param harvestEvents Vault Harvest events
  * @param treeDistributionEvents Vault TreeDsitribution events
- * @returns
+ * @returns Timestamp aggregated vault harvest and tree distribution events.
  */
 export async function parseHarvestEvents(
   harvestEvents: HarvestEvent[],
