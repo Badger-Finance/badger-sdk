@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.9...v1.2.10) (2022-03-14)
+
+
+### Bug Fixes
+
+* update chart vault snapshot interface ([01f35e1](https://github.com/Badger-Finance/badger-sdk/commit/01f35e17ac8428ea1f3e960338289942ea9d555d))
+
 ## [1.2.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.8...v1.2.9) (2022-03-14)
 
 
