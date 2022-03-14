@@ -50,12 +50,8 @@ export class BadgerSDK {
       BadgerSDK.initialized = true;
     }
 
-    let sdkProvider: SDKProvider;
-    if (typeof provider === 'string') {
-      sdkProvider = new ethers.providers.JsonRpcProvider(provider);
-    } else {
-      sdkProvider = provider;
-    }
+    const sdkProvider = BadgerSDK.getSdkProvider(provider);
+
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
     this.loading = this.initialize();
@@ -95,11 +91,28 @@ export class BadgerSDK {
       network: this.config.network,
       baseURL: this.api.baseURL,
     });
+    this.graph = new BadgerGraph({
+      network: this.config.network,
+    });
   }
 
   updateProvider(provider: SDKProvider) {
-    this.provider = new providers.MulticallProvider(provider);
-    this.signer = provider.getSigner();
+    const sdkProvider = BadgerSDK.getSdkProvider(provider);
+
+    this.provider = new providers.MulticallProvider(sdkProvider);
+    this.signer = sdkProvider.getSigner();
+  }
+
+  private static getSdkProvider(provider: SDKProvider | string): SDKProvider {
+    let sdkProvider: SDKProvider;
+
+    if (typeof provider === 'string') {
+      sdkProvider = new ethers.providers.JsonRpcProvider(provider);
+    } else {
+      sdkProvider = provider;
+    }
+
+    return sdkProvider;
   }
 
   private async initialize() {

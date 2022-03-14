@@ -4,7 +4,7 @@ import { checksumEntries } from './network.utils';
 
 export class AvalancheConfig extends NetworkConfig {
   constructor() {
-    super(Network.Avalanche, 43114, tokens, vaults);
+    super(Network.Avalanche, tokens, vaults);
   }
 }
 

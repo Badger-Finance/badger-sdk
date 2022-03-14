@@ -1,18 +1,23 @@
 import { Networkish } from '@ethersproject/networks';
 import { ContractRegistry } from '../types/contract-registry';
+import { NETWORK_ID_MAP } from '../maps/network.id.map';
 import { Network } from '../enums/network.enum';
 
 type Configs = Record<string, NetworkConfig>;
 
 export abstract class NetworkConfig {
+  readonly id: number;
   private static configs: Configs = {};
 
   constructor(
     readonly network: Network,
-    readonly id: number,
     readonly tokens: ContractRegistry,
     readonly vaults: ContractRegistry,
-  ) {}
+  ) {
+    if (!NETWORK_ID_MAP[network]) throw new Error(`Network withoud id ${network}`);
+
+    this.id = NETWORK_ID_MAP[network];
+  }
 
   static register(config: NetworkConfig) {
     this.configs[config.network] = config;

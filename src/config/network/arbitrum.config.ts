@@ -3,7 +3,7 @@ import { NetworkConfig } from './network.config';
 
 export class ArbitrumConfig extends NetworkConfig {
   constructor() {
-    super(Network.Arbitrum, 42161, {}, {});
+    super(Network.Arbitrum, {}, {});
   }
 }
 

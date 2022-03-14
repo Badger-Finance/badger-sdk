@@ -3,7 +3,7 @@ import { NetworkConfig } from './network.config';
 
 export class BinanceSmartChainConfig extends NetworkConfig {
   constructor() {
-    super(Network.BinanceSmartChain, 56, {}, {});
+    super(Network.BinanceSmartChain, {}, {});
   }
 }
 

@@ -3,7 +3,7 @@ import { NetworkConfig } from './network.config';
 
 export class PolygonConfig extends NetworkConfig {
   constructor() {
-    super(Network.Polygon, 137, {}, {});
+    super(Network.Polygon, {}, {});
   }
 }
 

@@ -74,7 +74,9 @@ export class RewardsService extends Service {
 
         let completionPercent = 100;
         if (currentTimestamp < endNum) {
-          completionPercent = Math.round(((currentTimestamp - startNum) / (durationNum / 100)));
+          completionPercent = Math.round(
+            (currentTimestamp - startNum) / (durationNum / 100),
+          );
         }
 
         return {
