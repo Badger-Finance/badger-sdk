@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.8...v1.2.9) (2022-03-14)
+
+
+### Bug Fixes
+
+* add vault apr to chart + add event parse test ([4d08662](https://github.com/Badger-Finance/badger-sdk/commit/4d08662e0e7f268c9f0bbcb743dbe786f9015f5e))
+
 ## [1.2.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.7...v1.2.8) (2022-03-14)
 
 
