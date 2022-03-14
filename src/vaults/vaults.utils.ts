@@ -16,18 +16,28 @@ export async function parseHarvestEvents(
 }> {
   const harvestEventsWithTimestamps = await Promise.all(
     harvestEvents.map(async (event) => {
-      const block = await event.getBlock();
-      return {
-        timestamp: block.timestamp,
-        block: block.number,
-        harvested: event.args[0],
-      };
+      try {
+        const block = await event.getBlock();
+        return {
+          timestamp: block.timestamp,
+          block: block.number,
+          harvested: event.args[0],
+        };
+      } catch (err) {
+        console.log(err);
+        return {
+          // consider a better idea here
+          timestamp: Date.now() / 1000,
+          block: event.blockNumber,
+          harvested: event.args[0],
+        };
+      }
     }),
   );
   const treeDistributionEventWithTimestamps = treeDistributionEvents.map(
     (e) => ({
       timestamp: Number(e.args[3].toString()),
-      block: e.blockNumber,
+      block: e.args[2].toNumber(),
       token: e.args[0],
       amount: e.args[1],
     }),

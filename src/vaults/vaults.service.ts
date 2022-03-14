@@ -22,11 +22,8 @@ import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/vault-registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
 import { keyBy } from '../utils/key-by';
-import {
-  Strategy,
-} from '../contracts/Strategy';
-import { VaultTreeDistributionEvent } from './interfaces/vault-tree-distribution-event.interface';
 import { TransactionStatus } from '../config/enums/transaction-status.enum';
+import { Strategy } from '../contracts/Strategy';
 import { parseHarvestEvents } from './vaults.utils';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
