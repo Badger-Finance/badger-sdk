@@ -14,7 +14,7 @@ import { Service } from '../service';
 import { formatBalance } from '../tokens';
 import {
   LoadVaultOptions,
-  VaultHarvestEvent,
+  VaultHarvestData,
   VaultPerformance,
   VaultRegistration,
 } from './interfaces';
@@ -22,13 +22,9 @@ import { ONE_YEAR_MS } from '../config/constants';
 import { VaultRegistryEntry } from '../registry/interfaces/vault-registry-entry.interface';
 import { ListVaultOptions } from './interfaces/list-vault-options.interface';
 import { keyBy } from '../utils/key-by';
-import {
-  HarvestEvent,
-  Strategy,
-  TreeDistributionEvent,
-} from '../contracts/Strategy';
-import { VaultTreeDistributionEvent } from './interfaces/vault-tree-distribution-event.interface';
 import { TransactionStatus } from '../config/enums/transaction-status.enum';
+import { Strategy } from '../contracts/Strategy';
+import { parseHarvestEvents } from './vaults.utils';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -341,13 +337,7 @@ export class VaultsService extends Service {
     timestamp_gte,
     timestamp_lt,
     timestamp_lte,
-  }: ListVaultOptions): Promise<{
-    data: {
-      timestamp: number;
-      harvests: VaultHarvestEvent[];
-      treeDistributions: VaultTreeDistributionEvent[];
-    }[];
-  }> {
+  }: ListVaultOptions): Promise<{ data: VaultHarvestData[] }> {
     const timestampInRange = (timestamp: number): boolean => {
       if (timestamp_gt && timestamp <= timestamp_gt) {
         return false;
@@ -374,11 +364,8 @@ export class VaultsService extends Service {
       strategy.queryFilter(treeDistributionFilter),
     ]);
 
-    const [harvestEventsWithTimestamps, treeDistributionEventWithTimestamps] =
-      await this.parseHarvestEvents(
-        allHarvestEvents,
-        allTreeDistributionEvents,
-      );
+    const { harvestEventsWithTimestamps, treeDistributionEventWithTimestamps } =
+      await parseHarvestEvents(allHarvestEvents, allTreeDistributionEvents);
     const harvestEvents = harvestEventsWithTimestamps.filter((h) =>
       timestampInRange(h.timestamp),
     );
@@ -425,29 +412,6 @@ export class VaultsService extends Service {
     return {
       data,
     };
-  }
-
-  private async parseHarvestEvents(
-    harvestEvents: HarvestEvent[],
-    treeDistributionEvents: TreeDistributionEvent[],
-  ): Promise<[VaultHarvestEvent[], VaultTreeDistributionEvent[]]> {
-    const parsedHarvests = await Promise.all(
-      harvestEvents.map(async (event) => {
-        const block = await event.getBlock();
-        return {
-          timestamp: block.timestamp,
-          block: block.number,
-          harvested: event.args[0],
-        };
-      }),
-    );
-    const parsedTreeDistributions = treeDistributionEvents.map((e) => ({
-      timestamp: Number(e.args[3].toString()),
-      block: e.blockNumber,
-      token: e.args[0],
-      amount: e.args[1],
-    }));
-    return [parsedHarvests, parsedTreeDistributions];
   }
 
   private async init() {

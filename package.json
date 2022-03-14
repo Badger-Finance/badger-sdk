@@ -18,7 +18,7 @@
     "clean": "rm -rf ./lib",
     "codegen:graphql": "graphql-codegen -c codegen.yml",
     "codegen:contracts": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "pretty-quick",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --runInBand --detectOpenHandles",
     "prepublishOnly": "yarn run build"

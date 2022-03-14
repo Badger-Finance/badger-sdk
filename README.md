@@ -34,7 +34,7 @@ import BadgerSDK, { Network } from '@badger-dao/sdk';
 
 const sdk = new BadgerSDK({
   network: Network.Ethereum,
-  provider: 'https://myrpc.io/',
+  provider: 'https://eth-mainnet.alchemyapi.io/v2/<<YOUR ALCHEMY KEY>>',
 });
 ```
 
@@ -89,8 +89,8 @@ yarn unlink "@badger-dao/sdk"
 
 ## Releasing new version
 
-Releases are determined by the commit messages. 
-Commits beginning with `fix:` will release a new patch version, commits beginning with 
-`feat:` will release a new minor version, 
-and commits beginning with `BREAKING CHANGE:` will release a new major version. 
+Releases are determined by the commit messages.
+Commits beginning with `fix:` will release a new patch version, commits beginning with
+`feat:` will release a new minor version,
+and commits beginning with `BREAKING CHANGE:` will release a new major version.
 The action will run on a push to main.

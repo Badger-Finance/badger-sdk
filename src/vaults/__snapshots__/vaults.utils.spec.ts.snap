@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`vaults.utils parseHarvestEvents converts vault events to typed usable events 1`] = `
+Object {
+  "harvestEventsWithTimestamps": Array [
+    Object {
+      "block": 1000000,
+      "harvested": Object {
+        "hex": "0x05da3040dc0640",
+        "type": "BigNumber",
+      },
+      "timestamp": 1647284957,
+    },
+    Object {
+      "block": 1000000,
+      "harvested": Object {
+        "hex": "0x05244a1fe78640",
+        "type": "BigNumber",
+      },
+      "timestamp": 1647284957,
+    },
+    Object {
+      "block": 1000000,
+      "harvested": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "timestamp": 1647284957,
+    },
+  ],
+  "treeDistributionEventWithTimestamps": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x0186256ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+  ],
+}
+`;

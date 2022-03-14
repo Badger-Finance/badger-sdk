@@ -6,4 +6,5 @@ export interface VaultSnapshot {
   supply: number;
   pricePerFullShare: number;
   value: number;
+  apr: number;
 }
