@@ -35,9 +35,7 @@ describe('vaults.utils', () => {
 
       // setup harvest events
       const harvests: HarvestEvent[] = [
-        {
-          args: [harvestedOne, blockNumberOne],
-        },
+        { args: [harvestedOne, blockNumberOne] },
         { args: [harvestedTwo, blockNumberTwo] },
         { args: [harvestedThree, blockNumberThree] },
       ] as HarvestEvent[];
