@@ -138,18 +138,18 @@ export class BadgerGraph {
   }
 
   private resolveClientUrl(baseURL: string) {
-    let networkSuffix: Networkish;
+    let networkSuffix: string;
     switch (this.network) {
       case Network.Ethereum:
         networkSuffix = '';
         break;
       case Network.BinanceSmartChain:
-        networkSuffix = 'bsc';
+        networkSuffix = '-bsc';
         break;
       default:
-        networkSuffix = this.network;
+        networkSuffix = `-${this.network}`;
     }
-    return `${baseURL}-${networkSuffix}`;
+    return `${baseURL}${networkSuffix}`;
   }
 }
 
