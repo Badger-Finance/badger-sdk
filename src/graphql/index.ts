@@ -149,7 +149,7 @@ export class BadgerGraph {
       default:
         networkSuffix = this.network;
     }
-    return `${baseURL}${networkSuffix}`;
+    return `${baseURL}-${networkSuffix}`;
   }
 }
 
