@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.10...v1.2.11) (2022-03-15)
+
+
+### Bug Fixes
+
+* address bsc graph name edge case ([45184be](https://github.com/Badger-Finance/badger-sdk/commit/45184bec3e2d6cca6ca430a0c05e8fab38c901d4))
+
 ## [1.2.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.9...v1.2.10) (2022-03-14)
 
 
