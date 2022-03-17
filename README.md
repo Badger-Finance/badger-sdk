@@ -87,6 +87,14 @@ If you want to unlink you need to:
 yarn unlink "@badger-dao/sdk"
 ```
 
+## Development
+
+Consider to use package lock file, while installing node dependencies:
+
+```sh
+yarn install --frozen-lockfile
+```
+
 ## Releasing new version
 
 Releases are determined by the commit messages.

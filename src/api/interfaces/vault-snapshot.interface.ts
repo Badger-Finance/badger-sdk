@@ -1,4 +1,4 @@
-import { VaultStrategy } from ".";
+import { VaultStrategy } from '.';
 
 export interface VaultSnapshot {
   address: string;
