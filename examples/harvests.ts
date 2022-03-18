@@ -9,7 +9,7 @@ async function getVaultPerformance() {
   const sdk = new BadgerSDK({
     network: Network.Ethereum,
     provider:
-      'https://eth-archival.gateway.pokt.network/v1/lb/621cffd04e140e003a302118',
+      'https://eth-archival.gateway.pokt.network/v1/lb/<APP_ID>',
   });
   await sdk.ready();
 
