@@ -1,5 +1,6 @@
 import { VaultHarvestEvent, VaultTreeDistributionEvent, VaultVersion } from '.';
 import { VaultState } from '..';
+import { TimeRangeOptions } from '../common';
 import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
 
 /**
@@ -69,4 +70,26 @@ export function getVaultState(status: number): VaultState {
     default:
       return VaultState.Experimental;
   }
+}
+
+export function timestampInRange(
+  options: TimeRangeOptions,
+  timestamp: number,
+): boolean {
+  const { timestamp_gt, timestamp_gte, timestamp_lt, timestamp_lte } = options;
+
+  if (timestamp_gt && timestamp <= timestamp_gt) {
+    return false;
+  }
+  if (timestamp_gte && timestamp < timestamp_gte) {
+    return false;
+  }
+  if (timestamp_lt && timestamp >= timestamp_lt) {
+    return false;
+  }
+  if (timestamp_lte && timestamp > timestamp_lte) {
+    return false;
+  }
+
+  return true;
 }

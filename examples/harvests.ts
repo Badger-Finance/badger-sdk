@@ -8,7 +8,8 @@ async function getVaultPerformance() {
   // construct the sdk for whatever network you want to interact with
   const sdk = new BadgerSDK({
     network: Network.Ethereum,
-    provider: 'https://eth-mainnet.alchemyapi.io/v2/<<YOUR ALCHEMY KEY>>',
+    provider:
+      'https://eth-archival.gateway.pokt.network/v1/lb/621cffd04e140e003a302118',
   });
   await sdk.ready();
 

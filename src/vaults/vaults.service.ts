@@ -1,5 +1,10 @@
 import { BigNumber, ethers } from 'ethers';
-import { RegistryVault } from '..';
+import {
+  keyBy,
+  RegistryVault,
+  TransactionStatus,
+  VaultRegistryEntry,
+} from '..';
 import {
   Byvwbtc__factory,
   Vault__factory,
@@ -10,13 +15,13 @@ import {
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance } from '../tokens';
-import { LoadVaultOptions, VaultHarvestData } from './interfaces';
-import { VaultRegistryEntry } from '../registry/interfaces/vault-registry-entry.interface';
-import { ListVaultOptions } from './interfaces/list-vault-options.interface';
-import { keyBy } from '../utils/key-by';
-import { TransactionStatus } from '../config/enums/transaction-status.enum';
+import {
+  ListVaultOptions,
+  LoadVaultOptions,
+  VaultHarvestData,
+} from './interfaces';
 import { Strategy } from '../contracts/Strategy';
-import { parseHarvestEvents } from './vaults.utils';
+import { parseHarvestEvents, timestampInRange } from './vaults.utils';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -121,29 +126,10 @@ export class VaultsService extends Service {
     return this.vaults[checksumAddress];
   }
 
-  // @inTimeRange
-  async listHarvests({
-    address,
-    timestamp_gt,
-    timestamp_gte,
-    timestamp_lt,
-    timestamp_lte,
-  }: ListVaultOptions): Promise<{ data: VaultHarvestData[] }> {
-    const timestampInRange = (timestamp: number): boolean => {
-      if (timestamp_gt && timestamp <= timestamp_gt) {
-        return false;
-      }
-      if (timestamp_gte && timestamp < timestamp_gte) {
-        return false;
-      }
-      if (timestamp_lt && timestamp >= timestamp_lt) {
-        return false;
-      }
-      if (timestamp_lte && timestamp > timestamp_lte) {
-        return false;
-      }
-      return true;
-    };
+  async listHarvests(
+    options: ListVaultOptions,
+  ): Promise<{ data: VaultHarvestData[] }> {
+    const { address } = options;
 
     const strategy = await this.getVaultStrategy(address);
     const harvestFilter = strategy.filters.Harvest();
@@ -158,10 +144,10 @@ export class VaultsService extends Service {
     const { harvestEventsWithTimestamps, treeDistributionEventWithTimestamps } =
       await parseHarvestEvents(allHarvestEvents, allTreeDistributionEvents);
     const harvestEvents = harvestEventsWithTimestamps.filter((h) =>
-      timestampInRange(h.timestamp),
+      timestampInRange(options, h.timestamp),
     );
     const treeDistributionEvents = treeDistributionEventWithTimestamps.filter(
-      (d) => timestampInRange(d.timestamp),
+      (d) => timestampInRange(options, d.timestamp),
     );
 
     const harvestEventsByTimestamps = keyBy(
