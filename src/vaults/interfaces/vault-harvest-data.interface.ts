@@ -1,7 +1,7 @@
-import { VaultHarvestEvent, VaultTreeDistributionEvent } from '.';
+import { VaultPerformanceEvent } from '.';
 
 export interface VaultHarvestData {
   timestamp: number;
-  harvests: VaultHarvestEvent[];
-  treeDistributions: VaultTreeDistributionEvent[];
+  harvests: VaultPerformanceEvent[];
+  treeDistributions: VaultPerformanceEvent[];
 }
