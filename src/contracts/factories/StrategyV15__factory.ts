@@ -12,25 +12,6 @@ const _abi = [
     inputs: [
       {
         indexed: false,
-        internalType: 'string',
-        name: 'name',
-        type: 'string',
-      },
-      {
-        indexed: false,
-        internalType: 'uint256',
-        name: 'value',
-        type: 'uint256',
-      },
-    ],
-    name: 'Debug',
-    type: 'event',
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: false,
         internalType: 'address',
         name: 'account',
         type: 'address',
@@ -45,7 +26,7 @@ const _abi = [
       {
         indexed: false,
         internalType: 'uint256',
-        name: 'nawMaxDeviationThreshold',
+        name: 'newMaxDeviationThreshold',
         type: 'uint256',
       },
     ],
@@ -67,64 +48,12 @@ const _abi = [
   },
   {
     inputs: [],
-    name: 'LENDING_POOL',
-    outputs: [
-      {
-        internalType: 'contract ILendingPool',
-        name: '',
-        type: 'address',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
     name: 'MAX_BPS',
     outputs: [
       {
         internalType: 'uint256',
         name: '',
         type: 'uint256',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'REWARD',
-    outputs: [
-      {
-        internalType: 'address',
-        name: '',
-        type: 'address',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'REWARDS_CONTRACT',
-    outputs: [
-      {
-        internalType: 'contract IRewardsContract',
-        name: '',
-        type: 'address',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'ROUTER',
-    outputs: [
-      {
-        internalType: 'contract IRouter',
-        name: '',
-        type: 'address',
       },
     ],
     stateMutability: 'view',
@@ -141,19 +70,6 @@ const _abi = [
     name: '__BaseStrategy_init',
     outputs: [],
     stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [],
-    name: 'aToken',
-    outputs: [
-      {
-        internalType: 'address',
-        name: '',
-        type: 'address',
-      },
-    ],
-    stateMutability: 'view',
     type: 'function',
   },
   {
@@ -354,24 +270,6 @@ const _abi = [
     inputs: [
       {
         internalType: 'address',
-        name: '_vault',
-        type: 'address',
-      },
-      {
-        internalType: 'address[1]',
-        name: '_wantConfig',
-        type: 'address[1]',
-      },
-    ],
-    name: 'initialize',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-  {
-    inputs: [
-      {
-        internalType: 'address',
         name: 'token',
         type: 'address',
       },
@@ -546,13 +444,7 @@ const _abi = [
   {
     inputs: [],
     name: 'withdrawToVault',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: 'balance',
-        type: 'uint256',
-      },
-    ],
+    outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
   },

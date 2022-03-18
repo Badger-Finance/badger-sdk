@@ -1,5 +1,7 @@
+import { VaultState, VaultVersion } from '../..';
+
 export interface VaultRegistryEntry {
   address: string;
-  version: string;
-  status: number;
+  version: VaultVersion;
+  state: VaultState;
 }
