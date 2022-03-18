@@ -34,7 +34,7 @@ import BadgerSDK, { Network } from '@badger-dao/sdk';
 
 const sdk = new BadgerSDK({
   network: Network.Ethereum,
-  provider: 'https://eth-mainnet.alchemyapi.io/v2/<<YOUR ALCHEMY KEY>>',
+  provider: 'https://eth-archival.gateway.pokt.network/v1/lb/<APP_ID>',
 });
 ```
 
@@ -61,32 +61,6 @@ await subgraph.loadSetts({
 });
 ```
 
-## Locally linking the package
-
-In order to link the package first you need to build it:
-
-```bash
-yarn build
-```
-
-then go to the lib folder and create a symlink with [yarn link](https://classic.yarnpkg.com/en/docs/cli/link):
-
-```bash
-cd lib && yarn link
-```
-
-after that, go to the project you want to link the package to and use the symlink you just created:
-
-```bash
-yarn link "@badger-dao/sdk"
-```
-
-If you want to unlink you need to:
-
-```bash
-yarn unlink "@badger-dao/sdk"
-```
-
 ## Development
 
 Consider to use package lock file, while installing node dependencies:
@@ -94,6 +68,12 @@ Consider to use package lock file, while installing node dependencies:
 ```sh
 yarn install --frozen-lockfile
 ```
+
+General knowledge for contributing to the repository is kept in [Documentation](./docs).
+
+Some topics covered include:
+
+- [Local Testing and Examples](./docs/local-testing.md)
 
 ## Releasing new version
 
