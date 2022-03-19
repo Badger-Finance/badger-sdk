@@ -1,7 +1,5 @@
-export interface ListVaultOptions {
+import { TimeRangeOptions } from '../../common/interfaces';
+
+export interface ListVaultOptions extends TimeRangeOptions {
   address: string;
-  timestamp_gt?: number;
-  timestamp_gte?: number;
-  timestamp_lt?: number;
-  timestamp_lte?: number;
 }

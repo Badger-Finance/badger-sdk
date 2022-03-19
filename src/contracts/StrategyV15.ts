@@ -29,13 +29,8 @@ export declare namespace BaseStrategy {
 export interface StrategyV15Interface extends utils.Interface {
   contractName: 'StrategyV15';
   functions: {
-    'LENDING_POOL()': FunctionFragment;
     'MAX_BPS()': FunctionFragment;
-    'REWARD()': FunctionFragment;
-    'REWARDS_CONTRACT()': FunctionFragment;
-    'ROUTER()': FunctionFragment;
     '__BaseStrategy_init(address)': FunctionFragment;
-    'aToken()': FunctionFragment;
     'autoCompoundRatio()': FunctionFragment;
     'balanceOf()': FunctionFragment;
     'balanceOfPool()': FunctionFragment;
@@ -50,7 +45,6 @@ export interface StrategyV15Interface extends utils.Interface {
     'governance()': FunctionFragment;
     'guardian()': FunctionFragment;
     'harvest()': FunctionFragment;
-    'initialize(address,address[1])': FunctionFragment;
     'isProtectedToken(address)': FunctionFragment;
     'isTendable()': FunctionFragment;
     'keeper()': FunctionFragment;
@@ -68,22 +62,11 @@ export interface StrategyV15Interface extends utils.Interface {
     'withdrawalMaxDeviationThreshold()': FunctionFragment;
   };
 
-  encodeFunctionData(
-    functionFragment: 'LENDING_POOL',
-    values?: undefined,
-  ): string;
   encodeFunctionData(functionFragment: 'MAX_BPS', values?: undefined): string;
-  encodeFunctionData(functionFragment: 'REWARD', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'REWARDS_CONTRACT',
-    values?: undefined,
-  ): string;
-  encodeFunctionData(functionFragment: 'ROUTER', values?: undefined): string;
   encodeFunctionData(
     functionFragment: '__BaseStrategy_init',
     values: [string],
   ): string;
-  encodeFunctionData(functionFragment: 'aToken', values?: undefined): string;
   encodeFunctionData(
     functionFragment: 'autoCompoundRatio',
     values?: undefined,
@@ -122,10 +105,6 @@ export interface StrategyV15Interface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: 'guardian', values?: undefined): string;
   encodeFunctionData(functionFragment: 'harvest', values?: undefined): string;
-  encodeFunctionData(
-    functionFragment: 'initialize',
-    values: [string, [string]],
-  ): string;
   encodeFunctionData(
     functionFragment: 'isProtectedToken',
     values: [string],
@@ -166,22 +145,11 @@ export interface StrategyV15Interface extends utils.Interface {
     values?: undefined,
   ): string;
 
-  decodeFunctionResult(
-    functionFragment: 'LENDING_POOL',
-    data: BytesLike,
-  ): Result;
   decodeFunctionResult(functionFragment: 'MAX_BPS', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'REWARD', data: BytesLike): Result;
-  decodeFunctionResult(
-    functionFragment: 'REWARDS_CONTRACT',
-    data: BytesLike,
-  ): Result;
-  decodeFunctionResult(functionFragment: 'ROUTER', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: '__BaseStrategy_init',
     data: BytesLike,
   ): Result;
-  decodeFunctionResult(functionFragment: 'aToken', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'autoCompoundRatio',
     data: BytesLike,
@@ -217,7 +185,6 @@ export interface StrategyV15Interface extends utils.Interface {
   decodeFunctionResult(functionFragment: 'governance', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'guardian', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'harvest', data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: 'initialize', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'isProtectedToken',
     data: BytesLike,
@@ -250,13 +217,11 @@ export interface StrategyV15Interface extends utils.Interface {
   ): Result;
 
   events: {
-    'Debug(string,uint256)': EventFragment;
     'Paused(address)': EventFragment;
     'SetWithdrawalMaxDeviationThreshold(uint256)': EventFragment;
     'Unpaused(address)': EventFragment;
   };
 
-  getEvent(nameOrSignatureOrTopic: 'Debug'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Paused'): EventFragment;
   getEvent(
     nameOrSignatureOrTopic: 'SetWithdrawalMaxDeviationThreshold',
@@ -264,20 +229,13 @@ export interface StrategyV15Interface extends utils.Interface {
   getEvent(nameOrSignatureOrTopic: 'Unpaused'): EventFragment;
 }
 
-export type DebugEvent = TypedEvent<
-  [string, BigNumber],
-  { name: string; value: BigNumber }
->;
-
-export type DebugEventFilter = TypedEventFilter<DebugEvent>;
-
 export type PausedEvent = TypedEvent<[string], { account: string }>;
 
 export type PausedEventFilter = TypedEventFilter<PausedEvent>;
 
 export type SetWithdrawalMaxDeviationThresholdEvent = TypedEvent<
   [BigNumber],
-  { nawMaxDeviationThreshold: BigNumber }
+  { newMaxDeviationThreshold: BigNumber }
 >;
 
 export type SetWithdrawalMaxDeviationThresholdEventFilter =
@@ -315,22 +273,12 @@ export interface StrategyV15 extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
-    LENDING_POOL(overrides?: CallOverrides): Promise<[string]>;
-
     MAX_BPS(overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    REWARD(overrides?: CallOverrides): Promise<[string]>;
-
-    REWARDS_CONTRACT(overrides?: CallOverrides): Promise<[string]>;
-
-    ROUTER(overrides?: CallOverrides): Promise<[string]>;
 
     __BaseStrategy_init(
       _vault: string,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
-
-    aToken(overrides?: CallOverrides): Promise<[string]>;
 
     autoCompoundRatio(overrides?: CallOverrides): Promise<[BigNumber]>;
 
@@ -370,12 +318,6 @@ export interface StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<[string]>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
-    ): Promise<ContractTransaction>;
-
-    initialize(
-      _vault: string,
-      _wantConfig: [string],
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
@@ -432,22 +374,12 @@ export interface StrategyV15 extends BaseContract {
     ): Promise<[BigNumber]>;
   };
 
-  LENDING_POOL(overrides?: CallOverrides): Promise<string>;
-
   MAX_BPS(overrides?: CallOverrides): Promise<BigNumber>;
-
-  REWARD(overrides?: CallOverrides): Promise<string>;
-
-  REWARDS_CONTRACT(overrides?: CallOverrides): Promise<string>;
-
-  ROUTER(overrides?: CallOverrides): Promise<string>;
 
   __BaseStrategy_init(
     _vault: string,
     overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
-
-  aToken(overrides?: CallOverrides): Promise<string>;
 
   autoCompoundRatio(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -485,12 +417,6 @@ export interface StrategyV15 extends BaseContract {
   guardian(overrides?: CallOverrides): Promise<string>;
 
   harvest(
-    overrides?: Overrides & { from?: string | Promise<string> },
-  ): Promise<ContractTransaction>;
-
-  initialize(
-    _vault: string,
-    _wantConfig: [string],
     overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
@@ -544,22 +470,12 @@ export interface StrategyV15 extends BaseContract {
   ): Promise<BigNumber>;
 
   callStatic: {
-    LENDING_POOL(overrides?: CallOverrides): Promise<string>;
-
     MAX_BPS(overrides?: CallOverrides): Promise<BigNumber>;
-
-    REWARD(overrides?: CallOverrides): Promise<string>;
-
-    REWARDS_CONTRACT(overrides?: CallOverrides): Promise<string>;
-
-    ROUTER(overrides?: CallOverrides): Promise<string>;
 
     __BaseStrategy_init(
       _vault: string,
       overrides?: CallOverrides,
     ): Promise<void>;
-
-    aToken(overrides?: CallOverrides): Promise<string>;
 
     autoCompoundRatio(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -596,12 +512,6 @@ export interface StrategyV15 extends BaseContract {
       overrides?: CallOverrides,
     ): Promise<BaseStrategy.TokenAmountStructOutput[]>;
 
-    initialize(
-      _vault: string,
-      _wantConfig: [string],
-      overrides?: CallOverrides,
-    ): Promise<void>;
-
     isProtectedToken(
       token: string,
       overrides?: CallOverrides,
@@ -636,7 +546,7 @@ export interface StrategyV15 extends BaseContract {
 
     withdrawOther(_asset: string, overrides?: CallOverrides): Promise<void>;
 
-    withdrawToVault(overrides?: CallOverrides): Promise<BigNumber>;
+    withdrawToVault(overrides?: CallOverrides): Promise<void>;
 
     withdrawalMaxDeviationThreshold(
       overrides?: CallOverrides,
@@ -644,17 +554,14 @@ export interface StrategyV15 extends BaseContract {
   };
 
   filters: {
-    'Debug(string,uint256)'(name?: null, value?: null): DebugEventFilter;
-    Debug(name?: null, value?: null): DebugEventFilter;
-
     'Paused(address)'(account?: null): PausedEventFilter;
     Paused(account?: null): PausedEventFilter;
 
     'SetWithdrawalMaxDeviationThreshold(uint256)'(
-      nawMaxDeviationThreshold?: null,
+      newMaxDeviationThreshold?: null,
     ): SetWithdrawalMaxDeviationThresholdEventFilter;
     SetWithdrawalMaxDeviationThreshold(
-      nawMaxDeviationThreshold?: null,
+      newMaxDeviationThreshold?: null,
     ): SetWithdrawalMaxDeviationThresholdEventFilter;
 
     'Unpaused(address)'(account?: null): UnpausedEventFilter;
@@ -662,22 +569,12 @@ export interface StrategyV15 extends BaseContract {
   };
 
   estimateGas: {
-    LENDING_POOL(overrides?: CallOverrides): Promise<BigNumber>;
-
     MAX_BPS(overrides?: CallOverrides): Promise<BigNumber>;
-
-    REWARD(overrides?: CallOverrides): Promise<BigNumber>;
-
-    REWARDS_CONTRACT(overrides?: CallOverrides): Promise<BigNumber>;
-
-    ROUTER(overrides?: CallOverrides): Promise<BigNumber>;
 
     __BaseStrategy_init(
       _vault: string,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
-
-    aToken(overrides?: CallOverrides): Promise<BigNumber>;
 
     autoCompoundRatio(overrides?: CallOverrides): Promise<BigNumber>;
 
@@ -713,12 +610,6 @@ export interface StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<BigNumber>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
-    ): Promise<BigNumber>;
-
-    initialize(
-      _vault: string,
-      _wantConfig: [string],
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
@@ -776,22 +667,12 @@ export interface StrategyV15 extends BaseContract {
   };
 
   populateTransaction: {
-    LENDING_POOL(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
     MAX_BPS(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    REWARD(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    REWARDS_CONTRACT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    ROUTER(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     __BaseStrategy_init(
       _vault: string,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
-
-    aToken(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     autoCompoundRatio(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
@@ -831,12 +712,6 @@ export interface StrategyV15 extends BaseContract {
     guardian(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     harvest(
-      overrides?: Overrides & { from?: string | Promise<string> },
-    ): Promise<PopulatedTransaction>;
-
-    initialize(
-      _vault: string,
-      _wantConfig: [string],
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 

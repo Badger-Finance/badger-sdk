@@ -72,12 +72,7 @@ export class BadgerSDK {
   }
 
   ready() {
-    return Promise.all([
-      this.loading,
-      this.registry.ready(),
-      this.rewards.ready(),
-      this.vaults.ready(),
-    ]);
+    return Promise.all([this.loading, this.registry.ready()]);
   }
 
   update(network: Networkish, provider: SDKProvider) {

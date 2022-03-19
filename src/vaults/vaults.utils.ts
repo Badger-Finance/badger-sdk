@@ -1,4 +1,6 @@
-import { VaultHarvestEvent, VaultTreeDistributionEvent } from '.';
+import { VaultHarvestEvent, VaultTreeDistributionEvent, VaultVersion } from '.';
+import { VaultState } from '..';
+import { TimeRangeOptions } from '../common';
 import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
 
 /**
@@ -46,4 +48,48 @@ export async function parseHarvestEvents(
     harvestEventsWithTimestamps,
     treeDistributionEventWithTimestamps,
   };
+}
+
+export function getVaultVersion(version: string): VaultVersion {
+  switch (version) {
+    case VaultVersion.v2:
+      return VaultVersion.v2;
+    case VaultVersion.v1_5:
+      return VaultVersion.v1_5;
+    default:
+      return VaultVersion.v1;
+  }
+}
+
+export function getVaultState(status: number): VaultState {
+  switch (status) {
+    case 2:
+      return VaultState.Open;
+    case 1:
+      return VaultState.Guarded;
+    default:
+      return VaultState.Experimental;
+  }
+}
+
+export function timestampInRange(
+  options: TimeRangeOptions,
+  timestamp: number,
+): boolean {
+  const { timestamp_gt, timestamp_gte, timestamp_lt, timestamp_lte } = options;
+
+  if (timestamp_gt && timestamp <= timestamp_gt) {
+    return false;
+  }
+  if (timestamp_gte && timestamp < timestamp_gte) {
+    return false;
+  }
+  if (timestamp_lt && timestamp >= timestamp_lt) {
+    return false;
+  }
+  if (timestamp_lte && timestamp > timestamp_lte) {
+    return false;
+  }
+
+  return true;
 }

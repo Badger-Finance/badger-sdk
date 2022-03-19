@@ -1,6 +1,7 @@
+import { VaultRegistryEntry } from '.';
 import { Registry, Registry__factory } from '../contracts';
 import { Service } from '../service';
-import { VaultRegistry } from './interfaces/vault-registry.interface';
+import { getVaultState, getVaultVersion } from '../vaults/vaults.utils';
 
 export const REGISTRY_ADDRESS = '0xFda7eB6f8b7a9e9fCFd348042ae675d1d652454f';
 
@@ -30,11 +31,18 @@ export class RegistryService extends Service {
     return this.entries[key];
   }
 
-  async getProductionVaults(): Promise<VaultRegistry[]> {
+  async getProductionVaults(): Promise<VaultRegistryEntry[]> {
     if (!this.registry) {
       return [];
     }
-    return this.registry.getProductionVaults();
+    const vaults = await this.registry.getProductionVaults();
+    return vaults.flatMap((v) =>
+      v.list.map((i) => ({
+        address: i,
+        state: getVaultState(v.status),
+        version: getVaultVersion(v.version),
+      })),
+    );
   }
 
   async getVaults(version: string, author: string): Promise<string[]> {
