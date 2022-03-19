@@ -13,7 +13,7 @@ export { VaultStrategy } from './vault-strategy.interface';
 export { VaultSummary } from './vault-summary.interface';
 export { VaultSnapshot } from './vault-snapshot.interface';
 export { Vault } from './vault.interface';
-export { TokenBalance } from './token-balance.interface';
+export { TokenValue } from './token-value.interface';
 export { UserBoostData } from './user-boost-data.interface';
 export { ValueSource } from './value-source.interface';
 export { RewardTree } from './reward-tree.interface';

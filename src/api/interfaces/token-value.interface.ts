@@ -1,4 +1,6 @@
-export interface TokenBalance {
+import { TokenBalance } from '../../tokens';
+
+export interface TokenValue extends TokenBalance {
   address: string;
   name: string;
   symbol: string;

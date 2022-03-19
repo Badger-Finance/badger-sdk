@@ -1,4 +1,4 @@
-import { BoostConfig, ValueSource, TokenBalance, VaultStrategy } from '.';
+import { BoostConfig, ValueSource, TokenValue, VaultStrategy } from '.';
 import { VaultBehavior } from '../../vaults';
 import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
 
@@ -22,7 +22,7 @@ export interface Vault {
   sources: ValueSource[];
   sourcesApy: ValueSource[];
   state: VaultState;
-  tokens: TokenBalance[];
+  tokens: TokenValue[];
   underlyingToken: string;
   vaultToken: string;
   strategy: VaultStrategy;

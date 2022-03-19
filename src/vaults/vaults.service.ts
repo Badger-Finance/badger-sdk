@@ -1,9 +1,9 @@
 import { BigNumber, ethers } from 'ethers';
 import {
-  keyBy,
   RegistryVault,
   TransactionStatus,
   VaultRegistryEntry,
+  VaultVersion,
 } from '..';
 import {
   Byvwbtc__factory,
@@ -12,30 +12,27 @@ import {
   Strategy__factory,
   Vault,
   Erc20__factory,
+  VaultV15__factory,
+  StrategyV15__factory,
 } from '../contracts';
 import { Service } from '../service';
-import { formatBalance } from '../tokens';
+import { formatBalance, TokenBalance } from '../tokens';
 import {
   ListVaultOptions,
   LoadVaultOptions,
   VaultHarvestData,
 } from './interfaces';
 import { Strategy } from '../contracts/Strategy';
-import { parseHarvestEvents, timestampInRange } from './vaults.utils';
+import {
+  loadVaultPerformanceEvents,
+  loadVaultV15PerformanceEvents,
+} from './vaults.utils';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 
 export class VaultsService extends Service {
-  private loading?: Promise<void>;
   private vaults: Record<string, RegistryVault> = {};
-
-  async ready() {
-    if (!this.loading) {
-      this.loading = this.init();
-    }
-    return this.loading;
-  }
 
   async loadVaults(): Promise<RegistryVault[]> {
     const registry = await this.sdk.registry.getProductionVaults();
@@ -131,68 +128,33 @@ export class VaultsService extends Service {
   ): Promise<{ data: VaultHarvestData[] }> {
     const { address } = options;
 
-    const strategy = await this.getVaultStrategy(address);
-    const harvestFilter = strategy.filters.Harvest();
-    const treeDistributionFilter = strategy.filters.TreeDistribution();
+    const checksumAddress = ethers.utils.getAddress(address);
+    const cachedVault = this.vaults[checksumAddress];
 
-    // Get harvest and tree distributions for given time range filter
-    const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
-      strategy.queryFilter(harvestFilter),
-      strategy.queryFilter(treeDistributionFilter),
-    ]);
-
-    const { harvestEventsWithTimestamps, treeDistributionEventWithTimestamps } =
-      await parseHarvestEvents(allHarvestEvents, allTreeDistributionEvents);
-    const harvestEvents = harvestEventsWithTimestamps.filter((h) =>
-      timestampInRange(options, h.timestamp),
-    );
-    const treeDistributionEvents = treeDistributionEventWithTimestamps.filter(
-      (d) => timestampInRange(options, d.timestamp),
-    );
-
-    const harvestEventsByTimestamps = keyBy(
-      harvestEvents,
-      (harvestEvent) => harvestEvent.timestamp,
-    );
-    const treeDistributionEventsByTimestamps = keyBy(
-      treeDistributionEvents,
-      (treeDistributionEvent) => treeDistributionEvent.timestamp,
-    );
-
-    // Create timestamps for events
-    const harvestEventsTimestamps = Array.from(
-      harvestEventsByTimestamps.keys(),
-    );
-    const treeDistributionEventsTimestamps = Array.from(
-      treeDistributionEventsByTimestamps.keys(),
-    );
-    const timestamps = Array.from(
-      new Set([
-        ...harvestEventsTimestamps,
-        ...treeDistributionEventsTimestamps,
-      ]),
-    ).sort();
-
-    const data = [];
-    // Map timestamps to events
-    for (const timestamp of timestamps) {
-      const harvests = harvestEventsByTimestamps.get(timestamp) ?? [];
-      const treeDistributions =
-        treeDistributionEventsByTimestamps.get(timestamp) ?? [];
-      data.push({
-        timestamp,
-        harvests,
-        treeDistributions,
-      });
+    if (cachedVault.version === VaultVersion.v1_5) {
+      const vault = VaultV15__factory.connect(address, this.sdk.provider);
+      return loadVaultV15PerformanceEvents(vault, options);
     }
 
-    return {
-      data,
-    };
+    const strategy = await this.getVaultStrategy(checksumAddress);
+    return loadVaultPerformanceEvents(strategy, options);
   }
 
   async getVaultStrategy(address: string): Promise<Strategy> {
     const checksumAddress = ethers.utils.getAddress(address);
+    const cachedVault = this.vaults[checksumAddress];
+    let version = VaultVersion.v1;
+    if (cachedVault) {
+      version = cachedVault.version;
+    }
+    if (version === VaultVersion.v1_5) {
+      const vault = VaultV15__factory.connect(
+        checksumAddress,
+        this.sdk.provider,
+      );
+      const strategyAddress = await vault.strategy();
+      return Strategy__factory.connect(strategyAddress, this.sdk.provider);
+    }
     const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
     const controller = Controller__factory.connect(
       await vault.controller(),
@@ -200,6 +162,42 @@ export class VaultsService extends Service {
     );
     const strategyAddress = await controller.strategies(await vault.token());
     return Strategy__factory.connect(strategyAddress, this.sdk.provider);
+  }
+
+  async getPendingYield(
+    address: string,
+  ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    const cachedVault = this.vaults[checksumAddress];
+    if (cachedVault.version !== VaultVersion.v1_5) {
+      throw new Error(
+        `getPendingYield is not supported for vault version ${cachedVault.version}`,
+      );
+    }
+    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
+    const [lastHarvestedAt, strategyAddress] = await Promise.all([
+      vault.lastHarvestedAt(),
+      vault.strategy(),
+    ]);
+    const strategy = StrategyV15__factory.connect(
+      strategyAddress,
+      this.sdk.provider,
+    );
+    const pendingRewards = await strategy.balanceOfRewards();
+    const tokenRewards = await Promise.all(
+      pendingRewards.map(async (r) => {
+        const pendingTokens = await this.sdk.tokens.loadToken(r.token);
+        const pendingAmount = formatBalance(r.amount, pendingTokens.decimals);
+        return {
+          ...pendingTokens,
+          balance: pendingAmount,
+        };
+      }),
+    );
+    return {
+      lastHarvestedAt: lastHarvestedAt.toNumber(),
+      tokenRewards,
+    };
   }
 
   async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
@@ -328,25 +326,5 @@ export class VaultsService extends Service {
     }
 
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
-  }
-
-  private async init() {
-    try {
-      await this.sdk.registry.ready();
-      // const vaultsInfo = await this.sdk.registry.getProductionVaults();
-      // this.vaultsInfo = Object.fromEntries(
-      //   vaultsInfo.flatMap((info) =>
-      //     info.list.map((vault): [string, VaultRegistration] => [
-      //       vault,
-      //       { address: vault, version: info.version, status: info.status },
-      //     ]),
-      //   ),
-      // );
-    } catch (err) {
-      console.log(
-        `Failed to initialize vaults for ${this.sdk.config.network}`,
-        err,
-      );
-    }
   }
 }
