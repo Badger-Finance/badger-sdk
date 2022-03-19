@@ -1,4 +1,4 @@
-import { TokenBalance } from './token-balance.interface';
+import { TokenValue } from './token-value.interface';
 
 export interface VaultData {
   address: string;
@@ -11,6 +11,6 @@ export interface VaultData {
   earnedValue: number;
   depositedBalance: number;
   withdrawnBalance: number;
-  tokens: TokenBalance[];
-  earnedTokens: TokenBalance[];
+  tokens: TokenValue[];
+  earnedTokens: TokenValue[];
 }
