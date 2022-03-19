@@ -53,3 +53,57 @@ Object {
   ],
 }
 `;
+
+exports[`vaults.utils parseHarvestV15Events converts vault events to typed usable events 1`] = `
+Object {
+  "distributions": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x0186256ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+  ],
+  "harvests": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x05da3040dc0640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xTEST",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x05244a1fe78640",
+        "type": "BigNumber",
+      },
+      "block": 1647315665,
+      "timestamp": 1647284957,
+      "token": "0xTEST",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647284957,
+      "token": "0xTEST",
+    },
+  ],
+}
+`;

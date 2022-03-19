@@ -16,7 +16,7 @@ import {
  * Parse Vault v1 harvest related events.
  * @param harvestEvents Vault Harvest events
  * @param treeDistributionEvents Vault TreeDsitribution events
- * @returns Timestamp aggregated vault harvest and tree distribution events.
+ * @returns Parsed harvest and distrubtion events with timestamps
  */
 export async function parseHarvestEvents(
   harvestEvents: HarvestEvent[],
@@ -59,6 +59,13 @@ export async function parseHarvestEvents(
   };
 }
 
+/**
+
+ * Parse Vault v1.5 harvest related events.
+ * @param harvestEvents Vault Harvest events
+ * @param treeDistributionEvents Vault TreeDsitribution events
+ * @returns Parsed harvest and distrubtion events
+ */
 export async function parseHarvestV15Events(
   harvestEvents: HarvestedEvent[],
   treeDistributionEvents: TreeDistributionEventV15[],
@@ -84,6 +91,11 @@ export async function parseHarvestV15Events(
   };
 }
 
+/**
+ * Convert on chain string to vault version enumeration.
+ * @param version On chain version
+ * @returns Vault version enumeration
+ */
 export function getVaultVersion(version: string): VaultVersion {
   switch (version) {
     case VaultVersion.v2:
@@ -95,6 +107,11 @@ export function getVaultVersion(version: string): VaultVersion {
   }
 }
 
+/**
+ * Convert on chain state to vault state enumeration.
+ * @param version On chain state
+ * @returns Vault state enumeration
+ */
 export function getVaultState(status: number): VaultState {
   switch (status) {
     case 2:
