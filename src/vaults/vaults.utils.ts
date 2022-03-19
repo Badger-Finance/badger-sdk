@@ -128,21 +128,27 @@ export function timestampInRange(
   timestamp: number,
 ): boolean {
   const { timestamp_gt, timestamp_gte, timestamp_lt, timestamp_lte } = options;
+  
+  let lowerBound = 0;
+  let upperBound = Number.MAX_SAFE_INTEGER;
+  if (timestamp_gt) {
+    lowerBound = timestamp_gt + 1;
+  }
+  if (timestamp_gte) {
+    lowerBound = timestamp_gte;
+  }
+  if (timestamp_lt) {
+    upperBound = timestamp_lt - 1;
+  }
+  if (timestamp_lte) {
+    upperBound = timestamp_lte;
+  }
 
-  if (timestamp_gt && timestamp <= timestamp_gt) {
-    return false;
-  }
-  if (timestamp_gte && timestamp < timestamp_gte) {
-    return false;
-  }
-  if (timestamp_lt && timestamp >= timestamp_lt) {
-    return false;
-  }
-  if (timestamp_lte && timestamp > timestamp_lte) {
-    return false;
+  if (lowerBound > upperBound) {
+    throw new Error(`Invalid time range check requested (${lowerBound} - ${upperBound})`);
   }
 
-  return true;
+  return timestamp >= lowerBound && timestamp <= upperBound;
 }
 
 export async function loadVaultPerformanceEvents<T extends TimeRangeOptions>(

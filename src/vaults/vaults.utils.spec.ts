@@ -3,6 +3,7 @@ import {
   getVaultVersion,
   parseHarvestEvents,
   parseHarvestV15Events,
+  timestampInRange,
 } from './vaults.utils';
 import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
 import { BigNumber, ethers } from 'ethers';
@@ -12,6 +13,7 @@ import {
 } from '../contracts/VaultV15';
 import { VaultVersion } from '.';
 import { VaultState } from '..';
+import { TimeRangeOptions } from '../common';
 
 describe('vaults.utils', () => {
   describe('parseHarvestEvents', () => {
@@ -152,6 +154,30 @@ describe('vaults.utils', () => {
       'evaluates %s as vault state %s',
       (input: number, version: VaultState) => {
         expect(getVaultState(input)).toEqual(version);
+      },
+    );
+  });
+
+  describe('timestampInRange', () => {
+    const defaultTimestamp = Date.now();
+    it.each([
+      [{}, defaultTimestamp, true],
+      [{ timestamp_gte: defaultTimestamp }, defaultTimestamp, true],
+      [{ timestamp_gte: defaultTimestamp + 1 }, defaultTimestamp, false],
+      [{ timestamp_gt: defaultTimestamp - 1 }, defaultTimestamp, true],
+      [{ timestamp_gt: defaultTimestamp }, defaultTimestamp, false],
+      [{ timestamp_lte: defaultTimestamp }, defaultTimestamp, true],
+      [{ timestamp_lte: defaultTimestamp - 1 }, defaultTimestamp, false],
+      [{ timestamp_lt: defaultTimestamp + 1 }, defaultTimestamp, true],
+      [{ timestamp_lt: defaultTimestamp }, defaultTimestamp, false],
+      [{ timestamp_lte: defaultTimestamp, timestamp_gte: defaultTimestamp }, defaultTimestamp, true],
+      [{ timestamp_lt: defaultTimestamp + 1, timestamp_gt: defaultTimestamp - 1 }, defaultTimestamp, true],
+      [{ timestamp_lt: defaultTimestamp + 3, timestamp_gt: defaultTimestamp }, defaultTimestamp, false],
+      [{ timestamp_lt: defaultTimestamp, timestamp_gt: defaultTimestamp - 3 }, defaultTimestamp, false],
+    ])(
+      'evaluates %p options with %d timestamp as %s',
+      (options: TimeRangeOptions, timestamp: number, expected: boolean) => {
+        expect(timestampInRange(options, timestamp)).toEqual(expected);
       },
     );
   });
