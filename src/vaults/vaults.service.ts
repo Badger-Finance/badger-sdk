@@ -13,9 +13,10 @@ import {
   Vault,
   Erc20__factory,
   VaultV15__factory,
+  StrategyV15__factory,
 } from '../contracts';
 import { Service } from '../service';
-import { formatBalance } from '../tokens';
+import { formatBalance, TokenBalance } from '../tokens';
 import {
   ListVaultOptions,
   LoadVaultOptions,
@@ -31,15 +32,7 @@ const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 
 export class VaultsService extends Service {
-  private loading?: Promise<void>;
   private vaults: Record<string, RegistryVault> = {};
-
-  async ready() {
-    if (!this.loading) {
-      this.loading = this.init();
-    }
-    return this.loading;
-  }
 
   async loadVaults(): Promise<RegistryVault[]> {
     const registry = await this.sdk.registry.getProductionVaults();
@@ -171,6 +164,33 @@ export class VaultsService extends Service {
     return Strategy__factory.connect(strategyAddress, this.sdk.provider);
   }
 
+  async getPendingYield(address: string): Promise<{ lastHarvestedAt: number, tokenRewards: TokenBalance[] }> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    const cachedVault = this.vaults[checksumAddress];
+    if (cachedVault.version !== VaultVersion.v1_5) {
+      throw new Error(`getPendingYield is not supported for vault version ${cachedVault.version}`);
+    }
+    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
+    const [lastHarvestedAt, strategyAddress] = await Promise.all([
+      vault.lastHarvestedAt(),
+      vault.strategy(),
+    ]);
+    const strategy = StrategyV15__factory.connect(strategyAddress, this.sdk.provider);
+    const pendingRewards = await strategy.balanceOfRewards();
+    const tokenRewards = await Promise.all(pendingRewards.map(async (r) => {
+      const pendingTokens = await this.sdk.tokens.loadToken(r.token);
+      const pendingAmount = formatBalance(r.amount, pendingTokens.decimals);
+      return { 
+        ...pendingTokens,
+        balance: pendingAmount,
+      };
+    }));
+    return {
+      lastHarvestedAt: lastHarvestedAt.toNumber(),
+      tokenRewards,
+    };
+  }
+
   async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
     if (!this.sdk.address || !this.sdk.signer) {
       console.error(`Failed deposit to ${vault}, requires an active signer`);
@@ -297,25 +317,5 @@ export class VaultsService extends Service {
     }
 
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
-  }
-
-  private async init() {
-    try {
-      await this.sdk.registry.ready();
-      // const vaultsInfo = await this.sdk.registry.getProductionVaults();
-      // this.vaultsInfo = Object.fromEntries(
-      //   vaultsInfo.flatMap((info) =>
-      //     info.list.map((vault): [string, VaultRegistration] => [
-      //       vault,
-      //       { address: vault, version: info.version, status: info.status },
-      //     ]),
-      //   ),
-      // );
-    } catch (err) {
-      console.log(
-        `Failed to initialize vaults for ${this.sdk.config.network}`,
-        err,
-      );
-    }
   }
 }
