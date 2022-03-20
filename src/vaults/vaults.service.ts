@@ -167,37 +167,13 @@ export class VaultsService extends Service {
   async getPendingYield(
     address: string,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
-    const checksumAddress = ethers.utils.getAddress(address);
-    const cachedVault = this.vaults[checksumAddress];
-    if (cachedVault.version !== VaultVersion.v1_5) {
-      throw new Error(
-        `getPendingYield is not supported for vault version ${cachedVault.version}`,
-      );
-    }
-    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
-    const [lastHarvestedAt, strategyAddress] = await Promise.all([
-      vault.lastHarvestedAt(),
-      vault.strategy(),
-    ]);
-    const strategy = StrategyV15__factory.connect(
-      strategyAddress,
-      this.sdk.provider,
-    );
-    const pendingRewards = await strategy.balanceOfRewards();
-    const tokenRewards = await Promise.all(
-      pendingRewards.map(async (r) => {
-        const pendingTokens = await this.sdk.tokens.loadToken(r.token);
-        const pendingAmount = formatBalance(r.amount, pendingTokens.decimals);
-        return {
-          ...pendingTokens,
-          balance: pendingAmount,
-        };
-      }),
-    );
-    return {
-      lastHarvestedAt: lastHarvestedAt.toNumber(),
-      tokenRewards,
-    };
+    return this.getPendingAssets(address, false);
+  }
+
+  async getPendingHarvest(
+    address: string,
+  ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
+    return this.getPendingAssets(address, true);
   }
 
   async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
@@ -326,5 +302,47 @@ export class VaultsService extends Service {
     }
 
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
+  }
+
+  private async getPendingAssets(
+    address: string,
+    harvest: boolean,
+  ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
+    const checksumAddress = ethers.utils.getAddress(address);
+    const cachedVault = this.vaults[checksumAddress];
+    if (cachedVault.version !== VaultVersion.v1_5) {
+      throw new Error(
+        `getPendingYield is not supported for vault version ${cachedVault.version}`,
+      );
+    }
+    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
+    const [lastHarvestedAt, strategyAddress] = await Promise.all([
+      vault.lastHarvestedAt(),
+      vault.strategy(),
+    ]);
+    const strategy = StrategyV15__factory.connect(
+      strategyAddress,
+      this.sdk.provider,
+    );
+    let pendingRewards;
+    if (harvest) {
+      pendingRewards = await strategy.callStatic.harvest();
+    } else {
+      pendingRewards = await strategy.balanceOfRewards();
+    }
+    const tokenRewards = await Promise.all(
+      pendingRewards.map(async (r) => {
+        const pendingTokens = await this.sdk.tokens.loadToken(r.token);
+        const pendingAmount = formatBalance(r.amount, pendingTokens.decimals);
+        return {
+          ...pendingTokens,
+          balance: pendingAmount,
+        };
+      }),
+    );
+    return {
+      lastHarvestedAt: lastHarvestedAt.toNumber(),
+      tokenRewards,
+    };
   }
 }
