@@ -16,7 +16,7 @@ import {
  * Parse Vault v1 harvest related events.
  * @param harvestEvents Vault Harvest events
  * @param treeDistributionEvents Vault TreeDsitribution events
- * @returns Timestamp aggregated vault harvest and tree distribution events.
+ * @returns Parsed harvest and distrubtion events with timestamps
  */
 export async function parseHarvestEvents(
   harvestEvents: HarvestEvent[],
@@ -31,16 +31,15 @@ export async function parseHarvestEvents(
         const block = await e.getBlock();
         return {
           timestamp: block.timestamp,
-          block: block.number,
+          block: e.args[1].toNumber(),
           amount: e.args[0],
           token: '',
         };
       } catch (err) {
         console.log(err);
         return {
-          // consider a better idea here
-          timestamp: Date.now() / 1000,
-          block: e.blockNumber,
+          timestamp: 0,
+          block: e.args[1].toNumber(),
           amount: e.args[0],
           token: '',
         };
@@ -59,6 +58,13 @@ export async function parseHarvestEvents(
   };
 }
 
+/**
+
+ * Parse Vault v1.5 harvest related events.
+ * @param harvestEvents Vault Harvest events
+ * @param treeDistributionEvents Vault TreeDsitribution events
+ * @returns Parsed harvest and distrubtion events
+ */
 export async function parseHarvestV15Events(
   harvestEvents: HarvestedEvent[],
   treeDistributionEvents: TreeDistributionEventV15[],
@@ -84,6 +90,11 @@ export async function parseHarvestV15Events(
   };
 }
 
+/**
+ * Convert on chain string to vault version enumeration.
+ * @param version On chain version
+ * @returns Vault version enumeration
+ */
 export function getVaultVersion(version: string): VaultVersion {
   switch (version) {
     case VaultVersion.v2:
@@ -95,6 +106,11 @@ export function getVaultVersion(version: string): VaultVersion {
   }
 }
 
+/**
+ * Convert on chain state to vault state enumeration.
+ * @param version On chain state
+ * @returns Vault state enumeration
+ */
 export function getVaultState(status: number): VaultState {
   switch (status) {
     case 2:
@@ -111,21 +127,27 @@ export function timestampInRange(
   timestamp: number,
 ): boolean {
   const { timestamp_gt, timestamp_gte, timestamp_lt, timestamp_lte } = options;
+  
+  let lowerBound = 0;
+  let upperBound = Number.MAX_SAFE_INTEGER;
+  if (timestamp_gt) {
+    lowerBound = timestamp_gt + 1;
+  }
+  if (timestamp_gte) {
+    lowerBound = timestamp_gte;
+  }
+  if (timestamp_lt) {
+    upperBound = timestamp_lt - 1;
+  }
+  if (timestamp_lte) {
+    upperBound = timestamp_lte;
+  }
 
-  if (timestamp_gt && timestamp <= timestamp_gt) {
-    return false;
-  }
-  if (timestamp_gte && timestamp < timestamp_gte) {
-    return false;
-  }
-  if (timestamp_lt && timestamp >= timestamp_lt) {
-    return false;
-  }
-  if (timestamp_lte && timestamp > timestamp_lte) {
-    return false;
+  if (lowerBound > upperBound) {
+    throw new Error(`Invalid time range check requested (${lowerBound} - ${upperBound})`);
   }
 
-  return true;
+  return timestamp >= lowerBound && timestamp <= upperBound;
 }
 
 export async function loadVaultPerformanceEvents<T extends TimeRangeOptions>(

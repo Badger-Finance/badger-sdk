@@ -1,5 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`vaults.utils loadVaultPerformanceEvents loads no events if not available 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
+exports[`vaults.utils loadVaultPerformanceEvents loads recent vault harvests and tree distributions 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x05244a1fe78640",
+            "type": "BigNumber",
+          },
+          "block": 1647315665,
+          "timestamp": 0,
+          "token": "",
+        },
+      ],
+      "timestamp": 0,
+      "treeDistributions": Array [],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x05da3040dc0640",
+            "type": "BigNumber",
+          },
+          "block": 1647275665,
+          "timestamp": 1647284957,
+          "token": "",
+        },
+      ],
+      "timestamp": 1647284957,
+      "treeDistributions": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x0186256ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647275665,
+          "timestamp": 1647284957,
+          "token": "0xBTC",
+        },
+      ],
+    },
+    Object {
+      "harvests": Array [],
+      "timestamp": 1647286207,
+      "treeDistributions": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647355665,
+          "timestamp": 1647286207,
+          "token": "0xBTC",
+        },
+      ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647355665,
+          "timestamp": 1647287457,
+          "token": "",
+        },
+      ],
+      "timestamp": 1647287457,
+      "treeDistributions": Array [],
+    },
+  ],
+}
+`;
+
+exports[`vaults.utils loadVaultV15PerformanceEvents loads no events if not available 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
+exports[`vaults.utils loadVaultV15PerformanceEvents loads recent vault harvests and tree distributions 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x05da3040dc0640",
+            "type": "BigNumber",
+          },
+          "block": 1647275665,
+          "timestamp": 1647284957,
+          "token": "0xTEST",
+        },
+      ],
+      "timestamp": 1647284957,
+      "treeDistributions": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x0186256ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647275665,
+          "timestamp": 1647284957,
+          "token": "0xBTC",
+        },
+      ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x05244a1fe78640",
+            "type": "BigNumber",
+          },
+          "block": 1647315665,
+          "timestamp": 1647286207,
+          "token": "0xTEST",
+        },
+      ],
+      "timestamp": 1647286207,
+      "treeDistributions": Array [],
+    },
+    Object {
+      "harvests": Array [],
+      "timestamp": 1647286707,
+      "treeDistributions": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647355665,
+          "timestamp": 1647286707,
+          "token": "0xBTC",
+        },
+      ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647355665,
+          "timestamp": 1647287457,
+          "token": "0xTEST",
+        },
+      ],
+      "timestamp": 1647287457,
+      "treeDistributions": Array [],
+    },
+  ],
+}
+`;
+
 exports[`vaults.utils parseHarvestEvents converts vault events to typed usable events 1`] = `
 Object {
   "distributions": Array [
@@ -18,7 +184,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1647355665,
-      "timestamp": 1647284957,
+      "timestamp": 1647286207,
       "token": "0xBTC",
     },
   ],
@@ -28,7 +194,7 @@ Object {
         "hex": "0x05da3040dc0640",
         "type": "BigNumber",
       },
-      "block": 1000000,
+      "block": 1647275665,
       "timestamp": 1647284957,
       "token": "",
     },
@@ -37,8 +203,8 @@ Object {
         "hex": "0x05244a1fe78640",
         "type": "BigNumber",
       },
-      "block": 1000000,
-      "timestamp": 1647284957,
+      "block": 1647315665,
+      "timestamp": 1647286207,
       "token": "",
     },
     Object {
@@ -46,9 +212,117 @@ Object {
         "hex": "0x06eb09724ac640",
         "type": "BigNumber",
       },
-      "block": 1000000,
+      "block": 1647355665,
+      "timestamp": 1647287457,
+      "token": "",
+    },
+  ],
+}
+`;
+
+exports[`vaults.utils parseHarvestEvents returns zero for timestamp on getBlock error 1`] = `
+Object {
+  "distributions": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x0186256ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647286207,
+      "token": "0xBTC",
+    },
+  ],
+  "harvests": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x05da3040dc0640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
       "timestamp": 1647284957,
       "token": "",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x05244a1fe78640",
+        "type": "BigNumber",
+      },
+      "block": 1647315665,
+      "timestamp": 0,
+      "token": "",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647287457,
+      "token": "",
+    },
+  ],
+}
+`;
+
+exports[`vaults.utils parseHarvestV15Events converts vault events to typed usable events 1`] = `
+Object {
+  "distributions": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x0186256ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647286707,
+      "token": "0xBTC",
+    },
+  ],
+  "harvests": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x05da3040dc0640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
+      "timestamp": 1647284957,
+      "token": "0xTEST",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x05244a1fe78640",
+        "type": "BigNumber",
+      },
+      "block": 1647315665,
+      "timestamp": 1647286207,
+      "token": "0xTEST",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647287457,
+      "token": "0xTEST",
     },
   ],
 }
