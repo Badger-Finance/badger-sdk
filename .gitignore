@@ -9,3 +9,4 @@ lib
 launch
 
 yarn-error.log
+coverage

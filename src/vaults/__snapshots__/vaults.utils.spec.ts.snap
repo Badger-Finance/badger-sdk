@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`vaults.utils loadVaultPerformanceEvents loads no events if not available 1`] = `
+Object {
+  "data": Array [],
+}
+`;
+
 exports[`vaults.utils loadVaultPerformanceEvents loads recent vault harvests and tree distributions 1`] = `
 Object {
   "data": Array [
@@ -56,6 +62,12 @@ Object {
       ],
     },
   ],
+}
+`;
+
+exports[`vaults.utils loadVaultV15PerformanceEvents loads no events if not available 1`] = `
+Object {
+  "data": Array [],
 }
 `;
 

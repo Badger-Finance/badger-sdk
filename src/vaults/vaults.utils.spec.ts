@@ -132,6 +132,7 @@ describe('vaults.utils', () => {
 
   describe('timestampInRange', () => {
     const defaultTimestamp = Date.now();
+
     it.each([
       [{}, defaultTimestamp, true],
       [{ timestamp_gte: defaultTimestamp }, defaultTimestamp, true],
@@ -171,6 +172,21 @@ describe('vaults.utils', () => {
         expect(timestampInRange(options, timestamp)).toEqual(expected);
       },
     );
+
+    it('throws an error on an invalid time range', () => {
+      const upper = defaultTimestamp + 1;
+      expect(() => {
+        timestampInRange(
+          {
+            timestamp_gte: upper,
+            timestamp_lte: defaultTimestamp,
+          },
+          defaultTimestamp,
+        );
+      }).toThrow(
+        `Invalid time range check requested (${upper} - ${defaultTimestamp})`,
+      );
+    });
   });
 
   describe('loadVaultPerformanceEvents', () => {
@@ -197,6 +213,18 @@ describe('vaults.utils', () => {
       const result = await loadVaultPerformanceEvents(testStrategy, {});
       expect(result).toMatchSnapshot();
     });
+
+    it('loads no events if not available', async () => {
+      const testStrategy = Strategy__factory.connect(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        new ethers.providers.JsonRpcProvider(''),
+      );
+      jest
+        .spyOn(testStrategy, 'queryFilter')
+        .mockImplementation(async (_filter) => []);
+      const result = await loadVaultPerformanceEvents(testStrategy, {});
+      expect(result).toMatchSnapshot();
+    });
   });
 
   describe('loadVaultV15PerformanceEvents', () => {
@@ -220,6 +248,18 @@ describe('vaults.utils', () => {
           }
           return distributionsV15;
         });
+      const result = await loadVaultV15PerformanceEvents(testVault, {});
+      expect(result).toMatchSnapshot();
+    });
+
+    it('loads no events if not available', async () => {
+      const testVault = VaultV15__factory.connect(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        new ethers.providers.JsonRpcProvider(''),
+      );
+      jest
+        .spyOn(testVault, 'queryFilter')
+        .mockImplementation(async (_filter) => []);
       const result = await loadVaultV15PerformanceEvents(testVault, {});
       expect(result).toMatchSnapshot();
     });
