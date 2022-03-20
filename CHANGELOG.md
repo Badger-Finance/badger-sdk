@@ -1,3 +1,10 @@
+## [1.2.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.12...v1.2.13) (2022-03-20)
+
+
+### Bug Fixes
+
+* add support for pending harvests ([6f85d67](https://github.com/Badger-Finance/badger-sdk/commit/6f85d6721765fe4c34d3be51ab334f5f8992ce6b))
+
 ## [1.2.12](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.11...v1.2.12) (2022-03-20)
 
 
