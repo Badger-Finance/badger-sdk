@@ -31,7 +31,7 @@ export async function parseHarvestEvents(
         const block = await e.getBlock();
         return {
           timestamp: block.timestamp,
-          block: block.number,
+          block: e.args[1].toNumber(),
           amount: e.args[0],
           token: '',
         };
@@ -39,7 +39,7 @@ export async function parseHarvestEvents(
         console.log(err);
         return {
           timestamp: 0,
-          block: e.blockNumber,
+          block: e.args[1].toNumber(),
           amount: e.args[0],
           token: '',
         };
