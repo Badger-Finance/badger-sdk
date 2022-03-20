@@ -13,25 +13,22 @@ Object {
       "harvests": Array [
         Object {
           "amount": Object {
-            "hex": "0x05da3040dc0640",
-            "type": "BigNumber",
-          },
-          "block": 1000000,
-          "timestamp": 1647284957,
-          "token": "",
-        },
-        Object {
-          "amount": Object {
             "hex": "0x05244a1fe78640",
             "type": "BigNumber",
           },
-          "block": 1000000,
-          "timestamp": 1647284957,
+          "block": undefined,
+          "timestamp": 0,
           "token": "",
         },
+      ],
+      "timestamp": 0,
+      "treeDistributions": Array [],
+    },
+    Object {
+      "harvests": Array [
         Object {
           "amount": Object {
-            "hex": "0x06eb09724ac640",
+            "hex": "0x05da3040dc0640",
             "type": "BigNumber",
           },
           "block": 1000000,
@@ -50,16 +47,37 @@ Object {
           "timestamp": 1647284957,
           "token": "0xBTC",
         },
+      ],
+    },
+    Object {
+      "harvests": Array [],
+      "timestamp": 1647286207,
+      "treeDistributions": Array [
         Object {
           "amount": Object {
             "hex": "0x06eb09724ac640",
             "type": "BigNumber",
           },
           "block": 1647355665,
-          "timestamp": 1647284957,
+          "timestamp": 1647286207,
           "token": "0xBTC",
         },
       ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1000000,
+          "timestamp": 1647287457,
+          "token": "",
+        },
+      ],
+      "timestamp": 1647287457,
+      "treeDistributions": Array [],
     },
   ],
 }
@@ -85,24 +103,6 @@ Object {
           "timestamp": 1647284957,
           "token": "0xTEST",
         },
-        Object {
-          "amount": Object {
-            "hex": "0x05244a1fe78640",
-            "type": "BigNumber",
-          },
-          "block": 1647315665,
-          "timestamp": 1647284957,
-          "token": "0xTEST",
-        },
-        Object {
-          "amount": Object {
-            "hex": "0x06eb09724ac640",
-            "type": "BigNumber",
-          },
-          "block": 1647355665,
-          "timestamp": 1647284957,
-          "token": "0xTEST",
-        },
       ],
       "timestamp": 1647284957,
       "treeDistributions": Array [
@@ -115,16 +115,52 @@ Object {
           "timestamp": 1647284957,
           "token": "0xBTC",
         },
+      ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x05244a1fe78640",
+            "type": "BigNumber",
+          },
+          "block": 1647315665,
+          "timestamp": 1647286207,
+          "token": "0xTEST",
+        },
+      ],
+      "timestamp": 1647286207,
+      "treeDistributions": Array [],
+    },
+    Object {
+      "harvests": Array [],
+      "timestamp": 1647286707,
+      "treeDistributions": Array [
         Object {
           "amount": Object {
             "hex": "0x06eb09724ac640",
             "type": "BigNumber",
           },
           "block": 1647355665,
-          "timestamp": 1647284957,
+          "timestamp": 1647286707,
           "token": "0xBTC",
         },
       ],
+    },
+    Object {
+      "harvests": Array [
+        Object {
+          "amount": Object {
+            "hex": "0x06eb09724ac640",
+            "type": "BigNumber",
+          },
+          "block": 1647355665,
+          "timestamp": 1647287457,
+          "token": "0xTEST",
+        },
+      ],
+      "timestamp": 1647287457,
+      "treeDistributions": Array [],
     },
   ],
 }
@@ -148,7 +184,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1647355665,
-      "timestamp": 1647284957,
+      "timestamp": 1647286207,
       "token": "0xBTC",
     },
   ],
@@ -168,7 +204,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1000000,
-      "timestamp": 1647284957,
+      "timestamp": 1647286207,
       "token": "",
     },
     Object {
@@ -177,7 +213,61 @@ Object {
         "type": "BigNumber",
       },
       "block": 1000000,
+      "timestamp": 1647287457,
+      "token": "",
+    },
+  ],
+}
+`;
+
+exports[`vaults.utils parseHarvestEvents returns zero for timestamp on getBlock error 1`] = `
+Object {
+  "distributions": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x0186256ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647275665,
       "timestamp": 1647284957,
+      "token": "0xBTC",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1647355665,
+      "timestamp": 1647286207,
+      "token": "0xBTC",
+    },
+  ],
+  "harvests": Array [
+    Object {
+      "amount": Object {
+        "hex": "0x05da3040dc0640",
+        "type": "BigNumber",
+      },
+      "block": 1000000,
+      "timestamp": 1647284957,
+      "token": "",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x05244a1fe78640",
+        "type": "BigNumber",
+      },
+      "block": undefined,
+      "timestamp": 0,
+      "token": "",
+    },
+    Object {
+      "amount": Object {
+        "hex": "0x06eb09724ac640",
+        "type": "BigNumber",
+      },
+      "block": 1000000,
+      "timestamp": 1647287457,
       "token": "",
     },
   ],
@@ -202,7 +292,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1647355665,
-      "timestamp": 1647284957,
+      "timestamp": 1647286707,
       "token": "0xBTC",
     },
   ],
@@ -222,7 +312,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1647315665,
-      "timestamp": 1647284957,
+      "timestamp": 1647286207,
       "token": "0xTEST",
     },
     Object {
@@ -231,7 +321,7 @@ Object {
         "type": "BigNumber",
       },
       "block": 1647355665,
-      "timestamp": 1647284957,
+      "timestamp": 1647287457,
       "token": "0xTEST",
     },
   ],

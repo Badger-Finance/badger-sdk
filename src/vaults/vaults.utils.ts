@@ -38,8 +38,7 @@ export async function parseHarvestEvents(
       } catch (err) {
         console.log(err);
         return {
-          // consider a better idea here
-          timestamp: Date.now() / 1000,
+          timestamp: 0,
           block: e.blockNumber,
           amount: e.args[0],
           token: '',

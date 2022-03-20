@@ -24,7 +24,7 @@ describe('vaults.utils', () => {
     hash: '',
     parentHash: '',
     number: 1_000_000,
-    timestamp: Number(defaultTimestamp),
+    timestamp: defaultTimestamp.toNumber(),
     nonce: '',
     difficulty: 0,
     _difficulty: BigNumber.from('0'),
@@ -53,13 +53,16 @@ describe('vaults.utils', () => {
     { args: [harvestedTwo, blockNumberTwo] },
     { args: [harvestedThree, blockNumberThree] },
   ] as HarvestEvent[];
-  harvests.forEach((h) => (h.getBlock = async () => block));
+  harvests.forEach((h, i) => (h.getBlock = async () => ({
+    ...block,
+    timestamp: block.timestamp + 1250 * i,
+  })));
 
   const harvestsV15: HarvestedEvent[] = [
     { args: ['0xTEST', harvestedOne, blockNumberOne, defaultTimestamp] },
-    { args: ['0xTEST', harvestedTwo, blockNumberTwo, defaultTimestamp] },
+    { args: ['0xTEST', harvestedTwo, blockNumberTwo, defaultTimestamp.add(1250)] },
     {
-      args: ['0xTEST', harvestedThree, blockNumberThree, defaultTimestamp],
+      args: ['0xTEST', harvestedThree, blockNumberThree, defaultTimestamp.add(2500)],
     },
   ] as HarvestedEvent[];
 
@@ -74,7 +77,7 @@ describe('vaults.utils', () => {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
     },
     {
-      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp],
+      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp.add(1250)],
     },
   ] as TreeDistributionEvent[];
 
@@ -83,12 +86,26 @@ describe('vaults.utils', () => {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
     },
     {
-      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp],
+      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp.add(1750)],
     },
   ] as TreeDistributionEventV15[];
 
   describe('parseHarvestEvents', () => {
     it('converts vault events to typed usable events', async () => {
+      const result = await parseHarvestEvents(harvests, distributions);
+      expect(result).toMatchSnapshot();
+    });
+
+    it('returns zero for timestamp on getBlock error', async () => {
+      harvests.forEach((h, i) => (h.getBlock = async () => {
+        if (i % 2 === 1) {
+          throw new Error('Expected test errror: getBlock');
+        }
+        return {
+          ...block,
+          timestamp: block.timestamp + 1250 * i,
+        };
+      }));
       const result = await parseHarvestEvents(harvests, distributions);
       expect(result).toMatchSnapshot();
     });
