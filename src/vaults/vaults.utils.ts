@@ -127,7 +127,7 @@ export function timestampInRange(
   timestamp: number,
 ): boolean {
   const { timestamp_gt, timestamp_gte, timestamp_lt, timestamp_lte } = options;
-  
+
   let lowerBound = 0;
   let upperBound = Number.MAX_SAFE_INTEGER;
   if (timestamp_gt) {
@@ -144,7 +144,9 @@ export function timestampInRange(
   }
 
   if (lowerBound > upperBound) {
-    throw new Error(`Invalid time range check requested (${lowerBound} - ${upperBound})`);
+    throw new Error(
+      `Invalid time range check requested (${lowerBound} - ${upperBound})`,
+    );
   }
 
   return timestamp >= lowerBound && timestamp <= upperBound;
