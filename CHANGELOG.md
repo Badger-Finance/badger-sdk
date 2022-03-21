@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.13...v1.3.0) (2022-03-21)
+
+
+### Bug Fixes
+
+* update vaultdto imports ([45bb67f](https://github.com/Badger-Finance/badger-sdk/commit/45bb67f7cf2bf26d421386b7f043be9defef7078))
+
+
+### Features
+
+* enable contracts exports ([be9b768](https://github.com/Badger-Finance/badger-sdk/commit/be9b7689dafcad582bc169d0d44a39ecd406e6e2))
+
 ## [1.2.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.12...v1.2.13) (2022-03-20)
 
 
