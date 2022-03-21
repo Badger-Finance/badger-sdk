@@ -53,16 +53,31 @@ describe('vaults.utils', () => {
     { args: [harvestedTwo, blockNumberTwo] },
     { args: [harvestedThree, blockNumberThree] },
   ] as HarvestEvent[];
-  harvests.forEach((h, i) => (h.getBlock = async () => ({
-    ...block,
-    timestamp: block.timestamp + 1250 * i,
-  })));
+  harvests.forEach(
+    (h, i) =>
+      (h.getBlock = async () => ({
+        ...block,
+        timestamp: block.timestamp + 1250 * i,
+      })),
+  );
 
   const harvestsV15: HarvestedEvent[] = [
     { args: ['0xTEST', harvestedOne, blockNumberOne, defaultTimestamp] },
-    { args: ['0xTEST', harvestedTwo, blockNumberTwo, defaultTimestamp.add(1250)] },
     {
-      args: ['0xTEST', harvestedThree, blockNumberThree, defaultTimestamp.add(2500)],
+      args: [
+        '0xTEST',
+        harvestedTwo,
+        blockNumberTwo,
+        defaultTimestamp.add(1250),
+      ],
+    },
+    {
+      args: [
+        '0xTEST',
+        harvestedThree,
+        blockNumberThree,
+        defaultTimestamp.add(2500),
+      ],
     },
   ] as HarvestedEvent[];
 
@@ -77,7 +92,12 @@ describe('vaults.utils', () => {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
     },
     {
-      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp.add(1250)],
+      args: [
+        '0xBTC',
+        distributedThree,
+        blockNumberThree,
+        defaultTimestamp.add(1250),
+      ],
     },
   ] as TreeDistributionEvent[];
 
@@ -86,7 +106,12 @@ describe('vaults.utils', () => {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
     },
     {
-      args: ['0xBTC', distributedThree, blockNumberThree, defaultTimestamp.add(1750)],
+      args: [
+        '0xBTC',
+        distributedThree,
+        blockNumberThree,
+        defaultTimestamp.add(1750),
+      ],
     },
   ] as TreeDistributionEventV15[];
 
@@ -97,15 +122,18 @@ describe('vaults.utils', () => {
     });
 
     it('returns zero for timestamp on getBlock error', async () => {
-      harvests.forEach((h, i) => (h.getBlock = async () => {
-        if (i % 2 === 1) {
-          throw new Error('Expected test errror: getBlock');
-        }
-        return {
-          ...block,
-          timestamp: block.timestamp + 1250 * i,
-        };
-      }));
+      harvests.forEach(
+        (h, i) =>
+          (h.getBlock = async () => {
+            if (i % 2 === 1) {
+              throw new Error('Expected test error: getBlock');
+            }
+            return {
+              ...block,
+              timestamp: block.timestamp + 1250 * i,
+            };
+          }),
+      );
       const result = await parseHarvestEvents(harvests, distributions);
       expect(result).toMatchSnapshot();
     });
@@ -238,7 +266,7 @@ describe('vaults.utils', () => {
       );
       jest
         .spyOn(testStrategy, 'queryFilter')
-        .mockImplementation(async (_filter) => []);
+        .mockImplementation(async () => []);
       const result = await loadVaultPerformanceEvents(testStrategy, {});
       expect(result).toMatchSnapshot();
     });
@@ -274,9 +302,7 @@ describe('vaults.utils', () => {
         '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
         new ethers.providers.JsonRpcProvider(''),
       );
-      jest
-        .spyOn(testVault, 'queryFilter')
-        .mockImplementation(async (_filter) => []);
+      jest.spyOn(testVault, 'queryFilter').mockImplementation(async () => []);
       const result = await loadVaultV15PerformanceEvents(testVault, {});
       expect(result).toMatchSnapshot();
     });

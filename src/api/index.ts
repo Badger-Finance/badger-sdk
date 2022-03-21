@@ -56,7 +56,10 @@ export class BadgerAPI {
     });
   }
 
-  loadVaults(currency = Currency.USD, network?: Network): Promise<i.Vault[]> {
+  loadVaults(
+    currency = Currency.USD,
+    network?: Network,
+  ): Promise<i.VaultDTO[]> {
     return this.get('vaults', {
       chain: network ?? this.network,
       currency,
@@ -67,14 +70,14 @@ export class BadgerAPI {
     address: string,
     currency = Currency.USD,
     network?: Network,
-  ): Promise<i.Vault> {
+  ): Promise<i.VaultDTO> {
     return this.get(`vaults/${address}`, {
       chain: network ?? this.network,
       currency,
     });
   }
 
-  loadSetts(currency = Currency.USD, network?: Network): Promise<i.Vault[]> {
+  loadSetts(currency = Currency.USD, network?: Network): Promise<i.VaultDTO[]> {
     return this.get('setts', {
       chain: network ?? this.network,
       currency,
@@ -85,7 +88,7 @@ export class BadgerAPI {
     address: string,
     currency = Currency.USD,
     network?: Network,
-  ): Promise<i.Vault> {
+  ): Promise<i.VaultDTO> {
     return this.get(`setts/${address}`, {
       chain: network ?? this.network,
       currency,
