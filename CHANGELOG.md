@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.1...v1.3.2) (2022-03-21)
+
+
+### Bug Fixes
+
+* add historic snapshot apr ([ff23904](https://github.com/Badger-Finance/badger-sdk/commit/ff239041d91899cd92d8928ca0a263b493f72544))
+
 ## [1.3.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.0...v1.3.1) (2022-03-21)
 
 
