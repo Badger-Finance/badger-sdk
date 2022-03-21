@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.0...v1.3.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* update vault projection interface ([c1571cc](https://github.com/Badger-Finance/badger-sdk/commit/c1571cc60a29bb7529a7c869f093d94bba329e8e))
+
 # [1.3.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.2.13...v1.3.0) (2022-03-21)
 
 
