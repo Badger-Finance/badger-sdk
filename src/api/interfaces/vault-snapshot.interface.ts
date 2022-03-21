@@ -6,6 +6,7 @@ export interface VaultSnapshot {
   timestamp: number;
   available: number;
   balance: number;
+  strategyBalance: number;
   totalSupply: number;
   pricePerFullShare: number;
   value: number;
