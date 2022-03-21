@@ -1,31 +1,34 @@
 import { BoostConfig, ValueSource, TokenValue, VaultStrategy } from '.';
-import { VaultBehavior } from '../../vaults';
 import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
+import { VaultBehavior } from '../../vaults';
+import { VaultYieldProjection } from './vault-yield-projection.interface';
 
-export interface Vault {
-  name: string;
-  value: number;
+export interface VaultDTO {
+  apr: number;
+  apy: number;
+  asset: string;
   available: number;
   balance: number;
-  asset: string;
-  vaultAsset: string;
+  behavior: VaultBehavior;
   boost: BoostConfig;
   bouncer: BouncerType;
-  apr: number;
-  minApr?: number;
+  lastHarvest: number;
   maxApr?: number;
-  apy: number;
-  minApy?: number;
   maxApy?: number;
+  minApr?: number;
+  minApy?: number;
+  name: string;
   pricePerFullShare: number;
   protocol: Protocol;
   sources: ValueSource[];
   sourcesApy: ValueSource[];
   state: VaultState;
-  tokens: TokenValue[];
-  underlyingToken: string;
-  vaultToken: string;
   strategy: VaultStrategy;
+  tokens: TokenValue[];
   type: VaultType;
-  behavior: VaultBehavior;
+  yieldProjection: VaultYieldProjection;
+  underlyingToken: string;
+  value: number;
+  vaultAsset: string;
+  vaultToken: string;
 }
