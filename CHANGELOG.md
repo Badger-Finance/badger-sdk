@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.2...v1.3.3) (2022-03-22)
+
+
+### Bug Fixes
+
+* update snapshot for strategy tracking ([9a87688](https://github.com/Badger-Finance/badger-sdk/commit/9a87688b62982b48addbdc98e6be20a966e0e169))
+
 ## [1.3.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.1...v1.3.2) (2022-03-21)
 
 
