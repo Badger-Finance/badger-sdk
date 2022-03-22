@@ -1,3 +1,12 @@
+## [1.3.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.3...v1.3.4) (2022-03-22)
+
+
+### Bug Fixes
+
+* reduce prod deps ([ee16481](https://github.com/Badger-Finance/badger-sdk/commit/ee16481bf561276f27a0792778bf653d2d755bb9))
+* remove lint on build ([4d36920](https://github.com/Badger-Finance/badger-sdk/commit/4d3692020ebc3cce0d486c61dabdd433aee087a6))
+* revert prod flag ([a6ea806](https://github.com/Badger-Finance/badger-sdk/commit/a6ea806fbb5e57b987197422c36096b699836f6e))
+
 ## [1.3.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.2...v1.3.3) (2022-03-22)
 
 
