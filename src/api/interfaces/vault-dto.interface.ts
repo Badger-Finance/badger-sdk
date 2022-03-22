@@ -1,6 +1,6 @@
 import { BoostConfig, ValueSource, TokenValue, VaultStrategy } from '.';
 import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
-import { VaultBehavior } from '../../vaults';
+import { VaultBehavior, VaultVersion } from '../../vaults';
 import { VaultYieldProjection } from './vault-yield-projection.interface';
 
 export interface VaultDTO {
@@ -31,4 +31,5 @@ export interface VaultDTO {
   value: number;
   vaultAsset: string;
   vaultToken: string;
+  version: VaultVersion;
 }
