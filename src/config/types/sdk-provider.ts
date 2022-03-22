@@ -1,7 +1,6 @@
-import {
-  JsonRpcBatchProvider,
-  JsonRpcProvider,
-  Web3Provider,
-} from '@ethersproject/providers';
+import { ethers } from 'ethers';
 
-export type SDKProvider = Web3Provider | JsonRpcProvider | JsonRpcBatchProvider;
+export type SDKProvider =
+  | ethers.providers.Web3Provider
+  | ethers.providers.JsonRpcProvider
+  | ethers.providers.JsonRpcBatchProvider;
