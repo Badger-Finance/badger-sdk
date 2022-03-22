@@ -15,6 +15,7 @@ import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
+import { TreasuryService } from './treasury/treasury.service';
 
 import { SDKProvider } from './config/types/sdk-provider';
 
@@ -41,6 +42,7 @@ export class BadgerSDK {
   readonly rewards: RewardsService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
+  readonly treasury: TreasuryService;
 
   constructor({ network, provider, baseURL }: SDKOptions) {
     if (!BadgerSDK.initialized) {
@@ -73,6 +75,7 @@ export class BadgerSDK {
     this.rewards = new RewardsService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);
+    this.treasury = new TreasuryService(this);
   }
 
   ready() {
