@@ -321,7 +321,7 @@ export class VaultsService extends Service {
     );
     let pendingRewards;
     if (harvest) {
-      pendingRewards = await strategy.callStatic.harvest();
+      pendingRewards = await strategy.callStatic.harvest({ from: await strategy.keeper() });
     } else {
       pendingRewards = await strategy.balanceOfRewards();
     }
