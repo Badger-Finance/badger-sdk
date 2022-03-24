@@ -1,3 +1,10 @@
+## [1.3.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.7...v1.3.8) (2022-03-24)
+
+
+### Bug Fixes
+
+* add rewards initial prep + harvest caller ([0289b2e](https://github.com/Badger-Finance/badger-sdk/commit/0289b2ea909f76d78e251b9c980554358e82f81b))
+
 ## [1.3.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.6...v1.3.7) (2022-03-24)
 
 
