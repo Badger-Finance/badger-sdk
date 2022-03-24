@@ -310,12 +310,6 @@ export class VaultsService extends Service {
     harvest: boolean,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
     const checksumAddress = ethers.utils.getAddress(address);
-    const cachedVault = this.vaults[checksumAddress];
-    if (cachedVault.version !== VaultVersion.v1_5) {
-      throw new Error(
-        `getPendingYield is not supported for vault version ${cachedVault.version}`,
-      );
-    }
     const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
     const [lastHarvestedAt, strategyAddress] = await Promise.all([
       vault.lastHarvestedAt(),
