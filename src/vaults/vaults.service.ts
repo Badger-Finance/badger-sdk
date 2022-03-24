@@ -130,17 +130,10 @@ export class VaultsService extends Service {
     const { address } = options;
     const checksumAddress = ethers.utils.getAddress(address);
 
-    let vault = this.vaults[checksumAddress];
-    if (!vault) {
-      vault = await this.loadVault({
-        address: options.address,
-        requireRegistry: false,
-        state: VaultState.Open,
-        version: VaultVersion.v1,
-      });
-    }
+    const vault = this.vaults[checksumAddress];
+    const version = vault ? vault.version : VaultVersion.v1;
 
-    if (vault.version === VaultVersion.v1_5) {
+    if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
       return loadVaultV15PerformanceEvents(vault, options);
     }
