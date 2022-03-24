@@ -10,6 +10,7 @@ export enum Protocol {
   Solidly = 'Solidly',
   Sushiswap = 'Sushiswap',
   Spookyswap = 'Spookyswap',
+  OxDAO = '0xDAO',
   Swapr = 'Swapr',
   Uniswap = 'Uniswap',
   Yearn = 'Yearn',
