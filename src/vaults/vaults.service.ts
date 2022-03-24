@@ -3,7 +3,6 @@ import {
   RegistryVault,
   TransactionStatus,
   VaultRegistryEntry,
-  VaultState,
   VaultVersion,
 } from '..';
 import {
