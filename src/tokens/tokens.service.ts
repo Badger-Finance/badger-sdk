@@ -1,5 +1,5 @@
 import { BigNumber, ethers } from 'ethers';
-import { Erc20__factory } from '../contracts';
+import { Erc20, Erc20__factory } from '../contracts';
 import { Service } from '../service';
 import { Token } from './interfaces/token.interface';
 
@@ -7,10 +7,18 @@ export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
 
   async loadTokens(addresses: string[]): Promise<Record<string, Token>> {
-    const tokens = await Promise.all(
-      addresses.map(async (addr) => this.loadToken(addr)),
+    const tokens: Record<string, Token> = {};
+    await Promise.all(
+      addresses.map(async (addr) => {
+        try {
+          const token = await this.loadToken(addr);
+          tokens[token.address] = token;
+        } catch (err) {
+          console.error({ message: `Failed to load ${addr}`, err });
+        }
+      }),
     );
-    return Object.fromEntries(tokens.map((token) => [token.address, token]));
+    return tokens;
   }
 
   async loadToken(address: string): Promise<Token> {
@@ -18,9 +26,9 @@ export class TokensService extends Service {
     if (!this.tokens[checksumAddress]) {
       const token = Erc20__factory.connect(checksumAddress, this.sdk.provider);
       const [name, symbol, decimals] = await Promise.all([
-        token.name(),
-        token.symbol(),
-        token.decimals(),
+        this.tryName(token),
+        this.trySymbol(token),
+        this.tryDecimals(token),
       ]);
       this.tokens[checksumAddress] = {
         address: checksumAddress,
@@ -53,6 +61,33 @@ export class TokensService extends Service {
     } catch (err) {
       console.error(err);
       return BigNumber.from(0);
+    }
+  }
+
+  private async tryName(token: Erc20): Promise<string> {
+    try {
+      const name = await token.name();
+      return name;
+    } catch {
+      return '';
+    }
+  }
+
+  private async trySymbol(token: Erc20): Promise<string> {
+    try {
+      const symbol = await token.symbol();
+      return symbol;
+    } catch {
+      return '';
+    }
+  }
+
+  private async tryDecimals(token: Erc20): Promise<number> {
+    try {
+      const decimals = await token.decimals();
+      return decimals;
+    } catch {
+      return 18;
     }
   }
 }
