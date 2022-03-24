@@ -1,6 +1,6 @@
 {
   "name": "@badger-dao/sdk",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Badger Protocol Typescript SDK",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

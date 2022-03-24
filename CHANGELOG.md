@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.4...v1.3.5) (2022-03-24)
+
+
+### Bug Fixes
+
+* token service fragile method update ([3ce77c3](https://github.com/Badger-Finance/badger-sdk/commit/3ce77c3cdb3b3a88e6b6916155f1089016fae1e6))
+
 ## [1.3.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.3...v1.3.4) (2022-03-22)
 
 
