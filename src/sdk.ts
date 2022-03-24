@@ -102,7 +102,7 @@ export class BadgerSDK {
     let sdkProvider: SDKProvider;
 
     if (typeof provider === 'string') {
-      sdkProvider = new ethers.providers.JsonRpcProvider(provider);
+      sdkProvider = new ethers.providers.JsonRpcBatchProvider(provider);
     } else {
       sdkProvider = provider;
     }

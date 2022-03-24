@@ -1,4 +1,5 @@
 import { VaultRegistryEntry } from '.';
+import { VaultVersion } from '..';
 import { Registry, Registry__factory } from '../contracts';
 import { Service } from '../service';
 import { getVaultState, getVaultVersion } from '../vaults/vaults.utils';
@@ -45,7 +46,7 @@ export class RegistryService extends Service {
     );
   }
 
-  async getVaults(version: string, author: string): Promise<string[]> {
+  async getVaults(version: VaultVersion, author: string): Promise<string[]> {
     if (!this.registry) {
       return [];
     }
