@@ -49,7 +49,7 @@ export class RegistryService extends Service {
   async getVaults(version: VaultVersion, author: string): Promise<string[]> {
     if (!this.registry) {
       return [];
-    }
+    };
     return this.registry.getVaults(version, author);
   }
 
