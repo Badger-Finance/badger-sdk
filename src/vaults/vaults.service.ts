@@ -78,7 +78,7 @@ export class VaultsService extends Service {
     // vaults may be loaded without a registry but require extra information
     if (!requireRegistry && (!state || !version)) {
       throw new Error(
-        'Status and version fields are required when requireRegistry is false',
+        'State and version fields are required when requireRegistry is false',
       );
     }
 
@@ -127,11 +127,12 @@ export class VaultsService extends Service {
     options: ListVaultOptions,
   ): Promise<{ data: VaultHarvestData[] }> {
     const { address } = options;
-
     const checksumAddress = ethers.utils.getAddress(address);
-    const cachedVault = this.vaults[checksumAddress];
 
-    if (cachedVault.version === VaultVersion.v1_5) {
+    const vault = this.vaults[checksumAddress];
+    const version = vault ? vault.version : VaultVersion.v1;
+
+    if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
       return loadVaultV15PerformanceEvents(vault, options);
     }
