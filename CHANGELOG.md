@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.6...v1.3.7) (2022-03-24)
+
+
+### Bug Fixes
+
+* remove vault version check ([2f70206](https://github.com/Badger-Finance/badger-sdk/commit/2f702062bbdddc2a36b57d63aa597c6721433281))
+
 ## [1.3.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.5...v1.3.6) (2022-03-24)
 
 
