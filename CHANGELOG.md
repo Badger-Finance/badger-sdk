@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.5...v1.3.6) (2022-03-24)
+
+
+### Bug Fixes
+
+* allow unregistered vault queries ([ceab137](https://github.com/Badger-Finance/badger-sdk/commit/ceab137293e736e0059358cf07d8f0aa49e269a9))
+
 ## [1.3.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.4...v1.3.5) (2022-03-24)
 
 
