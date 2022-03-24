@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.8...v1.3.9) (2022-03-24)
+
+
+### Bug Fixes
+
+* add oxdao protocol ([4b5fbef](https://github.com/Badger-Finance/badger-sdk/commit/4b5fbef7c4ecfed7d6c0ad83483341afa9e27029))
+
 ## [1.3.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.7...v1.3.8) (2022-03-24)
 
 
