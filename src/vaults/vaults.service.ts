@@ -18,6 +18,7 @@ import {
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import {
+  GetVaultStrategyOptions,
   ListHarvestOptions,
   LoadVaultOptions,
   VaultHarvestData,
@@ -27,7 +28,6 @@ import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
 } from './vaults.utils';
-import { GetVaultStrategyOptions } from './interfaces/get-vault-strategy-options.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
