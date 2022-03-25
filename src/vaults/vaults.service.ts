@@ -73,7 +73,7 @@ export class VaultsService extends Service {
     address,
     update,
     requireRegistry = true,
-    version,
+    version = VaultVersion.v1,
     state,
   }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
@@ -127,7 +127,7 @@ export class VaultsService extends Service {
   async listHarvests(
     options: ListHarvestOptions,
   ): Promise<{ data: VaultHarvestData[] }> {
-    const { address, version } = options;
+    const { address, version = VaultVersion.v1 } = options;
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
       return loadVaultV15PerformanceEvents(vault, options);
