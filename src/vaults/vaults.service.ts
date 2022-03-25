@@ -18,7 +18,8 @@ import {
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import {
-  ListVaultOptions,
+  GetVaultStrategyOptions,
+  ListHarvestOptions,
   LoadVaultOptions,
   VaultHarvestData,
 } from './interfaces';
@@ -72,7 +73,7 @@ export class VaultsService extends Service {
     address,
     update,
     requireRegistry = true,
-    version,
+    version = VaultVersion.v1,
     state,
   }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
@@ -124,39 +125,27 @@ export class VaultsService extends Service {
   }
 
   async listHarvests(
-    options: ListVaultOptions,
+    options: ListHarvestOptions,
   ): Promise<{ data: VaultHarvestData[] }> {
-    const { address } = options;
-    const checksumAddress = ethers.utils.getAddress(address);
-
-    const vault = this.vaults[checksumAddress];
-    const version = vault ? vault.version : VaultVersion.v1;
-
+    const { address, version = VaultVersion.v1 } = options;
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
       return loadVaultV15PerformanceEvents(vault, options);
     }
-
-    const strategy = await this.getVaultStrategy(checksumAddress);
+    const strategy = await this.getVaultStrategy({ address, version });
     return loadVaultPerformanceEvents(strategy, options);
   }
 
-  async getVaultStrategy(address: string): Promise<Strategy> {
-    const checksumAddress = ethers.utils.getAddress(address);
-    const cachedVault = this.vaults[checksumAddress];
-    let version = VaultVersion.v1;
-    if (cachedVault) {
-      version = cachedVault.version;
-    }
+  async getVaultStrategy({
+    address,
+    version = VaultVersion.v1,
+  }: GetVaultStrategyOptions): Promise<Strategy> {
     if (version === VaultVersion.v1_5) {
-      const vault = VaultV15__factory.connect(
-        checksumAddress,
-        this.sdk.provider,
-      );
+      const vault = VaultV15__factory.connect(address, this.sdk.provider);
       const strategyAddress = await vault.strategy();
       return Strategy__factory.connect(strategyAddress, this.sdk.provider);
     }
-    const vault = Vault__factory.connect(checksumAddress, this.sdk.provider);
+    const vault = Vault__factory.connect(address, this.sdk.provider);
     const controller = Controller__factory.connect(
       await vault.controller(),
       this.sdk.provider,
@@ -321,7 +310,9 @@ export class VaultsService extends Service {
     );
     let pendingRewards;
     if (harvest) {
-      pendingRewards = await strategy.callStatic.harvest({ from: await strategy.keeper() });
+      pendingRewards = await strategy.callStatic.harvest({
+        from: await strategy.keeper(),
+      });
     } else {
       pendingRewards = await strategy.balanceOfRewards();
     }
