@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.9...v1.3.10) (2022-03-25)
+
+
+### Bug Fixes
+
+* update imports ([febf3bb](https://github.com/Badger-Finance/badger-sdk/commit/febf3bbf047bd552ddbcf6eb3c51ac4f05ce4da6))
+
 ## [1.3.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.8...v1.3.9) (2022-03-24)
 
 
