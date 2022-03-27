@@ -13,7 +13,6 @@ import { SUPPORTED_NETWORKS } from '../config/constants';
 import { Currency } from './enums';
 import { ApiError } from './api.error';
 import { EmissionSchedule } from '../rewards';
-import { RewardSchedulesSummary } from './interfaces/reward-schedules-summary.interface';
 
 export const DEFAULT_API_URL = 'https://api.badger.com/v2';
 
@@ -158,7 +157,7 @@ export class BadgerAPI {
   loadSchedules(
     active = false,
     network?: Network,
-  ): Promise<RewardSchedulesSummary> {
+  ): Promise<i.RewardSchedulesSummary> {
     return this.get('/reward/schedules', {
       active: `${active}`,
       chain: network ?? this.network,
