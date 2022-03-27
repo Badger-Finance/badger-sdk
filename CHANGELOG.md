@@ -1,3 +1,10 @@
+## [1.3.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.10...v1.3.11) (2022-03-27)
+
+
+### Bug Fixes
+
+* support schedules api ([41dfb76](https://github.com/Badger-Finance/badger-sdk/commit/41dfb765d7a65ee37d31c00e1fbe3d8214117142))
+
 ## [1.3.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.9...v1.3.10) (2022-03-25)
 
 
