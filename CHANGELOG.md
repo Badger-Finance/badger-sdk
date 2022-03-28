@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.11...v1.4.0) (2022-03-28)
+
+
+### Features
+
+* implement returing strategy addr from getVaultStrategy ([068b41b](https://github.com/Badger-Finance/badger-sdk/commit/068b41bace6af58c51d9dda5044d3f86b5ee9742))
+
 ## [1.3.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.10...v1.3.11) (2022-03-27)
 
 
