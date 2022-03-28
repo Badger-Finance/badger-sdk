@@ -3,4 +3,5 @@ export interface VaultStrategy {
   withdrawFee: number;
   performanceFee: number;
   strategistFee: number;
+  aumFee: number;
 }
