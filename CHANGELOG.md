@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.4.0...v1.4.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* add missing aum fee to strategy ([83f4ee5](https://github.com/Badger-Finance/badger-sdk/commit/83f4ee5a277a515e6734593aac6863e75c8bcf73))
+
 # [1.4.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.3.11...v1.4.0) (2022-03-28)
 
 
