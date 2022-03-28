@@ -23,7 +23,6 @@ import {
   LoadVaultOptions,
   VaultHarvestData,
 } from './interfaces';
-import { Strategy } from '../contracts/Strategy';
 import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
@@ -132,26 +131,28 @@ export class VaultsService extends Service {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
       return loadVaultV15PerformanceEvents(vault, options);
     }
-    const strategy = await this.getVaultStrategy({ address, version });
+    const strategyAddress = await this.getVaultStrategy({ address, version });
+    const strategy = Strategy__factory.connect(
+      strategyAddress,
+      this.sdk.provider,
+    );
     return loadVaultPerformanceEvents(strategy, options);
   }
 
   async getVaultStrategy({
     address,
     version = VaultVersion.v1,
-  }: GetVaultStrategyOptions): Promise<Strategy> {
+  }: GetVaultStrategyOptions): Promise<string> {
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
-      const strategyAddress = await vault.strategy();
-      return Strategy__factory.connect(strategyAddress, this.sdk.provider);
+      return await vault.strategy();
     }
     const vault = Vault__factory.connect(address, this.sdk.provider);
     const controller = Controller__factory.connect(
       await vault.controller(),
       this.sdk.provider,
     );
-    const strategyAddress = await controller.strategies(await vault.token());
-    return Strategy__factory.connect(strategyAddress, this.sdk.provider);
+    return controller.strategies(await vault.token());
   }
 
   async getPendingYield(
