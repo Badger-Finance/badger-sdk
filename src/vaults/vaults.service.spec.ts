@@ -30,5 +30,14 @@ describe('vaults.service', () => {
       const strategy = await service.getVaultStrategy({ address, version });
       expect(strategy).toEqual('0x711555f2B421DA9A86a18Dc163d04699310fE297');
     });
+    it('incompatible vault should throw', async function () {
+      const service = new VaultsService(sdk);
+      const address = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
+      // Set incompatible vault version
+      const version = VaultVersion.v1;
+      await expect(
+        async () => await service.getVaultStrategy({ address, version }),
+      ).rejects.toThrow(Error);
+    });
   });
 });
