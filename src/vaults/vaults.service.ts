@@ -152,7 +152,7 @@ export class VaultsService extends Service {
       await vault.controller(),
       this.sdk.provider,
     );
-    return await controller.strategies(await vault.token());
+    return controller.strategies(await vault.token());
   }
 
   async getPendingYield(

@@ -5,6 +5,7 @@ import { Network } from '../config';
 
 describe('vaults.service', () => {
   let sdk: BadgerSDK;
+  let service: VaultsService;
 
   beforeAll(async () => {
     sdk = new BadgerSDK({
@@ -12,11 +13,11 @@ describe('vaults.service', () => {
       // TODO: Find out how to replace RPC calls with proper mocks
       provider: 'https://rpc.ftm.tools/',
     });
+    service = new VaultsService(sdk);
   });
 
   describe('getVaultStrategy', () => {
     it('should return v1.5 strategy', async function () {
-      const service = new VaultsService(sdk);
       // BVEOXD vault that is v1.5 vault
       const address = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
       const version = VaultVersion.v1_5;
