@@ -9,6 +9,7 @@ describe('vaults.service', () => {
   beforeAll(async () => {
     sdk = new BadgerSDK({
       network: Network.Ethereum,
+      // TODO: Find out how to replace RPC calls with proper mocks
       provider: 'https://rpc.ftm.tools/',
     });
   });
