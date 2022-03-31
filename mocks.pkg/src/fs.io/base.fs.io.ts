@@ -8,14 +8,9 @@ export class BaseFsIo {
     this.rootDir = rootDir;
   }
 
-  async write<T>(fileName: string, data: T, rootDir: string | unknown = null) {
+  async write<T>(fileName: string, data: T, path: string = '') {
     writeFileSync(
-      resolve(
-        __dirname,
-        '../',
-        `${rootDir}` || this.rootDir,
-        `${fileName}.json`,
-      ),
+      resolve(__dirname, '../', this.rootDir + path + '/', `${fileName}.json`),
       JSON.stringify(data, null, 2),
     );
   }

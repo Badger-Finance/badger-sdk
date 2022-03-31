@@ -1,6 +1,7 @@
 import { SdkServices } from '../enums';
 import { BadgerGraph } from '../../../src';
 import { Service } from '../../../src/service';
+import { ServicesMethodsList } from '../config/struct.types.config';
 
 export type MethodsCacheRecordsMap = {
   [key in SdkServices]?: {
@@ -10,9 +11,12 @@ export type MethodsCacheRecordsMap = {
 
 export type ServicesMethodsBodies = MethodsCacheRecordsMap;
 
-export type ServicesMethodsList = {
-  [key in SdkServices]: string[];
+type MethodsCacheRecordsLengthMap = {
+  length: number;
 };
+
+export type MethodsCacheRecordsDiffMap = ServicesMethodsList &
+  MethodsCacheRecordsLengthMap;
 
 type StandAloneModulesMap = {
   graph: BadgerGraph;

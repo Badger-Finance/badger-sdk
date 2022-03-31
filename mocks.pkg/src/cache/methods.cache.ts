@@ -2,23 +2,28 @@ import crypto from 'crypto';
 
 import { BadgerGraph, DiggService } from '../../../src';
 import {
+  MethodsCacheRecordsDiffMap,
   MethodsCacheRecordsMap,
   ServiceClsMap,
   ServicesMethodsBodies,
-  ServicesMethodsList,
 } from './struct.types.cache';
-import { ROOT_DIR } from './constants.cache';
+import { CHACHE_FILE_NAME, ROOT_DIR } from './constants.cache';
 
 import cacheRecords from '../../__chache__/methods.json';
 import { ServicesConfig } from '../config';
 import { SdkServices } from '../enums';
+import { BaseFsIo } from '../fs.io/base.fs.io';
+import { ServicesMethodsList } from '../config/struct.types.config';
 
 export class MethodsCache {
-  rootDir: string = ROOT_DIR;
+  readonly rootDir: string = ROOT_DIR;
+  readonly cacheFileName: string = CHACHE_FILE_NAME;
+
+  missMatchMethodsNum: number = 0;
 
   private oldCacheRecords: MethodsCacheRecordsMap = cacheRecords;
-  private newCacheRecords: MethodsCacheRecordsMap | {} = {};
-  private servicesConfig: ServicesConfig;
+  private readonly newCacheRecords: MethodsCacheRecordsMap = {};
+  private fsIo: BaseFsIo;
 
   readonly serviceClsMap: ServiceClsMap = {
     [SdkServices.Digg]: DiggService.prototype,
@@ -30,12 +35,14 @@ export class MethodsCache {
     graph: BadgerGraph.prototype,
   };
 
-  constructor(config: ServicesConfig) {
-    this.servicesConfig = config;
+  constructor() {
+    this.fsIo = new BaseFsIo(this.rootDir);
+
+    this.newCacheRecords = this.genNewRecords();
   }
 
   getRelevantServicesMethods() {
-    return this.servicesConfig.listServices.reduce((acc, service) => {
+    return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.getOwnPropertyNames(
         this.serviceClsMap[service],
       ).filter((method) => method !== 'constructor');
@@ -44,32 +51,59 @@ export class MethodsCache {
   }
 
   getMissMatch() {
-    // here we will have only changed method in sdk
+    const cacheMissMatch: MethodsCacheRecordsDiffMap = {
+      length: 0,
+    };
+
+    ServicesConfig.listServices.forEach((service) => {
+      Object.keys(this.newCacheRecords).forEach((method) => {
+        const newMethodsCache = this.newCacheRecords[service]?.[method];
+        const oldMethodsCache = this.oldCacheRecords[service]?.[method];
+        if (newMethodsCache !== oldMethodsCache) {
+          if (cacheMissMatch[service]) {
+            (<string[]>cacheMissMatch[service]).push(method);
+          } else {
+            cacheMissMatch[service] = [];
+          }
+        }
+        cacheMissMatch.length++;
+      });
+    });
+
+    this.missMatchMethodsNum = cacheMissMatch.length;
+
+    return cacheMissMatch;
+  }
+
+  saveToFile() {
+    if (this.missMatchMethodsNum === 0) return;
+
+    this.fsIo.write<MethodsCacheRecordsMap>(
+      this.cacheFileName,
+      this.newCacheRecords,
+    );
   }
 
   private genNewRecords() {
-    this.newCacheRecords = this.servicesConfig.listServices.reduce(
-      (acc, service) => {
-        acc[service] = Object.getOwnPropertyNames(this.serviceClsMap[service])
-          .filter((method) => method !== 'constructor')
-          .reduce(
-            (acc, method) => {
-              acc[method] = crypto
-                .createHash('sha256')
-                .update(
-                  // @ts-ignore Here are children protos of Services
-                  this.serviceClsMap[service][method].toString(),
-                )
-                .digest('base64');
-              return acc;
-            },
-            {} as {
-              [method: string]: string;
-            },
-          );
-        return acc;
-      },
-      {} as ServicesMethodsBodies,
-    );
+    return ServicesConfig.listServices.reduce((acc, service) => {
+      acc[service] = Object.getOwnPropertyNames(this.serviceClsMap[service])
+        .filter((method) => method !== 'constructor')
+        .reduce(
+          (acc, method) => {
+            acc[method] = crypto
+              .createHash('sha256')
+              .update(
+                // @ts-ignore Here are children protos of Services
+                this.serviceClsMap[service][method].toString(),
+              )
+              .digest('base64');
+            return acc;
+          },
+          {} as {
+            [method: string]: string;
+          },
+        );
+      return acc;
+    }, {} as ServicesMethodsBodies);
   }
 }

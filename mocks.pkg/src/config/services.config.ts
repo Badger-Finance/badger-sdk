@@ -25,15 +25,14 @@ export class ServicesConfig {
     [Network.BinanceSmartChain]: ethArgsConfig,
     [Network.Fantom]: ethArgsConfig,
     [Network.Avalanche]: ethArgsConfig,
-    [Network.xDai]: ethArgsConfig,
   };
 
-  get listServices() {
+  static get listServices() {
     return Object.values(SdkServices);
   }
 
   getServicesMethods(service: SdkServices) {
-    return this.listServices.reduce((acc, service) => {
+    return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.keys(this.servicesArgsMap[service]);
       return acc;
     }, {} as ServicesMethodsList);

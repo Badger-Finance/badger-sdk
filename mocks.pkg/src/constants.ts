@@ -8,5 +8,4 @@ export const relevantNetworks: RelevantNetworks[] = [
   Network.BinanceSmartChain,
   Network.Fantom,
   Network.Avalanche,
-  Network.xDai,
 ];

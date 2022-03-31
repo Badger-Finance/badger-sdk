@@ -1,5 +1,5 @@
-import { Network } from '../../../src';
 import { SdkServices } from '../enums';
+import { RelevantNetworks } from '../types';
 
 export type ServicesArgsConfig = {
   [key in SdkServices]: {
@@ -7,6 +7,10 @@ export type ServicesArgsConfig = {
   };
 };
 
+export type ServicesMethodsList = {
+  [key in SdkServices]?: string[];
+};
+
 export type NetworksArgsConfigMap = {
-  [key in Exclude<Network, Network.Local>]: ServicesArgsConfig;
+  [key in RelevantNetworks]: ServicesArgsConfig;
 };
