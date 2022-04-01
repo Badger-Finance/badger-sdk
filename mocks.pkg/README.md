@@ -16,6 +16,6 @@ Made to improve test coverage experience working with sdk.
 
 All resp packed into `.json` files, with such pattern:
 
-`@badger-dao/sdk-mocks/<network>/<module>/<method>.json`
+`@badger-dao/sdk-mocks/generated/<network>/<service>/<method>.json`
 
-For example: `@badger-dao/sdk-mocks/ethereum/BadgerGraph/loadSett.json`
+For example: `@badger-dao/sdk-mocks/generated/ethereum/graph/loadSett.json`

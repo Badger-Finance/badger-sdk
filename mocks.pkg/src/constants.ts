@@ -1,6 +1,15 @@
 import { Network } from '../../src';
 import { RelevantNetworks } from './types';
 
+export const methodsToSkip = [
+  'init',
+  'ready',
+  'deposit',
+  'withdraw',
+  'constructor',
+  'getPendingYield',
+];
+
 export const relevantNetworks: RelevantNetworks[] = [
   Network.Ethereum,
   Network.Polygon,

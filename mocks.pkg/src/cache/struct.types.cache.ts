@@ -4,9 +4,11 @@ import { Service } from '../../../src/service';
 import { ServicesMethodsList } from '../config/struct.types.config';
 
 export type MethodsCacheRecordsMap = {
-  [key in SdkServices]?: {
-    [method: string]: string;
-  };
+  [key in SdkServices]?: MethodsMap;
+};
+
+export type MethodsMap = {
+  [method: string]: string;
 };
 
 export type ServicesMethodsBodies = MethodsCacheRecordsMap;

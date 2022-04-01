@@ -1,9 +1,18 @@
 import crypto from 'crypto';
 
-import { BadgerGraph, DiggService } from '../../../src';
+import {
+  BadgerGraph,
+  DiggService,
+  ibBTCService,
+  RegistryService,
+  RewardsService,
+  TokensService,
+  VaultsService,
+} from '../../../src';
 import {
   MethodsCacheRecordsDiffMap,
   MethodsCacheRecordsMap,
+  MethodsMap,
   ServiceClsMap,
   ServicesMethodsBodies,
 } from './struct.types.cache';
@@ -14,10 +23,12 @@ import { ServicesConfig } from '../config';
 import { SdkServices } from '../enums';
 import { BaseFsIo } from '../fs.io/base.fs.io';
 import { ServicesMethodsList } from '../config/struct.types.config';
+import { methodsToSkip } from '../constants';
 
 export class MethodsCache {
   readonly rootDir: string = ROOT_DIR;
   readonly cacheFileName: string = CHACHE_FILE_NAME;
+  readonly methodsToSkip: string[] = methodsToSkip;
 
   missMatchMethodsNum: number = 0;
 
@@ -27,11 +38,11 @@ export class MethodsCache {
 
   readonly serviceClsMap: ServiceClsMap = {
     [SdkServices.Digg]: DiggService.prototype,
-    [SdkServices.Ibbtc]: DiggService.prototype,
-    [SdkServices.Registry]: DiggService.prototype,
-    [SdkServices.Rewards]: DiggService.prototype,
-    [SdkServices.Tokens]: DiggService.prototype,
-    [SdkServices.Vaults]: DiggService.prototype,
+    [SdkServices.Ibbtc]: ibBTCService.prototype,
+    [SdkServices.Registry]: RegistryService.prototype,
+    [SdkServices.Rewards]: RewardsService.prototype,
+    [SdkServices.Tokens]: TokensService.prototype,
+    [SdkServices.Vaults]: VaultsService.prototype,
     graph: BadgerGraph.prototype,
   };
 
@@ -45,37 +56,50 @@ export class MethodsCache {
     return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.getOwnPropertyNames(
         this.serviceClsMap[service],
-      ).filter((method) => method !== 'constructor');
+      ).filter((method) => !this.methodsToSkip.includes(method));
       return acc;
     }, {} as ServicesMethodsList);
   }
 
   getMissMatch() {
+    console.log('Counting cache missmatch for services methods bodies...');
+
     const cacheMissMatch: MethodsCacheRecordsDiffMap = {
       length: 0,
     };
 
     ServicesConfig.listServices.forEach((service) => {
-      Object.keys(this.newCacheRecords).forEach((method) => {
-        const newMethodsCache = this.newCacheRecords[service]?.[method];
-        const oldMethodsCache = this.oldCacheRecords[service]?.[method];
-        if (newMethodsCache !== oldMethodsCache) {
-          if (cacheMissMatch[service]) {
-            (<string[]>cacheMissMatch[service]).push(method);
-          } else {
-            cacheMissMatch[service] = [];
+      Object.keys(<MethodsMap>this.newCacheRecords[service]).forEach(
+        (method) => {
+          const newMethodsCache = this.newCacheRecords[service]?.[method];
+          const oldMethodsCache = this.oldCacheRecords[service]?.[method];
+
+          if (newMethodsCache !== oldMethodsCache) {
+            if (cacheMissMatch[service]) {
+              (<string[]>cacheMissMatch[service]).push(method);
+            } else {
+              cacheMissMatch[service] = [method];
+            }
+            cacheMissMatch.length++;
           }
-        }
-        cacheMissMatch.length++;
-      });
+        },
+      );
     });
 
     this.missMatchMethodsNum = cacheMissMatch.length;
+
+    console.log(
+      `Cache missmatch number of methods is ${this.missMatchMethodsNum}`,
+    );
 
     return cacheMissMatch;
   }
 
   saveToFile() {
+    console.log(
+      `Saving new cache values in ${this.rootDir}/${this.cacheFileName}`,
+    );
+
     if (this.missMatchMethodsNum === 0) return;
 
     this.fsIo.write<MethodsCacheRecordsMap>(
@@ -87,7 +111,7 @@ export class MethodsCache {
   private genNewRecords() {
     return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.getOwnPropertyNames(this.serviceClsMap[service])
-        .filter((method) => method !== 'constructor')
+        .filter((method) => !this.methodsToSkip.includes(method))
         .reduce(
           (acc, method) => {
             acc[method] = crypto

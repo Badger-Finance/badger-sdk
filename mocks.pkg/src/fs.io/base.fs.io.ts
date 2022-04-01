@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve } from 'path';
 
 export class BaseFsIo {
@@ -8,9 +8,15 @@ export class BaseFsIo {
     this.rootDir = rootDir;
   }
 
-  async write<T>(fileName: string, data: T, path: string = '') {
+  write<T>(fileName: string, data: T, path: string = '') {
+    const fullPath = resolve(__dirname, `../../${this.rootDir}`, path);
+
+    if (!existsSync(fullPath)) {
+      mkdirSync(fullPath, { recursive: true });
+    }
+
     writeFileSync(
-      resolve(__dirname, '../', this.rootDir + path + '/', `${fileName}.json`),
+      resolve(fullPath, `${fileName}.json`),
       JSON.stringify(data, null, 2),
     );
   }
