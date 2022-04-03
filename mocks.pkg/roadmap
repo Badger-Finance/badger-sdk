@@ -1,8 +1,12 @@
 - avoid private methods
-- fill methods args cfgs for chains
+- fill methods args cfgs for chains (eth)
 - add `ignore` param in method for specific chain
 - launch `guard` in husky git hook
 - update README
 - ask jintao to cr8 a package for sdk
 - add rpc nods url to ENV
 - add generation and deploy in github actions
+
+improvments:
+  - Check methods from parent class for Services
+  - Add self.assigned mock param to chain cfg

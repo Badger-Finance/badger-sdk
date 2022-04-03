@@ -16,9 +16,9 @@ import {
   ServiceClsMap,
   ServicesMethodsBodies,
 } from './struct.types.cache';
-import { CHACHE_FILE_NAME, ROOT_DIR } from './constants.cache';
+import { CACHE_FILE_NAME, ROOT_DIR } from './constants.cache';
 
-import cacheRecords from '../../__chache__/methods.json';
+import cacheRecords from '../../__cache__/methods.json';
 import { ServicesConfig } from '../config';
 import { SdkServices } from '../enums';
 import { BaseFsIo } from '../fs.io/base.fs.io';
@@ -27,7 +27,7 @@ import { methodsToSkip } from '../constants';
 
 export class MethodsCache {
   readonly rootDir: string = ROOT_DIR;
-  readonly cacheFileName: string = CHACHE_FILE_NAME;
+  readonly cacheFileName: string = CACHE_FILE_NAME;
   readonly methodsToSkip: string[] = methodsToSkip;
 
   missMatchMethodsNum: number = 0;

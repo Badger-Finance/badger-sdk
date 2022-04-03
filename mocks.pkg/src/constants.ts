@@ -4,6 +4,7 @@ import { RelevantNetworks } from './types';
 export const methodsToSkip = [
   'init',
   'ready',
+  'claim',
   'deposit',
   'withdraw',
   'constructor',

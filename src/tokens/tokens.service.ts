@@ -7,7 +7,6 @@ export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
 
   async loadTokens(addresses: string[]): Promise<Record<string, Token>> {
-    // shit
     const tokens: Record<string, Token> = {};
     await Promise.all(
       addresses.map(async (addr) => {

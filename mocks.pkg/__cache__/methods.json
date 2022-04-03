@@ -3,25 +3,19 @@
     "convert": "rPaw3Bjius+2TbDygyaMI412serHXQZR5oYWQwPOE0U="
   },
   "ibbtc": {
-    "getPricePerFullShare": "GhN3iEVlhl9TWuMDDllQc6QZzH5+ly/x45fpI/r3yDU=",
-    "init": "9OaH4+ICf3ujvOVGI67hg0FUG5P7hooBL7oviwaFZ60="
+    "getPricePerFullShare": "GhN3iEVlhl9TWuMDDllQc6QZzH5+ly/x45fpI/r3yDU="
   },
   "registry": {
-    "ready": "4+KQS0cXWz8cwxEs459IpmpNygpt1hwipjuteurKcTE=",
     "get": "yrYLWXaBeKsEk01lXyAoZL4SAtIjxdO930YauQL7yqM=",
     "getProductionVaults": "A3GAzGJQcRHiIdgX2N1kIdASKwv7DcyF/N0XYHSL/eM=",
-    "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs=",
-    "init": "EgCJOaWV4Kb6KiyGcvG3kP/oOVGmzipQmgzJ/8Ag90g="
+    "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs="
   },
   "rewards": {
-    "ready": "4+KQS0cXWz8cwxEs459IpmpNygpt1hwipjuteurKcTE=",
-    "claim": "0Fev07PITCuCfpVBVzPjvKYw0CwTs/FGiz4N5nXDVNc=",
     "loadActiveSchedules": "j5HeeSPBYfM7zWN+ap/oUPj3GkOIKx7uANnVzT3rEzM=",
-    "loadSchedules": "vNg/u0F/2jJbuNz+rqKq8FKJhtHDnVtbu5GykXDUZbA=",
-    "init": "vAC2AyJqRbiwG3MO3mxnhvAKRH9Z+PwNENYR1+LSKCc="
+    "loadSchedules": "vNg/u0F/2jJbuNz+rqKq8FKJhtHDnVtbu5GykXDUZbA="
   },
   "tokens": {
-    "loadTokens": "S5JzaaRtZ5b9x3xFswBvVfkONPeLP3cppewhGH8J0L4=",
+    "loadTokens": "S3nLsTRU+tsjtywZI59kuOoW12AE2JiVSDp6qrh6Ilg=",
     "loadToken": "oCf+FrzSDw7RCvT9CmV+76ADuAt6lbGbmEwLmqOtiR4=",
     "loadBalances": "e0MFY6G8uKrt/oFEHfefHKcWIIAZp+zYVFTJ0wz/jtk=",
     "loadBalance": "PMgJmQM0wuDLSb6DcjVhbUOPjvjhYMsZ0ONwbsj17sY=",
@@ -34,10 +28,7 @@
     "loadVault": "AH5fOE9gAGoZ+sbXFrK4s/JtkHt3HC9zF3Wgw9ZVxkA=",
     "listHarvests": "pnV0AXoIFPS4QM2LwUkW1tGpgvzApa8bIPfsH23qN7Y=",
     "getVaultStrategy": "N+LefA6iimMpyH18EVBtl2LTEqkdoN1mFPRgYfLWWf4=",
-    "getPendingYield": "SmX66WznLjw4X1lSQ/3ULffJTZZyGHM6jijo7pmHjvs=",
     "getPendingHarvest": "jSvzzxPJSQdU+RLaxgrz7PVTrvtKYqTfg1G5Co5eq/o=",
-    "deposit": "UmKXlyxSv+Z2DxToC8nbPNZ0qsyFfCpFaK04vTr+9ZM=",
-    "withdraw": "JIjmJpDRRPWYNHlObJEr2hiE0GbAdD2It3dJcWjbwow=",
     "fetchVault": "Fr6we0QWnnLRJg1JgL5nk1BCsEyFDoifYoZKKNEPJlk=",
     "getVaultVariantData": "R06Dd+DvrwWLUiMi8N7Io49rBlZx3uWppRtRtOB/VFc=",
     "getPendingAssets": "JHTFoXGgJUxzTVaxP2YJuQF44KhB0uegcINWGl8sS/8="
