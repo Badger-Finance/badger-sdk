@@ -1,0 +1,22 @@
+{
+  "user": {
+    "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1",
+    "settBalances": [
+      {
+        "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+        "user": {
+          "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1"
+        },
+        "sett": {
+          "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+        },
+        "netDeposit": "0",
+        "netShareDeposit": "0",
+        "grossDeposit": "348408371033747272796",
+        "grossShareDeposit": "290194639157313470222",
+        "grossWithdraw": "348408371033747272796",
+        "grossShareWithdraw": "290194639157313470222"
+      }
+    ]
+  }
+}

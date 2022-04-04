@@ -3,7 +3,10 @@ import { RelevantNetworks } from '../types';
 
 export type ServicesArgsConfig = {
   [key in SdkServices]: {
-    [method: string]: any[];
+    [method: string]: {
+      args: any[];
+      ignore?: boolean;
+    };
   };
 };
 

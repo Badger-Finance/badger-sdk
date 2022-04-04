@@ -71,21 +71,28 @@ export class MocksProcessor {
       const methodArgsConfig = <ServicesConfig>MocksProcessor.configs[network];
 
       const services = this.forced
-        ? methodArgsConfig.servicesArgsMap
+        ? this.methodsCache.getRelevantServicesMethods()
         : cacheMissMatch;
 
       for (const service of Object.keys(services)) {
         if (service === 'length') continue;
 
         const methods = this.forced
-          ? Object.keys(services)
+          ? services[<SdkServices>service]
           : cacheMissMatch[<SdkServices>service];
 
         if (!methods) return;
 
         for (const methodName of <SdkServices[]>methods) {
-          const args =
+          const { args, ignore } =
             methodArgsConfig.servicesArgsMap[<SdkServices>service][methodName];
+
+          if (ignore) continue;
+
+          console.log(
+            `Loading and writing chain:[${network}] service:[${service}] method:[${methodName}] \n`,
+            `With args: ${JSON.stringify(args, null, 2)}`,
+          );
           // @ts-ignore It`s rly hard to type this, and even if we do
           // there be a lot of manual work, need to avoid that
           const response = await sdk[service][methodName](...args);
@@ -152,7 +159,7 @@ export class MocksProcessor {
           notImplementedServ.push(`${network}.${service}`);
 
         const relevantMethods = relevantServices[<SdkServices>service];
-        const cfgMethods = Object.keys(methodArgsConfig[<SdkServices>service]);
+        const cfgMethods = methodArgsConfig[<SdkServices>service];
 
         if (!relevantMethods) continue;
 

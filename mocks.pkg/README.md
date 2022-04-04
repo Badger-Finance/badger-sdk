@@ -19,3 +19,32 @@ All resp packed into `.json` files, with such pattern:
 `@badger-dao/sdk-mocks/generated/<network>/<service>/<method>.json`
 
 For example: `@badger-dao/sdk-mocks/generated/ethereum/graph/loadSett.json`
+
+## Development
+
+This package would launch and refetch methods resp only in case theire content was changed.
+Also, pre-commit hook will remind u, if u forget to provide method's args to chain cfg.
+
+### How to add Service?
+
+Services are listed in enum. Just drop it there
+
+```sh
+./mocks.pkg/src/enums/sdk.services.enum.ts
+```
+
+### How to add method?
+
+All method and args with which they will be called are kept in configs
+
+```sh
+./mocks.pkg/src/config/<chain>.config.ts
+```
+
+### Ignoring methods global or chain specific
+
+To exlude service method from querying and parsing globaly add it's name to the list `methodsToSkip`.
+
+```shell
+./mocks.pkg/src/constants.ts
+```

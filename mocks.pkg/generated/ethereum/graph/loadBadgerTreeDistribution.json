@@ -1,0 +1,21 @@
+{
+  "badgerTreeDistribution": {
+    "id": "0x0d69481518ed535f88bd698c76551437af98ca3b6dfdbdd1a58a353d853777f8-528",
+    "timestamp": 1634708333,
+    "token": {
+      "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+      "name": "Badger Sett Convex CRV",
+      "symbol": "bcvxCRV",
+      "decimals": "18",
+      "totalSupply": "9680860937976920554007"
+    },
+    "amount": "73765363461791421839",
+    "blockNumber": "13452816",
+    "strategy": {
+      "id": "0x4f3e7a4566320b2709fd1986f2e9f84053d3e2a0"
+    },
+    "sett": {
+      "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+    }
+  }
+}

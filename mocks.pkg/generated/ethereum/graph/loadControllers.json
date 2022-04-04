@@ -1,0 +1,37 @@
+{
+  "controllers": [
+    {
+      "id": "0x0c41a8613fbefcc8d6e5df1020dbb336f875247f"
+    },
+    {
+      "id": "0x30392694c25fbbe5c026cf846e9b6525a2ac3ec8"
+    },
+    {
+      "id": "0x3f61344ba56df00dad9bbca05d98ca2aec43ba0b"
+    },
+    {
+      "id": "0x41b6ba5cb7183d0964dba65bfb3bf5f0be5cc02a"
+    },
+    {
+      "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+    },
+    {
+      "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+    },
+    {
+      "id": "0xa54d8a596b4022cc4436b692c8ea0e342405eb6e"
+    },
+    {
+      "id": "0xb915a8203165f6dc66540b642af37d4c3544cbe0"
+    },
+    {
+      "id": "0xbabf5401a6c255af3ae83ff806191c404eef8d9b"
+    },
+    {
+      "id": "0xd35ff2c170cc1e44de4eddc9f2fc425c16670250"
+    },
+    {
+      "id": "0xe505f7c2ffcce7ae4b076456bc02a70d8fe8d4d2"
+    }
+  ]
+}

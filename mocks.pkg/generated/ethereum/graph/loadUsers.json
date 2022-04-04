@@ -1,0 +1,3489 @@
+{
+  "users": [
+    {
+      "id": "0x0000000000000000000000000000000000000000",
+      "settBalances": [
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x15cbc4ac1e81c97667780fe6dadedd04a6eeb47b",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x15cbc4ac1e81c97667780fe6dadedd04a6eeb47b"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x26b8efa69603537ac8ab55768b6740b67664d518",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x26b8efa69603537ac8ab55768b6740b67664d518"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x53c8e199eb2cb7c01543c137078a038937a68e40",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x55912d0cf83b75c492e761932abc4db4a5cb1b17",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x55912d0cf83b75c492e761932abc4db4a5cb1b17"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x599d92b453c010b1050d31c364f6ee17e819f193",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x599d92b453c010b1050d31c364f6ee17e819f193"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x608b6d82eb121f3e5c0baeed32d81007b916e83c",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x608b6d82eb121f3e5c0baeed32d81007b916e83c"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x6af7377b5009d7d154f36fe9e235ae1da27aea22",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x6af7377b5009d7d154f36fe9e235ae1da27aea22"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x88128580acdd9c04ce47afce196875747bf2a9f6",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x8c76970747afd5398e958bdfada4cf0b9fca16c4",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0x937b8e917d0f36edebba8e459c5fb16f3b315551",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0x937b8e917d0f36edebba8e459c5fb16f3b315551"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xaf5a1decfa95baf63e0084a35c62592b774a2a87",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xaf5a1decfa95baf63e0084a35c62592b774a2a87"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xb9d076fde463dbc9f915e5392f807315bf940334",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xb9d076fde463dbc9f915e5392f807315bf940334"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xe143aa25eec81b4fc952b38b6bca8d2395481377",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xe143aa25eec81b4fc952b38b6bca8d2395481377"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xec1c717a3b02582a4aa2275260c583095536b613",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xf349c0faa80fc1870306ac093f75934078e28991",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xf349c0faa80fc1870306ac093f75934078e28991"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000000000000000000000000000000000000000-0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+          "user": {
+            "id": "0x0000000000000000000000000000000000000000"
+          },
+          "sett": {
+            "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "0",
+          "grossShareDeposit": "0",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000000000000000000000000000000dead",
+      "settBalances": [
+        {
+          "id": "0x000000000000000000000000000000000000dead-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000000000000000000000000000000dead"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "55278429711760622",
+          "netShareDeposit": "44919208373309237",
+          "grossDeposit": "55278429711760622",
+          "grossShareDeposit": "44919208373309237",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000000006f6502b7f2bbac8c30a3f67e9a",
+      "settBalances": [
+        {
+          "id": "0x000000000000006f6502b7f2bbac8c30a3f67e9a-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000000006f6502b7f2bbac8c30a3f67e9a"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "220169541044931227996",
+          "grossShareDeposit": "179725902879792042839",
+          "grossWithdraw": "220169541044931227996",
+          "grossShareWithdraw": "179725902879792042839"
+        },
+        {
+          "id": "0x000000000000006f6502b7f2bbac8c30a3f67e9a-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000000000006f6502b7f2bbac8c30a3f67e9a"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "13391736480881164969",
+          "grossShareDeposit": "9674900925373533678",
+          "grossWithdraw": "13391736480881164969",
+          "grossShareWithdraw": "9674900925373533678"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000002d534ff79e9c69e7fcc742f0be83",
+      "settBalances": [
+        {
+          "id": "0x0000000000002d534ff79e9c69e7fcc742f0be83-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000002d534ff79e9c69e7fcc742f0be83"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "4",
+          "netShareDeposit": "3",
+          "grossDeposit": "135194897209859534518",
+          "grossShareDeposit": "109806444567831482164",
+          "grossWithdraw": "135194897209859534514",
+          "grossShareWithdraw": "109806444567831482161"
+        },
+        {
+          "id": "0x0000000000002d534ff79e9c69e7fcc742f0be83-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000002d534ff79e9c69e7fcc742f0be83"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "5",
+          "netShareDeposit": "4",
+          "grossDeposit": "2032341963610540608",
+          "grossShareDeposit": "1454832649478962856",
+          "grossWithdraw": "2032341963610540603",
+          "grossShareWithdraw": "1454832649478962852"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000005117dd3a72e64a705198753fdd54",
+      "settBalances": [
+        {
+          "id": "0x0000000000005117dd3a72e64a705198753fdd54-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000005117dd3a72e64a705198753fdd54"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "872572957858984970178",
+          "grossShareDeposit": "711468816609077040889",
+          "grossWithdraw": "872572957858984970178",
+          "grossShareWithdraw": "711468816609077040889"
+        },
+        {
+          "id": "0x0000000000005117dd3a72e64a705198753fdd54-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000005117dd3a72e64a705198753fdd54"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "2979176737263189169",
+          "grossShareDeposit": "2139565866885494112",
+          "grossWithdraw": "2979176737263189169",
+          "grossShareWithdraw": "2139565866885494112"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000007f150bd6f54c40a34d7c3d5e9f56",
+      "settBalances": [
+        {
+          "id": "0x0000000000007f150bd6f54c40a34d7c3d5e9f56-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000007f150bd6f54c40a34d7c3d5e9f56"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "55828064852272766",
+          "netShareDeposit": "45336173699954932",
+          "grossDeposit": "8248024536158254677688",
+          "grossShareDeposit": "6706762674524583128015",
+          "grossWithdraw": "8247968708093402404922",
+          "grossShareWithdraw": "6706717338350883173083"
+        },
+        {
+          "id": "0x0000000000007f150bd6f54c40a34d7c3d5e9f56-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000007f150bd6f54c40a34d7c3d5e9f56"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "81662458999870",
+          "netShareDeposit": "59351612452963",
+          "grossDeposit": "18129187132893522280",
+          "grossShareDeposit": "13310774290335491976",
+          "grossWithdraw": "18129105470434522410",
+          "grossShareWithdraw": "13310714938723039013"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000000abe945c436595ce765a8a261317b",
+      "settBalances": [
+        {
+          "id": "0x000000000000abe945c436595ce765a8a261317b-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000000abe945c436595ce765a8a261317b"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "0",
+          "grossDeposit": "958993344075370182833",
+          "grossShareDeposit": "780296172931840835171",
+          "grossWithdraw": "958993344075370182832",
+          "grossShareWithdraw": "780296172931840835171"
+        },
+        {
+          "id": "0x000000000000abe945c436595ce765a8a261317b-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000000000abe945c436595ce765a8a261317b"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "2320153979084812377",
+          "grossShareDeposit": "1669957736828751326",
+          "grossWithdraw": "2320153979084812377",
+          "grossShareWithdraw": "1669957736828751326"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000000c25de1dfb380f2b3020de1e424698",
+      "settBalances": [
+        {
+          "id": "0x00000000000c25de1dfb380f2b3020de1e424698-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000000c25de1dfb380f2b3020de1e424698"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "141149767696439048626",
+          "grossShareDeposit": "114589265820555149312",
+          "grossWithdraw": "141149767696439048626",
+          "grossShareWithdraw": "114589265820555149312"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000025d4386f7fb58984cbe110aee3a4c4",
+      "settBalances": [
+        {
+          "id": "0x000000000025d4386f7fb58984cbe110aee3a4c4-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000025d4386f7fb58984cbe110aee3a4c4"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "363324459709706289085",
+          "grossShareDeposit": "294581283868691431436",
+          "grossWithdraw": "363324459709706289085",
+          "grossShareWithdraw": "294581283868691431436"
+        },
+        {
+          "id": "0x000000000025d4386f7fb58984cbe110aee3a4c4-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000000025d4386f7fb58984cbe110aee3a4c4"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1677616366200300603",
+          "grossShareDeposit": "1182130692008789552",
+          "grossWithdraw": "1677616366200300603",
+          "grossShareWithdraw": "1182130692008789552"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000029f5c1eee7c85c30c0e40197fbec9b",
+      "settBalances": [
+        {
+          "id": "0x000000000029f5c1eee7c85c30c0e40197fbec9b-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000029f5c1eee7c85c30c0e40197fbec9b"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1519023932266948613432",
+          "grossShareDeposit": "1237038127482247736289",
+          "grossWithdraw": "1519023932266948613432",
+          "grossShareWithdraw": "1237038127482247736289"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000035b5e5ad9019092c665357240f594e",
+      "settBalances": [
+        {
+          "id": "0x000000000035b5e5ad9019092c665357240f594e-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000035b5e5ad9019092c665357240f594e"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "13",
+          "netShareDeposit": "10",
+          "grossDeposit": "1225082441006350057152",
+          "grossShareDeposit": "993051100086270356015",
+          "grossWithdraw": "1225082441006350057139",
+          "grossShareWithdraw": "993051100086270356005"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000003b3cc22af3ae1eac0440bcee416b40",
+      "settBalances": [
+        {
+          "id": "0x00000000003b3cc22af3ae1eac0440bcee416b40-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000003b3cc22af3ae1eac0440bcee416b40"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "469487242505567",
+          "netShareDeposit": "380188034862516",
+          "grossDeposit": "690989962684968385275",
+          "grossShareDeposit": "560563491492994494065",
+          "grossWithdraw": "690989493197725879708",
+          "grossShareWithdraw": "560563111304959631549"
+        },
+        {
+          "id": "0x00000000003b3cc22af3ae1eac0440bcee416b40-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00000000003b3cc22af3ae1eac0440bcee416b40"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "1",
+          "grossDeposit": "4864167298909026422",
+          "grossShareDeposit": "3456335298505454977",
+          "grossWithdraw": "4864167298909026421",
+          "grossShareWithdraw": "3456335298505454976"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000075a43abafc7c8ac407c6ce74f3cc28",
+      "settBalances": [
+        {
+          "id": "0x000000000075a43abafc7c8ac407c6ce74f3cc28-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000075a43abafc7c8ac407c6ce74f3cc28"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1655100163669272790959",
+          "grossShareDeposit": "1352785991980076268364",
+          "grossWithdraw": "1655100163669272790959",
+          "grossShareWithdraw": "1352785991980076268364"
+        },
+        {
+          "id": "0x000000000075a43abafc7c8ac407c6ce74f3cc28-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000000075a43abafc7c8ac407c6ce74f3cc28"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "3560222716546915392",
+          "grossShareDeposit": "2769155930955405603",
+          "grossWithdraw": "3560222716546915392",
+          "grossShareWithdraw": "2769155930955405603"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000009a41862f3b2b0c688b7c0d1940511e",
+      "settBalances": [
+        {
+          "id": "0x00000000009a41862f3b2b0c688b7c0d1940511e-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00000000009a41862f3b2b0c688b7c0d1940511e"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-90940255885032980",
+          "netShareDeposit": "0",
+          "grossDeposit": "370875121999999999",
+          "grossShareDeposit": "370875120538167946",
+          "grossWithdraw": "461815377885032979",
+          "grossShareWithdraw": "370875120538167946"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000a8fb09af944ab3baf7a9b3e1ab29d8",
+      "settBalances": [
+        {
+          "id": "0x0000000000a8fb09af944ab3baf7a9b3e1ab29d8-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000a8fb09af944ab3baf7a9b3e1ab29d8"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "667254858183035827234",
+          "grossShareDeposit": "543017086245702456758",
+          "grossWithdraw": "667254858183035827234",
+          "grossShareWithdraw": "543017086245702456758"
+        },
+        {
+          "id": "0x0000000000a8fb09af944ab3baf7a9b3e1ab29d8-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000a8fb09af944ab3baf7a9b3e1ab29d8"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1416509243916040490",
+          "grossShareDeposit": "1045977439997608084",
+          "grossWithdraw": "1416509243916040490",
+          "grossShareWithdraw": "1045977439997608084"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000d1d773661e4b2102bbe07d4dcde777",
+      "settBalances": [
+        {
+          "id": "0x0000000000d1d773661e4b2102bbe07d4dcde777-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000d1d773661e4b2102bbe07d4dcde777"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "241062445691673707",
+          "grossShareDeposit": "173211135852770366",
+          "grossWithdraw": "241062445691673707",
+          "grossShareWithdraw": "173211135852770366"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000000f4def5f3572c846b1483daf4588d8f",
+      "settBalances": [
+        {
+          "id": "0x0000000000f4def5f3572c846b1483daf4588d8f-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000000f4def5f3572c846b1483daf4588d8f"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "25",
+          "netShareDeposit": "21",
+          "grossDeposit": "1609343358471145486148",
+          "grossShareDeposit": "1306106996014845103113",
+          "grossWithdraw": "1609343358471145486123",
+          "grossShareWithdraw": "1306106996014845103092"
+        },
+        {
+          "id": "0x0000000000f4def5f3572c846b1483daf4588d8f-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000000f4def5f3572c846b1483daf4588d8f"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "38",
+          "netShareDeposit": "29",
+          "grossDeposit": "15309366110381478219",
+          "grossShareDeposit": "10863080420252899405",
+          "grossWithdraw": "15309366110381478181",
+          "grossShareWithdraw": "10863080420252899376"
+        }
+      ]
+    },
+    {
+      "id": "0x000000000bdbd514fd0ebb5b5773e006145d5140",
+      "settBalances": [
+        {
+          "id": "0x000000000bdbd514fd0ebb5b5773e006145d5140-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000000bdbd514fd0ebb5b5773e006145d5140"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "1",
+          "grossDeposit": "52928880894575792405",
+          "grossShareDeposit": "43019721705805725488",
+          "grossWithdraw": "52928880894575792404",
+          "grossShareWithdraw": "43019721705805725487"
+        }
+      ]
+    },
+    {
+      "id": "0x000000005736775feb0c8568e7dee77222a26880",
+      "settBalances": [
+        {
+          "id": "0x000000005736775feb0c8568e7dee77222a26880-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000005736775feb0c8568e7dee77222a26880"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "13",
+          "netShareDeposit": "10",
+          "grossDeposit": "1034322847372719840464",
+          "grossShareDeposit": "838685182334978046923",
+          "grossWithdraw": "1034322847372719840451",
+          "grossShareWithdraw": "838685182334978046913"
+        },
+        {
+          "id": "0x000000005736775feb0c8568e7dee77222a26880-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000005736775feb0c8568e7dee77222a26880"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "1",
+          "grossDeposit": "301716129179012337",
+          "grossShareDeposit": "213763876761644319",
+          "grossWithdraw": "301716129179012336",
+          "grossShareWithdraw": "213763876761644318"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000057a888b5dc0a81f02c6f5c3b7d16b183",
+      "settBalances": [
+        {
+          "id": "0x0000000057a888b5dc0a81f02c6f5c3b7d16b183-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000057a888b5dc0a81f02c6f5c3b7d16b183"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "1",
+          "grossDeposit": "144897484304881598949",
+          "grossShareDeposit": "117891698844710567227",
+          "grossWithdraw": "144897484304881598948",
+          "grossShareWithdraw": "117891698844710567226"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000726422a6fecb4759b44d47e48cf746aa",
+      "settBalances": [
+        {
+          "id": "0x00000000726422a6fecb4759b44d47e48cf746aa-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000726422a6fecb4759b44d47e48cf746aa"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "3",
+          "netShareDeposit": "2",
+          "grossDeposit": "282612471546517510111",
+          "grossShareDeposit": "228857933628803890511",
+          "grossWithdraw": "282612471546517510108",
+          "grossShareWithdraw": "228857933628803890509"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000089341e263b85d84a0eea39f47c37a9d2",
+      "settBalances": [
+        {
+          "id": "0x0000000089341e263b85d84a0eea39f47c37a9d2-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000089341e263b85d84a0eea39f47c37a9d2"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "2449870127708989859761",
+          "grossShareDeposit": "1994079682396938260257",
+          "grossWithdraw": "2449870127708989859761",
+          "grossShareWithdraw": "1994079682396938260257"
+        },
+        {
+          "id": "0x0000000089341e263b85d84a0eea39f47c37a9d2-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000089341e263b85d84a0eea39f47c37a9d2"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "3189155589496544840",
+          "grossShareDeposit": "2330375945325666294",
+          "grossWithdraw": "3189155589496544840",
+          "grossShareWithdraw": "2330375945325666294"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000089a83208f0e50096f8dc45b62b615d67",
+      "settBalances": [
+        {
+          "id": "0x0000000089a83208f0e50096f8dc45b62b615d67-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000089a83208f0e50096f8dc45b62b615d67"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "52391281032651009321",
+          "grossShareDeposit": "42571050483543172225",
+          "grossWithdraw": "52391281032651009321",
+          "grossShareWithdraw": "42571050483543172225"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000094acb89a43eac2fbb3a07973efc2435c",
+      "settBalances": [
+        {
+          "id": "0x0000000094acb89a43eac2fbb3a07973efc2435c-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000094acb89a43eac2fbb3a07973efc2435c"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "366169061973311407476",
+          "grossShareDeposit": "299679324504888591908",
+          "grossWithdraw": "366169061973311407476",
+          "grossShareWithdraw": "299679324504888591908"
+        },
+        {
+          "id": "0x0000000094acb89a43eac2fbb3a07973efc2435c-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000094acb89a43eac2fbb3a07973efc2435c"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "297695085657707701",
+          "grossShareDeposit": "234260633377986873",
+          "grossWithdraw": "297695085657707701",
+          "grossShareWithdraw": "234260633377986873"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000099cb7fc48a935bceb9f05bbae54e8987",
+      "settBalances": [
+        {
+          "id": "0x0000000099cb7fc48a935bceb9f05bbae54e8987-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000099cb7fc48a935bceb9f05bbae54e8987"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "5",
+          "netShareDeposit": "3",
+          "grossDeposit": "1132593823909092936325",
+          "grossShareDeposit": "921650783132690457352",
+          "grossWithdraw": "1132593823909092936320",
+          "grossShareWithdraw": "921650783132690457349"
+        },
+        {
+          "id": "0x0000000099cb7fc48a935bceb9f05bbae54e8987-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000000099cb7fc48a935bceb9f05bbae54e8987"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "7",
+          "netShareDeposit": "4",
+          "grossDeposit": "2537849668159997066",
+          "grossShareDeposit": "1835269258053482302",
+          "grossWithdraw": "2537849668159997059",
+          "grossShareWithdraw": "1835269258053482298"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000b2ff98680adaf8a3e382176bbfc34c8f",
+      "settBalances": [
+        {
+          "id": "0x00000000b2ff98680adaf8a3e382176bbfc34c8f-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000b2ff98680adaf8a3e382176bbfc34c8f"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1523040864",
+          "netShareDeposit": "1236446487",
+          "grossDeposit": "188432564505794965908",
+          "grossShareDeposit": "152974741480557038871",
+          "grossWithdraw": "188432564504271925044",
+          "grossShareWithdraw": "152974741479320592384"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000b7ca7e12dcc72290d1fe47b2ef14c607",
+      "settBalances": [
+        {
+          "id": "0x00000000b7ca7e12dcc72290d1fe47b2ef14c607-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000b7ca7e12dcc72290d1fe47b2ef14c607"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "6",
+          "netShareDeposit": "4",
+          "grossDeposit": "483288467087392272038",
+          "grossShareDeposit": "393208120136805078746",
+          "grossWithdraw": "483288467087392272032",
+          "grossShareWithdraw": "393208120136805078742"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000bc86d3681b2c13670b6f0ba9a4b3e318",
+      "settBalances": [
+        {
+          "id": "0x00000000bc86d3681b2c13670b6f0ba9a4b3e318-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00000000bc86d3681b2c13670b6f0ba9a4b3e318"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1940818627068792085",
+          "grossShareDeposit": "1359776262518507291",
+          "grossWithdraw": "1940818627068792085",
+          "grossShareWithdraw": "1359776262518507291"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000c2cf7648c169b25ef1c217864bfa38cc",
+      "settBalances": [
+        {
+          "id": "0x00000000c2cf7648c169b25ef1c217864bfa38cc-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000c2cf7648c169b25ef1c217864bfa38cc"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "384551069196996210736",
+          "grossShareDeposit": "311407216353811345066",
+          "grossWithdraw": "384551069196996210736",
+          "grossShareWithdraw": "311407216353811345066"
+        },
+        {
+          "id": "0x00000000c2cf7648c169b25ef1c217864bfa38cc-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00000000c2cf7648c169b25ef1c217864bfa38cc"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "287926258168010129",
+          "grossShareDeposit": "196175507711624448",
+          "grossWithdraw": "287926258168010129",
+          "grossShareWithdraw": "196175507711624448"
+        }
+      ]
+    },
+    {
+      "id": "0x00000000fea1fab3ce021f3bedd21a94d0ba190c",
+      "settBalances": [
+        {
+          "id": "0x00000000fea1fab3ce021f3bedd21a94d0ba190c-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00000000fea1fab3ce021f3bedd21a94d0ba190c"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "768568786143817554233",
+          "grossShareDeposit": "628633644340635347171",
+          "grossWithdraw": "768568786143817554233",
+          "grossShareWithdraw": "628633644340635347171"
+        },
+        {
+          "id": "0x00000000fea1fab3ce021f3bedd21a94d0ba190c-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00000000fea1fab3ce021f3bedd21a94d0ba190c"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "785127",
+          "netShareDeposit": "614984",
+          "grossDeposit": "526026968261536288",
+          "grossShareDeposit": "412664799581555925",
+          "grossWithdraw": "526026968260751161",
+          "grossShareWithdraw": "412664799580940941"
+        }
+      ]
+    },
+    {
+      "id": "0x0000000484f2217f1a64eb6d24b5cee446faeae5",
+      "settBalances": [
+        {
+          "id": "0x0000000484f2217f1a64eb6d24b5cee446faeae5-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000000484f2217f1a64eb6d24b5cee446faeae5"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "42852721556418019328",
+          "grossShareDeposit": "42852721556418019328",
+          "grossWithdraw": "42852721556418019328",
+          "grossShareWithdraw": "42852721556418019328"
+        }
+      ]
+    },
+    {
+      "id": "0x0000001d2b0a08a235276e8765aa1a659aae58bb",
+      "settBalances": [
+        {
+          "id": "0x0000001d2b0a08a235276e8765aa1a659aae58bb-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000001d2b0a08a235276e8765aa1a659aae58bb"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1746017462128066826",
+          "netShareDeposit": "1430456828315732802",
+          "grossDeposit": "1746017462128066826",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x000000917de6037d52b1f0a306eecd208405f7cd",
+      "settBalances": [
+        {
+          "id": "0x000000917de6037d52b1f0a306eecd208405f7cd-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000917de6037d52b1f0a306eecd208405f7cd"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1",
+          "netShareDeposit": "1",
+          "grossDeposit": "180395625287089822034",
+          "grossShareDeposit": "147586255717575348883",
+          "grossWithdraw": "180395625287089822033",
+          "grossShareWithdraw": "147586255717575348882"
+        },
+        {
+          "id": "0x000000917de6037d52b1f0a306eecd208405f7cd-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000000917de6037d52b1f0a306eecd208405f7cd"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-1235100",
+          "netShareDeposit": "0",
+          "grossDeposit": "1297764152364944322",
+          "grossShareDeposit": "995342331484195037",
+          "grossWithdraw": "1297764152366179422",
+          "grossShareWithdraw": "995342331484195037"
+        }
+      ]
+    },
+    {
+      "id": "0x000000e1fddf4fe15db5f23ae3ee83c6a11e8dd1",
+      "settBalances": [
+        {
+          "id": "0x000000e1fddf4fe15db5f23ae3ee83c6a11e8dd1-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000000e1fddf4fe15db5f23ae3ee83c6a11e8dd1"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-209590768754681565",
+          "netShareDeposit": "0",
+          "grossDeposit": "4080506740304307324315",
+          "grossShareDeposit": "3307545643848037424520",
+          "grossWithdraw": "4080716331073062005880",
+          "grossShareWithdraw": "3307545643848037424520"
+        }
+      ]
+    },
+    {
+      "id": "0x0000010503267ebad784755faac37920dc100000",
+      "settBalances": [
+        {
+          "id": "0x0000010503267ebad784755faac37920dc100000-0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+          "user": {
+            "id": "0x0000010503267ebad784755faac37920dc100000"
+          },
+          "sett": {
+            "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "476084483897",
+          "grossShareDeposit": "476084483897",
+          "grossWithdraw": "476084483897",
+          "grossShareWithdraw": "476084483897"
+        }
+      ]
+    },
+    {
+      "id": "0x0000021e9fb06e0a6cb1c238548d140b0dc258c7",
+      "settBalances": [
+        {
+          "id": "0x0000021e9fb06e0a6cb1c238548d140b0dc258c7-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000021e9fb06e0a6cb1c238548d140b0dc258c7"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-3960783926078714019",
+          "netShareDeposit": "0",
+          "grossDeposit": "76355105642696127608",
+          "grossShareDeposit": "67360911014238425574",
+          "grossWithdraw": "80315889568774841627",
+          "grossShareWithdraw": "67360911014238425574"
+        },
+        {
+          "id": "0x0000021e9fb06e0a6cb1c238548d140b0dc258c7-0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "user": {
+            "id": "0x0000021e9fb06e0a6cb1c238548d140b0dc258c7"
+          },
+          "sett": {
+            "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec"
+          },
+          "netDeposit": "-1260407893531907",
+          "netShareDeposit": "0",
+          "grossDeposit": "987058567834266733",
+          "grossShareDeposit": "985837088245777688",
+          "grossWithdraw": "988318975727798640",
+          "grossShareWithdraw": "985837088245777688"
+        }
+      ]
+    },
+    {
+      "id": "0x000008526602ff3d804628a259d144143142cde1",
+      "settBalances": [
+        {
+          "id": "0x000008526602ff3d804628a259d144143142cde1-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x000008526602ff3d804628a259d144143142cde1"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "-101414920526",
+          "netShareDeposit": "0",
+          "grossDeposit": "3105912428659",
+          "grossShareDeposit": "3105912428659",
+          "grossWithdraw": "3207327349185",
+          "grossShareWithdraw": "3105912428659"
+        },
+        {
+          "id": "0x000008526602ff3d804628a259d144143142cde1-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000008526602ff3d804628a259d144143142cde1"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-236078084533067937",
+          "netShareDeposit": "0",
+          "grossDeposit": "54999999999999999949",
+          "grossShareDeposit": "53589596392416308334",
+          "grossWithdraw": "55236078084533067886",
+          "grossShareWithdraw": "53589596392416308334"
+        },
+        {
+          "id": "0x000008526602ff3d804628a259d144143142cde1-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000008526602ff3d804628a259d144143142cde1"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-190590167720459",
+          "netShareDeposit": "0",
+          "grossDeposit": "13729042412774038",
+          "grossShareDeposit": "10114077335111396",
+          "grossWithdraw": "13919632580494497",
+          "grossShareWithdraw": "10114077335111396"
+        }
+      ]
+    },
+    {
+      "id": "0x0000a441fbb1fbaadf246539bf253a42abd31494",
+      "settBalances": [
+        {
+          "id": "0x0000a441fbb1fbaadf246539bf253a42abd31494-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000a441fbb1fbaadf246539bf253a42abd31494"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "10189989110883428010240",
+          "netShareDeposit": "8811596778494203179022",
+          "grossDeposit": "10189989110883428010240",
+          "grossShareDeposit": "8811596778494203179022",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0000a441fbb1fbaadf246539bf253a42abd31494-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000a441fbb1fbaadf246539bf253a42abd31494"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-24199527296641183",
+          "netShareDeposit": "0",
+          "grossDeposit": "396260445999999999",
+          "grossShareDeposit": "396260444433699422",
+          "grossWithdraw": "420459973296641182",
+          "grossShareWithdraw": "396260444433699422"
+        }
+      ]
+    },
+    {
+      "id": "0x0000fee6275dab194ab538a01dd8b18b02b20000",
+      "settBalances": [
+        {
+          "id": "0x0000fee6275dab194ab538a01dd8b18b02b20000-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0000fee6275dab194ab538a01dd8b18b02b20000"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "937371",
+          "netShareDeposit": "763322",
+          "grossDeposit": "601067676870363205055",
+          "grossShareDeposit": "489303200997654864891",
+          "grossWithdraw": "601067676870362267684",
+          "grossShareWithdraw": "489303200997654101569"
+        },
+        {
+          "id": "0x0000fee6275dab194ab538a01dd8b18b02b20000-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0000fee6275dab194ab538a01dd8b18b02b20000"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "902307809977705709",
+          "grossShareDeposit": "659087671382212722",
+          "grossWithdraw": "902307809977705709",
+          "grossShareWithdraw": "659087671382212722"
+        }
+      ]
+    },
+    {
+      "id": "0x000158e60c393b51fdfac71b14ce70b70148c326",
+      "settBalances": [
+        {
+          "id": "0x000158e60c393b51fdfac71b14ce70b70148c326-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000158e60c393b51fdfac71b14ce70b70148c326"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-203778386788084109",
+          "netShareDeposit": "0",
+          "grossDeposit": "82240053836367959816",
+          "grossShareDeposit": "67625712523843942604",
+          "grossWithdraw": "82443832223156043925",
+          "grossShareWithdraw": "67625712523843942604"
+        }
+      ]
+    },
+    {
+      "id": "0x000a3a98a65218dd99ccc34fb80a109a3fa5e824",
+      "settBalances": [
+        {
+          "id": "0x000a3a98a65218dd99ccc34fb80a109a3fa5e824-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000a3a98a65218dd99ccc34fb80a109a3fa5e824"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1741054566039457304",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "1741054566039457304",
+          "grossShareWithdraw": "1430456828315732802"
+        }
+      ]
+    },
+    {
+      "id": "0x000b79f52356189c80a9d3ada3911d4438218516",
+      "settBalances": [
+        {
+          "id": "0x000b79f52356189c80a9d3ada3911d4438218516-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000b79f52356189c80a9d3ada3911d4438218516"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-97489150188656831489",
+          "netShareDeposit": "0",
+          "grossDeposit": "11510485214612339965335",
+          "grossShareDeposit": "9509387876449812855452",
+          "grossWithdraw": "11607974364800996796824",
+          "grossShareWithdraw": "9509387876449812855452"
+        },
+        {
+          "id": "0x000b79f52356189c80a9d3ada3911d4438218516-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x000b79f52356189c80a9d3ada3911d4438218516"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-1985230516176",
+          "netShareDeposit": "0",
+          "grossDeposit": "35503176629101",
+          "grossShareDeposit": "35503176629101",
+          "grossWithdraw": "37488407145277",
+          "grossShareWithdraw": "35503176629101"
+        },
+        {
+          "id": "0x000b79f52356189c80a9d3ada3911d4438218516-0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+          "user": {
+            "id": "0x000b79f52356189c80a9d3ada3911d4438218516"
+          },
+          "sett": {
+            "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "2762484457401",
+          "grossShareDeposit": "2762484457401",
+          "grossWithdraw": "2762484457401",
+          "grossShareWithdraw": "2762484457401"
+        },
+        {
+          "id": "0x000b79f52356189c80a9d3ada3911d4438218516-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000b79f52356189c80a9d3ada3911d4438218516"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-4967280463846775",
+          "netShareDeposit": "0",
+          "grossDeposit": "282872328579270095",
+          "grossShareDeposit": "277905046904308225",
+          "grossWithdraw": "287839609043116870",
+          "grossShareWithdraw": "277905046904308225"
+        }
+      ]
+    },
+    {
+      "id": "0x000c9d05b64167cc59ad776c2032c736a4d6e8ee",
+      "settBalances": [
+        {
+          "id": "0x000c9d05b64167cc59ad776c2032c736a4d6e8ee-0x53c8e199eb2cb7c01543c137078a038937a68e40",
+          "user": {
+            "id": "0x000c9d05b64167cc59ad776c2032c736a4d6e8ee"
+          },
+          "sett": {
+            "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40"
+          },
+          "netDeposit": "-203829809836019542031",
+          "netShareDeposit": "0",
+          "grossDeposit": "20370369880405533140005",
+          "grossShareDeposit": "19425241165973029354606",
+          "grossWithdraw": "20574199690241552682036",
+          "grossShareWithdraw": "19425241165973029354606"
+        }
+      ]
+    },
+    {
+      "id": "0x000e66639f17982ce2d1d71aafcf443154ed1e08",
+      "settBalances": [
+        {
+          "id": "0x000e66639f17982ce2d1d71aafcf443154ed1e08-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000e66639f17982ce2d1d71aafcf443154ed1e08"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-37562787981271544",
+          "netShareDeposit": "0",
+          "grossDeposit": "2999999999999999997",
+          "grossShareDeposit": "2506899311339881323",
+          "grossWithdraw": "3037562787981271541",
+          "grossShareWithdraw": "2506899311339881323"
+        }
+      ]
+    },
+    {
+      "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780",
+      "settBalances": [
+        {
+          "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1991853075045119780813",
+          "netShareDeposit": "1652168006147991824812",
+          "grossDeposit": "4026975026419431600382",
+          "grossShareDeposit": "3304336012295983649625",
+          "grossWithdraw": "2035121951374311819569",
+          "grossShareWithdraw": "1652168006147991824813"
+        },
+        {
+          "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "122549054055432",
+          "grossShareDeposit": "121330342379787",
+          "grossWithdraw": "122549054055432",
+          "grossShareWithdraw": "121330342379787"
+        },
+        {
+          "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780-0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "user": {
+            "id": "0x000e8c608473dcee93021eb1d39fb4a7d7e7d780"
+          },
+          "sett": {
+            "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+          },
+          "netDeposit": "28611946182574628456498",
+          "netShareDeposit": "27134003271756938553833",
+          "grossDeposit": "28611946182574628456498",
+          "grossShareDeposit": "27134003271756938553833",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026",
+      "settBalances": [
+        {
+          "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "-190775473751",
+          "netShareDeposit": "0",
+          "grossDeposit": "4539393140457",
+          "grossShareDeposit": "4124149883023",
+          "grossWithdraw": "4730168614208",
+          "grossShareWithdraw": "4124149883023"
+        },
+        {
+          "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1983316176729311479",
+          "netShareDeposit": "74440456828315732802",
+          "grossDeposit": "1902459789622723646695",
+          "grossShareDeposit": "1653544344654565878473",
+          "grossWithdraw": "1900476473445994335216",
+          "grossShareWithdraw": "1579103887826250145671"
+        },
+        {
+          "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-59947581011",
+          "netShareDeposit": "0",
+          "grossDeposit": "9297327612095",
+          "grossShareDeposit": "6996454938666",
+          "grossWithdraw": "9357275193106",
+          "grossShareWithdraw": "6996454938666"
+        },
+        {
+          "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-3884087272796258",
+          "netShareDeposit": "0",
+          "grossDeposit": "171445450899256559",
+          "grossShareDeposit": "168855452264007729",
+          "grossWithdraw": "175329538172052817",
+          "grossShareWithdraw": "168855452264007729"
+        },
+        {
+          "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026-0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "user": {
+            "id": "0x000f4432a40560bbff1b581a8b7aded8dab80026"
+          },
+          "sett": {
+            "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
+          },
+          "netDeposit": "-457792",
+          "netShareDeposit": "0",
+          "grossDeposit": "26537924",
+          "grossShareDeposit": "26537924",
+          "grossWithdraw": "26995716",
+          "grossShareWithdraw": "26537924"
+        }
+      ]
+    },
+    {
+      "id": "0x000f7f22bfc28d940d4b68e13213ab17cf107790",
+      "settBalances": [
+        {
+          "id": "0x000f7f22bfc28d940d4b68e13213ab17cf107790-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x000f7f22bfc28d940d4b68e13213ab17cf107790"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-27850603417718398590",
+          "netShareDeposit": "0",
+          "grossDeposit": "16754115313739623928310",
+          "grossShareDeposit": "13836987928621044858500",
+          "grossWithdraw": "16781965917157342326900",
+          "grossShareWithdraw": "13836987928621044858500"
+        }
+      ]
+    },
+    {
+      "id": "0x0010dcadbdc821868592cfc9da73c97f1f2412e0",
+      "settBalances": [
+        {
+          "id": "0x0010dcadbdc821868592cfc9da73c97f1f2412e0-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0010dcadbdc821868592cfc9da73c97f1f2412e0"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "3692405054149512",
+          "netShareDeposit": "2616837142778673",
+          "grossDeposit": "3692405054149512",
+          "grossShareDeposit": "2616837142778673",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x001a203c2b145831de85d706a258f6766371acd9",
+      "settBalances": [
+        {
+          "id": "0x001a203c2b145831de85d706a258f6766371acd9-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x001a203c2b145831de85d706a258f6766371acd9"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-537127042219148992",
+          "netShareDeposit": "0",
+          "grossDeposit": "65299154599999999963",
+          "grossShareDeposit": "53929652328964587640",
+          "grossWithdraw": "65836281642219148955",
+          "grossShareWithdraw": "53929652328964587640"
+        }
+      ]
+    },
+    {
+      "id": "0x001b1d25304c9f386b84720ef19ea9caa8253ff0",
+      "settBalances": [
+        {
+          "id": "0x001b1d25304c9f386b84720ef19ea9caa8253ff0-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x001b1d25304c9f386b84720ef19ea9caa8253ff0"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-1077385622896387116",
+          "netShareDeposit": "0",
+          "grossDeposit": "37734462508380020705",
+          "grossShareDeposit": "31429608590988332633",
+          "grossWithdraw": "38811848131276407821",
+          "grossShareWithdraw": "31429608590988332633"
+        }
+      ]
+    },
+    {
+      "id": "0x0023ad7791c6695eb012a179e801541aad824dbf",
+      "settBalances": [
+        {
+          "id": "0x0023ad7791c6695eb012a179e801541aad824dbf-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0023ad7791c6695eb012a179e801541aad824dbf"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-9516142082979944213",
+          "netShareDeposit": "0",
+          "grossDeposit": "999999999999999999420",
+          "grossShareDeposit": "819629127607206816286",
+          "grossWithdraw": "1009516142082979943633",
+          "grossShareWithdraw": "819629127607206816286"
+        }
+      ]
+    },
+    {
+      "id": "0x002848284eb655a5a99250ffbb09605b8e624261",
+      "settBalances": [
+        {
+          "id": "0x002848284eb655a5a99250ffbb09605b8e624261-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x002848284eb655a5a99250ffbb09605b8e624261"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1754476291740399573",
+          "netShareDeposit": "1430456828315732802",
+          "grossDeposit": "1754476291740399573",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0028ec20c1d7734aaac2377e843ffe1162fc6f02",
+      "settBalances": [
+        {
+          "id": "0x0028ec20c1d7734aaac2377e843ffe1162fc6f02-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0028ec20c1d7734aaac2377e843ffe1162fc6f02"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "52959458153609208312",
+          "netShareDeposit": "44735585988471223549",
+          "grossDeposit": "52959458153609208312",
+          "grossShareDeposit": "44735585988471223549",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0029ab135b5be72168bf80f140d60a9264dbd0c5",
+      "settBalances": [
+        {
+          "id": "0x0029ab135b5be72168bf80f140d60a9264dbd0c5-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0029ab135b5be72168bf80f140d60a9264dbd0c5"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-100730739621",
+          "netShareDeposit": "0",
+          "grossDeposit": "3580843725908",
+          "grossShareDeposit": "3580843725908",
+          "grossWithdraw": "3681574465529",
+          "grossShareWithdraw": "3580843725908"
+        }
+      ]
+    },
+    {
+      "id": "0x002bbea9c71684cc6999d114254d2aa9378b8a60",
+      "settBalances": [
+        {
+          "id": "0x002bbea9c71684cc6999d114254d2aa9378b8a60-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x002bbea9c71684cc6999d114254d2aa9378b8a60"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-8625862325037558214",
+          "netShareDeposit": "0",
+          "grossDeposit": "136797319583826529278",
+          "grossShareDeposit": "120719019057463676400",
+          "grossWithdraw": "145423181908864087492",
+          "grossShareWithdraw": "120719019057463676400"
+        }
+      ]
+    },
+    {
+      "id": "0x002c609dc34918269e2174d82fcb6ecb4f6cf386",
+      "settBalances": [
+        {
+          "id": "0x002c609dc34918269e2174d82fcb6ecb4f6cf386-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x002c609dc34918269e2174d82fcb6ecb4f6cf386"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-53615924150623929",
+          "netShareDeposit": "0",
+          "grossDeposit": "13596789988280523921",
+          "grossShareDeposit": "11229397399547882441",
+          "grossWithdraw": "13650405912431147850",
+          "grossShareWithdraw": "11229397399547882441"
+        },
+        {
+          "id": "0x002c609dc34918269e2174d82fcb6ecb4f6cf386-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x002c609dc34918269e2174d82fcb6ecb4f6cf386"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "584999999999",
+          "netShareDeposit": "516371160567",
+          "grossDeposit": "584999999999",
+          "grossShareDeposit": "516371160567",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0030b9f1925408d79be83c7cecfffdbacb638e9b",
+      "settBalances": [
+        {
+          "id": "0x0030b9f1925408d79be83c7cecfffdbacb638e9b-0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545",
+          "user": {
+            "id": "0x0030b9f1925408d79be83c7cecfffdbacb638e9b"
+          },
+          "sett": {
+            "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+          },
+          "netDeposit": "-1792863484999",
+          "netShareDeposit": "0",
+          "grossDeposit": "1679013345687048",
+          "grossShareDeposit": "1661773594673166",
+          "grossWithdraw": "1680806209172047",
+          "grossShareWithdraw": "1661773594673166"
+        }
+      ]
+    },
+    {
+      "id": "0x00329e92ed6fd0a0ef76da9c476d51faeb6b26a0",
+      "settBalances": [
+        {
+          "id": "0x00329e92ed6fd0a0ef76da9c476d51faeb6b26a0-0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "user": {
+            "id": "0x00329e92ed6fd0a0ef76da9c476d51faeb6b26a0"
+          },
+          "sett": {
+            "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5"
+          },
+          "netDeposit": "-262166",
+          "netShareDeposit": "0",
+          "grossDeposit": "497384662",
+          "grossShareDeposit": "494757288",
+          "grossWithdraw": "497646828",
+          "grossShareWithdraw": "494757288"
+        }
+      ]
+    },
+    {
+      "id": "0x003325d3054cd7668fb16f19ea11bae6d02a474c",
+      "settBalances": [
+        {
+          "id": "0x003325d3054cd7668fb16f19ea11bae6d02a474c-0x53c8e199eb2cb7c01543c137078a038937a68e40",
+          "user": {
+            "id": "0x003325d3054cd7668fb16f19ea11bae6d02a474c"
+          },
+          "sett": {
+            "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40"
+          },
+          "netDeposit": "-640695332714619816912",
+          "netShareDeposit": "0",
+          "grossDeposit": "15558681615192361140919",
+          "grossShareDeposit": "15267213808168844930409",
+          "grossWithdraw": "16199376947906980957831",
+          "grossShareWithdraw": "15267213808168844930409"
+        }
+      ]
+    },
+    {
+      "id": "0x00333300d0dc87279efd678fd335b47be2fefb2e",
+      "settBalances": [
+        {
+          "id": "0x00333300d0dc87279efd678fd335b47be2fefb2e-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x00333300d0dc87279efd678fd335b47be2fefb2e"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "-406751252404",
+          "netShareDeposit": "0",
+          "grossDeposit": "6625632490081",
+          "grossShareDeposit": "5425005000191",
+          "grossWithdraw": "7032383742485",
+          "grossShareWithdraw": "5425005000191"
+        },
+        {
+          "id": "0x00333300d0dc87279efd678fd335b47be2fefb2e-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00333300d0dc87279efd678fd335b47be2fefb2e"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-88145057166333116",
+          "netShareDeposit": "0",
+          "grossDeposit": "12109404480127399311",
+          "grossShareDeposit": "9961704879074743771",
+          "grossWithdraw": "12197549537293732427",
+          "grossShareWithdraw": "9961704879074743771"
+        }
+      ]
+    },
+    {
+      "id": "0x0034daf2e65f6ef82bc6f893dbbfd7c232a0e59c",
+      "settBalances": [
+        {
+          "id": "0x0034daf2e65f6ef82bc6f893dbbfd7c232a0e59c-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0034daf2e65f6ef82bc6f893dbbfd7c232a0e59c"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-79698028403336728246",
+          "netShareDeposit": "0",
+          "grossDeposit": "1109950479717888121835",
+          "grossShareDeposit": "987553696999773950806",
+          "grossWithdraw": "1189648508121224850081",
+          "grossShareWithdraw": "987553696999773950806"
+        },
+        {
+          "id": "0x0034daf2e65f6ef82bc6f893dbbfd7c232a0e59c-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0034daf2e65f6ef82bc6f893dbbfd7c232a0e59c"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-18360580612590714",
+          "netShareDeposit": "0",
+          "grossDeposit": "719707496001417684",
+          "grossShareDeposit": "693165323315321374",
+          "grossWithdraw": "738068076614008398",
+          "grossShareWithdraw": "693165323315321374"
+        }
+      ]
+    },
+    {
+      "id": "0x0035fc5208ef989c28d47e552e92b0c507d2b318",
+      "settBalances": [
+        {
+          "id": "0x0035fc5208ef989c28d47e552e92b0c507d2b318-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0035fc5208ef989c28d47e552e92b0c507d2b318"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "102606317069848903680",
+          "grossShareDeposit": "102606317069848903680",
+          "grossWithdraw": "102606317069848903680",
+          "grossShareWithdraw": "102606317069848903680"
+        }
+      ]
+    },
+    {
+      "id": "0x00369b46cd0c232ff5dc1d376248c4954ce645ee",
+      "settBalances": [
+        {
+          "id": "0x00369b46cd0c232ff5dc1d376248c4954ce645ee-0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "user": {
+            "id": "0x00369b46cd0c232ff5dc1d376248c4954ce645ee"
+          },
+          "sett": {
+            "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+          },
+          "netDeposit": "443735943953583619327",
+          "netShareDeposit": "371570095951232276449",
+          "grossDeposit": "443735943953583619327",
+          "grossShareDeposit": "371570095951232276449",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x00397d81c4b005e86df0492fd468891ad2153377",
+      "settBalances": [
+        {
+          "id": "0x00397d81c4b005e86df0492fd468891ad2153377-0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "user": {
+            "id": "0x00397d81c4b005e86df0492fd468891ad2153377"
+          },
+          "sett": {
+            "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec"
+          },
+          "netDeposit": "-11430732657913500",
+          "netShareDeposit": "0",
+          "grossDeposit": "7467458730284709535",
+          "grossShareDeposit": "7439210227519176939",
+          "grossWithdraw": "7478889462942623035",
+          "grossShareWithdraw": "7439210227519176939"
+        }
+      ]
+    },
+    {
+      "id": "0x003b515ab0786166641a30909ab3b13e2791c588",
+      "settBalances": [
+        {
+          "id": "0x003b515ab0786166641a30909ab3b13e2791c588-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x003b515ab0786166641a30909ab3b13e2791c588"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "19999999999999999989",
+          "netShareDeposit": "19118506592138233256",
+          "grossDeposit": "19999999999999999989",
+          "grossShareDeposit": "19118506592138233256",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x003b515ab0786166641a30909ab3b13e2791c588-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x003b515ab0786166641a30909ab3b13e2791c588"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "3972412999999999",
+          "netShareDeposit": "3972412984293709",
+          "grossDeposit": "3972412999999999",
+          "grossShareDeposit": "3972412984293709",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x003b515ab0786166641a30909ab3b13e2791c588-0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de",
+          "user": {
+            "id": "0x003b515ab0786166641a30909ab3b13e2791c588"
+          },
+          "sett": {
+            "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "55784714040",
+          "grossShareDeposit": "55784714040",
+          "grossWithdraw": "55784714040",
+          "grossShareWithdraw": "55784714040"
+        },
+        {
+          "id": "0x003b515ab0786166641a30909ab3b13e2791c588-0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+          "user": {
+            "id": "0x003b515ab0786166641a30909ab3b13e2791c588"
+          },
+          "sett": {
+            "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af"
+          },
+          "netDeposit": "39425904906065217",
+          "netShareDeposit": "39425904906065217",
+          "grossDeposit": "39425904906065217",
+          "grossShareDeposit": "39425904906065217",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x003b515ab0786166641a30909ab3b13e2791c588-0xf349c0faa80fc1870306ac093f75934078e28991",
+          "user": {
+            "id": "0x003b515ab0786166641a30909ab3b13e2791c588"
+          },
+          "sett": {
+            "id": "0xf349c0faa80fc1870306ac093f75934078e28991"
+          },
+          "netDeposit": "-150361236574673",
+          "netShareDeposit": "0",
+          "grossDeposit": "27991298747460392",
+          "grossShareDeposit": "27984902820014087",
+          "grossWithdraw": "28141659984035065",
+          "grossShareWithdraw": "27984902820014087"
+        }
+      ]
+    },
+    {
+      "id": "0x003c1fcf8c342e45f040431355896c61ddacb535",
+      "settBalances": [
+        {
+          "id": "0x003c1fcf8c342e45f040431355896c61ddacb535-0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "user": {
+            "id": "0x003c1fcf8c342e45f040431355896c61ddacb535"
+          },
+          "sett": {
+            "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+          },
+          "netDeposit": "-127150668090002985021",
+          "netShareDeposit": "0",
+          "grossDeposit": "1256902936611391754831",
+          "grossShareDeposit": "1191977930360608120072",
+          "grossWithdraw": "1384053604701394739852",
+          "grossShareWithdraw": "1191977930360608120072"
+        }
+      ]
+    },
+    {
+      "id": "0x003dc32fe920a4aaeed12dc87e145f030aa753f3",
+      "settBalances": [
+        {
+          "id": "0x003dc32fe920a4aaeed12dc87e145f030aa753f3-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x003dc32fe920a4aaeed12dc87e145f030aa753f3"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-3731109592121",
+          "netShareDeposit": "0",
+          "grossDeposit": "7541582787882",
+          "grossShareDeposit": "7541582787882",
+          "grossWithdraw": "11272692380003",
+          "grossShareWithdraw": "7541582787882"
+        },
+        {
+          "id": "0x003dc32fe920a4aaeed12dc87e145f030aa753f3-0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "user": {
+            "id": "0x003dc32fe920a4aaeed12dc87e145f030aa753f3"
+          },
+          "sett": {
+            "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
+          },
+          "netDeposit": "-3133887",
+          "netShareDeposit": "0",
+          "grossDeposit": "8873492",
+          "grossShareDeposit": "8828615",
+          "grossWithdraw": "12007379",
+          "grossShareWithdraw": "8828615"
+        }
+      ]
+    },
+    {
+      "id": "0x003e9a119439ef34de3237034cee95675b01d5d4",
+      "settBalances": [
+        {
+          "id": "0x003e9a119439ef34de3237034cee95675b01d5d4-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x003e9a119439ef34de3237034cee95675b01d5d4"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-158797904615706000",
+          "netShareDeposit": "0",
+          "grossDeposit": "616160118612509050500",
+          "grossShareDeposit": "500000000000000000000",
+          "grossWithdraw": "616318916517124756500",
+          "grossShareWithdraw": "500000000000000000000"
+        }
+      ]
+    },
+    {
+      "id": "0x00406f6395b83bb984711109b419a4bec3098633",
+      "settBalances": [
+        {
+          "id": "0x00406f6395b83bb984711109b419a4bec3098633-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00406f6395b83bb984711109b419a4bec3098633"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "16207209807090234501",
+          "netShareDeposit": "13281956009805107979",
+          "grossDeposit": "16207209807090234501",
+          "grossShareDeposit": "13281956009805107979",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x004537fcd9095489ebe38180a382341b962b501d",
+      "settBalances": [
+        {
+          "id": "0x004537fcd9095489ebe38180a382341b962b501d-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x004537fcd9095489ebe38180a382341b962b501d"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-10182197555515127005",
+          "netShareDeposit": "0",
+          "grossDeposit": "53963347730205766442",
+          "grossShareDeposit": "52279916095078090570",
+          "grossWithdraw": "64145545285720893447",
+          "grossShareWithdraw": "52279916095078090570"
+        },
+        {
+          "id": "0x004537fcd9095489ebe38180a382341b962b501d-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x004537fcd9095489ebe38180a382341b962b501d"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "10280296000001011",
+          "netShareDeposit": "10224532374966501",
+          "grossDeposit": "10280296000001011",
+          "grossShareDeposit": "10224532374966501",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81",
+      "settBalances": [
+        {
+          "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-110697206259252777582",
+          "netShareDeposit": "0",
+          "grossDeposit": "7909193023737094958212",
+          "grossShareDeposit": "6624749871077820484737",
+          "grossWithdraw": "8019890229996347735794",
+          "grossShareWithdraw": "6624749871077820484737"
+        },
+        {
+          "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-47435627540562",
+          "netShareDeposit": "0",
+          "grossDeposit": "459878261496605",
+          "grossShareDeposit": "365372306013259",
+          "grossWithdraw": "507313889037167",
+          "grossShareWithdraw": "365372306013259"
+        },
+        {
+          "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x00493aa44bcfd6f0c2ecc7f8b154e4fb352d1c81"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-3050882819577714",
+          "netShareDeposit": "0",
+          "grossDeposit": "140357612999999999",
+          "grossShareDeposit": "140357612456985002",
+          "grossWithdraw": "143408495819577713",
+          "grossShareWithdraw": "140357612456985002"
+        }
+      ]
+    },
+    {
+      "id": "0x0049c977aaf22e0db89b2755482c7e49ee2dc2dd",
+      "settBalances": [
+        {
+          "id": "0x0049c977aaf22e0db89b2755482c7e49ee2dc2dd-0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "user": {
+            "id": "0x0049c977aaf22e0db89b2755482c7e49ee2dc2dd"
+          },
+          "sett": {
+            "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec"
+          },
+          "netDeposit": "-18278431400178950",
+          "netShareDeposit": "0",
+          "grossDeposit": "4961572387329754425",
+          "grossShareDeposit": "4947401342450153620",
+          "grossWithdraw": "4979850818729933375",
+          "grossShareWithdraw": "4947401342450153620"
+        }
+      ]
+    },
+    {
+      "id": "0x004afb002e3fb33c833fc16b6b63103bbf97312d",
+      "settBalances": [
+        {
+          "id": "0x004afb002e3fb33c833fc16b6b63103bbf97312d-0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "user": {
+            "id": "0x004afb002e3fb33c833fc16b6b63103bbf97312d"
+          },
+          "sett": {
+            "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5"
+          },
+          "netDeposit": "63988575",
+          "netShareDeposit": "63657846",
+          "grossDeposit": "63988575",
+          "grossShareDeposit": "63657846",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x004cbf4fcb63b6813f9fd0274f852d93848f32a5",
+      "settBalances": [
+        {
+          "id": "0x004cbf4fcb63b6813f9fd0274f852d93848f32a5-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x004cbf4fcb63b6813f9fd0274f852d93848f32a5"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "6944629315609879271",
+          "netShareDeposit": "6000000059972746015",
+          "grossDeposit": "99999999999999999919",
+          "grossShareDeposit": "81974854059972746015",
+          "grossWithdraw": "93055370684390120648",
+          "grossShareWithdraw": "75974854000000000000"
+        }
+      ]
+    },
+    {
+      "id": "0x004d22f65549b7471f41350cea296193e76d5ddd",
+      "settBalances": [
+        {
+          "id": "0x004d22f65549b7471f41350cea296193e76d5ddd-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x004d22f65549b7471f41350cea296193e76d5ddd"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1757297759181908062",
+          "netShareDeposit": "1430456828315732802",
+          "grossDeposit": "1757297759181908062",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x005043e4e74ea7e566224be2c36e3ccbfe4e5a94",
+      "settBalances": [
+        {
+          "id": "0x005043e4e74ea7e566224be2c36e3ccbfe4e5a94-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x005043e4e74ea7e566224be2c36e3ccbfe4e5a94"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1918329661890362330",
+          "netShareDeposit": "1576438272151658304",
+          "grossDeposit": "1918329661890362330",
+          "grossShareDeposit": "1576438272151658304",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x00538a078314200fe2b74c096f7970aee2f1a372",
+      "settBalances": [
+        {
+          "id": "0x00538a078314200fe2b74c096f7970aee2f1a372-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00538a078314200fe2b74c096f7970aee2f1a372"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-6339223708730857248",
+          "netShareDeposit": "0",
+          "grossDeposit": "512098483252557424179",
+          "grossShareDeposit": "425525603448999326786",
+          "grossWithdraw": "518437706961288281427",
+          "grossShareWithdraw": "425525603448999326786"
+        },
+        {
+          "id": "0x00538a078314200fe2b74c096f7970aee2f1a372-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x00538a078314200fe2b74c096f7970aee2f1a372"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-120677800587",
+          "netShareDeposit": "0",
+          "grossDeposit": "55682392224259",
+          "grossShareDeposit": "37853284991832",
+          "grossWithdraw": "55803070024846",
+          "grossShareWithdraw": "37853284991832"
+        }
+      ]
+    },
+    {
+      "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9",
+      "settBalances": [
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "61873261930712",
+          "netShareDeposit": "53946196587430",
+          "grossDeposit": "61873261930712",
+          "grossShareDeposit": "53946196587430",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "9999999999999999990",
+          "netShareDeposit": "9743562980439328788",
+          "grossDeposit": "9999999999999999990",
+          "grossShareDeposit": "9743562980439328788",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "1172332277775",
+          "netShareDeposit": "1129249270182",
+          "grossDeposit": "1172332277775",
+          "grossShareDeposit": "1129249270182",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "312807842308134455",
+          "netShareDeposit": "242324027879100661",
+          "grossDeposit": "395373907314828675",
+          "grossShareDeposit": "314931742063100661",
+          "grossWithdraw": "82566065006694220",
+          "grossShareWithdraw": "72607714184000000"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0x88128580acdd9c04ce47afce196875747bf2a9f6",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6"
+          },
+          "netDeposit": "6892485",
+          "netShareDeposit": "5659539",
+          "grossDeposit": "6892485",
+          "grossShareDeposit": "5659539",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0xaf5a1decfa95baf63e0084a35c62592b774a2a87",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0xaf5a1decfa95baf63e0084a35c62592b774a2a87"
+          },
+          "netDeposit": "-1407947228587098",
+          "netShareDeposit": "0",
+          "grossDeposit": "249375327062350019",
+          "grossShareDeposit": "248980804996739159",
+          "grossWithdraw": "250783274290937117",
+          "grossShareWithdraw": "248980804996739159"
+        },
+        {
+          "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9-0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "user": {
+            "id": "0x0056d1fd2ca3c0f3a7b6ed6cdd1f1f104b4bf9a9"
+          },
+          "sett": {
+            "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
+          },
+          "netDeposit": "46768829",
+          "netShareDeposit": "45975725",
+          "grossDeposit": "46768829",
+          "grossShareDeposit": "45975725",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768",
+      "settBalances": [
+        {
+          "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-7826909938071369901",
+          "netShareDeposit": "0",
+          "grossDeposit": "49999999999999999972",
+          "grossShareDeposit": "46883950242453336363",
+          "grossWithdraw": "57826909938071369873",
+          "grossShareWithdraw": "46883950242453336363"
+        },
+        {
+          "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-4966461100236429",
+          "netShareDeposit": "0",
+          "grossDeposit": "75317331047035436",
+          "grossShareDeposit": "58669335675563995",
+          "grossWithdraw": "80283792147271865",
+          "grossShareWithdraw": "58669335675563995"
+        },
+        {
+          "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768-0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+          "user": {
+            "id": "0x0057b22d4385adfbc48a6581b141e04acdaf7768"
+          },
+          "sett": {
+            "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
+          },
+          "netDeposit": "-197799",
+          "netShareDeposit": "0",
+          "grossDeposit": "560043",
+          "grossShareDeposit": "546244",
+          "grossWithdraw": "757842",
+          "grossShareWithdraw": "546244"
+        }
+      ]
+    },
+    {
+      "id": "0x005b0743d8b2ed646499dc48b64b95e71b8afa43",
+      "settBalances": [
+        {
+          "id": "0x005b0743d8b2ed646499dc48b64b95e71b8afa43-0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "user": {
+            "id": "0x005b0743d8b2ed646499dc48b64b95e71b8afa43"
+          },
+          "sett": {
+            "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5"
+          },
+          "netDeposit": "933732",
+          "netShareDeposit": "927105",
+          "grossDeposit": "933732",
+          "grossShareDeposit": "927105",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x005b0743d8b2ed646499dc48b64b95e71b8afa43-0xd04c48a53c111300ad41190d63681ed3dad998ec",
+          "user": {
+            "id": "0x005b0743d8b2ed646499dc48b64b95e71b8afa43"
+          },
+          "sett": {
+            "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec"
+          },
+          "netDeposit": "52032722350059171",
+          "netShareDeposit": "51465383675126947",
+          "grossDeposit": "52032722350059171",
+          "grossShareDeposit": "51465383675126947",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x005c25473bf2367aa821a7072332820ac9902547",
+      "settBalances": [
+        {
+          "id": "0x005c25473bf2367aa821a7072332820ac9902547-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x005c25473bf2367aa821a7072332820ac9902547"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-314268884746457839",
+          "netShareDeposit": "0",
+          "grossDeposit": "42852721556418019328",
+          "grossShareDeposit": "42852721556418019328",
+          "grossWithdraw": "43166990441164477167",
+          "grossShareWithdraw": "42852721556418019328"
+        }
+      ]
+    },
+    {
+      "id": "0x005d64b3fedd6d53edf19142087d51c7ac6ba595",
+      "settBalances": [
+        {
+          "id": "0x005d64b3fedd6d53edf19142087d51c7ac6ba595-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x005d64b3fedd6d53edf19142087d51c7ac6ba595"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-216114367199871204264",
+          "netShareDeposit": "0",
+          "grossDeposit": "4545604135086304025699",
+          "grossShareDeposit": "4241659127935419177883",
+          "grossWithdraw": "4761718502286175229963",
+          "grossShareWithdraw": "4241659127935419177883"
+        },
+        {
+          "id": "0x005d64b3fedd6d53edf19142087d51c7ac6ba595-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x005d64b3fedd6d53edf19142087d51c7ac6ba595"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-51156787216982868",
+          "netShareDeposit": "0",
+          "grossDeposit": "154873657999999999",
+          "grossShareDeposit": "154363479326735002",
+          "grossWithdraw": "206030445216982867",
+          "grossShareWithdraw": "154363479326735002"
+        }
+      ]
+    },
+    {
+      "id": "0x005dc26546025b5d93f39f14e93601b5357b147f",
+      "settBalances": [
+        {
+          "id": "0x005dc26546025b5d93f39f14e93601b5357b147f-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x005dc26546025b5d93f39f14e93601b5357b147f"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "1744716306708452402",
+          "netShareDeposit": "1430456828315732802",
+          "grossDeposit": "1744716306708452402",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x005e5cac6eb7637edf689403e01b86bda451ef61",
+      "settBalances": [
+        {
+          "id": "0x005e5cac6eb7637edf689403e01b86bda451ef61-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x005e5cac6eb7637edf689403e01b86bda451ef61"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-1989606386833185675",
+          "netShareDeposit": "0",
+          "grossDeposit": "47789325779421764131",
+          "grossShareDeposit": "43743539264960922043",
+          "grossWithdraw": "49778932166254949806",
+          "grossShareWithdraw": "43743539264960922043"
+        }
+      ]
+    },
+    {
+      "id": "0x00610d1b203f9ddf2776d8729b0de854f5dce8ed",
+      "settBalances": [
+        {
+          "id": "0x00610d1b203f9ddf2776d8729b0de854f5dce8ed-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00610d1b203f9ddf2776d8729b0de854f5dce8ed"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "88296213862821461978",
+          "netShareDeposit": "85524881757386473331",
+          "grossDeposit": "88296213862821461978",
+          "grossShareDeposit": "85524881757386473331",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0061f7db31a51a3c4c8a6f74da17beb02cdc1258",
+      "settBalances": [
+        {
+          "id": "0x0061f7db31a51a3c4c8a6f74da17beb02cdc1258-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0061f7db31a51a3c4c8a6f74da17beb02cdc1258"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "300000000000000000",
+          "netShareDeposit": "300000000000000000",
+          "grossDeposit": "97500000000000000000",
+          "grossShareDeposit": "97500000000000000000",
+          "grossWithdraw": "97200000000000000000",
+          "grossShareWithdraw": "97200000000000000000"
+        },
+        {
+          "id": "0x0061f7db31a51a3c4c8a6f74da17beb02cdc1258-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0061f7db31a51a3c4c8a6f74da17beb02cdc1258"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "3795264912829",
+          "grossShareDeposit": "3795264912829",
+          "grossWithdraw": "3795264912829",
+          "grossShareWithdraw": "3795264912829"
+        }
+      ]
+    },
+    {
+      "id": "0x006253e8825d0adaa2234aebc286ecf48134648f",
+      "settBalances": [
+        {
+          "id": "0x006253e8825d0adaa2234aebc286ecf48134648f-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x006253e8825d0adaa2234aebc286ecf48134648f"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "1741621739704673440",
+          "grossShareDeposit": "1430456828315732802",
+          "grossWithdraw": "1741621739704673440",
+          "grossShareWithdraw": "1430456828315732802"
+        }
+      ]
+    },
+    {
+      "id": "0x0063146925da753f393bbce6522e87dc524e9bd2",
+      "settBalances": [
+        {
+          "id": "0x0063146925da753f393bbce6522e87dc524e9bd2-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0063146925da753f393bbce6522e87dc524e9bd2"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-398229002420424655",
+          "netShareDeposit": "0",
+          "grossDeposit": "6999999999999999994",
+          "grossShareDeposit": "6017125840013306945",
+          "grossWithdraw": "7398229002420424649",
+          "grossShareWithdraw": "6017125840013306945"
+        }
+      ]
+    },
+    {
+      "id": "0x00654fa5e772e1e55c06d8e703fb6a67f5755abc",
+      "settBalances": [
+        {
+          "id": "0x00654fa5e772e1e55c06d8e703fb6a67f5755abc-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x00654fa5e772e1e55c06d8e703fb6a67f5755abc"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-20327694242314744951",
+          "netShareDeposit": "0",
+          "grossDeposit": "112496704675617273762",
+          "grossShareDeposit": "110369751816720252313",
+          "grossWithdraw": "132824398917932018713",
+          "grossShareWithdraw": "110369751816720252313"
+        },
+        {
+          "id": "0x00654fa5e772e1e55c06d8e703fb6a67f5755abc-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x00654fa5e772e1e55c06d8e703fb6a67f5755abc"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-4580715277350",
+          "netShareDeposit": "0",
+          "grossDeposit": "13163447599954",
+          "grossShareDeposit": "13163447599954",
+          "grossWithdraw": "17744162877304",
+          "grossShareWithdraw": "13163447599954"
+        }
+      ]
+    },
+    {
+      "id": "0x006734473b8ae6f50a2e42e28c9ca56f1bdc17aa",
+      "settBalances": [
+        {
+          "id": "0x006734473b8ae6f50a2e42e28c9ca56f1bdc17aa-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x006734473b8ae6f50a2e42e28c9ca56f1bdc17aa"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-11737331180895819934",
+          "netShareDeposit": "0",
+          "grossDeposit": "60149591851194076024",
+          "grossShareDeposit": "58334612108592315781",
+          "grossWithdraw": "71886923032089895958",
+          "grossShareWithdraw": "58334612108592315781"
+        },
+        {
+          "id": "0x006734473b8ae6f50a2e42e28c9ca56f1bdc17aa-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x006734473b8ae6f50a2e42e28c9ca56f1bdc17aa"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "16908473296172616",
+          "netShareDeposit": "14846666941155239",
+          "grossDeposit": "32285879550926364",
+          "grossShareDeposit": "29693333882155239",
+          "grossWithdraw": "15377406254753748",
+          "grossShareWithdraw": "14846666941000000"
+        }
+      ]
+    },
+    {
+      "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca",
+      "settBalances": [
+        {
+          "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "-1471167330799",
+          "netShareDeposit": "0",
+          "grossDeposit": "26406579259224",
+          "grossShareDeposit": "21899812799863",
+          "grossWithdraw": "27877746590023",
+          "grossShareWithdraw": "21899812799863"
+        },
+        {
+          "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-412774069646405549",
+          "netShareDeposit": "0",
+          "grossDeposit": "146999999999999999919",
+          "grossShareDeposit": "121188901897089154981",
+          "grossWithdraw": "147412774069646405468",
+          "grossShareWithdraw": "121188901897089154981"
+        },
+        {
+          "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0067d567bfeaecb819ca25ca37f35078ff4634ca"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "5778460999999999",
+          "netShareDeposit": "4533250399356488",
+          "grossDeposit": "5778460999999999",
+          "grossShareDeposit": "4533250399356488",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0068e91105b0d2c52de69c6efb6329b66b1cdac5",
+      "settBalances": [
+        {
+          "id": "0x0068e91105b0d2c52de69c6efb6329b66b1cdac5-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0068e91105b0d2c52de69c6efb6329b66b1cdac5"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "9096674505149252207",
+          "netShareDeposit": "7916128670892633452",
+          "grossDeposit": "9096674505149252207",
+          "grossShareDeposit": "7916128670892633452",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0068e91105b0d2c52de69c6efb6329b66b1cdac5-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0068e91105b0d2c52de69c6efb6329b66b1cdac5"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "-2905810331966",
+          "netShareDeposit": "0",
+          "grossDeposit": "5785338424535",
+          "grossShareDeposit": "5785338424535",
+          "grossWithdraw": "8691148756501",
+          "grossShareWithdraw": "5785338424535"
+        }
+      ]
+    },
+    {
+      "id": "0x00691534ccf88c21dd7dc1f2293b2f13a23177ff",
+      "settBalances": [
+        {
+          "id": "0x00691534ccf88c21dd7dc1f2293b2f13a23177ff-0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+          "user": {
+            "id": "0x00691534ccf88c21dd7dc1f2293b2f13a23177ff"
+          },
+          "sett": {
+            "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "535529953490",
+          "grossShareDeposit": "535529953490",
+          "grossWithdraw": "535529953490",
+          "grossShareWithdraw": "535529953490"
+        }
+      ]
+    },
+    {
+      "id": "0x00695c7fcd8ee1517adb85c24547fc792613a5c5",
+      "settBalances": [
+        {
+          "id": "0x00695c7fcd8ee1517adb85c24547fc792613a5c5-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x00695c7fcd8ee1517adb85c24547fc792613a5c5"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "8924204722299",
+          "grossShareDeposit": "8924204722299",
+          "grossWithdraw": "8924204722299",
+          "grossShareWithdraw": "8924204722299"
+        }
+      ]
+    },
+    {
+      "id": "0x006fb04b52876f3d413e4bd102e36b14b6c864bd",
+      "settBalances": [
+        {
+          "id": "0x006fb04b52876f3d413e4bd102e36b14b6c864bd-0x599d92b453c010b1050d31c364f6ee17e819f193",
+          "user": {
+            "id": "0x006fb04b52876f3d413e4bd102e36b14b6c864bd"
+          },
+          "sett": {
+            "id": "0x599d92b453c010b1050d31c364f6ee17e819f193"
+          },
+          "netDeposit": "273885929872336433",
+          "netShareDeposit": "272930959255760143",
+          "grossDeposit": "273885929872336433",
+          "grossShareDeposit": "272930959255760143",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    },
+    {
+      "id": "0x0070bc9033adf1e49517f98304f41f778d370208",
+      "settBalances": [
+        {
+          "id": "0x0070bc9033adf1e49517f98304f41f778d370208-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0070bc9033adf1e49517f98304f41f778d370208"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-5044563207472063335",
+          "netShareDeposit": "0",
+          "grossDeposit": "35425838357168117595",
+          "grossShareDeposit": "33117846319814410135",
+          "grossWithdraw": "40470401564640180930",
+          "grossShareWithdraw": "33117846319814410135"
+        },
+        {
+          "id": "0x0070bc9033adf1e49517f98304f41f778d370208-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0070bc9033adf1e49517f98304f41f778d370208"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-1229427573331071",
+          "netShareDeposit": "0",
+          "grossDeposit": "12075462000021015",
+          "grossShareDeposit": "10512555397281435",
+          "grossWithdraw": "13304889573352086",
+          "grossShareWithdraw": "10512555397281435"
+        }
+      ]
+    },
+    {
+      "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3",
+      "settBalances": [
+        {
+          "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3-0x1862a18181346ebd9edaf800804f89190def24a5",
+          "user": {
+            "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3"
+          },
+          "sett": {
+            "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
+          },
+          "netDeposit": "-4515805443407",
+          "netShareDeposit": "0",
+          "grossDeposit": "95596900591625",
+          "grossShareDeposit": "81020456921652",
+          "grossWithdraw": "100112706035032",
+          "grossShareWithdraw": "81020456921652"
+        },
+        {
+          "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "-2669222710534901158",
+          "netShareDeposit": "0",
+          "grossDeposit": "777089186990145972734",
+          "grossShareDeposit": "644152416340814711944",
+          "grossWithdraw": "779758409700680873892",
+          "grossShareWithdraw": "644152416340814711944"
+        },
+        {
+          "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-10096963471688900",
+          "netShareDeposit": "0",
+          "grossDeposit": "125575670000068352",
+          "grossShareDeposit": "117300317699903448",
+          "grossWithdraw": "135672633471757252",
+          "grossShareWithdraw": "117300317699903448"
+        },
+        {
+          "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3-0x88128580acdd9c04ce47afce196875747bf2a9f6",
+          "user": {
+            "id": "0x0070f28dd76a96806bfbeedd8f5a8f976c6814c3"
+          },
+          "sett": {
+            "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6"
+          },
+          "netDeposit": "-5496117",
+          "netShareDeposit": "0",
+          "grossDeposit": "58529166",
+          "grossShareDeposit": "50851399",
+          "grossWithdraw": "64025283",
+          "grossShareWithdraw": "50851399"
+        }
+      ]
+    },
+    {
+      "id": "0x0071ab157cc7092f1afe3dcdab60b247945f806d",
+      "settBalances": [
+        {
+          "id": "0x0071ab157cc7092f1afe3dcdab60b247945f806d-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0071ab157cc7092f1afe3dcdab60b247945f806d"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-484528",
+          "netShareDeposit": "0",
+          "grossDeposit": "507817159688307183",
+          "grossShareDeposit": "400000000000000000",
+          "grossWithdraw": "507817159688791711",
+          "grossShareWithdraw": "400000000000000000"
+        }
+      ]
+    },
+    {
+      "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1",
+      "settBalances": [
+        {
+          "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "0",
+          "netShareDeposit": "0",
+          "grossDeposit": "348408371033747272796",
+          "grossShareDeposit": "290194639157313470222",
+          "grossWithdraw": "348408371033747272796",
+          "grossShareWithdraw": "290194639157313470222"
+        }
+      ]
+    },
+    {
+      "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174",
+      "settBalances": [
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+          },
+          "netDeposit": "871232450223768642027",
+          "netShareDeposit": "762907844399367408266",
+          "grossDeposit": "1447563257557277665837",
+          "grossShareDeposit": "1229617175842502304223",
+          "grossWithdraw": "576330807333509023810",
+          "grossShareWithdraw": "466709331443134895957"
+        },
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1"
+          },
+          "netDeposit": "100140169648730",
+          "netShareDeposit": "93833273853491",
+          "grossDeposit": "100140169648730",
+          "grossShareDeposit": "93833273853491",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5"
+          },
+          "netDeposit": "-184343",
+          "netShareDeposit": "0",
+          "grossDeposit": "277834003",
+          "grossShareDeposit": "273659910",
+          "grossWithdraw": "278018346",
+          "grossShareWithdraw": "273659910"
+        },
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0x6af7377b5009d7d154f36fe9e235ae1da27aea22",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0x6af7377b5009d7d154f36fe9e235ae1da27aea22"
+          },
+          "netDeposit": "824619636829429200000",
+          "netShareDeposit": "2748732122764764000",
+          "grossDeposit": "824619636829429200000",
+          "grossShareDeposit": "2748732122764764000",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        },
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+          },
+          "netDeposit": "-136487684506347320",
+          "netShareDeposit": "0",
+          "grossDeposit": "1583773580745872021",
+          "grossShareDeposit": "1246593655488801648",
+          "grossWithdraw": "1720261265252219341",
+          "grossShareWithdraw": "1246593655488801648"
+        },
+        {
+          "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174-0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+          "user": {
+            "id": "0x0079ce80043edc3325598e4a3b6293ab779bf174"
+          },
+          "sett": {
+            "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af"
+          },
+          "netDeposit": "273819206206229400",
+          "netShareDeposit": "273819206206229400",
+          "grossDeposit": "273819206206229400",
+          "grossShareDeposit": "273819206206229400",
+          "grossWithdraw": "0",
+          "grossShareWithdraw": "0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "settSnapshot": {
+    "id": "0x1862a18181346ebd9edaf800804f89190def24a5-18719",
+    "timestamp": 1617327421,
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
+    "decimals": "18",
+    "totalSupply": "94440851577363365",
+    "token": {
+      "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": "18",
+      "totalSupply": "5595631134519541"
+    },
+    "balance": "121419168549779460",
+    "pricePerFullShare": "1285663635194100245",
+    "netDeposit": "93081984299193656",
+    "netShareDeposit": "94440851577363365",
+    "grossDeposit": "477325099027916116",
+    "grossShareDeposit": "414979940848611679",
+    "grossWithdraw": "384243114728722460",
+    "grossShareWithdraw": "320539089271248314"
+  }
+}

@@ -56,7 +56,7 @@ export class VaultsService extends Service {
     }
 
     const registryVaults = await Promise.all(
-      registryVaultsInfo.map((info) => this.fetchVault(info)),
+      registryVaultsInfo.map((info) => this.#fetchVault(info)),
     );
 
     this.vaults = Object.fromEntries(
@@ -118,7 +118,7 @@ export class VaultsService extends Service {
     }
 
     if (!cachedVault || update) {
-      this.vaults[checksumAddress] = await this.fetchVault(registration);
+      this.vaults[checksumAddress] = await this.#fetchVault(registration);
     }
 
     return this.vaults[checksumAddress];
@@ -157,13 +157,13 @@ export class VaultsService extends Service {
   async getPendingYield(
     address: string,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
-    return this.getPendingAssets(address, false);
+    return this.#getPendingAssets(address, false);
   }
 
   async getPendingHarvest(
     address: string,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
-    return this.getPendingAssets(address, true);
+    return this.#getPendingAssets(address, true);
   }
 
   async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
@@ -223,7 +223,7 @@ export class VaultsService extends Service {
     }
   }
 
-  private async fetchVault(
+  async #fetchVault(
     registryVault: VaultRegistryEntry,
   ): Promise<RegistryVault> {
     const { address, state, version } = registryVault;
@@ -248,7 +248,7 @@ export class VaultsService extends Service {
       vault.decimals(),
       vault.token(),
       vault.totalSupply(),
-      ...this.getVaultVariantData(vault),
+      ...this.#getVaultVariantData(vault),
     ]);
 
     const tokenInfo = await this.sdk.tokens.loadToken(token);
@@ -271,7 +271,7 @@ export class VaultsService extends Service {
   /**
    * some vaults have different way of getting some data, this method abstracts the process of getting them.
    */
-  private getVaultVariantData(
+  #getVaultVariantData(
     vault: Vault,
   ): [Promise<BigNumber>, Promise<BigNumber>, Promise<BigNumber>] {
     const isYearnWbtc = vault.address === wbtcYearnVault;
@@ -294,7 +294,7 @@ export class VaultsService extends Service {
     return [vault.available(), vault.balance(), vault.getPricePerFullShare()];
   }
 
-  private async getPendingAssets(
+  async #getPendingAssets(
     address: string,
     harvest: boolean,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {

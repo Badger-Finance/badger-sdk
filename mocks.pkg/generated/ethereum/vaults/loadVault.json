@@ -1,0 +1,18 @@
+{
+  "address": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
+  "name": "Badger Sett Convex Token",
+  "symbol": "bCVX",
+  "decimals": 18,
+  "version": "v1",
+  "state": "open",
+  "totalSupply": 44268.96436776957,
+  "balance": 48509.88064626773,
+  "available": 0,
+  "pricePerFullShare": 1.0957988590667325,
+  "token": {
+    "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "name": "Convex Token",
+    "symbol": "CVX",
+    "decimals": 18
+  }
+}

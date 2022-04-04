@@ -1,0 +1,989 @@
+{
+  "setts": [
+    {
+      "id": "0x15cbc4ac1e81c97667780fe6dadedd04a6eeb47b",
+      "name": "Badger Sett Curve.fi Factory USD Metapool: Frax",
+      "symbol": "bFRAX3CRV-f",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "148897739639424880672",
+      "token": {
+        "id": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
+        "name": "Curve.fi Factory USD Metapool: Frax",
+        "symbol": "FRAX3CRV-f",
+        "decimals": "18",
+        "totalSupply": "2669787893210532979947725199"
+      },
+      "balance": "148897739639424880672",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "148897739639424880672",
+      "netShareDeposit": "148897739639424880672",
+      "grossDeposit": "48795074350937619078668",
+      "grossShareDeposit": "48795074350937619078668",
+      "grossWithdraw": "48646176611298194197996",
+      "grossShareWithdraw": "48646176611298194197996",
+      "controller": {
+        "id": "0x3f61344ba56df00dad9bbca05d98ca2aec43ba0b"
+      },
+      "strategy": {
+        "id": "0xf1e6ab438136d391fdafff5263f129d434bc6efb",
+        "balance": "148897739639424880672"
+      }
+    },
+    {
+      "id": "0x1862a18181346ebd9edaf800804f89190def24a5",
+      "name": "Badger Sett SushiSwap LP Token",
+      "symbol": "bSLP",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "27007267837510615",
+      "token": {
+        "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
+        "name": "SushiSwap LP Token",
+        "symbol": "SLP",
+        "decimals": "18",
+        "totalSupply": "5595631134519541"
+      },
+      "balance": "37974486184148888",
+      "pricePerFullShare": "1406083962754863111",
+      "netDeposit": "1088285795428452",
+      "netShareDeposit": "27007267837510615",
+      "grossDeposit": "711050345565200641",
+      "grossShareDeposit": "587370865015192722",
+      "grossWithdraw": "709962059769772189",
+      "grossShareWithdraw": "560363597177682107",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x3a494d79aa78118795daad8aeff5825c6c8df7f1",
+        "balance": "37974486184148888"
+      }
+    },
+    {
+      "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+      "name": "Badger Sett Badger",
+      "symbol": "bBADGER",
+      "available": "1280638859265304525363905",
+      "decimals": "18",
+      "totalSupply": "1037053890270249536728003",
+      "token": {
+        "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": "18",
+        "totalSupply": "21000000000000000000000000"
+      },
+      "balance": "1280638859265304525363905",
+      "pricePerFullShare": "1234881688676350581",
+      "netDeposit": "945426120173029577866218",
+      "netShareDeposit": "1037053890270249536728003",
+      "grossDeposit": "18400133769765552525474467",
+      "grossShareDeposit": "15565951165893596526025832",
+      "grossWithdraw": "17454707649592522947608249",
+      "grossShareWithdraw": "14528897275623346989297829",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x75b8e21bd623012efb3b69e1b562465a68944ee6",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0x19e4d89e0cb807ea21b8cef02df5eaa99a110da5",
+      "name": "Badger Sett Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+      "symbol": "bMIM-3LP3CRV-f",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "149354975821982046159",
+      "token": {
+        "id": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
+        "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+        "symbol": "MIM-3LP3CRV-f",
+        "decimals": "18",
+        "totalSupply": "3409823733280083587331523570"
+      },
+      "balance": "149354975821982046159",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "149354975821982046159",
+      "netShareDeposit": "149354975821982046159",
+      "grossDeposit": "199139967762642728212",
+      "grossShareDeposit": "199139967762642728212",
+      "grossWithdraw": "49784991940660682053",
+      "grossShareWithdraw": "49784991940660682053",
+      "controller": {
+        "id": "0x3f61344ba56df00dad9bbca05d98ca2aec43ba0b"
+      },
+      "strategy": {
+        "id": "0x6d1de7b7f586f17d573bb57ce39159ff6245a285",
+        "balance": "149354975821982046159"
+      }
+    },
+    {
+      "id": "0x235c9e24d3fb2fafd58a2e49d454fdcd2dbf7ff1",
+      "name": "Badger Sett Uniswap V2",
+      "symbol": "bUNI-V2",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "7779916085969874",
+      "token": {
+        "id": "0xcd7989894bc033581532d2cd88da5db0a4b12859",
+        "name": "Uniswap V2",
+        "symbol": "UNI-V2",
+        "decimals": "18",
+        "totalSupply": "5499372884713"
+      },
+      "balance": "14089563544477786",
+      "pricePerFullShare": "1811017418283802387",
+      "netDeposit": "-40015353131613174",
+      "netShareDeposit": "7779916085969874",
+      "grossDeposit": "591941096935608704",
+      "grossShareDeposit": "473111192704771842",
+      "grossWithdraw": "631956450067221878",
+      "grossShareWithdraw": "465331276618801968",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x95826c65eb1f2d2f0edbb7ecb176563b61c60bbf",
+        "balance": "14089563544477786"
+      }
+    },
+    {
+      "id": "0x26b8efa69603537ac8ab55768b6740b67664d518",
+      "name": "Badger Sett mBTC/HBTC Feeder Pool",
+      "symbol": "bfPmBTC/HBTC",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "557281816349379152",
+      "token": {
+        "id": "0x48c59199da51b7e30ea200a74ea07974e62c4ba7",
+        "name": "mBTC/HBTC Feeder Pool",
+        "symbol": "fPmBTC/HBTC",
+        "decimals": "18",
+        "totalSupply": "96973656861799144732"
+      },
+      "balance": "564595895612722032",
+      "pricePerFullShare": "1013124561126461431",
+      "netDeposit": "96653778784800422",
+      "netShareDeposit": "557281816349379152",
+      "grossDeposit": "144589747050302585027",
+      "grossShareDeposit": "143963444329571989184",
+      "grossWithdraw": "144493093271517784605",
+      "grossShareWithdraw": "143406162513222610032",
+      "controller": {
+        "id": "0xd35ff2c170cc1e44de4eddc9f2fc425c16670250"
+      },
+      "strategy": {
+        "id": "0x54d06a0e1ce55a7a60ee175abceac7e363f603f3",
+        "balance": "564595895612722032"
+      }
+    },
+    {
+      "id": "0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5",
+      "name": "Badger Sett Curve.fi USD-BTC-ETH",
+      "symbol": "bcrv3crypto",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "2641427141018138586570",
+      "token": {
+        "id": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
+        "name": "Curve.fi USD-BTC-ETH",
+        "symbol": "crv3crypto",
+        "decimals": "18",
+        "totalSupply": "69301502862062175946863"
+      },
+      "balance": "2682617632101926403576",
+      "pricePerFullShare": "1015594028865740712",
+      "netDeposit": "2602352659148681683459",
+      "netShareDeposit": "2641427141018138586570",
+      "grossDeposit": "23827868317467990123873",
+      "grossShareDeposit": "23767690030520170164405",
+      "grossWithdraw": "21225515658319308440414",
+      "grossShareWithdraw": "21126262889502031577835",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0x647eeb5c5ed5a71621183f09f6ce8fa66b96827d",
+        "balance": "2682617632101926403576"
+      }
+    },
+    {
+      "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+      "name": "Badger Sett Convex CRV",
+      "symbol": "bcvxCRV",
+      "available": "5749192946917769086869",
+      "decimals": "18",
+      "totalSupply": "1860392085142882700453224",
+      "token": {
+        "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+        "name": "Convex CRV",
+        "symbol": "cvxCRV",
+        "decimals": "18",
+        "totalSupply": "45185844558963557078365591"
+      },
+      "balance": "2622674178518823825090581",
+      "pricePerFullShare": "1409742709326456836",
+      "netDeposit": "1765682277706595162942080",
+      "netShareDeposit": "1860392085142882700453224",
+      "grossDeposit": "15005246640297565828883766",
+      "grossShareDeposit": "13245132221699764640859177",
+      "grossWithdraw": "13239564362590970665941686",
+      "grossShareWithdraw": "11384740136556881940405953",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0x826048381d65a65daa51342c51d464428d301896",
+        "balance": "2616924985571906056003712"
+      }
+    },
+    {
+      "id": "0x4b92d19c11435614cd49af1b589001b7c08cd4d5",
+      "name": "Badger WBTC yVault",
+      "symbol": "byvWBTC",
+      "available": "0",
+      "decimals": "8",
+      "totalSupply": "17940188996",
+      "token": {
+        "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": "8",
+        "totalSupply": "14868836340737"
+      },
+      "balance": "18310634702",
+      "pricePerFullShare": "102064893",
+      "netDeposit": "14530776571",
+      "netShareDeposit": "17940188996",
+      "grossDeposit": "1381158944408",
+      "grossShareDeposit": "1372779656366",
+      "grossWithdraw": "1366628167837",
+      "grossShareWithdraw": "1354839467370",
+      "controller": null,
+      "strategy": null
+    },
+    {
+      "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40",
+      "name": "Badger Sett Convex Token",
+      "symbol": "bCVX",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "44268964367769571067446",
+      "token": {
+        "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": "18",
+        "totalSupply": "52842757666481041544194387"
+      },
+      "balance": "48509880646267728088084",
+      "pricePerFullShare": "1095798859066732433",
+      "netDeposit": "-1299996505571012776733",
+      "netShareDeposit": "44268964367769571067446",
+      "grossDeposit": "3250655428532204057456976",
+      "grossShareDeposit": "3106247094657867999727729",
+      "grossWithdraw": "3251955425037775070233709",
+      "grossShareWithdraw": "3061978130290098428660283",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0xbcee2c6cfa7a4e29892c3665f464be5536f16d95",
+        "balance": "48509880646267728088084"
+      }
+    },
+    {
+      "id": "0x55912d0cf83b75c492e761932abc4db4a5cb1b17",
+      "name": "Badger Sett Curve.fi pBTC/sbtcCRV",
+      "symbol": "bpBTC/sbtcCRV",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "2070029569864618243",
+      "token": {
+        "id": "0xde5331ac4b3630f94853ff322b66407e0d6331e8",
+        "name": "Curve.fi pBTC/sbtcCRV",
+        "symbol": "pBTC/sbtcCRV",
+        "decimals": "18",
+        "totalSupply": "676626618093294229065"
+      },
+      "balance": "2078055547937133408",
+      "pricePerFullShare": "1003877228706950341",
+      "netDeposit": "943199164630199080",
+      "netShareDeposit": "2070029569864618243",
+      "grossDeposit": "1363090528928083577877",
+      "grossShareDeposit": "1359499751368607116457",
+      "grossWithdraw": "1362147329763453378797",
+      "grossShareWithdraw": "1357429721798742498214",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0xa9a646668df5cec5344941646f5c6b269551e53d",
+        "balance": "2078055547937133408"
+      }
+    },
+    {
+      "id": "0x599d92b453c010b1050d31c364f6ee17e819f193",
+      "name": "Badger Sett Interest bearing mStable BTC",
+      "symbol": "bimBTC",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "86880172829907362797",
+      "token": {
+        "id": "0x17d8cbb6bce8cee970a4027d1198f6700a7a6c24",
+        "name": "Interest bearing mStable BTC",
+        "symbol": "imBTC",
+        "decimals": "18",
+        "totalSupply": "1671992005880240779445"
+      },
+      "balance": "87573335624175847031",
+      "pricePerFullShare": "1007978377248691107",
+      "netDeposit": "84375199707365602951",
+      "netShareDeposit": "86880172829907362797",
+      "grossDeposit": "1387316599805270735480",
+      "grossShareDeposit": "1385797770859008432782",
+      "grossWithdraw": "1302941400097905132529",
+      "grossShareWithdraw": "1298917598029101069985",
+      "controller": {
+        "id": "0xd35ff2c170cc1e44de4eddc9f2fc425c16670250"
+      },
+      "strategy": {
+        "id": "0xd409c506742b7f76f164909025ab29a47e06d30a",
+        "balance": "87573335624175847031"
+      }
+    },
+    {
+      "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9",
+      "name": "Badger Sett Curve.fi bBTC/sbtcCRV",
+      "symbol": "bbBTC/sbtcCRV",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "1745672386512149099261",
+      "token": {
+        "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+        "name": "Curve.fi bBTC/sbtcCRV",
+        "symbol": "bBTC/sbtcCRV",
+        "decimals": "18",
+        "totalSupply": "2123034934811930817271"
+      },
+      "balance": "1750821303135371170439",
+      "pricePerFullShare": "1002949532033046360",
+      "netDeposit": "1749800347142028643799",
+      "netShareDeposit": "1745672386512149099261",
+      "grossDeposit": "2799697733550388911866",
+      "grossShareDeposit": "2793699535581759200025",
+      "grossWithdraw": "1049897386408360268067",
+      "grossShareWithdraw": "1048027149069610100764",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c",
+        "balance": "1750821303135371170439"
+      }
+    },
+    {
+      "id": "0x608b6d82eb121f3e5c0baeed32d81007b916e83c",
+      "name": "Badger Sett Digg",
+      "symbol": "bDIGG",
+      "available": "17021502278",
+      "decimals": "18",
+      "totalSupply": "17917370819000000000",
+      "token": {
+        "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": "9",
+        "totalSupply": "4000000000000"
+      },
+      "balance": "17917370819000000000",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "17917370819000000000",
+      "netShareDeposit": "17917370819000000000",
+      "grossDeposit": "17917370819000000000",
+      "grossShareDeposit": "17917370819000000000",
+      "grossWithdraw": "0",
+      "grossShareWithdraw": "0",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0xa6af1b913e205b8e9b95d3b30768c0989e942316",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0x6af7377b5009d7d154f36fe9e235ae1da27aea22",
+      "name": "remBADGER",
+      "symbol": "remBADGER",
+      "available": "336894028891334968287429",
+      "decimals": "18",
+      "totalSupply": "1097649718195455587600",
+      "token": {
+        "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": "18",
+        "totalSupply": "21000000000000000000000000"
+      },
+      "balance": "354625293569826282407820",
+      "pricePerFullShare": "323076923076000000000",
+      "netDeposit": "-291528552582173717592180",
+      "netShareDeposit": "-902350281804544412400",
+      "grossDeposit": "0",
+      "grossShareDeposit": "0",
+      "grossWithdraw": "291528552582173717592180",
+      "grossShareWithdraw": "902350281804544412400",
+      "controller": {
+        "id": "0x3f61344ba56df00dad9bbca05d98ca2aec43ba0b"
+      },
+      "strategy": {
+        "id": "0xd8d8ae4a5363edb6c3e01759576da04bcc3a947e",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545",
+      "name": "Badger Sett Curve.fi renBTC/wBTC",
+      "symbol": "bcrvRenWBTC",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "3493847659748066705688",
+      "token": {
+        "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+        "name": "Curve.fi renBTC/wBTC",
+        "symbol": "crvRenWBTC",
+        "decimals": "18",
+        "totalSupply": "15658355636934163612779"
+      },
+      "balance": "3542500651027249676194",
+      "pricePerFullShare": "1013925332761271916",
+      "netDeposit": "3488950589590153897499",
+      "netShareDeposit": "3493847659748066705688",
+      "grossDeposit": "24348610824796134418209",
+      "grossShareDeposit": "24201223925160895689214",
+      "grossWithdraw": "20859660235205980520710",
+      "grossShareWithdraw": "20707376265412828983526",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071",
+        "balance": "3542500651027249676194"
+      }
+    },
+    {
+      "id": "0x758a43ee2bff8230eeb784879cdcff4828f2544d",
+      "name": "Badger Sett SushiSwap LP Token",
+      "symbol": "bSLP",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "355672637720189",
+      "token": {
+        "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+        "name": "SushiSwap LP Token",
+        "symbol": "SLP",
+        "decimals": "18",
+        "totalSupply": "17184760204572304"
+      },
+      "balance": "355672637720189",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "355672637720189",
+      "netShareDeposit": "355672637720189",
+      "grossDeposit": "26632552203485468",
+      "grossShareDeposit": "26632552203485468",
+      "grossWithdraw": "26276879565765279",
+      "grossShareWithdraw": "26276879565765279",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x7a56d65254705b4def63c68488c0182968c452ce",
+        "balance": "355672637720189"
+      }
+    },
+    {
+      "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a",
+      "name": "Badger Sett Digg",
+      "symbol": "bDIGG",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "1199834634493530300758",
+      "token": {
+        "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": "9",
+        "totalSupply": "4000000000000"
+      },
+      "balance": "230755499769",
+      "pricePerFullShare": "1476610204180227157",
+      "netDeposit": "1430907203584272488550",
+      "netShareDeposit": "1199834634493530300758",
+      "grossDeposit": "8368409323492662658101",
+      "grossShareDeposit": "6434778035952142325277",
+      "grossWithdraw": "6937502119908390169551",
+      "grossShareWithdraw": "5234943401458612024519",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x4a8651f2edd68850b944ad93f2c67af817f39f62",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6",
+      "name": "Badger Sett SushiSwap LP Token",
+      "symbol": "bSLP",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "54845388379",
+      "token": {
+        "id": "0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",
+        "name": "SushiSwap LP Token",
+        "symbol": "SLP",
+        "decimals": "18",
+        "totalSupply": "777109683"
+      },
+      "balance": "94986617619",
+      "pricePerFullShare": "1731897984979350746",
+      "netDeposit": "48395833213",
+      "netShareDeposit": "54845388379",
+      "grossDeposit": "721054497537",
+      "grossShareDeposit": "521763111486",
+      "grossWithdraw": "672658664324",
+      "grossShareWithdraw": "466917723107",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0xaa8dddfe7dfa3c3269f1910d89e4413dd006d08a",
+        "balance": "94986617619"
+      }
+    },
+    {
+      "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de",
+      "name": "Badger Sett SushiSwap LP Token",
+      "symbol": "bSLP",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "410745969676846",
+      "token": {
+        "id": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
+        "name": "SushiSwap LP Token",
+        "symbol": "SLP",
+        "decimals": "18",
+        "totalSupply": "124685896106164"
+      },
+      "balance": "410745969676846",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "410745969676846",
+      "netShareDeposit": "410745969676846",
+      "grossDeposit": "13396701156504932",
+      "grossShareDeposit": "13396701156504932",
+      "grossWithdraw": "12985955186828086",
+      "grossShareWithdraw": "12985955186828086",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0xf4146a176b09c664978e03d28d07db4431525dad",
+        "balance": "410745969676846"
+      }
+    },
+    {
+      "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4",
+      "name": "Badger Sett Curve.fi hBTC/wBTC",
+      "symbol": "bhCRV",
+      "available": "3820033495174392718",
+      "decimals": "18",
+      "totalSupply": "9037481972271832044",
+      "token": {
+        "id": "0xb19059ebb43466c323583928285a49f558e572fd",
+        "name": "Curve.fi hBTC/wBTC",
+        "symbol": "hCRV",
+        "decimals": "18",
+        "totalSupply": "12577572837796719828290"
+      },
+      "balance": "9078432699222598950",
+      "pricePerFullShare": "1004531209807821365",
+      "netDeposit": "7523465718166047163",
+      "netShareDeposit": "9037481972271832044",
+      "grossDeposit": "2681758661538630074283",
+      "grossShareDeposit": "2676948013380326367153",
+      "grossWithdraw": "2674235195820464027120",
+      "grossShareWithdraw": "2667910531408054535109",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0x8c26d9b6b80684cc642ed9eb1ac1729af3e819ee",
+        "balance": "5258399204048206232"
+      }
+    },
+    {
+      "id": "0x937b8e917d0f36edebba8e459c5fb16f3b315551",
+      "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
+      "symbol": "bbveCVX-CVX-f",
+      "available": "382131149612482093539",
+      "decimals": "18",
+      "totalSupply": "197984059102694767032159",
+      "token": {
+        "id": "0x04c90c198b2eff55716079bc06d7ccc4aa4d7512",
+        "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
+        "symbol": "bveCVX-CVX-f",
+        "decimals": "18",
+        "totalSupply": "8598784194528876000000"
+      },
+      "balance": "197984059102694767032159",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "197984059102694767032159",
+      "netShareDeposit": "197984059102694767032159",
+      "grossDeposit": "685559957040500394707605",
+      "grossShareDeposit": "685559957040500394707605",
+      "grossWithdraw": "487575897937805627675446",
+      "grossShareWithdraw": "487575897937805627675446",
+      "controller": {
+        "id": "0x0c41a8613fbefcc8d6e5df1020dbb336f875247f"
+      },
+      "strategy": {
+        "id": "0x98ca7afa876f0e15494e76e92c5b3658cde1ffe1",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0x99f39d495c6a5237f43602f3ab5f49786e46c9b0",
+      "name": "remDIGG",
+      "symbol": "remDIGG",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "52942035500000000000",
+      "token": {
+        "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": "9",
+        "totalSupply": "4000000000000"
+      },
+      "balance": "0",
+      "pricePerFullShare": "0",
+      "netDeposit": "0",
+      "netShareDeposit": "0",
+      "grossDeposit": "0",
+      "grossShareDeposit": "0",
+      "grossWithdraw": "0",
+      "grossShareWithdraw": "0",
+      "controller": {
+        "id": "0x3f61344ba56df00dad9bbca05d98ca2aec43ba0b"
+      },
+      "strategy": {
+        "id": "0x4055d395361e73530d43c9d4f18b0668fe4b5b91",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af",
+      "name": "Badger Sett Curve.fi Factory BTC Metapool: ibBTC",
+      "symbol": "bibbtc/sbtcCRV-f",
+      "available": "1709499156477649580",
+      "decimals": "18",
+      "totalSupply": "5386107599050064495263",
+      "token": {
+        "id": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+        "name": "Curve.fi Factory BTC Metapool: ibBTC",
+        "symbol": "ibbtc/sbtcCRV-f",
+        "decimals": "18",
+        "totalSupply": "6093108987423850666"
+      },
+      "balance": "5386107599050064495263",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "5386107599050064495263",
+      "netShareDeposit": "5386107599050064495263",
+      "grossDeposit": "10256020685401830910291",
+      "grossShareDeposit": "10256020685401830910291",
+      "grossWithdraw": "4869913086351766415028",
+      "grossShareWithdraw": "4869913086351766415028",
+      "controller": {
+        "id": "0xe505f7c2ffcce7ae4b076456bc02a70d8fe8d4d2"
+      },
+      "strategy": {
+        "id": "0x6d4ba00fd7bb73b5aa5b3d6180c6f1b0c89f70d1",
+        "balance": "5384308126253772232547"
+      }
+    },
+    {
+      "id": "0xaf5a1decfa95baf63e0084a35c62592b774a2a87",
+      "name": "Badger SuperSett (Harvest) Curve.fi renBTC/wBTC",
+      "symbol": "bSupercrvRenWBTC",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "3910550221241906036",
+      "token": {
+        "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+        "name": "Curve.fi renBTC/wBTC",
+        "symbol": "crvRenWBTC",
+        "decimals": "18",
+        "totalSupply": "15658355636934163612779"
+      },
+      "balance": "4016894094665044421",
+      "pricePerFullShare": "1027194094796554198",
+      "netDeposit": "-29705041590303635619",
+      "netShareDeposit": "3910550221241906036",
+      "grossDeposit": "13906641873734620128726",
+      "grossShareDeposit": "13878147682749800401434",
+      "grossWithdraw": "13936346915324923764345",
+      "grossShareWithdraw": "13874237132528558495398",
+      "controller": {
+        "id": "0x30392694c25fbbe5c026cf846e9b6525a2ac3ec8"
+      },
+      "strategy": {
+        "id": "0xaae82e3c89e15e6f26f60724f115d5012363e030",
+        "balance": "4016894094665044421"
+      }
+    },
+    {
+      "id": "0xb9d076fde463dbc9f915e5392f807315bf940334",
+      "name": "Badger Sett Curve.fi tBTC/sbtcCrv",
+      "symbol": "btbtc/sbtcCrv",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "464489156096599784175",
+      "token": {
+        "id": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
+        "name": "Curve.fi tBTC/sbtcCrv",
+        "symbol": "tbtc/sbtcCrv",
+        "decimals": "18",
+        "totalSupply": "3757677400595605143762"
+      },
+      "balance": "478334366247106901576",
+      "pricePerFullShare": "1029807391558626031",
+      "netDeposit": "416922818443912284917",
+      "netShareDeposit": "464489156096599784175",
+      "grossDeposit": "10652752992521753899205",
+      "grossShareDeposit": "10571543095407168579504",
+      "grossWithdraw": "10235830174077841614288",
+      "grossShareWithdraw": "10107053939310568795329",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb",
+        "balance": "478334366247106901576"
+      }
+    },
+    {
+      "id": "0xbe08ef12e4a553666291e9ffc24fccfd354f2dd2",
+      "name": "Badger Sett Curve.fi USD-BTC-ETH",
+      "symbol": "bcrvTricrypto",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "188625686895062813",
+      "token": {
+        "id": "0xca3d75ac011bf5ad07a98d02f18225f9bd9a6bdf",
+        "name": "Curve.fi USD-BTC-ETH",
+        "symbol": "crvTricrypto",
+        "decimals": "18",
+        "totalSupply": "90512645864176037463442"
+      },
+      "balance": "204585092346069875",
+      "pricePerFullShare": "1084608865917003543",
+      "netDeposit": "-17039608010891471395",
+      "netShareDeposit": "188625686895062813",
+      "grossDeposit": "20384789769664804365411",
+      "grossShareDeposit": "20367278838881724842993",
+      "grossWithdraw": "20401829377675695836806",
+      "grossShareWithdraw": "20367090213194829780180",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0x05ec4356e1acd89cc2d16adc7415c8c95e736ac1",
+        "balance": "204585092346069875"
+      }
+    },
+    {
+      "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714",
+      "name": "Badger Sett Uniswap V2",
+      "symbol": "bUNI-V2",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "2827529350",
+      "token": {
+        "id": "0xe86204c4eddd2f70ee00ead6805f917671f56c52",
+        "name": "Uniswap V2",
+        "symbol": "UNI-V2",
+        "decimals": "18",
+        "totalSupply": "577067236"
+      },
+      "balance": "4716995138",
+      "pricePerFullShare": "1668239142415975275",
+      "netDeposit": "-29014656410",
+      "netShareDeposit": "2827529350",
+      "grossDeposit": "407461696488",
+      "grossShareDeposit": "333070488129",
+      "grossWithdraw": "436476352898",
+      "grossShareWithdraw": "330242958779",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0xadc8d7322f2e284c1d9254170dbe311e9d3356cf",
+        "balance": "0"
+      }
+    },
+    {
+      "id": "0xd04c48a53c111300ad41190d63681ed3dad998ec",
+      "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
+      "symbol": "bcrvRenWSBTC",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "762581751716513968823",
+      "token": {
+        "id": "0x075b1bb99792c9e1041ba13afef80c91a1e70fb3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": "18",
+        "totalSupply": "6551250686261832244294"
+      },
+      "balance": "773826466677127142365",
+      "pricePerFullShare": "1014745586208038900",
+      "netDeposit": "735150543157868203381",
+      "netShareDeposit": "762581751716513968823",
+      "grossDeposit": "15912405088660003056348",
+      "grossShareDeposit": "15838294780622945753232",
+      "grossWithdraw": "15177254545502134852967",
+      "grossShareWithdraw": "15075713028906431784409",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0xcce0d2d1eb2310f7e67e128bcfe3ce870a3d3a3d",
+        "balance": "773826466677127142365"
+      }
+    },
+    {
+      "id": "0xe143aa25eec81b4fc952b38b6bca8d2395481377",
+      "name": "Badger Sett Badger Sett Convex Token",
+      "symbol": "bbCVX",
+      "available": "926569340998467297",
+      "decimals": "18",
+      "totalSupply": "18750344982644132102",
+      "token": {
+        "id": "0x0x53c8e199eb2cb7c01543c137078a038937a68e40",
+        "name": "Badger Sett Convex Token",
+        "symbol": "bCVX",
+        "decimals": "18",
+        "totalSupply": "1081817114753480743410"
+      },
+      "balance": "18691208425373981606",
+      "pricePerFullShare": "996846108307613058",
+      "netDeposit": "18788163881931364859",
+      "netShareDeposit": "18750344982644132102",
+      "grossDeposit": "231121234480907912658",
+      "grossShareDeposit": "231755209855380807267",
+      "grossWithdraw": "212333070598976547799",
+      "grossShareWithdraw": "213004864872736675165",
+      "controller": {
+        "id": "0x41b6ba5cb7183d0964dba65bfb3bf5f0be5cc02a"
+      },
+      "strategy": {
+        "id": "0x87fb47c2b9eb41d362bab44f5ec81514b6b1de13",
+        "balance": "17715872276954542345"
+      }
+    },
+    {
+      "id": "0xec1c717a3b02582a4aa2275260c583095536b613",
+      "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
+      "symbol": "bBADGERWBTC-f",
+      "available": "19301783346706989675",
+      "decimals": "18",
+      "totalSupply": "3526995345317108623706",
+      "token": {
+        "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+        "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+        "symbol": "BADGERWBTC-f",
+        "decimals": "18",
+        "totalSupply": "934583239195053317500"
+      },
+      "balance": "3526995345317108623706",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "3526995345317108623706",
+      "netShareDeposit": "3526995345317108623706",
+      "grossDeposit": "3555379033655883875566",
+      "grossShareDeposit": "3555379033655883875566",
+      "grossWithdraw": "28383688338775251860",
+      "grossShareWithdraw": "28383688338775251860",
+      "controller": {
+        "id": "0xa54d8a596b4022cc4436b692c8ea0e342405eb6e"
+      },
+      "strategy": {
+        "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1",
+        "balance": "3506677678636364424048"
+      }
+    },
+    {
+      "id": "0xf349c0faa80fc1870306ac093f75934078e28991",
+      "name": "Badger Sett Curve.fi oBTC/sbtcCRV",
+      "symbol": "boBTC/sbtcCRV",
+      "available": "0",
+      "decimals": "18",
+      "totalSupply": "524073694838252849924",
+      "token": {
+        "id": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
+        "name": "Curve.fi oBTC/sbtcCRV",
+        "symbol": "oBTC/sbtcCRV",
+        "decimals": "18",
+        "totalSupply": "902433786735183657157"
+      },
+      "balance": "527009288599975228006",
+      "pricePerFullShare": "1005601490383195827",
+      "netDeposit": "524767016712031511638",
+      "netShareDeposit": "524073694838252849924",
+      "grossDeposit": "1074785693373862163144",
+      "grossShareDeposit": "1072359334282638355795",
+      "grossWithdraw": "550018676661830651506",
+      "grossShareWithdraw": "548285639444385505871",
+      "controller": {
+        "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+      },
+      "strategy": {
+        "id": "0x5dd69c6d81f0a403c03b99c5a44ef2d49b66d388",
+        "balance": "527009288599975228006"
+      }
+    },
+    {
+      "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+      "name": "Badger Vested Escrow Convex Token",
+      "symbol": "bveCVX",
+      "available": "479812271900349633576",
+      "decimals": "18",
+      "totalSupply": "1696261543766686297559662",
+      "token": {
+        "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": "18",
+        "totalSupply": "52842757666481041544194387"
+      },
+      "balance": "1696261543766686297559662",
+      "pricePerFullShare": "1000000000000000000",
+      "netDeposit": "1696241543766686297559662",
+      "netShareDeposit": "1696241543766686297559662",
+      "grossDeposit": "2969635053087266704036661",
+      "grossShareDeposit": "2969635053087266704036661",
+      "grossWithdraw": "1273393509320580406476999",
+      "grossShareWithdraw": "1273393509320580406476999",
+      "controller": {
+        "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
+      },
+      "strategy": {
+        "id": "0x898111d1f4eb55025d0036568212425ee2274082",
+        "balance": "1695781731494785947926086"
+      }
+    }
+  ]
+}

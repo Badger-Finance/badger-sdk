@@ -16,22 +16,16 @@
   },
   "tokens": {
     "loadTokens": "S3nLsTRU+tsjtywZI59kuOoW12AE2JiVSDp6qrh6Ilg=",
-    "loadToken": "oCf+FrzSDw7RCvT9CmV+76ADuAt6lbGbmEwLmqOtiR4=",
+    "loadToken": "HF1HFOU9joCdn9050sSjetiT9pz5aGjl8YsbNqIeNQQ=",
     "loadBalances": "e0MFY6G8uKrt/oFEHfefHKcWIIAZp+zYVFTJ0wz/jtk=",
-    "loadBalance": "PMgJmQM0wuDLSb6DcjVhbUOPjvjhYMsZ0ONwbsj17sY=",
-    "tryName": "jYv2wYGFrmPTURAUxyb4jhpDphsLLSYJM+jj8EMTAk0=",
-    "trySymbol": "N1Po8Xb9PLIpmYQbNUOwGP3/nycMSNj/YTm+08XZ6jA=",
-    "tryDecimals": "3o8H1vsL7Zqu/UA4daHvt/64fPXpqJXAE5ZVlAwrbLw="
+    "loadBalance": "PMgJmQM0wuDLSb6DcjVhbUOPjvjhYMsZ0ONwbsj17sY="
   },
   "vaults": {
-    "loadVaults": "PHDrfEZbSRFffnqF9Om1U5hOFnil7nHL2+ZZwViKJkA=",
-    "loadVault": "AH5fOE9gAGoZ+sbXFrK4s/JtkHt3HC9zF3Wgw9ZVxkA=",
+    "loadVaults": "5Fl8OM4KrIx5c2+f7lc6FwxB5RVSs8otkaUt3ZOXHYQ=",
+    "loadVault": "yQtwAThbNm71LGHGc6At5pnwnKtyEiEosPUVahm1kQw=",
     "listHarvests": "pnV0AXoIFPS4QM2LwUkW1tGpgvzApa8bIPfsH23qN7Y=",
     "getVaultStrategy": "N+LefA6iimMpyH18EVBtl2LTEqkdoN1mFPRgYfLWWf4=",
-    "getPendingHarvest": "jSvzzxPJSQdU+RLaxgrz7PVTrvtKYqTfg1G5Co5eq/o=",
-    "fetchVault": "Fr6we0QWnnLRJg1JgL5nk1BCsEyFDoifYoZKKNEPJlk=",
-    "getVaultVariantData": "R06Dd+DvrwWLUiMi8N7Io49rBlZx3uWppRtRtOB/VFc=",
-    "getPendingAssets": "JHTFoXGgJUxzTVaxP2YJuQF44KhB0uegcINWGl8sS/8="
+    "getPendingHarvest": "qOTdJ1lSDDtJtLtC2u3DQE1sL2Znkrz/fGfM8V9PLRs="
   },
   "graph": {
     "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
@@ -52,7 +46,6 @@
     "loadBadgerTreeDistributions": "4SjtrtIXgc/mPRXKVDBKWB+EJ8nMU8WGdl9byALnPP8=",
     "loadStrategy": "vKBYRfM0hat2eUe/JND9M2DtaNFoaoDLINxDVIDpXZw=",
     "loadStrategies": "9J+ODBLbPpS1S2OUFIUJ8PIo8WeuvsV1bG3mnDb9OLI=",
-    "loadControllers": "f3S/TKccn6r2/WbRMNUqdHMDV0lZ23HWM//qu17xFzI=",
-    "resolveClientUrl": "R8A6yQhJPcvRv+sq8IKP46ksW/lSqNPGM92gVhSYUbU="
+    "loadControllers": "f3S/TKccn6r2/WbRMNUqdHMDV0lZ23HWM//qu17xFzI="
   }
 }

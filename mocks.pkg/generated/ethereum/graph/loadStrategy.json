@@ -1,0 +1,263 @@
+{
+  "strategy": {
+    "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c",
+    "balance": "1750821303135371170439",
+    "controller": {
+      "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
+    },
+    "sett": {
+      "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+    },
+    "treeDistributions": [
+      {
+        "id": "0x92d0999ad8cb86d9575a16c5f677123cbeb055587642be8979a61366b5b49388-202",
+        "timestamp": 1636954470,
+        "token": {
+          "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "name": "Badger Sett Convex CRV",
+          "symbol": "bcvxCRV",
+          "decimals": "18",
+          "totalSupply": "9680860937976920554007"
+        },
+        "amount": "75071088184188683748",
+        "blockNumber": "13618531",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0x92d0999ad8cb86d9575a16c5f677123cbeb055587642be8979a61366b5b49388-212",
+        "timestamp": 1636954470,
+        "token": {
+          "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+          "name": "Badger Vested Escrow Convex Token",
+          "symbol": "bveCVX",
+          "decimals": "18",
+          "totalSupply": "1146328308588079160439895"
+        },
+        "amount": "20300436765693704102",
+        "blockNumber": "13618531",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xb4cc11bf2095596a5eb9e52b35b0ce51e79cc37c7773d273c4ee06fe1ec82566-98",
+        "timestamp": 1637741140,
+        "token": {
+          "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+          "name": "Badger Sett Convex CRV",
+          "symbol": "bcvxCRV",
+          "decimals": "18",
+          "totalSupply": "9680860937976920554007"
+        },
+        "amount": "2394211275430856841",
+        "blockNumber": "13676080",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xe99c6543f60d9704c6925f2144ebecfc14c8d0284754e3c81afe9cdeb03617ab-427",
+        "timestamp": 1637386668,
+        "token": {
+          "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+          "name": "Badger Vested Escrow Convex Token",
+          "symbol": "bveCVX",
+          "decimals": "18",
+          "totalSupply": "1146328308588079160439895"
+        },
+        "amount": "737964189989566640",
+        "blockNumber": "13650076",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      }
+    ],
+    "harvests": [
+      {
+        "id": "0x05bdef7818e9ef79c471c16bbb93ef3eb3d726d98c4054d11fb749d88354f16e-0",
+        "timestamp": 1640034349,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13844422",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0x1859852cbdbcfd60c4064d26542c33a59d51eb2e0aa7906c60f730e7927f9f5b-143",
+        "timestamp": 1638086864,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13701246",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0x6241d13502fdd58974380a90e7f221dd7a5fc58546912121537c94c7c965ab78-46",
+        "timestamp": 1641102039,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13924203",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0x6964fbc7f1d0f941b5bf4d13a6f53a26bcc6726d4e1a86f319a9dc23ff120e3d-9",
+        "timestamp": 1640380176,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13870234",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0x92d0999ad8cb86d9575a16c5f677123cbeb055587642be8979a61366b5b49388-213",
+        "timestamp": 1636954470,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "3634731724238579",
+        "blockNumber": "13618531",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xa540b6f3070f1e02dd351046257386ff842ddc3e8620ff8ad8063463f7296f9c-46",
+        "timestamp": 1640750840,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13897958",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xb4cc11bf2095596a5eb9e52b35b0ce51e79cc37c7773d273c4ee06fe1ec82566-99",
+        "timestamp": 1637741140,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "76099062521394",
+        "blockNumber": "13676080",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xc284455beabc14afb0e2505f73d3cc6e6cb78d3fdebd63ad4f7fe6fd19c04daa-54",
+        "timestamp": 1641467191,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "0",
+        "blockNumber": "13951471",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      },
+      {
+        "id": "0xe99c6543f60d9704c6925f2144ebecfc14c8d0284754e3c81afe9cdeb03617ab-428",
+        "timestamp": 1637386668,
+        "token": {
+          "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+          "name": "Curve.fi bBTC/sbtcCRV",
+          "symbol": "bBTC/sbtcCRV",
+          "decimals": "18",
+          "totalSupply": "2123034934811930817271"
+        },
+        "amount": "87818654579497",
+        "blockNumber": "13650076",
+        "strategy": {
+          "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c"
+        },
+        "sett": {
+          "id": "0x5dce29e92b1b939f8e8c60dcf15bde82a85be4a9"
+        }
+      }
+    ]
+  }
+}
