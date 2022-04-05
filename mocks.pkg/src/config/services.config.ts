@@ -8,6 +8,7 @@ import {
 import { ethArgsConfig } from './eth.config';
 import { SdkServices } from '../enums';
 import { RelevantNetworks } from '../types';
+import { polygonArgsConfig } from './polygon.config';
 
 export class ServicesConfig {
   readonly network: RelevantNetworks;
@@ -20,7 +21,7 @@ export class ServicesConfig {
 
   private readonly networkArgsConfigMap: NetworksArgsConfigMap = {
     [Network.Ethereum]: ethArgsConfig,
-    [Network.Polygon]: ethArgsConfig,
+    [Network.Polygon]: polygonArgsConfig,
     [Network.Arbitrum]: ethArgsConfig,
     [Network.BinanceSmartChain]: ethArgsConfig,
     [Network.Fantom]: ethArgsConfig,

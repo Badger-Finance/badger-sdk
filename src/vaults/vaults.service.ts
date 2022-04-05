@@ -223,9 +223,7 @@ export class VaultsService extends Service {
     }
   }
 
-  async #fetchVault(
-    registryVault: VaultRegistryEntry,
-  ): Promise<RegistryVault> {
+  async #fetchVault(registryVault: VaultRegistryEntry): Promise<RegistryVault> {
     const { address, state, version } = registryVault;
 
     const vault = Vault__factory.connect(

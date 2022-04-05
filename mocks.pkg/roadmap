@@ -1,10 +1,12 @@
-- fill methods args cfgs for chains (eth)
-- ask jintao to cr8 a package for sdk
-- add rpc nods url to ENV
-- add generation and deploy in github actions
-
 improvments:
+  - Test coverage for mocks.pkg
+  - SDK API as service with methods args in chains cfgs
   - Check methods from parent class for Services
-  - Add self.assigned mock param to chain cfg
-  - ListHarvests is failing on call
+  - Fill methods args cfgs for chains
+  - Add possibility to generate mocks for 1 method
+    with different [args] collections
+  - Try to pack .json responses for pypi
   - Cleaner, rm .json files of deleted method
+
+bugs:
+  - ListHarvests is failing on call

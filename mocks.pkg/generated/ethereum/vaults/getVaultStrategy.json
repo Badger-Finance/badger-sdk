@@ -4241,7 +4241,7 @@
       "connection": {
         "url": "https://eth-archival.gateway.pokt.network/v1/lb/621cffd04e140e003a302118"
       },
-      "_nextId": 89,
+      "_nextId": 87,
       "_pendingBatch": null,
       "_pendingBatchAggregator": null,
       "_eventLoopCache": {
@@ -6303,7 +6303,7 @@
         "_idleTimeout": 50,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 18548,
+        "_idleStart": 18160,
         "_repeat": null,
         "_destroyed": true
       },

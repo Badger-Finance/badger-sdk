@@ -15,7 +15,7 @@ export const methodsToSkip = [
 
 export const relevantNetworks: RelevantNetworks[] = [
   Network.Ethereum,
-  // Network.Polygon,
+  Network.Polygon,
   // Network.Arbitrum,
   // Network.BinanceSmartChain,
   // Network.Fantom,

@@ -1441,7 +1441,7 @@
     },
     {
       "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1",
-      "balance": "3506677678636364424048",
+      "balance": "3971775437135367676192",
       "controller": {
         "id": "0xa54d8a596b4022cc4436b692c8ea0e342405eb6e"
       },
@@ -1518,6 +1518,44 @@
           },
           "amount": "10717430302826917",
           "blockNumber": "14449711",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
+          "id": "0x1fe6acab9afc7359d5d9cfda11e397f53926f02491355aa7df0d01e4295ba8d5-45",
+          "timestamp": 1649014555,
+          "token": {
+            "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+            "name": "Badger Sett Convex CRV",
+            "symbol": "bcvxCRV",
+            "decimals": "18",
+            "totalSupply": "9680860937976920554007"
+          },
+          "amount": "398455730128631434269",
+          "blockNumber": "14515054",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
+          "id": "0x1fe6acab9afc7359d5d9cfda11e397f53926f02491355aa7df0d01e4295ba8d5-55",
+          "timestamp": 1649014555,
+          "token": {
+            "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+            "name": "Badger Vested Escrow Convex Token",
+            "symbol": "bveCVX",
+            "decimals": "18",
+            "totalSupply": "1146328308588079160439895"
+          },
+          "amount": "68596198414305779940",
+          "blockNumber": "14515054",
           "strategy": {
             "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
           },
@@ -1830,6 +1868,44 @@
           }
         },
         {
+          "id": "0xd903ac5dee2556dc6ad9fda16ad56e7043e2410da32a69baea7f7f373c556258-41",
+          "timestamp": 1649103042,
+          "token": {
+            "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+            "name": "Badger Sett Convex CRV",
+            "symbol": "bcvxCRV",
+            "decimals": "18",
+            "totalSupply": "9680860937976920554007"
+          },
+          "amount": "451975873230095559766",
+          "blockNumber": "14521568",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
+          "id": "0xd903ac5dee2556dc6ad9fda16ad56e7043e2410da32a69baea7f7f373c556258-51",
+          "timestamp": 1649103042,
+          "token": {
+            "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+            "name": "Badger Vested Escrow Convex Token",
+            "symbol": "bveCVX",
+            "decimals": "18",
+            "totalSupply": "1146328308588079160439895"
+          },
+          "amount": "77197031076436575238",
+          "blockNumber": "14521568",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
           "id": "0xf9cffa9037181ff8ba7f9bc9841e83618ffe3d0decc0fabf8bd199595c937367-203",
           "timestamp": 1648412730,
           "token": {
@@ -1900,6 +1976,25 @@
           },
           "amount": "0",
           "blockNumber": "14449711",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
+          "id": "0x1fe6acab9afc7359d5d9cfda11e397f53926f02491355aa7df0d01e4295ba8d5-56",
+          "timestamp": 1649014555,
+          "token": {
+            "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+            "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+            "symbol": "BADGERWBTC-f",
+            "decimals": "18",
+            "totalSupply": "934583239195053317500"
+          },
+          "amount": "0",
+          "blockNumber": "14515054",
           "strategy": {
             "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
           },
@@ -2071,6 +2166,25 @@
           },
           "amount": "0",
           "blockNumber": "14495222",
+          "strategy": {
+            "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+          },
+          "sett": {
+            "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+          }
+        },
+        {
+          "id": "0xd903ac5dee2556dc6ad9fda16ad56e7043e2410da32a69baea7f7f373c556258-52",
+          "timestamp": 1649103042,
+          "token": {
+            "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+            "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+            "symbol": "BADGERWBTC-f",
+            "decimals": "18",
+            "totalSupply": "934583239195053317500"
+          },
+          "amount": "0",
+          "blockNumber": "14521568",
           "strategy": {
             "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
           },
@@ -7209,7 +7323,7 @@
     },
     {
       "id": "0x3a494d79aa78118795daad8aeff5825c6c8df7f1",
-      "balance": "37974486184148888",
+      "balance": "36731143237494127",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -22183,7 +22297,7 @@
     },
     {
       "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071",
-      "balance": "3542500651027249676194",
+      "balance": "3485785585878261436826",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -22526,6 +22640,25 @@
           },
           "amount": "493620581317569533972",
           "blockNumber": "14243080",
+          "strategy": {
+            "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+          },
+          "sett": {
+            "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+          }
+        },
+        {
+          "id": "0x7b8e9e433bf9668b4b35d8a62616080d91089b71fcb9b91857fcbbb3fbf44d3e-62",
+          "timestamp": 1649021785,
+          "token": {
+            "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+            "name": "Badger Vested Escrow Convex Token",
+            "symbol": "bveCVX",
+            "decimals": "18",
+            "totalSupply": "1146328308588079160439895"
+          },
+          "amount": "144177207052485124656",
+          "blockNumber": "14515587",
           "strategy": {
             "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
           },
@@ -23201,6 +23334,25 @@
           }
         },
         {
+          "id": "0x7b8e9e433bf9668b4b35d8a62616080d91089b71fcb9b91857fcbbb3fbf44d3e-63",
+          "timestamp": 1649021785,
+          "token": {
+            "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+            "name": "Curve.fi renBTC/wBTC",
+            "symbol": "crvRenWBTC",
+            "decimals": "18",
+            "totalSupply": "15658355636934163612779"
+          },
+          "amount": "13669809166366",
+          "blockNumber": "14515587",
+          "strategy": {
+            "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+          },
+          "sett": {
+            "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+          }
+        },
+        {
           "id": "0x7ff16548a81dd62664b9db6876691c3e476d034eee28806bdcd772517d876271-172",
           "timestamp": 1641458611,
           "token": {
@@ -23489,7 +23641,7 @@
     },
     {
       "id": "0x647eeb5c5ed5a71621183f09f6ce8fa66b96827d",
-      "balance": "2682617632101926403576",
+      "balance": "2646337866646897299944",
       "controller": {
         "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
       },
@@ -26961,7 +27113,7 @@
     },
     {
       "id": "0x6d4ba00fd7bb73b5aa5b3d6180c6f1b0c89f70d1",
-      "balance": "5384308126253772232547",
+      "balance": "5383107599050064495263",
       "controller": {
         "id": "0xe505f7c2ffcce7ae4b076456bc02a70d8fe8d4d2"
       },
@@ -35039,7 +35191,7 @@
     },
     {
       "id": "0x826048381d65a65daa51342c51d464428d301896",
-      "balance": "2616924985571906056003712",
+      "balance": "2600809483928455712144065",
       "controller": {
         "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
       },
@@ -36993,6 +37145,25 @@
           "sett": {
             "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
           }
+        },
+        {
+          "id": "0xbe6bd05f77b6b1e3dd5eef1a9c372016917259f94f49271d2e194773ac9dee92-11",
+          "timestamp": 1649115261,
+          "token": {
+            "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+            "name": "Badger Sett Convex CRV",
+            "symbol": "bcvxCRV",
+            "decimals": "18",
+            "totalSupply": "9680860937976920554007"
+          },
+          "amount": "3872307209761487592101",
+          "blockNumber": "14522479",
+          "strategy": {
+            "id": "0x898111d1f4eb55025d0036568212425ee2274082"
+          },
+          "sett": {
+            "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
+          }
         }
       ],
       "harvests": [
@@ -37046,6 +37217,25 @@
           },
           "amount": "5859518419598981664850",
           "blockNumber": "14470940",
+          "strategy": {
+            "id": "0x898111d1f4eb55025d0036568212425ee2274082"
+          },
+          "sett": {
+            "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
+          }
+        },
+        {
+          "id": "0xbe6bd05f77b6b1e3dd5eef1a9c372016917259f94f49271d2e194773ac9dee92-12",
+          "timestamp": 1649115261,
+          "token": {
+            "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+            "name": "Convex Token",
+            "symbol": "CVX",
+            "decimals": "18",
+            "totalSupply": "52842757666481041544194387"
+          },
+          "amount": "5458956857233531923862",
+          "blockNumber": "14522479",
           "strategy": {
             "id": "0x898111d1f4eb55025d0036568212425ee2274082"
           },
@@ -38047,7 +38237,7 @@
     },
     {
       "id": "0x95826c65eb1f2d2f0edbb7ecb176563b61c60bbf",
-      "balance": "14089563544477786",
+      "balance": "14082770186572282",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -39100,7 +39290,7 @@
     },
     {
       "id": "0xaa8dddfe7dfa3c3269f1910d89e4413dd006d08a",
-      "balance": "94986617619",
+      "balance": "94907378797",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -44827,7 +45017,7 @@
     },
     {
       "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb",
-      "balance": "478334366247106901576",
+      "balance": "474023914438490102324",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -45094,6 +45284,44 @@
           },
           "amount": "408927540619740366732",
           "blockNumber": "14223683",
+          "strategy": {
+            "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb"
+          },
+          "sett": {
+            "id": "0xb9d076fde463dbc9f915e5392f807315bf940334"
+          }
+        },
+        {
+          "id": "0x82aa0fb2011314adb9963d10e3236bf6655c103a3afec3d4216090a3e03dc2d7-67",
+          "timestamp": 1649020264,
+          "token": {
+            "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+            "name": "Badger Sett Convex CRV",
+            "symbol": "bcvxCRV",
+            "decimals": "18",
+            "totalSupply": "9680860937976920554007"
+          },
+          "amount": "436442122913156964578",
+          "blockNumber": "14515463",
+          "strategy": {
+            "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb"
+          },
+          "sett": {
+            "id": "0xb9d076fde463dbc9f915e5392f807315bf940334"
+          }
+        },
+        {
+          "id": "0x82aa0fb2011314adb9963d10e3236bf6655c103a3afec3d4216090a3e03dc2d7-77",
+          "timestamp": 1649020264,
+          "token": {
+            "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+            "name": "Badger Vested Escrow Convex Token",
+            "symbol": "bveCVX",
+            "decimals": "18",
+            "totalSupply": "1146328308588079160439895"
+          },
+          "amount": "33569357334293974244",
+          "blockNumber": "14515463",
           "strategy": {
             "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb"
           },
@@ -45826,6 +46054,25 @@
           }
         },
         {
+          "id": "0x82aa0fb2011314adb9963d10e3236bf6655c103a3afec3d4216090a3e03dc2d7-78",
+          "timestamp": 1649020264,
+          "token": {
+            "id": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
+            "name": "Curve.fi tBTC/sbtcCrv",
+            "symbol": "tbtc/sbtcCrv",
+            "decimals": "18",
+            "totalSupply": "3757677400595605143762"
+          },
+          "amount": "13184195485595922",
+          "blockNumber": "14515463",
+          "strategy": {
+            "id": "0xab73ec65a1ef5a2e5b56d5d6f36bee4b2a1d3ffb"
+          },
+          "sett": {
+            "id": "0xb9d076fde463dbc9f915e5392f807315bf940334"
+          }
+        },
+        {
           "id": "0x88d9e5eb834b425e7c48d2bcd67d7df0ad3357028bea5895a299cafd49d6e9c7-126",
           "timestamp": 1640034554,
           "token": {
@@ -46534,7 +46781,7 @@
     },
     {
       "id": "0xbcee2c6cfa7a4e29892c3665f464be5536f16d95",
-      "balance": "48509880646267728088084",
+      "balance": "47879494785934879958661",
       "controller": {
         "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
       },
@@ -47730,7 +47977,7 @@
     },
     {
       "id": "0xcce0d2d1eb2310f7e67e128bcfe3ce870a3d3a3d",
-      "balance": "773826466677127142365",
+      "balance": "773783733295326880786",
       "controller": {
         "id": "0x63cf44b2548e4493fd099222a1ec79f3344d9682"
       },
@@ -52723,7 +52970,7 @@
     },
     {
       "id": "0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c",
-      "balance": "1750821303135371170439",
+      "balance": "1738901834070024906576",
       "controller": {
         "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
       },
@@ -52984,7 +53231,7 @@
     },
     {
       "id": "0xf4146a176b09c664978e03d28d07db4431525dad",
-      "balance": "410745969676846",
+      "balance": "384429418364437",
       "controller": {
         "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
       },

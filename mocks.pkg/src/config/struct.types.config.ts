@@ -4,7 +4,7 @@ import { RelevantNetworks } from '../types';
 export type ServicesArgsConfig = {
   [key in SdkServices]: {
     [method: string]: {
-      args: any[];
+      args?: any[];
       ignore?: boolean;
     };
   };

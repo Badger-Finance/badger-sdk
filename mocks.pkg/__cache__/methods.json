@@ -23,9 +23,7 @@
   "vaults": {
     "loadVaults": "5Fl8OM4KrIx5c2+f7lc6FwxB5RVSs8otkaUt3ZOXHYQ=",
     "loadVault": "yQtwAThbNm71LGHGc6At5pnwnKtyEiEosPUVahm1kQw=",
-    "listHarvests": "pnV0AXoIFPS4QM2LwUkW1tGpgvzApa8bIPfsH23qN7Y=",
-    "getVaultStrategy": "N+LefA6iimMpyH18EVBtl2LTEqkdoN1mFPRgYfLWWf4=",
-    "getPendingHarvest": "qOTdJ1lSDDtJtLtC2u3DQE1sL2Znkrz/fGfM8V9PLRs="
+    "getVaultStrategy": "N+LefA6iimMpyH18EVBtl2LTEqkdoN1mFPRgYfLWWf4="
   },
   "graph": {
     "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
