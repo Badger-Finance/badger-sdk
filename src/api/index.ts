@@ -170,7 +170,6 @@ export class BadgerAPI {
     network?: Network,
   ): Promise<EmissionSchedule[]> {
     return this.get(`/reward/schedules/${vault}`, {
-      address: vault,
       active: `${active}`,
       chain: network ?? this.network,
     });
@@ -186,7 +185,15 @@ export class BadgerAPI {
       });
       return data as T;
     } catch (error) {
-      const { response } = error as AxiosError;
+      const { response, config } = error as AxiosError;
+      console.error({
+        url: config.url,
+        method: config.method,
+        status: response?.status,
+        text: response?.statusText,
+        path,
+        params,
+      });
 
       if (response) {
         const { status } = response;
