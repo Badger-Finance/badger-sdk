@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.4.1...v1.5.0) (2022-04-05)
+
+
+### Features
+
+* @badger-dao/sdk-mocks package ([1a5a161](https://github.com/Badger-Finance/badger-sdk/commit/1a5a1618dc857672c4b5a67b1b6d756c859a767f))
+* cache done, loading method, env rpc nodes ([3582858](https://github.com/Badger-Finance/badger-sdk/commit/35828587470963a6da57a88d2f779bb91cb46f13))
+* eth args cfg complited, typo fixed, roadmap update ([8cd9df3](https://github.com/Badger-Finance/badger-sdk/commit/8cd9df3336cab5c27ebcd99f3bb82121dde2bff7))
+* mocks.gen for eth cfg, readme, hook, ignore mehtods ([db55494](https://github.com/Badger-Finance/badger-sdk/commit/db55494efddd85bddc9a21e9847a917a2a6bdc85))
+* processor entry, configs for methods args, cache layer etc ([c661ec0](https://github.com/Badger-Finance/badger-sdk/commit/c661ec02de02e7b8b16f8740cc80363c4db7f7e0))
+* upd cls map, eth cfg, fs with mkdir, fixes ([69b2b42](https://github.com/Badger-Finance/badger-sdk/commit/69b2b423f563caab81e7b670cc7f4153e0b9f04b))
+
 ## [1.4.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.4.0...v1.4.1) (2022-03-28)
 
 
