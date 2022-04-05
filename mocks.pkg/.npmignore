@@ -1,5 +1,4 @@
 .github
 .husky
-mocks.pkg
 **/*.spec.js
 **/*.spec.d.ts

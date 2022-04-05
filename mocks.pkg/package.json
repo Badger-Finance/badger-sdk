@@ -1,0 +1,52 @@
+{
+  "name": "@badger-dao/sdk-mocks",
+  "version": "0.0.1",
+  "description": "Badger SDK Mocks collection",
+  "main": "src/index.ts",
+  "repository": "https://github.com/Badger-Finance/badger-sdk",
+  "author": "Badger DAO",
+  "license": "MIT",
+  "keywords": [
+    "badger",
+    "defi",
+    "sdk"
+  ],
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "test": "jest --runInBand --detectOpenHandles",
+    "mocks:check": "ts-node ./src/launch.ts guard",
+    "mocks:gen": "ts-node ./src/launch.ts launch",
+    "mocks:gen:force": "yarn mocks:gen true"
+  },
+  "dependencies": {
+    "@types/jest": "27.0.2",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "eslint": "8.8.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "jest": "27.3.1",
+    "prettier": "2.4.1",
+    "pretty-quick": "3.1.3",
+    "semantic-release": "19.0.2",
+    "ts-jest": "27.0.7",
+    "ts-node": "10.7.0",
+    "tslib": "2.3.1",
+    "typescript": "4.5.4"
+  },
+  "files": [
+    "lib"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  }
+}

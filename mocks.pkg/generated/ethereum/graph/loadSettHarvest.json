@@ -1,0 +1,21 @@
+{
+  "settHarvest": {
+    "id": "0x0fde871d95ce0280585eda95bf6cfdac0c4c066bdbe4f0b3a80f53ed3aeb246d-169",
+    "timestamp": 1632636589,
+    "token": {
+      "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+      "name": "Convex CRV",
+      "symbol": "cvxCRV",
+      "decimals": "18",
+      "totalSupply": "45185844558963557078365591"
+    },
+    "amount": "5319582077062943263840",
+    "blockNumber": "13299762",
+    "strategy": {
+      "id": "0x826048381d65a65daa51342c51d464428d301896"
+    },
+    "sett": {
+      "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+    }
+  }
+}

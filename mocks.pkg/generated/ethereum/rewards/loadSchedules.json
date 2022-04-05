@@ -1,0 +1,202 @@
+[
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 2035.82,
+    "start": 1619110800,
+    "end": 1619715600,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+    "amount": 0.094819176,
+    "start": 1617296400,
+    "end": 1617901200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1865.215,
+    "start": 1619715600,
+    "end": 1620320400,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1711.335,
+    "start": 1620320400,
+    "end": 1620925200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+    "amount": 0.0302171,
+    "start": 1620320400,
+    "end": 1620925200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1572.205,
+    "start": 1620925200,
+    "end": 1621530000,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1446.5,
+    "start": 1621530000,
+    "end": 1622134800,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1332.45,
+    "start": 1622134800,
+    "end": 1622739600,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1229.185,
+    "start": 1622739600,
+    "end": 1623344400,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1135.4,
+    "start": 1623344400,
+    "end": 1623949200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1050.245,
+    "start": 1623949200,
+    "end": 1624554000,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1050.245,
+    "start": 1624554000,
+    "end": 1625158800,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1050.245,
+    "start": 1625158800,
+    "end": 1625763600,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1625763600,
+    "end": 1626368400,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1626368400,
+    "end": 1626973200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1626973200,
+    "end": 1627578000,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1627578000,
+    "end": 1628182800,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1628182800,
+    "end": 1628787600,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1628787600,
+    "end": 1629392400,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1629392400,
+    "end": 1629997200,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1629997200,
+    "end": 1630602000,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1630602000,
+    "end": 1631206800,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1631206800,
+    "end": 1631811600,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1631811600,
+    "end": 1632416400,
+    "compPercent": 100
+  },
+  {
+    "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 1150,
+    "start": 1632416400,
+    "end": 1633021200,
+    "compPercent": 100
+  }
+]

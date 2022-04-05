@@ -1,0 +1,124 @@
+{
+  "setts": [
+    {
+      "id": "0x6b2d4c4bb50274c5d4986ff678cc971c0260e967",
+      "name": "Badger Sett Uniswap V2",
+      "symbol": "bUNI-V2",
+      "available": "556404",
+      "decimals": "18",
+      "totalSupply": "13118816",
+      "token": {
+        "id": "0xf6a637525402643b0654a54bead2cb9a83c8b498",
+        "name": "Uniswap V2",
+        "symbol": "UNI-V2",
+        "decimals": "18",
+        "totalSupply": "585797111213"
+      },
+      "balance": "13536451",
+      "pricePerFullShare": "1031834808872995855",
+      "netDeposit": "5718669",
+      "netShareDeposit": "13118816",
+      "grossDeposit": "6516974382",
+      "grossShareDeposit": "6408463424",
+      "grossWithdraw": "6511255713",
+      "grossShareWithdraw": "6395344608",
+      "controller": {
+        "id": "0xc00e71719d1494886942d6277daea20494cf0eec"
+      },
+      "strategy": {
+        "id": "0x809990849d53a5109e0cb9c446137793b9f6f1eb",
+        "balance": "12950762"
+      }
+    },
+    {
+      "id": "0x7b6bfb88904e4b3a6d239d5ed8adf557b22c10fc",
+      "name": "Badger Sett Curve.fi amWBTC/renBTC",
+      "symbol": "bbtcCRV",
+      "available": "1",
+      "decimals": "18",
+      "totalSupply": "2706425439155238",
+      "token": {
+        "id": "0xf8a57c1d3b9629b77b6726a042ca48990a84fb49",
+        "name": "Curve.fi amWBTC/renBTC",
+        "symbol": "btcCRV",
+        "decimals": "18",
+        "totalSupply": "2255765492013598378387"
+      },
+      "balance": "2715096299370975",
+      "pricePerFullShare": "1003203805318369846",
+      "netDeposit": "-470918409495718",
+      "netShareDeposit": "2706425439155238",
+      "grossDeposit": "2727836536057945722",
+      "grossShareDeposit": "2726625271531359799",
+      "grossWithdraw": "2728307454467441440",
+      "grossShareWithdraw": "2723918846092204561",
+      "controller": {
+        "id": "0xc00e71719d1494886942d6277daea20494cf0eec"
+      },
+      "strategy": {
+        "id": "0xf8f02d0d41c79a1973f65a440c98acac7eaa8dc1",
+        "balance": "2714114773045511"
+      }
+    },
+    {
+      "id": "0x85e1cacae9a63429394d68db59e14af74143c61c",
+      "name": "Badger Sett Curve USD-BTC-ETH",
+      "symbol": "bcrvUSDBTCETH",
+      "available": "96804288241320",
+      "decimals": "18",
+      "totalSupply": "58005221200371244",
+      "token": {
+        "id": "0x8096ac61db23291252574d49f036f0f9ed8ab390",
+        "name": "Curve USD-BTC-ETH",
+        "symbol": "crvUSDBTCETH",
+        "decimals": "18",
+        "totalSupply": "54228549760939089941427"
+      },
+      "balance": "58187689790089416",
+      "pricePerFullShare": "1003145726987021716",
+      "netDeposit": "58010050496153947",
+      "netShareDeposit": "58005221200371244",
+      "grossDeposit": "58010050496153947",
+      "grossShareDeposit": "58005221200371244",
+      "grossWithdraw": "0",
+      "grossShareWithdraw": "0",
+      "controller": {
+        "id": "0xc00e71719d1494886942d6277daea20494cf0eec"
+      },
+      "strategy": {
+        "id": "0xdb0c3118ef1aca6125200139beacc5d675f37c9c",
+        "balance": "58051310798157425"
+      }
+    },
+    {
+      "id": "0xea8567d84e3e54b32176418b4e0c736b56378961",
+      "name": "Badger Sett SushiSwap LP Token",
+      "symbol": "bSLP",
+      "available": "52861092041",
+      "decimals": "18",
+      "totalSupply": "855096428500",
+      "token": {
+        "id": "0x8f8e95ff4b4c5e354ccb005c6b0278492d7b5907",
+        "name": "SushiSwap LP Token",
+        "symbol": "SLP",
+        "decimals": "18",
+        "totalSupply": "1829807698623848"
+      },
+      "balance": "857838418488",
+      "pricePerFullShare": "1003206644182586478",
+      "netDeposit": "853376751957",
+      "netShareDeposit": "855096428500",
+      "grossDeposit": "17225614523826",
+      "grossShareDeposit": "17178435201456",
+      "grossWithdraw": "16372237771869",
+      "grossShareWithdraw": "16323338772956",
+      "controller": {
+        "id": "0xc00e71719d1494886942d6277daea20494cf0eec"
+      },
+      "strategy": {
+        "id": "0xded61bd8a8c90596d8a6cf0e678da04036146963",
+        "balance": "802187862920"
+      }
+    }
+  ]
+}

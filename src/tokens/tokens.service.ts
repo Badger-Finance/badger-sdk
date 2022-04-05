@@ -26,9 +26,9 @@ export class TokensService extends Service {
     if (!this.tokens[checksumAddress]) {
       const token = Erc20__factory.connect(checksumAddress, this.sdk.provider);
       const [name, symbol, decimals] = await Promise.all([
-        this.tryName(token),
-        this.trySymbol(token),
-        this.tryDecimals(token),
+        this.#tryName(token),
+        this.#trySymbol(token),
+        this.#tryDecimals(token),
       ]);
       this.tokens[checksumAddress] = {
         address: checksumAddress,
@@ -64,7 +64,7 @@ export class TokensService extends Service {
     }
   }
 
-  private async tryName(token: Erc20): Promise<string> {
+  async #tryName(token: Erc20): Promise<string> {
     try {
       const name = await token.name();
       return name;
@@ -73,7 +73,7 @@ export class TokensService extends Service {
     }
   }
 
-  private async trySymbol(token: Erc20): Promise<string> {
+  async #trySymbol(token: Erc20): Promise<string> {
     try {
       const symbol = await token.symbol();
       return symbol;
@@ -82,7 +82,7 @@ export class TokensService extends Service {
     }
   }
 
-  private async tryDecimals(token: Erc20): Promise<number> {
+  async #tryDecimals(token: Erc20): Promise<number> {
     try {
       const decimals = await token.decimals();
       return decimals;

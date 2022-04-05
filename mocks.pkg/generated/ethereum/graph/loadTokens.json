@@ -1,0 +1,228 @@
+{
+  "tokens": [
+    {
+      "id": "0x04c90c198b2eff55716079bc06d7ccc4aa4d7512",
+      "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
+      "symbol": "bveCVX-CVX-f",
+      "decimals": "18",
+      "totalSupply": "8598784194528876000000"
+    },
+    {
+      "id": "0x075b1bb99792c9e1041ba13afef80c91a1e70fb3",
+      "name": "Curve.fi renBTC/wBTC/sBTC",
+      "symbol": "crvRenWSBTC",
+      "decimals": "18",
+      "totalSupply": "6551250686261832244294"
+    },
+    {
+      "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+      "name": "Badger Sett Convex CRV",
+      "symbol": "bcvxCRV",
+      "decimals": "18",
+      "totalSupply": "9680860937976920554007"
+    },
+    {
+      "id": "0x0x53c8e199eb2cb7c01543c137078a038937a68e40",
+      "name": "Badger Sett Convex Token",
+      "symbol": "bCVX",
+      "decimals": "18",
+      "totalSupply": "1081817114753480743410"
+    },
+    {
+      "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+      "name": "Badger Vested Escrow Convex Token",
+      "symbol": "bveCVX",
+      "decimals": "18",
+      "totalSupply": "1146328308588079160439895"
+    },
+    {
+      "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": "18",
+      "totalSupply": "5595631134519541"
+    },
+    {
+      "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+      "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+      "symbol": "BADGERWBTC-f",
+      "decimals": "18",
+      "totalSupply": "934583239195053317500"
+    },
+    {
+      "id": "0x17d8cbb6bce8cee970a4027d1198f6700a7a6c24",
+      "name": "Interest bearing mStable BTC",
+      "symbol": "imBTC",
+      "decimals": "18",
+      "totalSupply": "1671992005880240779445"
+    },
+    {
+      "id": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": "18",
+      "totalSupply": "124685896106164"
+    },
+    {
+      "id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": "8",
+      "totalSupply": "14868836340737"
+    },
+    {
+      "id": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
+      "name": "Curve.fi oBTC/sbtcCRV",
+      "symbol": "oBTC/sbtcCRV",
+      "decimals": "18",
+      "totalSupply": "902433786735183657157"
+    },
+    {
+      "id": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
+      "name": "Badger",
+      "symbol": "BADGER",
+      "decimals": "18",
+      "totalSupply": "21000000000000000000000000"
+    },
+    {
+      "id": "0x410e3e86ef427e30b9235497143881f717d93c2a",
+      "name": "Curve.fi bBTC/sbtcCRV",
+      "symbol": "bBTC/sbtcCRV",
+      "decimals": "18",
+      "totalSupply": "2123034934811930817271"
+    },
+    {
+      "id": "0x48c59199da51b7e30ea200a74ea07974e62c4ba7",
+      "name": "mBTC/HBTC Feeder Pool",
+      "symbol": "fPmBTC/HBTC",
+      "decimals": "18",
+      "totalSupply": "96973656861799144732"
+    },
+    {
+      "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+      "name": "Curve.fi renBTC/wBTC",
+      "symbol": "crvRenWBTC",
+      "decimals": "18",
+      "totalSupply": "15658355636934163612779"
+    },
+    {
+      "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+      "name": "Convex Token",
+      "symbol": "CVX",
+      "decimals": "18",
+      "totalSupply": "52842757666481041544194387"
+    },
+    {
+      "id": "0x5a6a4d54456819380173272a5e8e9b9904bdf41b",
+      "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+      "symbol": "MIM-3LP3CRV-f",
+      "decimals": "18",
+      "totalSupply": "3409823733280083587331523570"
+    },
+    {
+      "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
+      "name": "Convex CRV",
+      "symbol": "cvxCRV",
+      "decimals": "18",
+      "totalSupply": "45185844558963557078365591"
+    },
+    {
+      "id": "0x64eda51d3ad40d56b9dfc5554e06f94e1dd786fd",
+      "name": "Curve.fi tBTC/sbtcCrv",
+      "symbol": "tbtc/sbtcCrv",
+      "decimals": "18",
+      "totalSupply": "3757677400595605143762"
+    },
+    {
+      "id": "0x798d1be841a82a273720ce31c822c61a67a601c3",
+      "name": "Digg",
+      "symbol": "DIGG",
+      "decimals": "9",
+      "totalSupply": "4000000000000"
+    },
+    {
+      "id": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
+      "name": "SushiBar",
+      "symbol": "xSUSHI",
+      "decimals": "18",
+      "totalSupply": "49985885225331724019688362"
+    },
+    {
+      "id": "0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": "18",
+      "totalSupply": "777109683"
+    },
+    {
+      "id": "0xa3bed4e1c75d00fa6f4e5e6922db7261b5e9acd2",
+      "name": "Meta",
+      "symbol": "MTA",
+      "decimals": "18",
+      "totalSupply": "100000000000000000000000000"
+    },
+    {
+      "id": "0xb19059ebb43466c323583928285a49f558e572fd",
+      "name": "Curve.fi hBTC/wBTC",
+      "symbol": "hCRV",
+      "decimals": "18",
+      "totalSupply": "12577572837796719828290"
+    },
+    {
+      "id": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
+      "name": "Curve.fi USD-BTC-ETH",
+      "symbol": "crv3crypto",
+      "decimals": "18",
+      "totalSupply": "69301502862062175946863"
+    },
+    {
+      "id": "0xca3d75ac011bf5ad07a98d02f18225f9bd9a6bdf",
+      "name": "Curve.fi USD-BTC-ETH",
+      "symbol": "crvTricrypto",
+      "decimals": "18",
+      "totalSupply": "90512645864176037463442"
+    },
+    {
+      "id": "0xcd7989894bc033581532d2cd88da5db0a4b12859",
+      "name": "Uniswap V2",
+      "symbol": "UNI-V2",
+      "decimals": "18",
+      "totalSupply": "5499372884713"
+    },
+    {
+      "id": "0xceff51756c56ceffca006cd410b03ffc46dd3a58",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": "18",
+      "totalSupply": "17184760204572304"
+    },
+    {
+      "id": "0xd632f22692fac7611d2aa1c0d552930d43caed3b",
+      "name": "Curve.fi Factory USD Metapool: Frax",
+      "symbol": "FRAX3CRV-f",
+      "decimals": "18",
+      "totalSupply": "2669787893210532979947725199"
+    },
+    {
+      "id": "0xde5331ac4b3630f94853ff322b66407e0d6331e8",
+      "name": "Curve.fi pBTC/sbtcCRV",
+      "symbol": "pBTC/sbtcCRV",
+      "decimals": "18",
+      "totalSupply": "676626618093294229065"
+    },
+    {
+      "id": "0xe86204c4eddd2f70ee00ead6805f917671f56c52",
+      "name": "Uniswap V2",
+      "symbol": "UNI-V2",
+      "decimals": "18",
+      "totalSupply": "577067236"
+    },
+    {
+      "id": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+      "name": "Curve.fi Factory BTC Metapool: ibBTC",
+      "symbol": "ibbtc/sbtcCRV-f",
+      "decimals": "18",
+      "totalSupply": "6093108987423850666"
+    }
+  ]
+}

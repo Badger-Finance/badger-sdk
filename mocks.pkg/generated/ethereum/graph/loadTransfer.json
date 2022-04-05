@@ -1,0 +1,19 @@
+{
+  "transfer": {
+    "id": "0x001bbab32ed595532975cb96d01b26a09368cee1e2d644deee67117ff0b1f41d-92",
+    "timestamp": 1611719002,
+    "sett": {
+      "id": "0x7e7e112a68d8d2e221e11047a72ffc1065c38e1a"
+    },
+    "from": {
+      "id": "0x0000000000000000000000000000000000000000"
+    },
+    "to": {
+      "id": "0xa99e5d5aec0f681f3a2b1dd75e817a31f9b24a0a"
+    },
+    "amount": "17082123294540957",
+    "transaction": {
+      "id": "0x001bbab32ed595532975cb96d01b26a09368cee1e2d644deee67117ff0b1f41d"
+    }
+  }
+}

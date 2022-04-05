@@ -1,0 +1,17 @@
+{
+  "userSettBalance": {
+    "id": "0x000e66639f17982ce2d1d71aafcf443154ed1e08-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
+    "user": {
+      "id": "0x000e66639f17982ce2d1d71aafcf443154ed1e08"
+    },
+    "sett": {
+      "id": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28"
+    },
+    "netDeposit": "-37562787981271544",
+    "netShareDeposit": "0",
+    "grossDeposit": "2999999999999999997",
+    "grossShareDeposit": "2506899311339881323",
+    "grossWithdraw": "3037562787981271541",
+    "grossShareWithdraw": "2506899311339881323"
+  }
+}

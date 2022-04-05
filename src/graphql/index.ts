@@ -26,7 +26,7 @@ export class BadgerGraph {
   }: GraphOptions) {
     this.network = network;
     this.graphUrl =
-      baseURL === DEFAULT_API_URL ? this.resolveClientUrl(baseURL) : baseURL;
+      baseURL === DEFAULT_API_URL ? this.#resolveClientUrl(baseURL) : baseURL;
 
     this.graphClient = new GraphQLClient(this.graphUrl);
     this.graphSDK = getSdk(this.graphClient);
@@ -137,7 +137,7 @@ export class BadgerGraph {
     return this.graphSDK.Controllers(options);
   }
 
-  private resolveClientUrl(baseURL: string) {
+  #resolveClientUrl(baseURL: string) {
     let networkSuffix: string;
     switch (this.network) {
       case Network.Ethereum:

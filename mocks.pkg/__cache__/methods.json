@@ -1,0 +1,49 @@
+{
+  "digg": {
+    "convert": "rPaw3Bjius+2TbDygyaMI412serHXQZR5oYWQwPOE0U="
+  },
+  "ibbtc": {
+    "getPricePerFullShare": "GhN3iEVlhl9TWuMDDllQc6QZzH5+ly/x45fpI/r3yDU="
+  },
+  "registry": {
+    "get": "yrYLWXaBeKsEk01lXyAoZL4SAtIjxdO930YauQL7yqM=",
+    "getProductionVaults": "A3GAzGJQcRHiIdgX2N1kIdASKwv7DcyF/N0XYHSL/eM=",
+    "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs="
+  },
+  "rewards": {
+    "loadActiveSchedules": "j5HeeSPBYfM7zWN+ap/oUPj3GkOIKx7uANnVzT3rEzM=",
+    "loadSchedules": "vNg/u0F/2jJbuNz+rqKq8FKJhtHDnVtbu5GykXDUZbA="
+  },
+  "tokens": {
+    "loadTokens": "S3nLsTRU+tsjtywZI59kuOoW12AE2JiVSDp6qrh6Ilg=",
+    "loadToken": "HF1HFOU9joCdn9050sSjetiT9pz5aGjl8YsbNqIeNQQ=",
+    "loadBalances": "e0MFY6G8uKrt/oFEHfefHKcWIIAZp+zYVFTJ0wz/jtk=",
+    "loadBalance": "PMgJmQM0wuDLSb6DcjVhbUOPjvjhYMsZ0ONwbsj17sY="
+  },
+  "vaults": {
+    "loadVaults": "5Fl8OM4KrIx5c2+f7lc6FwxB5RVSs8otkaUt3ZOXHYQ=",
+    "loadVault": "yQtwAThbNm71LGHGc6At5pnwnKtyEiEosPUVahm1kQw=",
+    "getVaultStrategy": "N+LefA6iimMpyH18EVBtl2LTEqkdoN1mFPRgYfLWWf4="
+  },
+  "graph": {
+    "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
+    "loadSetts": "vbOtbok+ovG9+Z5iTiuVjHmyllm6kZ7kxDEJvc6sfvc=",
+    "loadSettSpanshot": "PIxX31du7rDrjzuD+QwStNYCBc80u7HlKy4uQzRjdrE=",
+    "loadSettSpanshots": "Z/nX9ME+333pZjmjy7tOio9Ah7CaqSXs27H3L6pAaww=",
+    "loadUserSettBalance": "VhkuxWw0IEKy44Vz0lQ5Fw5xKlC9KrHmlBrQYhzmAgE=",
+    "loadUserSettBalances": "nuNKIZqfnPLnwoNHNbZVbvqcKZ4DQWQ0wLJpM+Jhmu8=",
+    "loadSettHarvest": "AQ3MCsuX1e7rjoUTlMLqYGhHAqpJcBuwsV0zUz1Q038=",
+    "loadSettHarvests": "Igx1rDJoU0NYl94aAtQOSXzjwYALsPSpYMv38nBnhaQ=",
+    "loadTransfer": "G1mnFFP6REWqnfJnr7pBaC46WtP/HKr49NYPuX0VUC0=",
+    "loadTransfers": "AiTbDDuwSA193LHSqh781EpD/6ev9HUh2kSvnolOFBw=",
+    "loadUser": "XQQzQuy4mL+CE4h8wZQLZX4h5ns7TX2nXuPMB7MG080=",
+    "loadUsers": "CnUKEF0OSmpPYzSltHMoCk3ASH85b9C4L41ZBfd8AvA=",
+    "loadToken": "Z3k3i0Ns+l5jy/eWwczlvRXfJgk1BcvV5FE81SnzeZE=",
+    "loadTokens": "X33h1DDpPrF9Dvdm8CevGjLFmVLNP1ccF/6u3N15Wgs=",
+    "loadBadgerTreeDistribution": "qKSGS+Lp2p5WvJYbfeFxJTlN5g79tgZyHSMfiUvArP0=",
+    "loadBadgerTreeDistributions": "4SjtrtIXgc/mPRXKVDBKWB+EJ8nMU8WGdl9byALnPP8=",
+    "loadStrategy": "vKBYRfM0hat2eUe/JND9M2DtaNFoaoDLINxDVIDpXZw=",
+    "loadStrategies": "9J+ODBLbPpS1S2OUFIUJ8PIo8WeuvsV1bG3mnDb9OLI=",
+    "loadControllers": "f3S/TKccn6r2/WbRMNUqdHMDV0lZ23HWM//qu17xFzI="
+  }
+}
