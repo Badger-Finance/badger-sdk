@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.0...v1.5.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* add error logging for request failures + remove load schedule query param ([126fc34](https://github.com/Badger-Finance/badger-sdk/commit/126fc34b0c4260d6d949940926a0d07b62cdd0c4))
+
 # [1.5.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.4.1...v1.5.0) (2022-04-05)
 
 
