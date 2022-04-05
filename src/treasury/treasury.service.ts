@@ -3,12 +3,14 @@ import { TokenConfiguration } from '../api';
 import {
   BaseRewardPool__factory,
   Erc20__factory,
+  NonfungiblePositionManager__factory,
   StakedTokenIncentivesController__factory,
   VirtualBalanceRewardPool__factory,
 } from '../contracts';
 import { Service } from '../service';
 import { BalanceSummary } from './interfaces/balanceSummary';
-
+import { V3Postion } from './interfaces/V3Position';
+import { postions } from './contracts/postions/NonfungiblePositionManager';
 export class TreasuryService extends Service {
   async loadHistoricBalance(
     tokenAddress: string,
@@ -24,24 +26,88 @@ export class TreasuryService extends Service {
       return BigNumber.from(0);
     }
   }
+  async loadV3Rewards(address: string): Promise<[BigNumber, BigNumber]> {
+    const postionManagerAddress = '0xC36442b4a4522E871399CD717aBDD847Ab11FE88';
+    console.log(address);
+    const MAX_UINT128 = BigNumber.from(2).pow(128).sub(1);
+    const checksumAddress = ethers.utils.getAddress(address);
+    const V3NFT = NonfungiblePositionManager__factory.connect(
+      postionManagerAddress,
+      this.provider,
+    );
+    const bal = await V3NFT.balanceOf(checksumAddress);
+    console.log(bal.toString());
+    const tokenIDs: Array<BigNumber> = [];
+
+    for (let index = 0; index < Number(bal.toString()); index++) {
+      const tokenIDpromise = await V3NFT.tokenOfOwnerByIndex(
+        checksumAddress,
+        index,
+      );
+      tokenIDs.push(tokenIDpromise);
+    }
+    const IDs = await Promise.all(tokenIDs);
+    console.log('IDS', IDs[0]);
+    const positions: Array<Promise<postions>> = [];
+    for (const ID of IDs) {
+      const positionPromise = V3NFT.positions(ID);
+      positions.push(positionPromise);
+    }
+    const positionsArray = await Promise.all(positions);
+    console.log('positionsArray', positionsArray);
+    // return bal;
+
+    /*
+tokensOwed0 += uint128(
+  FullMath.mulDiv(
+      feeGrowthInside0LastX128 - position.feeGrowthInside0LastX128,
+      position.liquidity,
+      FixedPoint128.Q128
+  )
+);
+*/
+
+    // for (const postion of positionsArray) {
+    //   //const tokensOwed0 = (postion.feeGrowthInside0LastX128) postion.liquidity / MAX_UINT128;
+    const postion = '167046';
+    const response = V3NFT.callStatic.collect(
+      {
+        tokenId: postion,
+        recipient: address, // some tokens might fail if transferred to address(0)
+        amount0Max: MAX_UINT128,
+        amount1Max: MAX_UINT128,
+      },
+      { from: address }, // need to simulate the call as the owner
+    );
+    console.log(response);
+    // }
+    return response;
+  }
+
   async loadAaveRewards(
     holderAddress: string,
     blockTag?: CallOverrides,
-  ): Promise<BigNumber> {
+  ): Promise<BalanceSummary> {
     if (blockTag === undefined) {
       blockTag = { blockTag: 'latest' };
     }
     let aaveAddress = '0xd784927Ff2f95ba542BfC824c8a8a98F3495f6b5';
+    let tokenAddress = '0xbcca60bb61934080951369a648fb03df4f96263c';
     aaveAddress = ethers.utils.getAddress(aaveAddress);
+    tokenAddress = ethers.utils.getAddress(tokenAddress);
     const aave = StakedTokenIncentivesController__factory.connect(
       aaveAddress,
       this.provider,
     );
-    // const rewards: BalanceSummary[] = [];
-    const unclaimedRewards = await aave.getUserUnclaimedRewards(holderAddress);
-    console.log('test');
-    console.log('unclaimedRewards', unclaimedRewards);
-    return unclaimedRewards;
+    const [balance, rewardsBalance] = await Promise.all([
+      aave.getUserUnclaimedRewards(holderAddress),
+      aave.getRewardsBalance([tokenAddress], holderAddress),
+    ]);
+    if (balance.gt(0)) {
+      return { tokenAddress, holderAddress, balance };
+    } else {
+      return { tokenAddress, holderAddress, balance: rewardsBalance };
+    }
   }
   async loadConvexRewards(
     rewardAddress: string,
