@@ -48,3 +48,5 @@ To exlude service method from querying and parsing globaly add it's name to the 
 ```shell
 ./mocks.pkg/src/constants.ts
 ```
+
+To ignore a method on a specific chain, provide `ignore: true` as value of methods object in chain methods args cfg.

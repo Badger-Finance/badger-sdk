@@ -28,3 +28,31 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  build-mocks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        working-directory: ./mocks.pkg
+        run: yarn install --frozen-lockfile
+      - name: Build
+        env:
+          ETHEREUM_RPC_NODE: ${{ secrets.ETHEREUM_RPC_NODE }}
+          POLYGON_RPC_NODE: ${{ secrets.POLYGON_RPC_NODE }}
+          ARBITRUM_RPC_NODE: ${{ secrets.ARBITRUM_RPC_NODE }}
+          BINANCE_RPC_NODE: ${{ secrets.BINANCE_RPC_NODE }}
+          AVALANCHE_RPC_NODE: ${{ secrets.AVALANCHE_RPC_NODE }}
+          FANTOM_RPC_NODE: ${{ secrets.FANTOM_RPC_NODE }}
+        working-directory: ./mocks.pkg
+        run: yarn mocks:gen
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: ./mocks.pkg
+        run: yarn semantic-release
