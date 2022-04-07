@@ -1,4 +1,6 @@
 .github
 .husky
+.env
+.env-example
 **/*.spec.js
 **/*.spec.d.ts
