@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SdkServices } from '../enums';
 import { RelevantNetworks } from '../types';
 

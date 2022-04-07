@@ -30,7 +30,7 @@ export class MethodsCache {
   readonly cacheFileName: string = CACHE_FILE_NAME;
   readonly methodsToSkip: string[] = methodsToSkip;
 
-  missMatchMethodsNum: number = 0;
+  missMatchMethodsNum = 0;
 
   private oldCacheRecords: MethodsCacheRecordsMap = cacheRecords;
   private readonly newCacheRecords: MethodsCacheRecordsMap = {};
@@ -117,6 +117,7 @@ export class MethodsCache {
             acc[method] = crypto
               .createHash('sha256')
               .update(
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore Here are children protos of Services
                 this.serviceClsMap[service][method].toString(),
               )

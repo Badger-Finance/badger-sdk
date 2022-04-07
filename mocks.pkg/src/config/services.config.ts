@@ -32,7 +32,7 @@ export class ServicesConfig {
     return Object.values(SdkServices);
   }
 
-  getServicesMethods(service: SdkServices) {
+  getServicesMethods() {
     return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.keys(this.servicesArgsMap[service]);
       return acc;
