@@ -18,6 +18,12 @@ jobs:
         run: yarn build
       - name: Lint
         run: yarn lint
+      - name: Install mocks.pkg dependencies
+        working-directory: ./mocks.pkg
+        run: yarn install --frozen-lockfile
+      - name: Lint Mocks Pkg
+        working-directory: ./mocks.pkg
+        run: yarn lint
       - uses: artiomtr/jest-coverage-report-action@v2.0-rc.6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

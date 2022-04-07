@@ -8,7 +8,7 @@ export class BaseFsIo {
     this.rootDir = rootDir;
   }
 
-  write<T>(fileName: string, data: T, path: string = '') {
+  write<T>(fileName: string, data: T, path = '') {
     const fullPath = resolve(__dirname, `../../${this.rootDir}`, path);
 
     if (!existsSync(fullPath)) {

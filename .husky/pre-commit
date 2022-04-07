@@ -5,5 +5,6 @@ if [[ $CI != true ]]; then
   yarn lint
   yarn pretty-quick --staged
   cd ./mocks.pkg
+  yarn lint
   yarn mocks:check
 fi;
