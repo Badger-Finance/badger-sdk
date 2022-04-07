@@ -10,7 +10,7 @@ import { MethodsCache } from '../cache';
 import { ServicesMethodsList } from '../config/struct.types.config';
 import { SdkServices } from '../enums';
 import { Network } from '../../../src';
-import { BadgerSDK } from '../../../lib';
+import { BadgerSDK } from '../../../src';
 import { ROOT_DIR } from './constants.processor';
 import { BaseFsIo } from '../fs.io/base.fs.io';
 import mocksPkgJSON from '../../package.json';
@@ -93,6 +93,7 @@ export class MocksProcessor {
             `Loading and writing chain:[${network}] service:[${service}] method:[${methodName}] \n`,
             `With args: ${JSON.stringify(args, null, 2)}`,
           );
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore It`s rly hard to type this, and even if we do
           // there be a lot of manual work, need to avoid that
           const response = await sdk[service][methodName](...args);
