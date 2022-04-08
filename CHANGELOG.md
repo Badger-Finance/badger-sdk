@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.2...v1.5.3) (2022-04-08)
+
+
+### Bug Fixes
+
+* semantic release for mocks.pkg ([166fb6d](https://github.com/Badger-Finance/badger-sdk/commit/166fb6da6146b44d392d0300bc36e28d9173a89e))
+
 ## [1.5.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.0...v1.5.1) (2022-04-05)
 
 
