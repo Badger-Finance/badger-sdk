@@ -8,8 +8,12 @@ export class BaseFsIo {
     this.rootDir = rootDir;
   }
 
-  write<T>(fileName: string, data: T, path = '') {
-    const fullPath = resolve(__dirname, `../../${this.rootDir}`, path);
+  write<T>(fileName: string, data: T, path = '', rootDir = '') {
+    const fullPath = resolve(
+      __dirname,
+      `../../${rootDir || this.rootDir}`,
+      path,
+    );
 
     if (!existsSync(fullPath)) {
       mkdirSync(fullPath, { recursive: true });
