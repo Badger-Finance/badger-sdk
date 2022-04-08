@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import {
   ProcessorClsArgs,
   ProcessorNetworksConfigMap,
@@ -12,6 +13,7 @@ import { SdkServices } from '../enums';
 import { Network } from '../../../src';
 import { BadgerSDK } from '../../../src';
 import { ROOT_DIR } from './constants.processor';
+import { ROOT_DIR as CACHE_ROOT_DIR } from '../cache/constants.cache';
 import { BaseFsIo } from '../fs.io/base.fs.io';
 import mocksPkgJSON from '../../package.json';
 import sdkPkgJSON from '../../../package.json';
@@ -188,6 +190,17 @@ export class MocksProcessor {
         2,
       )}
     `);
+
+    const cacheMissMatch = this.methodsCache.getMissMatch();
+
+    if (cacheMissMatch.length > 0) {
+      this.fsIo.write<{ version: string }>(
+        'trigger',
+        { version: crypto.randomBytes(20).toString('hex') },
+        '',
+        CACHE_ROOT_DIR,
+      );
+    }
 
     console.log('Mock generator guard action finished');
   }
