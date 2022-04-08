@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.6...v1.5.7) (2022-04-08)
+
+
+### Bug Fixes
+
+* include dirs to npm publish for mocks.pkg ([c04ae17](https://github.com/Badger-Finance/badger-sdk/commit/c04ae1704bd196926ca0540422789299c13552f5))
+
 ## [1.5.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.5...v1.5.6) (2022-04-08)
 
 
