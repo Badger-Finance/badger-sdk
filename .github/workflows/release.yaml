@@ -34,7 +34,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          fetch-depth: 3
           persist-credentials: false
+        run: git pull
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
