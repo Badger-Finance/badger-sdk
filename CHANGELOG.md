@@ -1,3 +1,11 @@
+## [1.5.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.3...v1.5.4) (2022-04-08)
+
+
+### Bug Fixes
+
+* git flow for build-mocks ([67e8bc0](https://github.com/Badger-Finance/badger-sdk/commit/67e8bc09f3f8e39f41823cd0d828577ae58ceec9))
+* update main branch on build-mocks ([7c0341a](https://github.com/Badger-Finance/badger-sdk/commit/7c0341a618c94e987f08e4805b9f0baa5b698367))
+
 ## [1.5.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.2...v1.5.3) (2022-04-08)
 
 
