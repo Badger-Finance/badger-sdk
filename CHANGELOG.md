@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.4...v1.5.5) (2022-04-08)
+
+
+### Bug Fixes
+
+* degrade semantic relese bot, for old monorepo plugin ([c82caf4](https://github.com/Badger-Finance/badger-sdk/commit/c82caf44940cfe16c31ebddbbebcb3b55e6d4511))
+
 ## [1.5.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.3...v1.5.4) (2022-04-08)
 
 
