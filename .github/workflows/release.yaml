@@ -63,4 +63,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         working-directory: ./mocks.pkg
-        run: yarn semantic-release -e semantic-release-monorepo
+        run: yarn semantic-release --tag-format sdk-mocks-v\${version}
