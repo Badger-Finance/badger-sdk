@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.5...sdk-mocks-v1.5.6) (2022-04-08)
+
+
+### Bug Fixes
+
+* sync sdk and sdk.mocks versions ([c603bc7](https://github.com/Badger-Finance/badger-sdk/commit/c603bc78c8cd2646f2437f851b18e77b3adf918b))
+
 # 1.0.0 (2022-04-08)
 
 
