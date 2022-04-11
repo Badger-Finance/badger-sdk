@@ -6,13 +6,15 @@ import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
 
+export const DIGG_ADDRESS = '0x798d1be841a82a273720ce31c822c61a67a601c3';
+
 export class DiggService extends Service {
   private digg?: Digg;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
     if (this.config.network === Network.Ethereum) {
-      this.digg = Digg__factory.connect(this.config.tokens.DIGG, this.provider);
+      this.digg = Digg__factory.connect(DIGG_ADDRESS, this.provider);
     }
   }
 

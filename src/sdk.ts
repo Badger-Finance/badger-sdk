@@ -7,8 +7,6 @@ import { Networkish } from '@ethersproject/providers';
 import { APIOptions, BadgerAPI } from './api';
 import { BadgerGraph } from './graphql';
 
-import { NetworkConfig } from './config/network/network.config';
-
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
@@ -16,16 +14,13 @@ import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
 
-import { SDKProvider } from './config/types/sdk-provider';
-
-import { SUPPORTED_NETWORKS } from './config/constants';
+import { getNetworkConfig, NetworkConfig, SDKProvider } from './config';
 
 export interface SDKOptions extends APIOptions {
   provider: SDKProvider | string;
 }
 
 export class BadgerSDK {
-  private static initialized = false;
   private loading: Promise<void>;
 
   public address?: string;
@@ -43,19 +38,11 @@ export class BadgerSDK {
   readonly vaults: VaultsService;
 
   constructor({ network, provider, baseURL }: SDKOptions) {
-    if (!BadgerSDK.initialized) {
-      for (const config of SUPPORTED_NETWORKS) {
-        NetworkConfig.register(config);
-      }
-      BadgerSDK.initialized = true;
-    }
-
     const sdkProvider = BadgerSDK.getSdkProvider(provider);
-
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
     this.loading = this.initialize();
-    this.config = NetworkConfig.getConfig(network);
+    this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
       network: this.config.network,
       baseURL,
@@ -85,7 +72,7 @@ export class BadgerSDK {
   }
 
   updateNetwork(network: Networkish) {
-    this.config = NetworkConfig.getConfig(network);
+    this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
       network: this.config.network,
       baseURL: this.api.baseURL,
@@ -100,6 +87,7 @@ export class BadgerSDK {
 
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
+    this.loading = this.initialize();
   }
 
   private static getSdkProvider(provider: SDKProvider | string): SDKProvider {
