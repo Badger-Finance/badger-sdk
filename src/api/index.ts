@@ -8,16 +8,14 @@ import {
 } from './types';
 import * as i from './interfaces';
 import { Networkish } from '@ethersproject/networks';
-import { NetworkConfig } from '../config/network/network.config';
-import { SUPPORTED_NETWORKS } from '../config/constants';
 import { Currency } from './enums';
 import { ApiError } from './api.error';
 import { EmissionSchedule } from '../rewards';
+import { getNetworkConfig } from '../config/network/network.config';
 
 export const DEFAULT_API_URL = 'https://api.badger.com/v2';
 
 export class BadgerAPI {
-  private static initialized = false;
   private readonly client: AxiosInstance;
   private network: Network;
   public baseURL: string;
@@ -26,19 +24,12 @@ export class BadgerAPI {
     network = Network.Ethereum,
     baseURL = DEFAULT_API_URL,
   }: i.APIOptions) {
-    if (!BadgerAPI.initialized) {
-      for (const config of SUPPORTED_NETWORKS) {
-        NetworkConfig.register(config);
-      }
-      BadgerAPI.initialized = true;
-    }
-
     this.baseURL = baseURL;
     this.client = axios.create({
       baseURL,
     });
     const lookupNetwork = this.isLocal(network) ? Network.Ethereum : network;
-    this.network = NetworkConfig.getConfig(lookupNetwork).network;
+    this.network = getNetworkConfig(lookupNetwork).network;
   }
 
   loadPrices(

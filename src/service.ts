@@ -1,5 +1,4 @@
-import { BadgerSDK } from '.';
-import { NetworkConfig } from './config/network/network.config';
+import { BadgerSDK, NetworkConfig } from '.';
 import { providers } from '@0xsequence/multicall';
 
 export abstract class Service {

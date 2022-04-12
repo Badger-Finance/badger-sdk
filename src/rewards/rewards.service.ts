@@ -10,6 +10,7 @@ import { EmissionSchedule } from './interfaces/emission-schedule.interface';
 import { Network } from '../config/enums/network.enum';
 import { formatBalance } from '../tokens/tokens.utils';
 import { ClaimOptions } from './interfaces/claim-options.interface';
+import { DIGG_ADDRESS } from '../digg/digg.service';
 
 export class RewardsService extends Service {
   private loading?: Promise<void>;
@@ -50,7 +51,7 @@ export class RewardsService extends Service {
   }
 
   async loadSchedules(beneficiary: string): Promise<EmissionSchedule[]> {
-    const { network, tokens } = this.config;
+    const { network } = this.config;
     if (!this.rewardsLogger) {
       return [];
     }
@@ -62,7 +63,7 @@ export class RewardsService extends Service {
         const { token, totalAmount, start, end, duration } = schedule;
         const tokenInfo = await this.sdk.tokens.loadToken(token);
         let amount = formatBalance(totalAmount, tokenInfo.decimals);
-        if (network === Network.Ethereum && token === tokens.DIGG) {
+        if (network === Network.Ethereum && token === DIGG_ADDRESS) {
           amount = await this.sdk.digg.convert(totalAmount);
         }
 
