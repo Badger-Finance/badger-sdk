@@ -46,17 +46,13 @@ describe('vaults.service', () => {
 
     jest
       .spyOn(Controller__factory, 'connect')
-      .mockImplementation((_a, _p) => controller);
-    jest.spyOn(Vault__factory, 'connect').mockImplementation((_a, _p) => vault);
-    jest
-      .spyOn(VaultV15__factory, 'connect')
-      .mockImplementation((_a, _p) => vaultV15);
-    jest
-      .spyOn(Strategy__factory, 'connect')
-      .mockImplementation((_a, _p) => strategy);
+      .mockImplementation(() => controller);
+    jest.spyOn(Vault__factory, 'connect').mockImplementation(() => vault);
+    jest.spyOn(VaultV15__factory, 'connect').mockImplementation(() => vaultV15);
+    jest.spyOn(Strategy__factory, 'connect').mockImplementation(() => strategy);
     jest
       .spyOn(StrategyV15__factory, 'connect')
-      .mockImplementation((_a, _p) => strategyV15);
+      .mockImplementation(() => strategyV15);
 
     // Let the SDK Prepare
     await sdk.ready();
