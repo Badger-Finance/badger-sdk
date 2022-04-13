@@ -145,7 +145,7 @@ export class VaultsService extends Service {
   }: GetVaultStrategyOptions): Promise<string> {
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
-      return await vault.strategy();
+      return vault.strategy();
     }
     const vault = Vault__factory.connect(address, this.sdk.provider);
     const controller = Controller__factory.connect(
