@@ -1,3 +1,10 @@
+## [1.5.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.7...v1.5.8) (2022-04-13)
+
+
+### Bug Fixes
+
+* add full fixtures ([ac79b6f](https://github.com/Badger-Finance/badger-sdk/commit/ac79b6f1e6d377635f3db9b1245796aa743a7013))
+
 ## [1.5.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.6...v1.5.7) (2022-04-08)
 
 
