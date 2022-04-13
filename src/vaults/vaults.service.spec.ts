@@ -1,10 +1,11 @@
 import { BadgerSDK } from '../sdk';
 import { VaultVersion } from './enums';
 import { Network } from '../config';
-import { VoidSigner } from 'ethers';
 import {
   Controller,
   Controller__factory,
+  RegistryService,
+  RewardsService,
   Strategy,
   StrategyV15,
   StrategyV15__factory,
@@ -18,14 +19,12 @@ import {
 import { any, mock, MockProxy } from 'jest-mock-extended';
 import { BigNumber } from '@ethersproject/bignumber';
 import { BaseStrategy } from '../contracts/StrategyV15';
+import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 
 describe('vaults.service', () => {
   const TEST_ADDR = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
-  const sdk: BadgerSDK = new BadgerSDK({
-    network: Network.Fantom,
-    provider: 'https://rpc.ftm.tools/',
-  });
-
+  
+  let sdk: BadgerSDK;
   let controller: MockProxy<Controller>;
   let vault: MockProxy<Vault>;
   let vaultV15: MockProxy<VaultV15>;
@@ -34,9 +33,18 @@ describe('vaults.service', () => {
 
   beforeEach(async () => {
     // Setup Jest Mocks
-    jest
-      .spyOn(VoidSigner.prototype, 'getAddress')
-      .mockImplementation(async () => TEST_ADDR);
+    const mockSigner = mock<JsonRpcSigner>();
+    mockSigner.getAddress.calledWith().mockImplementation(async () => TEST_ADDR);
+    const mockProvider = mock<JsonRpcProvider>();
+    mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
+
+    sdk = new BadgerSDK({
+      network: Network.Fantom,
+      provider: mockProvider,
+    });
+
+    jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
+    jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
 
     controller = mock<Controller>();
     vault = mock<Vault>();
