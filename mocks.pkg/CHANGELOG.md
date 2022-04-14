@@ -1,3 +1,11 @@
+## [1.5.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.7...sdk-mocks-v1.5.8) (2022-04-14)
+
+
+### Bug Fixes
+
+* add full fixtures ([ac79b6f](https://github.com/Badger-Finance/badger-sdk/commit/ac79b6f1e6d377635f3db9b1245796aa743a7013))
+* vaults list harvest and deployed at script ([ce52e61](https://github.com/Badger-Finance/badger-sdk/commit/ce52e61e46f5c608059c19edcb3ec5c17273b187))
+
 ## [1.5.7](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.6...sdk-mocks-v1.5.7) (2022-04-08)
 
 
