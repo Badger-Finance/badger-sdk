@@ -1,16 +1,23 @@
 import { VaultHarvestData, VaultPerformanceEvent, VaultVersion } from '.';
-import { keyBy, VaultState } from '..';
+import { keyBy, Network, VaultState } from '..';
 import { TimeRangeOptions } from '../common';
 import { VaultV15 } from '../contracts';
 import {
   HarvestEvent,
+  HarvestEventFilter,
   Strategy,
   TreeDistributionEvent,
 } from '../contracts/Strategy';
 import {
   HarvestedEvent,
+  HarvestedEventFilter,
   TreeDistributionEvent as TreeDistributionEventV15,
+  TreeDistributionEventFilter,
 } from '../contracts/VaultV15';
+import { VaultDeployedAtMap } from './interfaces/vault-deployed-at.interface';
+import vaultDeployedAtMap from './data/deployed.at.json';
+import { chunkQueryFilter } from '../utils/chunk-query-filter';
+import { RangeOptions } from '../common/interfaces/range-options.interface';
 
 /**
  * Parse Vault v1 harvest related events.
@@ -152,7 +159,7 @@ export function timestampInRange(
   return timestamp >= lowerBound && timestamp <= upperBound;
 }
 
-export async function loadVaultPerformanceEvents<T extends TimeRangeOptions>(
+export async function loadVaultPerformanceEvents<T extends RangeOptions>(
   strategy: Strategy,
   options: T,
 ): Promise<{ data: VaultHarvestData[] }> {
@@ -161,8 +168,17 @@ export async function loadVaultPerformanceEvents<T extends TimeRangeOptions>(
 
   // Get harvest and tree distributions for given time range filter
   const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
-    strategy.queryFilter(harvestFilter),
-    strategy.queryFilter(treeDistributionFilter),
+    chunkQueryFilter<Strategy, HarvestEventFilter, HarvestEvent>(
+      strategy,
+      harvestFilter,
+      options.startBlock,
+      options.endBlock,
+    ),
+    chunkQueryFilter<
+      Strategy,
+      TreeDistributionEventFilter,
+      TreeDistributionEvent
+    >(strategy, treeDistributionFilter, options.startBlock, options.endBlock),
   ]);
 
   const { harvests, distributions } = await parseHarvestEvents(
@@ -173,7 +189,7 @@ export async function loadVaultPerformanceEvents<T extends TimeRangeOptions>(
   return evaluateEvents(harvests, distributions, options);
 }
 
-export async function loadVaultV15PerformanceEvents<T extends TimeRangeOptions>(
+export async function loadVaultV15PerformanceEvents<T extends RangeOptions>(
   vault: VaultV15,
   options: T,
 ): Promise<{ data: VaultHarvestData[] }> {
@@ -182,8 +198,17 @@ export async function loadVaultV15PerformanceEvents<T extends TimeRangeOptions>(
 
   // Get harvest and tree distributions for given time range filter
   const [allHarvestEvents, allTreeDistributionEvents] = await Promise.all([
-    vault.queryFilter(harvestFilter),
-    vault.queryFilter(treeDistributionFilter),
+    chunkQueryFilter<VaultV15, HarvestedEventFilter, HarvestedEvent>(
+      vault,
+      harvestFilter,
+      options.startBlock,
+      options.endBlock,
+    ),
+    chunkQueryFilter<
+      VaultV15,
+      TreeDistributionEventFilter,
+      TreeDistributionEventV15
+    >(vault, treeDistributionFilter, options.startBlock, options.endBlock),
   ]);
 
   const { harvests, distributions } = await parseHarvestV15Events(
@@ -240,4 +265,24 @@ export function evaluateEvents<T extends TimeRangeOptions>(
   return {
     data,
   };
+}
+
+export function vaultBlockDeployedAt(
+  address: string,
+  network: Network,
+): number {
+  const currentVaultDeployedAtMap = (<VaultDeployedAtMap>vaultDeployedAtMap)[
+    <string>network
+  ];
+
+  if (Object.keys(currentVaultDeployedAtMap).length === 0) return 0;
+
+  let blockDeployedAt = currentVaultDeployedAtMap[address];
+
+  // if we can't find deployed at block, then take the lowest value
+  if (!blockDeployedAt) {
+    blockDeployedAt = Math.min(...Object.values(currentVaultDeployedAtMap));
+  }
+
+  return blockDeployedAt;
 }

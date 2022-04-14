@@ -26,7 +26,9 @@ import {
 import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
+  vaultBlockDeployedAt,
 } from './vaults.utils';
+import { RangeOptions } from '../common/interfaces/range-options.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -126,17 +128,28 @@ export class VaultsService extends Service {
   async listHarvests(
     options: ListHarvestOptions,
   ): Promise<{ data: VaultHarvestData[] }> {
-    const { address, version = VaultVersion.v1 } = options;
+    const {
+      address,
+      version = VaultVersion.v1,
+      startBlock,
+      endBlock,
+    } = options;
+
+    const vaultDeployedAt = vaultBlockDeployedAt(address, this.config.network);
+
+    if (!startBlock) options.startBlock = vaultDeployedAt;
+    if (!endBlock) options.endBlock = await this.sdk.provider.getBlockNumber();
+
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.sdk.provider);
-      return loadVaultV15PerformanceEvents(vault, options);
+      return loadVaultV15PerformanceEvents(vault, <RangeOptions>options);
     }
     const strategyAddress = await this.getVaultStrategy({ address, version });
     const strategy = Strategy__factory.connect(
       strategyAddress,
       this.sdk.provider,
     );
-    return loadVaultPerformanceEvents(strategy, options);
+    return loadVaultPerformanceEvents(strategy, <RangeOptions>options);
   }
 
   async getVaultStrategy({

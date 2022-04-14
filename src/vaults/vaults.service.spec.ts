@@ -23,7 +23,7 @@ import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 
 describe('vaults.service', () => {
   const TEST_ADDR = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
-  
+
   let sdk: BadgerSDK;
   let controller: MockProxy<Controller>;
   let vault: MockProxy<Vault>;

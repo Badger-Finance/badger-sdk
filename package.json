@@ -20,8 +20,12 @@
     "codegen:contracts": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
     "format": "pretty-quick",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --runInBand --detectOpenHandles",
-    "prepublishOnly": "yarn run build"
+    "test": "jest --detectOpenHandles --runInBand",
+    "test:upd": "yarn test -u",
+    "test:path": "yarn test --no-cache --testPathPattern",
+    "test:clean": "jest --clearCache",
+    "prepublishOnly": "yarn run build",
+    "scripts:vaults:da": "ts-node ./scripts/vaults/deployed.at.ts"
   },
   "dependencies": {
     "@0xsequence/indexer": "0.36.8",
