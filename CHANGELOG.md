@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.8...v1.5.9) (2022-04-14)
+
+
+### Bug Fixes
+
+* vaults list harvest and deployed at script ([ce52e61](https://github.com/Badger-Finance/badger-sdk/commit/ce52e61e46f5c608059c19edcb3ec5c17273b187))
+
 ## [1.5.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.5.7...v1.5.8) (2022-04-13)
 
 
