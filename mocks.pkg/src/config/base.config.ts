@@ -34,11 +34,33 @@ export const vaults = {
   },
 };
 
+export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
 
 export const lastIbBTCBlock = 14504479;
 
 export const baseArgsConfig: ServicesArgsConfig = {
+  [SdkServices.Api]: {
+    loadPrices: { args: [] },
+    loadRewardTree: { args: [badgerWhale] },
+    loadVaults: { args: [] },
+    loadVault: { args: [vaults.BCVX.addr] },
+    loadSetts: { args: [] },
+    // TODO: enable once fix is in 
+    loadSett: { args: [vaults.BCVX.addr], ignore: true },
+    loadAccount: { args: [badgerWhale] },
+    loadTokens: { args: [] },
+    loadProof: { args: [badgerWhale] },
+    loadGasPrices: { args: [] },
+    loadProtocolMetrics: { args: [] },
+    loadProtocolSummary: { args: [] },
+    loadLeaderboardSummary: { args: [] },
+    loadCharts: { args: [{ vault: vaults.BCVX.addr }] },
+    loadSchedules: { args: [] },
+    loadSchedule: { args: [vaults.BCVX.addr] },
+    get: { ignore: true },
+    isLocal: { ignore: true },
+  },
   [SdkServices.Vaults]: {
     loadVaults: { args: [] },
     loadVault: { args: [{ address: vaults.BCVX.addr }] },

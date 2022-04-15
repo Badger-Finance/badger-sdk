@@ -1,0 +1,2493 @@
+[
+  {
+    "name": "renBTC/wBTC/sBTC",
+    "asset": "crvRenWSBTC",
+    "vaultAsset": "bcrvRenWSBTC",
+    "state": "discontinued",
+    "underlyingToken": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+    "vaultToken": "0xd04c48A53c111300aD41190D63681ed3dAd998eC",
+    "value": 3962384.73,
+    "available": 0,
+    "balance": 97.40339375996224,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.014745586208039,
+    "tokens": [
+      {
+        "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+        "name": "renBTC",
+        "symbol": "renBTC",
+        "decimals": 8,
+        "balance": 35.17562574498779,
+        "value": 1415256.1262238387
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 28.367232417743665,
+        "value": 1144589.4608235392
+      },
+      {
+        "address": "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6",
+        "name": "Synth sBTC",
+        "symbol": "sBTC",
+        "decimals": 18,
+        "balance": 34.90619079776092,
+        "value": 1402705.2772080228
+      }
+    ],
+    "apr": 0.5301858883316024,
+    "apy": 0.5301858883316024,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5301858883316024,
+        "boostable": false,
+        "minApr": 0.5301858883316024,
+        "maxApr": 0.5301858883316024
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5301858883316024,
+        "boostable": false,
+        "minApr": 0.5301858883316024,
+        "maxApr": 0.5301858883316024
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xCce0D2d1Eb2310F7e67e128bcFE3CE870A3D3a3d",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1647374739,
+    "version": "v1"
+  },
+  {
+    "name": "renBTC/wBTC",
+    "asset": "crvRenWBTC",
+    "vaultAsset": "bcrvRenWBTC",
+    "state": "open",
+    "underlyingToken": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+    "vaultToken": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
+    "value": 138203917.1,
+    "available": 0.000098188532027978,
+    "balance": 3368.5375249575964,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.013925348501619,
+    "tokens": [
+      {
+        "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+        "name": "renBTC",
+        "symbol": "renBTC",
+        "decimals": 8,
+        "balance": 2573.788701698123,
+        "value": 103553814.62412229
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 858.1434908612118,
+        "value": 34625231.71275903
+      }
+    ],
+    "apr": 0.7760871702334484,
+    "apy": 0.7909768677177028,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.34322194257137006,
+        "boostable": false,
+        "minApr": 0.34322194257137006,
+        "maxApr": 0.34322194257137006
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.14338170129103114,
+        "boostable": false,
+        "minApr": 0.14338170129103114,
+        "maxApr": 0.14338170129103114
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.2894835263710472,
+        "boostable": false,
+        "minApr": 0.2894835263710472,
+        "maxApr": 0.2894835263710472
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.34322194257137006,
+        "boostable": false,
+        "minApr": 0.34322194257137006,
+        "maxApr": 0.34322194257137006
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.14338170129103114,
+        "boostable": false,
+        "minApr": 0.14338170129103114,
+        "maxApr": 0.14338170129103114
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.2894835263710472,
+        "boostable": false,
+        "minApr": 0.2894835263710472,
+        "maxApr": 0.2894835263710472
+      },
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.01488969748425442,
+        "boostable": false,
+        "minApr": 0.01488969748425442,
+        "maxApr": 0.01488969748425442
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x61e16b46F74aEd8f9c2Ec6CB2dCb2258Bdfc7071",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649714705,
+    "version": "v1"
+  },
+  {
+    "name": "tBTC/sBTC",
+    "asset": "tbtc/sbtcCrv",
+    "vaultAsset": "btbtc/sbtcCrv",
+    "state": "discontinued",
+    "underlyingToken": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
+    "vaultToken": "0xb9D076fDe463dbc9f915E5392F807315Bf940334",
+    "value": 1361769.29,
+    "available": 0,
+    "balance": 34.050400500527154,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0298481070229977,
+    "tokens": [
+      {
+        "address": "0x8dAEBADE922dF735c38C80C7eBD708Af50815fAa",
+        "name": "tBTC",
+        "symbol": "TBTC",
+        "decimals": 18,
+        "balance": 7.537967491133392,
+        "value": 284490.43108286534
+      },
+      {
+        "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": 18,
+        "balance": 26.4826095745235,
+        "value": 1077316.545315235
+      }
+    ],
+    "apr": 1.0495442309162273,
+    "apy": 1.0717455103217193,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.4314971555368974,
+        "boostable": false,
+        "minApr": 0.4314971555368974,
+        "maxApr": 0.4314971555368974
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.40386262777108967,
+        "boostable": false,
+        "minApr": 0.40386262777108967,
+        "maxApr": 0.40386262777108967
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.21418444760824012,
+        "boostable": false,
+        "minApr": 0.21418444760824012,
+        "maxApr": 0.21418444760824012
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.4314971555368974,
+        "boostable": false,
+        "minApr": 0.4314971555368974,
+        "maxApr": 0.4314971555368974
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.40386262777108967,
+        "boostable": false,
+        "minApr": 0.40386262777108967,
+        "maxApr": 0.40386262777108967
+      },
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.022201279405492123,
+        "boostable": false,
+        "minApr": 0.022201279405492123,
+        "maxApr": 0.022201279405492123
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.21418444760824012,
+        "boostable": false,
+        "minApr": 0.21418444760824012,
+        "maxApr": 0.21418444760824012
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xAB73Ec65a1Ef5a2e5b56D5d6F36Bee4B2A1D3FFb",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649367401,
+    "version": "v1"
+  },
+  {
+    "name": "renBTC/wBTC",
+    "asset": "crvRenWBTC",
+    "vaultAsset": "bSupercrvRenWBTC",
+    "state": "discontinued",
+    "underlyingToken": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+    "vaultToken": "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87",
+    "value": 164855.52,
+    "available": 0,
+    "balance": 4.018135118844163,
+    "protocol": "Curve",
+    "pricePerFullShare": 1.0275114476264393,
+    "tokens": [
+      {
+        "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+        "name": "renBTC",
+        "symbol": "renBTC",
+        "decimals": 8,
+        "balance": 3.0701248521515985,
+        "value": 123523.40330146742
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 1.0236301279381965,
+        "value": 41302.45203217829
+      }
+    ],
+    "apr": 0.34322194257137006,
+    "apy": 0.34322194257137006,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.34322194257137006,
+        "boostable": false,
+        "minApr": 0.34322194257137006,
+        "maxApr": 0.34322194257137006
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.34322194257137006,
+        "boostable": false,
+        "minApr": 0.34322194257137006,
+        "maxApr": 0.34322194257137006
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xaaE82E3c89e15E6F26F60724f115d5012363e030",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1628802745,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/Badger",
+    "asset": "UNI-V2",
+    "vaultAsset": "bUNI-V2",
+    "state": "discontinued",
+    "underlyingToken": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
+    "vaultToken": "0x235c9e24D3FB2FAFd58a2E49D454Fdcd2DBf7FF1",
+    "value": 2050056.39,
+    "available": 0,
+    "balance": 0.013821190884375643,
+    "protocol": "Uniswap",
+    "pricePerFullShare": 1.8110174182838026,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 25.508672139581,
+        "value": 1029249.4121599538
+      },
+      {
+        "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": 18,
+        "balance": 112668.5607535645,
+        "value": 1018523.7892122229
+      }
+    ],
+    "apr": 25.042867810587612,
+    "apy": 25.042867810587612,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Uniswap LP Fees",
+        "apr": 25.042867810587612,
+        "boostable": false,
+        "minApr": 25.042867810587612,
+        "maxApr": 25.042867810587612
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Uniswap LP Fees",
+        "apr": 25.042867810587612,
+        "boostable": false,
+        "minApr": 25.042867810587612,
+        "maxApr": 25.042867810587612
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x95826C65EB1f2d2F0EDBb7EcB176563B61C60bBf",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1611412968,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/Digg",
+    "asset": "UNI-V2",
+    "vaultAsset": "bUNI-V2",
+    "state": "discontinued",
+    "underlyingToken": "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52",
+    "vaultToken": "0xC17078FDd324CC473F8175Dc5290fae5f2E84714",
+    "value": 353882.84,
+    "available": 0,
+    "balance": 4.639800592e-9,
+    "protocol": "Uniswap",
+    "pricePerFullShare": 1.6682391426366505,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 4.381821329643623,
+        "value": 176802.10882979055
+      },
+      {
+        "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": 9,
+        "balance": 7.548507625344792,
+        "value": 177269.1530735971
+      }
+    ],
+    "apr": 5.817183066572692,
+    "apy": 5.817183066572692,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Uniswap LP Fees",
+        "apr": 5.817183066572692,
+        "boostable": false,
+        "minApr": 5.817183066572692,
+        "maxApr": 5.817183066572692
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Uniswap LP Fees",
+        "apr": 5.817183066572692,
+        "boostable": false,
+        "minApr": 5.817183066572692,
+        "maxApr": 5.817183066572692
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xadc8d7322f2E284c1d9254170dbe311E9D3356cf",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1627746945,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/wETH",
+    "asset": "SLP",
+    "vaultAsset": "bSLP",
+    "state": "open",
+    "underlyingToken": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
+    "vaultToken": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
+    "value": 19337696.04,
+    "available": 0,
+    "balance": 0.00035550145094014,
+    "protocol": "Sushiswap",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 240.12418112452227,
+        "value": 9688770.584193349
+      },
+      {
+        "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "balance": 3198.438008098477,
+        "value": 9659250.80007732
+      }
+    ],
+    "apr": 0.903787138491379,
+    "apy": 0.903787138491379,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.903787138491379,
+        "boostable": false,
+        "minApr": 0.903787138491379,
+        "maxApr": 0.903787138491379
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.903787138491379,
+        "boostable": false,
+        "minApr": 0.903787138491379,
+        "maxApr": 0.903787138491379
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x7A56d65254705B4Def63c68488C0182968C452ce",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1645445282,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/Badger",
+    "asset": "SLP",
+    "vaultAsset": "bSLP",
+    "state": "open",
+    "underlyingToken": "0x110492b31c59716AC47337E616804E3E3AdC0b4a",
+    "vaultToken": "0x1862A18181346EBd9EdAf800804f89190DeF24a5",
+    "value": 4607957.86,
+    "available": 0,
+    "balance": 0.03375994436093356,
+    "protocol": "Sushiswap",
+    "pricePerFullShare": 1.4060839627548636,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 57.33947940856914,
+        "value": 2313590.654656356
+      },
+      {
+        "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": 18,
+        "balance": 253234.0467481814,
+        "value": 2289235.7826035595
+      }
+    ],
+    "apr": 8.105627650758235,
+    "apy": 8.105627650758235,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 8.105627650758235,
+        "boostable": false,
+        "minApr": 8.105627650758235,
+        "maxApr": 8.105627650758235
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 8.105627650758235,
+        "boostable": false,
+        "minApr": 8.105627650758235,
+        "maxApr": 8.105627650758235
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x3a494D79AA78118795daad8AeFF5825C6c8dF7F1",
+      "withdrawFee": 0,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649975817,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/Digg",
+    "asset": "SLP",
+    "vaultAsset": "bSLP",
+    "state": "open",
+    "underlyingToken": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
+    "vaultToken": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
+    "value": 5830989.36,
+    "available": 0,
+    "balance": 8.911435925e-8,
+    "protocol": "Sushiswap",
+    "pricePerFullShare": 1.7318979851678662,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 72.41779806751822,
+        "value": 2921985.7342262925
+      },
+      {
+        "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": 9,
+        "balance": 124.00432592298735,
+        "value": 2912117.589975435
+      }
+    ],
+    "apr": 27.83423843428217,
+    "apy": 27.83423843428217,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.48454225621834257,
+        "boostable": false,
+        "minApr": 0.48454225621834257,
+        "maxApr": 0.48454225621834257
+      },
+      {
+        "name": "Digg Rewards",
+        "apr": 27.349696178063827,
+        "boostable": false,
+        "minApr": 27.349696178063827,
+        "maxApr": 27.349696178063827
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.48454225621834257,
+        "boostable": false,
+        "minApr": 0.48454225621834257,
+        "maxApr": 0.48454225621834257
+      },
+      {
+        "name": "Digg Rewards",
+        "apr": 27.349696178063827,
+        "boostable": false,
+        "minApr": 27.349696178063827,
+        "maxApr": 27.349696178063827
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xaa8dddfe7DFA3C3269f1910d89E4413dD006D08a",
+      "withdrawFee": 0,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649972204,
+    "version": "v1"
+  },
+  {
+    "name": "Digg",
+    "asset": "DIGG",
+    "vaultAsset": "bDIGG",
+    "state": "open",
+    "underlyingToken": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+    "vaultToken": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
+    "value": 5266947.39,
+    "available": 0,
+    "balance": 224.278121045,
+    "protocol": "Badger",
+    "pricePerFullShare": 0.19232275278087332,
+    "tokens": [
+      {
+        "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+        "name": "Digg",
+        "symbol": "DIGG",
+        "decimals": 9,
+        "balance": 224.278121045,
+        "value": 5271208.678920635
+      }
+    ],
+    "apr": 7.389362414103341,
+    "apy": 7.389362414103341,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Vault Compounding",
+        "apr": 7.389362414103341,
+        "boostable": false,
+        "minApr": 7.389362414103341,
+        "maxApr": 7.389362414103341
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Vault Compounding",
+        "apr": 7.389362414103341,
+        "boostable": false,
+        "minApr": 7.389362414103341,
+        "maxApr": 7.389362414103341
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x4a8651F2edD68850B944AD93f2c67af817F39F62",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1612275291,
+    "version": "v1"
+  },
+  {
+    "name": "Badger",
+    "asset": "BADGER",
+    "vaultAsset": "bBADGER",
+    "state": "discontinued",
+    "underlyingToken": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "vaultToken": "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28",
+    "value": 11020921.03,
+    "available": 1219128.4321700612,
+    "balance": 1219128.4321700612,
+    "protocol": "Badger",
+    "pricePerFullShare": 1.2348816886763505,
+    "tokens": [
+      {
+        "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": 18,
+        "balance": 1219128.4321700612,
+        "value": 11045303.595460754
+      }
+    ],
+    "apr": 0,
+    "apy": 0,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [],
+    "sourcesApy": [],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x75b8E21BD623012Efb3b69E1B562465A68944eE6",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1612275260,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC",
+    "asset": "WBTC",
+    "vaultAsset": "byvWBTC",
+    "state": "open",
+    "underlyingToken": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "vaultToken": "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
+    "value": 7352913.91,
+    "available": 0,
+    "balance": 182.23286596,
+    "protocol": "Yearn",
+    "pricePerFullShare": 1.02064893,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 182.23286596,
+        "value": 7352913.90862004
+      }
+    ],
+    "apr": 0.46908207792136364,
+    "apy": 0.46908207792136364,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Vault Compounding",
+        "apr": 0.46908207792136364,
+        "boostable": false,
+        "minApr": 0.46908207792136364,
+        "maxApr": 0.46908207792136364
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Vault Compounding",
+        "apr": 0.46908207792136364,
+        "boostable": false,
+        "minApr": 0.46908207792136364,
+        "maxApr": 0.46908207792136364
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 0,
+    "version": "v1"
+  },
+  {
+    "name": "wBTC/ibBTC",
+    "asset": "SLP",
+    "vaultAsset": "bSLP",
+    "state": "discontinued",
+    "underlyingToken": "0x18d98D452072Ac2EB7b74ce3DB723374360539f1",
+    "vaultToken": "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE",
+    "value": 3181241.34,
+    "available": 0,
+    "balance": 0.00037906536241535,
+    "protocol": "Sushiswap",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 38.15031103504475,
+        "value": 1539326.8999530207
+      },
+      {
+        "address": "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F",
+        "name": "Interest-Bearing BTC",
+        "symbol": "ibBTC",
+        "decimals": 18,
+        "balance": 38.34526870374681,
+        "value": 1643554.907179996
+      }
+    ],
+    "apr": 0.42283249210975826,
+    "apy": 0.42283249210975826,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.42283249210975826,
+        "boostable": false,
+        "minApr": 0.42283249210975826,
+        "maxApr": 0.42283249210975826
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 0.42283249210975826,
+        "boostable": false,
+        "minApr": 0.42283249210975826,
+        "maxApr": 0.42283249210975826
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xf4146A176b09C664978e03d28d07Db4431525dAd",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1645528206,
+    "version": "v1"
+  },
+  {
+    "name": "hBTC",
+    "asset": "hCRV",
+    "vaultAsset": "bhCRV",
+    "state": "discontinued",
+    "underlyingToken": "0xb19059ebb43466C323583928285a49f558E572Fd",
+    "vaultToken": "0x8c76970747afd5398e958bDfadA4cf0B9FcA16c4",
+    "value": 122591.23,
+    "available": 0,
+    "balance": 3.0161410715650874,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0045312098078214,
+    "tokens": [
+      {
+        "address": "0x0316EB71485b0Ab14103307bf65a021042c6d380",
+        "name": "Huobi BTC",
+        "symbol": "HBTC",
+        "decimals": 18,
+        "balance": 1.6927844167061759,
+        "value": 68295.38729201067
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 1.3470067277764384,
+        "value": 54350.37445905152
+      }
+    ],
+    "apr": 0.09076698238441594,
+    "apy": 0.09076698238441594,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.09076698238441594,
+        "boostable": false,
+        "minApr": 0.09076698238441594,
+        "maxApr": 0.09076698238441594
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.09076698238441594,
+        "boostable": false,
+        "minApr": 0.09076698238441594,
+        "maxApr": 0.09076698238441594
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x8c26D9B6B80684CC642ED9eb1Ac1729Af3E819eE",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1647374819,
+    "version": "v1"
+  },
+  {
+    "name": "pBTC",
+    "asset": "pBTC/sbtcCRV",
+    "vaultAsset": "bpBTC/sbtcCRV",
+    "state": "discontinued",
+    "underlyingToken": "0xDE5331AC4B3630f94853Ff322B66407e0D6331E8",
+    "vaultToken": "0x55912D0Cf83B75c492E761932ABc4DB4a5CB1b17",
+    "value": 86081.61,
+    "available": 0,
+    "balance": 2.0780555479371334,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0038772287069504,
+    "tokens": [
+      {
+        "address": "0x5228a22e72ccC52d415EcFd199F99D0665E7733b",
+        "name": "pTokens BTC",
+        "symbol": "pBTC",
+        "decimals": 18,
+        "balance": 1.264395000685195,
+        "value": 52803.66401861511
+      },
+      {
+        "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": 18,
+        "balance": 0.8178524222465775,
+        "value": 33270.35969144038
+      }
+    ],
+    "apr": 0.21417637686620417,
+    "apy": 0.21417637686620417,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.21417637686620417,
+        "boostable": false,
+        "minApr": 0.21417637686620417,
+        "maxApr": 0.21417637686620417
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.21417637686620417,
+        "boostable": false,
+        "minApr": 0.21417637686620417,
+        "maxApr": 0.21417637686620417
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xA9A646668Df5Cec5344941646F5c6b269551e53D",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1647374938,
+    "version": "v1"
+  },
+  {
+    "name": "oBTC",
+    "asset": "oBTC/sbtcCRV",
+    "vaultAsset": "boBTC/sbtcCRV",
+    "state": "discontinued",
+    "underlyingToken": "0x2fE94ea3d5d4a175184081439753DE15AeF9d614",
+    "vaultToken": "0xf349c0faA80fC1870306Ac093f75934078e28991",
+    "value": 249956.44,
+    "available": 0,
+    "balance": 5.867663105523347,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0056014903831958,
+    "tokens": [
+      {
+        "address": "0x8064d9Ae6cDf087b1bcd5BDf3531bD5d8C537a68",
+        "name": "BoringDAO BTC",
+        "symbol": "oBTC",
+        "decimals": 18,
+        "balance": 3.219882457330304,
+        "value": 142154.59060867561
+      },
+      {
+        "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": 18,
+        "balance": 2.649986489528457,
+        "value": 107801.84943621485
+      }
+    ],
+    "apr": 0.5451857358522716,
+    "apy": 0.5451857358522716,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5451857358522716,
+        "boostable": false,
+        "minApr": 0.5451857358522716,
+        "maxApr": 0.5451857358522716
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5451857358522716,
+        "boostable": false,
+        "minApr": 0.5451857358522716,
+        "maxApr": 0.5451857358522716
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x5dd69c6D81f0a403c03b99C5a44Ef2D49b66d388",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1647375053,
+    "version": "v1"
+  },
+  {
+    "name": "bBTC",
+    "asset": "bBTC/sbtcCRV",
+    "vaultAsset": "bbBTC/sbtcCRV",
+    "state": "discontinued",
+    "underlyingToken": "0x410e3E86ef427e30B9235497143881f717d93c2A",
+    "vaultToken": "0x5Dce29e92b1b939F8E8C60DcF15BDE82A85be4a9",
+    "value": 475.08,
+    "available": 0,
+    "balance": 0.011688767659627015,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0029495320330464,
+    "tokens": [
+      {
+        "address": "0x9BE89D2a4cd102D8Fecc6BF9dA793be995C22541",
+        "name": "Binance Wrapped BTC",
+        "symbol": "BBTC",
+        "decimals": 8,
+        "balance": 0.005931366425549693,
+        "value": 239.016272850376
+      },
+      {
+        "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": 18,
+        "balance": 0.005801938264973073,
+        "value": 236.02372229080166
+      }
+    ],
+    "apr": 0.5854203442028139,
+    "apy": 0.5854203442028139,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5854203442028139,
+        "boostable": false,
+        "minApr": 0.5854203442028139,
+        "maxApr": 0.5854203442028139
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5854203442028139,
+        "boostable": false,
+        "minApr": 0.5854203442028139,
+        "maxApr": 0.5854203442028139
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xF2F3AB09E2D8986fBECbBa59aE838a5418a6680c",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1647375091,
+    "version": "v1"
+  },
+  {
+    "name": "Tricrypto",
+    "asset": "crvTricrypto",
+    "vaultAsset": "bcrvTricrypto",
+    "state": "discontinued",
+    "underlyingToken": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
+    "vaultToken": "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2",
+    "value": 308.63,
+    "available": 0,
+    "balance": 0.20458509234606986,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0846088659170035,
+    "tokens": [
+      {
+        "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "balance": 102.18142459787461,
+        "value": 102.18142459787461
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 0.0026102440319674325,
+        "value": 105.32073644585392
+      },
+      {
+        "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "balance": 0.03352430018726675,
+        "value": 101.24305132254369
+      }
+    ],
+    "apr": 0.20251660923169545,
+    "apy": 0.20251660923169545,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.20251660923169545,
+        "boostable": false,
+        "minApr": 0.20251660923169545,
+        "maxApr": 0.20251660923169545
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.20251660923169545,
+        "boostable": false,
+        "minApr": 0.20251660923169545,
+        "maxApr": 0.20251660923169545
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x05eC4356e1acd89CC2d16adC7415c8c95E736AC1",
+      "withdrawFee": 0,
+      "performanceFee": 1000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1646429676,
+    "version": "v1"
+  },
+  {
+    "name": "cvxCRV",
+    "asset": "cvxCRV",
+    "vaultAsset": "bcvxCRV",
+    "state": "open",
+    "underlyingToken": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+    "vaultToken": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "value": 6096293.72,
+    "available": 13177.10104157877,
+    "balance": 2746078.2534006196,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.4155233831033989,
+    "tokens": [
+      {
+        "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+        "name": "Convex CRV",
+        "symbol": "cvxCRV",
+        "decimals": 18,
+        "balance": 2746078.2534006196,
+        "value": 6096293.722549376
+      }
+    ],
+    "apr": 50.853319958021785,
+    "apy": 52.865636186282245,
+    "boost": {
+      "enabled": true,
+      "weight": 10000
+    },
+    "minApr": 38.76870630779874,
+    "maxApr": 64.13367200368731,
+    "minApy": 40.781022536059204,
+    "maxApy": 66.14598823194777,
+    "sources": [
+      {
+        "name": "Boosted Badger Rewards",
+        "apr": 12.097302477484618,
+        "boostable": true,
+        "minApr": 0.01268882726157507,
+        "maxApr": 25.377654523150138
+      },
+      {
+        "name": "Vault Compounding",
+        "apr": 19.531085181585922,
+        "boostable": false,
+        "minApr": 19.531085181585922,
+        "maxApr": 19.531085181585922
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 19.224932298951245,
+        "boostable": false,
+        "minApr": 19.224932298951245,
+        "maxApr": 19.224932298951245
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Vault Compounding",
+        "apr": 21.543401409846386,
+        "boostable": false,
+        "minApr": 21.543401409846386,
+        "maxApr": 21.543401409846386
+      },
+      {
+        "name": "Boosted Badger Rewards",
+        "apr": 12.097302477484618,
+        "boostable": true,
+        "minApr": 0.01268882726157507,
+        "maxApr": 25.377654523150138
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 19.224932298951245,
+        "boostable": false,
+        "minApr": 19.224932298951245,
+        "maxApr": 19.224932298951245
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x826048381d65a65DAa51342C51d464428d301896",
+      "withdrawFee": 10,
+      "performanceFee": 1000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "boosted",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649700835,
+    "version": "v1"
+  },
+  {
+    "name": "CVX",
+    "asset": "CVX",
+    "vaultAsset": "bCVX",
+    "state": "discontinued",
+    "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "vaultToken": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
+    "value": 1325130.82,
+    "available": 0,
+    "balance": 46610.29954284169,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0957988590667325,
+    "tokens": [
+      {
+        "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": 18,
+        "balance": 46610.29954284169,
+        "value": 1326063.0219938462
+      }
+    ],
+    "apr": 0,
+    "apy": 0,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [],
+    "sourcesApy": [],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xBCee2c6CfA7A4e29892c3665f464Be5536F16D95",
+      "withdrawFee": 10,
+      "performanceFee": 1000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1645380272,
+    "version": "v1"
+  },
+  {
+    "name": "Tricrypto2",
+    "asset": "crv3crypto",
+    "vaultAsset": "bcrv3crypto",
+    "state": "open",
+    "underlyingToken": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+    "vaultToken": "0x27E98fC7d05f54E544d16F58C194C2D7ba71e3B5",
+    "value": 3822943.63,
+    "available": 0,
+    "balance": 2545.4753706688916,
+    "protocol": "Convex",
+    "pricePerFullShare": 1.0160649956569392,
+    "tokens": [
+      {
+        "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "balance": 1276647.1180054962,
+        "value": 1276647.1180054962
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 31.48892779028272,
+        "value": 1270546.7474101176
+      },
+      {
+        "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "balance": 422.8834484921596,
+        "value": 1277103.7856118367
+      }
+    ],
+    "apr": 11.303577224002428,
+    "apy": 11.672015258154858,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.8009332599607566,
+        "boostable": false,
+        "minApr": 0.8009332599607566,
+        "maxApr": 0.8009332599607566
+      },
+      {
+        "name": "Vault Compounding",
+        "apr": 2.1680271644444504,
+        "boostable": false,
+        "minApr": 2.1680271644444504,
+        "maxApr": 2.1680271644444504
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 3.4942504844791737,
+        "boostable": false,
+        "minApr": 3.4942504844791737,
+        "maxApr": 3.4942504844791737
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 4.840366315118048,
+        "boostable": false,
+        "minApr": 4.840366315118048,
+        "maxApr": 4.840366315118048
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.8009332599607566,
+        "boostable": false,
+        "minApr": 0.8009332599607566,
+        "maxApr": 0.8009332599607566
+      },
+      {
+        "name": "Vault Compounding",
+        "apr": 2.1914334445109374,
+        "boostable": false,
+        "minApr": 2.1914334445109374,
+        "maxApr": 2.1914334445109374
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 3.4942504844791737,
+        "boostable": false,
+        "minApr": 3.4942504844791737,
+        "maxApr": 3.4942504844791737
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 4.840366315118048,
+        "boostable": false,
+        "minApr": 4.840366315118048,
+        "maxApr": 4.840366315118048
+      },
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.34503175408594033,
+        "boostable": false,
+        "minApr": 0.34503175408594033,
+        "maxApr": 0.34503175408594033
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x647eeb5C5ED5A71621183f09F6CE8fa66b96827d",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649705771,
+    "version": "v1"
+  },
+  {
+    "name": "imBTC",
+    "asset": "imBTC",
+    "vaultAsset": "bimBTC",
+    "state": "discontinued",
+    "underlyingToken": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
+    "vaultToken": "0x599D92B453C010b1050d31C364f6ee17E819f193",
+    "value": 399746.5,
+    "available": 0,
+    "balance": 87.57333562417584,
+    "protocol": "mStable",
+    "pricePerFullShare": 1.0079783772486912,
+    "tokens": [
+      {
+        "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
+        "name": "Interest bearing mStable BTC",
+        "symbol": "imBTC",
+        "decimals": 18,
+        "balance": 87.57333562417584,
+        "value": 399746.5037391002
+      }
+    ],
+    "apr": 0,
+    "apy": 0,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [],
+    "sourcesApy": [],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xd409C506742b7f76f164909025Ab29A47e06d30A",
+      "withdrawFee": 10,
+      "performanceFee": 1000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1645532054,
+    "version": "v1"
+  },
+  {
+    "name": "mhBTC",
+    "asset": "fPmBTC/HBTC",
+    "vaultAsset": "bfPmBTC/HBTC",
+    "state": "discontinued",
+    "underlyingToken": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
+    "vaultToken": "0x26B8efa69603537AC8ab55768b6740b67664D518",
+    "value": 25149.87,
+    "available": 0,
+    "balance": 0.564595895612722,
+    "protocol": "mStable",
+    "pricePerFullShare": 1.0131245611264614,
+    "tokens": [
+      {
+        "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
+        "name": "mBTC/HBTC Feeder Pool",
+        "symbol": "fPmBTC/HBTC",
+        "decimals": 18,
+        "balance": 0.564595895612722,
+        "value": 25149.870535452184
+      }
+    ],
+    "apr": 0,
+    "apy": 0,
+    "boost": {
+      "enabled": false,
+      "weight": 10000
+    },
+    "sources": [],
+    "sourcesApy": [],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x54D06A0E1cE55a7a60Ee175AbCeaC7e363f603f3",
+      "withdrawFee": 10,
+      "performanceFee": 1000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1645532159,
+    "version": "v1"
+  },
+  {
+    "name": "bveCVX",
+    "asset": "CVX",
+    "vaultAsset": "bveCVX",
+    "state": "open",
+    "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "vaultToken": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "value": 49030507.25,
+    "available": 12749.649005832607,
+    "balance": 1724604.5461758066,
+    "protocol": "Convex",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": 18,
+        "balance": 1724604.5461758066,
+        "value": 49064999.338701695
+      }
+    ],
+    "apr": 33.650258145971925,
+    "apy": 33.841655455341275,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Badger Vested Escrow Convex Token Rewards",
+        "apr": 23.668712594426243,
+        "boostable": false,
+        "minApr": 23.668712594426243,
+        "maxApr": 23.668712594426243
+      },
+      {
+        "name": "Badger Rewards",
+        "apr": 7.701082951031515,
+        "boostable": false,
+        "minApr": 7.701082951031515,
+        "maxApr": 7.701082951031515
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 2.280462600514167,
+        "boostable": false,
+        "minApr": 2.280462600514167,
+        "maxApr": 2.280462600514167
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.19139730936934535,
+        "boostable": false,
+        "minApr": 0.19139730936934535,
+        "maxApr": 0.19139730936934535
+      },
+      {
+        "name": "Badger Vested Escrow Convex Token Rewards",
+        "apr": 23.668712594426243,
+        "boostable": false,
+        "minApr": 23.668712594426243,
+        "maxApr": 23.668712594426243
+      },
+      {
+        "name": "Badger Rewards",
+        "apr": 7.701082951031515,
+        "boostable": false,
+        "minApr": 7.701082951031515,
+        "maxApr": 7.701082951031515
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 2.280462600514167,
+        "boostable": false,
+        "minApr": 2.280462600514167,
+        "maxApr": 2.280462600514167
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x898111d1F4eB55025D0036568212425EE2274082",
+      "withdrawFee": 10,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649810092,
+    "version": "v1"
+  },
+  {
+    "name": "CVX / bveCVX",
+    "asset": "bveCVX-CVX-f",
+    "vaultAsset": "bbveCVX-CVX-f",
+    "state": "open",
+    "underlyingToken": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
+    "vaultToken": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
+    "value": 6535345.08,
+    "available": 1179.1987120356378,
+    "balance": 229511.85825535934,
+    "protocol": "Curve",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": 18,
+        "balance": 111060.83285920466,
+        "value": 3157459.4781871885
+      },
+      {
+        "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+        "name": "Badger Vested Escrow Convex Token",
+        "symbol": "bveCVX",
+        "decimals": 18,
+        "balance": 118814.12581997171,
+        "value": 3377885.597061796
+      }
+    ],
+    "apr": 33.81808965832464,
+    "apy": 33.91651212462476,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.022403950060123634,
+        "boostable": false,
+        "minApr": 0.022403950060123634,
+        "maxApr": 0.022403950060123634
+      },
+      {
+        "name": "Badger Rewards",
+        "apr": 20.390024032123605,
+        "boostable": false,
+        "minApr": 20.390024032123605,
+        "maxApr": 20.390024032123605
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 1.1725550864186731,
+        "boostable": false,
+        "minApr": 1.1725550864186731,
+        "maxApr": 1.1725550864186731
+      },
+      {
+        "name": "Badger Vested Escrow Convex Token Rewards",
+        "apr": 12.233106589722237,
+        "boostable": false,
+        "minApr": 12.233106589722237,
+        "maxApr": 12.233106589722237
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.022403950060123634,
+        "boostable": false,
+        "minApr": 0.022403950060123634,
+        "maxApr": 0.022403950060123634
+      },
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.09842246630012332,
+        "boostable": false,
+        "minApr": 0.09842246630012332,
+        "maxApr": 0.09842246630012332
+      },
+      {
+        "name": "Badger Rewards",
+        "apr": 20.390024032123605,
+        "boostable": false,
+        "minApr": 20.390024032123605,
+        "maxApr": 20.390024032123605
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 1.1725550864186731,
+        "boostable": false,
+        "minApr": 1.1725550864186731,
+        "maxApr": 1.1725550864186731
+      },
+      {
+        "name": "Badger Vested Escrow Convex Token Rewards",
+        "apr": 12.233106589722237,
+        "boostable": false,
+        "minApr": 12.233106589722237,
+        "maxApr": 12.233106589722237
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x98Ca7AFa876f0e15494E76E92C5b3658cdE1Ffe1",
+      "withdrawFee": 10,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 0,
+    "version": "v1"
+  },
+  {
+    "name": "ibBTC / crvsBTC",
+    "asset": "ibbtc/sbtcCRV-f",
+    "vaultAsset": "bibbtc/sbtcCRV-f",
+    "state": "open",
+    "underlyingToken": "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
+    "vaultToken": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
+    "value": 207144886.88,
+    "available": 2.3323063849105385,
+    "balance": 5164.909480312557,
+    "protocol": "Convex",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x8751D4196027d4e6DA63716fA7786B5174F04C15",
+        "name": "Wrapped Interest-Bearing Bitcoin",
+        "symbol": "wibBTC",
+        "decimals": 18,
+        "balance": 2801.6211642988974,
+        "value": 111703437.44176134
+      },
+      {
+        "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+        "name": "Curve.fi renBTC/wBTC/sBTC",
+        "symbol": "crvRenWSBTC",
+        "decimals": 18,
+        "balance": 2346.1429732984607,
+        "value": 95441449.44239275
+      }
+    ],
+    "apr": 4.633628057136573,
+    "apy": 4.634890725137208,
+    "boost": {
+      "enabled": true,
+      "weight": 10000
+    },
+    "minApr": 0.5848879630923768,
+    "maxApr": 26.831717092017914,
+    "minApy": 0.5861506310930118,
+    "maxApy": 26.83297976001855,
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5410078422145803,
+        "boostable": false,
+        "minApr": 0.5410078422145803,
+        "maxApr": 0.5410078422145803
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.012141383960111541,
+        "boostable": false,
+        "minApr": 0.012141383960111541,
+        "maxApr": 0.012141383960111541
+      },
+      {
+        "name": "Boosted Badger Rewards",
+        "apr": 4.061870073598436,
+        "boostable": true,
+        "minApr": 0.013129979554239888,
+        "maxApr": 26.259959108479777
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.018608757363445066,
+        "boostable": false,
+        "minApr": 0.018608757363445066,
+        "maxApr": 0.018608757363445066
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 0.0012626680006349595,
+        "boostable": false,
+        "minApr": 0.0012626680006349595,
+        "maxApr": 0.0012626680006349595
+      },
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.5410078422145803,
+        "boostable": false,
+        "minApr": 0.5410078422145803,
+        "maxApr": 0.5410078422145803
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 0.012141383960111541,
+        "boostable": false,
+        "minApr": 0.012141383960111541,
+        "maxApr": 0.012141383960111541
+      },
+      {
+        "name": "Boosted Badger Rewards",
+        "apr": 4.061870073598436,
+        "boostable": true,
+        "minApr": 0.013129979554239888,
+        "maxApr": 26.259959108479777
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 0.018608757363445066,
+        "boostable": false,
+        "minApr": 0.018608757363445066,
+        "maxApr": 0.018608757363445066
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x6D4BA00Fd7BB73b5aa5b3D6180c6f1B0c89f70D1",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "boosted",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649702001,
+    "version": "v1"
+  },
+  {
+    "name": "MIM / 3CRV",
+    "asset": "MIM-3LP3CRV-f",
+    "vaultAsset": "bMIM-3LP3CRV-f",
+    "state": "open",
+    "underlyingToken": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+    "vaultToken": "0x19E4d89e0cB807ea21B8CEF02df5eAA99A110dA5",
+    "value": 150.89,
+    "available": 0.7288598391322803,
+    "balance": 150.12219670527918,
+    "protocol": "Convex",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3",
+        "name": "Magic Internet Money",
+        "symbol": "MIM",
+        "decimals": 18,
+        "balance": 100.80646367578467,
+        "value": 100.73499189303854
+      },
+      {
+        "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
+        "name": "Curve.fi DAI/USDC/USDT",
+        "symbol": "3Crv",
+        "decimals": 18,
+        "balance": 49.14591091251581,
+        "value": 50.15818988494124
+      }
+    ],
+    "apr": 0.1580980941220833,
+    "apy": 0.1580980941220833,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.1580980941220833,
+        "boostable": false,
+        "minApr": 0.1580980941220833,
+        "maxApr": 0.1580980941220833
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.1580980941220833,
+        "boostable": false,
+        "minApr": 0.1580980941220833,
+        "maxApr": 0.1580980941220833
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x6D1de7B7F586f17d573BB57ce39159ff6245A285",
+      "withdrawFee": 10,
+      "performanceFee": 0,
+      "strategistFee": 2000,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1642470765,
+    "version": "v1"
+  },
+  {
+    "name": "FRAX / 3CRV",
+    "asset": "FRAX3CRV-f",
+    "vaultAsset": "bFRAX3CRV-f",
+    "state": "open",
+    "underlyingToken": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
+    "vaultToken": "0x15cBC4ac1e81c97667780fE6DAdeDd04a6EEB47B",
+    "value": 149.99,
+    "available": 0,
+    "balance": 148.89773963942488,
+    "protocol": "Convex",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
+        "name": "Frax",
+        "symbol": "FRAX",
+        "decimals": 18,
+        "balance": 83.69559272133709,
+        "value": 83.67676121297478
+      },
+      {
+        "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
+        "name": "Curve.fi DAI/USDC/USDT",
+        "symbol": "3Crv",
+        "decimals": 18,
+        "balance": 64.97807207204436,
+        "value": 66.31645271869391
+      }
+    ],
+    "apr": 0.08083418692015343,
+    "apy": 0.08083418692015343,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.08083418692015343,
+        "boostable": false,
+        "minApr": 0.08083418692015343,
+        "maxApr": 0.08083418692015343
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.08083418692015343,
+        "boostable": false,
+        "minApr": 0.08083418692015343,
+        "maxApr": 0.08083418692015343
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xf1e6aB438136D391fdafff5263f129d434BC6efB",
+      "withdrawFee": 10,
+      "performanceFee": 0,
+      "strategistFee": 2000,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1642477867,
+    "version": "v1"
+  },
+  {
+    "name": "remBadger",
+    "asset": "BADGER",
+    "vaultAsset": "remBADGER",
+    "state": "open",
+    "underlyingToken": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "vaultToken": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
+    "value": 3414428.04,
+    "available": 358817.105813535,
+    "balance": 377702.2166458263,
+    "protocol": "Badger",
+    "pricePerFullShare": 344.10086422358086,
+    "tokens": [
+      {
+        "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": 18,
+        "balance": 377702.2166458263,
+        "value": 3421982.0828111866
+      }
+    ],
+    "apr": 37.55893719042726,
+    "apy": 37.55893719042726,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "Badger Rewards",
+        "apr": 37.55893719042726,
+        "boostable": false,
+        "minApr": 37.55893719042726,
+        "maxApr": 37.55893719042726
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Badger Rewards",
+        "apr": 37.55893719042726,
+        "boostable": false,
+        "minApr": 37.55893719042726,
+        "maxApr": 37.55893719042726
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0xD8d8aE4A5363edb6C3E01759576Da04bcc3a947e",
+      "withdrawFee": 0,
+      "performanceFee": 0,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "native",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 0,
+    "version": "v1"
+  },
+  {
+    "name": "BADGER / WBTC",
+    "asset": "BADGERWBTC-f",
+    "vaultAsset": "bBADGERWBTC-f",
+    "state": "featured",
+    "underlyingToken": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
+    "vaultToken": "0xeC1c717A3b02582A4Aa2275260C583095536b613",
+    "value": 5487459.61,
+    "available": 40.57914316823257,
+    "balance": 4531.855008916193,
+    "protocol": "Convex",
+    "pricePerFullShare": 1,
+    "tokens": [
+      {
+        "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+        "name": "Badger",
+        "symbol": "BADGER",
+        "decimals": 18,
+        "balance": 302929.1871643458,
+        "value": 2738479.851965686
+      },
+      {
+        "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8,
+        "balance": 67.97727084044531,
+        "value": 2742814.901141128
+      }
+    ],
+    "apr": 28.38442814058972,
+    "apy": 29.419588385615157,
+    "boost": {
+      "enabled": false,
+      "weight": 0
+    },
+    "sources": [
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 11.180925479457342,
+        "boostable": false,
+        "minApr": 11.180925479457342,
+        "maxApr": 11.180925479457342
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 17.203502661132376,
+        "boostable": false,
+        "minApr": 17.203502661132376,
+        "maxApr": 17.203502661132376
+      }
+    ],
+    "sourcesApy": [
+      {
+        "name": "Badger Sett Convex CRV Compounding",
+        "apr": 1.03516024502544,
+        "boostable": false,
+        "minApr": 1.03516024502544,
+        "maxApr": 1.03516024502544
+      },
+      {
+        "name": "bcvxCRV Rewards",
+        "apr": 11.180925479457342,
+        "boostable": false,
+        "minApr": 11.180925479457342,
+        "maxApr": 11.180925479457342
+      },
+      {
+        "name": "bveCVX Rewards",
+        "apr": 17.203502661132376,
+        "boostable": false,
+        "minApr": 17.203502661132376,
+        "maxApr": 17.203502661132376
+      }
+    ],
+    "bouncer": "none",
+    "strategy": {
+      "address": "0x1905FD2D2D09792eE058C2b46a05F11630a1EcA1",
+      "withdrawFee": 10,
+      "performanceFee": 2000,
+      "strategistFee": 0,
+      "aumFee": 0
+    },
+    "type": "standard",
+    "behavior": "None",
+    "yieldProjection": {
+      "harvestApr": 0,
+      "harvestApy": 0,
+      "harvestTokens": [],
+      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldValue": 0
+    },
+    "lastHarvest": 1649992163,
+    "version": "v1"
+  }
+]

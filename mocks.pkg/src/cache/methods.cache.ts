@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 
 import {
+  BadgerAPI,
   BadgerGraph,
   DiggService,
   ibBTCService,
@@ -43,6 +44,7 @@ export class MethodsCache {
     [SdkServices.Rewards]: RewardsService.prototype,
     [SdkServices.Tokens]: TokensService.prototype,
     [SdkServices.Vaults]: VaultsService.prototype,
+    api: BadgerAPI.prototype,
     graph: BadgerGraph.prototype,
   };
 

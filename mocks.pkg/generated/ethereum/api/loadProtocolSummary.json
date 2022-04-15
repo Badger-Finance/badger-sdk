@@ -1,0 +1,155 @@
+{
+  "totalValue": 486437138.07,
+  "setts": [
+    {
+      "name": "renBTC/wBTC/sBTC",
+      "balance": 97.40339375996224,
+      "value": 3962384.73
+    },
+    {
+      "name": "renBTC/wBTC",
+      "balance": 3368.5375249575964,
+      "value": 138203917.1
+    },
+    {
+      "name": "tBTC/sBTC",
+      "balance": 34.050400500527154,
+      "value": 1361769.29
+    },
+    {
+      "name": "renBTC/wBTC",
+      "balance": 4.018135118844163,
+      "value": 164855.52
+    },
+    {
+      "name": "wBTC/Badger",
+      "balance": 0.013821190884375643,
+      "value": 2050056.39
+    },
+    {
+      "name": "wBTC/Digg",
+      "balance": 4.639800592e-9,
+      "value": 353882.84
+    },
+    {
+      "name": "wBTC/wETH",
+      "balance": 0.00035550145094014,
+      "value": 19337696.04
+    },
+    {
+      "name": "wBTC/Badger",
+      "balance": 0.03375994436093356,
+      "value": 4607957.86
+    },
+    {
+      "name": "wBTC/Digg",
+      "balance": 8.911435925e-8,
+      "value": 5830989.36
+    },
+    {
+      "name": "Digg",
+      "balance": 224.278121045,
+      "value": 5266947.39
+    },
+    {
+      "name": "Badger",
+      "balance": 1219128.4321700612,
+      "value": 11020921.03
+    },
+    {
+      "name": "wBTC",
+      "balance": 182.23286596,
+      "value": 7352913.91
+    },
+    {
+      "name": "wBTC/ibBTC",
+      "balance": 0.00037906536241535,
+      "value": 3181241.34
+    },
+    {
+      "name": "hBTC",
+      "balance": 3.0161410715650874,
+      "value": 122591.23
+    },
+    {
+      "name": "pBTC",
+      "balance": 2.0780555479371334,
+      "value": 86081.61
+    },
+    {
+      "name": "oBTC",
+      "balance": 5.867663105523347,
+      "value": 249956.44
+    },
+    {
+      "name": "bBTC",
+      "balance": 0.011688767659627015,
+      "value": 475.08
+    },
+    {
+      "name": "Tricrypto",
+      "balance": 0.20458509234606986,
+      "value": 308.63
+    },
+    {
+      "name": "cvxCRV",
+      "balance": 2746078.2534006196,
+      "value": 6096293.72
+    },
+    {
+      "name": "CVX",
+      "balance": 46610.29954284169,
+      "value": 1325130.82
+    },
+    {
+      "name": "Tricrypto2",
+      "balance": 2545.4753706688916,
+      "value": 3822943.63
+    },
+    {
+      "name": "imBTC",
+      "balance": 87.57333562417584,
+      "value": 399746.5
+    },
+    {
+      "name": "mhBTC",
+      "balance": 0.564595895612722,
+      "value": 25149.87
+    },
+    {
+      "name": "bveCVX",
+      "balance": 1724604.5461758066,
+      "value": 49030507.25
+    },
+    {
+      "name": "CVX / bveCVX",
+      "balance": 229511.85825535934,
+      "value": 6535345.08
+    },
+    {
+      "name": "ibBTC / crvsBTC",
+      "balance": 5164.909480312557,
+      "value": 207144886.88
+    },
+    {
+      "name": "MIM / 3CRV",
+      "balance": 150.12219670527918,
+      "value": 150.89
+    },
+    {
+      "name": "FRAX / 3CRV",
+      "balance": 148.89773963942488,
+      "value": 149.99
+    },
+    {
+      "name": "remBadger",
+      "balance": 377702.2166458263,
+      "value": 3414428.04
+    },
+    {
+      "name": "BADGER / WBTC",
+      "balance": 4531.855008916193,
+      "value": 5487459.61
+    }
+  ]
+}
