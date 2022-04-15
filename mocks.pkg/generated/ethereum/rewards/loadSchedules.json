@@ -10,7 +10,7 @@
   {
     "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
     "token": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-    "amount": 0.094819176,
+    "amount": 2.1074160241191548e+64,
     "start": 1617296400,
     "end": 1617901200,
     "compPercent": 100
@@ -34,7 +34,7 @@
   {
     "beneficiary": "0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28",
     "token": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-    "amount": 0.0302171,
+    "amount": 6.71594117576434e+63,
     "start": 1620320400,
     "end": 1620925200,
     "compPercent": 100

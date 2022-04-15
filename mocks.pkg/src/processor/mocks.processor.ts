@@ -140,11 +140,11 @@ export class MocksProcessor {
     console.log('Mock generator guard action started');
 
     if (mocksPkgJSON.version !== sdkPkgJSON.version) {
-      // throw new ProcessorError(`
-      //   Versions of mocks.pkg and main should be equal:
-      //   mocksPkgJSON.version - ${mocksPkgJSON.version} !=
-      //   sdkPkgJSON.version - ${sdkPkgJSON.version}
-      // `);
+      throw new ProcessorError(`
+        Versions of mocks.pkg and main should be equal:
+        mocksPkgJSON.version - ${mocksPkgJSON.version} !=
+        sdkPkgJSON.version - ${sdkPkgJSON.version}
+      `);
     }
 
     const notImplementedServ: string[] = [];

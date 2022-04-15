@@ -1,0 +1,20 @@
+{
+  "totalValue": 8718.73,
+  "setts": [
+    {
+      "name": "wBTC/ibBTC",
+      "balance": 8.57838418488e-7,
+      "value": 6956.52
+    },
+    {
+      "name": "wBTC/USDC",
+      "balance": 3.4166708e-11,
+      "value": 1651.96
+    },
+    {
+      "name": "amWBTC/renBTC",
+      "balance": 0.002715096299370975,
+      "value": 110.25
+    }
+  ]
+}

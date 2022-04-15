@@ -6,6 +6,7 @@ export enum SdkServices {
   Tokens = 'tokens',
   Vaults = 'vaults',
   Graph = 'graph',
+  Api = 'api',
 }
 
 export type SdkServiceKeys = typeof SdkServices;
