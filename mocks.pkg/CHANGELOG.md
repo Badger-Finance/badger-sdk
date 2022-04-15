@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.8...sdk-mocks-v1.6.0) (2022-04-15)
+
+
+### Features
+
+* enable api mocks ([82bac54](https://github.com/Badger-Finance/badger-sdk/commit/82bac54409d6d40ed37c9ad172af636cc585cca1))
+
 ## [1.5.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.7...sdk-mocks-v1.5.8) (2022-04-14)
 
 
