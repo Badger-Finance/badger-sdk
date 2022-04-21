@@ -1,4 +1,4 @@
-import { Network } from "..";
+import { Network } from '..';
 
 export interface NetworkConfig {
   chainId: number;

@@ -34,7 +34,9 @@ describe('vaults.service', () => {
   beforeEach(async () => {
     // Setup Jest Mocks
     const mockSigner = mock<JsonRpcSigner>();
-    mockSigner.getAddress.calledWith().mockImplementation(async () => TEST_ADDR);
+    mockSigner.getAddress
+      .calledWith()
+      .mockImplementation(async () => TEST_ADDR);
     const mockProvider = mock<JsonRpcProvider>();
     mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
 

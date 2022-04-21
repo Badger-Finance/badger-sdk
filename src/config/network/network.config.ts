@@ -1,6 +1,6 @@
 import { Networkish } from '@ethersproject/providers';
 
-import { Network, NetworkConfig } from "..";
+import { Network, NetworkConfig } from '..';
 
 export const NETWORK_CONFIGS: Record<Network, NetworkConfig> = {
   [Network.Ethereum]: {
@@ -51,24 +51,26 @@ export const NETWORK_CONFIGS: Record<Network, NetworkConfig> = {
     chainId: 250,
     currencySymbol: 'FTM',
     explorerUrl: 'https://ftmscan.com',
-  }
+  },
 };
 
-const NETWORK_CONFIG_MAP: Record<string, NetworkConfig> = Object.fromEntries(Object.entries(Network).flatMap((e) => {
-  const [key, value] = e;
-  // really, it's funny how ts enums work
-  const config = NETWORK_CONFIGS[value];
-  return [
-    [key, config],
-    [value, config],
-    [config.chainId.toString(), config],
-    [config.chainId.toString(16), config],
-    [config.currencySymbol, config],
-    [config.currencySymbol.toLowerCase(), config],
-    [config.name, config],
-    [config.name.replace(/ /g, '-').toLowerCase(), config],
-  ];
-}));
+const NETWORK_CONFIG_MAP: Record<string, NetworkConfig> = Object.fromEntries(
+  Object.entries(Network).flatMap((e) => {
+    const [key, value] = e;
+    // really, it's funny how ts enums work
+    const config = NETWORK_CONFIGS[value];
+    return [
+      [key, config],
+      [value, config],
+      [config.chainId.toString(), config],
+      [config.chainId.toString(16), config],
+      [config.currencySymbol, config],
+      [config.currencySymbol.toLowerCase(), config],
+      [config.name, config],
+      [config.name.replace(/ /g, '-').toLowerCase(), config],
+    ];
+  }),
+);
 
 export function getNetworkConfig(network: Networkish): NetworkConfig {
   let config;
@@ -89,7 +91,8 @@ export function getNetworkConfig(network: Networkish): NetworkConfig {
         config = chainIdConfig;
       }
     } else {
-      config = NETWORK_CONFIG_MAP[network.name.replace(/ /g, '-').toLowerCase()];
+      config =
+        NETWORK_CONFIG_MAP[network.name.replace(/ /g, '-').toLowerCase()];
     }
   }
   if (!config) {
