@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.6.0...sdk-mocks-v1.6.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* add citadel base api patch ([69c954d](https://github.com/Badger-Finance/badger-sdk/commit/69c954d1f038fac77d6d4db4cea8127e5824fb98))
+
 # [1.6.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.5.8...sdk-mocks-v1.6.0) (2022-04-15)
 
 
