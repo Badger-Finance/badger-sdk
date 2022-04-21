@@ -1519,6 +1519,29 @@
       "grossShareWithdraw": "6395344608"
     },
     {
+      "id": "0x6b2d4c4bb50274c5d4986ff678cc971c0260e967-19095",
+      "timestamp": 1649840907,
+      "name": "Badger Sett Uniswap V2",
+      "symbol": "bUNI-V2",
+      "decimals": "18",
+      "totalSupply": "33112575",
+      "token": {
+        "id": "0xf6a637525402643b0654a54bead2cb9a83c8b498",
+        "name": "Uniswap V2",
+        "symbol": "UNI-V2",
+        "decimals": "18",
+        "totalSupply": "585797111213"
+      },
+      "balance": "34166708",
+      "pricePerFullShare": "1031834824081183659",
+      "netDeposit": "26348925",
+      "netShareDeposit": "33112575",
+      "grossDeposit": "6537604638",
+      "grossShareDeposit": "6428457183",
+      "grossWithdraw": "6511255713",
+      "grossShareWithdraw": "6395344608"
+    },
+    {
       "id": "0x7b6bfb88904e4b3a6d239d5ed8adf557b22c10fc-18848",
       "timestamp": 1628517153,
       "name": "Badger Sett Curve.fi amWBTC/renBTC",
@@ -2274,29 +2297,6 @@
       "netShareDeposit": "2646496525813",
       "grossDeposit": "2653276053311",
       "grossShareDeposit": "2646496525813",
-      "grossWithdraw": "0",
-      "grossShareWithdraw": "0"
-    },
-    {
-      "id": "0xea8567d84e3e54b32176418b4e0c736b56378961-18872",
-      "timestamp": 1630540999,
-      "name": "Badger Sett SushiSwap LP Token",
-      "symbol": "bSLP",
-      "decimals": "18",
-      "totalSupply": "10468754428912",
-      "token": {
-        "id": "0x8f8e95ff4b4c5e354ccb005c6b0278492d7b5907",
-        "name": "SushiSwap LP Token",
-        "symbol": "SLP",
-        "decimals": "18",
-        "totalSupply": "1829807698623848"
-      },
-      "balance": "10495750440347",
-      "pricePerFullShare": "1002578722389403268",
-      "netDeposit": "10495692453010",
-      "netShareDeposit": "10468754428912",
-      "grossDeposit": "10495692453010",
-      "grossShareDeposit": "10468754428912",
       "grossWithdraw": "0",
       "grossShareWithdraw": "0"
     }
