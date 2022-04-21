@@ -476,6 +476,25 @@
       }
     },
     {
+      "id": "0x0365e2b5d9ecb70e0f214019715ab96da4357fc1802d8e28b8985c63221f2e23-108",
+      "timestamp": 1649992163,
+      "token": {
+        "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+        "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+        "symbol": "BADGERWBTC-f",
+        "decimals": "18",
+        "totalSupply": "934583239195053317500"
+      },
+      "amount": "0",
+      "blockNumber": "14587478",
+      "strategy": {
+        "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+      },
+      "sett": {
+        "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+      }
+    },
+    {
       "id": "0x0387457d632f9d891f11eefd6b229403e28a81debadd1d7173f9f69544a177f6-41",
       "timestamp": 1643719252,
       "token": {
@@ -625,6 +644,25 @@
       },
       "sett": {
         "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af"
+      }
+    },
+    {
+      "id": "0x045d127cf3a48d7a51120de1d75da0745ad6d554aaf73d15fc7bf93e29c5c904-89",
+      "timestamp": 1650400561,
+      "token": {
+        "id": "0xc4ad29ba4b3c580e6d59105fff484999997675ff",
+        "name": "Curve.fi USD-BTC-ETH",
+        "symbol": "crv3crypto",
+        "decimals": "18",
+        "totalSupply": "69301502862062175946863"
+      },
+      "amount": "605281613506477825",
+      "blockNumber": "14617768",
+      "strategy": {
+        "id": "0x647eeb5c5ed5a71621183f09f6ce8fa66b96827d"
+      },
+      "sett": {
+        "id": "0x27e98fc7d05f54e544d16f58c194c2d7ba71e3b5"
       }
     },
     {
@@ -1008,6 +1046,25 @@
       }
     },
     {
+      "id": "0x0821df6bcb57d941aa1be8367e9732f089a1e2ea10ae0cf4271c24db096f08d6-18",
+      "timestamp": 1650157471,
+      "token": {
+        "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": "18",
+        "totalSupply": "52842757666481041544194387"
+      },
+      "amount": "5017155798952346736218",
+      "blockNumber": "14599765",
+      "strategy": {
+        "id": "0x898111d1f4eb55025d0036568212425ee2274082"
+      },
+      "sett": {
+        "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
+      }
+    },
+    {
       "id": "0x0826c92e36ec75a6d03285bab1813d39f26950968c200f1333baa95af4bef55f-104",
       "timestamp": 1625669705,
       "token": {
@@ -1255,6 +1312,25 @@
       }
     },
     {
+      "id": "0x09ccb68397130476987d026cd8e416f666eac1acc209e3cac9550ce55e35ee94-84",
+      "timestamp": 1650407696,
+      "token": {
+        "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+        "name": "Curve.fi renBTC/wBTC",
+        "symbol": "crvRenWBTC",
+        "decimals": "18",
+        "totalSupply": "15658355636934163612779"
+      },
+      "amount": "10934212816308",
+      "blockNumber": "14618290",
+      "strategy": {
+        "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+      },
+      "sett": {
+        "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+      }
+    },
+    {
       "id": "0x09ee97361158bebd2cb0214bc3fbc44a9553a5626caa5907b10369cefc12ded4-62",
       "timestamp": 1634246039,
       "token": {
@@ -1426,6 +1502,25 @@
       }
     },
     {
+      "id": "0x0b9d87475872b72160f667f828fa6f7c654bdb900d91a9d096d447659f6abfe9-8",
+      "timestamp": 1649810092,
+      "token": {
+        "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": "18",
+        "totalSupply": "52842757666481041544194387"
+      },
+      "amount": "5364611264103502885002",
+      "blockNumber": "14574036",
+      "strategy": {
+        "id": "0x898111d1f4eb55025d0036568212425ee2274082"
+      },
+      "sett": {
+        "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
+      }
+    },
+    {
       "id": "0x0b9ec3619b260161e748360cc12307e0af64c2402986744e983fb75e64da46f9-99",
       "timestamp": 1615136286,
       "token": {
@@ -1556,6 +1651,25 @@
       },
       "sett": {
         "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
+      }
+    },
+    {
+      "id": "0x0d0018e3db3dbc7a71626da6c14774b75dc3db793102973c1d1ee45ef528f6d3-67",
+      "timestamp": 1649352963,
+      "token": {
+        "id": "0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b",
+        "name": "Curve.fi Factory BTC Metapool: ibBTC",
+        "symbol": "ibbtc/sbtcCRV-f",
+        "decimals": "18",
+        "totalSupply": "6093108987423850666"
+      },
+      "amount": "0",
+      "blockNumber": "14540092",
+      "strategy": {
+        "id": "0x6d4ba00fd7bb73b5aa5b3d6180c6f1b0c89f70d1"
+      },
+      "sett": {
+        "id": "0xae96ff08771a109dc6650a1bdca62f2d558e40af"
       }
     },
     {
@@ -1711,6 +1825,25 @@
       }
     },
     {
+      "id": "0x0e552c48d2c6da4d21212db93f8641571deccf04388f70a25059d3e85dc82aa2-91",
+      "timestamp": 1650432974,
+      "token": {
+        "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
+        "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+        "symbol": "BADGERWBTC-f",
+        "decimals": "18",
+        "totalSupply": "934583239195053317500"
+      },
+      "amount": "0",
+      "blockNumber": "14620044",
+      "strategy": {
+        "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
+      },
+      "sett": {
+        "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
+      }
+    },
+    {
       "id": "0x0f0043c85318ac07a07d87fef99a5887d42113c29703800e464bff07dc4edc11-262",
       "timestamp": 1632199323,
       "token": {
@@ -1765,139 +1898,6 @@
       },
       "sett": {
         "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
-      }
-    },
-    {
-      "id": "0x0f2a8597de38bece71d259a30a580f0ea6b6f2ffc7aea0dd0a36c0c697947ab1-76",
-      "timestamp": 1640380119,
-      "token": {
-        "id": "0x2fe94ea3d5d4a175184081439753de15aef9d614",
-        "name": "Curve.fi oBTC/sbtcCRV",
-        "symbol": "oBTC/sbtcCRV",
-        "decimals": "18",
-        "totalSupply": "902433786735183657157"
-      },
-      "amount": "39786301036982202",
-      "blockNumber": "13870228",
-      "strategy": {
-        "id": "0x5dd69c6d81f0a403c03b99c5a44ef2d49b66d388"
-      },
-      "sett": {
-        "id": "0xf349c0faa80fc1870306ac093f75934078e28991"
-      }
-    },
-    {
-      "id": "0x0f3b80b7a04ca52119ceb3ca5d20738d8bc59c4dcbda2e20262b75c2893c8868-151",
-      "timestamp": 1624051485,
-      "token": {
-        "id": "0x110492b31c59716ac47337e616804e3e3adc0b4a",
-        "name": "SushiSwap LP Token",
-        "symbol": "SLP",
-        "decimals": "18",
-        "totalSupply": "5595631134519541"
-      },
-      "amount": "0",
-      "blockNumber": "12660791",
-      "strategy": {
-        "id": "0x3a494d79aa78118795daad8aeff5825c6c8df7f1"
-      },
-      "sett": {
-        "id": "0x1862a18181346ebd9edaf800804f89190def24a5"
-      }
-    },
-    {
-      "id": "0x0f6da2745234cc2ed26939ae426270f39fa6a6dda1cf6761bedd9a5ed99b9af8-37",
-      "timestamp": 1627069875,
-      "token": {
-        "id": "0xe86204c4eddd2f70ee00ead6805f917671f56c52",
-        "name": "Uniswap V2",
-        "symbol": "UNI-V2",
-        "decimals": "18",
-        "totalSupply": "577067236"
-      },
-      "amount": "0",
-      "blockNumber": "12884601",
-      "strategy": {
-        "id": "0xadc8d7322f2e284c1d9254170dbe311e9d3356cf"
-      },
-      "sett": {
-        "id": "0xc17078fdd324cc473f8175dc5290fae5f2e84714"
-      }
-    },
-    {
-      "id": "0x0f7dbdff232385f6b55c11648056ede8d3a2cf3b06d5eab875494edf70d0f9d7-159",
-      "timestamp": 1637346842,
-      "token": {
-        "id": "0xb19059ebb43466c323583928285a49f558e572fd",
-        "name": "Curve.fi hBTC/wBTC",
-        "symbol": "hCRV",
-        "decimals": "18",
-        "totalSupply": "12577572837796719828290"
-      },
-      "amount": "137139696615753579",
-      "blockNumber": "13647161",
-      "strategy": {
-        "id": "0x8c26d9b6b80684cc642ed9eb1ac1729af3e819ee"
-      },
-      "sett": {
-        "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4"
-      }
-    },
-    {
-      "id": "0x0f98f0285e8aa8cf7209dd423b6bd89c2be228e11a76804728b39582cc48143e-147",
-      "timestamp": 1611414952,
-      "token": {
-        "id": "0x9a13867048e01c663ce8ce2fe0cdae69ff9f35e3",
-        "name": "SushiSwap LP Token",
-        "symbol": "SLP",
-        "decimals": "18",
-        "totalSupply": "777109683"
-      },
-      "amount": "209849590",
-      "blockNumber": "11712563",
-      "strategy": {
-        "id": "0xaa8dddfe7dfa3c3269f1910d89e4413dd006d08a"
-      },
-      "sett": {
-        "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6"
-      }
-    },
-    {
-      "id": "0x0fc768be2d26408b365e14b6309b2804973ed0c6701d68e1642e755dddc61061-347",
-      "timestamp": 1631490301,
-      "token": {
-        "id": "0x18d98d452072ac2eb7b74ce3db723374360539f1",
-        "name": "SushiSwap LP Token",
-        "symbol": "SLP",
-        "decimals": "18",
-        "totalSupply": "124685896106164"
-      },
-      "amount": "0",
-      "blockNumber": "13214016",
-      "strategy": {
-        "id": "0xf4146a176b09c664978e03d28d07db4431525dad"
-      },
-      "sett": {
-        "id": "0x8a8ffec8f4a0c8c9585da95d9d97e8cd6de273de"
-      }
-    },
-    {
-      "id": "0x0fde871d95ce0280585eda95bf6cfdac0c4c066bdbe4f0b3a80f53ed3aeb246d-169",
-      "timestamp": 1632636589,
-      "token": {
-        "id": "0x62b9c7356a2dc64a1969e19c23e4f579f9810aa7",
-        "name": "Convex CRV",
-        "symbol": "cvxCRV",
-        "decimals": "18",
-        "totalSupply": "45185844558963557078365591"
-      },
-      "amount": "5319582077062943263840",
-      "blockNumber": "13299762",
-      "strategy": {
-        "id": "0x826048381d65a65daa51342c51d464428d301896"
-      },
-      "sett": {
-        "id": "0x2b5455aac8d64c14786c3a29858e43b5945819c0"
       }
     }
   ]

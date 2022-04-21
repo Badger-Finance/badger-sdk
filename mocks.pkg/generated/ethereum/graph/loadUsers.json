@@ -3241,12 +3241,12 @@
           "sett": {
             "id": "0x599d92b453c010b1050d31c364f6ee17e819f193"
           },
-          "netDeposit": "273885929872336433",
-          "netShareDeposit": "272930959255760143",
+          "netDeposit": "-1222575539213306",
+          "netShareDeposit": "0",
           "grossDeposit": "273885929872336433",
           "grossShareDeposit": "272930959255760143",
-          "grossWithdraw": "0",
-          "grossShareWithdraw": "0"
+          "grossWithdraw": "275108505411549739",
+          "grossShareWithdraw": "272930959255760143"
         }
       ]
     },

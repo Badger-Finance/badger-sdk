@@ -12,21 +12,30 @@ import { Currency } from './enums';
 import { ApiError } from './api.error';
 import { EmissionSchedule } from '../rewards';
 import { getNetworkConfig } from '../config/network/network.config';
+import { CitadelTreasurySummary } from './interfaces/citadel-treasury-summary.interface';
 
-export const DEFAULT_API_URL = 'https://api.badger.com/v2';
+export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
+export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
+  private readonly citadelClient: AxiosInstance;
   private network: Network;
   public baseURL: string;
+  public citadelBaseURL: string;
 
   constructor({
+    baseURL = DEFAULT_BADGER_API_URL,
+    citadelBaseURL = DEFAULT_CITADEL_API_URL,
     network = Network.Ethereum,
-    baseURL = DEFAULT_API_URL,
   }: i.APIOptions) {
     this.baseURL = baseURL;
+    this.citadelBaseURL = citadelBaseURL;
     this.client = axios.create({
       baseURL,
+    });
+    this.citadelClient = axios.create({
+      baseURL: citadelBaseURL,
     });
     const lookupNetwork = this.isLocal(network) ? Network.Ethereum : network;
     this.network = getNetworkConfig(lookupNetwork).network;
@@ -36,14 +45,14 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<PriceSummary> {
-    return this.get('prices', {
+    return this.get('/prices', {
       chain: network ?? this.network,
       currency,
     });
   }
 
   loadRewardTree(address: string, network?: Network): Promise<i.RewardTree> {
-    return this.get(`reward/tree/${address}`, {
+    return this.get(`/reward/tree/${address}`, {
       chain: network ?? this.network,
     });
   }
@@ -63,14 +72,14 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.VaultDTO> {
-    return this.get(`vaults/${address}`, {
+    return this.get(`/vaults/${address}`, {
       chain: network ?? this.network,
       currency,
     });
   }
 
   loadSetts(currency = Currency.USD, network?: Network): Promise<i.VaultDTO[]> {
-    return this.get('setts', {
+    return this.get('/setts', {
       chain: network ?? this.network,
       currency,
     });
@@ -94,39 +103,39 @@ export class BadgerAPI {
   }
 
   loadTokens(network?: Network): Promise<TokenConfiguration> {
-    return this.get('tokens', {
+    return this.get('/tokens', {
       chain: network ?? this.network,
     });
   }
 
   loadProof(address: string, network?: Network): Promise<MerkleProof> {
-    return this.get(`proofs/${address}`, {
+    return this.get(`/proofs/${address}`, {
       chain: network ?? this.network,
     });
   }
 
   loadGasPrices(network?: Network): Promise<GasPrices> {
-    return this.get('gas', {
+    return this.get('/gas', {
       chain: network ?? this.network,
     });
   }
 
   loadProtocolMetrics(): Promise<i.ProtocolMetrics> {
-    return this.get('metrics');
+    return this.get('/metrics');
   }
 
   loadProtocolSummary(
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.ProtocolSummary> {
-    return this.get('value', {
+    return this.get('/value', {
       chain: network ?? this.network,
       currency,
     });
   }
 
   loadLeaderboardSummary(network?: Network): Promise<i.LeaderboardSummary> {
-    return this.get('leaderboards', {
+    return this.get('/leaderboards', {
       chain: network ?? this.network,
     });
   }
@@ -166,12 +175,17 @@ export class BadgerAPI {
     });
   }
 
+  loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
+    return this.get('/treasury', {}, this.citadelClient);
+  }
+
   private async get<T>(
     path: string,
     params: Record<string, string | number | void> = {},
+    client: AxiosInstance = this.client,
   ): Promise<T> {
     try {
-      const { data } = await this.client.get(path, {
+      const { data } = await client.get(path, {
         params,
       });
       return data as T;

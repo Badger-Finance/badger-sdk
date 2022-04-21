@@ -7,6 +7,10 @@ const polygonArgsConfigBase = objDeepCopy<ServicesArgsConfig>(baseArgsConfig);
 
 export const polygonArgsConfig = {
   ...polygonArgsConfigBase,
+  [SdkServices.Api]: {
+    ...polygonArgsConfigBase[SdkServices.Api],
+    loadCitadelTreasury: { ignore: true },
+  },
   [SdkServices.Digg]: {
     convert: { ignore: true },
   },

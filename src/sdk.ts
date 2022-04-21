@@ -37,7 +37,7 @@ export class BadgerSDK {
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
 
-  constructor({ network, provider, baseURL }: SDKOptions) {
+  constructor({ network, provider, baseURL, citadelBaseURL }: SDKOptions) {
     const sdkProvider = BadgerSDK.getSdkProvider(provider);
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
@@ -46,6 +46,7 @@ export class BadgerSDK {
     this.api = new BadgerAPI({
       network: this.config.network,
       baseURL,
+      citadelBaseURL,
     });
     this.graph = new BadgerGraph({
       network: this.config.network,
@@ -76,6 +77,7 @@ export class BadgerSDK {
     this.api = new BadgerAPI({
       network: this.config.network,
       baseURL: this.api.baseURL,
+      citadelBaseURL: this.api.citadelBaseURL,
     });
     this.graph = new BadgerGraph({
       network: this.config.network,
