@@ -46,7 +46,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadVaults: { args: [] },
     loadVault: { args: [vaults.BCVX.addr] },
     loadSetts: { args: [] },
-    // TODO: enable once fix is in 
+    // TODO: enable once fix is in
     loadSett: { args: [vaults.BCVX.addr], ignore: true },
     loadAccount: { args: [badgerWhale] },
     loadTokens: { args: [] },
@@ -60,6 +60,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadSchedule: { args: [vaults.BCVX.addr] },
     get: { ignore: true },
     isLocal: { ignore: true },
+    loadCitadelTreasury: { ignore: true },
   },
   [SdkServices.Vaults]: {
     loadVaults: { args: [] },
