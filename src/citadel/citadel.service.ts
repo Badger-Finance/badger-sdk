@@ -26,7 +26,10 @@ export class CitadelService extends Service {
     if (!this.minter) {
       throw new Error(`Minter not defined for ${this.config.network}`);
     }
-    return SupplySchedule__factory.connect(await this.minter.supplySchedule(), this.provider);
+    return SupplySchedule__factory.connect(
+      await this.minter.supplySchedule(),
+      this.provider,
+    );
   }
 
   private init() {

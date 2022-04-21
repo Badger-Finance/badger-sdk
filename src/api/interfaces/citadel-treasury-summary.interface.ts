@@ -1,4 +1,4 @@
-import { TreasuryPosition } from "./treasy-position.interface";
+import { TreasuryPosition } from './treasy-position.interface';
 
 export interface CitadelTreasurySummary {
   address: string;
