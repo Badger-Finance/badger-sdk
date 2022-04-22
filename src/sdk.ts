@@ -13,6 +13,7 @@ import { RegistryService } from './registry/registry.service';
 import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
+import { CitadelService } from './citadel';
 
 import { getNetworkConfig, NetworkConfig, SDKProvider } from './config';
 
@@ -36,6 +37,7 @@ export class BadgerSDK {
   readonly rewards: RewardsService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
+  readonly citadel: CitadelService;
 
   constructor({ network, provider, baseURL, citadelBaseURL }: SDKOptions) {
     const sdkProvider = BadgerSDK.getSdkProvider(provider);
@@ -57,6 +59,7 @@ export class BadgerSDK {
     this.rewards = new RewardsService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);
+    this.citadel = new CitadelService(this);
   }
 
   ready() {
