@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.6.1...sdk-mocks-v1.7.0) (2022-04-22)
+
+
+### Features
+
+* **citadel:** citadel service ([6e140fa](https://github.com/Badger-Finance/badger-sdk/commit/6e140faf4b1e17c85f2b7353f911a1d1725d3091))
+
 ## [1.6.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.6.0...sdk-mocks-v1.6.1) (2022-04-21)
 
 
