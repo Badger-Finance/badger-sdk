@@ -1,28 +1,20 @@
-import { CitadelDistributionToStakingEvent } from '../contracts/CitadelMinter';
 import { MinterDistributionEvent } from './interfaces/minter-distribution-event.interface';
 import { TimeRangeOptions } from '../common';
 import { MinterDistributionData } from './interfaces/minter-distribution-data.interface';
 import { timestampInRange } from '../vaults/vaults.utils';
 import { keyBy } from '../utils';
-import { ListRewardsEvent } from './interfaces/list-rewards-event.interface';
-import {
-  RewardAddedEvent,
-  RewardPaidEvent,
-} from '../contracts/StakedCitadelLocker';
+import { TypedEvent } from '../contracts/common';
+import { Block } from '@ethersproject/abstract-provider';
 
-export function parseDistributionsEvents(
-  events: CitadelDistributionToStakingEvent[],
-): Promise<MinterDistributionEvent[]> {
+export function parseTypedEvents<T extends TypedEvent, R>(
+  events: T[],
+  formatter: (event: T, block: Block) => R,
+): Promise<R[]> {
   return Promise.all(
     events.map(async (e) => {
       const block = await e.getBlock();
 
-      return {
-        block: block.number,
-        startTime: e.args[0].toNumber(),
-        endTime: e.args[1].toNumber(),
-        citadelAmount: e.args[2],
-      };
+      return formatter(e, block);
     }),
   );
 }
@@ -46,37 +38,4 @@ export function evaluateDistributionEvents<T extends TimeRangeOptions>(
   }
 
   return distTimeOrderedMap;
-}
-
-export function parseAddedRewardEvents(
-  events: RewardAddedEvent[],
-): Promise<ListRewardsEvent[]> {
-  return Promise.all(
-    events.map(async (e) => {
-      const block = await e.getBlock();
-
-      return {
-        block: block.number,
-        token: e.args[0],
-        reward: e.args[1],
-      };
-    }),
-  );
-}
-
-export function parsePaidRewardEvents(
-  events: RewardPaidEvent[],
-): Promise<ListRewardsEvent[]> {
-  return Promise.all(
-    events.map(async (e) => {
-      const block = await e.getBlock();
-
-      return {
-        block: block.number,
-        user: e.args[0],
-        token: e.args[1],
-        reward: e.args[2],
-      };
-    }),
-  );
 }
