@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`citadel.service listDistributions should respect start block at param 1`] = `
+Object {
+  "1650727090814": Array [
+    Object {
+      "block": 52,
+      "citadelAmount": Object {
+        "hex": "0x087a22",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116602,
+      "startTime": 1650727090814,
+    },
+    Object {
+      "block": 52,
+      "citadelAmount": Object {
+        "hex": "0x0c",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116699,
+      "startTime": 1650727090814,
+    },
+  ],
+  "1650727090999": Array [
+    Object {
+      "block": 55,
+      "citadelAmount": Object {
+        "hex": "0x0c",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116699,
+      "startTime": 1650727090999,
+    },
+  ],
+}
+`;
+
+exports[`citadel.service listDistributions should return distribution events, mapped by time 1`] = `
+Object {
+  "1650726066923": Array [
+    Object {
+      "block": 50,
+      "citadelAmount": Object {
+        "hex": "0x1388",
+        "type": "BigNumber",
+      },
+      "endTime": 1650726976504,
+      "startTime": 1650726066923,
+    },
+    Object {
+      "block": 50,
+      "citadelAmount": Object {
+        "hex": "0x0159",
+        "type": "BigNumber",
+      },
+      "endTime": 1650726976509,
+      "startTime": 1650726066923,
+    },
+  ],
+  "1650727090814": Array [
+    Object {
+      "block": 52,
+      "citadelAmount": Object {
+        "hex": "0x087a22",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116602,
+      "startTime": 1650727090814,
+    },
+    Object {
+      "block": 52,
+      "citadelAmount": Object {
+        "hex": "0x0c",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116699,
+      "startTime": 1650727090814,
+    },
+  ],
+  "1650727090999": Array [
+    Object {
+      "block": 55,
+      "citadelAmount": Object {
+        "hex": "0x0c",
+        "type": "BigNumber",
+      },
+      "endTime": 1650727116699,
+      "startTime": 1650727090999,
+    },
+  ],
+}
+`;
+
+exports[`citadel.service listRewards should return added rewards 1`] = `
+Array [
+  Object {
+    "block": 50,
+    "reward": Object {
+      "hex": "0x64",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  },
+  Object {
+    "block": 50,
+    "reward": Object {
+      "hex": "0xc8",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  },
+  Object {
+    "block": 51,
+    "reward": Object {
+      "hex": "0x012c",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  },
+  Object {
+    "block": 52,
+    "reward": Object {
+      "hex": "0x0190",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  },
+  Object {
+    "block": 52,
+    "reward": Object {
+      "hex": "0x01f4",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  },
+]
+`;
+
+exports[`citadel.service listRewards should return paid rewards 1`] = `
+Array [
+  Object {
+    "block": 50,
+    "reward": Object {
+      "hex": "0x64",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+  },
+  Object {
+    "block": 50,
+    "reward": Object {
+      "hex": "0xc8",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+  },
+  Object {
+    "block": 51,
+    "reward": Object {
+      "hex": "0x012c",
+      "type": "BigNumber",
+    },
+    "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+  },
+]
+`;

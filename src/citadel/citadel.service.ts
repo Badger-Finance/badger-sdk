@@ -16,12 +16,7 @@ import {
   CitadelDistributionToStakingEventFilter,
 } from '../contracts/CitadelMinter';
 import { vaultBlockDeployedAt } from '../vaults/vaults.utils';
-import {
-  evaluateDistributionEvents,
-  parseAddedRewardEvents,
-  parseDistributionsEvents,
-  parsePaidRewardEvents,
-} from './citadel.utils';
+import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
 import { ListDistributionOptions } from './interfaces/list-distribution-options.interface';
 import { ListRewardsOptions } from './interfaces/list-rewards-options.interface';
 import { RewardFilter } from './enums/reward-filter.enum';
@@ -83,10 +78,21 @@ export class CitadelService extends Service {
       CitadelMinter,
       CitadelDistributionToStakingEventFilter,
       CitadelDistributionToStakingEvent
-    >(this.minter, distFilter, <number>startBlock, <number>endBlock);
+    >(
+      this.minter,
+      distFilter,
+      <number>options.startBlock,
+      <number>options.endBlock,
+    );
 
-    const distributions = await parseDistributionsEvents(
+    const distributions = await parseTypedEvents(
       distributionsToStaking,
+      (e, b) => ({
+        block: b.number,
+        startTime: e.args[0].toNumber(),
+        endTime: e.args[1].toNumber(),
+        citadelAmount: e.args[2],
+      }),
     );
 
     return evaluateDistributionEvents(distributions, options);
@@ -146,26 +152,49 @@ export class CitadelService extends Service {
 
     switch (filter) {
       case RewardFilter.ADDED:
+        if (!token) throw new Error('Token should be specified');
+
         const addedFilter = this.locker.filters.RewardAdded(token);
 
         const addedRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardAddedEventFilter,
           RewardAddedEvent
-        >(this.locker, addedFilter, <number>startBlock, <number>endBlock);
+        >(
+          this.locker,
+          addedFilter,
+          <number>options.startBlock,
+          <number>options.endBlock,
+        );
 
-        rewardEvents = await parseAddedRewardEvents(addedRewardEvents);
+        rewardEvents = await parseTypedEvents(addedRewardEvents, (e, b) => ({
+          block: b.number,
+          token: e.args[0],
+          reward: e.args[1],
+        }));
         break;
       case RewardFilter.PAID:
+        if (!user || !token) throw new Error('User or token param is missing');
+
         const paidFilter = this.locker.filters.RewardPaid(user, token);
 
         const paidRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardPaidEventFilter,
           RewardPaidEvent
-        >(this.locker, paidFilter, <number>startBlock, <number>endBlock);
+        >(
+          this.locker,
+          paidFilter,
+          <number>options.startBlock,
+          <number>options.endBlock,
+        );
 
-        rewardEvents = await parsePaidRewardEvents(paidRewardEvents);
+        rewardEvents = await parseTypedEvents(paidRewardEvents, (e, b) => ({
+          block: b.number,
+          user: e.args[0],
+          token: e.args[1],
+          reward: e.args[2],
+        }));
         break;
       default:
         throw new Error(`Unknown reward filter ${filter}`);

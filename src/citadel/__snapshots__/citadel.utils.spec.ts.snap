@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`evaluateDistributionEvents should map events by timestamp 1`] = `
+Object {
+  "1650711953853": Array [
+    Object {
+      "block": 10,
+      "citadelAmount": Object {
+        "hex": "0x64",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712062667,
+      "startTime": 1650711953853,
+    },
+    Object {
+      "block": 10,
+      "citadelAmount": Object {
+        "hex": "0x32",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712062667,
+      "startTime": 1650711953853,
+    },
+    Object {
+      "block": 10,
+      "citadelAmount": Object {
+        "hex": "0x0f41fe",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712062667,
+      "startTime": 1650711953853,
+    },
+  ],
+  "1650712126545": Array [
+    Object {
+      "block": 11,
+      "citadelAmount": Object {
+        "hex": "0x0f41fe",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712135672,
+      "startTime": 1650712126545,
+    },
+    Object {
+      "block": 11,
+      "citadelAmount": Object {
+        "hex": "0x020c1181",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712135672,
+      "startTime": 1650712126545,
+    },
+  ],
+  "1650712161976": Array [
+    Object {
+      "block": 12,
+      "citadelAmount": Object {
+        "hex": "0x020c1181",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712167379,
+      "startTime": 1650712161976,
+    },
+  ],
+}
+`;
+
+exports[`evaluateDistributionEvents should map events by timestamp, and filter them 1`] = `
+Object {
+  "1650712126545": Array [
+    Object {
+      "block": 11,
+      "citadelAmount": Object {
+        "hex": "0x0f41fe",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712135672,
+      "startTime": 1650712126545,
+    },
+    Object {
+      "block": 11,
+      "citadelAmount": Object {
+        "hex": "0x020c1181",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712135672,
+      "startTime": 1650712126545,
+    },
+  ],
+  "1650712161976": Array [
+    Object {
+      "block": 12,
+      "citadelAmount": Object {
+        "hex": "0x020c1181",
+        "type": "BigNumber",
+      },
+      "endTime": 1650712167379,
+      "startTime": 1650712161976,
+    },
+  ],
+}
+`;
+
+exports[`parseTypedEvents should give formatted events 1`] = `
+Array [
+  Object {
+    "block": 50,
+    "citadelAmount": Object {
+      "hex": "0x1388",
+      "type": "BigNumber",
+    },
+    "endTime": 1650726976504,
+    "startTime": 1650726066923,
+  },
+  Object {
+    "block": 50,
+    "citadelAmount": Object {
+      "hex": "0x0159",
+      "type": "BigNumber",
+    },
+    "endTime": 1650726976509,
+    "startTime": 1650726066923,
+  },
+  Object {
+    "block": 52,
+    "citadelAmount": Object {
+      "hex": "0x087a22",
+      "type": "BigNumber",
+    },
+    "endTime": 1650727116602,
+    "startTime": 1650727090814,
+  },
+  Object {
+    "block": 52,
+    "citadelAmount": Object {
+      "hex": "0x0c",
+      "type": "BigNumber",
+    },
+    "endTime": 1650727116699,
+    "startTime": 1650727090814,
+  },
+  Object {
+    "block": 55,
+    "citadelAmount": Object {
+      "hex": "0x0c",
+      "type": "BigNumber",
+    },
+    "endTime": 1650727116699,
+    "startTime": 1650727090999,
+  },
+]
+`;
