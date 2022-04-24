@@ -11,6 +11,7 @@ import { Network } from '../config/enums/network.enum';
 import { formatBalance } from '../tokens/tokens.utils';
 import { ClaimOptions } from './interfaces/claim-options.interface';
 import { DIGG_ADDRESS } from '../digg/digg.service';
+import { ethers } from 'ethers';
 
 export class RewardsService extends Service {
   private loading?: Promise<void>;
@@ -63,7 +64,7 @@ export class RewardsService extends Service {
         const { token, totalAmount, start, end, duration } = schedule;
         const tokenInfo = await this.sdk.tokens.loadToken(token);
         let amount = formatBalance(totalAmount, tokenInfo.decimals);
-        if (network === Network.Ethereum && token === DIGG_ADDRESS) {
+        if (network === Network.Ethereum && ethers.utils.getAddress(token) === DIGG_ADDRESS) {
           amount = await this.sdk.digg.convert(totalAmount);
         }
 
