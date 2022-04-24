@@ -1,4 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
+import { ethers } from 'ethers';
 import { Network } from '../config/enums/network.enum';
 import { Digg } from '../contracts/Digg';
 import { Digg__factory } from '../contracts/factories/Digg__factory';
@@ -6,7 +7,7 @@ import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
 
-export const DIGG_ADDRESS = '0x798d1be841a82a273720ce31c822c61a67a601c3';
+export const DIGG_ADDRESS = ethers.utils.getAddress('0x798D1bE841a82a273720CE31c822C61a67a601C3');
 
 export class DiggService extends Service {
   private digg?: Digg;
