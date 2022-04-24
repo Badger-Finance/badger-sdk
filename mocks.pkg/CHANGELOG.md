@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.7.0...sdk-mocks-v1.7.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* digg addr matching ([69ba8c1](https://github.com/Badger-Finance/badger-sdk/commit/69ba8c1f72e9a3277864f587e7030f45c35d43ad))
+
 # [1.7.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.6.1...sdk-mocks-v1.7.0) (2022-04-22)
 
 
