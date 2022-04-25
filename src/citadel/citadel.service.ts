@@ -27,6 +27,7 @@ import {
   RewardPaidEvent,
   RewardPaidEventFilter,
 } from '../contracts/StakedCitadelLocker';
+import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
 
 const citadelMinterAddress = '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
 const stakedCitadelLockerAddress = '0x8b9AAb4BE7b25D7794386F8CC217f2d8a9498ee9';
@@ -275,6 +276,23 @@ export class CitadelService extends Service {
     }
 
     return this.locker.boostedSupply();
+  }
+
+  async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
+    if (!this.minter) {
+      throw new Error(`Minter not defined for ${this.config.network}`);
+    }
+    const [fundingBps, stakingBps, lockingBps] = await Promise.all([
+      this.minter.fundingBps(),
+      this.minter.stakingBps(),
+      this.minter.lockingBps(),
+    ]);
+
+    return {
+      fundingBps: fundingBps.toNumber(),
+      stakingBps: stakingBps.toNumber(),
+      lockingBps: lockingBps.toNumber(),
+    };
   }
 
   #init() {
