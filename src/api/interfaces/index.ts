@@ -1,6 +1,7 @@
 export { APIOptions } from './api-options.interface';
 export { Account } from './account.interface';
 export { BoostConfig } from './boost-config.interface';
+export { CitadelTreasurySummary } from './citadel-treasury-summary.interface';
 export { GasFees } from './gas-fees.interface';
 export { LeaderBoardData } from './leaderboard-data.interface';
 export { LeaderboardSummary } from './leaderboard-summary.interface';
