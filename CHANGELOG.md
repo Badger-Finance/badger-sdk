@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.7.1...v1.7.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* add funding rate support ([7a56645](https://github.com/Badger-Finance/badger-sdk/commit/7a5664539cd7c47881f5a5a4421118791d960d1a))
+
 ## [1.7.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.7.0...v1.7.1) (2022-04-24)
 
 
