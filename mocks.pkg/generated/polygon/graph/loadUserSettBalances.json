@@ -1478,12 +1478,12 @@
       "sett": {
         "id": "0x7b6bfb88904e4b3a6d239d5ed8adf557b22c10fc"
       },
-      "netDeposit": "15333130201286",
-      "netShareDeposit": "15303687460484",
+      "netDeposit": "-19587294474",
+      "netShareDeposit": "0",
       "grossDeposit": "15333130201286",
       "grossShareDeposit": "15303687460484",
-      "grossWithdraw": "0",
-      "grossShareWithdraw": "0"
+      "grossWithdraw": "15352717495760",
+      "grossShareWithdraw": "15303687460484"
     },
     {
       "id": "0xbf44aecde2dfff3a698185e24bd9c7a5d0a03af2-0xea8567d84e3e54b32176418b4e0c736b56378961",
@@ -1493,12 +1493,12 @@
       "sett": {
         "id": "0xea8567d84e3e54b32176418b4e0c736b56378961"
       },
-      "netDeposit": "10403187",
-      "netShareDeposit": "10370438",
+      "netDeposit": "-505",
+      "netShareDeposit": "0",
       "grossDeposit": "10403187",
       "grossShareDeposit": "10370438",
-      "grossWithdraw": "0",
-      "grossShareWithdraw": "0"
+      "grossWithdraw": "10403692",
+      "grossShareWithdraw": "10370438"
     }
   ]
 }

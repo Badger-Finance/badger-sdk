@@ -1350,6 +1350,44 @@
       }
     },
     {
+      "id": "0x070cb7e79a24f7232609044224c4b14880767a5336f1216aa2d267fac0f7de08-63",
+      "timestamp": 1650755062,
+      "token": {
+        "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
+        "name": "Badger Sett Convex CRV",
+        "symbol": "bcvxCRV",
+        "decimals": "18",
+        "totalSupply": "9680860937976920554007"
+      },
+      "amount": "1504412763506179614473",
+      "blockNumber": "14643915",
+      "strategy": {
+        "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+      },
+      "sett": {
+        "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+      }
+    },
+    {
+      "id": "0x070cb7e79a24f7232609044224c4b14880767a5336f1216aa2d267fac0f7de08-73",
+      "timestamp": 1650755062,
+      "token": {
+        "id": "0x0xfd05d3c7fe2924020620a8be4961bbaa747e6305",
+        "name": "Badger Vested Escrow Convex Token",
+        "symbol": "bveCVX",
+        "decimals": "18",
+        "totalSupply": "1146328308588079160439895"
+      },
+      "amount": "110816391627898260975",
+      "blockNumber": "14643915",
+      "strategy": {
+        "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+      },
+      "sett": {
+        "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+      }
+    },
+    {
       "id": "0x074f9e41766c5fb3aded1b21dcdd6495fe8c1aeff8a3eae0355c871ce7d7926f-127",
       "timestamp": 1627654727,
       "token": {
@@ -1855,44 +1893,6 @@
       },
       "amount": "119496821916576497930",
       "blockNumber": "13477294",
-      "strategy": {
-        "id": "0xff26f400e57bf726822eacbb64fa1c52f1f27988"
-      },
-      "sett": {
-        "id": "0x8c76970747afd5398e958bdfada4cf0b9fca16c4"
-      }
-    },
-    {
-      "id": "0x0b9d87475872b72160f667f828fa6f7c654bdb900d91a9d096d447659f6abfe9-7",
-      "timestamp": 1649810092,
-      "token": {
-        "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
-        "name": "Badger Sett Convex CRV",
-        "symbol": "bcvxCRV",
-        "decimals": "18",
-        "totalSupply": "9680860937976920554007"
-      },
-      "amount": "3789842914740206192121",
-      "blockNumber": "14574036",
-      "strategy": {
-        "id": "0x898111d1f4eb55025d0036568212425ee2274082"
-      },
-      "sett": {
-        "id": "0xfd05d3c7fe2924020620a8be4961bbaa747e6305"
-      }
-    },
-    {
-      "id": "0x0ba8b6d33fd818c1017d0bac7e15259558575124042e60f435e9ed5be1f950bd-266",
-      "timestamp": 1631093562,
-      "token": {
-        "id": "0x0x2b5455aac8d64c14786c3a29858e43b5945819c0",
-        "name": "Badger Sett Convex CRV",
-        "symbol": "bcvxCRV",
-        "decimals": "18",
-        "totalSupply": "9680860937976920554007"
-      },
-      "amount": "1135584857602619029967",
-      "blockNumber": "13184319",
       "strategy": {
         "id": "0xff26f400e57bf726822eacbb64fa1c52f1f27988"
       },

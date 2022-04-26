@@ -7,7 +7,9 @@ import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
 
-export const DIGG_ADDRESS = ethers.utils.getAddress('0x798D1bE841a82a273720CE31c822C61a67a601C3');
+export const DIGG_ADDRESS = ethers.utils.getAddress(
+  '0x798D1bE841a82a273720CE31c822C61a67a601C3',
+);
 
 export class DiggService extends Service {
   private digg?: Digg;

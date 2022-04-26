@@ -8,8 +8,7 @@ async function getVaultPerformance() {
   // construct the sdk for whatever network you want to interact with
   const sdk = new BadgerSDK({
     network: Network.Ethereum,
-    provider:
-      'https://eth-archival.gateway.pokt.network/v1/lb/<APP_ID>',
+    provider: 'https://eth-archival.gateway.pokt.network/v1/lb/<APP_ID>',
   });
   await sdk.ready();
 
@@ -37,6 +36,7 @@ async function getVaultPerformance() {
 
   const allRecentHarvests = await sdk.vaults.listHarvests({
     address: vault.address,
+    version: VaultVersion.v1,
   });
   console.log(allRecentHarvests);
 }

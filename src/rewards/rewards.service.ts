@@ -64,7 +64,10 @@ export class RewardsService extends Service {
         const { token, totalAmount, start, end, duration } = schedule;
         const tokenInfo = await this.sdk.tokens.loadToken(token);
         let amount = formatBalance(totalAmount, tokenInfo.decimals);
-        if (network === Network.Ethereum && ethers.utils.getAddress(token) === DIGG_ADDRESS) {
+        if (
+          network === Network.Ethereum &&
+          ethers.utils.getAddress(token) === DIGG_ADDRESS
+        ) {
           amount = await this.sdk.digg.convert(totalAmount);
         }
 

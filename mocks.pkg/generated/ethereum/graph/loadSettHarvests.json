@@ -989,6 +989,25 @@
       }
     },
     {
+      "id": "0x070cb7e79a24f7232609044224c4b14880767a5336f1216aa2d267fac0f7de08-74",
+      "timestamp": 1650755062,
+      "token": {
+        "id": "0x49849c98ae39fff122806c06791fa73784fb3675",
+        "name": "Curve.fi renBTC/wBTC",
+        "symbol": "crvRenWBTC",
+        "decimals": "18",
+        "totalSupply": "15658355636934163612779"
+      },
+      "amount": "18480539932013",
+      "blockNumber": "14643915",
+      "strategy": {
+        "id": "0x61e16b46f74aed8f9c2ec6cb2dcb2258bdfc7071"
+      },
+      "sett": {
+        "id": "0x6def55d2e18486b9ddfaa075bc4e4ee0b28c1545"
+      }
+    },
+    {
       "id": "0x076a94ca50e2457c3a2c772ed89765caa773b82599d117916330f704347a3fd0-321",
       "timestamp": 1609285083,
       "token": {
@@ -1879,25 +1898,6 @@
       },
       "sett": {
         "id": "0x88128580acdd9c04ce47afce196875747bf2a9f6"
-      }
-    },
-    {
-      "id": "0x0f14178a22493f67cd4a954afe10edcf6e6fb049cf084a7a0980f0e032c7e4ec-26",
-      "timestamp": 1648838483,
-      "token": {
-        "id": "0x137469b55d1f15651ba46a89d0588e97dd0b6562",
-        "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
-        "symbol": "BADGERWBTC-f",
-        "decimals": "18",
-        "totalSupply": "934583239195053317500"
-      },
-      "amount": "0",
-      "blockNumber": "14502043",
-      "strategy": {
-        "id": "0x1905fd2d2d09792ee058c2b46a05f11630a1eca1"
-      },
-      "sett": {
-        "id": "0xec1c717a3b02582a4aa2275260c583095536b613"
       }
     }
   ]

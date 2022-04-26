@@ -1,6 +1,6 @@
 {
   "address": "0x38724146C8dc1Aa49c3395091cf86B789c37F52c",
-  "marketCapToTreasuryRatio": 0,
+  "marketCapToTreasuryRatio": 137.23344041929823,
   "positions": [
     {
       "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
@@ -8,9 +8,7 @@
       "symbol": "BADGER",
       "decimals": 18,
       "balance": 4,
-      "value": 36.04,
-      "protocol": "none",
-      "apr": 0
+      "value": 35.56
     },
     {
       "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -18,9 +16,7 @@
       "symbol": "WBTC",
       "decimals": 8,
       "balance": 0.002,
-      "value": 82.51,
-      "protocol": "none",
-      "apr": 0
+      "value": 77.546
     },
     {
       "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -28,9 +24,7 @@
       "symbol": "USDC",
       "decimals": 6,
       "balance": 50,
-      "value": 49.962450000000004,
-      "protocol": "none",
-      "apr": 0
+      "value": 49.82105
     },
     {
       "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
@@ -38,9 +32,15 @@
       "symbol": "FRAX",
       "decimals": 18,
       "balance": 50,
-      "value": 49.94925,
-      "protocol": "none",
-      "apr": 0
+      "value": 49.90715
+    },
+    {
+      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+      "name": "Convex Token",
+      "symbol": "CVX",
+      "decimals": 18,
+      "balance": 1e-13,
+      "value": 2.498e-12
     },
     {
       "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
@@ -48,9 +48,7 @@
       "symbol": "bveCVX",
       "decimals": 18,
       "balance": 2,
-      "value": 58.82,
-      "protocol": "Badger",
-      "apr": 33.51192242106204
+      "value": 49.96
     },
     {
       "address": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
@@ -58,14 +56,15 @@
       "symbol": "bibbtc/sbtcCRV-f",
       "decimals": 18,
       "balance": 0.0005,
-      "value": 20.488879607556903,
-      "protocol": "Badger",
-      "apr": 34.12782953380969
+      "value": 19.7389776390215
     }
   ],
-  "value": 297.7705796075569,
-  "valueBtc": 0.007217805832203537,
+  "value": 282.53317763902396,
+  "valueBtc": 0.007285726234276901,
   "valuePaid": 0,
   "valuePaidBtc": 0,
-  "yield": 8.968019174062656
+  "yield": 8.862253204122249,
+  "fundingBps": 0,
+  "stakingBps": 0,
+  "lockingBps": 0
 }

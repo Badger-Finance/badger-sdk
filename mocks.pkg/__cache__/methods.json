@@ -12,7 +12,7 @@
   },
   "rewards": {
     "loadActiveSchedules": "j5HeeSPBYfM7zWN+ap/oUPj3GkOIKx7uANnVzT3rEzM=",
-    "loadSchedules": "1EFwI7C+/flvd9x3ZMWbOBpl+bQEno4keXIdnmXqSbE="
+    "loadSchedules": "ngtJD7sEDkUAJJLCvaoUTkf3hYZ3p47/Y+VVVI7YG+Q="
   },
   "tokens": {
     "loadTokens": "S3nLsTRU+tsjtywZI59kuOoW12AE2JiVSDp6qrh6Ilg=",
@@ -64,6 +64,8 @@
     "loadSchedules": "8WNLxdmjYBqS1YkX5xstIDqaKgDpqgPmZgtEsOmFmrk=",
     "loadSchedule": "4QcCqv6I/ExwLQGwuRrWiqRk9xjRZFr2M1eHW7OIAKs=",
     "loadCitadelTreasury": "S613GUlf6rG3WhQ1fQ3fOIBuEktctSK2hJfIj9baZVc=",
+    "loadCitadelUserTotalRewards": "DszovqnRRi8P6b4q3gnFzmUw00Zk+T3wP5GdQYxHPOQ=",
+    "loadCitadelTreasuryCharts": "a0Mb4a4B2MQrvF54qdRky+2ZCmmGJVniDw6esJ1fX5o=",
     "get": "8cYvNHf+c4+rMHExBF8aKWdG0E1/hAFRvwbv5B2tTek=",
     "isLocal": "LikXH4bOSy80KIajaxKGZeeD0ArkTLrHQglvcbGYqgw="
   }

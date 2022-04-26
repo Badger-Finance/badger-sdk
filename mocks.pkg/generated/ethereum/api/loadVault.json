@@ -5,9 +5,9 @@
   "state": "discontinued",
   "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
   "vaultToken": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-  "value": 1275826.3,
+  "value": 1075527.41,
   "available": 0,
-  "balance": 43410.21788409838,
+  "balance": 43228.593704674975,
   "protocol": "Convex",
   "pricePerFullShare": 1.0957988590667325,
   "tokens": [
@@ -16,8 +16,8 @@
       "name": "Convex Token",
       "symbol": "CVX",
       "decimals": 18,
-      "balance": 43410.21788409838,
-      "value": 1275826.3036136515
+      "balance": 43228.593704674975,
+      "value": 1075095.1254352666
     }
   ],
   "apr": 0,
