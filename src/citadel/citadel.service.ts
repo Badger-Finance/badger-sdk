@@ -144,7 +144,7 @@ export class CitadelService extends Service {
       endBlock,
       user,
       token,
-      filter = RewardFilter.PAID,
+      filter = RewardFilter.ADDED,
     } = options;
 
     if (!startBlock) options.startBlock = deployedAt;
