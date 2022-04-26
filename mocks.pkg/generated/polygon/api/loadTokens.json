@@ -1,10 +1,10 @@
 {
-  "0x1FcbE5937B0cc2adf69772D228fA4205aCF4D9b2": {
-    "address": "0x1FcbE5937B0cc2adf69772D228fA4205aCF4D9b2",
-    "name": "Badger (PoS)",
-    "symbol": "BADGER",
-    "decimals": 18,
-    "lookupName": "badger-dao",
+  "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6": {
+    "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
+    "name": "(PoS) Wrapped BTC",
+    "symbol": "WBTC",
+    "decimals": 8,
+    "lookupName": "wrapped-bitcoin",
     "type": "LookupName"
   },
   "0x8F8e95Ff4B4c5E354ccB005c6B0278492D7B5907": {
@@ -14,6 +14,22 @@
     "decimals": 18,
     "lpToken": true,
     "type": "UniV2LP"
+  },
+  "0x27F8D03b3a2196956ED754baDc28D73be8830A6e": {
+    "address": "0x27F8D03b3a2196956ED754baDc28D73be8830A6e",
+    "name": "Aave Matic Market DAI",
+    "symbol": "amDAI",
+    "decimals": 18,
+    "lookupName": "aave-polygon-dai",
+    "type": "LookupName"
+  },
+  "0x60D55F02A771d515e077c9C2403a1ef324885CeC": {
+    "address": "0x60D55F02A771d515e077c9C2403a1ef324885CeC",
+    "name": "Aave Matic Market USDT",
+    "symbol": "amUSDT",
+    "decimals": 6,
+    "lookupName": "aave-polygon-usdt",
+    "type": "LookupName"
   },
   "0x7B6bfB88904e4B3A6d239d5Ed8adF557B22C10FC": {
     "address": "0x7B6bfB88904e4B3A6d239d5Ed8adF557B22C10FC",
@@ -26,36 +42,12 @@
       "network": "polygon"
     }
   },
-  "0x27F8D03b3a2196956ED754baDc28D73be8830A6e": {
-    "address": "0x27F8D03b3a2196956ED754baDc28D73be8830A6e",
-    "name": "Aave Matic Market DAI",
-    "symbol": "amDAI",
+  "0x1FcbE5937B0cc2adf69772D228fA4205aCF4D9b2": {
+    "address": "0x1FcbE5937B0cc2adf69772D228fA4205aCF4D9b2",
+    "name": "Badger (PoS)",
+    "symbol": "BADGER",
     "decimals": 18,
-    "lookupName": "aave-polygon-dai",
-    "type": "LookupName"
-  },
-  "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6": {
-    "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
-    "name": "(PoS) Wrapped BTC",
-    "symbol": "WBTC",
-    "decimals": 8,
-    "lookupName": "wrapped-bitcoin",
-    "type": "LookupName"
-  },
-  "0x60D55F02A771d515e077c9C2403a1ef324885CeC": {
-    "address": "0x60D55F02A771d515e077c9C2403a1ef324885CeC",
-    "name": "Aave Matic Market USDT",
-    "symbol": "amUSDT",
-    "decimals": 6,
-    "lookupName": "aave-polygon-usdt",
-    "type": "LookupName"
-  },
-  "0x28424507fefb6f7f8E9D3860F56504E4e5f5f390": {
-    "address": "0x28424507fefb6f7f8E9D3860F56504E4e5f5f390",
-    "name": "Aave Matic Market WETH",
-    "symbol": "amWETH",
-    "decimals": 18,
-    "lookupName": "aave-polygon-weth",
+    "lookupName": "badger-dao",
     "type": "LookupName"
   },
   "0x1a13F4Ca1d028320A707D99520AbFefca3998b7F": {
@@ -77,6 +69,28 @@
       "network": "polygon"
     }
   },
+  "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171": {
+    "address": "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
+    "name": "Curve.fi amDAI/amUSDC/amUSDT",
+    "symbol": "am3CRV",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0x28424507fefb6f7f8E9D3860F56504E4e5f5f390": {
+    "address": "0x28424507fefb6f7f8E9D3860F56504E4e5f5f390",
+    "name": "Aave Matic Market WETH",
+    "symbol": "amWETH",
+    "decimals": 18,
+    "lookupName": "aave-polygon-weth",
+    "type": "LookupName"
+  },
+  "0xf8a57c1d3b9629b77b6726a042ca48990A84Fb49": {
+    "address": "0xf8a57c1d3b9629b77b6726a042ca48990A84Fb49",
+    "name": "Curve.fi amWBTC/renBTC",
+    "symbol": "btcCRV",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
   "0xc2132D05D31c914a87C6611C10748AEb04B58e8F": {
     "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
     "name": "(PoS) Tether USD",
@@ -84,13 +98,6 @@
     "decimals": 6,
     "lookupName": "tether",
     "type": "LookupName"
-  },
-  "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171": {
-    "address": "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
-    "name": "Curve.fi amDAI/amUSDC/amUSDT",
-    "symbol": "am3CRV",
-    "decimals": 18,
-    "type": "CurveLP"
   },
   "0xF6a637525402643B0654a54bEAd2Cb9A83C8B498": {
     "address": "0xF6a637525402643B0654a54bEAd2Cb9A83C8B498",
@@ -111,12 +118,13 @@
       "network": "polygon"
     }
   },
-  "0xf8a57c1d3b9629b77b6726a042ca48990A84Fb49": {
-    "address": "0xf8a57c1d3b9629b77b6726a042ca48990A84Fb49",
-    "name": "Curve.fi amWBTC/renBTC",
-    "symbol": "btcCRV",
+  "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a": {
+    "address": "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a",
+    "name": "SushiToken (PoS)",
+    "symbol": "SUSHI",
     "decimals": 18,
-    "type": "CurveLP"
+    "lookupName": "sushi",
+    "type": "LookupName"
   },
   "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270": {
     "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
@@ -134,20 +142,20 @@
     "lookupName": "renbtc",
     "type": "LookupName"
   },
-  "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a": {
-    "address": "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a",
-    "name": "SushiToken (PoS)",
-    "symbol": "SUSHI",
+  "0x172370d5Cd63279eFa6d502DAB29171933a610AF": {
+    "address": "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
+    "name": "CRV (PoS)",
+    "symbol": "CRV",
     "decimals": 18,
-    "lookupName": "sushi",
+    "lookupName": "curve-dao-token",
     "type": "LookupName"
   },
-  "0x5c2ed810328349100A66B82b78a1791B101C9D61": {
-    "address": "0x5c2ed810328349100A66B82b78a1791B101C9D61",
-    "name": "Aave Matic Market WBTC",
-    "symbol": "amWBTC",
-    "decimals": 8,
-    "lookupName": "aave-polygon-wbtc",
+  "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063": {
+    "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
+    "name": "(PoS) Dai Stablecoin",
+    "symbol": "DAI",
+    "decimals": 18,
+    "lookupName": "dai",
     "type": "LookupName"
   },
   "0x4EaC4c4e9050464067D673102F8E24b2FccEB350": {
@@ -166,20 +174,12 @@
     "lookupName": "usd-coin",
     "type": "LookupName"
   },
-  "0x172370d5Cd63279eFa6d502DAB29171933a610AF": {
-    "address": "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
-    "name": "CRV (PoS)",
-    "symbol": "CRV",
-    "decimals": 18,
-    "lookupName": "curve-dao-token",
-    "type": "LookupName"
-  },
-  "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063": {
-    "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
-    "name": "(PoS) Dai Stablecoin",
-    "symbol": "DAI",
-    "decimals": 18,
-    "lookupName": "dai",
+  "0x5c2ed810328349100A66B82b78a1791B101C9D61": {
+    "address": "0x5c2ed810328349100A66B82b78a1791B101C9D61",
+    "name": "Aave Matic Market WBTC",
+    "symbol": "amWBTC",
+    "decimals": 8,
+    "lookupName": "aave-polygon-wbtc",
     "type": "LookupName"
   }
 }

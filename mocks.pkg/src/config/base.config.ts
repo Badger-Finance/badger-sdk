@@ -2,6 +2,7 @@ import { ServicesArgsConfig } from './struct.types.config';
 import { SdkServices } from '../enums';
 import { RegistryKey, VaultVersion } from '../../../src';
 import { BigNumber } from 'ethers';
+import { RewardFilter } from '../../../src/citadel/enums/reward-filter.enum';
 
 export const baseServiceArgsConfig = {
   provider: [],
@@ -36,6 +37,7 @@ export const vaults = {
 
 export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
+export const ibbtc = '0xaE96fF08771a109dc6650a1BdCa62F2d558E40af';
 
 export const lastIbBTCBlock = 14504479;
 
@@ -58,6 +60,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadSchedules: { args: [] },
     loadSchedule: { args: [vaults.BCVX.addr] },
     loadCitadelTreasury: { args: [] },
+    loadCitadelUserTotalRewards: { args: [ibbtc, ibbtc, RewardFilter.ADDED] },
+    loadCitadelTreasuryCharts: { args: [] },
     get: { ignore: true },
     isLocal: { ignore: true },
   },

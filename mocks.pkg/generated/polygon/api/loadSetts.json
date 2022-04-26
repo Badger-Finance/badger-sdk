@@ -6,27 +6,27 @@
     "state": "open",
     "underlyingToken": "0x8F8e95Ff4B4c5E354ccB005c6B0278492D7B5907",
     "vaultToken": "0xEa8567d84E3e54B32176418B4e0C736b56378961",
-    "value": 7125.39,
-    "available": 5.2861092041e-8,
-    "balance": 8.57838418488e-7,
+    "value": 6782.67,
+    "available": 5.2851208534e-8,
+    "balance": 8.57828014796e-7,
     "protocol": "Sushiswap",
-    "pricePerFullShare": 1.0032066441825864,
+    "pricePerFullShare": 1.0032066441829428,
     "tokens": [
       {
         "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
         "name": "(PoS) Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 0.08590770436063375,
-        "value": 3548.5036363203376
+        "balance": 0.0858154203557518,
+        "value": 3322.343999072931
       },
       {
         "address": "0x4EaC4c4e9050464067D673102F8E24b2FccEB350",
         "name": "Interest-Bearing BTC",
         "symbol": "ibBTC",
         "decimals": 18,
-        "balance": 0.08762277541038074,
-        "value": 3574.3082545402513
+        "balance": 0.08771511551102837,
+        "value": 3454.8352546328742
       }
     ],
     "apr": 0,
@@ -66,31 +66,31 @@
     "state": "open",
     "underlyingToken": "0xF6a637525402643B0654a54bEAd2Cb9A83C8B498",
     "vaultToken": "0x6B2d4c4bb50274c5D4986Ff678cC971c0260E967",
-    "value": 1673,
-    "available": 2.0155148e-11,
-    "balance": 3.4166708e-11,
+    "value": 641.54,
+    "available": 5.56405e-13,
+    "balance": 1.3536452e-11,
     "protocol": "Quickswap",
-    "pricePerFullShare": 1.0318348240811837,
+    "pricePerFullShare": 1.031834885099387,
     "tokens": [
       {
         "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
         "name": "(PoS) Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 0.020260619354021684,
-        "value": 836.8851430372197
+        "balance": 0.008317995371729175,
+        "value": 322.03119081649504
       },
       {
         "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
         "name": "USD Coin (PoS)",
         "symbol": "USDC",
         "decimals": 6,
-        "balance": 836.554816532893,
-        "value": 835.8387256099409
+        "balance": 320.22121234966073,
+        "value": 319.4696531642761
       }
     ],
-    "apr": 9.023668228937284,
-    "apy": 9.023668228937284,
+    "apr": 8.994902820145073,
+    "apy": 8.994902820145073,
     "boost": {
       "enabled": false,
       "weight": 0
@@ -98,19 +98,19 @@
     "sources": [
       {
         "name": "Quickswap LP Fees",
-        "apr": 9.023668228937284,
+        "apr": 8.994902820145073,
         "boostable": false,
-        "minApr": 9.023668228937284,
-        "maxApr": 9.023668228937284
+        "minApr": 8.994902820145073,
+        "maxApr": 8.994902820145073
       }
     ],
     "sourcesApy": [
       {
         "name": "Quickswap LP Fees",
-        "apr": 9.023668228937284,
+        "apr": 8.994902820145073,
         "boostable": false,
-        "minApr": 9.023668228937284,
-        "maxApr": 9.023668228937284
+        "minApr": 8.994902820145073,
+        "maxApr": 8.994902820145073
       }
     ],
     "bouncer": "none",
@@ -142,31 +142,31 @@
     "state": "open",
     "underlyingToken": "0xf8a57c1d3b9629b77b6726a042ca48990A84Fb49",
     "vaultToken": "0x7B6bfB88904e4B3A6d239d5Ed8adF557B22C10FC",
-    "value": 112,
-    "available": 1e-18,
-    "balance": 0.002715096299370975,
+    "value": 105.24,
+    "available": 0,
+    "balance": 0.002699743581875215,
     "protocol": "Curve",
-    "pricePerFullShare": 1.0032038053183698,
+    "pricePerFullShare": 1.00320380531837,
     "tokens": [
       {
         "address": "0x5c2ed810328349100A66B82b78a1791B101C9D61",
         "name": "Aave Matic Market WBTC",
         "symbol": "amWBTC",
         "decimals": 8,
-        "balance": 0.0011660732296829238,
-        "value": 47.94076869195405
+        "balance": 0.001126413565099105,
+        "value": 43.50096547056234
       },
       {
         "address": "0xDBf31dF14B66535aF65AaC99C32e9eA844e14501",
         "name": "renBTC",
         "symbol": "renBTC",
         "decimals": 8,
-        "balance": 0.0015731133365636805,
-        "value": 64.08706421826778
+        "balance": 0.0015973753051348942,
+        "value": 61.735360792853385
       }
     ],
-    "apr": 0.23143502545373007,
-    "apy": 0.23143502545373007,
+    "apr": 0.1073291862815795,
+    "apy": 0.1073291862815795,
     "boost": {
       "enabled": false,
       "weight": 0
@@ -174,19 +174,19 @@
     "sources": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.23143502545373007,
+        "apr": 0.1073291862815795,
         "boostable": false,
-        "minApr": 0.23143502545373007,
-        "maxApr": 0.23143502545373007
+        "minApr": 0.1073291862815795,
+        "maxApr": 0.1073291862815795
       }
     ],
     "sourcesApy": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.23143502545373007,
+        "apr": 0.1073291862815795,
         "boostable": false,
-        "minApr": 0.23143502545373007,
-        "maxApr": 0.23143502545373007
+        "minApr": 0.1073291862815795,
+        "maxApr": 0.1073291862815795
       }
     ],
     "bouncer": "none",

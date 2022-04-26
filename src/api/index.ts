@@ -8,11 +8,14 @@ import {
 } from './types';
 import * as i from './interfaces';
 import { Networkish } from '@ethersproject/networks';
-import { Currency } from './enums';
+import { ChartTimeFrame, Currency } from './enums';
 import { ApiError } from './api.error';
 import { EmissionSchedule } from '../rewards';
 import { getNetworkConfig } from '../config/network/network.config';
 import { CitadelTreasurySummary } from './interfaces/citadel-treasury-summary.interface';
+import { CitadelRewardEvent } from './interfaces/citadel-reward-event.interface';
+import { RewardFilter } from '../citadel/enums/reward-filter.enum';
+import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
@@ -177,6 +180,34 @@ export class BadgerAPI {
 
   loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
     return this.get('/treasury', {}, this.citadelClient);
+  }
+
+  loadCitadelUserTotalRewards(
+    token: string,
+    address?: string,
+    filter?: RewardFilter,
+  ): Promise<CitadelRewardEvent[]> {
+    return this.get(
+      '/rewards',
+      {
+        token,
+        user: address,
+        filter,
+      },
+      this.citadelClient,
+    );
+  }
+
+  loadCitadelTreasuryCharts(
+    timeframe = ChartTimeFrame.Week,
+  ): Promise<TreasurySummarySnapshot[]> {
+    return this.get(
+      '/history',
+      {
+        timeframe,
+      },
+      this.citadelClient,
+    );
   }
 
   private async get<T>(

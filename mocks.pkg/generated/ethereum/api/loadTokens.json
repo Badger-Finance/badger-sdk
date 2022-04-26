@@ -1,4 +1,94 @@
 {
+  "0x599D92B453C010b1050d31C364f6ee17E819f193": {
+    "address": "0x599D92B453C010b1050d31C364f6ee17E819f193",
+    "name": "Badger Sett Interest bearing mStable BTC",
+    "symbol": "bimBTC",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
+      "network": "ethereum"
+    }
+  },
+  "0x26B8efa69603537AC8ab55768b6740b67664D518": {
+    "address": "0x26B8efa69603537AC8ab55768b6740b67664D518",
+    "name": "Badger Sett mBTC/HBTC Feeder Pool",
+    "symbol": "bfPmBTC/HBTC",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
+      "network": "ethereum"
+    }
+  },
+  "0x137469B55D1f15651BA46A89D0588e97dD0B6562": {
+    "address": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
+    "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+    "symbol": "BADGERWBTC-f",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B": {
+    "address": "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
+    "name": "Curve.fi Factory BTC Metapool: ibBTC",
+    "symbol": "ibbtc/sbtcCRV-f",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a": {
+    "address": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
+    "name": "Badger Sett Digg",
+    "symbol": "bDIGG",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+      "network": "ethereum"
+    }
+  },
+  "0x090185f2135308BaD17527004364eBcC2D37e5F6": {
+    "address": "0x090185f2135308BaD17527004364eBcC2D37e5F6",
+    "name": "Spell Token",
+    "symbol": "SPELL",
+    "decimals": 18,
+    "type": "Contract"
+  },
+  "0x99F39D495C6A5237f43602f3Ab5F49786E46c9B0": {
+    "address": "0x99F39D495C6A5237f43602f3Ab5F49786E46c9B0",
+    "name": "remDIGG",
+    "symbol": "remDIGG",
+    "decimals": 18,
+    "type": "Custom"
+  },
+  "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3": {
+    "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+    "name": "Curve.fi renBTC/wBTC/sBTC",
+    "symbol": "crvRenWSBTC",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52": {
+    "address": "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52",
+    "name": "Uniswap V2",
+    "symbol": "UNI-V2",
+    "decimals": 18,
+    "type": "UniV2LP"
+  },
+  "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24": {
+    "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
+    "name": "Interest bearing mStable BTC",
+    "symbol": "imBTC",
+    "decimals": 18,
+    "type": "Custom"
+  },
+  "0x0316EB71485b0Ab14103307bf65a021042c6d380": {
+    "address": "0x0316EB71485b0Ab14103307bf65a021042c6d380",
+    "name": "Huobi BTC",
+    "symbol": "HBTC",
+    "decimals": 18,
+    "lookupName": "huobi-btc",
+    "type": "LookupName"
+  },
   "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490": {
     "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
     "name": "Curve.fi DAI/USDC/USDT",
@@ -6,12 +96,62 @@
     "decimals": 18,
     "type": "CurveLP"
   },
-  "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD": {
-    "address": "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD",
-    "name": "pNetwork Token",
-    "symbol": "PNT",
+  "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87": {
+    "address": "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87",
+    "name": "Badger SuperSett (Harvest) Curve.fi renBTC/wBTC",
+    "symbol": "bSupercrvRenWBTC",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+      "network": "ethereum"
+    }
+  },
+  "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7": {
+    "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
+    "name": "mBTC/HBTC Feeder Pool",
+    "symbol": "fPmBTC/HBTC",
+    "decimals": 18,
+    "type": "Custom"
+  },
+  "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd": {
+    "address": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
+    "name": "Curve.fi tBTC/sbtcCrv",
+    "symbol": "tbtc/sbtcCrv",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xa0246c9032bC3A600820415aE600c6388619A14D": {
+    "address": "0xa0246c9032bC3A600820415aE600c6388619A14D",
+    "name": "FARM Reward Token",
+    "symbol": "FARM",
     "decimals": 18,
     "type": "Contract"
+  },
+  "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545": {
+    "address": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
+    "name": "Badger Sett Curve.fi renBTC/wBTC",
+    "symbol": "bcrvRenWBTC",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+      "network": "ethereum"
+    }
+  },
+  "0x410e3E86ef427e30B9235497143881f717d93c2A": {
+    "address": "0x410e3E86ef427e30B9235497143881f717d93c2A",
+    "name": "Curve.fi bBTC/sbtcCRV",
+    "symbol": "bBTC/sbtcCRV",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xcD7989894bc033581532D2cd88Da5db0A4b12859": {
+    "address": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
+    "name": "Uniswap V2",
+    "symbol": "UNI-V2",
+    "decimals": 18,
+    "type": "UniV2LP"
   },
   "0x798D1bE841a82a273720CE31c822C61a67a601C3": {
     "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
@@ -38,16 +178,12 @@
     "decimals": 18,
     "type": "CurveLP"
   },
-  "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE": {
-    "address": "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE",
-    "name": "Badger Sett SushiSwap LP Token",
-    "symbol": "bSLP",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x18d98D452072Ac2EB7b74ce3DB723374360539f1",
-      "network": "ethereum"
-    }
+  "0xdAC17F958D2ee523a2206206994597C13D831ec7": {
+    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "name": "Tether USD",
+    "symbol": "USDT",
+    "decimals": 6,
+    "type": "Contract"
   },
   "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af": {
     "address": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
@@ -60,149 +196,16 @@
       "network": "ethereum"
     }
   },
-  "0xdAC17F958D2ee523a2206206994597C13D831ec7": {
-    "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-    "name": "Tether USD",
-    "symbol": "USDT",
-    "decimals": 6,
-    "type": "Contract"
-  },
-  "0x599D92B453C010b1050d31C364f6ee17E819f193": {
-    "address": "0x599D92B453C010b1050d31C364f6ee17E819f193",
-    "name": "Badger Sett Interest bearing mStable BTC",
-    "symbol": "bimBTC",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
-      "network": "ethereum"
-    }
-  },
-  "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545": {
-    "address": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
-    "name": "Badger Sett Curve.fi renBTC/wBTC",
-    "symbol": "bcrvRenWBTC",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
-      "network": "ethereum"
-    }
-  },
-  "0x26B8efa69603537AC8ab55768b6740b67664D518": {
-    "address": "0x26B8efa69603537AC8ab55768b6740b67664D518",
-    "name": "Badger Sett mBTC/HBTC Feeder Pool",
-    "symbol": "bfPmBTC/HBTC",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
-      "network": "ethereum"
-    }
-  },
-  "0x410e3E86ef427e30B9235497143881f717d93c2A": {
-    "address": "0x410e3E86ef427e30B9235497143881f717d93c2A",
-    "name": "Curve.fi bBTC/sbtcCRV",
-    "symbol": "bBTC/sbtcCRV",
-    "decimals": 18,
-    "type": "CurveLP"
-  },
-  "0xcD7989894bc033581532D2cd88Da5db0A4b12859": {
-    "address": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
-    "name": "Uniswap V2",
-    "symbol": "UNI-V2",
-    "decimals": 18,
-    "type": "UniV2LP"
-  },
-  "0x3c9d6c1C73b31c837832c72E04D3152f051fc1A9": {
-    "address": "0x3c9d6c1C73b31c837832c72E04D3152f051fc1A9",
-    "name": "BoringDAO",
-    "symbol": "BOR",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0xa0246c9032bC3A600820415aE600c6388619A14D": {
-    "address": "0xa0246c9032bC3A600820415aE600c6388619A14D",
-    "name": "FARM Reward Token",
-    "symbol": "FARM",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0x99F39D495C6A5237f43602f3Ab5F49786E46c9B0": {
-    "address": "0x99F39D495C6A5237f43602f3Ab5F49786E46c9B0",
-    "name": "remDIGG",
-    "symbol": "remDIGG",
-    "decimals": 18,
-    "type": "Custom"
-  },
-  "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D": {
-    "address": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
+  "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE": {
+    "address": "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE",
     "name": "Badger Sett SushiSwap LP Token",
     "symbol": "bSLP",
     "decimals": 18,
     "type": "Vault",
     "vaultToken": {
-      "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
+      "address": "0x18d98D452072Ac2EB7b74ce3DB723374360539f1",
       "network": "ethereum"
     }
-  },
-  "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87": {
-    "address": "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87",
-    "name": "Badger SuperSett (Harvest) Curve.fi renBTC/wBTC",
-    "symbol": "bSupercrvRenWBTC",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
-      "network": "ethereum"
-    }
-  },
-  "0x0316EB71485b0Ab14103307bf65a021042c6d380": {
-    "address": "0x0316EB71485b0Ab14103307bf65a021042c6d380",
-    "name": "Huobi BTC",
-    "symbol": "HBTC",
-    "decimals": 18,
-    "lookupName": "huobi-btc",
-    "type": "LookupName"
-  },
-  "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7": {
-    "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
-    "name": "mBTC/HBTC Feeder Pool",
-    "symbol": "fPmBTC/HBTC",
-    "decimals": 18,
-    "type": "Custom"
-  },
-  "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B": {
-    "address": "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
-    "name": "Curve.fi Factory BTC Metapool: ibBTC",
-    "symbol": "ibbtc/sbtcCRV-f",
-    "decimals": 18,
-    "type": "CurveLP"
-  },
-  "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a": {
-    "address": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
-    "name": "Badger Sett Digg",
-    "symbol": "bDIGG",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-      "network": "ethereum"
-    }
-  },
-  "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3": {
-    "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
-    "name": "Curve.fi renBTC/wBTC/sBTC",
-    "symbol": "crvRenWSBTC",
-    "decimals": 18,
-    "type": "CurveLP"
-  },
-  "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52": {
-    "address": "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52",
-    "name": "Uniswap V2",
-    "symbol": "UNI-V2",
-    "decimals": 18,
-    "type": "UniV2LP"
   },
   "0xf349c0faA80fC1870306Ac093f75934078e28991": {
     "address": "0xf349c0faA80fC1870306Ac093f75934078e28991",
@@ -215,33 +218,74 @@
       "network": "ethereum"
     }
   },
-  "0x137469B55D1f15651BA46A89D0588e97dD0B6562": {
-    "address": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
-    "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
-    "symbol": "BADGERWBTC-f",
+  "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D": {
+    "address": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
     "decimals": 18,
-    "type": "CurveLP"
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
+      "network": "ethereum"
+    }
   },
-  "0x090185f2135308BaD17527004364eBcC2D37e5F6": {
-    "address": "0x090185f2135308BaD17527004364eBcC2D37e5F6",
-    "name": "Spell Token",
-    "symbol": "SPELL",
+  "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD": {
+    "address": "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD",
+    "name": "pNetwork Token",
+    "symbol": "PNT",
     "decimals": 18,
     "type": "Contract"
   },
-  "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd": {
-    "address": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
-    "name": "Curve.fi tBTC/sbtcCrv",
-    "symbol": "tbtc/sbtcCrv",
+  "0x3c9d6c1C73b31c837832c72E04D3152f051fc1A9": {
+    "address": "0x3c9d6c1C73b31c837832c72E04D3152f051fc1A9",
+    "name": "BoringDAO",
+    "symbol": "BOR",
     "decimals": 18,
-    "type": "CurveLP"
+    "type": "Contract"
   },
-  "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24": {
-    "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
-    "name": "Interest bearing mStable BTC",
-    "symbol": "imBTC",
+  "0x8dAEBADE922dF735c38C80C7eBD708Af50815fAa": {
+    "address": "0x8dAEBADE922dF735c38C80C7eBD708Af50815fAa",
+    "name": "tBTC",
+    "symbol": "TBTC",
     "decimals": 18,
-    "type": "Custom"
+    "lookupName": "tbtc",
+    "type": "LookupName"
+  },
+  "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3": {
+    "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
+    "name": "SushiSwap LP Token",
+    "symbol": "SLP",
+    "decimals": 18,
+    "type": "UniV2LP"
+  },
+  "0x853d955aCEf822Db058eb8505911ED77F175b99e": {
+    "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
+    "name": "Frax",
+    "symbol": "FRAX",
+    "decimals": 18,
+    "type": "Contract"
+  },
+  "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3": {
+    "address": "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3",
+    "name": "Magic Internet Money",
+    "symbol": "MIM",
+    "decimals": 18,
+    "type": "Contract"
+  },
+  "0x945Facb997494CC2570096c74b5F66A3507330a1": {
+    "address": "0x945Facb997494CC2570096c74b5F66A3507330a1",
+    "name": "mStable BTC",
+    "symbol": "mBTC",
+    "decimals": 18,
+    "lookupName": "renbtc",
+    "type": "LookupName"
+  },
+  "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58": {
+    "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
+    "name": "SushiSwap LP Token",
+    "symbol": "SLP",
+    "decimals": 18,
+    "type": "UniV2LP"
   },
   "0x19E4d89e0cB807ea21B8CEF02df5eAA99A110dA5": {
     "address": "0x19E4d89e0cB807ea21B8CEF02df5eAA99A110dA5",
@@ -253,6 +297,13 @@
       "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
       "network": "ethereum"
     }
+  },
+  "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2": {
+    "address": "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2",
+    "name": "Meta",
+    "symbol": "MTA",
+    "decimals": 18,
+    "type": "Contract"
   },
   "0x8c76970747afd5398e958bDfadA4cf0B9FcA16c4": {
     "address": "0x8c76970747afd5398e958bDfadA4cf0B9FcA16c4",
@@ -273,21 +324,14 @@
     "lookupName": "badger-dao",
     "type": "LookupName"
   },
-  "0x853d955aCEf822Db058eb8505911ED77F175b99e": {
-    "address": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
-    "name": "Frax",
-    "symbol": "FRAX",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22": {
-    "address": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
-    "name": "remBADGER",
-    "symbol": "remBADGER",
+  "0xb9D076fDe463dbc9f915E5392F807315Bf940334": {
+    "address": "0xb9D076fDe463dbc9f915E5392F807315Bf940334",
+    "name": "Badger Sett Curve.fi tBTC/sbtcCrv",
+    "symbol": "btbtc/sbtcCrv",
     "decimals": 18,
     "type": "Vault",
     "vaultToken": {
-      "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "address": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
       "network": "ethereum"
     }
   },
@@ -302,16 +346,12 @@
       "network": "ethereum"
     }
   },
-  "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2": {
-    "address": "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2",
-    "name": "Badger Sett Curve.fi USD-BTC-ETH",
-    "symbol": "bcrvTricrypto",
+  "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B": {
+    "address": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
+    "name": "Curve.fi Factory USD Metapool: Frax",
+    "symbol": "FRAX3CRV-f",
     "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
-      "network": "ethereum"
-    }
+    "type": "CurveLP"
   },
   "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5": {
     "address": "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
@@ -324,12 +364,27 @@
       "network": "ethereum"
     }
   },
-  "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58": {
-    "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
-    "name": "SushiSwap LP Token",
-    "symbol": "SLP",
+  "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2": {
+    "address": "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2",
+    "name": "Badger Sett Curve.fi USD-BTC-ETH",
+    "symbol": "bcrvTricrypto",
     "decimals": 18,
-    "type": "UniV2LP"
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
+      "network": "ethereum"
+    }
+  },
+  "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22": {
+    "address": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
+    "name": "remBADGER",
+    "symbol": "remBADGER",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "network": "ethereum"
+    }
   },
   "0x1862A18181346EBd9EdAf800804f89190DeF24a5": {
     "address": "0x1862A18181346EBd9EdAf800804f89190DeF24a5",
@@ -342,90 +397,6 @@
       "network": "ethereum"
     }
   },
-  "0x945Facb997494CC2570096c74b5F66A3507330a1": {
-    "address": "0x945Facb997494CC2570096c74b5F66A3507330a1",
-    "name": "mStable BTC",
-    "symbol": "mBTC",
-    "decimals": 18,
-    "lookupName": "renbtc",
-    "type": "LookupName"
-  },
-  "0xb9D076fDe463dbc9f915E5392F807315Bf940334": {
-    "address": "0xb9D076fDe463dbc9f915E5392F807315Bf940334",
-    "name": "Badger Sett Curve.fi tBTC/sbtcCrv",
-    "symbol": "btbtc/sbtcCrv",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
-      "network": "ethereum"
-    }
-  },
-  "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3": {
-    "address": "0x99D8a9C45b2ecA8864373A26D1459e3Dff1e17F3",
-    "name": "Magic Internet Money",
-    "symbol": "MIM",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0x8dAEBADE922dF735c38C80C7eBD708Af50815fAa": {
-    "address": "0x8dAEBADE922dF735c38C80C7eBD708Af50815fAa",
-    "name": "tBTC",
-    "symbol": "TBTC",
-    "decimals": 18,
-    "lookupName": "tbtc",
-    "type": "LookupName"
-  },
-  "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3": {
-    "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
-    "name": "SushiSwap LP Token",
-    "symbol": "SLP",
-    "decimals": 18,
-    "type": "UniV2LP"
-  },
-  "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B": {
-    "address": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
-    "name": "Curve.fi Factory USD Metapool: Frax",
-    "symbol": "FRAX3CRV-f",
-    "decimals": 18,
-    "type": "CurveLP"
-  },
-  "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2": {
-    "address": "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2",
-    "name": "Meta",
-    "symbol": "MTA",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0xd04c48A53c111300aD41190D63681ed3dAd998eC": {
-    "address": "0xd04c48A53c111300aD41190D63681ed3dAd998eC",
-    "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
-    "symbol": "bcrvRenWSBTC",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
-      "network": "ethereum"
-    }
-  },
-  "0xeC1c717A3b02582A4Aa2275260C583095536b613": {
-    "address": "0xeC1c717A3b02582A4Aa2275260C583095536b613",
-    "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
-    "symbol": "bBADGERWBTC-f",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
-      "network": "ethereum"
-    }
-  },
-  "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2": {
-    "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
-    "name": "SushiToken",
-    "symbol": "SUSHI",
-    "decimals": 18,
-    "type": "Contract"
-  },
   "0x9BE89D2a4cd102D8Fecc6BF9dA793be995C22541": {
     "address": "0x9BE89D2a4cd102D8Fecc6BF9dA793be995C22541",
     "name": "Binance Wrapped BTC",
@@ -434,12 +405,16 @@
     "lookupName": "binance-wrapped-btc",
     "type": "LookupName"
   },
-  "0x5a6A4D54456819380173272A5E8E9B9904BdF41B": {
-    "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
-    "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
-    "symbol": "MIM-3LP3CRV-f",
+  "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551": {
+    "address": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
+    "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
+    "symbol": "bbveCVX-CVX-f",
     "decimals": 18,
-    "type": "CurveLP"
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
+      "network": "ethereum"
+    }
   },
   "0xBC19712FEB3a26080eBf6f2F7849b417FdD792CA": {
     "address": "0xBC19712FEB3a26080eBf6f2F7849b417FdD792CA",
@@ -448,30 +423,19 @@
     "decimals": 18,
     "type": "Contract"
   },
-  "0xb19059ebb43466C323583928285a49f558E572Fd": {
-    "address": "0xb19059ebb43466C323583928285a49f558E572Fd",
-    "name": "Curve.fi hBTC/wBTC",
-    "symbol": "hCRV",
+  "0x49849C98ae39Fff122806C06791Fa73784FB3675": {
+    "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+    "name": "Curve.fi renBTC/wBTC",
+    "symbol": "crvRenWBTC",
     "decimals": 18,
     "type": "CurveLP"
   },
-  "0xD533a949740bb3306d119CC777fa900bA034cd52": {
-    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
-    "name": "Curve DAO Token",
-    "symbol": "CRV",
+  "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272": {
+    "address": "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272",
+    "name": "SushiBar",
+    "symbol": "xSUSHI",
     "decimals": 18,
     "type": "Contract"
-  },
-  "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6": {
-    "address": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
-    "name": "Badger Sett SushiSwap LP Token",
-    "symbol": "bSLP",
-    "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
-      "network": "ethereum"
-    }
   },
   "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28": {
     "address": "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28",
@@ -491,10 +455,58 @@
     "decimals": 18,
     "type": "CurveLP"
   },
-  "0x49849C98ae39Fff122806C06791Fa73784FB3675": {
-    "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
-    "name": "Curve.fi renBTC/wBTC",
-    "symbol": "crvRenWBTC",
+  "0xd04c48A53c111300aD41190D63681ed3dAd998eC": {
+    "address": "0xd04c48A53c111300aD41190D63681ed3dAd998eC",
+    "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
+    "symbol": "bcrvRenWSBTC",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
+      "network": "ethereum"
+    }
+  },
+  "0x8751D4196027d4e6DA63716fA7786B5174F04C15": {
+    "address": "0x8751D4196027d4e6DA63716fA7786B5174F04C15",
+    "name": "Wrapped Interest-Bearing Bitcoin",
+    "symbol": "wibBTC",
+    "decimals": 18,
+    "lookupName": "interest-bearing-bitcoin",
+    "type": "LookupName"
+  },
+  "0xb19059ebb43466C323583928285a49f558E572Fd": {
+    "address": "0xb19059ebb43466C323583928285a49f558E572Fd",
+    "name": "Curve.fi hBTC/wBTC",
+    "symbol": "hCRV",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xD533a949740bb3306d119CC777fa900bA034cd52": {
+    "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+    "name": "Curve DAO Token",
+    "symbol": "CRV",
+    "decimals": 18,
+    "type": "Contract"
+  },
+  "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF": {
+    "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
+    "name": "Curve.fi USD-BTC-ETH",
+    "symbol": "crvTricrypto",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F": {
+    "address": "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F",
+    "name": "Interest-Bearing BTC",
+    "symbol": "ibBTC",
+    "decimals": 18,
+    "lookupName": "interest-bearing-bitcoin",
+    "type": "LookupName"
+  },
+  "0x5a6A4D54456819380173272A5E8E9B9904BdF41B": {
+    "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+    "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+    "symbol": "MIM-3LP3CRV-f",
     "decimals": 18,
     "type": "CurveLP"
   },
@@ -506,20 +518,34 @@
     "lookupName": "wrapped-bitcoin",
     "type": "LookupName"
   },
-  "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F": {
-    "address": "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F",
-    "name": "Interest-Bearing BTC",
-    "symbol": "ibBTC",
-    "decimals": 18,
-    "lookupName": "interest-bearing-bitcoin",
-    "type": "LookupName"
-  },
-  "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272": {
-    "address": "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272",
-    "name": "SushiBar",
-    "symbol": "xSUSHI",
+  "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2": {
+    "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+    "name": "SushiToken",
+    "symbol": "SUSHI",
     "decimals": 18,
     "type": "Contract"
+  },
+  "0xeC1c717A3b02582A4Aa2275260C583095536b613": {
+    "address": "0xeC1c717A3b02582A4Aa2275260C583095536b613",
+    "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
+    "symbol": "bBADGERWBTC-f",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
+      "network": "ethereum"
+    }
+  },
+  "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6": {
+    "address": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
+    "decimals": 18,
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
+      "network": "ethereum"
+    }
   },
   "0x18d98D452072Ac2EB7b74ce3DB723374360539f1": {
     "address": "0x18d98D452072Ac2EB7b74ce3DB723374360539f1",
@@ -528,43 +554,41 @@
     "decimals": 18,
     "type": "UniV2LP"
   },
-  "0x8751D4196027d4e6DA63716fA7786B5174F04C15": {
-    "address": "0x8751D4196027d4e6DA63716fA7786B5174F04C15",
-    "name": "Wrapped Interest-Bearing Bitcoin",
-    "symbol": "wibBTC",
+  "0x5228a22e72ccC52d415EcFd199F99D0665E7733b": {
+    "address": "0x5228a22e72ccC52d415EcFd199F99D0665E7733b",
+    "name": "pTokens BTC",
+    "symbol": "pBTC",
     "decimals": 18,
-    "lookupName": "interest-bearing-bitcoin",
+    "lookupName": "ptokens-btc",
     "type": "LookupName"
   },
-  "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF": {
-    "address": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
-    "name": "Curve.fi USD-BTC-ETH",
-    "symbol": "crvTricrypto",
-    "decimals": 18,
-    "type": "CurveLP"
+  "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D": {
+    "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+    "name": "renBTC",
+    "symbol": "renBTC",
+    "decimals": 8,
+    "lookupName": "renbtc",
+    "type": "LookupName"
   },
-  "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551": {
-    "address": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
-    "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
-    "symbol": "bbveCVX-CVX-f",
+  "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6": {
+    "address": "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6",
+    "name": "Synth sBTC",
+    "symbol": "sBTC",
     "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
-      "network": "ethereum"
-    }
+    "lookupName": "sbtc",
+    "type": "LookupName"
   },
-  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": {
-    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    "name": "Wrapped Ether",
-    "symbol": "WETH",
+  "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7": {
+    "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+    "name": "Convex CRV",
+    "symbol": "cvxCRV",
     "decimals": 18,
     "type": "Contract"
   },
-  "0x6B175474E89094C44Da98b954EedeAC495271d0F": {
-    "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-    "name": "Dai Stablecoin",
-    "symbol": "DAI",
+  "0x85Eee30c52B0b379b046Fb0F85F4f3Dc3009aFEC": {
+    "address": "0x85Eee30c52B0b379b046Fb0F85F4f3Dc3009aFEC",
+    "name": "KEEP Token",
+    "symbol": "KEEP",
     "decimals": 18,
     "type": "Contract"
   },
@@ -597,16 +621,37 @@
       "network": "ethereum"
     }
   },
-  "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305": {
-    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "name": "Badger Vested Escrow Convex Token",
-    "symbol": "bveCVX",
+  "0x53C8E199eb2Cb7c01543C137078a038937a68E40": {
+    "address": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
+    "name": "Badger Sett Convex Token",
+    "symbol": "bCVX",
     "decimals": 18,
     "type": "Vault",
     "vaultToken": {
       "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
       "network": "ethereum"
     }
+  },
+  "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff": {
+    "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+    "name": "Curve.fi USD-BTC-ETH",
+    "symbol": "crv3crypto",
+    "decimals": 18,
+    "type": "CurveLP"
+  },
+  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
+    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "name": "USD Coin",
+    "symbol": "USDC",
+    "decimals": 6,
+    "type": "Contract"
+  },
+  "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512": {
+    "address": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
+    "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
+    "symbol": "bveCVX-CVX-f",
+    "decimals": 18,
+    "type": "CurveLP"
   },
   "0x8064d9Ae6cDf087b1bcd5BDf3531bD5d8C537a68": {
     "address": "0x8064d9Ae6cDf087b1bcd5BDf3531bD5d8C537a68",
@@ -615,13 +660,6 @@
     "decimals": 18,
     "lookupName": "wrapped-bitcoin",
     "type": "LookupName"
-  },
-  "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512": {
-    "address": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
-    "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
-    "symbol": "bveCVX-CVX-f",
-    "decimals": 18,
-    "type": "CurveLP"
   },
   "0x110492b31c59716AC47337E616804E3E3AdC0b4a": {
     "address": "0x110492b31c59716AC47337E616804E3E3AdC0b4a",
@@ -652,24 +690,26 @@
       "network": "ethereum"
     }
   },
-  "0x5228a22e72ccC52d415EcFd199F99D0665E7733b": {
-    "address": "0x5228a22e72ccC52d415EcFd199F99D0665E7733b",
-    "name": "pTokens BTC",
-    "symbol": "pBTC",
+  "0x6B175474E89094C44Da98b954EedeAC495271d0F": {
+    "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "name": "Dai Stablecoin",
+    "symbol": "DAI",
     "decimals": 18,
-    "lookupName": "ptokens-btc",
-    "type": "LookupName"
+    "type": "Contract"
   },
-  "0x53C8E199eb2Cb7c01543C137078a038937a68E40": {
-    "address": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-    "name": "Badger Sett Convex Token",
-    "symbol": "bCVX",
+  "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B": {
+    "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "name": "Convex Token",
+    "symbol": "CVX",
     "decimals": 18,
-    "type": "Vault",
-    "vaultToken": {
-      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-      "network": "ethereum"
-    }
+    "type": "Contract"
+  },
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": {
+    "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "name": "Wrapped Ether",
+    "symbol": "WETH",
+    "decimals": 18,
+    "type": "Contract"
   },
   "0x5Dce29e92b1b939F8E8C60DcF15BDE82A85be4a9": {
     "address": "0x5Dce29e92b1b939F8E8C60DcF15BDE82A85be4a9",
@@ -682,55 +722,15 @@
       "network": "ethereum"
     }
   },
-  "0x85Eee30c52B0b379b046Fb0F85F4f3Dc3009aFEC": {
-    "address": "0x85Eee30c52B0b379b046Fb0F85F4f3Dc3009aFEC",
-    "name": "KEEP Token",
-    "symbol": "KEEP",
+  "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305": {
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "name": "Badger Vested Escrow Convex Token",
+    "symbol": "bveCVX",
     "decimals": 18,
-    "type": "Contract"
-  },
-  "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B": {
-    "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-    "name": "Convex Token",
-    "symbol": "CVX",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7": {
-    "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
-    "name": "Convex CRV",
-    "symbol": "cvxCRV",
-    "decimals": 18,
-    "type": "Contract"
-  },
-  "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D": {
-    "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
-    "name": "renBTC",
-    "symbol": "renBTC",
-    "decimals": 8,
-    "lookupName": "renbtc",
-    "type": "LookupName"
-  },
-  "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff": {
-    "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
-    "name": "Curve.fi USD-BTC-ETH",
-    "symbol": "crv3crypto",
-    "decimals": 18,
-    "type": "CurveLP"
-  },
-  "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6": {
-    "address": "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6",
-    "name": "Synth sBTC",
-    "symbol": "sBTC",
-    "decimals": 18,
-    "lookupName": "sbtc",
-    "type": "LookupName"
-  },
-  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
-    "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-    "name": "USD Coin",
-    "symbol": "USDC",
-    "decimals": 6,
-    "type": "Contract"
+    "type": "Vault",
+    "vaultToken": {
+      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+      "network": "ethereum"
+    }
   }
 }

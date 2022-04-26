@@ -1,8 +1,9 @@
 export { BadgerType } from './badger-type.enum';
 export { BouncerType } from './bouncer-type.enum';
+export { ChartGranularity } from './chart-granularity.enum';
+export { ChartTimeFrame } from './chart-timeframe.enum';
 export { Currency } from './currency.enum';
 export { GasSpeed } from './gas-speed.enum';
 export { Protocol } from './protocol.enum';
 export { VaultState } from './vault-state.enum';
 export { VaultType } from './vault-type.enum';
-export { ChartGranularity } from './chart-granularity';

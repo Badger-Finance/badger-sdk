@@ -30,7 +30,7 @@ import {
 import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
 
 const citadelMinterAddress = '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
-const stakedCitadelLockerAddress = '0x8b9AAb4BE7b25D7794386F8CC217f2d8a9498ee9';
+const stakedCitadelLockerAddress = '0xB1c38253aD6Ab3e2A2D53A094692fcf1321b12d4';
 
 export class CitadelService extends Service {
   private minter?: CitadelMinter;
@@ -41,28 +41,32 @@ export class CitadelService extends Service {
     this.#init();
   }
 
-  async getSupplySchedule(): Promise<SupplySchedule> {
+  get citadelMinter(): CitadelMinter {
     if (!this.minter) {
-      throw new Error(`Minter not defined for ${this.config.network}`);
+      throw new Error(`Minter is not defined for ${this.config.network}`);
     }
+    return this.minter;
+  }
+
+  get citadelLocker(): StakedCitadelLocker {
+    if (!this.locker) {
+      throw new Error(`Locker is not defined for ${this.config.network}`);
+    }
+    return this.locker;
+  }
+
+  async getSupplySchedule(): Promise<SupplySchedule> {
     return SupplySchedule__factory.connect(
-      await this.minter.supplySchedule(),
+      await this.citadelMinter.supplySchedule(),
       this.provider,
     );
   }
 
   getLastMintTimestamp() {
-    if (!this.minter) {
-      throw new Error(`Minter not defined for ${this.config.network}`);
-    }
-
-    return this.minter.lastMintTimestamp();
+    return this.citadelMinter.lastMintTimestamp();
   }
 
   async listDistributions(options: ListDistributionOptions = {}) {
-    if (!this.minter) {
-      throw new Error(`Minter not defined for ${this.config.network}`);
-    }
     const deployedAt = vaultBlockDeployedAt(
       citadelMinterAddress,
       this.config.network,
@@ -73,14 +77,15 @@ export class CitadelService extends Service {
     if (!startBlock) options.startBlock = deployedAt;
     if (!endBlock) options.endBlock = await this.sdk.provider.getBlockNumber();
 
-    const distFilter = this.minter.filters.CitadelDistributionToStaking();
+    const distFilter =
+      this.citadelMinter.filters.CitadelDistributionToStaking();
 
     const distributionsToStaking = await chunkQueryFilter<
       CitadelMinter,
       CitadelDistributionToStakingEventFilter,
       CitadelDistributionToStakingEvent
     >(
-      this.minter,
+      this.citadelMinter,
       distFilter,
       <number>options.startBlock,
       <number>options.endBlock,
@@ -100,39 +105,35 @@ export class CitadelService extends Service {
   }
 
   isDistributor(token: string, distributor: string) {
-    if (!this.locker) {
+    if (!this.citadelLocker) {
       throw new Error(`Locker not defined for ${this.config.network}`);
     }
 
     const tokenAddr = ethers.utils.getAddress(token);
     const distributorAddr = ethers.utils.getAddress(distributor);
 
-    return this.locker.rewardDistributors(tokenAddr, distributorAddr);
+    return this.citadelLocker.rewardDistributors(tokenAddr, distributorAddr);
   }
 
   getRewardStats(account: string) {
-    if (!this.locker) {
+    if (!this.citadelLocker) {
       throw new Error(`Locker not defined for ${this.config.network}`);
     }
 
     const accAddr = ethers.utils.getAddress(account);
 
-    return this.locker.rewardData(accAddr);
+    return this.citadelLocker.rewardData(accAddr);
   }
 
   getRewardTokens() {
-    if (!this.locker) {
+    if (!this.citadelLocker) {
       throw new Error(`Locker not defined for ${this.config.network}`);
     }
 
-    return this.locker.getRewardTokens();
+    return this.citadelLocker.getRewardTokens();
   }
 
   async listRewards(options: ListRewardsOptions = {}) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const deployedAt = vaultBlockDeployedAt(
       stakedCitadelLockerAddress,
       this.config.network,
@@ -143,7 +144,7 @@ export class CitadelService extends Service {
       endBlock,
       user,
       token,
-      filter = RewardFilter.ADDED,
+      filter = RewardFilter.PAID,
     } = options;
 
     if (!startBlock) options.startBlock = deployedAt;
@@ -153,16 +154,18 @@ export class CitadelService extends Service {
 
     switch (filter) {
       case RewardFilter.ADDED:
-        if (!token) throw new Error('Token should be specified');
+        if (!token) {
+          throw new Error('Token should be specified');
+        }
 
-        const addedFilter = this.locker.filters.RewardAdded(token);
+        const addedFilter = this.citadelLocker.filters.RewardAdded(token);
 
         const addedRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardAddedEventFilter,
           RewardAddedEvent
         >(
-          this.locker,
+          this.citadelLocker,
           addedFilter,
           <number>options.startBlock,
           <number>options.endBlock,
@@ -175,16 +178,18 @@ export class CitadelService extends Service {
         }));
         break;
       case RewardFilter.PAID:
-        if (!user || !token) throw new Error('User or token param is missing');
+        if (!user || !token) {
+          throw new Error('User or token param is missing');
+        }
 
-        const paidFilter = this.locker.filters.RewardPaid(user, token);
+        const paidFilter = this.citadelLocker.filters.RewardPaid(user, token);
 
         const paidRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardPaidEventFilter,
           RewardPaidEvent
         >(
-          this.locker,
+          this.citadelLocker,
           paidFilter,
           <number>options.startBlock,
           <number>options.endBlock,
@@ -205,87 +210,47 @@ export class CitadelService extends Service {
   }
 
   async getClaimableRewards(account: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const accAddr = ethers.utils.getAddress(account);
-
-    return this.locker.claimableRewards(accAddr);
+    return this.citadelLocker.claimableRewards(accAddr);
   }
 
   async rewardWeightOf(account: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const accAddr = ethers.utils.getAddress(account);
-
-    return this.locker.rewardWeightOf(accAddr);
+    return this.citadelLocker.rewardWeightOf(accAddr);
   }
 
   lockedBalanceOf(address: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const userAddr = ethers.utils.getAddress(address);
-
-    return this.locker.lockedBalanceOf(userAddr);
+    return this.citadelLocker.lockedBalanceOf(userAddr);
   }
 
   balanceOf(address: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const userAddr = ethers.utils.getAddress(address);
-
-    return this.locker.balanceOf(userAddr);
+    return this.citadelLocker.balanceOf(userAddr);
   }
 
   balanceAtEpochOf(epoch: BigNumberish, address: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const userAddr = ethers.utils.getAddress(address);
-
-    return this.locker.balanceAtEpochOf(epoch, userAddr);
+    return this.citadelLocker.balanceAtEpochOf(epoch, userAddr);
   }
 
   getEcochs(index: BigNumberish) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
-    return this.locker.epochs(index);
+    return this.citadelLocker.epochs(index);
   }
 
   getLockedSupply() {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
-    return this.locker.lockedSupply();
+    return this.citadelLocker.lockedSupply();
   }
 
   getBoostedSupply() {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
-    return this.locker.boostedSupply();
+    return this.citadelLocker.boostedSupply();
   }
 
   async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
-    if (!this.minter) {
-      throw new Error(`Minter not defined for ${this.config.network}`);
-    }
     const [fundingBps, stakingBps, lockingBps] = await Promise.all([
-      this.minter.fundingBps(),
-      this.minter.stakingBps(),
-      this.minter.lockingBps(),
+      this.citadelMinter.fundingBps(),
+      this.citadelMinter.stakingBps(),
+      this.citadelMinter.lockingBps(),
     ]);
 
     return {

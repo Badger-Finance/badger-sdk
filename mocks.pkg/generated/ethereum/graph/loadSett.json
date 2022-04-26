@@ -5,7 +5,7 @@
     "symbol": "bCVX",
     "available": "0",
     "decimals": "18",
-    "totalSupply": "39615133311116879224512",
+    "totalSupply": "39449387400797086399452",
     "token": {
       "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
       "name": "Convex Token",
@@ -13,20 +13,20 @@
       "decimals": "18",
       "totalSupply": "52842757666481041544194387"
     },
-    "balance": "43410217884098382534079",
+    "balance": "43228593704674976603264",
     "pricePerFullShare": "1095798859066732433",
-    "netDeposit": "-6399659267740358326657",
-    "netShareDeposit": "39615133311116879224512",
+    "netDeposit": "-6581283447163764257326",
+    "netShareDeposit": "39449387400797086399452",
     "grossDeposit": "3250655428532204057456976",
     "grossShareDeposit": "3106247094657867999727729",
-    "grossWithdraw": "3257055087799944415783633",
-    "grossShareWithdraw": "3066631961346751120503217",
+    "grossWithdraw": "3257236711979367821714302",
+    "grossShareWithdraw": "3066797707257070913328277",
     "controller": {
       "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
     },
     "strategy": {
       "id": "0xbcee2c6cfa7a4e29892c3665f464be5536f16d95",
-      "balance": "43410217884098382534079"
+      "balance": "43228593704674976603264"
     }
   }
 }
