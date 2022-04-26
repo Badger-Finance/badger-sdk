@@ -25,7 +25,7 @@
     "test:path": "yarn test --no-cache --testPathPattern",
     "test:clean": "jest --clearCache",
     "prepublishOnly": "yarn run build",
-    "scripts:vaults:da": "ts-node ./scripts/vaults/deployed.at.ts"
+    "scripts:deployed": "ts-node scripts/deployed.at.ts"
   },
   "dependencies": {
     "@0xsequence/indexer": "0.36.8",

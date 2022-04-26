@@ -1,5 +1,5 @@
 import { VaultHarvestData, VaultPerformanceEvent, VaultVersion } from '.';
-import { keyBy, Network, VaultState } from '..';
+import { keyBy, VaultState } from '..';
 import { TimeRangeOptions } from '../common';
 import { VaultV15 } from '../contracts';
 import {
@@ -14,8 +14,6 @@ import {
   TreeDistributionEvent as TreeDistributionEventV15,
   TreeDistributionEventFilter,
 } from '../contracts/VaultV15';
-import { VaultDeployedAtMap } from './interfaces/vault-deployed-at.interface';
-import vaultDeployedAtMap from './data/deployed.at.json';
 import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
 
@@ -265,24 +263,4 @@ export function evaluateEvents<T extends TimeRangeOptions>(
   return {
     data,
   };
-}
-
-export function vaultBlockDeployedAt(
-  address: string,
-  network: Network,
-): number {
-  const currentVaultDeployedAtMap = (<VaultDeployedAtMap>vaultDeployedAtMap)[
-    <string>network
-  ];
-
-  if (Object.keys(currentVaultDeployedAtMap).length === 0) return 0;
-
-  let blockDeployedAt = currentVaultDeployedAtMap[address];
-
-  // if we can't find deployed at block, then take the lowest value
-  if (!blockDeployedAt) {
-    blockDeployedAt = Math.min(...Object.values(currentVaultDeployedAtMap));
-  }
-
-  return blockDeployedAt;
 }

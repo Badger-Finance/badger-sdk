@@ -10,7 +10,7 @@ import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 import { Network } from '../config';
 import { RegistryService } from '../registry';
 import { RewardsService } from '../rewards';
-import * as vaultUtils from '../vaults/vaults.utils';
+import * as deployedUtils from '../utils/deployed-at.util';
 import { citadelDistributionToStakingEvents } from './mocks/distribution-to-staking-events.mock';
 import { addedRewardEvents } from './mocks/added-reward-events.mock';
 import { paidRewardEvents } from './mocks/paid-reward-events.mock';
@@ -70,7 +70,7 @@ describe('citadel.service', function () {
     await sdk.ready();
 
     jest
-      .spyOn(vaultUtils, 'vaultBlockDeployedAt')
+      .spyOn(deployedUtils, 'getBlockDeployedAt')
       .mockImplementation(() => DEPLOYED_AT);
   });
 

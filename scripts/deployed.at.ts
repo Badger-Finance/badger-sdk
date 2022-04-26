@@ -4,24 +4,32 @@
 
 // Improvment, we can probably add a schedule range and integrate with githook
 
-import { BadgerSDK, Network, NETWORK_CONFIGS } from '../../src';
+import { BadgerSDK, Network, NETWORK_CONFIGS } from '../src';
 import { ethers } from 'ethers';
-import { VaultDeployedAtMap } from '../../src/vaults/interfaces/vault-deployed-at.interface';
 import axios from 'axios';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
+import {
+  citadelMinterAddress,
+  stakedCitadelLockerAddress,
+} from '../src/citadel/citadel.service';
+import { DeployedAtMap } from '../src/utils/deployed-at.util';
 
 // env var example: ETHEREUM_RPC_NODE=https://alchemynode.com
 
 const DEPLOYED_AT_FILE_NAME = 'deployed.at.json';
-const DEPLOYED_AT_SAVE_PATH = 'src/vaults/data';
+const DEPLOYED_AT_SAVE_PATH = 'src/data';
+
+const ADDRS_TO_SCAN = {
+  [`${Network.Ethereum}`]: [citadelMinterAddress, stakedCitadelLockerAddress],
+};
 
 let currentChain: string;
 
 async function main() {
   console.log('Fetching of deployed at block for vault started');
 
-  const vaultsDeployedAtMap: VaultDeployedAtMap = {};
+  const deployedAtMap: DeployedAtMap = {};
 
   const chains = Object.values(Network).filter((chain) => chain != 'local');
 
@@ -29,7 +37,7 @@ async function main() {
     console.log(`Work started for ${chain}`);
     currentChain = chain;
 
-    if (!vaultsDeployedAtMap[chain]) vaultsDeployedAtMap[chain] = {};
+    if (!deployedAtMap[chain]) deployedAtMap[chain] = {};
 
     const networkConfig = NETWORK_CONFIGS[chain];
 
@@ -49,12 +57,18 @@ async function main() {
 
     console.log(`Found ${vaults.length} vaults`);
 
-    for (const vault of vaults) {
+    let addrasses = vaults.map((v) => v.address);
+
+    const custom_addrs = ADDRS_TO_SCAN[`${chain}`];
+
+    if (custom_addrs) {
+      addrasses = addrasses.concat(custom_addrs);
+      console.log(`Added ${custom_addrs.length} custom addrs`);
+    }
+
+    for (const addr of addrasses) {
       try {
-        const deployedAtBlock = await fetchDeployedAt(
-          scanApiUrl,
-          vault.address,
-        );
+        const deployedAtBlock = await fetchDeployedAt(scanApiUrl, addr);
 
         // here we must trottle, coz free scans accs limited
         // if u want to boost this, add secret key from ur acc in fetchDeployedAt
@@ -62,7 +76,7 @@ async function main() {
 
         if (!deployedAtBlock) continue;
 
-        vaultsDeployedAtMap[chain][vault.address] = <number>deployedAtBlock;
+        deployedAtMap[chain][addr] = <number>deployedAtBlock;
       } catch (e) {
         console.warn(e);
       }
@@ -72,7 +86,7 @@ async function main() {
     `Saving deployed at blocks for vaults data to ${DEPLOYED_AT_FILE_NAME}`,
   );
 
-  persistInJSON(vaultsDeployedAtMap);
+  persistInJSON(deployedAtMap);
 
   console.log('Fetching of deployed at block for vault finished');
 }
@@ -132,9 +146,9 @@ function getNodeRpcUrl(network: Network): string | unknown {
   return process.env[envVarName];
 }
 
-function persistInJSON(deployedAtData: VaultDeployedAtMap) {
+function persistInJSON(deployedAtData: DeployedAtMap) {
   writeFileSync(
-    resolve(__dirname, '../../', DEPLOYED_AT_SAVE_PATH, DEPLOYED_AT_FILE_NAME),
+    resolve(__dirname, '../', DEPLOYED_AT_SAVE_PATH, DEPLOYED_AT_FILE_NAME),
     JSON.stringify(deployedAtData, null, 2),
   );
 }

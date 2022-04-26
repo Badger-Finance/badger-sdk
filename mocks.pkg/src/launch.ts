@@ -5,7 +5,7 @@ async function main() {
   const args: cliArgs = process.argv.slice(2);
 
   const action = args[0];
-  const forced = Boolean(args[1]);
+  const forced = args[1] === 'true';
 
   const processor = new MocksProcessor({ action, forced });
 
