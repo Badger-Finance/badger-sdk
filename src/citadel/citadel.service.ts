@@ -15,7 +15,6 @@ import {
   CitadelDistributionToStakingEvent,
   CitadelDistributionToStakingEventFilter,
 } from '../contracts/CitadelMinter';
-import { vaultBlockDeployedAt } from '../vaults/vaults.utils';
 import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
 import { ListDistributionOptions } from './interfaces/list-distribution-options.interface';
 import { ListRewardsOptions } from './interfaces/list-rewards-options.interface';
@@ -28,9 +27,12 @@ import {
   RewardPaidEventFilter,
 } from '../contracts/StakedCitadelLocker';
 import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
+import { getBlockDeployedAt } from '../utils/deployed-at.util';
 
-const citadelMinterAddress = '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
-const stakedCitadelLockerAddress = '0xB1c38253aD6Ab3e2A2D53A094692fcf1321b12d4';
+export const citadelMinterAddress =
+  '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
+export const stakedCitadelLockerAddress =
+  '0xB1c38253aD6Ab3e2A2D53A094692fcf1321b12d4';
 
 export class CitadelService extends Service {
   private minter?: CitadelMinter;
@@ -67,7 +69,7 @@ export class CitadelService extends Service {
   }
 
   async listDistributions(options: ListDistributionOptions = {}) {
-    const deployedAt = vaultBlockDeployedAt(
+    const deployedAt = getBlockDeployedAt(
       citadelMinterAddress,
       this.config.network,
     );
@@ -134,7 +136,7 @@ export class CitadelService extends Service {
   }
 
   async listRewards(options: ListRewardsOptions = {}) {
-    const deployedAt = vaultBlockDeployedAt(
+    const deployedAt = getBlockDeployedAt(
       stakedCitadelLockerAddress,
       this.config.network,
     );

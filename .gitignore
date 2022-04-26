@@ -5,6 +5,7 @@ node_modules
 lib
 .env
 .npmrc
+dotenv
 
 launch
 

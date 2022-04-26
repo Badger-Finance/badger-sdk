@@ -26,9 +26,9 @@ import {
 import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
-  vaultBlockDeployedAt,
 } from './vaults.utils';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
+import { getBlockDeployedAt } from '../utils/deployed-at.util';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -135,7 +135,7 @@ export class VaultsService extends Service {
       endBlock,
     } = options;
 
-    const vaultDeployedAt = vaultBlockDeployedAt(address, this.config.network);
+    const vaultDeployedAt = getBlockDeployedAt(address, this.config.network);
 
     if (!startBlock) options.startBlock = vaultDeployedAt;
     if (!endBlock) options.endBlock = await this.sdk.provider.getBlockNumber();
