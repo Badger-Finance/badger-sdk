@@ -1,15 +1,11 @@
-import { TreasuryPosition } from './treasy-position.interface';
+import { TreasurySummary } from '.';
 
-export interface CitadelTreasurySummary {
-  address: string;
+export interface CitadelTreasurySummary extends TreasurySummary {
   fundingBps: number;
   lockingBps: number;
   marketCapToTreasuryRatio: number;
-  positions: TreasuryPosition[];
   stakingBps: number;
-  value: number;
   valueBtc: number;
   valuePaid: number;
   valuePaidBtc: number;
-  yield: number;
 }
