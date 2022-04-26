@@ -1,3 +1,11 @@
+## [1.7.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.7.2...sdk-mocks-v1.7.3) (2022-04-26)
+
+
+### Bug Fixes
+
+* linter run ([c6bc88b](https://github.com/Badger-Finance/badger-sdk/commit/c6bc88b63b01d4b08ca4d178d39fd569baefdcab))
+* update default param + run mocks ([4b76812](https://github.com/Badger-Finance/badger-sdk/commit/4b7681276ca8b25903105095f21c9589ad965e3c))
+
 ## [1.7.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.7.1...sdk-mocks-v1.7.2) (2022-04-25)
 
 
