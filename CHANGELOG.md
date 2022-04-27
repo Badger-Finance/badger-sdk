@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.7.4...v1.8.0) (2022-04-27)
+
+
+### Features
+
+* extand citadel rewards with new data, upd abi ([6d57c25](https://github.com/Badger-Finance/badger-sdk/commit/6d57c258ac61391fbedf5a5accbdde46f878ebfb))
+
 ## [1.7.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.7.3...v1.7.4) (2022-04-26)
 
 
