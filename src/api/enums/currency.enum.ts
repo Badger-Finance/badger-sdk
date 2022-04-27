@@ -1,7 +1,8 @@
 export enum Currency {
-  USD = 'usd',
+  AVAX = 'avax',
+  BTC = 'btc',
   ETH = 'eth',
   FTM = 'ftm',
-  AVAX = 'avax',
   MATIC = 'matic',
+  USD = 'usd',
 }
