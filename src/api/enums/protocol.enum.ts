@@ -1,8 +1,10 @@
 export enum Protocol {
   Aave = 'Aave',
   Badger = 'Badger',
+  Balancer = 'Balancer',
   Convex = 'Convex',
   Curve = 'Curve',
+  Frax = 'Frax',
   mStable = 'mStable',
   Pancakeswap = 'Pancakeswap',
   Quickswap = 'Quickswap',
