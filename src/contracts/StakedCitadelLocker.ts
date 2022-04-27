@@ -41,6 +41,12 @@ export declare namespace StakedCitadelLocker {
 export interface StakedCitadelLockerInterface extends utils.Interface {
   contractName: 'StakedCitadelLocker';
   functions: {
+    'CONTRACT_GOVERNANCE_ROLE()': FunctionFragment;
+    'PAUSER_ROLE()': FunctionFragment;
+    'TECH_OPERATIONS_ROLE()': FunctionFragment;
+    'TREASURY_GOVERNANCE_ROLE()': FunctionFragment;
+    'UNPAUSER_ROLE()': FunctionFragment;
+    '__GlobalAccessControlManaged_init(address)': FunctionFragment;
     'addReward(address,address,bool)': FunctionFragment;
     'approveRewardDistributor(address,address,bool)': FunctionFragment;
     'balanceAtEpochOf(uint256,address)': FunctionFragment;
@@ -50,16 +56,21 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     'boostRate()': FunctionFragment;
     'boostedSupply()': FunctionFragment;
     'checkpointEpoch()': FunctionFragment;
+    'claimableRewardForToken(address,address)': FunctionFragment;
     'claimableRewards(address)': FunctionFragment;
+    'cumulativeClaimed(address,address)': FunctionFragment;
+    'cumulativeDistributed(address)': FunctionFragment;
     'decimals()': FunctionFragment;
     'denominator()': FunctionFragment;
     'epochCount()': FunctionFragment;
     'epochs(uint256)': FunctionFragment;
     'findEpochId(uint256)': FunctionFragment;
+    'gac()': FunctionFragment;
+    'getCumulativeClaimedRewards(address,address)': FunctionFragment;
     'getReward(address,bool)': FunctionFragment;
     'getRewardForDuration(address)': FunctionFragment;
     'getRewardTokens()': FunctionFragment;
-    'initialize(address,string,string)': FunctionFragment;
+    'initialize(address,address,string,string)': FunctionFragment;
     'isShutdown()': FunctionFragment;
     'kickExpiredLocks(address)': FunctionFragment;
     'kickRewardEpochDelay()': FunctionFragment;
@@ -76,8 +87,10 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     'name()': FunctionFragment;
     'nextBoostRate()': FunctionFragment;
     'nextMaximumBoostPayment()': FunctionFragment;
-    'notifyRewardAmount(address,uint256)': FunctionFragment;
+    'notifyRewardAmount(address,uint256,bytes32)': FunctionFragment;
     'owner()': FunctionFragment;
+    'pause()': FunctionFragment;
+    'paused()': FunctionFragment;
     'pendingLockAtEpochOf(uint256,address)': FunctionFragment;
     'pendingLockOf(address)': FunctionFragment;
     'processExpiredLocks(bool)': FunctionFragment;
@@ -102,12 +115,37 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     'totalSupply()': FunctionFragment;
     'totalSupplyAtEpoch(uint256)': FunctionFragment;
     'transferOwnership(address)': FunctionFragment;
+    'unpause()': FunctionFragment;
     'userLocks(address,uint256)': FunctionFragment;
     'userRewardPerTokenPaid(address,address)': FunctionFragment;
     'version()': FunctionFragment;
     'withdrawExpiredLocksTo(address)': FunctionFragment;
   };
 
+  encodeFunctionData(
+    functionFragment: 'CONTRACT_GOVERNANCE_ROLE',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'PAUSER_ROLE',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'TECH_OPERATIONS_ROLE',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'TREASURY_GOVERNANCE_ROLE',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'UNPAUSER_ROLE',
+    values?: undefined,
+  ): string;
+  encodeFunctionData(
+    functionFragment: '__GlobalAccessControlManaged_init',
+    values: [string],
+  ): string;
   encodeFunctionData(
     functionFragment: 'addReward',
     values: [string, string, boolean],
@@ -136,7 +174,19 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     values?: undefined,
   ): string;
   encodeFunctionData(
+    functionFragment: 'claimableRewardForToken',
+    values: [string, string],
+  ): string;
+  encodeFunctionData(
     functionFragment: 'claimableRewards',
+    values: [string],
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'cumulativeClaimed',
+    values: [string, string],
+  ): string;
+  encodeFunctionData(
+    functionFragment: 'cumulativeDistributed',
     values: [string],
   ): string;
   encodeFunctionData(functionFragment: 'decimals', values?: undefined): string;
@@ -156,6 +206,11 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     functionFragment: 'findEpochId',
     values: [BigNumberish],
   ): string;
+  encodeFunctionData(functionFragment: 'gac', values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: 'getCumulativeClaimedRewards',
+    values: [string, string],
+  ): string;
   encodeFunctionData(
     functionFragment: 'getReward',
     values: [string, boolean],
@@ -170,7 +225,7 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: 'initialize',
-    values: [string, string, string],
+    values: [string, string, string, string],
   ): string;
   encodeFunctionData(
     functionFragment: 'isShutdown',
@@ -235,9 +290,11 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: 'notifyRewardAmount',
-    values: [string, BigNumberish],
+    values: [string, BigNumberish, BytesLike],
   ): string;
   encodeFunctionData(functionFragment: 'owner', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'pause', values?: undefined): string;
+  encodeFunctionData(functionFragment: 'paused', values?: undefined): string;
   encodeFunctionData(
     functionFragment: 'pendingLockAtEpochOf',
     values: [BigNumberish, string],
@@ -325,6 +382,7 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     functionFragment: 'transferOwnership',
     values: [string],
   ): string;
+  encodeFunctionData(functionFragment: 'unpause', values?: undefined): string;
   encodeFunctionData(
     functionFragment: 'userLocks',
     values: [string, BigNumberish],
@@ -339,6 +397,30 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     values: [string],
   ): string;
 
+  decodeFunctionResult(
+    functionFragment: 'CONTRACT_GOVERNANCE_ROLE',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'PAUSER_ROLE',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'TECH_OPERATIONS_ROLE',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'TREASURY_GOVERNANCE_ROLE',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'UNPAUSER_ROLE',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: '__GlobalAccessControlManaged_init',
+    data: BytesLike,
+  ): Result;
   decodeFunctionResult(functionFragment: 'addReward', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'approveRewardDistributor',
@@ -364,7 +446,19 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     data: BytesLike,
   ): Result;
   decodeFunctionResult(
+    functionFragment: 'claimableRewardForToken',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
     functionFragment: 'claimableRewards',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'cumulativeClaimed',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: 'cumulativeDistributed',
     data: BytesLike,
   ): Result;
   decodeFunctionResult(functionFragment: 'decimals', data: BytesLike): Result;
@@ -376,6 +470,11 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
   decodeFunctionResult(functionFragment: 'epochs', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'findEpochId',
+    data: BytesLike,
+  ): Result;
+  decodeFunctionResult(functionFragment: 'gac', data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: 'getCumulativeClaimedRewards',
     data: BytesLike,
   ): Result;
   decodeFunctionResult(functionFragment: 'getReward', data: BytesLike): Result;
@@ -448,6 +547,8 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     data: BytesLike,
   ): Result;
   decodeFunctionResult(functionFragment: 'owner', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'pause', data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: 'paused', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'pendingLockAtEpochOf',
     data: BytesLike,
@@ -529,6 +630,7 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
     functionFragment: 'transferOwnership',
     data: BytesLike,
   ): Result;
+  decodeFunctionResult(functionFragment: 'unpause', data: BytesLike): Result;
   decodeFunctionResult(functionFragment: 'userLocks', data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: 'userRewardPerTokenPaid',
@@ -543,19 +645,23 @@ export interface StakedCitadelLockerInterface extends utils.Interface {
   events: {
     'KickReward(address,address,uint256)': EventFragment;
     'OwnershipTransferred(address,address)': EventFragment;
+    'Paused(address)': EventFragment;
     'Recovered(address,uint256)': EventFragment;
-    'RewardAdded(address,uint256)': EventFragment;
+    'RewardAdded(address,address,uint256,bytes32,uint256)': EventFragment;
     'RewardPaid(address,address,uint256)': EventFragment;
     'Staked(address,uint256,uint256,uint256,uint256)': EventFragment;
+    'Unpaused(address)': EventFragment;
     'Withdrawn(address,uint256,bool)': EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: 'KickReward'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'OwnershipTransferred'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Paused'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Recovered'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'RewardAdded'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'RewardPaid'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Staked'): EventFragment;
+  getEvent(nameOrSignatureOrTopic: 'Unpaused'): EventFragment;
   getEvent(nameOrSignatureOrTopic: 'Withdrawn'): EventFragment;
 }
 
@@ -574,6 +680,10 @@ export type OwnershipTransferredEvent = TypedEvent<
 export type OwnershipTransferredEventFilter =
   TypedEventFilter<OwnershipTransferredEvent>;
 
+export type PausedEvent = TypedEvent<[string], { account: string }>;
+
+export type PausedEventFilter = TypedEventFilter<PausedEvent>;
+
 export type RecoveredEvent = TypedEvent<
   [string, BigNumber],
   { _token: string; _amount: BigNumber }
@@ -582,8 +692,14 @@ export type RecoveredEvent = TypedEvent<
 export type RecoveredEventFilter = TypedEventFilter<RecoveredEvent>;
 
 export type RewardAddedEvent = TypedEvent<
-  [string, BigNumber],
-  { _token: string; _reward: BigNumber }
+  [string, string, BigNumber, string, BigNumber],
+  {
+    account: string;
+    _token: string;
+    _reward: BigNumber;
+    _dataTypeHash: string;
+    _timestamp: BigNumber;
+  }
 >;
 
 export type RewardAddedEventFilter = TypedEventFilter<RewardAddedEvent>;
@@ -607,6 +723,10 @@ export type StakedEvent = TypedEvent<
 >;
 
 export type StakedEventFilter = TypedEventFilter<StakedEvent>;
+
+export type UnpausedEvent = TypedEvent<[string], { account: string }>;
+
+export type UnpausedEventFilter = TypedEventFilter<UnpausedEvent>;
 
 export type WithdrawnEvent = TypedEvent<
   [string, BigNumber, boolean],
@@ -643,6 +763,21 @@ export interface StakedCitadelLocker extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
+    CONTRACT_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<[string]>;
+
+    PAUSER_ROLE(overrides?: CallOverrides): Promise<[string]>;
+
+    TECH_OPERATIONS_ROLE(overrides?: CallOverrides): Promise<[string]>;
+
+    TREASURY_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<[string]>;
+
+    UNPAUSER_ROLE(overrides?: CallOverrides): Promise<[string]>;
+
+    __GlobalAccessControlManaged_init(
+      _globalAccessControl: string,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<ContractTransaction>;
+
     addReward(
       _rewardsToken: string,
       _distributor: string,
@@ -689,6 +824,16 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
+    claimableRewardForToken(
+      _account: string,
+      _rewardToken: string,
+      overrides?: CallOverrides,
+    ): Promise<
+      [StakedCitadelLocker.EarnedDataStructOutput] & {
+        userReward: StakedCitadelLocker.EarnedDataStructOutput;
+      }
+    >;
+
     claimableRewards(
       _account: string,
       overrides?: CallOverrides,
@@ -697,6 +842,17 @@ export interface StakedCitadelLocker extends BaseContract {
         userRewards: StakedCitadelLocker.EarnedDataStructOutput[];
       }
     >;
+
+    cumulativeClaimed(
+      arg0: string,
+      arg1: string,
+      overrides?: CallOverrides,
+    ): Promise<[BigNumber]>;
+
+    cumulativeDistributed(
+      arg0: string,
+      overrides?: CallOverrides,
+    ): Promise<[BigNumber]>;
 
     decimals(overrides?: CallOverrides): Promise<[number]>;
 
@@ -713,6 +869,14 @@ export interface StakedCitadelLocker extends BaseContract {
       _time: BigNumberish,
       overrides?: CallOverrides,
     ): Promise<[BigNumber] & { epoch: BigNumber }>;
+
+    gac(overrides?: CallOverrides): Promise<[string]>;
+
+    getCumulativeClaimedRewards(
+      _account: string,
+      _rewardsToken: string,
+      overrides?: CallOverrides,
+    ): Promise<[BigNumber]>;
 
     'getReward(address,bool)'(
       _account: string,
@@ -734,6 +898,7 @@ export interface StakedCitadelLocker extends BaseContract {
 
     initialize(
       _stakingToken: string,
+      _gac: string,
       name: string,
       symbol: string,
       overrides?: Overrides & { from?: string | Promise<string> },
@@ -800,13 +965,26 @@ export interface StakedCitadelLocker extends BaseContract {
 
     nextMaximumBoostPayment(overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    notifyRewardAmount(
+    'notifyRewardAmount(address,uint256,bytes32)'(
+      _rewardsToken: string,
+      _reward: BigNumberish,
+      _dataTypeHash: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<ContractTransaction>;
+
+    'notifyRewardAmount(address,uint256)'(
       _rewardsToken: string,
       _reward: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
     owner(overrides?: CallOverrides): Promise<[string]>;
+
+    pause(
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<ContractTransaction>;
+
+    paused(overrides?: CallOverrides): Promise<[boolean]>;
 
     pendingLockAtEpochOf(
       _epoch: BigNumberish,
@@ -926,6 +1104,10 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
 
+    unpause(
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<ContractTransaction>;
+
     userLocks(
       arg0: string,
       arg1: BigNumberish,
@@ -951,6 +1133,21 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<ContractTransaction>;
   };
+
+  CONTRACT_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<string>;
+
+  PAUSER_ROLE(overrides?: CallOverrides): Promise<string>;
+
+  TECH_OPERATIONS_ROLE(overrides?: CallOverrides): Promise<string>;
+
+  TREASURY_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<string>;
+
+  UNPAUSER_ROLE(overrides?: CallOverrides): Promise<string>;
+
+  __GlobalAccessControlManaged_init(
+    _globalAccessControl: string,
+    overrides?: Overrides & { from?: string | Promise<string> },
+  ): Promise<ContractTransaction>;
 
   addReward(
     _rewardsToken: string,
@@ -995,10 +1192,27 @@ export interface StakedCitadelLocker extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
+  claimableRewardForToken(
+    _account: string,
+    _rewardToken: string,
+    overrides?: CallOverrides,
+  ): Promise<StakedCitadelLocker.EarnedDataStructOutput>;
+
   claimableRewards(
     _account: string,
     overrides?: CallOverrides,
   ): Promise<StakedCitadelLocker.EarnedDataStructOutput[]>;
+
+  cumulativeClaimed(
+    arg0: string,
+    arg1: string,
+    overrides?: CallOverrides,
+  ): Promise<BigNumber>;
+
+  cumulativeDistributed(
+    arg0: string,
+    overrides?: CallOverrides,
+  ): Promise<BigNumber>;
 
   decimals(overrides?: CallOverrides): Promise<number>;
 
@@ -1013,6 +1227,14 @@ export interface StakedCitadelLocker extends BaseContract {
 
   findEpochId(
     _time: BigNumberish,
+    overrides?: CallOverrides,
+  ): Promise<BigNumber>;
+
+  gac(overrides?: CallOverrides): Promise<string>;
+
+  getCumulativeClaimedRewards(
+    _account: string,
+    _rewardsToken: string,
     overrides?: CallOverrides,
   ): Promise<BigNumber>;
 
@@ -1036,6 +1258,7 @@ export interface StakedCitadelLocker extends BaseContract {
 
   initialize(
     _stakingToken: string,
+    _gac: string,
     name: string,
     symbol: string,
     overrides?: Overrides & { from?: string | Promise<string> },
@@ -1099,13 +1322,26 @@ export interface StakedCitadelLocker extends BaseContract {
 
   nextMaximumBoostPayment(overrides?: CallOverrides): Promise<BigNumber>;
 
-  notifyRewardAmount(
+  'notifyRewardAmount(address,uint256,bytes32)'(
+    _rewardsToken: string,
+    _reward: BigNumberish,
+    _dataTypeHash: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> },
+  ): Promise<ContractTransaction>;
+
+  'notifyRewardAmount(address,uint256)'(
     _rewardsToken: string,
     _reward: BigNumberish,
     overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
   owner(overrides?: CallOverrides): Promise<string>;
+
+  pause(
+    overrides?: Overrides & { from?: string | Promise<string> },
+  ): Promise<ContractTransaction>;
+
+  paused(overrides?: CallOverrides): Promise<boolean>;
 
   pendingLockAtEpochOf(
     _epoch: BigNumberish,
@@ -1214,6 +1450,10 @@ export interface StakedCitadelLocker extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> },
   ): Promise<ContractTransaction>;
 
+  unpause(
+    overrides?: Overrides & { from?: string | Promise<string> },
+  ): Promise<ContractTransaction>;
+
   userLocks(
     arg0: string,
     arg1: BigNumberish,
@@ -1240,6 +1480,21 @@ export interface StakedCitadelLocker extends BaseContract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    CONTRACT_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<string>;
+
+    PAUSER_ROLE(overrides?: CallOverrides): Promise<string>;
+
+    TECH_OPERATIONS_ROLE(overrides?: CallOverrides): Promise<string>;
+
+    TREASURY_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<string>;
+
+    UNPAUSER_ROLE(overrides?: CallOverrides): Promise<string>;
+
+    __GlobalAccessControlManaged_init(
+      _globalAccessControl: string,
+      overrides?: CallOverrides,
+    ): Promise<void>;
+
     addReward(
       _rewardsToken: string,
       _distributor: string,
@@ -1281,10 +1536,27 @@ export interface StakedCitadelLocker extends BaseContract {
 
     checkpointEpoch(overrides?: CallOverrides): Promise<void>;
 
+    claimableRewardForToken(
+      _account: string,
+      _rewardToken: string,
+      overrides?: CallOverrides,
+    ): Promise<StakedCitadelLocker.EarnedDataStructOutput>;
+
     claimableRewards(
       _account: string,
       overrides?: CallOverrides,
     ): Promise<StakedCitadelLocker.EarnedDataStructOutput[]>;
+
+    cumulativeClaimed(
+      arg0: string,
+      arg1: string,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
+    cumulativeDistributed(
+      arg0: string,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
 
     decimals(overrides?: CallOverrides): Promise<number>;
 
@@ -1299,6 +1571,14 @@ export interface StakedCitadelLocker extends BaseContract {
 
     findEpochId(
       _time: BigNumberish,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
+    gac(overrides?: CallOverrides): Promise<string>;
+
+    getCumulativeClaimedRewards(
+      _account: string,
+      _rewardsToken: string,
       overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
@@ -1322,6 +1602,7 @@ export interface StakedCitadelLocker extends BaseContract {
 
     initialize(
       _stakingToken: string,
+      _gac: string,
       name: string,
       symbol: string,
       overrides?: CallOverrides,
@@ -1388,13 +1669,24 @@ export interface StakedCitadelLocker extends BaseContract {
 
     nextMaximumBoostPayment(overrides?: CallOverrides): Promise<BigNumber>;
 
-    notifyRewardAmount(
+    'notifyRewardAmount(address,uint256,bytes32)'(
+      _rewardsToken: string,
+      _reward: BigNumberish,
+      _dataTypeHash: BytesLike,
+      overrides?: CallOverrides,
+    ): Promise<void>;
+
+    'notifyRewardAmount(address,uint256)'(
       _rewardsToken: string,
       _reward: BigNumberish,
       overrides?: CallOverrides,
     ): Promise<void>;
 
     owner(overrides?: CallOverrides): Promise<string>;
+
+    pause(overrides?: CallOverrides): Promise<void>;
+
+    paused(overrides?: CallOverrides): Promise<boolean>;
 
     pendingLockAtEpochOf(
       _epoch: BigNumberish,
@@ -1505,6 +1797,8 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: CallOverrides,
     ): Promise<void>;
 
+    unpause(overrides?: CallOverrides): Promise<void>;
+
     userLocks(
       arg0: string,
       arg1: BigNumberish,
@@ -1552,17 +1846,29 @@ export interface StakedCitadelLocker extends BaseContract {
       newOwner?: string | null,
     ): OwnershipTransferredEventFilter;
 
+    'Paused(address)'(account?: null): PausedEventFilter;
+    Paused(account?: null): PausedEventFilter;
+
     'Recovered(address,uint256)'(
       _token?: null,
       _amount?: null,
     ): RecoveredEventFilter;
     Recovered(_token?: null, _amount?: null): RecoveredEventFilter;
 
-    'RewardAdded(address,uint256)'(
+    'RewardAdded(address,address,uint256,bytes32,uint256)'(
+      account?: null,
       _token?: string | null,
       _reward?: null,
+      _dataTypeHash?: null,
+      _timestamp?: null,
     ): RewardAddedEventFilter;
-    RewardAdded(_token?: string | null, _reward?: null): RewardAddedEventFilter;
+    RewardAdded(
+      account?: null,
+      _token?: string | null,
+      _reward?: null,
+      _dataTypeHash?: null,
+      _timestamp?: null,
+    ): RewardAddedEventFilter;
 
     'RewardPaid(address,address,uint256)'(
       _user?: string | null,
@@ -1590,6 +1896,9 @@ export interface StakedCitadelLocker extends BaseContract {
       _boostedAmount?: null,
     ): StakedEventFilter;
 
+    'Unpaused(address)'(account?: null): UnpausedEventFilter;
+    Unpaused(account?: null): UnpausedEventFilter;
+
     'Withdrawn(address,uint256,bool)'(
       _user?: string | null,
       _amount?: null,
@@ -1603,6 +1912,21 @@ export interface StakedCitadelLocker extends BaseContract {
   };
 
   estimateGas: {
+    CONTRACT_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    PAUSER_ROLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    TECH_OPERATIONS_ROLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    TREASURY_GOVERNANCE_ROLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    UNPAUSER_ROLE(overrides?: CallOverrides): Promise<BigNumber>;
+
+    __GlobalAccessControlManaged_init(
+      _globalAccessControl: string,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<BigNumber>;
+
     addReward(
       _rewardsToken: string,
       _distributor: string,
@@ -1637,8 +1961,25 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
+    claimableRewardForToken(
+      _account: string,
+      _rewardToken: string,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
     claimableRewards(
       _account: string,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
+    cumulativeClaimed(
+      arg0: string,
+      arg1: string,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
+    cumulativeDistributed(
+      arg0: string,
       overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
@@ -1652,6 +1993,14 @@ export interface StakedCitadelLocker extends BaseContract {
 
     findEpochId(
       _time: BigNumberish,
+      overrides?: CallOverrides,
+    ): Promise<BigNumber>;
+
+    gac(overrides?: CallOverrides): Promise<BigNumber>;
+
+    getCumulativeClaimedRewards(
+      _account: string,
+      _rewardsToken: string,
       overrides?: CallOverrides,
     ): Promise<BigNumber>;
 
@@ -1675,6 +2024,7 @@ export interface StakedCitadelLocker extends BaseContract {
 
     initialize(
       _stakingToken: string,
+      _gac: string,
       name: string,
       symbol: string,
       overrides?: Overrides & { from?: string | Promise<string> },
@@ -1729,13 +2079,26 @@ export interface StakedCitadelLocker extends BaseContract {
 
     nextMaximumBoostPayment(overrides?: CallOverrides): Promise<BigNumber>;
 
-    notifyRewardAmount(
+    'notifyRewardAmount(address,uint256,bytes32)'(
+      _rewardsToken: string,
+      _reward: BigNumberish,
+      _dataTypeHash: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<BigNumber>;
+
+    'notifyRewardAmount(address,uint256)'(
       _rewardsToken: string,
       _reward: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
     owner(overrides?: CallOverrides): Promise<BigNumber>;
+
+    pause(
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<BigNumber>;
+
+    paused(overrides?: CallOverrides): Promise<BigNumber>;
 
     pendingLockAtEpochOf(
       _epoch: BigNumberish,
@@ -1839,6 +2202,10 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<BigNumber>;
 
+    unpause(
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<BigNumber>;
+
     userLocks(
       arg0: string,
       arg1: BigNumberish,
@@ -1860,6 +2227,27 @@ export interface StakedCitadelLocker extends BaseContract {
   };
 
   populateTransaction: {
+    CONTRACT_GOVERNANCE_ROLE(
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    PAUSER_ROLE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    TECH_OPERATIONS_ROLE(
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    TREASURY_GOVERNANCE_ROLE(
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    UNPAUSER_ROLE(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    __GlobalAccessControlManaged_init(
+      _globalAccessControl: string,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<PopulatedTransaction>;
+
     addReward(
       _rewardsToken: string,
       _distributor: string,
@@ -1900,8 +2288,25 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
+    claimableRewardForToken(
+      _account: string,
+      _rewardToken: string,
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
     claimableRewards(
       _account: string,
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    cumulativeClaimed(
+      arg0: string,
+      arg1: string,
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    cumulativeDistributed(
+      arg0: string,
       overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
@@ -1918,6 +2323,14 @@ export interface StakedCitadelLocker extends BaseContract {
 
     findEpochId(
       _time: BigNumberish,
+      overrides?: CallOverrides,
+    ): Promise<PopulatedTransaction>;
+
+    gac(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    getCumulativeClaimedRewards(
+      _account: string,
+      _rewardsToken: string,
       overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
@@ -1941,6 +2354,7 @@ export interface StakedCitadelLocker extends BaseContract {
 
     initialize(
       _stakingToken: string,
+      _gac: string,
       name: string,
       symbol: string,
       overrides?: Overrides & { from?: string | Promise<string> },
@@ -2003,13 +2417,26 @@ export interface StakedCitadelLocker extends BaseContract {
       overrides?: CallOverrides,
     ): Promise<PopulatedTransaction>;
 
-    notifyRewardAmount(
+    'notifyRewardAmount(address,uint256,bytes32)'(
+      _rewardsToken: string,
+      _reward: BigNumberish,
+      _dataTypeHash: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<PopulatedTransaction>;
+
+    'notifyRewardAmount(address,uint256)'(
       _rewardsToken: string,
       _reward: BigNumberish,
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 
     owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    pause(
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<PopulatedTransaction>;
+
+    paused(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     pendingLockAtEpochOf(
       _epoch: BigNumberish,
@@ -2116,6 +2543,10 @@ export interface StakedCitadelLocker extends BaseContract {
 
     transferOwnership(
       newOwner: string,
+      overrides?: Overrides & { from?: string | Promise<string> },
+    ): Promise<PopulatedTransaction>;
+
+    unpause(
       overrides?: Overrides & { from?: string | Promise<string> },
     ): Promise<PopulatedTransaction>;
 

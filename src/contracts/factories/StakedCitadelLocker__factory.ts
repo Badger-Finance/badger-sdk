@@ -60,6 +60,19 @@ const _abi = [
       {
         indexed: false,
         internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'Paused',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: 'address',
         name: '_token',
         type: 'address',
       },
@@ -77,6 +90,12 @@ const _abi = [
     anonymous: false,
     inputs: [
       {
+        indexed: false,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+      {
         indexed: true,
         internalType: 'address',
         name: '_token',
@@ -86,6 +105,18 @@ const _abi = [
         indexed: false,
         internalType: 'uint256',
         name: '_reward',
+        type: 'uint256',
+      },
+      {
+        indexed: false,
+        internalType: 'bytes32',
+        name: '_dataTypeHash',
+        type: 'bytes32',
+      },
+      {
+        indexed: false,
+        internalType: 'uint256',
+        name: '_timestamp',
         type: 'uint256',
       },
     ],
@@ -158,6 +189,19 @@ const _abi = [
     anonymous: false,
     inputs: [
       {
+        indexed: false,
+        internalType: 'address',
+        name: 'account',
+        type: 'address',
+      },
+    ],
+    name: 'Unpaused',
+    type: 'event',
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
         indexed: true,
         internalType: 'address',
         name: '_user',
@@ -178,6 +222,84 @@ const _abi = [
     ],
     name: 'Withdrawn',
     type: 'event',
+  },
+  {
+    inputs: [],
+    name: 'CONTRACT_GOVERNANCE_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'PAUSER_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'TECH_OPERATIONS_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'TREASURY_GOVERNANCE_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'UNPAUSER_ROLE',
+    outputs: [
+      {
+        internalType: 'bytes32',
+        name: '',
+        type: 'bytes32',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_globalAccessControl',
+        type: 'address',
+      },
+    ],
+    name: '__GlobalAccessControlManaged_init',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     inputs: [
@@ -350,6 +472,42 @@ const _abi = [
         name: '_account',
         type: 'address',
       },
+      {
+        internalType: 'address',
+        name: '_rewardToken',
+        type: 'address',
+      },
+    ],
+    name: 'claimableRewardForToken',
+    outputs: [
+      {
+        components: [
+          {
+            internalType: 'address',
+            name: 'token',
+            type: 'address',
+          },
+          {
+            internalType: 'uint256',
+            name: 'amount',
+            type: 'uint256',
+          },
+        ],
+        internalType: 'struct StakedCitadelLocker.EarnedData',
+        name: 'userReward',
+        type: 'tuple',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_account',
+        type: 'address',
+      },
     ],
     name: 'claimableRewards',
     outputs: [
@@ -369,6 +527,49 @@ const _abi = [
         internalType: 'struct StakedCitadelLocker.EarnedData[]',
         name: 'userRewards',
         type: 'tuple[]',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '',
+        type: 'address',
+      },
+      {
+        internalType: 'address',
+        name: '',
+        type: 'address',
+      },
+    ],
+    name: 'cumulativeClaimed',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '',
+        type: 'address',
+      },
+    ],
+    name: 'cumulativeDistributed',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
       },
     ],
     stateMutability: 'view',
@@ -457,6 +658,43 @@ const _abi = [
     type: 'function',
   },
   {
+    inputs: [],
+    name: 'gac',
+    outputs: [
+      {
+        internalType: 'contract IGac',
+        name: '',
+        type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_account',
+        type: 'address',
+      },
+      {
+        internalType: 'address',
+        name: '_rewardsToken',
+        type: 'address',
+      },
+    ],
+    name: 'getCumulativeClaimedRewards',
+    outputs: [
+      {
+        internalType: 'uint256',
+        name: '',
+        type: 'uint256',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
     inputs: [
       {
         internalType: 'address',
@@ -524,6 +762,11 @@ const _abi = [
       {
         internalType: 'address',
         name: '_stakingToken',
+        type: 'address',
+      },
+      {
+        internalType: 'address',
+        name: '_gac',
         type: 'address',
       },
       {
@@ -822,6 +1065,29 @@ const _abi = [
         name: '_reward',
         type: 'uint256',
       },
+      {
+        internalType: 'bytes32',
+        name: '_dataTypeHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'notifyRewardAmount',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: '_rewardsToken',
+        type: 'address',
+      },
+      {
+        internalType: 'uint256',
+        name: '_reward',
+        type: 'uint256',
+      },
     ],
     name: 'notifyRewardAmount',
     outputs: [],
@@ -836,6 +1102,26 @@ const _abi = [
         internalType: 'address',
         name: '',
         type: 'address',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'pause',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'paused',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
       },
     ],
     stateMutability: 'view',
@@ -1251,6 +1537,13 @@ const _abi = [
       },
     ],
     name: 'transferOwnership',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'unpause',
     outputs: [],
     stateMutability: 'nonpayable',
     type: 'function',
