@@ -95,44 +95,64 @@ Object {
 exports[`citadel.service listRewards should return added rewards 1`] = `
 Array [
   Object {
+    "account": "0xA967Ba66Fb284EC18bbe59f65bcf42dD11BA8128",
     "block": 50,
+    "dataTypeHash": "0x60b54c1986b43275418006baba637cb29964609f76738f9d0c47dbd9c076bf11",
     "reward": Object {
       "hex": "0x64",
       "type": "BigNumber",
     },
+    "timestamp": 1651088758542,
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "added",
   },
   Object {
+    "account": "0xA967Ba66Fb284EC18bbe59f65bcf42dD11BA8128",
     "block": 50,
+    "dataTypeHash": "0x60b54c1986b43275418006baba637cb29964609f76738f9d0c47dbd9c076bf11",
     "reward": Object {
       "hex": "0xc8",
       "type": "BigNumber",
     },
+    "timestamp": 1651088758542,
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "added",
   },
   Object {
+    "account": "0xA967Ba66Fb284EC18bbe59f65bcf42dD11BA8128",
     "block": 51,
+    "dataTypeHash": "0x60b54c1986b43275418006baba637cb29964609f76738f9d0c47dbd9c076bf11",
     "reward": Object {
       "hex": "0x012c",
       "type": "BigNumber",
     },
+    "timestamp": 1651088758542,
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "added",
   },
   Object {
+    "account": "0xA967Ba66Fb284EC18bbe59f65bcf42dD11BA8128",
     "block": 52,
+    "dataTypeHash": "0x60b54c1986b43275418006baba637cb29964609f76738f9d0c47dbd9c076bf11",
     "reward": Object {
       "hex": "0x0190",
       "type": "BigNumber",
     },
+    "timestamp": 1651088758542,
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "added",
   },
   Object {
+    "account": "0xA967Ba66Fb284EC18bbe59f65bcf42dD11BA8128",
     "block": 52,
+    "dataTypeHash": "0x60b54c1986b43275418006baba637cb29964609f76738f9d0c47dbd9c076bf11",
     "reward": Object {
       "hex": "0x01f4",
       "type": "BigNumber",
     },
+    "timestamp": 1651088758542,
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "added",
   },
 ]
 `;
@@ -146,6 +166,7 @@ Array [
       "type": "BigNumber",
     },
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "paid",
     "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
   },
   Object {
@@ -155,6 +176,7 @@ Array [
       "type": "BigNumber",
     },
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "paid",
     "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
   },
   Object {
@@ -164,6 +186,7 @@ Array [
       "type": "BigNumber",
     },
     "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    "type": "paid",
     "user": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
   },
 ]

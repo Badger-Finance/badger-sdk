@@ -154,21 +154,5 @@ describe('citadel.service', function () {
       expect(rewards.length).toBe(3);
       expect(rewards).toMatchSnapshot();
     });
-
-    it('should failt without token param', async () => {
-      await expect(async () => await sdk.citadel.listRewards()).rejects.toThrow(
-        Error,
-      );
-    });
-
-    it('should failt without user addr for paid', async () => {
-      await expect(
-        async () =>
-          await sdk.citadel.listRewards({
-            token: TEST_TOKEN,
-            filter: RewardFilter.PAID,
-          }),
-      ).rejects.toThrow(Error);
-    });
   });
 });

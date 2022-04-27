@@ -28,6 +28,7 @@ import {
 } from '../contracts/StakedCitadelLocker';
 import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
+import { RewardEventTypeEnum } from './enums/reward-event-type.enum';
 
 export const citadelMinterAddress =
   '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
@@ -156,11 +157,7 @@ export class CitadelService extends Service {
 
     switch (filter) {
       case RewardFilter.ADDED:
-        if (!token) {
-          throw new Error('Token should be specified');
-        }
-
-        const addedFilter = this.citadelLocker.filters.RewardAdded(token);
+        const addedFilter = this.citadelLocker.filters.RewardAdded(null, token);
 
         const addedRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
@@ -175,15 +172,15 @@ export class CitadelService extends Service {
 
         rewardEvents = await parseTypedEvents(addedRewardEvents, (e, b) => ({
           block: b.number,
-          token: e.args[0],
-          reward: e.args[1],
+          account: e.args[0],
+          token: e.args[1],
+          reward: e.args[2],
+          dataTypeHash: e.args[3],
+          timestamp: e.args[4].toNumber(),
+          type: RewardEventTypeEnum.ADDED,
         }));
         break;
       case RewardFilter.PAID:
-        if (!user || !token) {
-          throw new Error('User or token param is missing');
-        }
-
         const paidFilter = this.citadelLocker.filters.RewardPaid(user, token);
 
         const paidRewardEvents = await chunkQueryFilter<
@@ -202,6 +199,7 @@ export class CitadelService extends Service {
           user: e.args[0],
           token: e.args[1],
           reward: e.args[2],
+          type: RewardEventTypeEnum.PAID,
         }));
         break;
       default:
