@@ -62,6 +62,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadCitadelTreasury: { args: [] },
     loadCitadelUserTotalRewards: { args: [ibbtc, ibbtc, RewardFilter.ADDED] },
     loadCitadelTreasuryCharts: { args: [] },
+    loadCitadelMerkleProof: { args: [badgerWhale] },
     get: { ignore: true },
     isLocal: { ignore: true },
   },
