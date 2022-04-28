@@ -14,6 +14,7 @@ export { RewardTree } from './reward-tree.interface';
 export { TokenValue } from './token-value.interface';
 export { TreasuryPosition } from './treasy-position.interface';
 export { TreasurySummary } from './treasury-summary.interface';
+export { TreasurySummarySnapshot } from './treasury-summary-snapshot.interface';
 export { UserBoostData } from './user-boost-data.interface';
 export { ValueSource } from './value-source.interface';
 export { VaultDTO } from './vault-dto.interface';
