@@ -1,3 +1,11 @@
+## [1.8.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.8.1...sdk-mocks-v1.8.2) (2022-04-28)
+
+
+### Bug Fixes
+
+* remove interface ([d3c5142](https://github.com/Badger-Finance/badger-sdk/commit/d3c5142faeb9f6f5eb173eb31e64825e20c99fe2))
+* separate interfaces ([d7d4645](https://github.com/Badger-Finance/badger-sdk/commit/d7d4645737a0d20e3062699021e89e578d283445))
+
 ## [1.8.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.8.0...sdk-mocks-v1.8.1) (2022-04-28)
 
 
