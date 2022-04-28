@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.8.2...v1.8.3) (2022-04-28)
+
+
+### Bug Fixes
+
+* extend citadel treasury summary ([ae158ed](https://github.com/Badger-Finance/badger-sdk/commit/ae158eddb969ed30cb08daf1f6aabeec051f07c3))
+
 ## [1.8.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.8.1...v1.8.2) (2022-04-28)
 
 
