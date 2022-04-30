@@ -119,20 +119,12 @@ export class CitadelService extends Service {
   }
 
   getRewardStats(account: string) {
-    if (!this.citadelLocker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const accAddr = ethers.utils.getAddress(account);
 
     return this.citadelLocker.rewardData(accAddr);
   }
 
   getRewardTokens() {
-    if (!this.citadelLocker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     return this.citadelLocker.getRewardTokens();
   }
 
