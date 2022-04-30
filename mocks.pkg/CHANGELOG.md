@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.8.3...sdk-mocks-v1.9.0) (2022-04-30)
+
+
+### Features
+
+* citadel rw data enum, lil service cleanup ([bf8fc0e](https://github.com/Badger-Finance/badger-sdk/commit/bf8fc0ea39b6acc2a9a04c57ed2090da2a0caf7c))
+
 ## [1.8.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.8.2...sdk-mocks-v1.8.3) (2022-04-28)
 
 
