@@ -11,6 +11,12 @@ export const methodsToSkip = [
   'getPendingYield', // vaultsV2 WIP method
   'getPendingHarvest', // vaultsV2 WIP method
   'listHarvests', // failing for some reason, temp
+
+  // temporary, getters with expected sdk backing failing
+  'digg',
+  'rewardsLogger',
+  'badgerTree',
+  'registry',
 ];
 
 export const relevantNetworks: RelevantNetworks[] = [

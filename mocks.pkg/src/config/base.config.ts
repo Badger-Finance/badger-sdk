@@ -60,6 +60,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadSchedules: { args: [] },
     loadSchedule: { args: [vaults.BCVX.addr] },
     loadCitadelTreasury: { args: [] },
+    loadCitadelSummary: { args: [] },
     loadCitadelUserTotalRewards: { args: [ibbtc, ibbtc, RewardFilter.ADDED] },
     loadCitadelTreasuryCharts: { args: [] },
     loadCitadelMerkleProof: { args: [badgerWhale] },
@@ -98,8 +99,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
   [SdkServices.Graph]: {
     loadSett: { args: [{ id: vaults.BCVX.addr }] },
     loadSetts: { args: [] },
-    loadSettSpanshot: { args: [{ id: vaults.BCVX.snapshot }] },
-    loadSettSpanshots: { args: [{ id: vaults.BCVX.addr }] },
+    loadSettSnapshot: { args: [{ id: vaults.BCVX.snapshot }] },
+    loadSettSnapshots: { args: [{ id: vaults.BCVX.addr }] },
     loadUserSettBalance: { args: [{ id: vaults.BCVX.userBalance }] },
     loadUserSettBalances: { args: [{ id: vaults.BCVX.addr }] },
     loadSettHarvest: { args: [{ id: vaults.BCVX.harvest }] },
