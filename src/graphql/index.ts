@@ -41,13 +41,13 @@ export class BadgerGraph {
     return this.graphSDK.Setts(options);
   }
 
-  loadSettSpanshot(
+  loadSettSnapshot(
     options: gqlGenT.SettSnapshotQueryVariables,
   ): Promise<gqlGenT.SettSnapshotQuery> {
     return this.graphSDK.SettSnapshot(options);
   }
 
-  loadSettSpanshots(
+  loadSettSnapshots(
     options: gqlGenT.SettSnapshotsQueryVariables,
   ): Promise<gqlGenT.SettSnapshotsQuery> {
     return this.graphSDK.SettSnapshots(options);

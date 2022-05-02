@@ -15,8 +15,8 @@ import { ethers } from 'ethers';
 
 export class RewardsService extends Service {
   private loading?: Promise<void>;
-  private badgerTree?: BadgerTree;
-  private rewardsLogger?: RewardsLogger;
+  private _badgerTree?: BadgerTree;
+  private _rewardsLogger?: RewardsLogger;
 
   async ready() {
     if (!this.loading) {
@@ -25,13 +25,30 @@ export class RewardsService extends Service {
     return this.loading;
   }
 
-  async claim(options: ClaimOptions) {
-    const { network } = this.config;
-    if (!this.badgerTree) {
-      throw new Error(`Badger Tree is not defined for ${network}`);
+  get badgerTree(): BadgerTree {
+    if (!this._badgerTree) {
+      throw new Error(`Badger Tree is not defined for ${this.config.network}`);
     }
-    const { tokens, cumulativeAmounts, index, cycle, proof, claimAmounts } =
-      options;
+    return this._badgerTree;
+  }
+
+  get rewardsLogger(): RewardsLogger {
+    if (!this._rewardsLogger) {
+      throw new Error(
+        `Rewards Logger is not defined for ${this.config.network}`,
+      );
+    }
+    return this._rewardsLogger;
+  }
+
+  async claim({
+    tokens,
+    cumulativeAmounts,
+    index,
+    cycle,
+    proof,
+    claimAmounts,
+  }: ClaimOptions) {
     const tx = await this.badgerTree.claim(
       tokens,
       cumulativeAmounts,
@@ -104,19 +121,19 @@ export class RewardsService extends Service {
         this.sdk.registry.get(RegistryKey.RewardsLogger),
       ]);
       if (badgerTreeAddress) {
-        this.badgerTree = BadgerTree__factory.connect(
+        this._badgerTree = BadgerTree__factory.connect(
           badgerTreeAddress,
           this.provider,
         );
       }
       if (rewardsLoggerAddress) {
-        this.rewardsLogger = RewardsLogger__factory.connect(
+        this._rewardsLogger = RewardsLogger__factory.connect(
           rewardsLoggerAddress,
           this.provider,
         );
       }
     } catch (err) {
-      console.log(
+      this.warn(
         `Failed to initialize rewards for ${this.sdk.config.network}`,
         err,
       );

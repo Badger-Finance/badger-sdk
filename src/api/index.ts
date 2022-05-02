@@ -8,7 +8,7 @@ import {
 } from './types';
 import * as i from './interfaces';
 import { Networkish } from '@ethersproject/networks';
-import { ChartTimeFrame, Currency } from './enums';
+import { ChartTimeFrame, Currency, LogLevel } from './enums';
 import { ApiError } from './api.error';
 import { EmissionSchedule } from '../rewards';
 import { getNetworkConfig } from '../config/network/network.config';
@@ -17,6 +17,7 @@ import { CitadelRewardEvent } from './interfaces/citadel-reward-event.interface'
 import { RewardFilter } from '../citadel/enums/reward-filter.enum';
 import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
 import { CitadelMerkleClaim } from '../citadel';
+import { Logger } from '../logger';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
@@ -25,14 +26,17 @@ export class BadgerAPI {
   private readonly client: AxiosInstance;
   private readonly citadelClient: AxiosInstance;
   private network: Network;
+  public logger: Logger;
   public baseURL: string;
   public citadelBaseURL: string;
 
   constructor({
     baseURL = DEFAULT_BADGER_API_URL,
     citadelBaseURL = DEFAULT_CITADEL_API_URL,
+    logLevel = LogLevel.Error,
     network = Network.Ethereum,
   }: i.APIOptions) {
+    this.logger = new Logger(logLevel);
     this.baseURL = baseURL;
     this.citadelBaseURL = citadelBaseURL;
     this.client = axios.create({
@@ -227,7 +231,7 @@ export class BadgerAPI {
       return data as T;
     } catch (error) {
       const { response, config } = error as AxiosError;
-      console.error({
+      this.logger.error({
         url: config.url,
         method: config.method,
         status: response?.status,

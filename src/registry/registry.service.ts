@@ -9,13 +9,20 @@ export const REGISTRY_ADDRESS = '0xFda7eB6f8b7a9e9fCFd348042ae675d1d652454f';
 export class RegistryService extends Service {
   private loading?: Promise<void>;
   private entries: Record<string, string> = {};
-  private registry?: Registry;
+  private _registry?: Registry;
 
   async ready() {
     if (!this.loading) {
       this.loading = this.init();
     }
     return this.loading;
+  }
+
+  get registry(): Registry {
+    if (!this._registry) {
+      throw new Error(`Registry is not defined for ${this.config.network}`);
+    }
+    return this._registry;
   }
 
   async get(key: string): Promise<string | undefined> {
@@ -26,7 +33,7 @@ export class RegistryService extends Service {
       try {
         this.entries[key] = await this.registry.get(key);
       } catch (err) {
-        console.error(`Failed to get ${key}`, err);
+        this.error(`Failed to get ${key}`, err);
       }
     }
     return this.entries[key];
@@ -57,17 +64,17 @@ export class RegistryService extends Service {
     try {
       const deployed = await this.provider.getCode(REGISTRY_ADDRESS);
       if (deployed === '0x') {
-        console.debug(
+        this.debug(
           `No registry deployed for ${this.sdk.config.network}, skipping...`,
         );
         return;
       }
-      this.registry = Registry__factory.connect(
+      this._registry = Registry__factory.connect(
         REGISTRY_ADDRESS,
         this.provider,
       );
     } catch (err) {
-      console.debug(
+      this.debug(
         `Failed to initialize registry for ${this.sdk.config.network}`,
         err,
       );

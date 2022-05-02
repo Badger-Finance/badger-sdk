@@ -36,37 +36,37 @@ export const stakedCitadelLockerAddress =
   '0xB1c38253aD6Ab3e2A2D53A094692fcf1321b12d4';
 
 export class CitadelService extends Service {
-  private minter?: CitadelMinter;
-  private locker?: StakedCitadelLocker;
+  private _minter?: CitadelMinter;
+  private _locker?: StakedCitadelLocker;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
     this.#init();
   }
 
-  get citadelMinter(): CitadelMinter {
-    if (!this.minter) {
+  get minter(): CitadelMinter {
+    if (!this._minter) {
       throw new Error(`Minter is not defined for ${this.config.network}`);
     }
-    return this.minter;
+    return this._minter;
   }
 
-  get citadelLocker(): StakedCitadelLocker {
-    if (!this.locker) {
+  get locker(): StakedCitadelLocker {
+    if (!this._locker) {
       throw new Error(`Locker is not defined for ${this.config.network}`);
     }
-    return this.locker;
+    return this._locker;
   }
 
   async getSupplySchedule(): Promise<SupplySchedule> {
     return SupplySchedule__factory.connect(
-      await this.citadelMinter.supplySchedule(),
+      await this.minter.supplySchedule(),
       this.provider,
     );
   }
 
   getLastMintTimestamp() {
-    return this.citadelMinter.lastMintTimestamp();
+    return this.minter.lastMintTimestamp();
   }
 
   async listDistributions(options: ListDistributionOptions = {}) {
@@ -80,15 +80,14 @@ export class CitadelService extends Service {
     if (!startBlock) options.startBlock = deployedAt;
     if (!endBlock) options.endBlock = await this.sdk.provider.getBlockNumber();
 
-    const distFilter =
-      this.citadelMinter.filters.CitadelDistributionToStaking();
+    const distFilter = this.minter.filters.CitadelDistributionToStaking();
 
     const distributionsToStaking = await chunkQueryFilter<
       CitadelMinter,
       CitadelDistributionToStakingEventFilter,
       CitadelDistributionToStakingEvent
     >(
-      this.citadelMinter,
+      this.minter,
       distFilter,
       <number>options.startBlock,
       <number>options.endBlock,
@@ -108,24 +107,24 @@ export class CitadelService extends Service {
   }
 
   isDistributor(token: string, distributor: string) {
-    if (!this.citadelLocker) {
+    if (!this.locker) {
       throw new Error(`Locker not defined for ${this.config.network}`);
     }
 
     const tokenAddr = ethers.utils.getAddress(token);
     const distributorAddr = ethers.utils.getAddress(distributor);
 
-    return this.citadelLocker.rewardDistributors(tokenAddr, distributorAddr);
+    return this.locker.rewardDistributors(tokenAddr, distributorAddr);
   }
 
   getRewardStats(account: string) {
     const accAddr = ethers.utils.getAddress(account);
 
-    return this.citadelLocker.rewardData(accAddr);
+    return this.locker.rewardData(accAddr);
   }
 
   getRewardTokens() {
-    return this.citadelLocker.getRewardTokens();
+    return this.locker.getRewardTokens();
   }
 
   async listRewards(options: ListRewardsOptions = {}) {
@@ -149,14 +148,14 @@ export class CitadelService extends Service {
 
     switch (filter) {
       case RewardFilter.ADDED:
-        const addedFilter = this.citadelLocker.filters.RewardAdded(null, token);
+        const addedFilter = this.locker.filters.RewardAdded(null, token);
 
         const addedRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardAddedEventFilter,
           RewardAddedEvent
         >(
-          this.citadelLocker,
+          this.locker,
           addedFilter,
           <number>options.startBlock,
           <number>options.endBlock,
@@ -173,14 +172,14 @@ export class CitadelService extends Service {
         }));
         break;
       case RewardFilter.PAID:
-        const paidFilter = this.citadelLocker.filters.RewardPaid(user, token);
+        const paidFilter = this.locker.filters.RewardPaid(user, token);
 
         const paidRewardEvents = await chunkQueryFilter<
           StakedCitadelLocker,
           RewardPaidEventFilter,
           RewardPaidEvent
         >(
-          this.citadelLocker,
+          this.locker,
           paidFilter,
           <number>options.startBlock,
           <number>options.endBlock,
@@ -203,46 +202,46 @@ export class CitadelService extends Service {
 
   async getClaimableRewards(account: string) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.citadelLocker.claimableRewards(accAddr);
+    return this.locker.claimableRewards(accAddr);
   }
 
   async rewardWeightOf(account: string) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.citadelLocker.rewardWeightOf(accAddr);
+    return this.locker.rewardWeightOf(accAddr);
   }
 
   lockedBalanceOf(address: string) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.citadelLocker.lockedBalanceOf(userAddr);
+    return this.locker.lockedBalanceOf(userAddr);
   }
 
   balanceOf(address: string) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.citadelLocker.balanceOf(userAddr);
+    return this.locker.balanceOf(userAddr);
   }
 
   balanceAtEpochOf(epoch: BigNumberish, address: string) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.citadelLocker.balanceAtEpochOf(epoch, userAddr);
+    return this.locker.balanceAtEpochOf(epoch, userAddr);
   }
 
   getEcochs(index: BigNumberish) {
-    return this.citadelLocker.epochs(index);
+    return this.locker.epochs(index);
   }
 
   getLockedSupply() {
-    return this.citadelLocker.lockedSupply();
+    return this.locker.lockedSupply();
   }
 
   getBoostedSupply() {
-    return this.citadelLocker.boostedSupply();
+    return this.locker.boostedSupply();
   }
 
   async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
     const [fundingBps, stakingBps, lockingBps] = await Promise.all([
-      this.citadelMinter.fundingBps(),
-      this.citadelMinter.stakingBps(),
-      this.citadelMinter.lockingBps(),
+      this.minter.fundingBps(),
+      this.minter.stakingBps(),
+      this.minter.lockingBps(),
     ]);
 
     return {
@@ -256,11 +255,11 @@ export class CitadelService extends Service {
     if (this.config.network !== Network.Ethereum) {
       return;
     }
-    this.minter = CitadelMinter__factory.connect(
+    this._minter = CitadelMinter__factory.connect(
       citadelMinterAddress,
       this.provider,
     );
-    this.locker = StakedCitadelLocker__factory.connect(
+    this._locker = StakedCitadelLocker__factory.connect(
       stakedCitadelLockerAddress,
       this.provider,
     );

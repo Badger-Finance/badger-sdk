@@ -12,19 +12,23 @@ export const DIGG_ADDRESS = ethers.utils.getAddress(
 );
 
 export class DiggService extends Service {
-  private digg?: Digg;
+  private _digg?: Digg;
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
     if (this.config.network === Network.Ethereum) {
-      this.digg = Digg__factory.connect(DIGG_ADDRESS, this.provider);
+      this._digg = Digg__factory.connect(DIGG_ADDRESS, this.provider);
     }
   }
 
-  async convert(shares: BigNumber): Promise<number> {
-    if (!this.digg) {
+  get digg(): Digg {
+    if (!this._digg) {
       throw new Error(`Digg is not defined for ${this.config.network}`);
     }
+    return this._digg;
+  }
+
+  async convert(shares: BigNumber): Promise<number> {
     const [fragments, token] = await Promise.all([
       this.digg.sharesToFragments(shares),
       this.sdk.tokens.loadToken(this.digg.address),

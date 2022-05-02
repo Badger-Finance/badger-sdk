@@ -182,7 +182,7 @@ export class VaultsService extends Service {
 
   async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
     if (!this.sdk.address || !this.sdk.signer) {
-      console.error(`Failed deposit to ${vault}, requires an active signer`);
+      this.error(`Failed deposit to ${vault}, requires an active signer`);
       return TransactionStatus.Failure;
     }
     const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
@@ -203,7 +203,7 @@ export class VaultsService extends Service {
         );
         await approveTx.wait();
       } catch (err) {
-        console.log(err);
+        this.log(err);
         return TransactionStatus.Failure;
       }
     }
@@ -216,14 +216,14 @@ export class VaultsService extends Service {
       await depositTx.wait();
       return TransactionStatus.Success;
     } catch (err) {
-      console.error(err);
+      this.error(err);
       return TransactionStatus.Failure;
     }
   }
 
   async withdraw(vault: string, amount: BigNumber): Promise<TransactionStatus> {
     if (!this.sdk.address || !this.sdk.signer) {
-      console.error(`Failed withdraw to ${vault}, requires an active signer`);
+      this.error(`Failed withdraw to ${vault}, requires an active signer`);
       return TransactionStatus.Failure;
     }
     const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
@@ -232,7 +232,7 @@ export class VaultsService extends Service {
       await withdrawTx.wait();
       return TransactionStatus.Success;
     } catch (err) {
-      console.error(err);
+      this.error(err);
       return TransactionStatus.Failure;
     }
   }
