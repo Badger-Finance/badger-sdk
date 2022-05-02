@@ -4,7 +4,7 @@ import { providers } from '@0xsequence/multicall';
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
 
-import { APIOptions, BadgerAPI } from './api';
+import { APIOptions, BadgerAPI, LogLevel } from './api';
 import { BadgerGraph } from './graphql';
 
 import { DiggService } from './digg/digg.service';
@@ -24,6 +24,8 @@ export interface SDKOptions extends APIOptions {
 export class BadgerSDK {
   private loading: Promise<void>;
 
+  public logLevel: LogLevel;
+
   public address?: string;
   public api: BadgerAPI;
   public graph: BadgerGraph;
@@ -39,16 +41,24 @@ export class BadgerSDK {
   readonly vaults: VaultsService;
   readonly citadel: CitadelService;
 
-  constructor({ network, provider, baseURL, citadelBaseURL }: SDKOptions) {
+  constructor({
+    network,
+    provider,
+    baseURL,
+    citadelBaseURL,
+    logLevel = LogLevel.Error,
+  }: SDKOptions) {
+    this.logLevel = logLevel;
     const sdkProvider = BadgerSDK.getSdkProvider(provider);
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
     this.loading = this.initialize();
     this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
-      network: this.config.network,
       baseURL,
       citadelBaseURL,
+      logLevel,
+      network: this.config.network,
     });
     this.graph = new BadgerGraph({
       network: this.config.network,
@@ -81,6 +91,7 @@ export class BadgerSDK {
       network: this.config.network,
       baseURL: this.api.baseURL,
       citadelBaseURL: this.api.citadelBaseURL,
+      logLevel: this.api.logger.level,
     });
     this.graph = new BadgerGraph({
       network: this.config.network,
