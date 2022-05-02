@@ -1,3 +1,12 @@
+## [1.9.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.0...sdk-mocks-v1.9.1) (2022-05-02)
+
+
+### Bug Fixes
+
+* add citadel summary api support ([34409a7](https://github.com/Badger-Finance/badger-sdk/commit/34409a71a066be663ddf069416d3fd8fe3f8c87b))
+* add mocks generation + better handle mock failure logging ([9dd6607](https://github.com/Badger-Finance/badger-sdk/commit/9dd6607b5d2c80f7f670efdf27a9bc3567ee533d))
+* update citadel public vars ([06e9063](https://github.com/Badger-Finance/badger-sdk/commit/06e9063100ddbc3ec210fd13a6635924e8945038))
+
 # [1.9.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.8.3...sdk-mocks-v1.9.0) (2022-04-30)
 
 
