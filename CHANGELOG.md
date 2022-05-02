@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.0...v1.9.1) (2022-05-02)
+
+
+### Bug Fixes
+
+* update citadel public vars ([06e9063](https://github.com/Badger-Finance/badger-sdk/commit/06e9063100ddbc3ec210fd13a6635924e8945038))
+
 # [1.9.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.8.3...v1.9.0) (2022-04-30)
 
 
