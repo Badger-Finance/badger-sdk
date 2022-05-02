@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.2...v1.9.3) (2022-05-02)
+
+
+### Bug Fixes
+
+* add mocks generation + better handle mock failure logging ([9dd6607](https://github.com/Badger-Finance/badger-sdk/commit/9dd6607b5d2c80f7f670efdf27a9bc3567ee533d))
+
 ## [1.9.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.1...v1.9.2) (2022-05-02)
 
 
