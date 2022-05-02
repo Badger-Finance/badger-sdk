@@ -18,6 +18,7 @@ import { RewardFilter } from '../citadel/enums/reward-filter.enum';
 import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
 import { CitadelMerkleClaim } from '../citadel';
 import { Logger } from '../logger';
+import { CitadelSummary } from './interfaces/citadel-summary.interface';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
@@ -185,6 +186,10 @@ export class BadgerAPI {
 
   loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
     return this.get('/treasury', {}, this.citadelClient);
+  }
+
+  loadCitadelSummary(): Promise<CitadelSummary> {
+    return this.get('/summary', {}, this.citadelClient);
   }
 
   loadCitadelUserTotalRewards(
