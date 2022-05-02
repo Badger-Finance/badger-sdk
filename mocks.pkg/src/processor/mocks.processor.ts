@@ -85,21 +85,28 @@ export class MocksProcessor {
         if (!methods) return;
 
         for (const methodName of <SdkServices[]>methods) {
-          const { args, ignore } =
-            methodArgsConfig.servicesArgsMap[<SdkServices>service][methodName];
+          try {
+            const { args, ignore } =
+              methodArgsConfig.servicesArgsMap[<SdkServices>service][
+                methodName
+              ];
 
-          if (ignore) continue;
+            if (ignore) continue;
 
-          console.log(
-            `Loading and writing chain:[${network}] service:[${service}] method:[${methodName}] \n`,
-            `With args: ${JSON.stringify(args, null, 2)}`,
-          );
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore It`s rly hard to type this, and even if we do
-          // there be a lot of manual work, need to avoid that
-          const response = await sdk[service][methodName](...args);
+            console.log(
+              `Loading and writing chain:[${network}] service:[${service}] method:[${methodName}] \n`,
+              `With args: ${JSON.stringify(args, null, 2)}`,
+            );
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore It`s rly hard to type this, and even if we do
+            // there be a lot of manual work, need to avoid that
+            const response = await sdk[service][methodName](...args);
 
-          this.fsIo.write(methodName, response, `${network}/${service}`);
+            this.fsIo.write(methodName, response, `${network}/${service}`);
+          } catch (err) {
+            console.error(`Failed to save response for ${methodName}`);
+            throw err;
+          }
         }
       }
     }

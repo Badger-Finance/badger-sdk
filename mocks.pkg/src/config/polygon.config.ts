@@ -10,6 +10,7 @@ export const polygonArgsConfig = {
   [SdkServices.Api]: {
     ...polygonArgsConfigBase[SdkServices.Api],
     loadCitadelTreasury: { ignore: true },
+    loadCitadelSummary: { ignore: true },
     loadCitadelUserTotalRewards: { ignore: true },
     loadCitadelTreasuryCharts: { ignore: true },
   },

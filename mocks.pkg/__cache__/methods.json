@@ -1,12 +1,12 @@
 {
   "digg": {
-    "convert": "rPaw3Bjius+2TbDygyaMI412serHXQZR5oYWQwPOE0U="
+    "convert": "OXhbG7g9to8MaeHzzVuVmSmoZ66WCUxslNR5lz8WdsA="
   },
   "ibbtc": {
     "getPricePerFullShare": "GhN3iEVlhl9TWuMDDllQc6QZzH5+ly/x45fpI/r3yDU="
   },
   "registry": {
-    "get": "yrYLWXaBeKsEk01lXyAoZL4SAtIjxdO930YauQL7yqM=",
+    "get": "WnwKKk6zqoDBQHWoJlDW6APOjcR24SGoIfw88Zdk2f8=",
     "getProductionVaults": "A3GAzGJQcRHiIdgX2N1kIdASKwv7DcyF/N0XYHSL/eM=",
     "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs="
   },
@@ -15,10 +15,10 @@
     "loadSchedules": "ngtJD7sEDkUAJJLCvaoUTkf3hYZ3p47/Y+VVVI7YG+Q="
   },
   "tokens": {
-    "loadTokens": "S3nLsTRU+tsjtywZI59kuOoW12AE2JiVSDp6qrh6Ilg=",
-    "loadToken": "HF1HFOU9joCdn9050sSjetiT9pz5aGjl8YsbNqIeNQQ=",
-    "loadBalances": "e0MFY6G8uKrt/oFEHfefHKcWIIAZp+zYVFTJ0wz/jtk=",
-    "loadBalance": "PMgJmQM0wuDLSb6DcjVhbUOPjvjhYMsZ0ONwbsj17sY="
+    "loadTokens": "2v/FB4W+L2KcmvWh6xPfQ99fiKcKAx9bSYcp8BFMSvM=",
+    "loadToken": "U4iSvrVtuidfItFZtgEtc/uDcS4ZCs1XbOA8X2mVFto=",
+    "loadBalances": "C7ax3mR2+yPLamMkJEaqDjcLydmRhHwCeVRimK2Al8s=",
+    "loadBalance": "wscJlZ+3n4DMxvgqiRWTMHqCqs7QNsqLjoimFkdOG9E="
   },
   "vaults": {
     "loadVaults": "5Fl8OM4KrIx5c2+f7lc6FwxB5RVSs8otkaUt3ZOXHYQ=",
@@ -28,8 +28,8 @@
   "graph": {
     "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
     "loadSetts": "vbOtbok+ovG9+Z5iTiuVjHmyllm6kZ7kxDEJvc6sfvc=",
-    "loadSettSpanshot": "PIxX31du7rDrjzuD+QwStNYCBc80u7HlKy4uQzRjdrE=",
-    "loadSettSpanshots": "Z/nX9ME+333pZjmjy7tOio9Ah7CaqSXs27H3L6pAaww=",
+    "loadSettSnapshot": "PYT+OyRgWjUIVXLTWh64tv1R7XgLSN8Xmy+rI0VbJPY=",
+    "loadSettSnapshots": "kLAd/ITleKj2DCGqCsVIy5BvRfLL0aogsM+12jxx+Fs=",
     "loadUserSettBalance": "VhkuxWw0IEKy44Vz0lQ5Fw5xKlC9KrHmlBrQYhzmAgE=",
     "loadUserSettBalances": "nuNKIZqfnPLnwoNHNbZVbvqcKZ4DQWQ0wLJpM+Jhmu8=",
     "loadSettHarvest": "AQ3MCsuX1e7rjoUTlMLqYGhHAqpJcBuwsV0zUz1Q038=",
@@ -64,10 +64,11 @@
     "loadSchedules": "8WNLxdmjYBqS1YkX5xstIDqaKgDpqgPmZgtEsOmFmrk=",
     "loadSchedule": "4QcCqv6I/ExwLQGwuRrWiqRk9xjRZFr2M1eHW7OIAKs=",
     "loadCitadelTreasury": "S613GUlf6rG3WhQ1fQ3fOIBuEktctSK2hJfIj9baZVc=",
+    "loadCitadelSummary": "0005hOnF9J5zmb3PLUHk5fpQMK8P9ZNmHgsfqWT7s4c=",
     "loadCitadelUserTotalRewards": "DszovqnRRi8P6b4q3gnFzmUw00Zk+T3wP5GdQYxHPOQ=",
     "loadCitadelTreasuryCharts": "a0Mb4a4B2MQrvF54qdRky+2ZCmmGJVniDw6esJ1fX5o=",
     "loadCitadelMerkleProof": "xQJf1WKzX5XADme4JhKWxUh5jOxc0eqODttfXxqk4Xc=",
-    "get": "8cYvNHf+c4+rMHExBF8aKWdG0E1/hAFRvwbv5B2tTek=",
+    "get": "S3+l/PwyYymUDsOyPdEOPWK1wwu9EFAOlwfxp5ZG5fU=",
     "isLocal": "LikXH4bOSy80KIajaxKGZeeD0ArkTLrHQglvcbGYqgw="
   }
 }
