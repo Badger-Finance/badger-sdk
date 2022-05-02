@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.1...v1.9.2) (2022-05-02)
+
+
+### Bug Fixes
+
+* add citadel summary api support ([34409a7](https://github.com/Badger-Finance/badger-sdk/commit/34409a71a066be663ddf069416d3fd8fe3f8c87b))
+
 ## [1.9.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.0...v1.9.1) (2022-05-02)
 
 
