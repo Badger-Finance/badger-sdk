@@ -41,6 +41,14 @@ export class RewardsService extends Service {
     return this._rewardsLogger;
   }
 
+  hasBadgerTree() {
+    return this._badgerTree !== undefined;
+  }
+
+  hasRewardsLogger() {
+    return this._badgerTree !== undefined;
+  }
+
   async claim({
     tokens,
     cumulativeAmounts,
