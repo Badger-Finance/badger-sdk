@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.3...v1.9.4) (2022-05-03)
+
+
+### Bug Fixes
+
+* update rewards logger ([5e5a3dc](https://github.com/Badger-Finance/badger-sdk/commit/5e5a3dcbceb1726021850e407fc1824acc3f6fb2))
+
 ## [1.9.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.2...v1.9.3) (2022-05-02)
 
 
