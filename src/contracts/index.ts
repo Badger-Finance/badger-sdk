@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { BadgerTree } from './BadgerTree';
+export type { BribesProcessor } from './BribesProcessor';
 export type { Byvwbtc } from './Byvwbtc';
 export type { CitadelFunding } from './CitadelFunding';
 export type { CitadelMinter } from './CitadelMinter';
@@ -19,6 +20,7 @@ export type { VaultV15 } from './VaultV15';
 export type { Vault } from './Vault';
 
 export { BadgerTree__factory } from './factories/BadgerTree__factory';
+export { BribesProcessor__factory } from './factories/BribesProcessor__factory';
 export { Byvwbtc__factory } from './factories/Byvwbtc__factory';
 export { CitadelFunding__factory } from './factories/CitadelFunding__factory';
 export { CitadelMinter__factory } from './factories/CitadelMinter__factory';
