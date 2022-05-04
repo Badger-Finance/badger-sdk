@@ -25,6 +25,10 @@ export class RegistryService extends Service {
     return this._registry;
   }
 
+  hasRegistry(): boolean {
+    return this._registry !== undefined;
+  }
+
   async get(key: string): Promise<string | undefined> {
     if (!this.registry) {
       return;
