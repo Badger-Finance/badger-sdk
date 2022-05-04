@@ -1,3 +1,12 @@
+## [1.9.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.1...sdk-mocks-v1.9.2) (2022-05-04)
+
+
+### Bug Fixes
+
+* add has registry check ([a6275d0](https://github.com/Badger-Finance/badger-sdk/commit/a6275d0d73b2edb9459cf414313349a2dfac54ca))
+* remove code deb + add mocks gen ([f3bd5d8](https://github.com/Badger-Finance/badger-sdk/commit/f3bd5d8a095d3aaf5587ff2e894637f18325d57d))
+* update rewards logger ([5e5a3dc](https://github.com/Badger-Finance/badger-sdk/commit/5e5a3dcbceb1726021850e407fc1824acc3f6fb2))
+
 ## [1.9.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.0...sdk-mocks-v1.9.1) (2022-05-02)
 
 
