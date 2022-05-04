@@ -6,11 +6,14 @@
     "getPricePerFullShare": "GhN3iEVlhl9TWuMDDllQc6QZzH5+ly/x45fpI/r3yDU="
   },
   "registry": {
+    "hasRegistry": "pd9fi/lepugwbsCfryUTRCS181jM7ckvDAD+g88m8SM=",
     "get": "WnwKKk6zqoDBQHWoJlDW6APOjcR24SGoIfw88Zdk2f8=",
     "getProductionVaults": "A3GAzGJQcRHiIdgX2N1kIdASKwv7DcyF/N0XYHSL/eM=",
     "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs="
   },
   "rewards": {
+    "hasBadgerTree": "TgmjLihgk1JaoNpob14FZ2mWCp/SdePI1MQRvU1TFMc=",
+    "hasRewardsLogger": "7KdtDTxRtqZ0PVBVXi8OWM+N74aI+1vyeneQzdt3CY4=",
     "loadActiveSchedules": "j5HeeSPBYfM7zWN+ap/oUPj3GkOIKx7uANnVzT3rEzM=",
     "loadSchedules": "ngtJD7sEDkUAJJLCvaoUTkf3hYZ3p47/Y+VVVI7YG+Q="
   },

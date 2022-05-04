@@ -84,11 +84,14 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadSchedules: { args: [vaults.BBADGER] },
     // here, we should rly search for acrive schedules
     loadActiveSchedules: { args: [vaults.BCVX.addr] },
+    hasBadgerTree: { args: [] },
+    hasRewardsLogger: { args: [] },
   },
   [SdkServices.Registry]: {
     get: { args: [RegistryKey.BadgerTree] },
     getProductionVaults: { args: [] },
     getVaults: { args: [VaultVersion.v1, bcrvBadgerAuthor] },
+    hasRegistry: { args: [] },
   },
   [SdkServices.Ibbtc]: {
     getPricePerFullShare: { args: [lastIbBTCBlock] },
