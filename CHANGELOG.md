@@ -1,3 +1,10 @@
+## [1.9.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.6...v1.9.7) (2022-05-04)
+
+
+### Bug Fixes
+
+* add citadel account endpoint ([b1542c3](https://github.com/Badger-Finance/badger-sdk/commit/b1542c39d9e0028bcd7f5f39028803b73714b1c1))
+
 ## [1.9.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.5...v1.9.6) (2022-05-04)
 
 
