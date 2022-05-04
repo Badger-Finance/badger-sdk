@@ -237,6 +237,13 @@ export class CitadelService extends Service {
     return this.locker.boostedSupply();
   }
 
+  async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
+    return this.locker.getCumulativeClaimedRewards(
+      ethers.utils.getAddress(userAddress),
+      ethers.utils.getAddress(rewardsToken),
+    );
+  }
+
   async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
     const [fundingBps, stakingBps, lockingBps] = await Promise.all([
       this.minter.fundingBps(),
