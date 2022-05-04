@@ -1,3 +1,11 @@
+## [1.9.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.2...sdk-mocks-v1.9.3) (2022-05-04)
+
+
+### Bug Fixes
+
+* add getCumulativeClaimedRewards method ([603b17c](https://github.com/Badger-Finance/badger-sdk/commit/603b17c1658bf7a9b96f956a657caf8a09424251))
+* add getCumulativeClaimedRewards method ([400a030](https://github.com/Badger-Finance/badger-sdk/commit/400a0301e1876ea9e269246bc0ed4091283b1f4d))
+
 ## [1.9.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.1...sdk-mocks-v1.9.2) (2022-05-04)
 
 
