@@ -237,17 +237,11 @@ export class CitadelService extends Service {
     return this.locker.boostedSupply();
   }
 
-  async getCumulativeClaimedRewards(
-    address: string,
-  ): Promise<ethers.BigNumber> {
-    const userAddress = ethers.utils.getAddress(address);
-    const rewardsTokens = await this.locker.getRewardTokens();
-    const rewards = await Promise.all(
-      rewardsTokens.map((rewardToken) =>
-        this.locker.getCumulativeClaimedRewards(userAddress, rewardToken),
-      ),
+  async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
+    return this.locker.getCumulativeClaimedRewards(
+      ethers.utils.getAddress(userAddress),
+      ethers.utils.getAddress(rewardsToken),
     );
-    return rewards.reduce((a, b) => a.add(b), ethers.BigNumber.from(0));
   }
 
   async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
