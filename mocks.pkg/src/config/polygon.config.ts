@@ -13,6 +13,7 @@ export const polygonArgsConfig = {
     loadCitadelSummary: { ignore: true },
     loadCitadelUserTotalRewards: { ignore: true },
     loadCitadelTreasuryCharts: { ignore: true },
+    loadCitadelAccount: { ignore: true },
   },
   [SdkServices.Digg]: {
     convert: { ignore: true },
