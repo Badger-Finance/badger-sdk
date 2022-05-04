@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.3...sdk-mocks-v1.9.4) (2022-05-04)
+
+
+### Bug Fixes
+
+* add citadel account endpoint ([b1542c3](https://github.com/Badger-Finance/badger-sdk/commit/b1542c39d9e0028bcd7f5f39028803b73714b1c1))
+
 ## [1.9.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.2...sdk-mocks-v1.9.3) (2022-05-04)
 
 
