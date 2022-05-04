@@ -192,6 +192,10 @@ export class BadgerAPI {
     return this.get('/summary', {}, this.citadelClient);
   }
 
+  loadCitadelAccount(address: string): Promise<i.CitadelAccount> {
+    return this.get('accounts', { address }, this.citadelClient);
+  }
+
   loadCitadelUserTotalRewards(
     token: string,
     address?: string,

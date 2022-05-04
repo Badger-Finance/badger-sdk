@@ -1,0 +1,17 @@
+{
+  "address": "0xa967ba66fb284ec18bbe59f65bcf42dd11ba8128",
+  "value": 19028847.580064856,
+  "earned": 28983.142671090638,
+  "earnedBtc": 0,
+  "roi": 8681.846733181623,
+  "projectedEarnings": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "stakingEarned": 28983.142671090638,
+  "stakingRoi": 8681.846733181623,
+  "lockingEarned": 0,
+  "lockingRoi": 0
+}
