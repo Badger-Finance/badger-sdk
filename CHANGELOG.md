@@ -1,3 +1,10 @@
+## [1.9.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.7...v1.9.8) (2022-05-05)
+
+
+### Bug Fixes
+
+* lil typo on method ([83e9ae6](https://github.com/Badger-Finance/badger-sdk/commit/83e9ae6f79433ff33b59dff2a1f0b7ad91b33162))
+
 ## [1.9.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.6...v1.9.7) (2022-05-04)
 
 
