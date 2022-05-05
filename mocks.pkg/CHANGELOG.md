@@ -1,3 +1,10 @@
+## [1.9.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.7...sdk-mocks-v1.9.8) (2022-05-05)
+
+
+### Bug Fixes
+
+* lil typo on method ([83e9ae6](https://github.com/Badger-Finance/badger-sdk/commit/83e9ae6f79433ff33b59dff2a1f0b7ad91b33162))
+
 ## [1.9.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.3...sdk-mocks-v1.9.4) (2022-05-04)
 
 
