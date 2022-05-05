@@ -229,6 +229,10 @@ export class CitadelService extends Service {
     return this.locker.epochs(index);
   }
 
+  getEpochByTimestamp(time: number) {
+    return this.locker.findEpochId(time);
+  }
+
   getLockedSupply() {
     return this.locker.lockedSupply();
   }
