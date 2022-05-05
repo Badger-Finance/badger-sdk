@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.8...sdk-mocks-v1.10.0) (2022-05-05)
+
+
+### Features
+
+* citadel last epoch ix method ([e125304](https://github.com/Badger-Finance/badger-sdk/commit/e1253042d38c9b73796d908d94f1ef8645b81f70))
+
 ## [1.9.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.9.7...sdk-mocks-v1.9.8) (2022-05-05)
 
 
