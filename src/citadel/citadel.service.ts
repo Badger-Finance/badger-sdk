@@ -33,7 +33,7 @@ import { RewardEventTypeEnum } from './enums/reward-event-type.enum';
 export const citadelMinterAddress =
   '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
 export const stakedCitadelLockerAddress =
-  '0xB1c38253aD6Ab3e2A2D53A094692fcf1321b12d4';
+  '0x8b9AAb4BE7b25D7794386F8CC217f2d8a9498ee9';
 
 export class CitadelService extends Service {
   private _minter?: CitadelMinter;
