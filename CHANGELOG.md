@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.0...v1.10.1) (2022-05-06)
+
+
+### Bug Fixes
+
+* update time frame options ([3e59a49](https://github.com/Badger-Finance/badger-sdk/commit/3e59a49aba118ff3e7a2ea2f49aecf3b49be5629))
+
 # [1.10.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.9.8...v1.10.0) (2022-05-05)
 
 
