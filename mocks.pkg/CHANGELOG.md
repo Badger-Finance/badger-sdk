@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.10.2...sdk-mocks-v1.10.3) (2022-05-09)
+
+
+### Bug Fixes
+
+* update protocols enumeration ([74c774f](https://github.com/Badger-Finance/badger-sdk/commit/74c774f25c4fe4da890e68f86018299e4091fe9a))
+
 ## [1.10.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.10.1...sdk-mocks-v1.10.2) (2022-05-06)
 
 
