@@ -7,6 +7,26 @@ import { Token } from './interfaces/token.interface';
 export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
 
+  async revoke(
+    token: string,
+    spender: string,
+  ): Promise<TransactionStatus> {
+    let result = TransactionStatus.UserConfirmation;
+    try {
+      const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
+      const tx = await tokenContract.approve(spender, 0);
+      result = TransactionStatus.Pending;
+      await tx.wait();
+      result = TransactionStatus.Success;
+    } catch (err) {
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+      }
+      result = TransactionStatus.Failure;
+    }
+    return result;
+  }
+
   async increaseAllowance(
     token: string,
     spender: string,
