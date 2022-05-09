@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.4...v1.10.5) (2022-05-09)
+
+
+### Bug Fixes
+
+* add initial citadel api interface ([67ccc4f](https://github.com/Badger-Finance/badger-sdk/commit/67ccc4f6f5dee542e6c64bf3d5ebaf8c5f157e43))
+
 ## [1.10.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.3...v1.10.4) (2022-05-09)
 
 
