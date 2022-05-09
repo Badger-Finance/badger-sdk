@@ -1,3 +1,10 @@
+## [1.10.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.3...v1.10.4) (2022-05-09)
+
+
+### Bug Fixes
+
+* enable token service allowance checks and increases ([50965bd](https://github.com/Badger-Finance/badger-sdk/commit/50965bd6ab635b68b071ba2efd5e27931234f4fa))
+
 ## [1.10.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.2...v1.10.3) (2022-05-09)
 
 
