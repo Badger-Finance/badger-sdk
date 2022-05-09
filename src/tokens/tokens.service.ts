@@ -1,10 +1,52 @@
 import { BigNumber, ethers } from 'ethers';
+import { TransactionStatus } from '../config';
 import { Erc20, Erc20__factory } from '../contracts';
 import { Service } from '../service';
 import { Token } from './interfaces/token.interface';
 
 export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
+
+  async revoke(
+    token: string,
+    spender: string,
+  ): Promise<TransactionStatus> {
+    let result = TransactionStatus.UserConfirmation;
+    try {
+      const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
+      const tx = await tokenContract.approve(spender, 0);
+      result = TransactionStatus.Pending;
+      await tx.wait();
+      result = TransactionStatus.Success;
+    } catch (err) {
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+      }
+      result = TransactionStatus.Failure;
+    }
+    return result;
+  }
+
+  async increaseAllowance(
+    token: string,
+    spender: string,
+    amount: BigNumber = ethers.constants.MaxUint256,
+  ): Promise<TransactionStatus> {
+    let result = TransactionStatus.UserConfirmation;
+    try {
+      const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
+      const tx = await tokenContract.increaseAllowance(spender, amount);
+      result = TransactionStatus.Pending;
+      await tx.wait();
+      result = TransactionStatus.Success;
+    } catch (err) {
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+      }
+      result = TransactionStatus.Failure;
+    }
+    return result;
+  }
 
   async loadTokens(tokens: string[]): Promise<Record<string, Token>> {
     const tokenInfo: Record<string, Token> = {};
@@ -66,6 +108,43 @@ export class TokensService extends Service {
       const checksumAddress = ethers.utils.getAddress(token);
       const contract = Erc20__factory.connect(checksumAddress, this.provider);
       return contract.balanceOf(targetAddress);
+    } catch (err) {
+      this.error(err);
+      return BigNumber.from(0);
+    }
+  }
+
+  async loadAllowances(
+    tokens: string[],
+    spender: string,
+    owner?: string,
+  ): Promise<Record<string, BigNumber>> {
+    const balanceEntries = await Promise.all(
+      tokens.map(async (addr) => {
+        const balance = await this.loadAllowance(addr, spender, owner);
+        return [addr, balance];
+      }),
+    );
+    return Object.fromEntries(balanceEntries);
+  }
+
+  async loadAllowance(
+    token: string,
+    spender: string,
+    owner?: string,
+  ): Promise<BigNumber> {
+    if (!this.address && !owner) {
+      return BigNumber.from(0);
+    }
+    const targetAddress = owner ?? this.address;
+    if (!targetAddress) {
+      // This is not possible, but typescript
+      throw new Error('Undefined loadBalance target address');
+    }
+    try {
+      const checksumAddress = ethers.utils.getAddress(token);
+      const contract = Erc20__factory.connect(checksumAddress, this.provider);
+      return contract.allowance(targetAddress, spender);
     } catch (err) {
       this.error(err);
       return BigNumber.from(0);
