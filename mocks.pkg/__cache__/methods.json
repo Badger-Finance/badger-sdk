@@ -21,7 +21,9 @@
     "loadTokens": "2v/FB4W+L2KcmvWh6xPfQ99fiKcKAx9bSYcp8BFMSvM=",
     "loadToken": "U4iSvrVtuidfItFZtgEtc/uDcS4ZCs1XbOA8X2mVFto=",
     "loadBalances": "C7ax3mR2+yPLamMkJEaqDjcLydmRhHwCeVRimK2Al8s=",
-    "loadBalance": "wscJlZ+3n4DMxvgqiRWTMHqCqs7QNsqLjoimFkdOG9E="
+    "loadBalance": "wscJlZ+3n4DMxvgqiRWTMHqCqs7QNsqLjoimFkdOG9E=",
+    "loadAllowances": "8lvI6b6Y8L0PNFcYwn5CioMesg5VtvnKuSaBvlbXass=",
+    "loadAllowance": "Fy7B+3oRVnYZ1zBOS4czpJWs2OqOXVZKDEt5DV1jq7o="
   },
   "vaults": {
     "loadVaults": "5Fl8OM4KrIx5c2+f7lc6FwxB5RVSs8otkaUt3ZOXHYQ=",
@@ -71,6 +73,7 @@
     "loadCitadelAccount": "KyJA4m0QxFndAZYcPpTaV5IoLaOK8j2LTM32ubK25pI=",
     "loadCitadelUserTotalRewards": "DszovqnRRi8P6b4q3gnFzmUw00Zk+T3wP5GdQYxHPOQ=",
     "loadCitadelTreasuryCharts": "a0Mb4a4B2MQrvF54qdRky+2ZCmmGJVniDw6esJ1fX5o=",
+    "loadCitadelKnightingRoundLeaderboard": "TvJcI58iNfo2cDvG+xgWEv57co451s5nN0e9nCycX5c=",
     "loadCitadelMerkleProof": "xQJf1WKzX5XADme4JhKWxUh5jOxc0eqODttfXxqk4Xc=",
     "get": "S3+l/PwyYymUDsOyPdEOPWK1wwu9EFAOlwfxp5ZG5fU=",
     "isLocal": "LikXH4bOSy80KIajaxKGZeeD0ArkTLrHQglvcbGYqgw="

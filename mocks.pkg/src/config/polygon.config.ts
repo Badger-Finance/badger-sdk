@@ -27,4 +27,9 @@ export const polygonArgsConfig = {
     loadVault: { ignore: true },
     getVaultStrategy: { ignore: true },
   },
+  [SdkServices.Tokens]: {
+    ...polygonArgsConfigBase[SdkServices.Tokens],
+    loadAllowances: { ignore: true },
+    loadAllowance: { ignore: true },
+  },
 };
