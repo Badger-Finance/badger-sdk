@@ -224,6 +224,10 @@ export class BadgerAPI {
     );
   }
 
+  loadCitadelKnightingRoundLeaderboard(): Promise<i.CitadelLeaderboardEntry[]> {
+    return this.get(`/leaderboard`, {}, this.citadelClient);
+  }
+
   loadCitadelMerkleProof(address: string): Promise<CitadelMerkleClaim> {
     return this.get(`/proofs/citadel/${address}`, {}, this.client);
   }
