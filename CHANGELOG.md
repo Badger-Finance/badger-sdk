@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.5...v1.11.0) (2022-05-12)
+
+
+### Features
+
+* add digg balance to user boost data interface ([78c5172](https://github.com/Badger-Finance/badger-sdk/commit/78c517225ec6cf7efbe277671410ddeef1b1422f))
+
 ## [1.10.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.4...v1.10.5) (2022-05-09)
 
 
