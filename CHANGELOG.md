@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.11.0...v1.11.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* add digg balance to account interface ([c536720](https://github.com/Badger-Finance/badger-sdk/commit/c5367202233a1e961ec95bccf8ab9d1a507eb4af))
+
 # [1.11.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.10.5...v1.11.0) (2022-05-12)
 
 
