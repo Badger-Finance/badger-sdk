@@ -8,6 +8,7 @@ export interface Account extends UserBoostData {
   bveCvxBalance: number;
   claimableBalances: Record<string, string>;
   data: Record<string, VaultData>;
+  diggBalance: number;
   earnedValue: number;
   multipliers: Record<string, number>;
   nativeBalance: number;
