@@ -7,10 +7,7 @@ import { Token } from './interfaces/token.interface';
 export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
 
-  async revoke(
-    token: string,
-    spender: string,
-  ): Promise<TransactionStatus> {
+  async revoke(token: string, spender: string): Promise<TransactionStatus> {
     let result = TransactionStatus.UserConfirmation;
     try {
       const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
