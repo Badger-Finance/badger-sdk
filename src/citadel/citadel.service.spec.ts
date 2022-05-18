@@ -15,6 +15,8 @@ import { citadelDistributionToStakingEvents } from './mocks/distribution-to-stak
 import { addedRewardEvents } from './mocks/added-reward-events.mock';
 import { paidRewardEvents } from './mocks/paid-reward-events.mock';
 import { RewardFilter } from './enums/reward-filter.enum';
+import { BigNumber } from 'ethers';
+import { CitadelInitError, CitadelValidationError } from './errors';
 
 describe('citadel.service', function () {
   const TEST_ADDR = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
@@ -89,7 +91,7 @@ describe('citadel.service', function () {
       });
 
       expect(async () => sdk.citadel.balanceOf(TEST_ADDR)).rejects.toThrow(
-        Error,
+        CitadelInitError,
       );
     });
   });
@@ -153,6 +155,48 @@ describe('citadel.service', function () {
 
       expect(rewards.length).toBe(3);
       expect(rewards).toMatchSnapshot();
+    });
+
+    it('should throw validation error for unknown filter', async () => {
+      await expect(async () => {
+        return sdk.citadel.listRewards({
+          token: TEST_TOKEN,
+          user: TEST_USER,
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          filter: 'unknown',
+        });
+      }).rejects.toThrow(CitadelValidationError);
+    });
+  });
+
+  describe('getCitadelMintDistribution', () => {
+    it('should return correct result', async () => {
+      minter.fundingBps
+        .calledWith()
+        .mockImplementation(async () => BigNumber.from(5));
+      minter.stakingBps
+        .calledWith()
+        .mockImplementation(async () => BigNumber.from(10));
+      minter.lockingBps
+        .calledWith()
+        .mockImplementation(async () => BigNumber.from(15));
+
+      const [fundingBps, stakingBps, lockingBps] = await Promise.all([
+        minter.fundingBps(),
+        minter.stakingBps(),
+        minter.lockingBps(),
+      ]);
+
+      expect({
+        fundingBps: fundingBps.toNumber(),
+        stakingBps: stakingBps.toNumber(),
+        lockingBps: lockingBps.toNumber(),
+      }).toMatchObject({
+        fundingBps: 5,
+        stakingBps: 10,
+        lockingBps: 15,
+      });
     });
   });
 });

@@ -1,4 +1,4 @@
-import { Protocol } from "../enums";
+import { Protocol } from '../enums';
 
 export interface CitadelLeaderboardEntry {
   rank: number;

@@ -29,6 +29,7 @@ import {
 import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
 import { RewardEventTypeEnum } from './enums/reward-event-type.enum';
+import { CitadelInitError, CitadelValidationError } from './errors';
 
 export const citadelMinterAddress =
   '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
@@ -46,14 +47,18 @@ export class CitadelService extends Service {
 
   get minter(): CitadelMinter {
     if (!this._minter) {
-      throw new Error(`Minter is not defined for ${this.config.network}`);
+      throw new CitadelInitError(
+        `Minter is not defined for ${this.config.network}`,
+      );
     }
     return this._minter;
   }
 
   get locker(): StakedCitadelLocker {
     if (!this._locker) {
-      throw new Error(`Locker is not defined for ${this.config.network}`);
+      throw new CitadelInitError(
+        `Locker is not defined for ${this.config.network}`,
+      );
     }
     return this._locker;
   }
@@ -107,10 +112,6 @@ export class CitadelService extends Service {
   }
 
   isDistributor(token: string, distributor: string) {
-    if (!this.locker) {
-      throw new Error(`Locker not defined for ${this.config.network}`);
-    }
-
     const tokenAddr = ethers.utils.getAddress(token);
     const distributorAddr = ethers.utils.getAddress(distributor);
 
@@ -194,7 +195,7 @@ export class CitadelService extends Service {
         }));
         break;
       default:
-        throw new Error(`Unknown reward filter ${filter}`);
+        throw new CitadelValidationError(`Unknown reward filter ${filter}`);
     }
 
     return rewardEvents;
