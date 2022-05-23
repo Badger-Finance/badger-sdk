@@ -1,3 +1,12 @@
+## [1.11.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.11.1...sdk-mocks-v1.11.2) (2022-05-23)
+
+
+### Bug Fixes
+
+* remove generated items ([edc0f44](https://github.com/Badger-Finance/badger-sdk/commit/edc0f44c97a243a0ceb08a3af38969502d35c535))
+* update mocks ([fa84cf8](https://github.com/Badger-Finance/badger-sdk/commit/fa84cf8c3d3f6b93c84fc964fa5cfa6fdaf96c95))
+* update release action ([dfec10c](https://github.com/Badger-Finance/badger-sdk/commit/dfec10c5bf512d61a73af06bfbbdffbd7f6c3acc))
+
 ## [1.10.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.10.2...sdk-mocks-v1.10.3) (2022-05-09)
 
 
