@@ -1,2 +1,3 @@
 yarn.lock binary
+*.abi binary
 src/contracts/* binary
