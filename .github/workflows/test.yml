@@ -23,8 +23,6 @@ jobs:
       - name: Install mocks.pkg dependencies
         working-directory: ./mocks.pkg
         run: yarn install --frozen-lockfile
-      - name: Codegen
-        run: yarn codegen:contracts
       - name: Lint Mocks Pkg
         working-directory: ./mocks.pkg
         run: yarn lint
