@@ -6,7 +6,6 @@ lib
 .env
 .npmrc
 dotenv
-contracts
 
 launch
 
