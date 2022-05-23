@@ -1,11 +1,11 @@
 {
   "0x3472A5A71965499acd81997a54BBA8D852C6E53d": {
     "type": "BigNumber",
-    "hex": "0x00"
+    "hex": "0xfffffffffffffffffffffffffffffffffffffffffffff3139d08a297353e1495"
   },
   "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599": {
     "type": "BigNumber",
-    "hex": "0x00"
+    "hex": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffa2de245ff"
   },
   "0x798D1bE841a82a273720CE31c822C61a67a601C3": {
     "type": "BigNumber",

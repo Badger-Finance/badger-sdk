@@ -37,6 +37,7 @@ export const vaults = {
 
 export const citadelWhale = '0xa967ba66fb284ec18bbe59f65bcf42dd11ba8128';
 export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
+export const dexTrader = '0x36cc7b13029b5dee4034745fb4f24034f3f2ffc6';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
 export const ibbtc = '0xaE96fF08771a109dc6650a1BdCa62F2d558E40af';
 export const router = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
@@ -83,8 +84,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadToken: { args: [tokens.BADGER] },
     loadBalances: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG]] },
     loadBalance: { args: [tokens.BADGER] },
-    loadAllowances: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG], router, badgerWhale] },
-    loadAllowance: { args: [tokens.BADGER, router, badgerWhale] },
+    loadAllowances: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG], router, dexTrader] },
+    loadAllowance: { args: [tokens.BADGER, router, dexTrader] },
   },
   [SdkServices.Rewards]: {
     loadSchedules: { args: [vaults.BBADGER] },
