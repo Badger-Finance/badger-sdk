@@ -1,4 +1,9 @@
-import { VaultHarvestData, VaultPerformanceEvent, VaultVersion } from '.';
+import {
+  VaultHarvestData,
+  VaultPerformanceEvent,
+  VaultStatus,
+  VaultVersion,
+} from '.';
 import { keyBy, VaultState } from '..';
 import { TimeRangeOptions } from '../common';
 import { VaultV15 } from '../contracts';
@@ -16,6 +21,7 @@ import {
 } from '../contracts/VaultV15';
 import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
+import { vaultToChainEnumStateList } from './vautls.constants';
 
 /**
  * Parse Vault v1 harvest related events.
@@ -113,7 +119,7 @@ export function getVaultVersion(version: string): VaultVersion {
 
 /**
  * Convert on chain state to vault state enumeration.
- * @param version On chain state
+ * @param status On chain state
  * @returns Vault state enumeration
  */
 export function getVaultState(status: number): VaultState {
@@ -125,6 +131,19 @@ export function getVaultState(status: number): VaultState {
     default:
       return VaultState.Experimental;
   }
+}
+
+/**
+ * Convert on chain state to vault state enumeration for v2 registry
+ * @param status On chain state
+ * @returns Vault state enumeration
+ */
+export function getVaultRegv2State(status: number): VaultState {
+  return vaultToChainEnumStateList[status] || VaultState.Deprecated;
+}
+
+export function apiVaultStatusToChainValue(status: VaultState): number {
+  return vaultToChainEnumStateList.indexOf(status) || VaultStatus.deprecated;
 }
 
 export function timestampInRange(
