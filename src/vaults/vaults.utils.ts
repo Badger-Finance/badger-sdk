@@ -139,7 +139,7 @@ export function getVaultState(status: number): VaultState {
  * @returns Vault state enumeration
  */
 export function getVaultRegv2State(status: number): VaultState {
-  return vaultToChainEnumStateList[status] || VaultState.Deprecated;
+  return vaultToChainEnumStateList[status] || VaultState.Discontinued;
 }
 
 export function apiVaultStatusToChainValue(status: VaultState): number {
