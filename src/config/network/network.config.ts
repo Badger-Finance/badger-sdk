@@ -52,6 +52,13 @@ export const NETWORK_CONFIGS: Record<Network, NetworkConfig> = {
     currencySymbol: 'FTM',
     explorerUrl: 'https://ftmscan.com',
   },
+  [Network.Optimism]: {
+    network: Network.Optimism,
+    name: 'Optimism',
+    chainId: 10,
+    currencySymbol: 'oETH',
+    explorerUrl: 'https://optimistic.etherscan.io',
+  },
 };
 
 const NETWORK_CONFIG_MAP: Record<string, NetworkConfig> = Object.fromEntries(
