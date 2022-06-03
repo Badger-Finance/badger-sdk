@@ -1,50 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RegistryV2Service methods getFilteredProductionVaults should return mapped valuts 1`] = `
-Array [
-  Object {
-    "address": "0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906",
-    "metadata": Object {
-      "behavior": "None",
-      "name": "bveOXD",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xa8bD8655A0dCABE76913D821Ab437562276b3B59",
-    "metadata": Object {
-      "behavior": "Ecosystem Helper",
-      "name": "boxSOLID",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xbF2F3a9ba42A00CA5B18842D8eB1954120e4a2A9",
-    "metadata": Object {
-      "behavior": "Ecosystem Helper",
-      "name": "bveOXD/OXD",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xcd1e62b390373fcFeA87Dd06E2497Fdc907935fA",
-    "metadata": Object {
-      "behavior": "Ecosystem",
-      "name": "USDC/DEI",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-]
-`;
-
 exports[`RegistryV2Service methods getFilteredProductionVaults should return mapped vaults 1`] = `
 Array [
   Object {
@@ -232,51 +187,6 @@ Array [
     "state": "open",
     "version": "v1",
   },
-  Object {
-    "address": "0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906",
-    "metadata": Object {
-      "behavior": "None",
-      "name": "bveOXD",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xa8bD8655A0dCABE76913D821Ab437562276b3B59",
-    "metadata": Object {
-      "behavior": "Ecosystem Helper",
-      "name": "boxSOLID",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xbF2F3a9ba42A00CA5B18842D8eB1954120e4a2A9",
-    "metadata": Object {
-      "behavior": "Ecosystem Helper",
-      "name": "bveOXD/OXD",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-  Object {
-    "address": "0xcd1e62b390373fcFeA87Dd06E2497Fdc907935fA",
-    "metadata": Object {
-      "behavior": "Ecosystem",
-      "name": "USDC/DEI",
-      "protocol": "0xDAO",
-    },
-    "state": "open",
-    "version": "v1.5",
-  },
-]
-`;
-
-exports[`RegistryV2Service methods getVaults should return mapped valuts 1`] = `
-Array [
   Object {
     "address": "0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906",
     "metadata": Object {
