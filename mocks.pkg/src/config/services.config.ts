@@ -1,5 +1,4 @@
 import { Network } from '../../../src';
-
 import {
   ServicesArgsConfig,
   NetworksArgsConfigMap,
@@ -26,6 +25,7 @@ export class ServicesConfig {
     [Network.BinanceSmartChain]: ethArgsConfig,
     [Network.Fantom]: ethArgsConfig,
     [Network.Avalanche]: ethArgsConfig,
+    [Network.Optimism]: ethArgsConfig,
   };
 
   static get listServices() {
