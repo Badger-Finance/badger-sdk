@@ -5,5 +5,6 @@ export enum Network {
   BinanceSmartChain = 'binance-smart-chain',
   Avalanche = 'avalanche',
   Fantom = 'fantom',
+  Optimism = 'optimism',
   Local = 'local',
 }
