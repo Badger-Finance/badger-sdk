@@ -1,3 +1,16 @@
+# [1.13.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.12.1...v1.13.0) (2022-06-03)
+
+
+### Bug Fixes
+
+* review fixes ([cd44de1](https://github.com/Badger-Finance/badger-sdk/commit/cd44de1953ee34883fc8a9cbcb38c83e0027ab0c))
+* update mocks gen ([d8f792d](https://github.com/Badger-Finance/badger-sdk/commit/d8f792d1099055610b2a7eb342fac6fd902e7a79))
+
+
+### Features
+
+* registryV2 service integration ([673afb6](https://github.com/Badger-Finance/badger-sdk/commit/673afb6d38cf91dfc47bb6591af95273e0fc6329))
+
 ## [1.12.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.12.0...v1.12.1) (2022-06-03)
 
 
