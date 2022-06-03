@@ -1,3 +1,18 @@
+# [1.12.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.11.3...sdk-mocks-v1.12.0) (2022-06-03)
+
+
+### Bug Fixes
+
+* review fixes ([cd44de1](https://github.com/Badger-Finance/badger-sdk/commit/cd44de1953ee34883fc8a9cbcb38c83e0027ab0c))
+* update citadel locker addr ([09e4434](https://github.com/Badger-Finance/badger-sdk/commit/09e44347ec478f26d6eb3de1f96ef80ea304e26c))
+* update mocks gen ([d8f792d](https://github.com/Badger-Finance/badger-sdk/commit/d8f792d1099055610b2a7eb342fac6fd902e7a79))
+
+
+### Features
+
+* optimism ([38031e6](https://github.com/Badger-Finance/badger-sdk/commit/38031e6d371cb959cbed194d6eee4b4bd01a6bcb))
+* registryV2 service integration ([673afb6](https://github.com/Badger-Finance/badger-sdk/commit/673afb6d38cf91dfc47bb6591af95273e0fc6329))
+
 ## [1.11.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.11.2...sdk-mocks-v1.11.3) (2022-05-23)
 
 
