@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.12.0...v1.12.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* update citadel locker addr ([09e4434](https://github.com/Badger-Finance/badger-sdk/commit/09e44347ec478f26d6eb3de1f96ef80ea304e26c))
+
 # [1.12.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.11.3...v1.12.0) (2022-06-03)
 
 
