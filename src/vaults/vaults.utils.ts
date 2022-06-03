@@ -22,6 +22,7 @@ import {
 import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
 import { vaultToChainEnumStateList } from './vautls.constants';
+import { BigNumber } from "ethers";
 
 /**
  * Parse Vault v1 harvest related events.
@@ -142,8 +143,10 @@ export function getVaultRegv2State(status: number): VaultState {
   return vaultToChainEnumStateList[status] || VaultState.Discontinued;
 }
 
-export function apiVaultStatusToChainValue(status: VaultState): number {
-  return vaultToChainEnumStateList.indexOf(status) || VaultStatus.deprecated;
+export function apiVaultStatusToChainValue(status: VaultState): BigNumber {
+  return BigNumber.from(
+    vaultToChainEnumStateList.indexOf(status) || VaultStatus.deprecated,
+  );
 }
 
 export function timestampInRange(

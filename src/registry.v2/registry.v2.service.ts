@@ -23,7 +23,7 @@ export class RegistryV2Service extends Service {
 
   async ready() {
     if (!this.loading) {
-      this.loading = this.init();
+      this.loading = this.#init();
     }
     return this.loading;
   }
@@ -78,17 +78,19 @@ export class RegistryV2Service extends Service {
   async getProductionVaults(): Promise<VaultRegistryV2Entry[]> {
     const prdVaults = await this.registry.getProductionVaults();
 
-    return prdVaults.flatMap((vaultInfo) => {
-      return vaultInfo.list.map((metaVault) => ({
-        address: metaVault.vault,
-        state: getVaultRegv2State(vaultInfo.status),
-        version: getVaultVersion(vaultInfo.version),
-        metadata: parseRegVaultMetadata(metaVault.metadata),
-      }));
-    });
+    return prdVaults
+      .flatMap((vaultInfo) => {
+        return vaultInfo.list.map((metaVault) => ({
+          address: metaVault.vault,
+          state: getVaultRegv2State(vaultInfo.status),
+          version: getVaultVersion(vaultInfo.version),
+          metadata: parseRegVaultMetadata(metaVault.metadata),
+        }));
+      })
+      .filter((v) => !!v);
   }
 
-  private async init() {
+  async #init() {
     try {
       const deployed = await this.provider.getCode(REGISTRY_V2_ADDRESS);
       if (deployed === '0x') {
