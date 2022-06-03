@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.11.3...v1.12.0) (2022-06-03)
+
+
+### Features
+
+* optimism ([38031e6](https://github.com/Badger-Finance/badger-sdk/commit/38031e6d371cb959cbed194d6eee4b4bd01a6bcb))
+
 ## [1.11.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.11.2...v1.11.3) (2022-05-23)
 
 
