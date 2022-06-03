@@ -84,7 +84,9 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadToken: { args: [tokens.BADGER] },
     loadBalances: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG]] },
     loadBalance: { args: [tokens.BADGER] },
-    loadAllowances: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG], router, dexTrader] },
+    loadAllowances: {
+      args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG], router, dexTrader],
+    },
     loadAllowance: { args: [tokens.BADGER, router, dexTrader] },
   },
   [SdkServices.Rewards]: {

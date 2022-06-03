@@ -36,8 +36,10 @@ const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 export class VaultsService extends Service {
   private vaults: Record<string, RegistryVault> = {};
 
-  async loadVaults(): Promise<RegistryVault[]> {
-    const registry = await this.sdk.registry.getProductionVaults();
+  async loadVaults(useV2Reg = false): Promise<RegistryVault[]> {
+    const registry = await (useV2Reg
+      ? this.sdk.registryV2.getProductionVaults()
+      : this.sdk.registry.getProductionVaults());
 
     const registryVaultsInfo = registry.filter(
       (v) => v.address !== diggStabilizerVault,
@@ -76,6 +78,7 @@ export class VaultsService extends Service {
     requireRegistry = true,
     version = VaultVersion.v1,
     state,
+    useV2Reg = false,
   }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
     if (!requireRegistry && (!state || !version)) {
@@ -88,7 +91,10 @@ export class VaultsService extends Service {
     const checksumAddress = ethers.utils.getAddress(address);
     const cachedVault = this.vaults[checksumAddress];
     if (!cachedVault) {
-      const vaultsRegistry = await this.sdk.registry.getProductionVaults();
+      const vaultsRegistry = await (useV2Reg
+        ? this.sdk.registryV2.getProductionVaults()
+        : this.sdk.registry.getProductionVaults());
+
       const vaultMap = Object.fromEntries(
         vaultsRegistry.map((vault) => [vault.address, vault]),
       );

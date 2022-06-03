@@ -7,4 +7,5 @@ export interface LoadVaultOptions {
   requireRegistry?: boolean;
   version?: VaultVersion;
   state?: VaultState;
+  useV2Reg?: boolean;
 }

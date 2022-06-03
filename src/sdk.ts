@@ -10,6 +10,7 @@ import { BadgerGraph } from './graphql';
 import { DiggService } from './digg/digg.service';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
+import { RegistryV2Service } from './registry.v2/registry.v2.service';
 import { RewardsService } from './rewards/rewards.service';
 import { VaultsService } from './vaults/vaults.service';
 import { TokensService } from './tokens/tokens.service';
@@ -34,6 +35,7 @@ export class BadgerSDK {
   public signer?: Signer;
 
   readonly registry: RegistryService;
+  readonly registryV2: RegistryV2Service;
   readonly digg: DiggService;
   readonly ibbtc: ibBTCService;
   readonly rewards: RewardsService;
@@ -66,6 +68,7 @@ export class BadgerSDK {
     this.digg = new DiggService(this);
     this.ibbtc = new ibBTCService(this);
     this.registry = new RegistryService(this);
+    this.registryV2 = new RegistryV2Service(this);
     this.rewards = new RewardsService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);
@@ -76,6 +79,7 @@ export class BadgerSDK {
     return Promise.all([
       this.loading,
       this.registry.ready(),
+      this.registryV2.ready(),
       this.rewards.ready(),
     ]);
   }
