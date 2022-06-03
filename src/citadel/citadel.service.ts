@@ -34,7 +34,7 @@ import { CitadelInitError, CitadelValidationError } from './errors';
 export const citadelMinterAddress =
   '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';
 export const stakedCitadelLockerAddress =
-  '0x8b9AAb4BE7b25D7794386F8CC217f2d8a9498ee9';
+  '0xb1c38253ad6ab3e2a2d53a094692fcf1321b12d4';
 
 export class CitadelService extends Service {
   private _minter?: CitadelMinter;
