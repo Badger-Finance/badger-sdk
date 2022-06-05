@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.12.0...sdk-mocks-v1.12.1) (2022-06-05)
+
+
+### Bug Fixes
+
+* update entry field name ([f708ac9](https://github.com/Badger-Finance/badger-sdk/commit/f708ac92ac96519e14885964fce2ee5a239e085f))
+
 # [1.12.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.11.3...sdk-mocks-v1.12.0) (2022-06-03)
 
 
