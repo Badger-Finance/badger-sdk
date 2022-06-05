@@ -6,7 +6,7 @@ import {
   SupplySchedule,
   SupplySchedule__factory,
 } from '..';
-import { BigNumberish, ethers } from 'ethers';
+import { BigNumber, BigNumberish, ethers } from 'ethers';
 import { Network } from '../config';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
@@ -247,10 +247,16 @@ export class CitadelService extends Service {
   }
 
   async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
-    return this.locker.getCumulativeClaimedRewards(
-      ethers.utils.getAddress(userAddress),
-      ethers.utils.getAddress(rewardsToken),
-    );
+    try {
+      const result = await this.locker.getCumulativeClaimedRewards(
+        ethers.utils.getAddress(userAddress),
+        ethers.utils.getAddress(rewardsToken),
+      );
+      return result;
+    } catch (err) {
+      console.warn(err);
+      return BigNumber.from(0);
+    }
   }
 
   async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {

@@ -22,7 +22,7 @@ import {
 import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
 import { vaultToChainEnumStateList } from './vautls.constants';
-import { BigNumber } from "ethers";
+import { BigNumber } from 'ethers';
 
 /**
  * Parse Vault v1 harvest related events.
