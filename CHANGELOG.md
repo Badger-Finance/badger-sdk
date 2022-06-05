@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.0...v1.13.1) (2022-06-05)
+
+
+### Bug Fixes
+
+* update entry field name ([f708ac9](https://github.com/Badger-Finance/badger-sdk/commit/f708ac92ac96519e14885964fce2ee5a239e085f))
+
 # [1.13.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.12.1...v1.13.0) (2022-06-03)
 
 
