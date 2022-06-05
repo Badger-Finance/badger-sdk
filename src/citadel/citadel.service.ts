@@ -254,6 +254,10 @@ export class CitadelService extends Service {
     return this.locker.boostedSupply(overrides);
   }
 
+  getTotalSupply(overrides?: CallOverrides) {
+    return this.locker.totalSupply(overrides);
+  }
+
   async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
     return this.locker.getCumulativeClaimedRewards(
       ethers.utils.getAddress(userAddress),
