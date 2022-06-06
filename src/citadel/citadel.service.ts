@@ -258,6 +258,10 @@ export class CitadelService extends Service {
     return this.locker.totalSupply({ ...overrides });
   }
 
+  getTotalSupplyAtEpoch(epoch: number, overrides?: CallOverrides) {
+    return this.locker.totalSupplyAtEpoch(epoch, { ...overrides });
+  }
+
   async getCumulativeClaimedRewards(
     userAddress: string,
     rewardsToken: string,
