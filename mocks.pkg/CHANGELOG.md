@@ -1,3 +1,11 @@
+## [1.12.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.12.1...sdk-mocks-v1.12.2) (2022-06-06)
+
+
+### Bug Fixes
+
+* add total supply at epoch ([26a79a6](https://github.com/Badger-Finance/badger-sdk/commit/26a79a65f4f9108ac4cbcfd61f3da385c26e884a))
+* citadel support ovverride ([e6618ed](https://github.com/Badger-Finance/badger-sdk/commit/e6618ed651286654e69505039fdaa12d7cb897f7))
+
 ## [1.12.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.12.0...sdk-mocks-v1.12.1) (2022-06-05)
 
 
