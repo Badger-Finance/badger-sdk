@@ -6,7 +6,7 @@ import {
   SupplySchedule,
   SupplySchedule__factory,
 } from '..';
-import { BigNumberish, ethers } from 'ethers';
+import { BigNumberish, CallOverrides, ethers } from 'ethers';
 import { Network } from '../config';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
@@ -63,15 +63,15 @@ export class CitadelService extends Service {
     return this._locker;
   }
 
-  async getSupplySchedule(): Promise<SupplySchedule> {
+  async getSupplySchedule(overrides?: CallOverrides): Promise<SupplySchedule> {
     return SupplySchedule__factory.connect(
-      await this.minter.supplySchedule(),
+      await this.minter.supplySchedule({ ...overrides }),
       this.provider,
     );
   }
 
-  getLastMintTimestamp() {
-    return this.minter.lastMintTimestamp();
+  getLastMintTimestamp(overrides?: CallOverrides) {
+    return this.minter.lastMintTimestamp({ ...overrides });
   }
 
   async listDistributions(options: ListDistributionOptions = {}) {
@@ -111,21 +111,25 @@ export class CitadelService extends Service {
     return evaluateDistributionEvents(distributions, options);
   }
 
-  isDistributor(token: string, distributor: string) {
+  isDistributor(token: string, distributor: string, overrides?: CallOverrides) {
     const tokenAddr = ethers.utils.getAddress(token);
     const distributorAddr = ethers.utils.getAddress(distributor);
 
-    return this.locker.rewardDistributors(tokenAddr, distributorAddr);
+    return this.locker.rewardDistributors(
+      tokenAddr,
+      distributorAddr,
+      overrides,
+    );
   }
 
-  getRewardStats(account: string) {
+  getRewardStats(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
 
-    return this.locker.rewardData(accAddr);
+    return this.locker.rewardData(accAddr, { ...overrides });
   }
 
-  getRewardTokens() {
-    return this.locker.getRewardTokens();
+  getRewardTokens(overrides?: CallOverrides) {
+    return this.locker.getRewardTokens({ ...overrides });
   }
 
   async listRewards(options: ListRewardsOptions = {}) {
@@ -201,63 +205,78 @@ export class CitadelService extends Service {
     return rewardEvents;
   }
 
-  async getClaimableRewards(account: string) {
+  async getClaimableRewards(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.locker.claimableRewards(accAddr);
+    return this.locker.claimableRewards(accAddr, { ...overrides });
   }
 
-  async rewardWeightOf(account: string) {
+  async rewardWeightOf(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.locker.rewardWeightOf(accAddr);
+    return this.locker.rewardWeightOf(accAddr, { ...overrides });
   }
 
-  lockedBalanceOf(address: string) {
+  lockedBalanceOf(address: string, overrides?: CallOverrides) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.lockedBalanceOf(userAddr);
+    return this.locker.lockedBalanceOf(userAddr, { ...overrides });
   }
 
-  balanceOf(address: string) {
+  balanceOf(address: string, overrides?: CallOverrides) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.balanceOf(userAddr);
+    return this.locker.balanceOf(userAddr, { ...overrides });
   }
 
-  balanceAtEpochOf(epoch: BigNumberish, address: string) {
+  balanceAtEpochOf(
+    epoch: BigNumberish,
+    address: string,
+    overrides?: CallOverrides,
+  ) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.balanceAtEpochOf(epoch, userAddr);
+    return this.locker.balanceAtEpochOf(epoch, userAddr, { ...overrides });
   }
 
-  getEpochs(index: BigNumberish) {
-    return this.locker.epochs(index);
+  getEpochs(index: BigNumberish, overrides?: CallOverrides) {
+    return this.locker.epochs(index, { ...overrides });
   }
 
-  getEpochByTimestamp(time: number) {
-    return this.locker.findEpochId(time);
+  getEpochByTimestamp(time: number, overrides?: CallOverrides) {
+    return this.locker.findEpochId(time, { ...overrides });
   }
 
-  getLastEpochIx() {
-    return this.locker.epochCount();
+  getLastEpochIx(overrides?: CallOverrides) {
+    return this.locker.epochCount({ ...overrides });
   }
 
-  getLockedSupply() {
-    return this.locker.lockedSupply();
+  getLockedSupply(overrides?: CallOverrides) {
+    return this.locker.lockedSupply({ ...overrides });
   }
 
-  getBoostedSupply() {
-    return this.locker.boostedSupply();
+  getBoostedSupply(overrides?: CallOverrides) {
+    return this.locker.boostedSupply({ ...overrides });
   }
 
-  async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
+  getTotalSupply(overrides?: CallOverrides) {
+    return this.locker.totalSupply({ ...overrides });
+  }
+
+  async getCumulativeClaimedRewards(
+    userAddress: string,
+    rewardsToken: string,
+    overrides?: CallOverrides,
+  ) {
     return this.locker.getCumulativeClaimedRewards(
       ethers.utils.getAddress(userAddress),
       ethers.utils.getAddress(rewardsToken),
+      { ...overrides },
     );
   }
 
-  async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
+  async getCitadelMintDistribution(
+    overrides?: CallOverrides,
+  ): Promise<CitadelMintDistribution> {
     const [fundingBps, stakingBps, lockingBps] = await Promise.all([
-      this.minter.fundingBps(),
-      this.minter.stakingBps(),
-      this.minter.lockingBps(),
+      this.minter.fundingBps({ ...overrides }),
+      this.minter.stakingBps({ ...overrides }),
+      this.minter.lockingBps({ ...overrides }),
     ]);
 
     return {
