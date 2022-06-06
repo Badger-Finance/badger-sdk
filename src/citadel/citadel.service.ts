@@ -65,13 +65,13 @@ export class CitadelService extends Service {
 
   async getSupplySchedule(overrides?: CallOverrides): Promise<SupplySchedule> {
     return SupplySchedule__factory.connect(
-      await this.minter.supplySchedule(overrides),
+      await this.minter.supplySchedule({ ...overrides }),
       this.provider,
     );
   }
 
   getLastMintTimestamp(overrides?: CallOverrides) {
-    return this.minter.lastMintTimestamp(overrides);
+    return this.minter.lastMintTimestamp({ ...overrides });
   }
 
   async listDistributions(options: ListDistributionOptions = {}) {
@@ -125,11 +125,11 @@ export class CitadelService extends Service {
   getRewardStats(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
 
-    return this.locker.rewardData(accAddr, overrides);
+    return this.locker.rewardData(accAddr, { ...overrides });
   }
 
   getRewardTokens(overrides?: CallOverrides) {
-    return this.locker.getRewardTokens(overrides);
+    return this.locker.getRewardTokens({ ...overrides });
   }
 
   async listRewards(options: ListRewardsOptions = {}) {
@@ -207,22 +207,22 @@ export class CitadelService extends Service {
 
   async getClaimableRewards(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.locker.claimableRewards(accAddr, overrides);
+    return this.locker.claimableRewards(accAddr, { ...overrides });
   }
 
   async rewardWeightOf(account: string, overrides?: CallOverrides) {
     const accAddr = ethers.utils.getAddress(account);
-    return this.locker.rewardWeightOf(accAddr, overrides);
+    return this.locker.rewardWeightOf(accAddr, { ...overrides });
   }
 
   lockedBalanceOf(address: string, overrides?: CallOverrides) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.lockedBalanceOf(userAddr, overrides);
+    return this.locker.lockedBalanceOf(userAddr, { ...overrides });
   }
 
   balanceOf(address: string, overrides?: CallOverrides) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.balanceOf(userAddr, overrides);
+    return this.locker.balanceOf(userAddr, { ...overrides });
   }
 
   balanceAtEpochOf(
@@ -231,45 +231,52 @@ export class CitadelService extends Service {
     overrides?: CallOverrides,
   ) {
     const userAddr = ethers.utils.getAddress(address);
-    return this.locker.balanceAtEpochOf(epoch, userAddr, overrides);
+    return this.locker.balanceAtEpochOf(epoch, userAddr, { ...overrides });
   }
 
   getEpochs(index: BigNumberish, overrides?: CallOverrides) {
-    return this.locker.epochs(index, overrides);
+    return this.locker.epochs(index, { ...overrides });
   }
 
   getEpochByTimestamp(time: number, overrides?: CallOverrides) {
-    return this.locker.findEpochId(time, overrides);
+    return this.locker.findEpochId(time, { ...overrides });
   }
 
   getLastEpochIx(overrides?: CallOverrides) {
-    return this.locker.epochCount(overrides);
+    return this.locker.epochCount({ ...overrides });
   }
 
   getLockedSupply(overrides?: CallOverrides) {
-    return this.locker.lockedSupply(overrides);
+    return this.locker.lockedSupply({ ...overrides });
   }
 
   getBoostedSupply(overrides?: CallOverrides) {
-    return this.locker.boostedSupply(overrides);
+    return this.locker.boostedSupply({ ...overrides });
   }
 
   getTotalSupply(overrides?: CallOverrides) {
-    return this.locker.totalSupply(overrides);
+    return this.locker.totalSupply({ ...overrides });
   }
 
-  async getCumulativeClaimedRewards(userAddress: string, rewardsToken: string) {
+  async getCumulativeClaimedRewards(
+    userAddress: string,
+    rewardsToken: string,
+    overrides?: CallOverrides,
+  ) {
     return this.locker.getCumulativeClaimedRewards(
       ethers.utils.getAddress(userAddress),
       ethers.utils.getAddress(rewardsToken),
+      { ...overrides },
     );
   }
 
-  async getCitadelMintDistribution(): Promise<CitadelMintDistribution> {
+  async getCitadelMintDistribution(
+    overrides?: CallOverrides,
+  ): Promise<CitadelMintDistribution> {
     const [fundingBps, stakingBps, lockingBps] = await Promise.all([
-      this.minter.fundingBps(),
-      this.minter.stakingBps(),
-      this.minter.lockingBps(),
+      this.minter.fundingBps({ ...overrides }),
+      this.minter.stakingBps({ ...overrides }),
+      this.minter.lockingBps({ ...overrides }),
     ]);
 
     return {
