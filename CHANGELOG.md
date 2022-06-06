@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.2...v1.13.3) (2022-06-06)
+
+
+### Bug Fixes
+
+* add total supply at epoch ([26a79a6](https://github.com/Badger-Finance/badger-sdk/commit/26a79a65f4f9108ac4cbcfd61f3da385c26e884a))
+
 ## [1.13.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.1...v1.13.2) (2022-06-06)
 
 
