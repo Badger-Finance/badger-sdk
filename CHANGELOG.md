@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.1...v1.13.2) (2022-06-06)
+
+
+### Bug Fixes
+
+* citadel support ovverride ([e6618ed](https://github.com/Badger-Finance/badger-sdk/commit/e6618ed651286654e69505039fdaa12d7cb897f7))
+
 ## [1.13.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.0...v1.13.1) (2022-06-05)
 
 
