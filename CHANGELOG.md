@@ -1,3 +1,10 @@
+## [1.13.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.3...v1.13.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* update account interface extension fields ([f92f14f](https://github.com/Badger-Finance/badger-sdk/commit/f92f14f103c579eeac513127b6d7266d537ed5d1))
+
 ## [1.13.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.2...v1.13.3) (2022-06-06)
 
 
