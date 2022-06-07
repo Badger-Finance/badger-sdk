@@ -6,6 +6,7 @@ function getVaultStatus(state: VaultState) {
       return 1;
     case VaultState.Guarded:
       return 2;
+    case VaultState.Featured:
     case VaultState.Open:
       return 3;
     default:
@@ -14,7 +15,7 @@ function getVaultStatus(state: VaultState) {
 }
 
 async function generateRegistryCalldata() {
-  const api = new BadgerAPI({ network: Network.Fantom });
+  const api = new BadgerAPI({ network: Network.Ethereum });
 
   const vaults = await api.loadVaults();
   
