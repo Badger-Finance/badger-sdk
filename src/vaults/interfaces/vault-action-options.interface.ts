@@ -1,6 +1,7 @@
-export interface VaultActionOptions {
-  onApprovePrompt?: () => void;
-  onApproveSigned?: () => void;
-  onApproveSuccess?: () => void;
-  onError?: (err: unknown) => void;
+import { BigNumber } from 'ethers';
+import { TokenActionOptions } from '../../tokens/interfaces/token-action-options.interface';
+
+export interface VaultActionOptions extends TokenActionOptions {
+  vault: string;
+  amount: BigNumber;
 }

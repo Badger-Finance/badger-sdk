@@ -11,7 +11,6 @@ import {
   Controller__factory,
   Strategy__factory,
   Vault,
-  Erc20__factory,
   VaultV15__factory,
   StrategyV15__factory,
 } from '../contracts';
@@ -29,7 +28,7 @@ import {
 } from './vaults.utils';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
-import { VaultDepositOptions } from './interfaces/vault-deposit-options.interface';
+import { VaultActionOptions } from './interfaces/vault-action-options.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -187,17 +186,16 @@ export class VaultsService extends Service {
     return this.#getPendingAssets(address, true);
   }
 
-  async deposit({
-    vault,
-    amount,
-    onError,
-    onApprovePrompt,
-    onApproveSuccess,
-    onApproveSigned,
-    onDepositPrompt,
-    onDepositSigned,
-    onDepositSuccess,
-  }: VaultDepositOptions): Promise<TransactionStatus> {
+  async deposit(options: VaultActionOptions): Promise<TransactionStatus> {
+    const {
+      vault,
+      amount,
+      overrides,
+      onError,
+      onTransferPrompt,
+      onTransferSigned,
+      onTransferSuccess,
+    } = options;
     if (!this.address || !this.signer) {
       const message = `Failed deposit to ${vault}, requires an active signer`;
       this.error(message);
@@ -207,58 +205,40 @@ export class VaultsService extends Service {
       return TransactionStatus.Failure;
     }
     const vaultContract = Vault__factory.connect(vault, this.signer);
-    const depositToken = await vaultContract.token();
+    const token = await vaultContract.token();
 
-    // TODO: Port handler logic to tokens service, utilize tokens service method in vaults
-    // create a utilizty handler to both check and initialite allowance approvals if needed
-    const depositTokenContract = Erc20__factory.connect(
-      depositToken,
-      this.sdk.provider,
-    );
-    const allowance = await depositTokenContract.allowance(this.address, vault);
-    if (amount.gt(allowance)) {
-      try {
-        if (onApprovePrompt) {
-          onApprovePrompt();
-        }
-        const approveTx = await depositTokenContract.increaseAllowance(
-          vault,
-          amount,
-        );
-        if (onApproveSigned) {
-          onApproveSigned();
-        }
-        await approveTx.wait();
-        if (onApproveSuccess) {
-          onApproveSuccess();
-        }
-      } catch (err) {
-        this.log(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
-      }
+    const allowanceTransactionStatus =
+      await this.sdk.tokens.verifyOrIncreaseAllowance({
+        ...options,
+        token,
+        amount,
+        spender: vault,
+      });
+
+    if (allowanceTransactionStatus != TransactionStatus.Success) {
+      return allowanceTransactionStatus;
     }
+
     try {
       let proof: string[] = [];
       try {
         proof = await this.api.loadProof(this.address);
       } catch {} // ignore no proofs
       const name = await vaultContract.name();
-      if (onDepositPrompt) {
-        onDepositPrompt(name, amount);
+      if (onTransferPrompt) {
+        onTransferPrompt(name, amount);
       }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
         proof,
+        overrides,
       );
-      if (onDepositSigned) {
-        onDepositSigned(name, amount);
+      if (onTransferSigned) {
+        onTransferSigned(name, amount);
       }
       await depositTx.wait();
-      if (onDepositSuccess) {
-        onDepositSuccess(name, amount);
+      if (onTransferSuccess) {
+        onTransferSuccess(name, amount);
       }
       return TransactionStatus.Success;
     } catch (err) {
@@ -270,18 +250,39 @@ export class VaultsService extends Service {
     }
   }
 
-  async withdraw(vault: string, amount: BigNumber): Promise<TransactionStatus> {
+  async withdraw({
+    vault,
+    amount,
+    overrides,
+    onError,
+    onTransferPrompt,
+    onTransferSigned,
+    onTransferSuccess,
+  }: VaultActionOptions): Promise<TransactionStatus> {
     if (!this.sdk.address || !this.sdk.signer) {
       this.error(`Failed withdraw to ${vault}, requires an active signer`);
       return TransactionStatus.Failure;
     }
     const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
     try {
-      const withdrawTx = await vaultContract.withdraw(amount);
+      const name = await vaultContract.name();
+      if (onTransferPrompt) {
+        onTransferPrompt(name, amount);
+      }
+      const withdrawTx = await vaultContract.withdraw(amount, overrides);
+      if (onTransferSigned) {
+        onTransferSigned(name, amount);
+      }
       await withdrawTx.wait();
+      if (onTransferSuccess) {
+        onTransferSuccess(name, amount);
+      }
       return TransactionStatus.Success;
     } catch (err) {
       this.error(err);
+      if (onError) {
+        onError(err);
+      }
       return TransactionStatus.Failure;
     }
   }

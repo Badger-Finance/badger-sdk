@@ -2,6 +2,7 @@ import { BigNumber, ethers } from 'ethers';
 import { TransactionStatus } from '../config';
 import { Erc20, Erc20__factory } from '../contracts';
 import { Service } from '../service';
+import { IncreaseAllowanceOptions } from './interfaces/increase-allowance-options.interface';
 import { Token } from './interfaces/token.interface';
 
 export class TokensService extends Service {
@@ -24,23 +25,60 @@ export class TokensService extends Service {
     return result;
   }
 
-  async increaseAllowance(
-    token: string,
-    spender: string,
-    amount: BigNumber = ethers.constants.MaxUint256,
+  async verifyOrIncreaseAllowance(
+    options: IncreaseAllowanceOptions,
   ): Promise<TransactionStatus> {
+    if (!this.address) {
+      return TransactionStatus.Failure;
+    }
+    const token = Erc20__factory.connect(options.token, this.provider);
+    const allowance = await token.allowance(this.address, options.token);
+    if (options.amount.gt(allowance)) {
+      return this.increaseAllowance(options);
+    }
+    return TransactionStatus.Success;
+  }
+
+  async increaseAllowance({
+    token,
+    spender,
+    amount = ethers.constants.MaxUint256,
+    overrides,
+    onError,
+    onRejection,
+    onApprovePrompt,
+    onApproveSigned,
+    onApproveSuccess,
+  }: IncreaseAllowanceOptions): Promise<TransactionStatus> {
     let result = TransactionStatus.UserConfirmation;
     try {
       const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
-      const tx = await tokenContract.increaseAllowance(spender, amount);
+      if (onApprovePrompt) {
+        onApprovePrompt();
+      }
+      const tx = await tokenContract.increaseAllowance(spender, amount, overrides);
       result = TransactionStatus.Pending;
+      if (onApproveSigned) {
+        onApproveSigned();
+      }
       await tx.wait();
       result = TransactionStatus.Success;
-    } catch (err) {
-      if (result !== TransactionStatus.UserConfirmation) {
-        this.error(err);
+      if (onApproveSuccess) {
+        onApproveSuccess();
       }
+    } catch (err) {
+      const errStatus = result;
       result = TransactionStatus.Failure;
+      if (errStatus !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+        if (onError) {
+          onError(err);
+        }
+        return result;
+      }
+      if (onRejection) {
+        onRejection();
+      }
     }
     return result;
   }
