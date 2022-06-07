@@ -29,6 +29,7 @@ import {
 } from './vaults.utils';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
+import { VaultDepositOptions } from './interfaces/vault-deposit-options.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
@@ -186,43 +187,85 @@ export class VaultsService extends Service {
     return this.#getPendingAssets(address, true);
   }
 
-  async deposit(vault: string, amount: BigNumber): Promise<TransactionStatus> {
-    if (!this.sdk.address || !this.sdk.signer) {
-      this.error(`Failed deposit to ${vault}, requires an active signer`);
+  async deposit({
+    vault,
+    amount,
+    onError,
+    onApprovePrompt,
+    onApproveSuccess,
+    onApproveSigned,
+    onDepositPrompt,
+    onDepositSigned,
+    onDepositSuccess,
+  }: VaultDepositOptions): Promise<TransactionStatus> {
+    if (!this.address || !this.signer) {
+      const message = `Failed deposit to ${vault}, requires an active signer`;
+      this.error(message);
+      if (onError) {
+        onError(message);
+      }
       return TransactionStatus.Failure;
     }
-    const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
+    const vaultContract = Vault__factory.connect(vault, this.signer);
     const depositToken = await vaultContract.token();
+
+    // TODO: Port handler logic to tokens service, utilize tokens service method in vaults
+    // create a utilizty handler to both check and initialite allowance approvals if needed
     const depositTokenContract = Erc20__factory.connect(
       depositToken,
       this.sdk.provider,
     );
-    const allowance = await depositTokenContract.allowance(
-      this.sdk.address,
-      vault,
-    );
+    const allowance = await depositTokenContract.allowance(this.address, vault);
     if (amount.gt(allowance)) {
       try {
+        if (onApprovePrompt) {
+          onApprovePrompt();
+        }
         const approveTx = await depositTokenContract.increaseAllowance(
           vault,
           amount,
         );
+        if (onApproveSigned) {
+          onApproveSigned();
+        }
         await approveTx.wait();
+        if (onApproveSuccess) {
+          onApproveSuccess();
+        }
       } catch (err) {
         this.log(err);
+        if (onError) {
+          onError(err);
+        }
         return TransactionStatus.Failure;
       }
     }
     try {
-      // TODO: try a look up via badger api if possible for the current address proof
+      let proof: string[] = [];
+      try {
+        proof = await this.api.loadProof(this.address);
+      } catch {} // ignore no proofs
+      const name = await vaultContract.name();
+      if (onDepositPrompt) {
+        onDepositPrompt(name, amount);
+      }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
-        [],
+        proof,
       );
+      if (onDepositSigned) {
+        onDepositSigned(name, amount);
+      }
       await depositTx.wait();
+      if (onDepositSuccess) {
+        onDepositSuccess(name, amount);
+      }
       return TransactionStatus.Success;
     } catch (err) {
       this.error(err);
+      if (onError) {
+        onError(err);
+      }
       return TransactionStatus.Failure;
     }
   }
