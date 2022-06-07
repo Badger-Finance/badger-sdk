@@ -1,6 +1,6 @@
 export interface UserBoostData {
   address: string;
-  rank: number;
+  boostRank: number;
   boost: number;
   stakeRatio: number;
   nftBalance: number;
