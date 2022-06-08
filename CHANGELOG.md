@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.4...v1.14.0) (2022-06-08)
+
+
+### Features
+
+* expose rich ui compatible deposit + withdraw ([3f5013f](https://github.com/Badger-Finance/badger-sdk/commit/3f5013f5d80e15671691c0a527be883b946432b2))
+
 ## [1.13.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.3...v1.13.4) (2022-06-07)
 
 
