@@ -234,7 +234,7 @@ export class VaultsService extends Service {
         overrides,
       );
       if (onTransferSigned) {
-        onTransferSigned({ token, amount });
+        onTransferSigned({ token, amount, transaction: depositTx });
       }
       const receipt = await depositTx.wait();
       if (onTransferSuccess) {
@@ -271,7 +271,7 @@ export class VaultsService extends Service {
       }
       const withdrawTx = await vaultContract.withdraw(amount, overrides);
       if (onTransferSigned) {
-        onTransferSigned({ token, amount });
+        onTransferSigned({ token, amount, transaction: withdrawTx });
       }
       const receipt = await withdrawTx.wait();
       if (onTransferSuccess) {
