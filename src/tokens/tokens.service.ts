@@ -19,8 +19,9 @@ export class TokensService extends Service {
     } catch (err) {
       if (result !== TransactionStatus.UserConfirmation) {
         this.error(err);
+        return TransactionStatus.Failure;
       }
-      result = TransactionStatus.Failure;
+      result = TransactionStatus.Canceled;
     }
     return result;
   }
