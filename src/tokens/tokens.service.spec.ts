@@ -221,15 +221,14 @@ describe('tokens.service', () => {
       let calls = 0;
       // verify token information caching
       jest.spyOn(token, 'name').mockImplementation(async () => {
+        calls += 1;
         if (calls === 0) {
           return 'Success Test Name Token';
         }
-        calls += 1;
         throw new Error('Test Error: failed caching if thrown');
       });
       const partialFailureTokens = await sdk.tokens.loadTokens([
         TEST_ADDR,
-        testAddressTwo,
         testAddressThree,
       ]);
       expect(partialFailureTokens).toMatchSnapshot();
