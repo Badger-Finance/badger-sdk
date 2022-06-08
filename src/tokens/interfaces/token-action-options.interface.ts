@@ -1,4 +1,5 @@
-import { BigNumber, Overrides } from 'ethers';
+import { Overrides } from 'ethers';
+import { TokenActionCallback } from './token-action-callback-input.interface';
 
 export interface TokenActionOptions {
   // Approval Hooks
@@ -7,9 +8,9 @@ export interface TokenActionOptions {
   onApproveSuccess?: () => void;
 
   // Transfer Hooks
-  onTransferPrompt?: (token: string, amount: BigNumber) => void;
-  onTransferSigned?: (token: string, amount: BigNumber) => void;
-  onTransferSuccess?: (token: string, amount: BigNumber) => void;
+  onTransferPrompt?: TokenActionCallback;
+  onTransferSigned?: TokenActionCallback;
+  onTransferSuccess?: TokenActionCallback;
 
   // TODO: Move to a base class for general transaction hooks
   overrides?: Overrides;

@@ -224,9 +224,9 @@ export class VaultsService extends Service {
       try {
         proof = await this.api.loadProof(this.address);
       } catch {} // ignore no proofs
-      const name = await vaultContract.name();
+      const token = await vaultContract.name();
       if (onTransferPrompt) {
-        onTransferPrompt(name, amount);
+        onTransferPrompt({ token, amount });
       }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
@@ -234,11 +234,11 @@ export class VaultsService extends Service {
         overrides,
       );
       if (onTransferSigned) {
-        onTransferSigned(name, amount);
+        onTransferSigned({ token, amount });
       }
-      await depositTx.wait();
+      const receipt = await depositTx.wait();
       if (onTransferSuccess) {
-        onTransferSuccess(name, amount);
+        onTransferSuccess({ token, amount, receipt });
       }
       return TransactionStatus.Success;
     } catch (err) {
@@ -265,17 +265,17 @@ export class VaultsService extends Service {
     }
     const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
     try {
-      const name = await vaultContract.name();
+      const token = await vaultContract.name();
       if (onTransferPrompt) {
-        onTransferPrompt(name, amount);
+        onTransferPrompt({ token, amount });
       }
       const withdrawTx = await vaultContract.withdraw(amount, overrides);
       if (onTransferSigned) {
-        onTransferSigned(name, amount);
+        onTransferSigned({ token, amount });
       }
-      await withdrawTx.wait();
+      const receipt = await withdrawTx.wait();
       if (onTransferSuccess) {
-        onTransferSuccess(name, amount);
+        onTransferSuccess({ token, amount, receipt });
       }
       return TransactionStatus.Success;
     } catch (err) {
