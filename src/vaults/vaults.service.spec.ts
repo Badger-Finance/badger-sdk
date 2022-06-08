@@ -1,68 +1,24 @@
 import { BadgerSDK } from '../sdk';
 import { VaultVersion } from './enums';
-import { Network } from '../config';
-import {
-  Controller,
-  Controller__factory,
-  RegistryService,
-  RewardsService,
-  Strategy,
-  StrategyV15,
-  StrategyV15__factory,
-  Strategy__factory,
-  TokensService,
-  Vault,
-  VaultV15,
-  VaultV15__factory,
-  Vault__factory,
-} from '..';
-import { any, mock, MockProxy } from 'jest-mock-extended';
+import { Controller, StrategyV15, TokensService, Vault, VaultV15 } from '..';
+import { any, MockProxy } from 'jest-mock-extended';
 import { BigNumber } from '@ethersproject/bignumber';
 import { BaseStrategy } from '../contracts/StrategyV15';
-import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
+import { TEST_ADDR } from '../tests/tests.constants';
+import { mockSDK, mockVaults } from '../tests/tests.utils';
 
 describe('vaults.service', () => {
-  const TEST_ADDR = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';
-
   let sdk: BadgerSDK;
   let controller: MockProxy<Controller>;
   let vault: MockProxy<Vault>;
   let vaultV15: MockProxy<VaultV15>;
-  let strategy: MockProxy<Strategy>;
   let strategyV15: MockProxy<StrategyV15>;
 
   beforeEach(async () => {
-    // Setup Jest Mocks
-    const mockSigner = mock<JsonRpcSigner>();
-    mockSigner.getAddress
-      .calledWith()
-      .mockImplementation(async () => TEST_ADDR);
-    const mockProvider = mock<JsonRpcProvider>();
-    mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
+    sdk = mockSDK();
 
-    sdk = new BadgerSDK({
-      network: Network.Fantom,
-      provider: mockProvider,
-    });
-
-    jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
-    jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
-
-    controller = mock<Controller>();
-    vault = mock<Vault>();
-    vaultV15 = mock<VaultV15>();
-    strategy = mock<Strategy>();
-    strategyV15 = mock<StrategyV15>();
-
-    jest
-      .spyOn(Controller__factory, 'connect')
-      .mockImplementation(() => controller);
-    jest.spyOn(Vault__factory, 'connect').mockImplementation(() => vault);
-    jest.spyOn(VaultV15__factory, 'connect').mockImplementation(() => vaultV15);
-    jest.spyOn(Strategy__factory, 'connect').mockImplementation(() => strategy);
-    jest
-      .spyOn(StrategyV15__factory, 'connect')
-      .mockImplementation(() => strategyV15);
+    // destructure assignment from mocks
+    ({ controller, vault, vaultV15, strategyV15 } = mockVaults());
 
     // Let the SDK Prepare
     await sdk.ready();
