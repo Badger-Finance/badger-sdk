@@ -20,6 +20,7 @@ import {
   Erc20__factory,
 } from '../contracts';
 import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
+import { RegistryV2Service } from '../registry.v2';
 
 export function mockSDK(): BadgerSDK {
   const mockSigner = mock<JsonRpcSigner>();
@@ -33,6 +34,7 @@ export function mockSDK(): BadgerSDK {
   });
 
   jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
+  jest.spyOn(RegistryV2Service.prototype, 'ready').mockImplementation();
   jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
 
   return sdk;
