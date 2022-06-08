@@ -10,48 +10,11 @@ export class TokensService extends Service {
   private tokens: Record<string, Token> = {};
   private allowances: Record<string, BigNumber> = {};
 
-  async revoke({
-    token,
-    spender,
-    overrides,
-    onError,
-    onRejection,
-    onApprovePrompt,
-    onApproveSigned,
-    onApproveSuccess,
-  }: RevokeAllowanceOptions): Promise<TransactionStatus> {
-    let result = TransactionStatus.UserConfirmation;
-    try {
-      const tokenContract = Erc20__factory.connect(token, this.sdk.provider);
-      if (onApprovePrompt) {
-        onApprovePrompt();
-      }
-      const tx = await tokenContract.approve(spender, 0, overrides);
-      result = TransactionStatus.Pending;
-      if (onApproveSigned) {
-        onApproveSigned();
-      }
-      await tx.wait();
-      result = TransactionStatus.Success;
-      if (onApproveSuccess) {
-        onApproveSuccess();
-      }
-      this.allowances[ethers.utils.getAddress(token)] = ethers.constants.Zero;
-    } catch (err) {
-      if (result !== TransactionStatus.UserConfirmation) {
-        result = TransactionStatus.Failure;
-        this.error(err);
-        if (onError) {
-          onError(err);
-        }
-      } else {
-        result = TransactionStatus.Canceled;
-        if (onRejection) {
-          onRejection();
-        }
-      }
-    }
-    return result;
+  async revoke(options: RevokeAllowanceOptions): Promise<TransactionStatus> {
+    return this.increaseAllowance({
+      ...options,
+      amount: ethers.constants.Zero,
+    });
   }
 
   async verifyOrIncreaseAllowance(
@@ -126,18 +89,14 @@ export class TokensService extends Service {
   }
 
   async loadTokens(tokens: string[]): Promise<Record<string, Token>> {
-    const tokenInfo: Record<string, Token> = {};
-    await Promise.all(
-      tokens.map(async (addr) => {
-        try {
+    return Object.fromEntries(
+      await Promise.all(
+        tokens.map(async (addr) => {
           const token = await this.loadToken(addr);
-          tokenInfo[token.address] = token;
-        } catch (err) {
-          this.error({ message: `Failed to load ${addr}`, err });
-        }
-      }),
+          return [token.address, token];
+        }),
+      ),
     );
-    return tokenInfo;
   }
 
   async loadToken(token: string): Promise<Token> {
