@@ -192,6 +192,7 @@ export class VaultsService extends Service {
       amount,
       overrides,
       onError,
+      onRejection,
       onTransferPrompt,
       onTransferSigned,
       onTransferSuccess,
@@ -219,6 +220,7 @@ export class VaultsService extends Service {
       return allowanceTransactionStatus;
     }
 
+    let result = TransactionStatus.UserConfirmation;
     try {
       let proof: string[] = [];
       try {
@@ -233,21 +235,29 @@ export class VaultsService extends Service {
         proof,
         overrides,
       );
+      result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({ token, amount, transaction: depositTx });
       }
       const receipt = await depositTx.wait();
+      result = TransactionStatus.Success;
       if (onTransferSuccess) {
         onTransferSuccess({ token, amount, receipt });
       }
-      return TransactionStatus.Success;
     } catch (err) {
-      this.error(err);
-      if (onError) {
-        onError(err);
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+        if (onError) {
+          onError(err);
+        }
+        return TransactionStatus.Failure;
       }
-      return TransactionStatus.Failure;
+      if (onRejection) {
+        onRejection();
+      }
+      result = TransactionStatus.Canceled;
     }
+    return result;
   }
 
   async withdraw({

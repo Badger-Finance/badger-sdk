@@ -1,4 +1,4 @@
-import { mock } from 'jest-mock-extended';
+import { mock, MockProxy } from 'jest-mock-extended';
 import { BadgerSDK } from '../sdk';
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 import { Network } from '../config';
@@ -16,6 +16,8 @@ import {
   VaultV15__factory,
   Strategy__factory,
   StrategyV15__factory,
+  Erc20,
+  Erc20__factory,
 } from '../contracts';
 import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
 
@@ -60,4 +62,10 @@ export function mockVaults(): MockVaultSystem {
     strategy,
     strategyV15,
   };
+}
+
+export function mockToken(): MockProxy<Erc20> {
+  const token = mock<Erc20>();
+  jest.spyOn(Erc20__factory, 'connect').mockImplementation(() => token);
+  return token;
 }

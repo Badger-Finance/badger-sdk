@@ -67,18 +67,17 @@ export class TokensService extends Service {
         onApproveSuccess();
       }
     } catch (err) {
-      const errStatus = result;
-      result = TransactionStatus.Failure;
-      if (errStatus !== TransactionStatus.UserConfirmation) {
+      if (result !== TransactionStatus.UserConfirmation) {
         this.error(err);
         if (onError) {
           onError(err);
         }
-        return result;
+        return TransactionStatus.Failure;
       }
       if (onRejection) {
         onRejection();
       }
+      result = TransactionStatus.Canceled;
     }
     return result;
   }
