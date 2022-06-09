@@ -321,6 +321,9 @@ describe('tokens.service', () => {
 
   describe('loadBalances', () => {
     it('returns requested balance information', async () => {
+      jest
+        .spyOn(token, 'balanceOf')
+        .mockImplementation(async (_a) => allowance);
       const loadedBalances = await sdk.tokens.loadBalances([
         TEST_ADDR,
         testAddressTwo,

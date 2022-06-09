@@ -15,8 +15,14 @@ Object {
 
 exports[`tokens.service loadBalances returns requested balance information 1`] = `
 Object {
-  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": undefined,
-  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": undefined,
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
 }
 `;
 
