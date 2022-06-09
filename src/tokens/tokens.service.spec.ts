@@ -272,30 +272,60 @@ describe('tokens.service', () => {
       const result = await sdk.tokens.loadAllowance(TEST_ADDR, TEST_ADDR);
       expect(result).toMatchObject(allowance);
     });
+
+    it('reports allowance of zero encountering an error', async () => {
+      jest.spyOn(token, 'allowance').mockImplementation(async (_a) => {
+        throw new Error('Expected test error: intentional allowance failure');
+      });
+      const result = await sdk.tokens.loadAllowance(TEST_ADDR, TEST_ADDR);
+      expect(result).toMatchObject(ethers.constants.Zero);
+    });
   });
 
   describe('loadAllowances', () => {
     it('returns requested allowance information', async () => {
+      jest
+        .spyOn(token, 'allowance')
+        .mockImplementation(async (_a, _t) => allowance);
       const loadedAllowances = await sdk.tokens.loadAllowances(
         [TEST_ADDR, testAddressTwo],
         TEST_ADDR,
       );
       expect(loadedAllowances).toMatchSnapshot();
+    });
+  });
 
-      let calls = 0;
-      // verify token information caching
-      jest.spyOn(token, 'allowance').mockImplementation(async () => {
-        calls += 1;
-        if (calls === 0) {
-          return allowance;
-        }
-        throw new Error('Test Error: failed caching if thrown');
+  describe('loadBalance', () => {
+    it('reports zero balance with no address for the sdk', async () => {
+      sdk.address = undefined;
+      const result = await sdk.tokens.loadBalance(TEST_ADDR);
+      expect(result).toMatchObject(ethers.constants.Zero);
+    });
+
+    it('reports sdk address balance given an owner', async () => {
+      jest
+        .spyOn(token, 'balanceOf')
+        .mockImplementation(async (_a) => allowance);
+      const result = await sdk.tokens.loadBalance(TEST_ADDR);
+      expect(result).toMatchObject(allowance);
+    });
+
+    it('reports balance of zero encountering an error', async () => {
+      jest.spyOn(token, 'balanceOf').mockImplementation(async (_a) => {
+        throw new Error('Expected test error: intentional balanceOf failure');
       });
-      const partialFailureAllowances = await sdk.tokens.loadAllowances(
-        [TEST_ADDR, testAddressThree],
+      const result = await sdk.tokens.loadBalance(TEST_ADDR);
+      expect(result).toMatchObject(ethers.constants.Zero);
+    });
+  });
+
+  describe('loadBalances', () => {
+    it('returns requested balance information', async () => {
+      const loadedBalances = await sdk.tokens.loadBalances([
         TEST_ADDR,
-      );
-      expect(partialFailureAllowances).toMatchSnapshot();
+        testAddressTwo,
+      ]);
+      expect(loadedBalances).toMatchSnapshot();
     });
   });
 });

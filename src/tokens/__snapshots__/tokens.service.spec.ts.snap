@@ -2,21 +2,21 @@
 
 exports[`tokens.service loadAllowances returns requested allowance information 1`] = `
 Object {
-  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": undefined,
-  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": undefined,
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
 }
 `;
 
-exports[`tokens.service loadAllowances returns requested allowance information 2`] = `
+exports[`tokens.service loadBalances returns requested balance information 1`] = `
 Object {
-  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
-    "hex": "0x00",
-    "type": "BigNumber",
-  },
-  "0xff628b747c4e70825af24e3d59748bac477dcbf6": Object {
-    "hex": "0x00",
-    "type": "BigNumber",
-  },
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": undefined,
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": undefined,
 }
 `;
 

@@ -132,18 +132,15 @@ export class TokensService extends Service {
   }
 
   async loadBalance(token: string, owner?: string): Promise<BigNumber> {
-    if (!this.address && !owner) {
+    if (!this.address) {
       return BigNumber.from(0);
     }
     const targetAddress = owner ?? this.address;
-    if (!targetAddress) {
-      // This is not possible, but typescript
-      throw new Error('Undefined loadBalance target address');
-    }
     try {
       const checksumAddress = ethers.utils.getAddress(token);
       const contract = Erc20__factory.connect(checksumAddress, this.provider);
-      return contract.balanceOf(targetAddress);
+      const balance = await contract.balanceOf(targetAddress);
+      return balance;
     } catch (err) {
       this.error(err);
       return BigNumber.from(0);
