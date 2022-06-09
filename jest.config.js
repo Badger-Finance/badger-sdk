@@ -16,5 +16,5 @@ module.exports = {
   testRegex: '.spec.ts$',
   testTimeout: 10000,
   transform: { '^.+\\.ts$': 'ts-jest' },
-  coveragePathIgnorePatterns: ['contracts', 'generated'],
+  coveragePathIgnorePatterns: ['contracts', 'generated', 'tests'],
 };
