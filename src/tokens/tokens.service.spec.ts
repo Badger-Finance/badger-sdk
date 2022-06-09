@@ -6,7 +6,14 @@ import { BadgerSDK } from '../sdk';
 import { TEST_ADDR, TRANSACTION_SUCCESS } from '../tests/tests.constants';
 import { mockSDK, mockToken } from '../tests/tests.utils';
 
+// ignore some mocks
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 describe('tokens.service', () => {
+  const testAddressTwo = '0x1622bF67e6e5747b81866fE0b85178a93C7F86e3';
+  const testAddressThree = '0xff628b747c4e70825af24e3d59748bac477dcbf6';
+  const allowance = BigNumber.from('15000000000000000000');
+
   let sdk: BadgerSDK;
   let token: MockProxy<Erc20>;
 
@@ -208,9 +215,6 @@ describe('tokens.service', () => {
   });
 
   describe('loadTokens', () => {
-    const testAddressTwo = '0x1622bF67e6e5747b81866fE0b85178a93C7F86e3';
-    const testAddressThree = '0xff628b747c4e70825af24e3d59748bac477dcbf6';
-
     it('returns requested token information', async () => {
       const loadedTokens = await sdk.tokens.loadTokens([
         TEST_ADDR,
@@ -218,20 +222,80 @@ describe('tokens.service', () => {
       ]);
       expect(loadedTokens).toMatchSnapshot();
 
-      let calls = 0;
+      let nameCalls = 0;
       // verify token information caching
       jest.spyOn(token, 'name').mockImplementation(async () => {
-        calls += 1;
-        if (calls === 0) {
+        nameCalls += 1;
+        if (nameCalls === 0) {
           return 'Success Test Name Token';
         }
         throw new Error('Test Error: failed caching if thrown');
       });
+      let symbolCalls = 0;
+      // verify token information caching
+      jest.spyOn(token, 'symbol').mockImplementation(async () => {
+        symbolCalls += 1;
+        if (symbolCalls === 0) {
+          return 'STNT';
+        }
+        throw new Error('Test Error: failed caching if thrown');
+      });
+      let decimalCalls = 0;
+      // verify token information caching
+      jest.spyOn(token, 'decimals').mockImplementation(async () => {
+        decimalCalls += 1;
+        if (decimalCalls === 0) {
+          return 18;
+        }
+        throw new Error('Test Error: failed caching if thrown');
+      });
+
       const partialFailureTokens = await sdk.tokens.loadTokens([
         TEST_ADDR,
         testAddressThree,
       ]);
       expect(partialFailureTokens).toMatchSnapshot();
+    });
+  });
+
+  describe('loadAllowance', () => {
+    it('reports zero allowance with no address for the sdk', async () => {
+      sdk.address = undefined;
+      const result = await sdk.tokens.loadAllowance(TEST_ADDR, TEST_ADDR);
+      expect(result).toMatchObject(ethers.constants.Zero);
+    });
+
+    it('reports sdk address allowance given no owner', async () => {
+      jest
+        .spyOn(token, 'allowance')
+        .mockImplementation(async (_a, _t) => allowance);
+      const result = await sdk.tokens.loadAllowance(TEST_ADDR, TEST_ADDR);
+      expect(result).toMatchObject(allowance);
+    });
+  });
+
+  describe('loadAllowances', () => {
+    it('returns requested allowance information', async () => {
+      const loadedAllowances = await sdk.tokens.loadAllowances(
+        [TEST_ADDR, testAddressTwo],
+        TEST_ADDR,
+      );
+      expect(loadedAllowances).toMatchSnapshot();
+
+      let calls = 0;
+      // verify token information caching
+      jest.spyOn(token, 'allowance').mockImplementation(async () => {
+        calls += 1;
+        if (calls === 0) {
+          return allowance;
+        }
+        throw new Error('Test Error: failed caching if thrown');
+      });
+      const partialFailureAllowances = await sdk.tokens.loadAllowances(
+        [TEST_ADDR, testAddressThree],
+        TEST_ADDR,
+      );
+      expect(partialFailureAllowances).toMatchSnapshot();
     });
   });
 });

@@ -169,14 +169,10 @@ export class TokensService extends Service {
     spender: string,
     owner?: string,
   ): Promise<BigNumber> {
-    if (!this.address && !owner) {
+    if (!this.address) {
       return BigNumber.from(0);
     }
     const targetAddress = owner ?? this.address;
-    if (!targetAddress) {
-      // This is not possible, but typescript
-      throw new Error('Undefined loadBalance target address');
-    }
     try {
       const checksumAddress = ethers.utils.getAddress(token);
       const contract = Erc20__factory.connect(checksumAddress, this.provider);
