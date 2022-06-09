@@ -68,6 +68,11 @@ export function mockVaults(): MockVaultSystem {
 
 export function mockToken(): MockProxy<Erc20> {
   const token = mock<Erc20>();
+
   jest.spyOn(Erc20__factory, 'connect').mockImplementation(() => token);
+  jest.spyOn(token, 'name').mockImplementation(async () => 'Test Token');
+  jest.spyOn(token, 'symbol').mockImplementation(async () => 'JTT');
+  jest.spyOn(token, 'decimals').mockImplementation(async () => 18);
+
   return token;
 }

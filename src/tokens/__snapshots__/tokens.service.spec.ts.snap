@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokens.service loadAllowances returns requested allowance information 1`] = `
+Object {
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+}
+`;
+
+exports[`tokens.service loadBalances returns requested balance information 1`] = `
+Object {
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "hex": "0xd02ab486cedc0000",
+    "type": "BigNumber",
+  },
+}
+`;
+
+exports[`tokens.service loadToken returns requested token information 1`] = `
+Object {
+  "address": "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484",
+  "decimals": 18,
+  "name": "Test Token",
+  "symbol": "JTT",
+}
+`;
+
+exports[`tokens.service loadTokens returns requested token information 1`] = `
+Object {
+  "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3": Object {
+    "address": "0x1622bF67e6e5747b81866fE0b85178a93C7F86e3",
+    "decimals": 18,
+    "name": "Test Token",
+    "symbol": "JTT",
+  },
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "address": "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484",
+    "decimals": 18,
+    "name": "Test Token",
+    "symbol": "JTT",
+  },
+}
+`;
+
+exports[`tokens.service loadTokens returns requested token information 2`] = `
+Object {
+  "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484": Object {
+    "address": "0xe6487033F5C8e2b4726AF54CA1449FEC18Bd1484",
+    "decimals": 18,
+    "name": "Test Token",
+    "symbol": "JTT",
+  },
+  "0xfF628B747C4E70825AF24e3d59748bac477dcbF6": Object {
+    "address": "0xfF628B747C4E70825AF24e3d59748bac477dcbF6",
+    "decimals": 18,
+    "name": "",
+    "symbol": "",
+  },
+}
+`;
