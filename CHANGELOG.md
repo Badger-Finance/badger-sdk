@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.0...v1.14.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* add client field to regV2 metadata ([8d95031](https://github.com/Badger-Finance/badger-sdk/commit/8d95031fd4d1bb232ba93c1551dfe4d75f8062fb))
+
 # [1.14.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.13.4...v1.14.0) (2022-06-08)
 
 
