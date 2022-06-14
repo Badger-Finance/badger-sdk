@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.14.0...sdk-mocks-v1.14.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* add client field to regV2 metadata ([8d95031](https://github.com/Badger-Finance/badger-sdk/commit/8d95031fd4d1bb232ba93c1551dfe4d75f8062fb))
+
 ## [1.12.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.12.2...sdk-mocks-v1.12.3) (2022-06-07)
 
 
