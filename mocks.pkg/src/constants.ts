@@ -10,6 +10,7 @@ export const methodsToSkip = [
   'withdraw',
   'revoke',
   'increaseAllowance',
+  'verifyOrIncreaseAllowance',
   'getPendingYield', // vaultsV2 WIP method
   'getPendingHarvest', // vaultsV2 WIP method
   'listHarvests', // failing for some reason, temp
