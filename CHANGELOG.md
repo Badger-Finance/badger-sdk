@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.1...v1.14.2) (2022-06-16)
+
+
+### Bug Fixes
+
+* add aura protocol ([846e06e](https://github.com/Badger-Finance/badger-sdk/commit/846e06e9b5960d7b596745c9b3a54514f7224108))
+
 ## [1.14.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.0...v1.14.1) (2022-06-14)
 
 
