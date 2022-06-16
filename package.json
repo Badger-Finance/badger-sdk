@@ -88,7 +88,7 @@
       "@semantic-release/github"
     ]
   },
-	"resolutions": {
-		"@typescript-eslint/typescript-estree": "5.9.0"
-	}
+  "resolutions": {
+    "@typescript-eslint/typescript-estree": "5.9.0"
+  }
 }
