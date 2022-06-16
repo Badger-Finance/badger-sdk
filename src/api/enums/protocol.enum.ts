@@ -1,6 +1,7 @@
 export enum Protocol {
   Aave = 'Aave',
   Alchemix = 'Alchemix',
+  Aura = 'Aura',
   Badger = 'Badger',
   Balancer = 'Balancer',
   Convex = 'Convex',
