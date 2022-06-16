@@ -1,18 +1,19 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
-import { mock, MockProxy } from 'jest-mock-extended';
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
-import { TEST_ADDR } from '../tests/tests.constants';
+import { BigNumber } from 'ethers';
+import { mock, MockProxy } from 'jest-mock-extended';
+
+import { VaultState } from '../api';
+import { Network } from '../config';
+import { RegistryV2, RegistryV2__factory } from '../contracts';
 import { RegistryService } from '../registry';
 import { RewardsService } from '../rewards';
 import { BadgerSDK } from '../sdk';
-import { RegistryV2, RegistryV2__factory } from '../contracts';
-import { Network } from '../config';
-import { BigNumber } from 'ethers';
-import { registryV2ProductionVaultsMock } from './mocks/registry-v2-production-vaults.mock';
+import { TEST_ADDR } from '../tests/tests.constants';
 import { VaultVersion } from '../vaults';
-import { VaultState } from '../api';
 import { registryV2AllProductionVaultsMock } from './mocks/registry-v2-all-production-vaults.mock';
+import { registryV2ProductionVaultsMock } from './mocks/registry-v2-production-vaults.mock';
 
 describe('RegistryV2Service', () => {
   function prepareSdkMocks(currBlock = 39039987): {

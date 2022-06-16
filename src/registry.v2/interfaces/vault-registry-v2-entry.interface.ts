@@ -1,5 +1,5 @@
-import { VaultVersion } from '../../vaults';
 import { VaultState } from '../../api';
+import { VaultVersion } from '../../vaults';
 import { VaultRegistryV2Metadata } from './vault-registry-v2-metadata.interface';
 
 export interface VaultRegistryV2Entry {

@@ -1,3 +1,14 @@
+import { BigNumber, ethers } from 'ethers';
+
+import { VaultState } from '..';
+import { TimeRangeOptions } from '../common';
+import { Strategy__factory, VaultV15__factory } from '../contracts';
+import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
+import {
+  HarvestedEvent,
+  TreeDistributionEvent as TreeDistributionEventV15,
+} from '../contracts/VaultV15';
+import { VaultVersion } from '.';
 import {
   getVaultState,
   getVaultVersion,
@@ -7,16 +18,6 @@ import {
   parseHarvestV15Events,
   timestampInRange,
 } from './vaults.utils';
-import { HarvestEvent, TreeDistributionEvent } from '../contracts/Strategy';
-import { BigNumber, ethers } from 'ethers';
-import {
-  HarvestedEvent,
-  TreeDistributionEvent as TreeDistributionEventV15,
-} from '../contracts/VaultV15';
-import { VaultVersion } from '.';
-import { VaultState } from '..';
-import { TimeRangeOptions } from '../common';
-import { Strategy__factory, VaultV15__factory } from '../contracts';
 
 describe('vaults.utils', () => {
   const defaultTimestamp = BigNumber.from('1647284957');

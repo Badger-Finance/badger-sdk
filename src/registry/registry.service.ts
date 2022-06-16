@@ -1,8 +1,8 @@
-import { VaultRegistryEntry } from '.';
 import { VaultVersion } from '..';
 import { Registry, Registry__factory } from '../contracts';
 import { Service } from '../service';
 import { getVaultState, getVaultVersion } from '../vaults/vaults.utils';
+import { VaultRegistryEntry } from '.';
 
 export const REGISTRY_ADDRESS = '0xFda7eB6f8b7a9e9fCFd348042ae675d1d652454f';
 

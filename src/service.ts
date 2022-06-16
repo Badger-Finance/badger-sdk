@@ -1,8 +1,9 @@
-import { BadgerSDK, NetworkConfig } from '.';
 import { providers } from '@0xsequence/multicall';
-import { Logger } from './logger';
-import BadgerAPI from './api';
 import { Signer } from 'ethers';
+
+import { BadgerSDK, NetworkConfig } from '.';
+import BadgerAPI from './api';
+import { Logger } from './logger';
 
 export abstract class Service extends Logger {
   constructor(protected sdk: BadgerSDK) {

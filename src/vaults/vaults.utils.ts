@@ -1,11 +1,8 @@
-import {
-  VaultHarvestData,
-  VaultPerformanceEvent,
-  VaultStatus,
-  VaultVersion,
-} from '.';
+import { BigNumber } from 'ethers';
+
 import { keyBy, VaultState } from '..';
 import { TimeRangeOptions } from '../common';
+import { RangeOptions } from '../common/interfaces/range-options.interface';
 import { VaultV15 } from '../contracts';
 import {
   HarvestEvent,
@@ -20,9 +17,13 @@ import {
   TreeDistributionEventFilter,
 } from '../contracts/VaultV15';
 import { chunkQueryFilter } from '../utils/chunk-query-filter';
-import { RangeOptions } from '../common/interfaces/range-options.interface';
+import {
+  VaultHarvestData,
+  VaultPerformanceEvent,
+  VaultStatus,
+  VaultVersion,
+} from '.';
 import { vaultToChainEnumStateList } from './vautls.constants';
-import { BigNumber } from 'ethers';
 
 /**
  * Parse Vault v1 harvest related events.

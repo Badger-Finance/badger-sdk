@@ -1,5 +1,5 @@
-import { VaultVersion } from '..';
 import { VaultState } from '../..';
+import { VaultVersion } from '..';
 
 export interface LoadVaultOptions {
   address: string;

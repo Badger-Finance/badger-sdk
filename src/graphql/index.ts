@@ -1,12 +1,10 @@
-import { GraphQLClient } from 'graphql-request';
 import { Networkish } from '@ethersproject/networks';
+import { GraphQLClient } from 'graphql-request';
 
-import { Network } from '../config/enums/network.enum';
-
-import { Sdk as BadgerGraphQLSDK, getSdk } from './generated/badger';
-
-import * as gqlGenT from './generated/badger';
 import { GraphOptions } from '../api/interfaces/graph-options.interface';
+import { Network } from '../config/enums/network.enum';
+import { getSdk, Sdk as BadgerGraphQLSDK } from './generated/badger';
+import * as gqlGenT from './generated/badger';
 
 const DEFAULT_API_URL =
   'https://api.thegraph.com/subgraphs/name/badger-finance/badger-dao-setts';

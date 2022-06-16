@@ -1,4 +1,5 @@
 import { mock, MockProxy } from 'jest-mock-extended';
+
 import { CitadelMinter } from '../contracts';
 import { chunkQueryFilter, RPC_CHUNK_LIMIT } from './chunk-query-filter';
 

@@ -1,5 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { ethers } from 'ethers';
+
 import { Network } from '../config/enums/network.enum';
 import { Digg } from '../contracts/Digg';
 import { Digg__factory } from '../contracts/factories/Digg__factory';

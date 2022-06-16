@@ -1,7 +1,7 @@
-import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
-import { citadelDistributionToStakingEvents } from './mocks/distribution-to-staking-events.mock';
-import { distributionFormattedEvents } from './mocks/distribution-formatted-events.mock';
 import { CitadelDistributionToStakingEvent } from '../contracts/CitadelMinter';
+import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
+import { distributionFormattedEvents } from './mocks/distribution-formatted-events.mock';
+import { citadelDistributionToStakingEvents } from './mocks/distribution-to-staking-events.mock';
 
 // TypedEvents require to implement all the methods in interface,
 // so we ignore mocks for testing purposes

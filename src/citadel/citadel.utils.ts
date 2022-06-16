@@ -1,10 +1,11 @@
-import { MinterDistributionEvent } from './interfaces/minter-distribution-event.interface';
-import { TimeRangeOptions } from '../common';
-import { MinterDistributionData } from './interfaces/minter-distribution-data.interface';
-import { timestampInRange } from '../vaults/vaults.utils';
-import { keyBy } from '../utils';
-import { TypedEvent } from '../contracts/common';
 import { Block } from '@ethersproject/abstract-provider';
+
+import { TimeRangeOptions } from '../common';
+import { TypedEvent } from '../contracts/common';
+import { keyBy } from '../utils';
+import { timestampInRange } from '../vaults/vaults.utils';
+import { MinterDistributionData } from './interfaces/minter-distribution-data.interface';
+import { MinterDistributionEvent } from './interfaces/minter-distribution-event.interface';
 
 export function parseTypedEvents<T extends TypedEvent, R>(
   events: T[],

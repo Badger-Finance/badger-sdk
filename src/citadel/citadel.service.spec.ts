@@ -1,22 +1,23 @@
-import { BadgerSDK } from '../sdk';
+import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
+import { BigNumber } from 'ethers';
 import { mock, MockProxy } from 'jest-mock-extended';
+
+import { Network } from '../config';
 import {
   CitadelMinter,
   CitadelMinter__factory,
   StakedCitadelLocker,
   StakedCitadelLocker__factory,
 } from '../contracts';
-import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
-import { Network } from '../config';
 import { RegistryService } from '../registry';
 import { RewardsService } from '../rewards';
+import { BadgerSDK } from '../sdk';
 import * as deployedUtils from '../utils/deployed-at.util';
-import { citadelDistributionToStakingEvents } from './mocks/distribution-to-staking-events.mock';
-import { addedRewardEvents } from './mocks/added-reward-events.mock';
-import { paidRewardEvents } from './mocks/paid-reward-events.mock';
 import { RewardFilter } from './enums/reward-filter.enum';
-import { BigNumber } from 'ethers';
 import { CitadelInitError, CitadelValidationError } from './errors';
+import { addedRewardEvents } from './mocks/added-reward-events.mock';
+import { citadelDistributionToStakingEvents } from './mocks/distribution-to-staking-events.mock';
+import { paidRewardEvents } from './mocks/paid-reward-events.mock';
 
 describe('citadel.service', function () {
   const TEST_ADDR = '0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906';

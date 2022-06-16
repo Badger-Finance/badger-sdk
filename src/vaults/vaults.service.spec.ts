@@ -1,11 +1,12 @@
-import { BadgerSDK } from '../sdk';
-import { VaultVersion } from './enums';
-import { Controller, StrategyV15, TokensService, Vault, VaultV15 } from '..';
-import { any, MockProxy } from 'jest-mock-extended';
 import { BigNumber } from '@ethersproject/bignumber';
+import { any, MockProxy } from 'jest-mock-extended';
+
+import { Controller, StrategyV15, TokensService, Vault, VaultV15 } from '..';
 import { BaseStrategy } from '../contracts/StrategyV15';
+import { BadgerSDK } from '../sdk';
 import { TEST_ADDR } from '../tests/tests.constants';
 import { mockSDK, mockVaults } from '../tests/tests.utils';
+import { VaultVersion } from './enums';
 
 describe('vaults.service', () => {
   let sdk: BadgerSDK;

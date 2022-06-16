@@ -1,17 +1,18 @@
+import { ethers } from 'ethers';
+
+import { Network } from '../config/enums/network.enum';
 import {
   BadgerTree,
   BadgerTree__factory,
   RewardsLogger,
   RewardsLogger__factory,
 } from '../contracts';
+import { DIGG_ADDRESS } from '../digg/digg.service';
 import { RegistryKey } from '../registry/enums/registry-key.enum';
 import { Service } from '../service';
-import { EmissionSchedule } from './interfaces/emission-schedule.interface';
-import { Network } from '../config/enums/network.enum';
 import { formatBalance } from '../tokens/tokens.utils';
 import { ClaimOptions } from './interfaces/claim-options.interface';
-import { DIGG_ADDRESS } from '../digg/digg.service';
-import { ethers } from 'ethers';
+import { EmissionSchedule } from './interfaces/emission-schedule.interface';
 
 export class RewardsService extends Service {
   private loading?: Promise<void>;

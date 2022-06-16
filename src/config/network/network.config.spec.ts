@@ -1,6 +1,7 @@
 import { Networkish } from '@ethersproject/networks';
-import { NETWORK_CONFIGS } from '.';
+
 import { Network } from '..';
+import { NETWORK_CONFIGS } from '.';
 import { getNetworkConfig } from './network.config';
 
 describe('network.config', () => {

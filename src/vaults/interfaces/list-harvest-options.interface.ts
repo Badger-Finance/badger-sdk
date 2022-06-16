@@ -1,6 +1,6 @@
 import { TimeRangeOptions } from '../../common/interfaces';
-import { VaultVersion } from '../enums';
 import { BlocksRangeOptions } from '../../common/interfaces/blocks-range-options.interface';
+import { VaultVersion } from '../enums';
 
 export interface ListHarvestOptions
   extends TimeRangeOptions,

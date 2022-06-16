@@ -1,24 +1,25 @@
+import { Networkish } from '@ethersproject/networks';
 import axios, { AxiosError, AxiosInstance } from 'axios';
+
+import { CitadelMerkleClaim } from '../citadel';
+import { RewardFilter } from '../citadel/enums/reward-filter.enum';
 import { Network } from '../config/enums/network.enum';
+import { getNetworkConfig } from '../config/network/network.config';
+import { Logger } from '../logger';
+import { EmissionSchedule } from '../rewards';
+import { ApiError } from './api.error';
+import { ChartTimeFrame, Currency, LogLevel } from './enums';
+import * as i from './interfaces';
+import { CitadelRewardEvent } from './interfaces/citadel-reward-event.interface';
+import { CitadelSummary } from './interfaces/citadel-summary.interface';
+import { CitadelTreasurySummary } from './interfaces/citadel-treasury-summary.interface';
+import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
 import {
   GasPrices,
   MerkleProof,
   PriceSummary,
   TokenConfiguration,
 } from './types';
-import * as i from './interfaces';
-import { Networkish } from '@ethersproject/networks';
-import { ChartTimeFrame, Currency, LogLevel } from './enums';
-import { ApiError } from './api.error';
-import { EmissionSchedule } from '../rewards';
-import { getNetworkConfig } from '../config/network/network.config';
-import { CitadelTreasurySummary } from './interfaces/citadel-treasury-summary.interface';
-import { CitadelRewardEvent } from './interfaces/citadel-reward-event.interface';
-import { RewardFilter } from '../citadel/enums/reward-filter.enum';
-import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
-import { CitadelMerkleClaim } from '../citadel';
-import { Logger } from '../logger';
-import { CitadelSummary } from './interfaces/citadel-summary.interface';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';

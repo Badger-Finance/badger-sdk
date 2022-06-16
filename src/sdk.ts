@@ -1,22 +1,19 @@
-import { ethers } from 'ethers';
 import { providers } from '@0xsequence/multicall';
-
 import { Signer } from '@ethersproject/abstract-signer';
 import { Networkish } from '@ethersproject/providers';
+import { ethers } from 'ethers';
 
 import { APIOptions, BadgerAPI, LogLevel } from './api';
-import { BadgerGraph } from './graphql';
-
-import { DiggService } from './digg/digg.service';
-import { ibBTCService } from './ibbtc/ibbtc.service';
-import { RegistryService } from './registry/registry.service';
-import { RegistryV2Service } from './registry.v2/registry.v2.service';
-import { RewardsService } from './rewards/rewards.service';
-import { VaultsService } from './vaults/vaults.service';
-import { TokensService } from './tokens/tokens.service';
 import { CitadelService } from './citadel';
-
 import { getNetworkConfig, NetworkConfig, SDKProvider } from './config';
+import { DiggService } from './digg/digg.service';
+import { BadgerGraph } from './graphql';
+import { ibBTCService } from './ibbtc/ibbtc.service';
+import { RegistryV2Service } from './registry.v2/registry.v2.service';
+import { RegistryService } from './registry/registry.service';
+import { RewardsService } from './rewards/rewards.service';
+import { TokensService } from './tokens/tokens.service';
+import { VaultsService } from './vaults/vaults.service';
 
 export interface SDKOptions extends APIOptions {
   provider: SDKProvider | string;

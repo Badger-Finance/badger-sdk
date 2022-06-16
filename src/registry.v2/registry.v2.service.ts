@@ -1,3 +1,4 @@
+import { VaultState } from '../api';
 import { RegistryV2, RegistryV2__factory } from '../contracts';
 import { Service } from '../service';
 import {
@@ -6,13 +7,11 @@ import {
   getVaultVersion,
   VaultVersion,
 } from '../vaults';
-
-import { VaultState } from '../api';
+import { VaultRegistryV2Entry } from './interfaces';
 import {
   chainRegVaultToEntry,
   parseRegVaultMetadata,
 } from './registry.v2.utils';
-import { VaultRegistryV2Entry } from './interfaces';
 
 export const REGISTRY_V2_ADDRESS = '0xdc602965F3e5f1e7BAf2446d5564b407d5113A06';
 
