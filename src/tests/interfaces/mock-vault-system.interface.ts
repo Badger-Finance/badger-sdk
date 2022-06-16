@@ -1,10 +1,11 @@
 import { MockProxy } from 'jest-mock-extended';
+
 import {
   Controller,
-  Vault,
-  VaultV15,
   Strategy,
   StrategyV15,
+  Vault,
+  VaultV15,
 } from '../../contracts';
 
 export interface MockVaultSystem {

@@ -1,3 +1,5 @@
+import { BigNumberish, CallOverrides, ethers } from 'ethers';
+
 import {
   CitadelMinter,
   CitadelMinter__factory,
@@ -6,30 +8,29 @@ import {
   SupplySchedule,
   SupplySchedule__factory,
 } from '..';
-import { BigNumberish, CallOverrides, ethers } from 'ethers';
 import { Network } from '../config';
-import { BadgerSDK } from '../sdk';
-import { Service } from '../service';
-import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import {
   CitadelDistributionToStakingEvent,
   CitadelDistributionToStakingEventFilter,
 } from '../contracts/CitadelMinter';
-import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
-import { ListDistributionOptions } from './interfaces/list-distribution-options.interface';
-import { ListRewardsOptions } from './interfaces/list-rewards-options.interface';
-import { RewardFilter } from './enums/reward-filter.enum';
-import { ListRewardsEvent } from './interfaces/list-rewards-event.interface';
 import {
   RewardAddedEvent,
   RewardAddedEventFilter,
   RewardPaidEvent,
   RewardPaidEventFilter,
 } from '../contracts/StakedCitadelLocker';
-import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
+import { BadgerSDK } from '../sdk';
+import { Service } from '../service';
+import { chunkQueryFilter } from '../utils/chunk-query-filter';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
+import { evaluateDistributionEvents, parseTypedEvents } from './citadel.utils';
 import { RewardEventTypeEnum } from './enums/reward-event-type.enum';
+import { RewardFilter } from './enums/reward-filter.enum';
 import { CitadelInitError, CitadelValidationError } from './errors';
+import { CitadelMintDistribution } from './interfaces/citadel-mint-distribution.interface';
+import { ListDistributionOptions } from './interfaces/list-distribution-options.interface';
+import { ListRewardsEvent } from './interfaces/list-rewards-event.interface';
+import { ListRewardsOptions } from './interfaces/list-rewards-options.interface';
 
 export const citadelMinterAddress =
   '0x594691aEa75080dd9B3e91e648Db6045d4fF6E22';

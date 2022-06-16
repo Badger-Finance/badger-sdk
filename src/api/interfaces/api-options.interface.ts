@@ -1,4 +1,5 @@
 import { Networkish } from '@ethersproject/networks';
+
 import { LogLevel } from '..';
 
 export interface APIOptions {

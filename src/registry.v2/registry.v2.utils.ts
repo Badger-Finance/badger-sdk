@@ -1,7 +1,7 @@
 import { BadgerRegistry } from '../contracts/RegistryV2';
 import VaultInfoStructOutput = BadgerRegistry.VaultInfoStructOutput;
-import { VaultRegistryV2Entry, VaultRegistryV2Metadata } from './interfaces';
 import { getVaultRegv2State, getVaultVersion } from '../vaults';
+import { VaultRegistryV2Entry, VaultRegistryV2Metadata } from './interfaces';
 
 export function chainRegVaultToEntry(
   vaultInfo: VaultInfoStructOutput,

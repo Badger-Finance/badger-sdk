@@ -1,4 +1,5 @@
 import { BigNumber } from 'ethers';
+
 import { RewardEventType } from '../enums/reward-event-type.enum';
 
 export interface ListRewardsEvent {

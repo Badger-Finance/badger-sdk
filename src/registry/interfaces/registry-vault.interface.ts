@@ -1,5 +1,5 @@
-import { Token } from '../../tokens';
 import { VaultState } from '../../api';
+import { Token } from '../../tokens';
 import { VaultVersion } from '../../vaults/';
 
 export interface RegistryVault extends Token {

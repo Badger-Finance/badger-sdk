@@ -1,26 +1,27 @@
-import { mock, MockProxy } from 'jest-mock-extended';
-import { BadgerSDK } from '../sdk';
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
+import { mock, MockProxy } from 'jest-mock-extended';
+
 import { Network } from '../config';
-import { RewardsService } from '../rewards';
-import { RegistryService } from '../registry';
-import { TEST_ADDR } from './tests.constants';
 import {
   Controller,
-  Vault,
-  VaultV15,
-  Strategy,
-  StrategyV15,
   Controller__factory,
-  Vault__factory,
-  VaultV15__factory,
-  Strategy__factory,
-  StrategyV15__factory,
   Erc20,
   Erc20__factory,
+  Strategy,
+  Strategy__factory,
+  StrategyV15,
+  StrategyV15__factory,
+  Vault,
+  Vault__factory,
+  VaultV15,
+  VaultV15__factory,
 } from '../contracts';
-import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
+import { RegistryService } from '../registry';
 import { RegistryV2Service } from '../registry.v2';
+import { RewardsService } from '../rewards';
+import { BadgerSDK } from '../sdk';
+import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
+import { TEST_ADDR } from './tests.constants';
 
 export function mockSDK(): BadgerSDK {
   const mockSigner = mock<JsonRpcSigner>();

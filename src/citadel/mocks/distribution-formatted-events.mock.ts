@@ -1,5 +1,6 @@
-import { MinterDistributionEvent } from '../interfaces/minter-distribution-event.interface';
 import { BigNumber } from '@ethersproject/bignumber';
+
+import { MinterDistributionEvent } from '../interfaces/minter-distribution-event.interface';
 
 export const distributionFormattedEvents: MinterDistributionEvent[] = [
   {

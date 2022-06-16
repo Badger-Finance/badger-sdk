@@ -1,34 +1,35 @@
 import { BigNumber, ethers } from 'ethers';
+
 import {
   RegistryVault,
   TransactionStatus,
   VaultRegistryEntry,
   VaultVersion,
 } from '..';
+import { RangeOptions } from '../common/interfaces/range-options.interface';
 import {
   Byvwbtc__factory,
-  Vault__factory,
   Controller__factory,
   Strategy__factory,
-  Vault,
-  VaultV15__factory,
   StrategyV15__factory,
+  Vault,
+  Vault__factory,
+  VaultV15__factory,
 } from '../contracts';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
+import { getBlockDeployedAt } from '../utils/deployed-at.util';
 import {
   GetVaultStrategyOptions,
   ListHarvestOptions,
   LoadVaultOptions,
   VaultHarvestData,
 } from './interfaces';
+import { VaultActionOptions } from './interfaces/vault-action-options.interface';
 import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
 } from './vaults.utils';
-import { RangeOptions } from '../common/interfaces/range-options.interface';
-import { getBlockDeployedAt } from '../utils/deployed-at.util';
-import { VaultActionOptions } from './interfaces/vault-action-options.interface';
 
 const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
 const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';

@@ -1,2 +1,2 @@
-export * from './interfaces';
 export { CitadelService } from './citadel.service';
+export * from './interfaces';
