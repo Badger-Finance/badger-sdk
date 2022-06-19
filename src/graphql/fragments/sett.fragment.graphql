@@ -5,7 +5,7 @@ fragment Sett on Sett {
   available
   decimals
   totalSupply
-  token { 
+  token {
     ...Token
   }
   balance
@@ -23,4 +23,10 @@ fragment Sett on Sett {
     id
     balance
   }
+  version
+  status
+  isProduction
+  createdAt
+  lastUpdatedAt
+  releasedAt
 }
