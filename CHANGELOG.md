@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.0...v1.15.1) (2022-06-19)
+
+
+### Bug Fixes
+
+* revert network ([c19c082](https://github.com/Badger-Finance/badger-sdk/commit/c19c0824ed86feb7c9e3f975ba82713b6a3c1cd1))
+
 # [1.15.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.2...v1.15.0) (2022-06-19)
 
 
