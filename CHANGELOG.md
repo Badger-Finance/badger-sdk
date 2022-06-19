@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.2...v1.15.0) (2022-06-19)
+
+
+### Features
+
+* add date fields to gql scheme for vaults ([8035661](https://github.com/Badger-Finance/badger-sdk/commit/80356610db0a2513d8c9127f44eda9abe3470fa1))
+
 ## [1.14.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.14.1...v1.14.2) (2022-06-16)
 
 
