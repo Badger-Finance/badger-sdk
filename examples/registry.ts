@@ -15,7 +15,7 @@ function getVaultStatus(state: VaultState) {
 }
 
 async function generateRegistryCalldata() {
-  const api = new BadgerAPI({ network: Network.Ethereum });
+  const api = new BadgerAPI({ network: Network.Fantom });
 
   const vaults = await api.loadVaults();
   
