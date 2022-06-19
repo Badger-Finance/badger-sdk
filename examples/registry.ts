@@ -6,6 +6,7 @@ function getVaultStatus(state: VaultState) {
       return 1;
     case VaultState.Guarded:
       return 2;
+    case VaultState.Featured:
     case VaultState.Open:
       return 3;
     default:
