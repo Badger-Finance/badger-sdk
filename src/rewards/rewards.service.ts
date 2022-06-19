@@ -133,16 +133,17 @@ export class RewardsService extends Service {
         this.sdk.registry.get(RegistryKey.BadgerTree),
         this.sdk.registry.get(RegistryKey.RewardsLogger),
       ]);
+      const connector = this.signer ?? this.provider;
       if (badgerTreeAddress) {
         this._badgerTree = BadgerTree__factory.connect(
           badgerTreeAddress,
-          this.provider,
+          connector,
         );
       }
       if (rewardsLoggerAddress) {
         this._rewardsLogger = RewardsLogger__factory.connect(
           rewardsLoggerAddress,
-          this.provider,
+          connector,
         );
       }
     } catch (err) {
