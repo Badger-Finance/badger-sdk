@@ -16,6 +16,7 @@ import {
   Vault__factory,
   VaultV15__factory,
 } from '../contracts';
+import { VaultRegistryV2Entry } from '../registry.v2/interfaces';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
@@ -64,10 +65,20 @@ export class VaultsService extends Service {
     );
 
     this.vaults = Object.fromEntries(
-      registryVaults.map((registryVault) => [
-        registryVault.address,
-        registryVault,
-      ]),
+      registryVaults.map((registryVault) => {
+        registryVault.metadata = {};
+
+        const regV2Vault = registry.find(
+          (entry) => entry.address === registryVault.address,
+        );
+
+        // rm with regV1
+        if (regV2Vault && (<VaultRegistryV2Entry>regV2Vault).metadata) {
+          registryVault.metadata = (<VaultRegistryV2Entry>regV2Vault).metadata;
+        }
+
+        return [registryVault.address, registryVault];
+      }),
     );
 
     return registryVaults;
@@ -127,6 +138,15 @@ export class VaultsService extends Service {
 
     if (!cachedVault || update) {
       this.vaults[checksumAddress] = await this.#fetchVault(registration);
+    }
+
+    this.vaults[checksumAddress].metadata = {};
+
+    // rm with regV1
+    if ((<VaultRegistryV2Entry>registration).metadata) {
+      this.vaults[checksumAddress].metadata = (<VaultRegistryV2Entry>(
+        registration
+      )).metadata;
     }
 
     return this.vaults[checksumAddress];
