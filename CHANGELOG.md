@@ -1,3 +1,12 @@
+## [1.15.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.2...v1.15.3) (2022-06-20)
+
+
+### Bug Fixes
+
+* add registryVaults interfaces to index for exp ([2ab2436](https://github.com/Badger-Finance/badger-sdk/commit/2ab2436643b8a94d28c8c8cf1f86f526e0a8040c))
+* add regV2 metadata in vaults service calls ([a096a7b](https://github.com/Badger-Finance/badger-sdk/commit/a096a7b2f0e48415d479fac8557784fc70935ef0))
+* import statement ([d7b1d29](https://github.com/Badger-Finance/badger-sdk/commit/d7b1d29a6859bffdd6cb216c655c7f6873003252))
+
 ## [1.15.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.1...v1.15.2) (2022-06-20)
 
 
