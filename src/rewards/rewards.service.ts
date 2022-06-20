@@ -1,5 +1,6 @@
 import { ethers } from 'ethers';
 
+import { TransactionStatus } from '../config';
 import { Network } from '../config/enums/network.enum';
 import {
   BadgerTree,
@@ -57,16 +58,49 @@ export class RewardsService extends Service {
     cycle,
     proof,
     claimAmounts,
-  }: ClaimOptions) {
-    const tx = await this.badgerTree.claim(
-      tokens,
-      cumulativeAmounts,
-      index,
-      cycle,
-      proof,
-      claimAmounts,
-    );
-    return tx.wait();
+    overrides,
+    onSubmitted,
+    onSuccess,
+    onError,
+    onRejection,
+  }: ClaimOptions): Promise<TransactionStatus> {
+    let result = TransactionStatus.UserConfirmation;
+
+    try {
+      const tx = await this.badgerTree.claim(
+        tokens,
+        cumulativeAmounts,
+        index,
+        cycle,
+        proof,
+        claimAmounts,
+        overrides,
+      );
+      if (onSubmitted) {
+        onSubmitted({ transaction: tx });
+      }
+      result = TransactionStatus.Pending;
+      const receipt = await tx.wait();
+      if (onSuccess) {
+        onSuccess({ receipt });
+      }
+      result = TransactionStatus.Success;
+    } catch (err) {
+      // TODO: refactor this common function pattern to a harness
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+        if (onError) {
+          onError(err);
+        }
+        return TransactionStatus.Failure;
+      }
+      if (onRejection) {
+        onRejection();
+      }
+      result = TransactionStatus.Canceled;
+    }
+
+    return result;
   }
 
   async loadActiveSchedules(beneficiary: string): Promise<EmissionSchedule[]> {

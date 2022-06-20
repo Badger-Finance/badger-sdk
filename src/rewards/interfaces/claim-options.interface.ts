@@ -1,6 +1,8 @@
 import { BigNumberish } from '@ethersproject/bignumber';
 
-export interface ClaimOptions {
+import { TransactionOptions } from '../../config';
+
+export interface ClaimOptions extends TransactionOptions {
   index: string;
   cycle: string;
   user: string;

@@ -1,10 +1,10 @@
-import { BigNumber, ethers } from 'ethers';
+import { BigNumber } from 'ethers';
 
-export interface TokenActionCallbackInput {
+import { TransactionCallbackInput } from '../../config/interfaces/transaction-callback-input.interface';
+
+export interface TokenActionCallbackInput extends TransactionCallbackInput {
   token: string;
   amount: BigNumber;
-  transaction?: ethers.ContractTransaction;
-  receipt?: ethers.ContractReceipt;
 }
 
 export type TokenActionCallback = (input: TokenActionCallbackInput) => void;
