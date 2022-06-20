@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.1...v1.15.2) (2022-06-20)
+
+
+### Bug Fixes
+
+* upgrade claim for ui usage ([e86d56f](https://github.com/Badger-Finance/badger-sdk/commit/e86d56f12a7e233427b05237d95f54b138daa127))
+
 ## [1.15.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.0...v1.15.1) (2022-06-19)
 
 
