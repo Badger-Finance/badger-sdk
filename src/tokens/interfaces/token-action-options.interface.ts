@@ -1,8 +1,7 @@
-import { Overrides } from 'ethers';
-
+import { TransactionOptions } from '../../config';
 import { TokenActionCallback } from './token-action-callback-input.interface';
 
-export interface TokenActionOptions {
+export interface TokenActionOptions extends TransactionOptions {
   // Approval Hooks
   onApprovePrompt?: () => void;
   onApproveSigned?: () => void;
@@ -12,9 +11,4 @@ export interface TokenActionOptions {
   onTransferPrompt?: TokenActionCallback;
   onTransferSigned?: TokenActionCallback;
   onTransferSuccess?: TokenActionCallback;
-
-  // TODO: Move to a base class for general transaction hooks
-  overrides?: Overrides;
-  onError?: (err: unknown) => void;
-  onRejection?: () => void;
 }
