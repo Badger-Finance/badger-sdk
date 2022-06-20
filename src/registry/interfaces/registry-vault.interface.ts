@@ -1,5 +1,5 @@
 import { VaultState } from '../../api';
-import { VaultRegistryV2Entry } from '../../registry.v2/interfaces';
+import { VaultRegistryV2Entry } from '../../registry.v2';
 import { Token } from '../../tokens';
 import { VaultVersion } from '../../vaults/';
 
