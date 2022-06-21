@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.3...v1.15.4) (2022-06-21)
+
+
+### Bug Fixes
+
+* deposit + withdraw txs ([179f2fc](https://github.com/Badger-Finance/badger-sdk/commit/179f2fcbcbaec0820eda7f0450b520579e7c5e90))
+
 ## [1.15.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.2...v1.15.3) (2022-06-20)
 
 
