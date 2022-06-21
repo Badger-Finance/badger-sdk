@@ -226,44 +226,46 @@ export class VaultsService extends Service {
       }
       return TransactionStatus.Failure;
     }
-    const vaultContract = Vault__factory.connect(vault, this.signer);
-    const token = await vaultContract.token();
-
-    const allowanceTransactionStatus =
-      await this.sdk.tokens.verifyOrIncreaseAllowance({
-        ...options,
-        token,
-        amount,
-        spender: vault,
-      });
-
-    if (allowanceTransactionStatus != TransactionStatus.Success) {
-      return allowanceTransactionStatus;
-    }
 
     let result = TransactionStatus.UserConfirmation;
+
     try {
+      const vaultContract = Vault__factory.connect(vault, this.signer);
+      const token = await vaultContract.token();
+
+      const allowanceTransactionStatus =
+        await this.sdk.tokens.verifyOrIncreaseAllowance({
+          ...options,
+          token,
+          amount,
+          spender: vault,
+        });
+
+      if (allowanceTransactionStatus != TransactionStatus.Success) {
+        return allowanceTransactionStatus;
+      }
+
       let proof: string[] = [];
       try {
         proof = await this.api.loadProof(this.address);
       } catch {} // ignore no proofs
-      const token = await vaultContract.name();
+      const tokenName = await vaultContract.name();
       if (onTransferPrompt) {
         onTransferPrompt({ token, amount });
       }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
         proof,
-        overrides,
+        { ...overrides },
       );
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
-        onTransferSigned({ token, amount, transaction: depositTx });
+        onTransferSigned({ token: tokenName, amount, transaction: depositTx });
       }
       const receipt = await depositTx.wait();
       result = TransactionStatus.Success;
       if (onTransferSuccess) {
-        onTransferSuccess({ token, amount, receipt });
+        onTransferSuccess({ token: tokenName, amount, receipt });
       }
     } catch (err) {
       if (result !== TransactionStatus.UserConfirmation) {
@@ -278,6 +280,7 @@ export class VaultsService extends Service {
       }
       result = TransactionStatus.Canceled;
     }
+
     return result;
   }
 
@@ -286,6 +289,7 @@ export class VaultsService extends Service {
     amount,
     overrides,
     onError,
+    onRejection,
     onTransferPrompt,
     onTransferSigned,
     onTransferSuccess,
@@ -294,28 +298,41 @@ export class VaultsService extends Service {
       this.error(`Failed withdraw to ${vault}, requires an active signer`);
       return TransactionStatus.Failure;
     }
-    const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
+
+    let result = TransactionStatus.UserConfirmation;
+
     try {
+      const vaultContract = Vault__factory.connect(vault, this.sdk.signer);
       const token = await vaultContract.name();
       if (onTransferPrompt) {
         onTransferPrompt({ token, amount });
       }
-      const withdrawTx = await vaultContract.withdraw(amount, overrides);
+      const withdrawTx = await vaultContract.withdraw(amount, { ...overrides });
       if (onTransferSigned) {
         onTransferSigned({ token, amount, transaction: withdrawTx });
       }
+      result = TransactionStatus.Pending;
       const receipt = await withdrawTx.wait();
       if (onTransferSuccess) {
         onTransferSuccess({ token, amount, receipt });
       }
-      return TransactionStatus.Success;
+      result = TransactionStatus.Success;
     } catch (err) {
-      this.error(err);
-      if (onError) {
-        onError(err);
+      // TODO: refactor this common function pattern to a harness
+      if (result !== TransactionStatus.UserConfirmation) {
+        this.error(err);
+        if (onError) {
+          onError(err);
+        }
+        return TransactionStatus.Failure;
       }
-      return TransactionStatus.Failure;
+      if (onRejection) {
+        onRejection();
+      }
+      result = TransactionStatus.Canceled;
     }
+
+    return result;
   }
 
   async #fetchVault(registryVault: VaultRegistryEntry): Promise<RegistryVault> {
