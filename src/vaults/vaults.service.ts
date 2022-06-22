@@ -294,7 +294,7 @@ export class VaultsService extends Service {
     onTransferSigned,
     onTransferSuccess,
   }: VaultActionOptions): Promise<TransactionStatus> {
-    if (!this.sdk.address || !this.sdk.signer) {
+    if (!this.address || !this.sdk.signer) {
       this.error(`Failed withdraw to ${vault}, requires an active signer`);
       return TransactionStatus.Failure;
     }
