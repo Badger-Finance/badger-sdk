@@ -1,0 +1,10 @@
+{
+  "bbtc": {
+    "type": "BigNumber",
+    "hex": "0x0e375853410047b0"
+  },
+  "fee": {
+    "type": "BigNumber",
+    "hex": "0x00"
+  }
+}

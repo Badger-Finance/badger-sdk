@@ -1,0 +1,14 @@
+{
+  "sett": {
+    "type": "BigNumber",
+    "hex": "0x0d85354e87e69079"
+  },
+  "fee": {
+    "type": "BigNumber",
+    "hex": "0x071afd498d0000"
+  },
+  "max": {
+    "type": "BigNumber",
+    "hex": "0x288524c34c3a914f1c"
+  }
+}

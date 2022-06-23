@@ -5,8 +5,8 @@
   "decimals": 18,
   "version": "v1",
   "state": "open",
-  "totalSupply": 39449.38740079709,
-  "balance": 43228.593704674975,
+  "totalSupply": 33135.388940104625,
+  "balance": 36309.72139529907,
   "available": 0,
   "pricePerFullShare": 1.0957988590667325,
   "token": {
@@ -14,5 +14,6 @@
     "name": "Convex Token",
     "symbol": "CVX",
     "decimals": 18
-  }
+  },
+  "metadata": {}
 }

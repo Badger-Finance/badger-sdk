@@ -18,6 +18,10 @@ export abstract class Service extends Logger {
     return this.sdk.signer;
   }
 
+  get connector(): providers.MulticallProvider | Signer {
+    return this.address && this.signer ? this.signer : this.provider;
+  }
+
   get config(): NetworkConfig {
     return this.sdk.config;
   }

@@ -1,7 +1,7 @@
 import { ServicesArgsConfig } from './struct.types.config';
 import { SdkServices } from '../enums';
 import { RegistryKey, VaultVersion } from '../../../src';
-import { BigNumber } from 'ethers';
+import { BigNumber, ethers } from 'ethers';
 import { RewardFilter } from '../../../src/citadel/enums/reward-filter.enum';
 
 export const baseServiceArgsConfig = {
@@ -104,6 +104,9 @@ export const baseArgsConfig: ServicesArgsConfig = {
   },
   [SdkServices.Ibbtc]: {
     getPricePerFullShare: { args: [lastIbBTCBlock] },
+    getFees: { args: [] },
+    estimateMint: { args: [ethers.constants.WeiPerEther] },
+    estimateRedeem: { args: [ethers.constants.WeiPerEther] },
   },
   [SdkServices.Digg]: {
     convert: { args: [BigNumber.from(5100)] },
