@@ -1,3 +1,10 @@
+## [1.15.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.5...sdk-mocks-v1.15.6) (2022-06-23)
+
+
+### Bug Fixes
+
+* update example for release trigger ([24b56dc](https://github.com/Badger-Finance/badger-sdk/commit/24b56dc4b478892e1f6465e3a25deeff58ddfb6d))
+
 ## [1.15.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.4...sdk-mocks-v1.15.5) (2022-06-23)
 
 
