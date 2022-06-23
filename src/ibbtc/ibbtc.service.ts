@@ -12,7 +12,11 @@ import { Ibbtc } from '../contracts/Ibbtc';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
-import { IbBtcActionResults, IbBtcMintFees } from '.';
+import {
+  IbBtcMintActionResults,
+  IbBtcMintFees,
+  IbBtcRedeemActionResults,
+} from '.';
 import { IbBtcActionOptions } from './interfaces';
 
 export const IBBTC_ADDRESS = ethers.utils.getAddress(
@@ -73,7 +77,7 @@ export class ibBTCService extends Service {
     };
   }
 
-  async estimateMint(amount: BigNumber): Promise<IbBtcActionResults> {
+  async estimateMint(amount: BigNumber): Promise<IbBtcMintActionResults> {
     const [bbtc, fee] = await this.vaultPeak.calcMint(0, amount);
     return {
       bbtc,
@@ -81,11 +85,12 @@ export class ibBTCService extends Service {
     };
   }
 
-  async estimateRedeem(amount: BigNumber): Promise<IbBtcActionResults> {
-    const [bbtc, fee] = await this.vaultPeak.calcRedeem(0, amount);
+  async estimateRedeem(amount: BigNumber): Promise<IbBtcRedeemActionResults> {
+    const [sett, fee, max] = await this.vaultPeak.calcRedeem(0, amount);
     return {
-      bbtc,
+      sett,
       fee,
+      max,
     };
   }
 

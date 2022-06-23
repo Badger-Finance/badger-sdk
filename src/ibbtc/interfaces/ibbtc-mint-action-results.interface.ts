@@ -1,6 +1,6 @@
 import { BigNumber } from 'ethers';
 
-export interface IbBtcActionResults {
+export interface IbBtcMintActionResults {
   bbtc: BigNumber;
   fee: BigNumber;
 }
