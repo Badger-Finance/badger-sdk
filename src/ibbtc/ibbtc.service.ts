@@ -57,7 +57,7 @@ export class ibBTCService extends Service {
     return this._vaultPeak;
   }
 
-  async getPricePerFullShare(overrides: Overrides): Promise<number> {
+  async getPricePerFullShare(overrides?: Overrides): Promise<number> {
     if (!this.ibBTC) {
       throw new Error(`ibBTC is not defined on ${this.config.network}`);
     }

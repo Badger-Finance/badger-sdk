@@ -31,7 +31,7 @@
     "@0xsequence/indexer": "0.36.8",
     "@0xsequence/multicall": "0.36.8",
     "@0xsequence/provider": "0.36.8",
-    "@0xsequence/relayer": "0.36.8",
+    "@0xsequence/relayer": "0.39.5",
     "axios": "0.23.0",
     "ethers": "5.5.4",
     "graphql": "15.6.1",
@@ -47,7 +47,7 @@
     "@graphql-codegen/typescript-operations": "1.17.16",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
-    "@typechain/ethers-v5": "9.0.0",
+    "@typechain/ethers-v5": "10.1.0",
     "@types/jest": "27.0.2",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.0.0",
@@ -65,7 +65,7 @@
     "semantic-release": "19.0.2",
     "ts-jest": "27.0.7",
     "tslib": "2.3.1",
-    "typechain": "7.0.0",
+    "typechain": "8.1.0",
     "typescript": "4.5.4"
   },
   "files": [
