@@ -14,19 +14,18 @@ export const methodsToSkip = [
   'getPendingYield', // vaultsV2 WIP method
   'getPendingHarvest', // vaultsV2 WIP method
   'listHarvests', // failing for some reason, temp
+  'mint',
+  'redeem',
 
   // temporary, getters with expected sdk backing failing
   'digg',
   'rewardsLogger',
   'badgerTree',
   'registry',
+  'ibBTC',
+  'vaultPeak',
 ];
 
 export const relevantNetworks: RelevantNetworks[] = [
   Network.Ethereum,
-  Network.Polygon,
-  // Network.Arbitrum,
-  // Network.BinanceSmartChain,
-  // Network.Fantom,
-  // Network.Avalanche,
 ];

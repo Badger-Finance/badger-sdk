@@ -32,7 +32,13 @@ export class ibBTCService extends Service {
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
-    this.init();
+    if (this.config.network === Network.Ethereum) {
+      this._ibBTC = Ibbtc__factory.connect(IBBTC_ADDRESS, this.connector);
+      this._vaultPeak = BadgerVaultPeak__factory.connect(
+        REN_VAULT_ZAP,
+        this.connector,
+      );
+    }
   }
 
   get ibBTC(): Ibbtc {
@@ -225,16 +231,5 @@ export class ibBTCService extends Service {
     }
 
     return result;
-  }
-
-  private init() {
-    if (this.config.network !== Network.Ethereum) {
-      return;
-    }
-    this._ibBTC = Ibbtc__factory.connect(IBBTC_ADDRESS, this.connector);
-    this._vaultPeak = BadgerVaultPeak__factory.connect(
-      REN_VAULT_ZAP,
-      this.connector,
-    );
   }
 }
