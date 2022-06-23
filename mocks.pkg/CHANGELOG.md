@@ -1,3 +1,10 @@
+## [1.15.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.4...sdk-mocks-v1.15.5) (2022-06-23)
+
+
+### Bug Fixes
+
+* add initial ibbtc integration methods ([18d8eca](https://github.com/Badger-Finance/badger-sdk/commit/18d8eca7ab26148f709f7ee74c7f131897c16315))
+
 ## [1.15.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.3...sdk-mocks-v1.15.4) (2022-06-21)
 
 
