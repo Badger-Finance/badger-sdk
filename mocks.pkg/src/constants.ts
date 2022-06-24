@@ -24,8 +24,8 @@ export const methodsToSkip = [
   'registry',
   'ibBTC',
   'vaultPeak',
+  'vaultZap',
+  'tokenZap',
 ];
 
-export const relevantNetworks: RelevantNetworks[] = [
-  Network.Ethereum,
-];
+export const relevantNetworks: RelevantNetworks[] = [Network.Ethereum];

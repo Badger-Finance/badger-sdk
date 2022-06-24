@@ -105,7 +105,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
   [SdkServices.Ibbtc]: {
     getPricePerFullShare: { args: [lastIbBTCBlock] },
     getFees: { args: [] },
-    estimateMint: { args: [ethers.constants.WeiPerEther] },
+    estimateMint: { args: [tokens.WBTC, ethers.constants.WeiPerEther] },
     estimateRedeem: { args: [ethers.constants.WeiPerEther] },
   },
   [SdkServices.Digg]: {
