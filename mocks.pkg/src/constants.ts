@@ -23,9 +23,9 @@ export const methodsToSkip = [
   'badgerTree',
   'registry',
   'ibBTC',
-  'renVaultZap',
-  'generalVaultZap',
-  'ibbtcTokenZap',
+  'vaultPeak',
+  'vaultZap',
+  'tokenZap',
 ];
 
 export const relevantNetworks: RelevantNetworks[] = [Network.Ethereum];
