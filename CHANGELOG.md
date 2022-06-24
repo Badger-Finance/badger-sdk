@@ -1,3 +1,12 @@
+## [1.15.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.6...v1.15.7) (2022-06-24)
+
+
+### Bug Fixes
+
+* check withdraw amounts ([81edef0](https://github.com/Badger-Finance/badger-sdk/commit/81edef0c3d6f05d0ee1bf7b4f0d6857c0867ae2a))
+* rename fields + update methods ([42ec6fe](https://github.com/Badger-Finance/badger-sdk/commit/42ec6fe6e43ff53c811bc90d3aa53a3157f3a4a2))
+* update naming, improve estimate function ([fb276d9](https://github.com/Badger-Finance/badger-sdk/commit/fb276d9b179e547402ef356f66f98fe9f14ea564))
+
 ## [1.15.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.5...v1.15.6) (2022-06-23)
 
 
