@@ -1,3 +1,10 @@
+## [1.15.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.7...v1.15.8) (2022-06-24)
+
+
+### Bug Fixes
+
+* utlize proper rpc for token changes ([4551ee0](https://github.com/Badger-Finance/badger-sdk/commit/4551ee0db4280c8666027ef7242be6a86b4b689f))
+
 ## [1.15.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.6...v1.15.7) (2022-06-24)
 
 
