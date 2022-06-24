@@ -2,7 +2,7 @@ import { checksumAddresses, checksumAddressesMap } from '../utils/checksum';
 import { IbBtcZapType } from './enums';
 
 export const ZAP_SUPPORTED_TOKENS: Record<IbBtcZapType, string[]> = {
-  [IbBtcZapType.Ren]: checksumAddresses([
+  [IbBtcZapType.Peak]: checksumAddresses([
     '0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545',
   ]),
   [IbBtcZapType.Vault]: checksumAddresses([

@@ -227,12 +227,22 @@ export class VaultsService extends Service {
       return TransactionStatus.Failure;
     }
 
+    const vaultContract = Vault__factory.connect(vault, this.signer);
+    const token = await vaultContract.name();
+    const vaultBalance = await this.sdk.tokens.loadBalance(vault);
+    if (vaultBalance.lt(amount)) {
+      this.error(
+        `Failed deposit to ${vault}, amount requested is greater than user balance`,
+      );
+      if (onError) {
+        onError(`Deposit amount requested is greater than balance!`);
+      }
+      return TransactionStatus.Failure;
+    }
+
     let result = TransactionStatus.UserConfirmation;
 
     try {
-      const vaultContract = Vault__factory.connect(vault, this.signer);
-      const token = await vaultContract.token();
-
       const allowanceTransactionStatus =
         await this.sdk.tokens.verifyOrIncreaseAllowance({
           ...options,
@@ -303,7 +313,9 @@ export class VaultsService extends Service {
     const token = await vaultContract.name();
     const vaultBalance = await this.sdk.tokens.loadBalance(vault);
     if (vaultBalance.lt(amount)) {
-      this.error(`Failed withdraw to ${vault}, amount requested is greater than user balance`);
+      this.error(
+        `Failed withdraw to ${vault}, amount requested is greater than user balance`,
+      );
       if (onError) {
         onError(`Withdraw amount requested is greater than balance!`);
       }

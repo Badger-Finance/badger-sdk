@@ -1,5 +1,5 @@
 export enum IbBtcZapType {
-  Ren,
+  Peak,
   Vault,
   Token,
 }
