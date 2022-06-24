@@ -4,6 +4,7 @@ import {
   RegistryVault,
   TransactionStatus,
   VaultRegistryEntry,
+  VaultState,
   VaultVersion,
 } from '..';
 import { RangeOptions } from '../common/interfaces/range-options.interface';
@@ -88,12 +89,12 @@ export class VaultsService extends Service {
     address,
     update,
     requireRegistry = true,
-    version = VaultVersion.v1,
-    state,
+    version = VaultVersion.v1_5,
+    state = VaultState.Guarded,
     useV2Reg = false,
   }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
-    if (!requireRegistry && (!state || !version)) {
+    if (!requireRegistry && !useV2Reg && (!state || !version)) {
       throw new Error(
         'State and version fields are required when requireRegistry is false',
       );
@@ -120,7 +121,6 @@ export class VaultsService extends Service {
 
       // create a pseudo registration for fetching
       if (!vaultRegistration) {
-        // check for typescript
         if (!state || !version) {
           throw new Error('Invalid vault options provided');
         }
@@ -228,8 +228,16 @@ export class VaultsService extends Service {
     }
 
     const vaultContract = Vault__factory.connect(vault, this.signer);
-    const token = await vaultContract.name();
-    const vaultBalance = await this.sdk.tokens.loadBalance(vault);
+    const { name: token, token: depositToken } =
+      await this.sdk.vaults.loadVault({
+        address: vault,
+        useV2Reg: true,
+        requireRegistry: false,
+      });
+    const vaultBalance = await this.sdk.tokens.loadBalance(
+      depositToken.address,
+    );
+
     if (vaultBalance.lt(amount)) {
       this.error(
         `Failed deposit to ${vault}, amount requested is greater than user balance`,
@@ -246,7 +254,7 @@ export class VaultsService extends Service {
       const allowanceTransactionStatus =
         await this.sdk.tokens.verifyOrIncreaseAllowance({
           ...options,
-          token,
+          token: depositToken.address,
           amount,
           spender: vault,
         });
@@ -284,6 +292,8 @@ export class VaultsService extends Service {
           onError(err);
         }
         return TransactionStatus.Failure;
+      } else {
+        this.debug(err);
       }
       if (onRejection) {
         onRejection();

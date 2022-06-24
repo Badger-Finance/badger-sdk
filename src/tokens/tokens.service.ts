@@ -31,7 +31,7 @@ export class TokensService extends Service {
     if (cachedAllowance) {
       allowance = cachedAllowance;
     } else {
-      allowance = await this.loadAllowance(this.address, options.token);
+      allowance = await this.loadAllowance(options.token, options.spender);
     }
 
     if (options.amount.gt(allowance)) {
@@ -51,17 +51,23 @@ export class TokensService extends Service {
     onApproveSigned,
     onApproveSuccess,
   }: IncreaseAllowanceOptions): Promise<TransactionStatus> {
+    if (!this.signer) {
+      if (onError) {
+        onError('Unable to increase allowance, no signer provided!');
+      }
+      return TransactionStatus.Failure;
+    }
+
     let result = TransactionStatus.UserConfirmation;
+
     try {
-      const tokenContract = Erc20__factory.connect(token, this.provider);
+      const tokenContract = Erc20__factory.connect(token, this.signer);
       if (onApprovePrompt) {
         onApprovePrompt();
       }
-      const tx = await tokenContract.increaseAllowance(
-        spender,
-        amount,
-        overrides,
-      );
+      const tx = await tokenContract.increaseAllowance(spender, amount, {
+        ...overrides,
+      });
       result = TransactionStatus.Pending;
       if (onApproveSigned) {
         onApproveSigned();
@@ -86,6 +92,7 @@ export class TokensService extends Service {
         }
       }
     }
+
     return result;
   }
 
