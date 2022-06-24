@@ -79,7 +79,6 @@ export class TokensService extends Service {
       }
       this.allowances[ethers.utils.getAddress(token)] = amount;
     } catch (err) {
-      console.log(err);
       if (result !== TransactionStatus.UserConfirmation) {
         result = TransactionStatus.Failure;
         this.error(err);
