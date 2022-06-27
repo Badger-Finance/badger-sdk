@@ -9,3 +9,4 @@ export { LogLevel } from './log-level.enum';
 export { Protocol } from './protocol.enum';
 export { VaultState } from './vault-state.enum';
 export { VaultType } from './vault-type.enum';
+export { HarvestType } from './harvest-type.enum'

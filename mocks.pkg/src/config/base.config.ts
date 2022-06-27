@@ -33,6 +33,7 @@ export const vaults = {
     transfer:
       '0x001bbab32ed595532975cb96d01b26a09368cee1e2d644deee67117ff0b1f41d-92',
   },
+  BVECVX: '0xfd05D3C7fe2924020620A8bE4961bBaA747e6305',
 };
 
 export const citadelWhale = '0xa967ba66fb284ec18bbe59f65bcf42dd11ba8128';
@@ -49,6 +50,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadPrices: { args: [] },
     loadRewardTree: { args: [badgerWhale] },
     loadVaults: { args: [] },
+    loadVaultsHarvests: { args:  [] },
+    loadVaultHarvests: { args:  [vaults.BVECVX] },
     loadVault: { args: [vaults.BCVX.addr] },
     loadSetts: { args: [] },
     loadSett: { args: [vaults.BCVX.addr] },
