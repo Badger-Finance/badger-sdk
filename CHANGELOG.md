@@ -1,3 +1,10 @@
+## [1.15.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.8...v1.15.9) (2022-06-27)
+
+
+### Bug Fixes
+
+* add vault harvest query support ([e2ebcd5](https://github.com/Badger-Finance/badger-sdk/commit/e2ebcd5e554c5fac96203c9318db977b6e349362))
+
 ## [1.15.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.7...v1.15.8) (2022-06-24)
 
 
