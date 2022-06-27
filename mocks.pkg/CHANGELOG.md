@@ -1,3 +1,10 @@
+## [1.15.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.9...sdk-mocks-v1.15.10) (2022-06-27)
+
+
+### Bug Fixes
+
+* add missing fields ([ebff675](https://github.com/Badger-Finance/badger-sdk/commit/ebff67504b0d257855215ae912b12b6d0ea012ae))
+
 ## [1.15.9](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.8...sdk-mocks-v1.15.9) (2022-06-27)
 
 
