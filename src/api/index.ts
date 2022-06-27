@@ -88,6 +88,23 @@ export class BadgerAPI {
     });
   }
 
+  loadVaultsHarvests(
+    network?: Network,
+  ): Promise<Record<string, i.VaultEarning[]>> {
+    return this.get(`/vaults/harvests`, {
+      chain: network ?? this.network,
+    });
+  }
+
+  loadVaultHarvests(
+    address: string,
+    network?: Network,
+  ): Promise<i.VaultEarning[]> {
+    return this.get(`/vaults/harvests/${address}`, {
+      chain: network ?? this.network,
+    });
+  }
+
   loadSetts(currency = Currency.USD, network?: Network): Promise<i.VaultDTO[]> {
     return this.get('/setts', {
       chain: network ?? this.network,

@@ -30,7 +30,7 @@
   },
   "vaults": {
     "loadVaults": "8zCfYzRS7iHPHz+L1N1s48+O5lfO+cjb9vQve1TRRiw=",
-    "loadVault": "7BXQz2gx7yQEWqIYrLd6UzYUUAgjuEN7aL5V+VWD4EM=",
+    "loadVault": "HJyBRVFqWxNFPM9Xxzn6+T5Q+W52ojcdQweCQxPfOx4=",
     "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY="
   },
   "graph": {
@@ -59,6 +59,8 @@
     "loadRewardTree": "z7JCojwrmtSgAB4rnEvkryY0vun7Omkwpafg3Mu9ViQ=",
     "loadVaults": "GsU5Enzmemija8AedLga1zoCGgehTe27K8NELi9aCt0=",
     "loadVault": "tzQdCprTNbmf2GrZ0ukLUMv9JgY6D4aAAHWL3rD09Dc=",
+    "loadVaultsHarvests": "QhT2UCmrfnp1zpBKLu3mnArrsNo81kQE7eFAukFMTEM=",
+    "loadVaultHarvests": "oyZw9zd6p9idEgTweVVhc5omzuQ4NI/IwlYquCJ/6EY=",
     "loadSetts": "XbqGtvgU3XwnKGHGmxo21A2BvZaqe1Th6wZEPNyqqVI=",
     "loadSett": "WkZtEtOFoaASRe/W5whzpePbIT+VyVoFuKiLAUp9A0E=",
     "loadAccount": "QMOvVwVaBVTf4Ft40bZqibOm4KO8x+BMVZT6lq/ACg4=",

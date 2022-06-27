@@ -25,3 +25,4 @@ export { VaultSnapshot } from './vault-snapshot.interface';
 export { VaultStrategy } from './vault-strategy.interface';
 export { VaultSummary } from './vault-summary.interface';
 export { VaultYieldProjection } from './vault-yield-projection.interface';
+export {VaultEarning} from './vault-earning.interface'
