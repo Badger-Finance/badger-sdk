@@ -1,6 +1,6 @@
 {
   "name": "@badger-dao/sdk-mocks",
-  "version": "1.15.10",
+  "version": "1.15.11",
   "description": "Badger SDK Mocks collection",
   "main": "src/index.ts",
   "repository": "https://github.com/Badger-Finance/badger-sdk",
