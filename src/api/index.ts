@@ -17,15 +17,18 @@ import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.
 import {
   GasPrices,
   MerkleProof,
+  PriceSnapshots,
   PriceSummary,
   TokenConfiguration,
 } from './types';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
+export const V3_BADGER_API_URL = 'https://api.badger.com/v3';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
+  private readonly v3Client: AxiosInstance;
   private readonly citadelClient: AxiosInstance;
   private network: Network;
   public logger: Logger;
@@ -43,6 +46,9 @@ export class BadgerAPI {
     this.citadelBaseURL = citadelBaseURL;
     this.client = axios.create({
       baseURL,
+    });
+    this.v3Client = axios.create({
+      baseURL: V3_BADGER_API_URL,
     });
     this.citadelClient = axios.create({
       baseURL: citadelBaseURL,
@@ -200,6 +206,38 @@ export class BadgerAPI {
       active: `${active}`,
       chain: network ?? this.network,
     });
+  }
+
+  loadVaultSnapshots(
+    vault: string,
+    timestamps: number[],
+    network?: Network,
+  ): Promise<i.VaultSnapshot[]> {
+    return this.get(
+      `/vaults/snapshots`,
+      {
+        vault,
+        timestamps: timestamps.join(','),
+        chain: network ?? this.network,
+      },
+      this.v3Client,
+    );
+  }
+
+  loadPricesSnapshots(
+    tokens: string[],
+    timestamps: number[],
+    network?: Network,
+  ): Promise<PriceSnapshots[]> {
+    return this.get(
+      `/prices/snapshots`,
+      {
+        tokens: tokens.join(','),
+        timestamps: timestamps.join(','),
+        chain: network ?? this.network,
+      },
+      this.v3Client,
+    );
   }
 
   loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
