@@ -1,3 +1,10 @@
+## [1.15.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.10...v1.15.11) (2022-06-28)
+
+
+### Bug Fixes
+
+* add vault + price snapshot support ([fa91b77](https://github.com/Badger-Finance/badger-sdk/commit/fa91b777c955099e30ba4848b0a2ccbcb3db6fc0))
+
 ## [1.15.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.9...v1.15.10) (2022-06-27)
 
 
