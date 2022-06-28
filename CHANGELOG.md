@@ -1,3 +1,10 @@
+## [1.15.12](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.11...v1.15.12) (2022-06-28)
+
+
+### Bug Fixes
+
+* return value ([32910c8](https://github.com/Badger-Finance/badger-sdk/commit/32910c88beb4c263e695f9bf010799b32503bccd))
+
 ## [1.15.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.10...v1.15.11) (2022-06-28)
 
 
