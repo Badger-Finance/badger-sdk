@@ -228,7 +228,7 @@ export class BadgerAPI {
     tokens: string[],
     timestamps: number[],
     network?: Network,
-  ): Promise<PriceSnapshots[]> {
+  ): Promise<PriceSnapshots> {
     return this.get(
       `/prices/snapshots`,
       {
