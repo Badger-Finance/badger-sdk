@@ -1,4 +1,4 @@
-import { HarvestType } from "..";
+import { HarvestType } from '..';
 
 export interface VaultEarning {
   timestamp: number;

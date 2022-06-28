@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": 1632182986000,
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "balance": 40,
+    "ratio": 1,
+    "value": 1080,
+    "pricePerFullShare": 1
+  },
+  {
+    "timestamp": 1637184164000,
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "balance": 1146434.465341443,
+    "ratio": 1,
+    "value": 31389375.661,
+    "pricePerFullShare": 1
+  },
+  {
+    "timestamp": 1642184435000,
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "balance": 1233410.8832503564,
+    "ratio": 1,
+    "value": 55454153.3109,
+    "pricePerFullShare": 1
+  }
+]

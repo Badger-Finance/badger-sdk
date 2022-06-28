@@ -50,8 +50,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadPrices: { args: [] },
     loadRewardTree: { args: [badgerWhale] },
     loadVaults: { args: [] },
-    loadVaultsHarvests: { args:  [] },
-    loadVaultHarvests: { args:  [vaults.BVECVX] },
+    loadVaultsHarvests: { args: [] },
+    loadVaultHarvests: { args: [vaults.BVECVX] },
     loadVault: { args: [vaults.BCVX.addr] },
     loadSetts: { args: [] },
     loadSett: { args: [vaults.BCVX.addr] },
@@ -72,6 +72,15 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadCitadelMerkleProof: { args: [badgerWhale] },
     loadCitadelAccount: { args: [citadelWhale] },
     loadCitadelKnightingRoundLeaderboard: { args: [] },
+    loadVaultSnapshots: {
+      args: [vaults.BVECVX, [1632182660000, 1637182660000, 1642182660000]],
+    },
+    loadPricesSnapshots: {
+      args: [
+        [vaults.BVECVX, tokens.BADGER, tokens.WBTC],
+        [1632182660000, 1637182660000, 1642182660000],
+      ],
+    },
     get: { ignore: true },
     isLocal: { ignore: true },
   },
