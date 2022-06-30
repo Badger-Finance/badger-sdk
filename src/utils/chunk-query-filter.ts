@@ -1,6 +1,6 @@
 import { BaseContract, Event } from 'ethers';
 
-export const RPC_CHUNK_LIMIT = 100000;
+export const RPC_CHUNK_LIMIT = 10_000;
 
 export async function chunkQueryFilter<
   C extends BaseContract,
