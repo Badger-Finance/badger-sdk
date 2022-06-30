@@ -1,3 +1,10 @@
+## [1.15.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.12...v1.15.13) (2022-06-30)
+
+
+### Bug Fixes
+
+* update query filter size ([878a9cf](https://github.com/Badger-Finance/badger-sdk/commit/878a9cf83b3a320fb23944d0940572be08cb5921))
+
 ## [1.15.12](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.11...v1.15.12) (2022-06-28)
 
 
