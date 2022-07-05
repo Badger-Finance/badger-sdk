@@ -1,3 +1,10 @@
+## [1.15.14](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.13...v1.15.14) (2022-07-05)
+
+
+### Bug Fixes
+
+* change connector resolver ([500a79e](https://github.com/Badger-Finance/badger-sdk/commit/500a79e9d33d77979f6786314ca0c068efa35f18))
+
 ## [1.15.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.12...v1.15.13) (2022-06-30)
 
 
