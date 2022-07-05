@@ -152,11 +152,6 @@ export class ibBTCService extends Service {
   }
 
   async mint(options: IbBtcActionOptions): Promise<TransactionStatus> {
-    if (!this.address || !this.sdk.signer) {
-      this.error('Failed to mint ibBTC, requires an active signer');
-      return TransactionStatus.Failure;
-    }
-
     const {
       token,
       amount,
