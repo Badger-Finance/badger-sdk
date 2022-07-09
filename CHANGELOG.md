@@ -1,3 +1,10 @@
+## [1.15.15](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.14...v1.15.15) (2022-07-09)
+
+
+### Bug Fixes
+
+* prevent immediate initialization ([677f3df](https://github.com/Badger-Finance/badger-sdk/commit/677f3dfabc34a104ca31e2daf9a33f841fa2e7bd))
+
 ## [1.15.14](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.13...v1.15.14) (2022-07-05)
 
 
