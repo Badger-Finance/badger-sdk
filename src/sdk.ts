@@ -1,6 +1,5 @@
 import { providers } from '@0xsequence/multicall';
 import { Signer } from '@ethersproject/abstract-signer';
-import { Networkish } from '@ethersproject/providers';
 import { ethers } from 'ethers';
 
 import { APIOptions, BadgerAPI, LogLevel } from './api';
@@ -20,8 +19,6 @@ export interface SDKOptions extends APIOptions {
 }
 
 export class BadgerSDK {
-  private loading: Promise<void>;
-
   public logLevel: LogLevel;
 
   public address?: string;
@@ -51,7 +48,6 @@ export class BadgerSDK {
     const sdkProvider = BadgerSDK.getSdkProvider(provider);
     this.provider = new providers.MulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
-    this.loading = this.initialize();
     this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
       baseURL,
@@ -74,37 +70,11 @@ export class BadgerSDK {
 
   ready() {
     return Promise.all([
-      this.loading,
+      this.initialize(),
       this.registry.ready(),
       this.registryV2.ready(),
       this.rewards.ready(),
     ]);
-  }
-
-  update(network: Networkish, provider: SDKProvider) {
-    this.updateNetwork(network);
-    this.updateProvider(provider);
-  }
-
-  updateNetwork(network: Networkish) {
-    this.config = getNetworkConfig(network);
-    this.api = new BadgerAPI({
-      network: this.config.network,
-      baseURL: this.api.baseURL,
-      citadelBaseURL: this.api.citadelBaseURL,
-      logLevel: this.api.logger.level,
-    });
-    this.graph = new BadgerGraph({
-      network: this.config.network,
-    });
-  }
-
-  updateProvider(provider: SDKProvider) {
-    const sdkProvider = BadgerSDK.getSdkProvider(provider);
-
-    this.provider = new providers.MulticallProvider(sdkProvider);
-    this.signer = sdkProvider.getSigner();
-    this.loading = this.initialize();
   }
 
   private static getSdkProvider(provider: SDKProvider | string): SDKProvider {
