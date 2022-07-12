@@ -1,3 +1,10 @@
+## [1.15.19](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.18...sdk-mocks-v1.15.19) (2022-07-12)
+
+
+### Bug Fixes
+
+* reinstate connector logic ([be52241](https://github.com/Badger-Finance/badger-sdk/commit/be52241b76e7d45e3bcbf249bedf1f6f601956dd))
+
 ## [1.15.18](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.17...sdk-mocks-v1.15.18) (2022-07-12)
 
 
