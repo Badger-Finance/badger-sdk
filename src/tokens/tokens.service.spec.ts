@@ -130,6 +130,13 @@ describe('tokens.service', () => {
             'Expected test error: simulating cancelling transaction',
           );
         });
+      jest
+        .spyOn(token, 'approve')
+        .mockImplementation(async (_s, _a, _o) => {
+          throw new Error(
+            'Expected test error: simulating cancelling transaction',
+          );
+        });
       const canceledIncrease = await sdk.tokens.verifyOrIncreaseAllowance({
         token: TEST_ADDR,
         spender: TEST_ADDR,
@@ -144,6 +151,13 @@ describe('tokens.service', () => {
         .mockImplementation(async (_a, _t) => BigNumber.from('0'));
       jest
         .spyOn(token, 'increaseAllowance')
+        .mockImplementation(async (_s, _a, _o) => {
+          throw new Error(
+            'Expected test error: simulating cancelling transaction',
+          );
+        });
+      jest
+        .spyOn(token, 'approve')
         .mockImplementation(async (_s, _a, _o) => {
           throw new Error(
             'Expected test error: simulating cancelling transaction',
