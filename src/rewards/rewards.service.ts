@@ -74,7 +74,7 @@ export class RewardsService extends Service {
         cycle,
         proof,
         claimAmounts,
-        overrides,
+        { ...overrides },
       );
       if (onSubmitted) {
         onSubmitted({ transaction: tx });
