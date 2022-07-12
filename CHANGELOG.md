@@ -1,3 +1,10 @@
+## [1.15.16](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.15...v1.15.16) (2022-07-12)
+
+
+### Bug Fixes
+
+* allow allowance fallback ([b807053](https://github.com/Badger-Finance/badger-sdk/commit/b80705385cba7cc544ae406d4216e4a1a8c771ae))
+
 ## [1.15.15](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.14...v1.15.15) (2022-07-09)
 
 
