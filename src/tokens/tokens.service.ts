@@ -65,14 +65,14 @@ export class TokensService extends Service {
       if (onApprovePrompt) {
         onApprovePrompt();
       }
-      let tx; 
+      let tx;
       try {
-        tx =  await tokenContract.increaseAllowance(spender, amount, {
+        tx = await tokenContract.increaseAllowance(spender, amount, {
           ...overrides,
         });
       } catch {
         tx = await tokenContract.approve(spender, amount, {
-          ...overrides
+          ...overrides,
         });
       }
       result = TransactionStatus.Pending;
