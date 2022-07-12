@@ -1,3 +1,10 @@
+## [1.15.17](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.16...sdk-mocks-v1.15.17) (2022-07-12)
+
+
+### Bug Fixes
+
+* update vault cap look up query ([26f9d68](https://github.com/Badger-Finance/badger-sdk/commit/26f9d68081c4cdc2d69edb95ea5f45c76cdd93b4))
+
 ## [1.15.16](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.15...sdk-mocks-v1.15.16) (2022-07-12)
 
 
