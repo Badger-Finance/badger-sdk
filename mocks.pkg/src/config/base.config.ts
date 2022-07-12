@@ -90,6 +90,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     listHarvests: { args: [{ address: vaults.BBADGER }] },
     getVaultStrategy: { args: [{ address: vaults.BCVX.addr }] },
     getPendingHarvest: { args: [vaults.BCVX.addr] },
+    getDepositCaps: { args: [{ address: '0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378' }] },
   },
   [SdkServices.Tokens]: {
     loadTokens: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG]] },

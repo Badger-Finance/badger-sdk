@@ -31,7 +31,8 @@
   "vaults": {
     "loadVaults": "8zCfYzRS7iHPHz+L1N1s48+O5lfO+cjb9vQve1TRRiw=",
     "loadVault": "HJyBRVFqWxNFPM9Xxzn6+T5Q+W52ojcdQweCQxPfOx4=",
-    "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY="
+    "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY=",
+    "getDepositCaps": "LSA6QBtrGYrMQxz5O5IUPFJXjZtZodKkuKUiot9Cc9E="
   },
   "graph": {
     "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
