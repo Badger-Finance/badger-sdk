@@ -23,6 +23,7 @@ import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
 import {
+  GetVaultCapsOptions,
   GetVaultStrategyOptions,
   ListHarvestOptions,
   LoadVaultOptions,
@@ -368,12 +369,12 @@ export class VaultsService extends Service {
     return result;
   }
 
-  async getDepositCaps(address: string): Promise<VaultCaps> {
-    const vault = Vault__factory.connect(address, this.connector);
+  async getDepositCaps({ address, user }: GetVaultCapsOptions): Promise<VaultCaps> {
+    const vault = Vault__factory.connect(address, this.provider);
     const guestListAddress = await vault.guestList();
     const guestList = Guestlist__factory.connect(
       guestListAddress,
-      this.connector,
+      this.provider,
     );
     const [
       totalDepositCap,
@@ -384,8 +385,8 @@ export class VaultsService extends Service {
       guestList.totalDepositCap(),
       guestList.remainingTotalDepositAllowed(),
       guestList.userDepositCap(),
-      ...(this.address
-        ? [guestList.remainingUserDepositAllowed(this.address)]
+      ...(user
+        ? [guestList.remainingUserDepositAllowed(user)]
         : [Promise.resolve(BigNumber.from('0'))]),
     ]);
     return {
