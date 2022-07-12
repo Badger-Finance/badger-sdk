@@ -11,6 +11,7 @@ import { RangeOptions } from '../common/interfaces/range-options.interface';
 import {
   Byvwbtc__factory,
   Controller__factory,
+  Guestlist__factory,
   Strategy__factory,
   StrategyV15__factory,
   Vault,
@@ -28,6 +29,7 @@ import {
   VaultHarvestData,
 } from './interfaces';
 import { VaultActionOptions } from './interfaces/vault-action-options.interface';
+import { VaultCaps } from './interfaces/vault-caps.interface';
 import {
   loadVaultPerformanceEvents,
   loadVaultV15PerformanceEvents,
@@ -364,6 +366,34 @@ export class VaultsService extends Service {
     }
 
     return result;
+  }
+
+  async getDepositCaps(address: string): Promise<VaultCaps> {
+    const vault = Vault__factory.connect(address, this.connector);
+    const guestListAddress = await vault.guestList();
+    const guestList = Guestlist__factory.connect(
+      guestListAddress,
+      this.connector,
+    );
+    const [
+      totalDepositCap,
+      remainingDepositCap,
+      userDepositCap,
+      remainingUserDepositCap,
+    ] = await Promise.all([
+      guestList.totalDepositCap(),
+      guestList.remainingTotalDepositAllowed(),
+      guestList.userDepositCap(),
+      ...(this.address
+        ? [guestList.remainingUserDepositAllowed(this.address)]
+        : [Promise.resolve(BigNumber.from('0'))]),
+    ]);
+    return {
+      totalDepositCap,
+      remainingDepositCap,
+      userDepositCap,
+      remainingUserDepositCap,
+    };
   }
 
   async #fetchVault(registryVault: VaultRegistryEntry): Promise<RegistryVault> {
