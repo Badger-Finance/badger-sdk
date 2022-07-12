@@ -1,3 +1,10 @@
+## [1.15.20](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.19...v1.15.20) (2022-07-12)
+
+
+### Bug Fixes
+
+* use spread for overrides ([2243497](https://github.com/Badger-Finance/badger-sdk/commit/22434972f3ddb4c2e4e00f4f4abccf42880f04b3))
+
 ## [1.15.19](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.18...v1.15.19) (2022-07-12)
 
 
