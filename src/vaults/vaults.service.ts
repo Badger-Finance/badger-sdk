@@ -286,14 +286,12 @@ export class VaultsService extends Service {
         onTransferSuccess({ token: tokenName, amount, receipt });
       }
     } catch (err) {
+      this.warn(err);
       if (result !== TransactionStatus.UserConfirmation) {
-        this.error(err);
         if (onError) {
           onError(err);
         }
         return TransactionStatus.Failure;
-      } else {
-        this.debug(err);
       }
       if (onRejection) {
         onRejection();

@@ -65,9 +65,16 @@ export class TokensService extends Service {
       if (onApprovePrompt) {
         onApprovePrompt();
       }
-      const tx = await tokenContract.increaseAllowance(spender, amount, {
-        ...overrides,
-      });
+      let tx; 
+      try {
+        tx =  await tokenContract.increaseAllowance(spender, amount, {
+          ...overrides,
+        });
+      } catch {
+        tx = await tokenContract.approve(spender, amount, {
+          ...overrides
+        });
+      }
       result = TransactionStatus.Pending;
       if (onApproveSigned) {
         onApproveSigned();
@@ -79,9 +86,9 @@ export class TokensService extends Service {
       }
       this.allowances[ethers.utils.getAddress(token)] = amount;
     } catch (err) {
+      this.warn(err);
       if (result !== TransactionStatus.UserConfirmation) {
         result = TransactionStatus.Failure;
-        this.error(err);
         if (onError) {
           onError(err);
         }

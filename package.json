@@ -33,7 +33,7 @@
     "@0xsequence/provider": "0.36.8",
     "@0xsequence/relayer": "0.39.5",
     "axios": "0.23.0",
-    "ethers": "5.5.4",
+    "ethers": "5.6.9",
     "graphql": "15.6.1",
     "graphql-request": "3.6.1",
     "graphql-tag": "2.12.5"
