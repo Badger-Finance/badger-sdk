@@ -22,13 +22,11 @@ import {
   TokenConfiguration,
 } from './types';
 
-export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/v2';
-export const V3_BADGER_API_URL = 'https://api.badger.com/v3';
+export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/';
 export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
-  private readonly v3Client: AxiosInstance;
   private readonly citadelClient: AxiosInstance;
   private network: Network;
   public logger: Logger;
@@ -47,9 +45,6 @@ export class BadgerAPI {
     this.client = axios.create({
       baseURL,
     });
-    this.v3Client = axios.create({
-      baseURL: V3_BADGER_API_URL,
-    });
     this.citadelClient = axios.create({
       baseURL: citadelBaseURL,
     });
@@ -61,14 +56,14 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<PriceSummary> {
-    return this.get('/prices', {
+    return this.get('/v2/prices', {
       chain: network ?? this.network,
       currency,
     });
   }
 
   loadRewardTree(address: string, network?: Network): Promise<i.RewardTree> {
-    return this.get(`/reward/tree/${address}`, {
+    return this.get(`/v2/reward/tree/${address}`, {
       chain: network ?? this.network,
     });
   }
@@ -77,7 +72,7 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.VaultDTO[]> {
-    return this.get('vaults', {
+    return this.get('/v2/vaults', {
       chain: network ?? this.network,
       currency,
     });
@@ -88,7 +83,7 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.VaultDTO> {
-    return this.get(`/vaults/${address}`, {
+    return this.get(`/v2/vaults/${address}`, {
       chain: network ?? this.network,
       currency,
     });
@@ -97,7 +92,7 @@ export class BadgerAPI {
   loadVaultsHarvests(
     network?: Network,
   ): Promise<Record<string, i.VaultEarning[]>> {
-    return this.get(`/vaults/harvests`, {
+    return this.get(`/v2/vaults/harvests`, {
       chain: network ?? this.network,
     });
   }
@@ -106,55 +101,37 @@ export class BadgerAPI {
     address: string,
     network?: Network,
   ): Promise<i.VaultEarning[]> {
-    return this.get(`/vaults/harvests/${address}`, {
+    return this.get(`/v2/vaults/harvests/${address}`, {
       chain: network ?? this.network,
-    });
-  }
-
-  loadSetts(currency = Currency.USD, network?: Network): Promise<i.VaultDTO[]> {
-    return this.get('/setts', {
-      chain: network ?? this.network,
-      currency,
-    });
-  }
-
-  loadSett(
-    address: string,
-    currency = Currency.USD,
-    network?: Network,
-  ): Promise<i.VaultDTO> {
-    return this.get(`setts/${address}`, {
-      chain: network ?? this.network,
-      currency,
     });
   }
 
   loadAccount(address: string, network?: Network): Promise<i.Account> {
-    return this.get(`accounts/${address}`, {
+    return this.get(`/v2/accounts/${address}`, {
       chain: network ?? this.network,
     });
   }
 
   loadTokens(network?: Network): Promise<TokenConfiguration> {
-    return this.get('/tokens', {
+    return this.get('/v2/tokens', {
       chain: network ?? this.network,
     });
   }
 
   loadProof(address: string, network?: Network): Promise<MerkleProof> {
-    return this.get(`/proofs/${address}`, {
+    return this.get(`/v2/proofs/${address}`, {
       chain: network ?? this.network,
     });
   }
 
   loadGasPrices(network?: Network): Promise<GasPrices> {
-    return this.get('/gas', {
+    return this.get('/v2/gas', {
       chain: network ?? this.network,
     });
   }
 
   loadProtocolMetrics(): Promise<i.ProtocolMetrics> {
-    return this.get('/metrics');
+    return this.get('/v2/metrics');
   }
 
   loadProtocolSummary(
@@ -168,7 +145,7 @@ export class BadgerAPI {
   }
 
   loadLeaderboardSummary(network?: Network): Promise<i.LeaderboardSummary> {
-    return this.get('/leaderboards', {
+    return this.get('/v2/leaderboards', {
       chain: network ?? this.network,
     });
   }
@@ -177,7 +154,7 @@ export class BadgerAPI {
     { vault, start, end, period, granularity }: i.LoadChartsOptions,
     network?: Network,
   ): Promise<i.VaultSnapshot[]> {
-    return this.get('/charts', {
+    return this.get('/v2/charts', {
       id: vault,
       chain: network ?? this.network,
       start,
@@ -193,13 +170,12 @@ export class BadgerAPI {
     network?: Network,
   ): Promise<i.VaultSnapshot[]> {
     return this.get(
-      '/charts/vault',
+      '/v3/charts/vault',
       {
         address,
         timeframe,
         chain: network ?? this.network,
       },
-      this.v3Client,
     );
   }
 
@@ -207,7 +183,7 @@ export class BadgerAPI {
     active = false,
     network?: Network,
   ): Promise<i.RewardSchedulesSummary> {
-    return this.get('/reward/schedules', {
+    return this.get('/v2/reward/schedules', {
       active: `${active}`,
       chain: network ?? this.network,
     });
@@ -218,7 +194,7 @@ export class BadgerAPI {
     active = false,
     network?: Network,
   ): Promise<EmissionSchedule[]> {
-    return this.get(`/reward/schedules/${vault}`, {
+    return this.get(`/v2/reward/schedules/${vault}`, {
       active: `${active}`,
       chain: network ?? this.network,
     });
@@ -230,13 +206,12 @@ export class BadgerAPI {
     network?: Network,
   ): Promise<i.VaultSnapshot[]> {
     return this.get(
-      `/vaults/snapshots`,
+      `/v3/vaults/snapshots`,
       {
         vault,
         timestamps: timestamps.join(','),
         chain: network ?? this.network,
       },
-      this.v3Client,
     );
   }
 
@@ -246,13 +221,12 @@ export class BadgerAPI {
     network?: Network,
   ): Promise<PriceSnapshots> {
     return this.get(
-      `/prices/snapshots`,
+      `/v3/prices/snapshots`,
       {
         tokens: tokens.join(','),
         timestamps: timestamps.join(','),
         chain: network ?? this.network,
       },
-      this.v3Client,
     );
   }
 
@@ -265,7 +239,7 @@ export class BadgerAPI {
   }
 
   loadCitadelAccount(address: string): Promise<i.CitadelAccount> {
-    return this.get('accounts', { address }, this.citadelClient);
+    return this.get('/accounts', { address }, this.citadelClient);
   }
 
   loadCitadelUserTotalRewards(
