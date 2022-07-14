@@ -187,6 +187,22 @@ export class BadgerAPI {
     });
   }
 
+  loadVaultChart(
+    address: string,
+    timeframe = ChartTimeFrame.Month,
+    network?: Network,
+  ): Promise<TreasurySummarySnapshot[]> {
+    return this.get(
+      '/charts/vault',
+      {
+        address,
+        timeframe,
+        chain: network ?? this.network,
+      },
+      this.v3Client,
+    );
+  }
+
   loadSchedules(
     active = false,
     network?: Network,

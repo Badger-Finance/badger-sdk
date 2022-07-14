@@ -59,6 +59,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadTokens: { args: [] },
     loadProof: { args: [badgerWhale] },
     loadGasPrices: { args: [] },
+    loadVaultChart: { args: [vaults.BVECVX] },
     loadProtocolMetrics: { args: [] },
     loadProtocolSummary: { args: [] },
     loadLeaderboardSummary: { args: [] },
