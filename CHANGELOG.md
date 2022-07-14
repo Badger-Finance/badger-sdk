@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.21...v1.16.0) (2022-07-14)
+
+
+### Features
+
+* add v3 charting endpoint ([b51995c](https://github.com/Badger-Finance/badger-sdk/commit/b51995c76e465b5843b8692b6b47ce5faf3bd07e))
+
 ## [1.15.21](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.20...v1.15.21) (2022-07-14)
 
 
