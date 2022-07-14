@@ -1,3 +1,10 @@
+## [1.15.21](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.20...v1.15.21) (2022-07-14)
+
+
+### Bug Fixes
+
+* add token rate ([d59c85e](https://github.com/Badger-Finance/badger-sdk/commit/d59c85ea976c9e3e7b75eafe20ede2bbac6aa03f))
+
 ## [1.15.20](https://github.com/Badger-Finance/badger-sdk/compare/v1.15.19...v1.15.20) (2022-07-12)
 
 
