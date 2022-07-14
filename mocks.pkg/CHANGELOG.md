@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.0...sdk-mocks-v1.16.1) (2022-07-14)
+
+
+### Bug Fixes
+
+* update return type ([e7288aa](https://github.com/Badger-Finance/badger-sdk/commit/e7288aabe619563d20426735ae509525bd5c5fec))
+
 # [1.16.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.15.21...sdk-mocks-v1.16.0) (2022-07-14)
 
 
