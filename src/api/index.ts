@@ -191,7 +191,7 @@ export class BadgerAPI {
     address: string,
     timeframe = ChartTimeFrame.Month,
     network?: Network,
-  ): Promise<TreasurySummarySnapshot[]> {
+  ): Promise<i.VaultSnapshot[]> {
     return this.get(
       '/charts/vault',
       {
