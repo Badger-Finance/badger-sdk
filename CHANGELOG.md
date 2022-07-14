@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.1...v1.16.2) (2022-07-14)
+
+
+### Bug Fixes
+
+* allow flexible base url ([68fd3d0](https://github.com/Badger-Finance/badger-sdk/commit/68fd3d01e76bc2925addc02ffdedc2f519c4dd3e))
+
 ## [1.16.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.0...v1.16.1) (2022-07-14)
 
 
