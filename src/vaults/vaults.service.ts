@@ -369,7 +369,10 @@ export class VaultsService extends Service {
     return result;
   }
 
-  async getDepositCaps({ address, user }: GetVaultCapsOptions): Promise<VaultCaps> {
+  async getDepositCaps({
+    address,
+    user,
+  }: GetVaultCapsOptions): Promise<VaultCaps> {
     const vault = Vault__factory.connect(address, this.provider);
     const guestListAddress = await vault.guestList();
     const guestList = Guestlist__factory.connect(

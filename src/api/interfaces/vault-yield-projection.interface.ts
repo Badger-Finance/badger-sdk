@@ -1,11 +1,11 @@
-import { TokenValue } from '.';
+import { TokenRate } from '.';
 
 export interface VaultYieldProjection {
   harvestApr: number;
   harvestApy: number;
-  harvestTokens: TokenValue[];
+  harvestTokens: TokenRate[];
   harvestValue: number;
   yieldApr: number;
-  yieldTokens: TokenValue[];
+  yieldTokens: TokenRate[];
   yieldValue: number;
 }

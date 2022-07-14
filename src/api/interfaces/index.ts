@@ -13,6 +13,7 @@ export { ProtocolMetrics } from './protocol-metrics.interface';
 export { ProtocolSummary } from './protocol-summary.interface';
 export { RewardSchedulesSummary } from './reward-schedules-summary.interface';
 export { RewardTree } from './reward-tree.interface';
+export { TokenRate } from './token-rate.interface';
 export { TokenValue } from './token-value.interface';
 export { TreasurySummary } from './treasury-summary.interface';
 export { TreasurySummarySnapshot } from './treasury-summary-snapshot.interface';
