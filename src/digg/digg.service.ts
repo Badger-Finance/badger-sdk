@@ -31,7 +31,7 @@ export class DiggService extends Service {
     return this._digg;
   }
 
-  async convert(shares: BigNumber): Promise<number> {
+  convert(shares: BigNumber): number {
     const fragments = shares.div(DIGG_SHARES_PER_FRAGMENT);
     return formatBalance(fragments, DIGG_DECIMALS);
   }
