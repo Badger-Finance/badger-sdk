@@ -1,6 +1,6 @@
 {
   "digg": {
-    "convert": "OXhbG7g9to8MaeHzzVuVmSmoZ66WCUxslNR5lz8WdsA="
+    "convert": "RZmmQyQaYGJtA/sjW3nKWR6CACZTPWX+9e+msFa71QU="
   },
   "ibbtc": {
     "getPricePerFullShare": "ytUIwAccxjgPG4Ta/nOrgRfXAbbcBot9GJGwkruo62Y=",
@@ -32,7 +32,7 @@
     "loadVaults": "8zCfYzRS7iHPHz+L1N1s48+O5lfO+cjb9vQve1TRRiw=",
     "loadVault": "HJyBRVFqWxNFPM9Xxzn6+T5Q+W52ojcdQweCQxPfOx4=",
     "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY=",
-    "getDepositCaps": "LSA6QBtrGYrMQxz5O5IUPFJXjZtZodKkuKUiot9Cc9E="
+    "getDepositCaps": "bFNmc8VV/NSQMz1cIp9deMGT+YJT5eFKV0/IBC5G1Hk="
   },
   "graph": {
     "loadSett": "+wxYTKM4gOQp26O7CLx99xBA8GCVOWQlehjo6vc9W5M=",
@@ -56,30 +56,28 @@
     "loadControllers": "f3S/TKccn6r2/WbRMNUqdHMDV0lZ23HWM//qu17xFzI="
   },
   "api": {
-    "loadPrices": "EvzJzWgIxl2GFXvFaq/umOFWNcPdYEYuihJuSDRGqFY=",
-    "loadRewardTree": "z7JCojwrmtSgAB4rnEvkryY0vun7Omkwpafg3Mu9ViQ=",
-    "loadVaults": "GsU5Enzmemija8AedLga1zoCGgehTe27K8NELi9aCt0=",
-    "loadVault": "tzQdCprTNbmf2GrZ0ukLUMv9JgY6D4aAAHWL3rD09Dc=",
-    "loadVaultsHarvests": "QhT2UCmrfnp1zpBKLu3mnArrsNo81kQE7eFAukFMTEM=",
-    "loadVaultHarvests": "oyZw9zd6p9idEgTweVVhc5omzuQ4NI/IwlYquCJ/6EY=",
-    "loadSetts": "XbqGtvgU3XwnKGHGmxo21A2BvZaqe1Th6wZEPNyqqVI=",
-    "loadSett": "WkZtEtOFoaASRe/W5whzpePbIT+VyVoFuKiLAUp9A0E=",
-    "loadAccount": "QMOvVwVaBVTf4Ft40bZqibOm4KO8x+BMVZT6lq/ACg4=",
-    "loadTokens": "a3zn4jzX6qiDqS7JxuixGdvwGHKQD3joTJV0HLBfPAw=",
-    "loadProof": "0WLTGox/oJ4LN05EQpK0vmNFflHTWcJpamvexsEMji0=",
-    "loadGasPrices": "1tmAV/VE6a9Z+5vOqPYlJ0NsW/Jptg1S24/KR6epypc=",
-    "loadProtocolMetrics": "vw1n0yapgMJckBS69a3dA4XmABjc80DltFbbzSo7weY=",
+    "loadPrices": "EEYkAjgWP1CCo6oEZJNDBT8YjJcOpzf9wYdSpvxLtJw=",
+    "loadRewardTree": "OW90JNw5W2ZBsOJStQl8JkdTucqj/WgZfcn6PaGYDac=",
+    "loadVaults": "WZx35P+w4IHsJaSqaf3dDnbn3lZNuqvHRoSRMusRUiE=",
+    "loadVault": "sBMVxSfD5C1STT8UdZBXZaBK7KVOEdvzqM/PljRQ9sQ=",
+    "loadVaultsHarvests": "3fK44xEfwQ8dQ8TeSm/icssrN9cbY+sMXyRz8TZ9Z3c=",
+    "loadVaultHarvests": "HaEHc+B1a2UAcJPrRZTuN0YuD+MbGPXmGegoNBkhtGI=",
+    "loadAccount": "PVPkUr8GYgLf7qkeJV/D4gTsdKxPv4LX/oIKnfpHcP0=",
+    "loadTokens": "HaR8RiQzv65e9A6Y49dDfcIqB1WOPhRaDuseSQYSo44=",
+    "loadProof": "SULBcCasFJJCa+hhzz8yFWDRtRaZWaRH4Q76sYCmzj0=",
+    "loadGasPrices": "4e37TrVrxPuEEfe+Zny0eJcMKoFLg17VYpOcZpDxwZM=",
+    "loadProtocolMetrics": "1tmbf229U6rc4L8JFwagLZo7freqM7NwUaHecBOqZto=",
     "loadProtocolSummary": "vZ7LIrRoa07aK92I76oJ9stlzqsKJ3LxXAqka17YQGo=",
-    "loadLeaderboardSummary": "uIkWKa4xXnCavMcidGAEBIlFuja7rNgGymHGDUyJFVc=",
-    "loadCharts": "GmcKtLKSRpWKhQbvAX62BxmqBvi47hWnG9AgxBua3kU=",
-    "loadVaultChart": "A057HvDNSoAthn8zdl0AQDPPdebfiiVyP9KoOTjDwC4=",
-    "loadSchedules": "8WNLxdmjYBqS1YkX5xstIDqaKgDpqgPmZgtEsOmFmrk=",
-    "loadSchedule": "4QcCqv6I/ExwLQGwuRrWiqRk9xjRZFr2M1eHW7OIAKs=",
-    "loadVaultSnapshots": "gVU+PryX8lAifm2e1pDClSk9xOX/rjh/jlnpbhp8668=",
-    "loadPricesSnapshots": "LPYbBUKYpaIFCfJQBAe/4PZoR6n939m4yRsMPdwYADs=",
+    "loadLeaderboardSummary": "/OsREQCDC9mYNhT6PqO7sQ+D/yFRMskA7VwXPrw0t8M=",
+    "loadCharts": "cxW9m8SxbaS8LWysLYipUvMdsO2RaM8f4CbXbv+X7w0=",
+    "loadVaultChart": "lFiC2pEGoGj7BWRt2yRMCbCn/w4Jr59vDYYru7AKJPc=",
+    "loadSchedules": "Mrh76gYorhuTXx61pJg0ccOZ78kyiCK4lRZwXj7QYoU=",
+    "loadSchedule": "g511QqblN0dxpjFWHMInsI/j/0Z75yCcSEGOv9Za5Jg=",
+    "loadVaultSnapshots": "CkD0Syp5tiqTphrg+vy3e+QiY04pOlZa/BX7MkSpEP4=",
+    "loadPricesSnapshots": "mx1q6Trl7vGs234b1CfF3HpG2JkVxPeFYNumH6saerA=",
     "loadCitadelTreasury": "S613GUlf6rG3WhQ1fQ3fOIBuEktctSK2hJfIj9baZVc=",
     "loadCitadelSummary": "0005hOnF9J5zmb3PLUHk5fpQMK8P9ZNmHgsfqWT7s4c=",
-    "loadCitadelAccount": "KyJA4m0QxFndAZYcPpTaV5IoLaOK8j2LTM32ubK25pI=",
+    "loadCitadelAccount": "k+KWlrS4dRcfwylmhblPLyxzMqDVSVD5grQ2asRdL6A=",
     "loadCitadelUserTotalRewards": "DszovqnRRi8P6b4q3gnFzmUw00Zk+T3wP5GdQYxHPOQ=",
     "loadCitadelTreasuryCharts": "a0Mb4a4B2MQrvF54qdRky+2ZCmmGJVniDw6esJ1fX5o=",
     "loadCitadelKnightingRoundLeaderboard": "TvJcI58iNfo2cDvG+xgWEv57co451s5nN0e9nCycX5c=",

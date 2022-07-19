@@ -5,7 +5,7 @@
   },
   "remainingDepositCap": {
     "type": "BigNumber",
-    "hex": "0x0659ea17fd1cdaaff176"
+    "hex": "0x0632826ee7441163fb8c"
   },
   "userDepositCap": {
     "type": "BigNumber",

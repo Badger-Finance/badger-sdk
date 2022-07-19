@@ -1,18 +1,18 @@
 {
   "rapid": {
     "maxPriorityFeePerGas": 2,
-    "maxFeePerGas": 94.398676898
+    "maxFeePerGas": 47.928550144
   },
   "fast": {
     "maxPriorityFeePerGas": 2,
-    "maxFeePerGas": 84.95880920820001
+    "maxFeePerGas": 43.1356951296
   },
   "standard": {
     "maxPriorityFeePerGas": 2,
-    "maxFeePerGas": 75.51894151840001
+    "maxFeePerGas": 38.3428401152
   },
   "slow": {
     "maxPriorityFeePerGas": 2,
-    "maxFeePerGas": 66.0790738286
+    "maxFeePerGas": 33.5499851008
   }
 }

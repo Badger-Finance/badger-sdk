@@ -1,47 +1,91 @@
 {
   "address": "0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8",
-  "boost": 150,
-  "rank": 1349,
-  "boostRank": 1349,
-  "multipliers": {
-    "0x2B5455aac8d64C14786c3a29858E43b5945819C0": 0.17780684351952497,
-    "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af": 0.4713883602418697
-  },
-  "value": 53215407.54290319,
-  "earnedValue": 11.18812236811358,
+  "boost": 1,
+  "boostRank": 21400,
+  "value": 91.81555082115041,
+  "earnedValue": 15.797818583973093,
   "data": {
     "0x2B5455aac8d64C14786c3a29858E43b5945819C0": {
       "network": "ethereum",
       "address": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
       "name": "cvxCRV",
       "symbol": "cvxCRV",
-      "pricePerFullShare": 1.4241547687620955,
-      "balance": 455.73699012307725,
-      "value": 1153.0145850113854,
+      "pricePerFullShare": 1.509480908897905,
+      "balance": 57.53645770490672,
+      "value": 66.16692636064272,
       "tokens": [
         {
           "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
           "name": "Convex CRV",
           "symbol": "cvxCRV",
           "decimals": 18,
-          "balance": 3185781.654476115,
-          "value": 8060027.585824571
+          "balance": 4053610.7458139053,
+          "value": 4661652.357685991
         }
       ],
-      "earnedBalance": 4.4221827541950915,
-      "earnedValue": 11.18812236811358,
+      "earnedBalance": 13.737233551280951,
+      "earnedValue": 15.797818583973093,
       "earnedTokens": [
         {
           "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
           "name": "Convex CRV",
           "symbol": "cvxCRV",
           "decimals": 18,
-          "balance": 3185781.654476115,
-          "value": 8060027.585824571
+          "balance": 4053610.7458139053,
+          "value": 4661652.357685991
         }
       ],
-      "depositedBalance": 10456.506332175039,
-      "withdrawnBalance": 10005.191524806156
+      "depositedBalance": 10511.61023021732,
+      "withdrawnBalance": 10467.811006063695
+    },
+    "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545": {
+      "network": "ethereum",
+      "address": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
+      "name": "renBTC/wBTC",
+      "symbol": "crvRenWBTC",
+      "pricePerFullShare": 1.0139254600927619,
+      "balance": 0,
+      "value": 0,
+      "tokens": [
+        {
+          "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+          "name": "renBTC",
+          "symbol": "renBTC",
+          "decimals": 8,
+          "balance": 0,
+          "value": 0
+        },
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "balance": 0,
+          "value": 0
+        }
+      ],
+      "earnedBalance": 0,
+      "earnedValue": 0,
+      "earnedTokens": [
+        {
+          "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+          "name": "renBTC",
+          "symbol": "renBTC",
+          "decimals": 8,
+          "balance": 0,
+          "value": 0
+        },
+        {
+          "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+          "name": "Wrapped BTC",
+          "symbol": "WBTC",
+          "decimals": 8,
+          "balance": 0,
+          "value": 0
+        }
+      ],
+      "depositedBalance": 360.1414327723659,
+      "withdrawnBalance": 360.1414327723659
     },
     "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af": {
       "network": "ethereum",
@@ -49,24 +93,24 @@
       "name": "ibBTC / crvsBTC",
       "symbol": "ibbtc/sbtcCRV-f",
       "pricePerFullShare": 1,
-      "balance": 1347.8838091268346,
-      "value": 53214254.52831818,
+      "balance": 0,
+      "value": 0,
       "tokens": [
         {
           "address": "0x8751D4196027d4e6DA63716fA7786B5174F04C15",
           "name": "Wrapped Interest-Bearing Bitcoin",
           "symbol": "wibBTC",
           "decimals": 18,
-          "balance": 765.824620408615,
-          "value": 30163534.32403412
+          "balance": 0,
+          "value": 0
         },
         {
           "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
           "name": "Curve.fi renBTC/wBTC/sBTC",
           "symbol": "crvRenWSBTC",
           "decimals": 18,
-          "balance": 578.057926726997,
-          "value": 23050720.204284064
+          "balance": 0,
+          "value": 0
         }
       ],
       "earnedBalance": 0,
@@ -89,8 +133,8 @@
           "value": 0
         }
       ],
-      "depositedBalance": 1347.8838091268346,
-      "withdrawnBalance": 0
+      "depositedBalance": 2021.1517717856887,
+      "withdrawnBalance": 2021.1517717856887
     },
     "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305": {
       "network": "ethereum",
@@ -98,16 +142,16 @@
       "name": "bveCVX",
       "symbol": "CVX",
       "pricePerFullShare": 1,
-      "balance": 0,
-      "value": 0,
+      "balance": 4.071210231826617,
+      "value": 25.648624460507687,
       "tokens": [
         {
           "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
           "name": "Convex Token",
           "symbol": "CVX",
           "decimals": 18,
-          "balance": 1735359.349688995,
-          "value": 43245154.99424975
+          "balance": 2439322.2746316753,
+          "value": 15367730.330179553
         }
       ],
       "earnedBalance": 0,
@@ -118,22 +162,23 @@
           "name": "Convex Token",
           "symbol": "CVX",
           "decimals": 18,
-          "balance": 1735359.349688995,
-          "value": 43245154.99424975
+          "balance": 2439322.2746316753,
+          "value": 15367730.330179553
         }
       ],
-      "depositedBalance": 8901.720910695056,
+      "depositedBalance": 8905.792120926882,
       "withdrawnBalance": 8901.720910695056
     }
   },
   "claimableBalances": {
-    "0x3472A5A71965499acd81997a54BBA8D852C6E53d": "302264056910421903564",
-    "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305": "81426313060753035",
-    "0x2B5455aac8d64C14786c3a29858E43b5945819C0": "0"
+    "0x3472A5A71965499acd81997a54BBA8D852C6E53d": "79404481712490196",
+    "0x2B5455aac8d64C14786c3a29858E43b5945819C0": "96382477537363791",
+    "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305": "246817815589713158"
   },
-  "stakeRatio": 0.09796657365580738,
+  "stakeRatio": 0,
   "nftBalance": 0,
-  "bveCvxBalance": 1.0100934135186415,
-  "nativeBalance": 5208000.409563964,
-  "nonNativeBalance": 53160993.74733249
+  "bveCvxBalance": 0,
+  "diggBalance": 0,
+  "nativeBalance": 0,
+  "nonNativeBalance": 72.20117696252049
 }
