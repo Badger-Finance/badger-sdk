@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.2...v1.16.3) (2022-07-19)
+
+
+### Bug Fixes
+
+* update dig gmocks, update inputs ([b92495f](https://github.com/Badger-Finance/badger-sdk/commit/b92495fb6aeeeba90c0db98bbe0e53e7426c3564))
+
 ## [1.16.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.1...v1.16.2) (2022-07-14)
 
 
