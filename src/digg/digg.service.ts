@@ -1,5 +1,4 @@
-import { BigNumber } from '@ethersproject/bignumber';
-import { ethers } from 'ethers';
+import { BigNumber, BigNumberish, ethers } from 'ethers';
 
 import { Network } from '../config/enums/network.enum';
 import { Digg } from '../contracts/Digg';
@@ -31,8 +30,8 @@ export class DiggService extends Service {
     return this._digg;
   }
 
-  convert(shares: BigNumber): number {
-    const fragments = shares.div(DIGG_SHARES_PER_FRAGMENT);
+  convert(shares: BigNumberish): number {
+    const fragments = BigNumber.from(shares).div(DIGG_SHARES_PER_FRAGMENT);
     return formatBalance(fragments, DIGG_DECIMALS);
   }
 }

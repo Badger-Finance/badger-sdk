@@ -9,6 +9,15 @@
     "estimatedApr": 25.94
   },
   {
+    "timestamp": 1656749187,
+    "block": 15061921,
+    "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "amount": 3165.847872084448,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 1823721.8410012808,
+    "estimatedApr": 15.74
+  },
+  {
     "timestamp": 1655355847,
     "block": 14971542,
     "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
@@ -43,6 +52,15 @@
     "eventType": "TreeDistribution",
     "strategyBalance": 1670997.638407562,
     "estimatedApr": 39.72
+  },
+  {
+    "timestamp": 1657789602,
+    "block": 15139826,
+    "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "amount": 1517.161676215494,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 1561507.049994497,
+    "estimatedApr": 8.82
   },
   {
     "timestamp": 1650157471,
@@ -108,6 +126,15 @@
     "estimatedApr": 24.96
   },
   {
+    "timestamp": 1658136895,
+    "block": 15165843,
+    "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "amount": 2575.23955269045,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 1561507.049994497,
+    "estimatedApr": 0
+  },
+  {
     "timestamp": 1649115261,
     "block": 14522479,
     "token": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
@@ -115,6 +142,15 @@
     "eventType": "Harvest",
     "strategyBalance": 1695781.731494786,
     "estimatedApr": 29.22
+  },
+  {
+    "timestamp": 1657443865,
+    "block": 15114009,
+    "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "amount": 1606.9502244977928,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 733357.887625303,
+    "estimatedApr": 19.99
   },
   {
     "timestamp": 1654315919,
@@ -132,7 +168,7 @@
     "amount": 3115.8808100799615,
     "eventType": "TreeDistribution",
     "strategyBalance": 1809210.1495799043,
-    "estimatedApr": 0
+    "estimatedApr": 15.62
   },
   {
     "timestamp": 1652925945,
@@ -180,6 +216,15 @@
     "estimatedApr": 17.21
   },
   {
+    "timestamp": 1657097095,
+    "block": 15087935,
+    "token": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "amount": 3312.497141484663,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 1823721.8410012808,
+    "estimatedApr": 16.52
+  },
+  {
     "timestamp": 1655008653,
     "block": 14948247,
     "token": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
@@ -199,11 +244,11 @@
   },
   {
     "timestamp": 0,
-    "block": 14827012,
+    "block": 15139826,
     "token": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-    "amount": 1103.7782969710806,
+    "amount": 0,
     "eventType": "Harvest",
-    "strategyBalance": 1803810.5190667005,
+    "strategyBalance": 1561507.049994497,
     "estimatedApr": 0
   },
   {
@@ -223,6 +268,15 @@
     "eventType": "TreeDistribution",
     "strategyBalance": 1732429.2821247494,
     "estimatedApr": 17.8
+  },
+  {
+    "timestamp": 1656400181,
+    "block": 15038507,
+    "token": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+    "amount": 0,
+    "eventType": "Harvest",
+    "strategyBalance": 1809210.1495799043,
+    "estimatedApr": 0
   },
   {
     "timestamp": 1651550599,

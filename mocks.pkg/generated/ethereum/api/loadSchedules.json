@@ -2275,10 +2275,10 @@
     {
       "beneficiary": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
       "token": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-      "amount": 14.327073417,
-      "start": 1649894400,
-      "end": 1656547200,
-      "compPercent": 16
+      "amount": 0,
+      "start": 0,
+      "end": 0,
+      "compPercent": 100
     }
   ],
   "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a": [
@@ -4170,7 +4170,23 @@
       "amount": 17072,
       "start": 1649894400,
       "end": 1656547200,
-      "compPercent": 16
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 1552,
+      "start": 1656547200,
+      "end": 1657152000,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 6208,
+      "start": 1657152000,
+      "end": 1659571200,
+      "compPercent": 46
     }
   ],
   "0x53C8E199eb2Cb7c01543C137078a038937a68E40": [
@@ -5276,7 +5292,7 @@
       "amount": 15148.454506321652,
       "start": 1650621600,
       "end": 1651795200,
-      "compPercent": 31
+      "compPercent": 100
     },
     {
       "beneficiary": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
@@ -5284,7 +5300,23 @@
       "amount": 16185.723185049916,
       "start": 1650621600,
       "end": 1651795200,
-      "compPercent": 31
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+      "token": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+      "amount": 17984.35022585842,
+      "start": 1651795200,
+      "end": 1653004800,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 17469.49274691631,
+      "start": 1651795200,
+      "end": 1653004800,
+      "compPercent": 100
     }
   ],
   "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551": [
@@ -5478,7 +5510,15 @@
       "amount": 3596.8273744555368,
       "start": 1650621600,
       "end": 1651795200,
-      "compPercent": 31
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 3882.1094993147353,
+      "start": 1651795200,
+      "end": 1653004800,
+      "compPercent": 100
     }
   ],
   "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af": [
@@ -5720,7 +5760,23 @@
       "amount": 193501,
       "start": 1649894400,
       "end": 1656547200,
-      "compPercent": 16
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 17591,
+      "start": 1656547200,
+      "end": 1657152000,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 70364,
+      "start": 1657152000,
+      "end": 1659571200,
+      "compPercent": 46
     }
   ],
   "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22": [
@@ -5738,7 +5794,57 @@
       "amount": 84615.38461200001,
       "start": 1649894400,
       "end": 1656547200,
-      "compPercent": 16
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 101098.90109485714,
+      "start": 1656547200,
+      "end": 1664496000,
+      "compPercent": 21
+    }
+  ],
+  "0xBA485b556399123261a5F9c95d413B4f93107407": [
+    {
+      "beneficiary": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 2000,
+      "start": 1655503200,
+      "end": 1656108000,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 2000,
+      "start": 1656108000,
+      "end": 1656712800,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 2000,
+      "start": 1656712800,
+      "end": 1657317600,
+      "compPercent": 100
+    },
+    {
+      "beneficiary": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 15000,
+      "start": 1657317600,
+      "end": 1659132000,
+      "compPercent": 52
+    },
+    {
+      "beneficiary": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "amount": 4000,
+      "start": 1659132000,
+      "end": 1659736800,
+      "compPercent": -145
     }
   ]
 }
