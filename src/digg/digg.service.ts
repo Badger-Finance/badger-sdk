@@ -32,7 +32,7 @@ export class DiggService extends Service {
   }
 
   convert(shares: BigNumber): number {
-    const fragments = shares.div(DIGG_SHARES_PER_FRAGMENT);
+    const fragments = BigNumber.from(shares).div(DIGG_SHARES_PER_FRAGMENT);
     return formatBalance(fragments, DIGG_DECIMALS);
   }
 }
