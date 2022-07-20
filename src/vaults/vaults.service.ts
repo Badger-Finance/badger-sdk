@@ -22,6 +22,7 @@ import { VaultRegistryV2Entry } from '../registry.v2/interfaces';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
+import { isUserTxRejectionError } from '../utils/is-tx-rejection-error';
 import {
   GetVaultCapsOptions,
   GetVaultStrategyOptions,
@@ -271,14 +272,14 @@ export class VaultsService extends Service {
         proof = await this.api.loadProof(this.address);
       } catch {} // ignore no proofs
       const tokenName = await vaultContract.name();
-      if (onTransferPrompt) {
-        onTransferPrompt({ token, amount });
-      }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
         proof,
         { ...overrides },
       );
+      if (onTransferPrompt) {
+        onTransferPrompt({ token, amount });
+      }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({ token: tokenName, amount, transaction: depositTx });
@@ -289,17 +290,14 @@ export class VaultsService extends Service {
         onTransferSuccess({ token: tokenName, amount, receipt });
       }
     } catch (err) {
-      this.warn(err);
-      if (result !== TransactionStatus.UserConfirmation) {
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
+        this.error(err);
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;
@@ -333,37 +331,30 @@ export class VaultsService extends Service {
       return TransactionStatus.Failure;
     }
 
-    let result = TransactionStatus.UserConfirmation;
+    let result: TransactionStatus;
 
     try {
+      const withdrawTx = await vaultContract.withdraw(amount, { ...overrides });
       if (onTransferPrompt) {
         onTransferPrompt({ token, amount });
       }
-      const withdrawTx = await vaultContract.withdraw(amount, { ...overrides });
       if (onTransferSigned) {
         onTransferSigned({ token, amount, transaction: withdrawTx });
       }
-      result = TransactionStatus.Pending;
       const receipt = await withdrawTx.wait();
       if (onTransferSuccess) {
         onTransferSuccess({ token, amount, receipt });
       }
       result = TransactionStatus.Success;
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
-        this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
       } else {
-        this.debug(err);
+        this.error(err);
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;

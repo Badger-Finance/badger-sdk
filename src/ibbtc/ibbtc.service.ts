@@ -16,6 +16,7 @@ import { TokenZap } from '../contracts/TokenZap';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
+import { isUserTxRejectionError } from '../utils/is-tx-rejection-error';
 import {
   IbBtcMintActionResults,
   IbBtcMintFees,
@@ -187,10 +188,6 @@ export class ibBTCService extends Service {
       }
 
       const tokenInfo = await this.sdk.tokens.loadToken(token);
-
-      if (onTransferPrompt) {
-        onTransferPrompt({ token: tokenInfo.name, amount });
-      }
       let mintTx;
       if (zapType === IbBtcZapType.Peak) {
         mintTx = await this.vaultPeak.mint(0, amount, [], { ...overrides });
@@ -201,6 +198,9 @@ export class ibBTCService extends Service {
       } else {
         const { poolId, idx } = await this.tokenZap.calcMint(token, amount);
         mintTx = await this.tokenZap.mint(token, amount, poolId, idx, amount);
+      }
+      if (onTransferPrompt) {
+        onTransferPrompt({ token: tokenInfo.name, amount });
       }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
@@ -216,18 +216,14 @@ export class ibBTCService extends Service {
         onTransferSuccess({ token: tokenInfo.name, amount, receipt });
       }
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
         this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;
@@ -264,13 +260,12 @@ export class ibBTCService extends Service {
       }
 
       const tokenInfo = await this.sdk.tokens.loadToken(token);
-
-      if (onTransferPrompt) {
-        onTransferPrompt({ token: tokenInfo.name, amount });
-      }
       const redeemTx = await this.vaultPeak.redeem(0, amount, {
         ...overrides,
       });
+      if (onTransferPrompt) {
+        onTransferPrompt({ token: tokenInfo.name, amount });
+      }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({
@@ -285,16 +280,13 @@ export class ibBTCService extends Service {
         onTransferSuccess({ token: tokenInfo.name, amount, receipt });
       }
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
         this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
-      }
-      if (onRejection) {
-        onRejection();
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
       result = TransactionStatus.Canceled;
     }
