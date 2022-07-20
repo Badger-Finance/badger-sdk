@@ -188,6 +188,10 @@ export class ibBTCService extends Service {
       }
 
       const tokenInfo = await this.sdk.tokens.loadToken(token);
+
+      if (onTransferPrompt) {
+        onTransferPrompt({ token: tokenInfo.name, amount });
+      }
       let mintTx;
       if (zapType === IbBtcZapType.Peak) {
         mintTx = await this.vaultPeak.mint(0, amount, [], { ...overrides });
@@ -198,9 +202,6 @@ export class ibBTCService extends Service {
       } else {
         const { poolId, idx } = await this.tokenZap.calcMint(token, amount);
         mintTx = await this.tokenZap.mint(token, amount, poolId, idx, amount);
-      }
-      if (onTransferPrompt) {
-        onTransferPrompt({ token: tokenInfo.name, amount });
       }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
@@ -260,12 +261,13 @@ export class ibBTCService extends Service {
       }
 
       const tokenInfo = await this.sdk.tokens.loadToken(token);
-      const redeemTx = await this.vaultPeak.redeem(0, amount, {
-        ...overrides,
-      });
+
       if (onTransferPrompt) {
         onTransferPrompt({ token: tokenInfo.name, amount });
       }
+      const redeemTx = await this.vaultPeak.redeem(0, amount, {
+        ...overrides,
+      });
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({

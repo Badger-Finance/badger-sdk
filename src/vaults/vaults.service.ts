@@ -272,14 +272,14 @@ export class VaultsService extends Service {
         proof = await this.api.loadProof(this.address);
       } catch {} // ignore no proofs
       const tokenName = await vaultContract.name();
+      if (onTransferPrompt) {
+        onTransferPrompt({ token, amount });
+      }
       const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
         amount,
         proof,
         { ...overrides },
       );
-      if (onTransferPrompt) {
-        onTransferPrompt({ token, amount });
-      }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({ token: tokenName, amount, transaction: depositTx });
@@ -334,10 +334,10 @@ export class VaultsService extends Service {
     let result: TransactionStatus;
 
     try {
-      const withdrawTx = await vaultContract.withdraw(amount, { ...overrides });
       if (onTransferPrompt) {
         onTransferPrompt({ token, amount });
       }
+      const withdrawTx = await vaultContract.withdraw(amount, { ...overrides });
       if (onTransferSigned) {
         onTransferSigned({ token, amount, transaction: withdrawTx });
       }
