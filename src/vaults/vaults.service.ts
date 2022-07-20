@@ -331,7 +331,7 @@ export class VaultsService extends Service {
       return TransactionStatus.Failure;
     }
 
-    let result: TransactionStatus;
+    let result = TransactionStatus.UserConfirmation;
 
     try {
       if (onTransferPrompt) {
@@ -341,6 +341,7 @@ export class VaultsService extends Service {
       if (onTransferSigned) {
         onTransferSigned({ token, amount, transaction: withdrawTx });
       }
+      result = TransactionStatus.Pending;
       const receipt = await withdrawTx.wait();
       if (onTransferSuccess) {
         onTransferSuccess({ token, amount, receipt });
