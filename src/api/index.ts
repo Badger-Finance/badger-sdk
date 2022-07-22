@@ -138,7 +138,7 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.ProtocolSummary> {
-    return this.get('/value', {
+    return this.get('/v2/value', {
       chain: network ?? this.network,
       currency,
     });
