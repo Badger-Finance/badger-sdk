@@ -1,3 +1,11 @@
+## [1.16.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.3...v1.16.4) (2022-07-22)
+
+
+### Bug Fixes
+
+* check if error is caused by user rejection ([570148e](https://github.com/Badger-Finance/badger-sdk/commit/570148e4927fa6898098c0ea04b5bad5aa77550b))
+* show prompt only if contract call doesn't fail ([7b87c75](https://github.com/Badger-Finance/badger-sdk/commit/7b87c75e1cf8f68172fc76fc4829a8c74f05609f))
+
 ## [1.16.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.2...v1.16.3) (2022-07-19)
 
 
