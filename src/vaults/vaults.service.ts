@@ -22,6 +22,7 @@ import { VaultRegistryV2Entry } from '../registry.v2/interfaces';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
+import { isUserTxRejectionError } from '../utils/is-tx-rejection-error';
 import {
   GetVaultCapsOptions,
   GetVaultStrategyOptions,
@@ -289,17 +290,14 @@ export class VaultsService extends Service {
         onTransferSuccess({ token: tokenName, amount, receipt });
       }
     } catch (err) {
-      this.warn(err);
-      if (result !== TransactionStatus.UserConfirmation) {
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
+        this.error(err);
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;
@@ -350,20 +348,14 @@ export class VaultsService extends Service {
       }
       result = TransactionStatus.Success;
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
-        this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
       } else {
-        this.debug(err);
+        this.error(err);
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;

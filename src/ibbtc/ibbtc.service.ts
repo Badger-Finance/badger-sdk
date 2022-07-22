@@ -16,6 +16,7 @@ import { TokenZap } from '../contracts/TokenZap';
 import { BadgerSDK } from '../sdk';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
+import { isUserTxRejectionError } from '../utils/is-tx-rejection-error';
 import {
   IbBtcMintActionResults,
   IbBtcMintFees,
@@ -216,18 +217,14 @@ export class ibBTCService extends Service {
         onTransferSuccess({ token: tokenInfo.name, amount, receipt });
       }
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
         this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
-      if (onRejection) {
-        onRejection();
-      }
-      result = TransactionStatus.Canceled;
     }
 
     return result;
@@ -285,16 +282,13 @@ export class ibBTCService extends Service {
         onTransferSuccess({ token: tokenInfo.name, amount, receipt });
       }
     } catch (err) {
-      // TODO: refactor this common function pattern to a harness
-      if (result !== TransactionStatus.UserConfirmation) {
+      if (isUserTxRejectionError(err)) {
+        if (onRejection) onRejection();
+        result = TransactionStatus.Canceled;
+      } else {
         this.error(err);
-        if (onError) {
-          onError(err);
-        }
-        return TransactionStatus.Failure;
-      }
-      if (onRejection) {
-        onRejection();
+        if (onError) onError(err);
+        result = TransactionStatus.Failure;
       }
       result = TransactionStatus.Canceled;
     }
