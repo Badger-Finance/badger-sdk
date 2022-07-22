@@ -77,12 +77,12 @@ export class TokensService extends Service {
       }
       result = TransactionStatus.Pending;
       if (onApproveSigned) {
-        onApproveSigned();
+        onApproveSigned({ transaction: tx });
       }
-      await tx.wait();
+      const receipt = await tx.wait();
       result = TransactionStatus.Success;
       if (onApproveSuccess) {
-        onApproveSuccess();
+        onApproveSuccess({ transaction: tx, receipt });
       }
       this.allowances[ethers.utils.getAddress(token)] = amount;
     } catch (err) {
