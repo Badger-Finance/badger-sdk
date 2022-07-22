@@ -1,3 +1,10 @@
+## [1.16.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.4...sdk-mocks-v1.16.5) (2022-07-22)
+
+
+### Bug Fixes
+
+* append version path to value query ([4b46eab](https://github.com/Badger-Finance/badger-sdk/commit/4b46eab64ecdfa9646c680599b39f34fbf3c580c))
+
 ## [1.16.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.3...sdk-mocks-v1.16.4) (2022-07-22)
 
 
