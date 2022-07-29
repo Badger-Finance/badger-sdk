@@ -290,7 +290,7 @@ export class BadgerAPI {
       return data as T;
     } catch (error) {
       const { response, config } = error as AxiosError;
-      this.logger.error({
+      this.logger.debug({
         url: config.url,
         method: config.method,
         status: response?.status,
@@ -300,13 +300,7 @@ export class BadgerAPI {
       });
 
       if (response) {
-        const { status } = response;
-
-        if (status === 404) {
-          return {} as T;
-        }
-
-        throw new ApiError(status.toFixed());
+        throw new ApiError(response.status.toFixed());
       }
 
       throw error;
