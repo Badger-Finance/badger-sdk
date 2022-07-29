@@ -1,3 +1,10 @@
+## [1.16.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.5...v1.16.6) (2022-07-29)
+
+
+### Bug Fixes
+
+* remove 404 bad handling ([ad27437](https://github.com/Badger-Finance/badger-sdk/commit/ad27437c193d23e10f8fb78a250a80721d736d8d))
+
 ## [1.16.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.4...v1.16.5) (2022-07-22)
 
 
