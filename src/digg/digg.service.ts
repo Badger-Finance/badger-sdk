@@ -10,8 +10,10 @@ import { formatBalance } from '../tokens/tokens.utils';
 export const DIGG_ADDRESS = ethers.utils.getAddress(
   '0x798D1bE841a82a273720CE31c822C61a67a601C3',
 );
-export const DIGG_SHARES_PER_FRAGMENT = BigNumber.from("222256308823765331027878635805365830922307440079959220679625904457");
-export const DIGG_DECIMALS = BigNumber.from("9");
+export const DIGG_SHARES_PER_FRAGMENT = BigNumber.from(
+  '222256308823765331027878635805365830922307440079959220679625904457',
+);
+export const DIGG_DECIMALS = BigNumber.from('9');
 
 export class DiggService extends Service {
   private _digg?: Digg;
