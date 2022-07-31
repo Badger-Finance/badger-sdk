@@ -169,14 +169,11 @@ export class BadgerAPI {
     timeframe = ChartTimeFrame.Month,
     network?: Network,
   ): Promise<i.VaultSnapshot[]> {
-    return this.get(
-      '/v3/charts/vault',
-      {
-        address,
-        timeframe,
-        chain: network ?? this.network,
-      },
-    );
+    return this.get('/v3/charts/vault', {
+      address,
+      timeframe,
+      chain: network ?? this.network,
+    });
   }
 
   loadSchedules(
@@ -205,14 +202,11 @@ export class BadgerAPI {
     timestamps: number[],
     network?: Network,
   ): Promise<i.VaultSnapshot[]> {
-    return this.get(
-      `/v3/vaults/snapshots`,
-      {
-        vault,
-        timestamps: timestamps.join(','),
-        chain: network ?? this.network,
-      },
-    );
+    return this.get(`/v3/vaults/snapshots`, {
+      vault,
+      timestamps: timestamps.join(','),
+      chain: network ?? this.network,
+    });
   }
 
   loadPricesSnapshots(
@@ -220,14 +214,11 @@ export class BadgerAPI {
     timestamps: number[],
     network?: Network,
   ): Promise<PriceSnapshots> {
-    return this.get(
-      `/v3/prices/snapshots`,
-      {
-        tokens: tokens.join(','),
-        timestamps: timestamps.join(','),
-        chain: network ?? this.network,
-      },
-    );
+    return this.get(`/v3/prices/snapshots`, {
+      tokens: tokens.join(','),
+      timestamps: timestamps.join(','),
+      chain: network ?? this.network,
+    });
   }
 
   loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
