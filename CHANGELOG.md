@@ -1,3 +1,10 @@
+## [1.16.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.6...v1.16.7) (2022-07-31)
+
+
+### Bug Fixes
+
+* update interface + lint ([621fb6d](https://github.com/Badger-Finance/badger-sdk/commit/621fb6da8b43d0bafd8a9f557fd2479f63365b7c))
+
 ## [1.16.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.5...v1.16.6) (2022-07-29)
 
 
