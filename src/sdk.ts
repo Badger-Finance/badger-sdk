@@ -45,8 +45,8 @@ export class BadgerSDK {
     logLevel = LogLevel.Error,
   }: SDKOptions) {
     this.logLevel = logLevel;
-    const sdkProvider = BadgerSDK.getSdkProvider(provider);
-    this.provider = new providers.MulticallProvider(sdkProvider);
+    const sdkProvider = this.#getSdkProvider(provider);
+    this.provider = this.getMulticallProvider(sdkProvider);
     this.signer = sdkProvider.getSigner();
     this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
@@ -70,14 +70,18 @@ export class BadgerSDK {
 
   ready() {
     return Promise.all([
-      this.initialize(),
+      this.#initialize(),
       this.registry.ready(),
       this.registryV2.ready(),
       this.rewards.ready(),
     ]);
   }
 
-  private static getSdkProvider(provider: SDKProvider | string): SDKProvider {
+  getMulticallProvider(provider: SDKProvider): providers.MulticallProvider {
+    return new providers.MulticallProvider(provider);
+  }
+
+  #getSdkProvider(provider: SDKProvider | string): SDKProvider {
     let sdkProvider: SDKProvider;
 
     if (typeof provider === 'string') {
@@ -89,7 +93,7 @@ export class BadgerSDK {
     return sdkProvider;
   }
 
-  private async initialize() {
+  async #initialize() {
     try {
       if (this.signer) {
         this.address = await this.signer.getAddress();
