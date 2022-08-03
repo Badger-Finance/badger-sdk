@@ -16,6 +16,7 @@ export const methodsToSkip = [
   'listHarvests', // failing for some reason, temp
   'mint',
   'redeem',
+  'getMulticallProvider',
 
   // temporary, getters with expected sdk backing failing
   'digg',

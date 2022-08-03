@@ -64,7 +64,6 @@ export class MocksProcessor {
       const sdk = new BadgerSDK({
         network,
         provider: MocksProcessor.getNodeRpcUrl(network),
-        citadelBaseURL: 'https://staging-api.badger.com/citadel/v1',
       });
 
       await sdk.ready();
