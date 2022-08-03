@@ -1,7 +1,6 @@
 import { BadgerSDK } from './sdk';
 
 export * from './api';
-export * from './citadel';
 export * from './config';
 export * from './contracts';
 export * from './digg';
