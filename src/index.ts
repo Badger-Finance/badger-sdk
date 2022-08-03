@@ -8,6 +8,7 @@ export * from './graphql';
 export * from './ibbtc';
 export * from './registry';
 export * from './rewards';
+export * from './tests';
 export * from './tokens';
 export * from './utils';
 export * from './vaults';
