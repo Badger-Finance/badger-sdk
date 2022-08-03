@@ -4,7 +4,6 @@ import { LogLevel } from '..';
 
 export interface APIOptions {
   baseURL?: string;
-  citadelBaseURL?: string;
   logLevel?: LogLevel;
   network: Networkish;
 }

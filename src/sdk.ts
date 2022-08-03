@@ -3,7 +3,6 @@ import { Signer } from '@ethersproject/abstract-signer';
 import { ethers } from 'ethers';
 
 import { APIOptions, BadgerAPI, LogLevel } from './api';
-import { CitadelService } from './citadel';
 import { getNetworkConfig, NetworkConfig, SDKProvider } from './config';
 import { DiggService } from './digg/digg.service';
 import { BadgerGraph } from './graphql';
@@ -35,13 +34,11 @@ export class BadgerSDK {
   readonly rewards: RewardsService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
-  readonly citadel: CitadelService;
 
   constructor({
     network,
     provider,
     baseURL,
-    citadelBaseURL,
     logLevel = LogLevel.Error,
   }: SDKOptions) {
     this.logLevel = logLevel;
@@ -51,7 +48,6 @@ export class BadgerSDK {
     this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
       baseURL,
-      citadelBaseURL,
       logLevel,
       network: this.config.network,
     });
@@ -65,7 +61,6 @@ export class BadgerSDK {
     this.rewards = new RewardsService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);
-    this.citadel = new CitadelService(this);
   }
 
   ready() {
