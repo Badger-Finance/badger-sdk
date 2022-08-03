@@ -20,7 +20,7 @@
     "codegen:contracts": "typechain --target ethers-v5 --out-dir src/contracts src/abi/*.abi",
     "format": "pretty-quick",
     "lint": "eslint \"src/**/*.ts\" --fix",
-    "test": "jest --detectOpenHandles --runInBand",
+    "test": "jest --detectOpenHandles --runInBand --detectLeaks --logHeapUsage",
     "test:upd": "yarn test -u",
     "test:path": "yarn test --no-cache --testPathPattern",
     "test:clean": "jest --clearCache",
@@ -69,7 +69,8 @@
     "ts-jest": "27.0.7",
     "tslib": "2.3.1",
     "typechain": "8.1.0",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "weak-napi": "^2.0.2"
   },
   "files": [
     "lib"
