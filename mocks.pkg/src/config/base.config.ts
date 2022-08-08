@@ -35,6 +35,7 @@ export const vaults = {
   BVECVX: '0xfd05D3C7fe2924020620A8bE4961bBaA747e6305',
 };
 
+export const bveCVXLP = '0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551';
 export const citadelWhale = '0xa967ba66fb284ec18bbe59f65bcf42dd11ba8128';
 export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
 export const dexTrader = '0x36cc7b13029b5dee4034745fb4f24034f3f2ffc6';
@@ -51,20 +52,19 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadVaults: { args: [] },
     loadVaultsHarvests: { args: [] },
     loadVaultHarvests: { args: [vaults.BVECVX] },
-    loadVault: { args: [vaults.BCVX.addr] },
+    loadVault: { args: [bveCVXLP] },
     loadSetts: { args: [] },
-    loadSett: { args: [vaults.BCVX.addr] },
+    loadSett: { args: [bveCVXLP] },
     loadAccount: { args: [badgerWhale] },
     loadTokens: { args: [] },
     loadProof: { args: [badgerWhale] },
     loadGasPrices: { args: [] },
-    loadVaultChart: { args: [vaults.BVECVX] },
+    loadVaultChart: { args: [bveCVXLP] },
     loadProtocolMetrics: { args: [] },
     loadProtocolSummary: { args: [] },
     loadLeaderboardSummary: { args: [] },
-    loadCharts: { args: [{ vault: vaults.BCVX.addr }] },
     loadSchedules: { args: [] },
-    loadSchedule: { args: [vaults.BCVX.addr] },
+    loadSchedule: { args: [bveCVXLP] },
     loadVaultSnapshots: {
       args: [vaults.BVECVX, [1632182660000, 1637182660000, 1642182660000]],
     },

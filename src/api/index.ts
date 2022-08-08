@@ -136,20 +136,6 @@ export class BadgerAPI {
     });
   }
 
-  loadCharts(
-    { vault, start, end, period, granularity }: i.LoadChartsOptions,
-    network?: Network,
-  ): Promise<i.VaultSnapshot[]> {
-    return this.get('/v2/charts', {
-      id: vault,
-      chain: network ?? this.network,
-      start,
-      end,
-      period,
-      granularity,
-    });
-  }
-
   loadVaultChart(
     address: string,
     timeframe = ChartTimeFrame.Month,
