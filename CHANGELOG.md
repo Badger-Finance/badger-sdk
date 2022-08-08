@@ -1,3 +1,10 @@
+## [1.16.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.10...v1.16.11) (2022-08-08)
+
+
+### Bug Fixes
+
+* update vault dto view ([b3d1202](https://github.com/Badger-Finance/badger-sdk/commit/b3d1202335502e7ce1a11558934ef95fd05fbb23))
+
 ## [1.16.10](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.9...v1.16.10) (2022-08-08)
 
 
