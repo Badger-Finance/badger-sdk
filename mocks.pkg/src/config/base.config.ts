@@ -2,7 +2,6 @@ import { ServicesArgsConfig } from './struct.types.config';
 import { SdkServices } from '../enums';
 import { RegistryKey, VaultVersion } from '../../../src';
 import { ethers } from 'ethers';
-import { RewardFilter } from '../../../src/citadel/enums/reward-filter.enum';
 
 export const baseServiceArgsConfig = {
   provider: [],
@@ -66,13 +65,6 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadCharts: { args: [{ vault: vaults.BCVX.addr }] },
     loadSchedules: { args: [] },
     loadSchedule: { args: [vaults.BCVX.addr] },
-    loadCitadelTreasury: { args: [] },
-    loadCitadelSummary: { args: [] },
-    loadCitadelUserTotalRewards: { args: [ibbtc, ibbtc, RewardFilter.ADDED] },
-    loadCitadelTreasuryCharts: { args: [] },
-    loadCitadelMerkleProof: { args: [badgerWhale] },
-    loadCitadelAccount: { args: [citadelWhale] },
-    loadCitadelKnightingRoundLeaderboard: { args: [] },
     loadVaultSnapshots: {
       args: [vaults.BVECVX, [1632182660000, 1637182660000, 1642182660000]],
     },

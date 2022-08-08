@@ -1,16 +1,20 @@
-import { TokenRate } from '.';
+import { TokenRate, ValueSource } from '.';
 
 export interface VaultYieldProjection {
+  harvestValue: number;
   harvestApr: number;
-  harvestApy: number;
+  harvestTokens: TokenRate[];
   harvestPeriodApr: number;
   harvestPeriodApy: number;
-  harvestTokens: TokenRate[];
-  harvestTokensPerPeriod: TokenRate[];
-  harvestValue: number;
-  yieldApr: number;
-  yieldPeriodApr: number;
-  yieldTokens: TokenRate[];
-  yieldTokensPerPeriod: TokenRate[];
+  harvestPeriodSources: TokenRate[];
+  harvestPeriodSourcesApy: TokenRate[];
   yieldValue: number;
+  yieldApr: number;
+  yieldTokens: TokenRate[];
+  yieldPeriodApr: number;
+  yieldPeriodSources: TokenRate[];
+  nonHarvestApr: number;
+  nonHarvestApy: number;
+  nonHarvestSources: ValueSource[];
+  nonHarvestSourcesApy: ValueSource[];
 }

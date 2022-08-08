@@ -1,8 +1,6 @@
 import { Networkish } from '@ethersproject/networks';
 import axios, { AxiosError, AxiosInstance } from 'axios';
 
-import { CitadelMerkleClaim } from '../citadel';
-import { RewardFilter } from '../citadel/enums/reward-filter.enum';
 import { Network } from '../config/enums/network.enum';
 import { getNetworkConfig } from '../config/network/network.config';
 import { Logger } from '../logger';
@@ -10,10 +8,6 @@ import { EmissionSchedule } from '../rewards';
 import { ApiError } from './api.error';
 import { ChartTimeFrame, Currency, LogLevel } from './enums';
 import * as i from './interfaces';
-import { CitadelRewardEvent } from './interfaces/citadel-reward-event.interface';
-import { CitadelSummary } from './interfaces/citadel-summary.interface';
-import { CitadelTreasurySummary } from './interfaces/citadel-treasury-summary.interface';
-import { TreasurySummarySnapshot } from './interfaces/treasury-summary-snapshot.interface';
 import {
   GasPrices,
   MerkleProof,
@@ -23,30 +17,22 @@ import {
 } from './types';
 
 export const DEFAULT_BADGER_API_URL = 'https://api.badger.com/';
-export const DEFAULT_CITADEL_API_URL = 'https://api.badger.com/citadel/v1';
 
 export class BadgerAPI {
   private readonly client: AxiosInstance;
-  private readonly citadelClient: AxiosInstance;
   private network: Network;
   public logger: Logger;
   public baseURL: string;
-  public citadelBaseURL: string;
 
   constructor({
     baseURL = DEFAULT_BADGER_API_URL,
-    citadelBaseURL = DEFAULT_CITADEL_API_URL,
     logLevel = LogLevel.Error,
     network = Network.Ethereum,
   }: i.APIOptions) {
     this.logger = new Logger(logLevel);
     this.baseURL = baseURL;
-    this.citadelBaseURL = citadelBaseURL;
     this.client = axios.create({
       baseURL,
-    });
-    this.citadelClient = axios.create({
-      baseURL: citadelBaseURL,
     });
     const lookupNetwork = this.isLocal(network) ? Network.Ethereum : network;
     this.network = getNetworkConfig(lookupNetwork).network;
@@ -219,54 +205,6 @@ export class BadgerAPI {
       timestamps: timestamps.join(','),
       chain: network ?? this.network,
     });
-  }
-
-  loadCitadelTreasury(): Promise<CitadelTreasurySummary> {
-    return this.get('/treasury', {}, this.citadelClient);
-  }
-
-  loadCitadelSummary(): Promise<CitadelSummary> {
-    return this.get('/summary', {}, this.citadelClient);
-  }
-
-  loadCitadelAccount(address: string): Promise<i.CitadelAccount> {
-    return this.get('/accounts', { address }, this.citadelClient);
-  }
-
-  loadCitadelUserTotalRewards(
-    token: string,
-    address?: string,
-    filter?: RewardFilter,
-  ): Promise<CitadelRewardEvent[]> {
-    return this.get(
-      '/rewards',
-      {
-        token,
-        user: address,
-        filter,
-      },
-      this.citadelClient,
-    );
-  }
-
-  loadCitadelTreasuryCharts(
-    timeframe = ChartTimeFrame.Week,
-  ): Promise<TreasurySummarySnapshot[]> {
-    return this.get(
-      '/history',
-      {
-        timeframe,
-      },
-      this.citadelClient,
-    );
-  }
-
-  loadCitadelKnightingRoundLeaderboard(): Promise<i.CitadelLeaderboardEntry[]> {
-    return this.get(`/leaderboard`, {}, this.citadelClient);
-  }
-
-  loadCitadelMerkleProof(address: string): Promise<CitadelMerkleClaim> {
-    return this.get(`/proofs/citadel/${address}`, {}, this.client);
   }
 
   private async get<T>(

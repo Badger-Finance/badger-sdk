@@ -1,23 +1,16 @@
 import BadgerSDK, { BadgerAPI, BadgerGraph } from '.';
 import { Network } from './config';
-
-const ethAlchemyNodeUrl = 'https://cloudflare-eth.com';
+import { mockSDK } from './tests/tests.utils';
 
 describe('BadgerSDK', () => {
   let sdk: BadgerSDK;
 
-  beforeAll(async () => {
-    // eslint-disable-next-line
-    const initializeFunc = jest.spyOn(BadgerSDK.prototype as any, 'initialize');
-    initializeFunc.mockImplementation(() => new Promise((res) => res(true)));
-
-    sdk = new BadgerSDK({
-      network: Network.Ethereum,
-      provider: ethAlchemyNodeUrl,
-    });
+  beforeEach(async () => {
+    sdk = mockSDK();
+    await sdk.ready();
   });
 
-  test('Api is a part of SDK, and a standalone app', async () => {
+  test('API is a part of SDK, and a standalone app', async () => {
     const badgerApi = new BadgerAPI({ network: Network.Ethereum });
 
     expect(sdk.api).toBeInstanceOf(BadgerAPI);

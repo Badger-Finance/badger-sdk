@@ -1,3 +1,4 @@
+import { providers } from '@0xsequence/multicall';
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 import { mock, MockProxy } from 'jest-mock-extended';
 
@@ -29,14 +30,20 @@ export function mockSDK(): BadgerSDK {
   const mockProvider = mock<JsonRpcProvider>();
   mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
 
+  jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
+  jest.spyOn(RegistryV2Service.prototype, 'ready').mockImplementation();
+  jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
+
+  const mockMulticall = mock<providers.MulticallProvider>();
+  jest
+    .spyOn(BadgerSDK.prototype, 'getMulticallProvider')
+    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+    .mockImplementation((_p) => mockMulticall);
+
   const sdk = new BadgerSDK({
     network: Network.Fantom,
     provider: mockProvider,
   });
-
-  jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
-  jest.spyOn(RegistryV2Service.prototype, 'ready').mockImplementation();
-  jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
 
   return sdk;
 }
