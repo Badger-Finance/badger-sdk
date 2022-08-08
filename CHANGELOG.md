@@ -1,3 +1,11 @@
+## [1.16.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.7...v1.16.8) (2022-08-08)
+
+
+### Bug Fixes
+
+* allow method to mock sdk provider ([261e358](https://github.com/Badger-Finance/badger-sdk/commit/261e358c371c6d79c8a756a3d5332a8e5d6cbc08))
+* separate yield data ([5be40c1](https://github.com/Badger-Finance/badger-sdk/commit/5be40c1deefac3711655195461310a07f69fbce5))
+
 ## [1.16.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.6...v1.16.7) (2022-07-31)
 
 
