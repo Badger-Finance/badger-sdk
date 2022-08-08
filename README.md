@@ -2,7 +2,7 @@
   <img align="right" src="docs/images/badger.png" height="150" />
 </div>
 
-# Badger SDK
+# Badger SDK1
 
 BadgerDAO is a decentralized autonomous organization focused on bringing Bitcoin to DeFi.
 The Badger SDK provides easy access to the Badger Protocol on any chain, as well as fast access to the Badger API for JavaScript applcations.
