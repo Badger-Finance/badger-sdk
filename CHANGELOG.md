@@ -1,3 +1,10 @@
+## [1.16.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.8...v1.16.9) (2022-08-08)
+
+
+### Bug Fixes
+
+* remove tests package ([6c92dfd](https://github.com/Badger-Finance/badger-sdk/commit/6c92dfdee0ff140c5b700be9f5b233e760b0d5d0))
+
 ## [1.16.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.16.7...v1.16.8) (2022-08-08)
 
 
