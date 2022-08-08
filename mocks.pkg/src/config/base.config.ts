@@ -62,7 +62,6 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadProtocolMetrics: { args: [] },
     loadProtocolSummary: { args: [] },
     loadLeaderboardSummary: { args: [] },
-    loadCharts: { args: [{ vault: vaults.BCVX.addr }] },
     loadSchedules: { args: [] },
     loadSchedule: { args: [vaults.BCVX.addr] },
     loadVaultSnapshots: {

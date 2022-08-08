@@ -5,9 +5,9 @@
   "state": "discontinued",
   "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
   "vaultToken": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-  "value": 262500.48,
+  "value": 211485.14,
   "available": 0,
-  "balance": 35234.96392145137,
+  "balance": 28812.689146372955,
   "protocol": "Convex",
   "pricePerFullShare": 1.0957988590667325,
   "tokens": [
@@ -16,8 +16,8 @@
       "name": "Convex Token",
       "symbol": "CVX",
       "decimals": 18,
-      "balance": 35234.96392145137,
-      "value": 262500.4812148127
+      "balance": 28812.689146372955,
+      "value": 211485.1383343775
     }
   ],
   "apr": 0,
@@ -41,12 +41,17 @@
   "yieldProjection": {
     "harvestApr": 0,
     "harvestApy": 0,
+    "harvestPeriodApr": 0,
+    "harvestPeriodApy": 0,
     "harvestTokens": [],
+    "harvestTokensPerPeriod": [],
     "harvestValue": 0,
     "yieldApr": 0,
+    "yieldPeriodApr": 0,
     "yieldTokens": [],
+    "yieldTokensPerPeriod": [],
     "yieldValue": 0
   },
-  "lastHarvest": 1645380272,
+  "lastHarvest": 1645380272000,
   "version": "v1"
 }
