@@ -1,3 +1,12 @@
+## [1.16.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.9...sdk-mocks-v1.16.10) (2022-08-08)
+
+
+### Bug Fixes
+
+* add updated mocks ([e38e1d5](https://github.com/Badger-Finance/badger-sdk/commit/e38e1d509cec0f04f00665391ff38d2ea29dd792))
+* update vault dto mocks ([8339ab4](https://github.com/Badger-Finance/badger-sdk/commit/8339ab48f5bb292f70d1956912e9514f3f2ed524))
+* update vault dto mocks ([dd1f59a](https://github.com/Badger-Finance/badger-sdk/commit/dd1f59ad78bbc155479a9e1ea1a20ff222afca9f))
+
 ## [1.16.9](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.8...sdk-mocks-v1.16.9) (2022-08-08)
 
 
