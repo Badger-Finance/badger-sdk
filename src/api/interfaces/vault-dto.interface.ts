@@ -13,10 +13,10 @@ export interface VaultDTO {
   boost: BoostConfig;
   bouncer: BouncerType;
   lastHarvest: number;
-  maxApr?: number;
-  maxApy?: number;
-  minApr?: number;
-  minApy?: number;
+  maxApr: number;
+  maxApy: number;
+  minApr: number;
+  minApy: number;
   name: string;
   pricePerFullShare: number;
   protocol: Protocol;
