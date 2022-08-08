@@ -1,29 +1,76 @@
 {
-  "name": "CVX",
-  "asset": "CVX",
-  "vaultAsset": "bCVX",
-  "state": "discontinued",
-  "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-  "vaultToken": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-  "value": 213213.9,
-  "available": 0,
-  "balance": 28812.689146372955,
-  "protocol": "Convex",
-  "pricePerFullShare": 1.0957988590667325,
-  "tokens": [],
-  "apr": 0,
-  "apy": 0,
+  "name": "CVX/bveCVX",
+  "asset": "bveCVX-CVX-f",
+  "vaultAsset": "bbveCVX-CVX-f",
+  "state": "open",
+  "underlyingToken": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
+  "vaultToken": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
+  "value": 1234993.58,
+  "available": 281.3177887540157,
+  "balance": 166737.27405908523,
+  "protocol": "Curve",
+  "pricePerFullShare": 1,
+  "tokens": [
+    {
+      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+      "name": "Convex Token",
+      "symbol": "CVX",
+      "decimals": 18,
+      "balance": 78450.47515683877,
+      "value": 581318.0209121753
+    },
+    {
+      "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+      "name": "Badger Vested Escrow Convex Token",
+      "symbol": "bveCVX",
+      "decimals": 18,
+      "balance": 88680.22583183156,
+      "value": 656233.6711555535
+    }
+  ],
+  "apr": 20.45640493214394,
+  "apy": 20.45640493214394,
   "boost": {
     "enabled": false,
     "weight": 0
   },
-  "sources": [],
-  "sourcesApy": [],
+  "sources": [
+    {
+      "name": "Badger",
+      "apr": 20.40893186035129,
+      "boostable": false,
+      "minApr": 20.40893186035129,
+      "maxApr": 20.40893186035129
+    },
+    {
+      "name": "Curve LP Fees",
+      "apr": 0.04747307179264748,
+      "boostable": false,
+      "minApr": 0.04747307179264748,
+      "maxApr": 0.04747307179264748
+    }
+  ],
+  "sourcesApy": [
+    {
+      "name": "Badger",
+      "apr": 20.40893186035129,
+      "boostable": false,
+      "minApr": 20.40893186035129,
+      "maxApr": 20.40893186035129
+    },
+    {
+      "name": "Curve LP Fees",
+      "apr": 0.04747307179264748,
+      "boostable": false,
+      "minApr": 0.04747307179264748,
+      "maxApr": 0.04747307179264748
+    }
+  ],
   "bouncer": "none",
   "strategy": {
-    "address": "0xBCee2c6CfA7A4e29892c3665f464Be5536F16D95",
+    "address": "0x98Ca7AFa876f0e15494E76E92C5b3658cdE1Ffe1",
     "withdrawFee": 10,
-    "performanceFee": 1000,
+    "performanceFee": 0,
     "strategistFee": 0,
     "aumFee": 0
   },
@@ -42,11 +89,27 @@
     "yieldTokens": [],
     "yieldPeriodApr": 0,
     "yieldPeriodSources": [],
-    "nonHarvestApr": 0,
-    "nonHarvestSources": [],
-    "nonHarvestApy": 0,
-    "nonHarvestSourcesApy": []
+    "nonHarvestApr": 0.04747307179264748,
+    "nonHarvestSources": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.04747307179264748,
+        "boostable": false,
+        "minApr": 0.04747307179264748,
+        "maxApr": 0.04747307179264748
+      }
+    ],
+    "nonHarvestApy": 0.04747307179264748,
+    "nonHarvestSourcesApy": [
+      {
+        "name": "Curve LP Fees",
+        "apr": 0.04747307179264748,
+        "boostable": false,
+        "minApr": 0.04747307179264748,
+        "maxApr": 0.04747307179264748
+      }
+    ]
   },
-  "lastHarvest": 0,
+  "lastHarvest": 1658844991000,
   "version": "v1"
 }
