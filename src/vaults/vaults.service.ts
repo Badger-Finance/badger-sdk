@@ -18,7 +18,6 @@ import {
   Vault__factory,
   VaultV15__factory,
 } from '../contracts';
-import { VaultRegistryV2Entry } from '../registry.v2/interfaces';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
@@ -43,10 +42,8 @@ const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
 export class VaultsService extends Service {
   private vaults: Record<string, RegistryVault> = {};
 
-  async loadVaults(useV2Reg = false): Promise<RegistryVault[]> {
-    const registry = await (useV2Reg
-      ? this.sdk.registryV2.getProductionVaults()
-      : this.sdk.registry.getProductionVaults());
+  async loadVaults(): Promise<RegistryVault[]> {
+    const registry = await this.sdk.registry.getProductionVaults();
 
     const registryVaultsInfo = registry.filter(
       (v) => v.address !== diggStabilizerVault,
@@ -73,13 +70,12 @@ export class VaultsService extends Service {
       registryVaults.map((registryVault) => {
         registryVault.metadata = {};
 
-        const regV2Vault = registry.find(
+        const regVault = registry.find(
           (entry) => entry.address === registryVault.address,
         );
 
-        // rm with regV1
-        if (regV2Vault && (<VaultRegistryV2Entry>regV2Vault).metadata) {
-          registryVault.metadata = (<VaultRegistryV2Entry>regV2Vault).metadata;
+        if (regVault) {
+          registryVault.metadata = regVault.metadata;
         }
 
         return [registryVault.address, registryVault];
@@ -108,9 +104,7 @@ export class VaultsService extends Service {
     const checksumAddress = ethers.utils.getAddress(address);
     const cachedVault = this.vaults[checksumAddress];
     if (!cachedVault) {
-      const vaultsRegistry = await (useV2Reg
-        ? this.sdk.registryV2.getProductionVaults()
-        : this.sdk.registry.getProductionVaults());
+      const vaultsRegistry = await this.sdk.registry.getProductionVaults();
 
       const vaultMap = Object.fromEntries(
         vaultsRegistry.map((vault) => [vault.address, vault]),
@@ -144,14 +138,7 @@ export class VaultsService extends Service {
       this.vaults[checksumAddress] = await this.#fetchVault(registration);
     }
 
-    this.vaults[checksumAddress].metadata = {};
-
-    // rm with regV1
-    if ((<VaultRegistryV2Entry>registration).metadata) {
-      this.vaults[checksumAddress].metadata = (<VaultRegistryV2Entry>(
-        registration
-      )).metadata;
-    }
+    this.vaults[checksumAddress].metadata = registration.metadata || {};
 
     return this.vaults[checksumAddress];
   }

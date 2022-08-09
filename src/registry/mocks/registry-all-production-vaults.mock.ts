@@ -1,4 +1,4 @@
-export const registryV2AllProductionVaultsMock = [
+export const registryAllProductionVaultsMock = [
   {
     version: 'v1',
     status: 0,

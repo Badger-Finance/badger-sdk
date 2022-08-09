@@ -18,7 +18,6 @@ import {
   VaultV15__factory,
 } from '../contracts';
 import { RegistryService } from '../registry';
-import { RegistryV2Service } from '../registry.v2';
 import { RewardsService } from '../rewards';
 import { BadgerSDK } from '../sdk';
 import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
@@ -31,7 +30,6 @@ export function mockSDK(): BadgerSDK {
   mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
 
   jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
-  jest.spyOn(RegistryV2Service.prototype, 'ready').mockImplementation();
   jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
 
   const mockMulticall = mock<providers.MulticallProvider>();

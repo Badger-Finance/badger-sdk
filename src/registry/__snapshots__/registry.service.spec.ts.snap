@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RegistryV2Service methods getFilteredProductionVaults should return mapped vaults 1`] = `
+exports[`RegistryService methods getFilteredProductionVaults should return mapped vaults 1`] = `
 Array [
   Object {
     "address": "0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906",
@@ -45,7 +45,7 @@ Array [
 ]
 `;
 
-exports[`RegistryV2Service methods getProductionVaults should return mapped vaults and parsed metadata 1`] = `
+exports[`RegistryService methods getProductionVaults should return mapped vaults and parsed metadata 1`] = `
 Array [
   Object {
     "address": "0xFce6e3115D84c94df98BD286C1C67279dc021361",
@@ -230,7 +230,7 @@ Array [
 ]
 `;
 
-exports[`RegistryV2Service methods getVaults should return mapped vaults 1`] = `
+exports[`RegistryService methods getVaults should return mapped vaults 1`] = `
 Array [
   Object {
     "address": "0x96d4dBdc91Bef716eb407e415c9987a9fAfb8906",

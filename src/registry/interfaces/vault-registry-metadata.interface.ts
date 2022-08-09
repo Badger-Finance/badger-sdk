@@ -1,4 +1,4 @@
-export interface VaultRegistryV2Metadata {
+export interface VaultRegistryMetadata {
   name?: string;
   protocol?: string;
   behavior?: string;

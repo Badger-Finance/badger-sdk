@@ -1,6 +1,6 @@
 import { ServicesArgsConfig } from './struct.types.config';
 import { SdkServices } from '../enums';
-import { RegistryKey, VaultVersion } from '../../../src';
+import { RegistryKey, VaultState, VaultVersion } from '../../../src';
 import { ethers } from 'ethers';
 
 export const baseServiceArgsConfig = {
@@ -83,7 +83,9 @@ export const baseArgsConfig: ServicesArgsConfig = {
     listHarvests: { args: [{ address: vaults.BBADGER }] },
     getVaultStrategy: { args: [{ address: vaults.BCVX.addr }] },
     getPendingHarvest: { args: [vaults.BCVX.addr] },
-    getDepositCaps: { args: [{ address: '0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378' }] },
+    getDepositCaps: {
+      args: [{ address: '0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378' }],
+    },
   },
   [SdkServices.Tokens]: {
     loadTokens: { args: [[tokens.BADGER, tokens.WBTC, tokens.DIGG]] },
@@ -107,6 +109,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     getProductionVaults: { args: [] },
     getVaults: { args: [VaultVersion.v1, bcrvBadgerAuthor] },
     hasRegistry: { args: [] },
+    keysCount: { args: [] },
+    getFilteredProductionVaults: { args: [VaultVersion.v1_5, VaultState.Open] },
   },
   [SdkServices.Ibbtc]: {
     getPricePerFullShare: { args: [lastIbBTCBlock] },
