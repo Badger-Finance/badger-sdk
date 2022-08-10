@@ -7,15 +7,14 @@ import { mock, MockProxy } from 'jest-mock-extended';
 import { VaultState } from '../api';
 import { Network } from '../config';
 import { RegistryV2, RegistryV2__factory } from '../contracts';
-import { RegistryService } from '../registry';
 import { RewardsService } from '../rewards';
 import { BadgerSDK } from '../sdk';
 import { TEST_ADDR } from '../tests/tests.constants';
 import { VaultVersion } from '../vaults';
-import { registryV2AllProductionVaultsMock } from './mocks/registry-v2-all-production-vaults.mock';
-import { registryV2ProductionVaultsMock } from './mocks/registry-v2-production-vaults.mock';
+import { registryAllProductionVaultsMock } from './mocks/registry-all-production-vaults.mock';
+import { registryProductionVaultsMock } from './mocks/registry-production-vaults.mock';
 
-describe('RegistryV2Service', () => {
+describe('RegistryService', () => {
   function prepareSdkMocks(currBlock = 39039987): {
     mockProvider: MockProxy<JsonRpcProvider>;
     registryV2: MockProxy<RegistryV2>;
@@ -30,7 +29,6 @@ describe('RegistryV2Service', () => {
       .calledWith()
       .mockImplementation(async () => currBlock);
 
-    jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
     jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
 
     const registryV2 = mock<RegistryV2>();
@@ -64,7 +62,7 @@ describe('RegistryV2Service', () => {
 
       await sdk.ready();
 
-      expect(sdk.registryV2.registry).toBe(registryV2);
+      expect(sdk.registry.registry).toBe(registryV2);
     });
 
     it('should throw an error, if registry not deployed', async () => {
@@ -77,8 +75,8 @@ describe('RegistryV2Service', () => {
 
       await sdk.ready();
 
-      expect(sdk.registryV2.hasRegistry()).toBeFalsy();
-      expect(() => sdk.registryV2.registry).toThrowError();
+      expect(sdk.registry.hasRegistry()).toBeFalsy();
+      expect(() => sdk.registry.registry).toThrowError();
     });
   });
 
@@ -107,7 +105,7 @@ describe('RegistryV2Service', () => {
           async () => '0x45b798384c236ef0d78311D98AcAEc222f8c6F54',
         );
 
-        const keyValue = await sdk.registryV2.get('treasuryVault');
+        const keyValue = await sdk.registry.get('treasuryVault');
 
         expect(keyValue).toBe(treasuryVaultAddr);
         expect(registryV2.get.mock.calls.length).toBe(1);
@@ -121,7 +119,7 @@ describe('RegistryV2Service', () => {
           BigNumber.from(keysCnt),
         );
 
-        const sdkKeyCnt = await sdk.registryV2.keysCount();
+        const sdkKeyCnt = await sdk.registry.keysCount();
 
         expect(sdkKeyCnt).toBe(keysCnt);
       });
@@ -131,11 +129,11 @@ describe('RegistryV2Service', () => {
       it('should return mapped vaults', async () => {
         registryV2.getVaults.mockImplementation(
           // @ts-ignore
-          async () => registryV2ProductionVaultsMock,
+          async () => registryProductionVaultsMock,
         );
 
         expect(
-          await sdk.registryV2.getVaults(
+          await sdk.registry.getVaults(
             VaultVersion.v1_5,
             '0x781E82D5D49042baB750efac91858cB65C6b0582',
           ),
@@ -147,11 +145,11 @@ describe('RegistryV2Service', () => {
       it('should return mapped vaults', async () => {
         registryV2.getFilteredProductionVaults.mockImplementation(
           // @ts-ignore
-          async () => registryV2ProductionVaultsMock,
+          async () => registryProductionVaultsMock,
         );
 
         expect(
-          await sdk.registryV2.getFilteredProductionVaults(
+          await sdk.registry.getFilteredProductionVaults(
             VaultVersion.v1_5,
             VaultState.Open,
           ),
@@ -163,10 +161,10 @@ describe('RegistryV2Service', () => {
       it('should return mapped vaults and parsed metadata', async () => {
         registryV2.getProductionVaults.mockImplementation(
           // @ts-ignore
-          async () => registryV2AllProductionVaultsMock,
+          async () => registryAllProductionVaultsMock,
         );
 
-        expect(await sdk.registryV2.getProductionVaults()).toMatchSnapshot();
+        expect(await sdk.registry.getProductionVaults()).toMatchSnapshot();
       });
     });
   });

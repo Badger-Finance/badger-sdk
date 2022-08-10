@@ -64,7 +64,7 @@ export class MocksProcessor {
       const sdk = new BadgerSDK({
         network,
         provider: MocksProcessor.getNodeRpcUrl(network),
-        baseURL: 'https://staging-api.badger.com/'
+        baseURL: 'https://staging-api.badger.com/',
       });
 
       await sdk.ready();

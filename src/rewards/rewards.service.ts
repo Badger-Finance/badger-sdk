@@ -156,10 +156,7 @@ export class RewardsService extends Service {
   private async init() {
     try {
       await this.sdk.registry.ready();
-      await this.sdk.registryV2.ready();
 
-      // todo, here isnt convinient to propagate RegistryV2 usage, so
-      // just replace in post-migration process
       const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
         this.sdk.registry.get(RegistryKey.BadgerTree),
         this.sdk.registry.get(RegistryKey.RewardsLogger),

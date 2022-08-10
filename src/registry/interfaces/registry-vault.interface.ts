@@ -1,7 +1,7 @@
 import { VaultState } from '../../api';
-import { VaultRegistryV2Entry } from '../../registry.v2';
 import { Token } from '../../tokens';
 import { VaultVersion } from '../../vaults/';
+import { VaultRegistryEntry } from './vault-registry-entry.interface';
 
 export interface RegistryVault extends Token {
   address: string;
@@ -13,5 +13,5 @@ export interface RegistryVault extends Token {
   token: Token;
   state: VaultState;
   version: VaultVersion;
-  metadata?: VaultRegistryV2Entry['metadata'];
+  metadata: VaultRegistryEntry['metadata'];
 }

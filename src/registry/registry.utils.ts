@@ -1,11 +1,11 @@
 import { BadgerRegistry } from '../contracts/RegistryV2';
 import VaultInfoStructOutput = BadgerRegistry.VaultInfoStructOutput;
 import { getVaultRegv2State, getVaultVersion } from '../vaults';
-import { VaultRegistryV2Entry, VaultRegistryV2Metadata } from './interfaces';
+import { VaultRegistryEntry, VaultRegistryMetadata } from './interfaces';
 
 export function chainRegVaultToEntry(
   vaultInfo: VaultInfoStructOutput,
-): VaultRegistryV2Entry {
+): VaultRegistryEntry {
   return {
     address: vaultInfo.vault,
     state: getVaultRegv2State(vaultInfo.status),
@@ -14,10 +14,22 @@ export function chainRegVaultToEntry(
   };
 }
 
+export function getEmptyMetadata(): VaultRegistryMetadata {
+  return {
+    name: 'unknown',
+    protocol: 'unknown',
+    behavior: 'unknown',
+  };
+}
+
 export function parseRegVaultMetadata(
   metadata: VaultInfoStructOutput['metadata'],
-): VaultRegistryV2Metadata {
-  const parsedMetaData: VaultRegistryV2Metadata = {};
+): VaultRegistryMetadata {
+  const parsedMetaData: VaultRegistryMetadata = {
+    name: 'unknown',
+    protocol: 'unknown',
+    behavior: 'unknown',
+  };
 
   if (!metadata) return parsedMetaData;
 

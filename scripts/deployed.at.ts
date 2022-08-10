@@ -9,10 +9,6 @@ import { ethers } from 'ethers';
 import axios from 'axios';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
-import {
-  citadelMinterAddress,
-  stakedCitadelLockerAddress,
-} from '../src/citadel/citadel.service';
 import { DeployedAtMap } from '../src/utils/deployed-at.util';
 
 // env var example: ETHEREUM_RPC_NODE=https://alchemynode.com
@@ -21,7 +17,7 @@ const DEPLOYED_AT_FILE_NAME = 'deployed.at.json';
 const DEPLOYED_AT_SAVE_PATH = 'src/data';
 
 const ADDRS_TO_SCAN = {
-  [`${Network.Ethereum}`]: [citadelMinterAddress, stakedCitadelLockerAddress],
+  [`${Network.Ethereum}`]: [],
 };
 
 let currentChain: string;
