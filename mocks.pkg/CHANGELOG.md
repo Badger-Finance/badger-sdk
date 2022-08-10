@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.11...sdk-mocks-v1.17.0) (2022-08-10)
+
+
+### Bug Fixes
+
+* make metadata required for registryVaults ([c632ebf](https://github.com/Badger-Finance/badger-sdk/commit/c632ebfc6bdab426a85b151a5e2acf276efb5140))
+
+
+### Features
+
+* remove old registry, replace it with V2, typings etc ([7a0c770](https://github.com/Badger-Finance/badger-sdk/commit/7a0c770ae09d56172380e63f41b9e56aeb26a9bc))
+
 ## [1.16.11](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.16.10...sdk-mocks-v1.16.11) (2022-08-08)
 
 
