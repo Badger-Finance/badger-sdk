@@ -18,6 +18,7 @@ import {
   Vault__factory,
   VaultV15__factory,
 } from '../contracts';
+import { getEmptyMetadata } from '../registry/registry.utils';
 import { Service } from '../service';
 import { formatBalance, TokenBalance } from '../tokens';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
@@ -68,7 +69,7 @@ export class VaultsService extends Service {
 
     this.vaults = Object.fromEntries(
       registryVaults.map((registryVault) => {
-        registryVault.metadata = {};
+        registryVault.metadata = getEmptyMetadata();
 
         const regVault = registry.find(
           (entry) => entry.address === registryVault.address,
@@ -100,7 +101,7 @@ export class VaultsService extends Service {
       );
     }
 
-    let registration;
+    let registration: VaultRegistryEntry;
     const checksumAddress = ethers.utils.getAddress(address);
     const cachedVault = this.vaults[checksumAddress];
     if (!cachedVault) {
@@ -126,19 +127,25 @@ export class VaultsService extends Service {
           address: checksumAddress,
           state,
           version,
+          metadata: getEmptyMetadata(),
         };
       } else {
         registration = vaultRegistration;
       }
     } else {
-      registration = cachedVault;
+      registration = {
+        address: cachedVault.address,
+        version: cachedVault.version,
+        state: cachedVault.state,
+        metadata: cachedVault.metadata,
+      };
     }
 
     if (!cachedVault || update) {
       this.vaults[checksumAddress] = await this.#fetchVault(registration);
     }
 
-    this.vaults[checksumAddress].metadata = registration.metadata || {};
+    this.vaults[checksumAddress].metadata = registration.metadata;
 
     return this.vaults[checksumAddress];
   }
@@ -380,7 +387,7 @@ export class VaultsService extends Service {
   }
 
   async #fetchVault(registryVault: VaultRegistryEntry): Promise<RegistryVault> {
-    const { address, state, version } = registryVault;
+    const { address, state, version, metadata } = registryVault;
 
     const vault = Vault__factory.connect(
       ethers.utils.getAddress(address),
@@ -419,6 +426,7 @@ export class VaultsService extends Service {
       available: formatBalance(available, tokenInfo.decimals),
       pricePerFullShare: formatBalance(pricePerFullShare, decimals),
       token: { ...tokenInfo },
+      metadata,
     };
   }
 

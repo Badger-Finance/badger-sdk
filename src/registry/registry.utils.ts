@@ -14,10 +14,22 @@ export function chainRegVaultToEntry(
   };
 }
 
+export function getEmptyMetadata(): VaultRegistryMetadata {
+  return {
+    name: 'unknown',
+    protocol: 'unknown',
+    behavior: 'unknown',
+  };
+}
+
 export function parseRegVaultMetadata(
   metadata: VaultInfoStructOutput['metadata'],
 ): VaultRegistryMetadata {
-  const parsedMetaData: VaultRegistryMetadata = {};
+  const parsedMetaData: VaultRegistryMetadata = {
+    name: 'unknown',
+    protocol: 'unknown',
+    behavior: 'unknown',
+  };
 
   if (!metadata) return parsedMetaData;
 

@@ -6,5 +6,5 @@ export interface VaultRegistryEntry {
   address: string;
   version: VaultVersion;
   state: VaultState;
-  metadata?: VaultRegistryMetadata;
+  metadata: VaultRegistryMetadata;
 }

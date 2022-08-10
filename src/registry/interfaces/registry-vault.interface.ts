@@ -13,5 +13,5 @@ export interface RegistryVault extends Token {
   token: Token;
   state: VaultState;
   version: VaultVersion;
-  metadata?: VaultRegistryEntry['metadata'];
+  metadata: VaultRegistryEntry['metadata'];
 }
