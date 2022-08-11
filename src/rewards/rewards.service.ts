@@ -8,7 +8,7 @@ import {
   RewardsLogger,
   RewardsLogger__factory,
 } from '../contracts';
-import { DIGG_ADDRESS } from '../digg/digg.service';
+import { DiggService } from '../digg';
 import { RegistryKey } from '../registry/enums/registry-key.enum';
 import { Service } from '../service';
 import { formatBalance } from '../tokens/tokens.utils';
@@ -123,7 +123,7 @@ export class RewardsService extends Service {
         let amount = formatBalance(totalAmount, tokenInfo.decimals);
         if (
           network === Network.Ethereum &&
-          ethers.utils.getAddress(token) === DIGG_ADDRESS
+          ethers.utils.getAddress(token) === DiggService.DIGG_ADDRESS
         ) {
           amount = await this.sdk.digg.convert(totalAmount);
         }

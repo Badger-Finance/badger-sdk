@@ -10,9 +10,10 @@ import {
 import { VaultRegistryEntry } from './interfaces';
 import { chainRegVaultToEntry, parseRegVaultMetadata } from './registry.utils';
 
-export const REGISTRY_V2_ADDRESS = '0xdc602965F3e5f1e7BAf2446d5564b407d5113A06';
-
 export class RegistryService extends Service {
+  static readonly REGISTRY_ADDRESS =
+    '0xdc602965F3e5f1e7BAf2446d5564b407d5113A06';
+
   private loading?: Promise<void>;
   private entries: Record<string, string> = {};
   private _registry?: RegistryV2;
@@ -88,7 +89,9 @@ export class RegistryService extends Service {
 
   async #init() {
     try {
-      const deployed = await this.provider.getCode(REGISTRY_V2_ADDRESS);
+      const deployed = await this.provider.getCode(
+        RegistryService.REGISTRY_ADDRESS,
+      );
       if (deployed === '0x') {
         this.debug(
           `No registry deployed for ${this.sdk.config.network}, skipping...`,
@@ -96,7 +99,7 @@ export class RegistryService extends Service {
         return;
       }
       this._registry = RegistryV2__factory.connect(
-        REGISTRY_V2_ADDRESS,
+        RegistryService.REGISTRY_ADDRESS,
         this.provider,
       );
     } catch (err) {

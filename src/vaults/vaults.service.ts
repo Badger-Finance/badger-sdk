@@ -37,24 +37,19 @@ import {
   loadVaultV15PerformanceEvents,
 } from './vaults.utils';
 
-const wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
-const diggStabilizerVault = '0x608b6D82eb121F3e5C0baeeD32d81007B916E83C';
-
 export class VaultsService extends Service {
+  private wbtcYearnVault = '0x4b92d19c11435614CD49Af1b589001b7c08cD4D5';
+
   private vaults: Record<string, RegistryVault> = {};
 
   async loadVaults(): Promise<RegistryVault[]> {
     const registry = await this.sdk.registry.getProductionVaults();
-
-    const registryVaultsInfo = registry.filter(
-      (v) => v.address !== diggStabilizerVault,
-    );
     const serializedCachedVaults = JSON.stringify(
       Object.keys(this.vaults).sort(),
     );
 
     const serializedRegistryVaultsAddresses = JSON.stringify(
-      registryVaultsInfo.map((registryVault) => registryVault.address).sort(),
+      registry.map((registryVault) => registryVault.address).sort(),
     );
 
     // this serialization is to perform a simple array of string comparison to check if the cached vault addresses are
@@ -64,7 +59,7 @@ export class VaultsService extends Service {
     }
 
     const registryVaults = await Promise.all(
-      registryVaultsInfo.map((info) => this.#fetchVault(info)),
+      registry.map((info) => this.#fetchVault(info)),
     );
 
     this.vaults = Object.fromEntries(
@@ -436,19 +431,19 @@ export class VaultsService extends Service {
   #getVaultVariantData(
     vault: Vault,
   ): [Promise<BigNumber>, Promise<BigNumber>, Promise<BigNumber>] {
-    const isYearnWbtc = vault.address === wbtcYearnVault;
+    const isYearnWbtc = vault.address === this.wbtcYearnVault;
 
     // the byvWBTC vault wrapper does not have the standard available, balance and price per full share method
     if (isYearnWbtc) {
       const byvWbtc = Byvwbtc__factory.connect(
-        ethers.utils.getAddress(wbtcYearnVault),
+        ethers.utils.getAddress(this.wbtcYearnVault),
         this.sdk.provider,
       );
 
       return [
         // TODO: update this to the correct amount
         Promise.resolve(BigNumber.from(0)),
-        byvWbtc.totalVaultBalance(ethers.utils.getAddress(wbtcYearnVault)),
+        byvWbtc.totalVaultBalance(ethers.utils.getAddress(this.wbtcYearnVault)),
         byvWbtc.pricePerShare(),
       ];
     }

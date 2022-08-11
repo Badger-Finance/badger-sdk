@@ -26,20 +26,20 @@ import {
 import { ZAP_POOL_IDS, ZAP_SUPPORTED_TOKENS } from './ibbtc.config';
 import { IbBtcActionOptions } from './interfaces';
 
-export const IBBTC_ADDRESS = ethers.utils.getAddress(
-  '0xc4e15973e6ff2a35cc804c2cf9d2a1b817a8b40f',
-);
-export const VAULT_PEAK = ethers.utils.getAddress(
-  '0x41671BA1abcbA387b9b2B752c205e22e916BE6e3',
-);
-export const VAULT_ZAP = ethers.utils.getAddress(
-  '0x27Fb47B9Fb32B9cF660C4E0128bE0f4e883f3df1',
-);
-export const TOKEN_ZAP = ethers.utils.getAddress(
-  '0xe8E40093017A3A55B5c2BC3E9CA6a4d208c07734',
-);
-
 export class ibBTCService extends Service {
+  static readonly IBBTC_ADDRESS = ethers.utils.getAddress(
+    '0xc4e15973e6ff2a35cc804c2cf9d2a1b817a8b40f',
+  );
+  static readonly VAULT_PEAK = ethers.utils.getAddress(
+    '0x41671BA1abcbA387b9b2B752c205e22e916BE6e3',
+  );
+  static readonly VAULT_ZAP = ethers.utils.getAddress(
+    '0x27Fb47B9Fb32B9cF660C4E0128bE0f4e883f3df1',
+  );
+  static readonly TOKEN_ZAP = ethers.utils.getAddress(
+    '0xe8E40093017A3A55B5c2BC3E9CA6a4d208c07734',
+  );
+
   private _ibBTC?: Ibbtc;
   private _vaultPeak?: VaultPeak;
   private _vaultZap?: VaultZap;
@@ -48,10 +48,22 @@ export class ibBTCService extends Service {
   constructor(sdk: BadgerSDK) {
     super(sdk);
     if (this.config.network === Network.Ethereum) {
-      this._ibBTC = Ibbtc__factory.connect(IBBTC_ADDRESS, this.connector);
-      this._vaultPeak = VaultPeak__factory.connect(VAULT_PEAK, this.connector);
-      this._vaultZap = VaultZap__factory.connect(VAULT_ZAP, this.connector);
-      this._tokenZap = TokenZap__factory.connect(TOKEN_ZAP, this.connector);
+      this._ibBTC = Ibbtc__factory.connect(
+        ibBTCService.IBBTC_ADDRESS,
+        this.connector,
+      );
+      this._vaultPeak = VaultPeak__factory.connect(
+        ibBTCService.VAULT_PEAK,
+        this.connector,
+      );
+      this._vaultZap = VaultZap__factory.connect(
+        ibBTCService.VAULT_ZAP,
+        this.connector,
+      );
+      this._tokenZap = TokenZap__factory.connect(
+        ibBTCService.TOKEN_ZAP,
+        this.connector,
+      );
     }
   }
 
@@ -252,8 +264,8 @@ export class ibBTCService extends Service {
       const allowanceTransactionStatus =
         await this.sdk.tokens.verifyOrIncreaseAllowance({
           ...options,
-          token: IBBTC_ADDRESS,
-          spender: VAULT_ZAP,
+          token: ibBTCService.IBBTC_ADDRESS,
+          spender: ibBTCService.VAULT_ZAP,
         });
 
       if (allowanceTransactionStatus !== TransactionStatus.Success) {
