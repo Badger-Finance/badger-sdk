@@ -61,7 +61,6 @@ export class BadgerSDK {
   }
 
   ready() {
-    console.log('called ready');
     return Promise.all([
       this.#initialize(),
       this.registry.ready(),
