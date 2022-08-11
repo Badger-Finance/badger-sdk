@@ -1,4 +1,11 @@
-export const ONE_MIN_MS = 60 * 1000;
-export const ONE_HOUR_MS = 60 * ONE_MIN_MS;
-export const ONE_DAY_MS = 24 * ONE_HOUR_MS;
-export const ONE_YEAR_MS = 365 * ONE_DAY_MS;
+export const ONE_MINUTE_SECONDS = 60;
+export const ONE_HOUR_SECONDS = ONE_MINUTE_SECONDS * 60;
+export const ONE_DAY_SECONDS = ONE_HOUR_SECONDS * 24;
+export const ONE_WEEK_SECONDS = ONE_DAY_SECONDS * 7;
+export const ONE_YEAR_SECONDS = ONE_DAY_SECONDS * 365;
+
+export const ONE_SECOND_MS = 1000;
+export const ONE_MINUTE_MS = ONE_MINUTE_SECONDS * ONE_SECOND_MS;
+export const ONE_HOUR_MS = ONE_HOUR_SECONDS * ONE_SECOND_MS;
+export const ONE_DAY_MS = ONE_DAY_SECONDS * ONE_SECOND_MS;
+export const ONE_YEAR_MS = ONE_YEAR_SECONDS * ONE_SECOND_MS;
