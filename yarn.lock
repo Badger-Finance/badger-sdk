@@ -53,7 +53,7 @@
   resolved "https://registry.yarnpkg.com/@0xsequence/guard/-/guard-0.39.6.tgz#7b06ae1c7c3f8f0c74b854395c02c4a2e4e384b4"
   integrity sha512-PZk4KulqSWStO5OBSHAn9Mxq2Vul86PcV1/Eqy0s906CG6GgtfqDUV4/RE7wbIMBgctqElcHwdrD2mQnIs5qKA==
 
-"@0xsequence/indexer@^0.39.5", "@0xsequence/indexer@^0.39.6":
+"@0xsequence/indexer@^0.39.6":
   version "0.39.6"
   resolved "https://registry.yarnpkg.com/@0xsequence/indexer/-/indexer-0.39.6.tgz#1063d061f8a219d3db12481b667ae6b58abd5a1a"
   integrity sha512-FmiwCsTrhyc1XJUNdhj0Hje0yZTr6bj7s1rXHIQVtNBoFig0G4xvK9dM8CvquRfALD5H8+U/eccvstt6HG87Fg==
@@ -67,7 +67,7 @@
   dependencies:
     cross-fetch "^3.1.5"
 
-"@0xsequence/multicall@^0.39.5", "@0xsequence/multicall@^0.39.6":
+"@0xsequence/multicall@^0.39.6":
   version "0.39.6"
   resolved "https://registry.yarnpkg.com/@0xsequence/multicall/-/multicall-0.39.6.tgz#ebf79eb3b080aa92ad4d3cdde2acdce75b22ba3b"
   integrity sha512-oHgxAuYoanYXKArrzPF+a8f9CAzDX5xYp+U+bcCd3qOagIn1xeQCEW4zbnGDRD+ZguhlcP2I7wiW1eImmoOi1g==
@@ -87,7 +87,7 @@
     "@ethersproject/providers" "^5.5.1"
     ethers "^5.5.2"
 
-"@0xsequence/provider@^0.39.5":
+"@0xsequence/provider@^0.39.6":
   version "0.39.6"
   resolved "https://registry.yarnpkg.com/@0xsequence/provider/-/provider-0.39.6.tgz#3d0212799665cb7c6cf569f3ec9ee9c4840ffb34"
   integrity sha512-i8ZLRwuGvqEulWPnbWpEhXOMwShQ7oaD8DCbOs0+y7i8xuAsm+lCAZXJdmYRPt+DRHiG+lVnCAWoucdBbC1LMw==
@@ -107,7 +107,7 @@
     eventemitter2 "^6.4.5"
     webextension-polyfill-ts "^0.26.0"
 
-"@0xsequence/relayer@^0.39.5", "@0xsequence/relayer@^0.39.6":
+"@0xsequence/relayer@^0.39.6":
   version "0.39.6"
   resolved "https://registry.yarnpkg.com/@0xsequence/relayer/-/relayer-0.39.6.tgz#6579961f464fc48c54b7233eb102d6b872e97643"
   integrity sha512-sgeNeb5DvpcznmAqN5oeYQCY+iC9W5hrg3ohSavm15d67x7SIKW/ia9drqEj806MlC30zU+vPFzO2UjPHcBdJw==
