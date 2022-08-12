@@ -28,15 +28,15 @@
     "scripts:deployed": "ts-node -r dotenv/config scripts/deployed.at.ts"
   },
   "dependencies": {
-    "@0xsequence/indexer": "0.40.5",
-    "@0xsequence/multicall": "0.40.5",
-    "@0xsequence/provider": "0.40.5",
-    "@0xsequence/relayer": "0.40.5",
-    "axios": "0.23.0",
-    "ethers": "5.6.9",
-    "graphql": "16.5.0",
-    "graphql-request": "4.3.0",
-    "graphql-tag": "2.12.6"
+    "@0xsequence/indexer": "^0.39.6",
+    "@0xsequence/multicall": "^0.39.6",
+    "@0xsequence/provider": "^0.39.6",
+    "@0xsequence/relayer": "^0.39.6",
+    "axios": "^0.24.0",
+    "ethers": "^5.5.2",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.1",
