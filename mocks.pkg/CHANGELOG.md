@@ -1,3 +1,11 @@
+## [1.17.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.1...sdk-mocks-v1.17.2) (2022-08-12)
+
+
+### Bug Fixes
+
+* align ethers + 0xsequence dependencies ([f71dffa](https://github.com/Badger-Finance/badger-sdk/commit/f71dffac23d14654ff91634f2705c2aac7fb51bd))
+* rollback sequence packages ([921cf10](https://github.com/Badger-Finance/badger-sdk/commit/921cf10c520ecea707652cd3157ca07365b7d97f))
+
 ## [1.17.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.0...sdk-mocks-v1.17.1) (2022-08-11)
 
 
