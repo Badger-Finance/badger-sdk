@@ -157,10 +157,15 @@ export class RewardsService extends Service {
     try {
       await this.sdk.registry.ready();
 
+      if (!this.sdk.registry.hasRegistry()) {
+        return;
+      }
+
       const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
         this.sdk.registry.get(RegistryKey.BadgerTree),
         this.sdk.registry.get(RegistryKey.RewardsLogger),
       ]);
+
       if (badgerTreeAddress) {
         this._badgerTree = BadgerTree__factory.connect(
           badgerTreeAddress,
