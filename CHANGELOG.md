@@ -1,3 +1,10 @@
+## [1.17.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.2...v1.17.3) (2022-08-18)
+
+
+### Bug Fixes
+
+* check for registry before attempting to load vaults ([20f4f3b](https://github.com/Badger-Finance/badger-sdk/commit/20f4f3b21415c1fc2369c191438a283d5e8e25a4))
+
 ## [1.17.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.1...v1.17.2) (2022-08-12)
 
 
