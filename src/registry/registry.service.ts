@@ -73,6 +73,13 @@ export class RegistryService extends Service {
   }
 
   async getProductionVaults(): Promise<VaultRegistryEntry[]> {
+    if (!this.hasRegistry()) {
+      this.debug(
+        `${this.config.network} does not have a registry. No vaults are discoverable.`,
+      );
+      return [];
+    }
+
     const prdVaults = await this.registry.getProductionVaults();
 
     return prdVaults
