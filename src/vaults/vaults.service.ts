@@ -43,6 +43,11 @@ export class VaultsService extends Service {
   private vaults: Record<string, RegistryVault> = {};
 
   async loadVaults(): Promise<RegistryVault[]> {
+    if (!this.sdk.registry.hasRegistry()) {
+      this.debug(`${this.config.network} does not have a registry. No vaults are discoverable.`);
+      return [];
+    }
+
     const registry = await this.sdk.registry.getProductionVaults();
     const serializedCachedVaults = JSON.stringify(
       Object.keys(this.vaults).sort(),
