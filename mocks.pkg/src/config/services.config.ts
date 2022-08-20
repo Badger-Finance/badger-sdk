@@ -1,9 +1,5 @@
 import { Network } from '../../../src';
-import {
-  ServicesArgsConfig,
-  NetworksArgsConfigMap,
-  ServicesMethodsList,
-} from './struct.types.config';
+import { ServicesArgsConfig, NetworksArgsConfigMap, ServicesMethodsList } from './struct.types.config';
 import { ethArgsConfig } from './eth.config';
 import { SdkServices } from '../enums';
 import { RelevantNetworks } from '../types';

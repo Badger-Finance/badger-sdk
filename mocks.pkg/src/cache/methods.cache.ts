@@ -56,9 +56,9 @@ export class MethodsCache {
 
   getRelevantServicesMethods() {
     return ServicesConfig.listServices.reduce((acc, service) => {
-      acc[service] = Object.getOwnPropertyNames(
-        this.serviceClsMap[service],
-      ).filter((method) => !this.methodsToSkip.includes(method));
+      acc[service] = Object.getOwnPropertyNames(this.serviceClsMap[service]).filter(
+        (method) => !this.methodsToSkip.includes(method),
+      );
       return acc;
     }, {} as ServicesMethodsList);
   }
@@ -71,43 +71,34 @@ export class MethodsCache {
     };
 
     ServicesConfig.listServices.forEach((service) => {
-      Object.keys(<MethodsMap>this.newCacheRecords[service]).forEach(
-        (method) => {
-          const newMethodsCache = this.newCacheRecords[service]?.[method];
-          const oldMethodsCache = this.oldCacheRecords[service]?.[method];
+      Object.keys(<MethodsMap>this.newCacheRecords[service]).forEach((method) => {
+        const newMethodsCache = this.newCacheRecords[service]?.[method];
+        const oldMethodsCache = this.oldCacheRecords[service]?.[method];
 
-          if (newMethodsCache !== oldMethodsCache) {
-            if (cacheMissMatch[service]) {
-              (<string[]>cacheMissMatch[service]).push(method);
-            } else {
-              cacheMissMatch[service] = [method];
-            }
-            cacheMissMatch.length++;
+        if (newMethodsCache !== oldMethodsCache) {
+          if (cacheMissMatch[service]) {
+            (<string[]>cacheMissMatch[service]).push(method);
+          } else {
+            cacheMissMatch[service] = [method];
           }
-        },
-      );
+          cacheMissMatch.length++;
+        }
+      });
     });
 
     this.missMatchMethodsNum = cacheMissMatch.length;
 
-    console.log(
-      `Cache missmatch number of methods is ${this.missMatchMethodsNum}`,
-    );
+    console.log(`Cache missmatch number of methods is ${this.missMatchMethodsNum}`);
 
     return cacheMissMatch;
   }
 
   saveToFile() {
-    console.log(
-      `Saving new cache values in ${this.rootDir}/${this.cacheFileName}`,
-    );
+    console.log(`Saving new cache values in ${this.rootDir}/${this.cacheFileName}`);
 
     if (this.missMatchMethodsNum === 0) return;
 
-    this.fsIo.write<MethodsCacheRecordsMap>(
-      this.cacheFileName,
-      this.newCacheRecords,
-    );
+    this.fsIo.write<MethodsCacheRecordsMap>(this.cacheFileName, this.newCacheRecords);
   }
 
   private genNewRecords() {

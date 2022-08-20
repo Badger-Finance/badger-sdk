@@ -17,8 +17,7 @@ type MethodsCacheRecordsLengthMap = {
   length: number;
 };
 
-export type MethodsCacheRecordsDiffMap = ServicesMethodsList &
-  MethodsCacheRecordsLengthMap;
+export type MethodsCacheRecordsDiffMap = ServicesMethodsList & MethodsCacheRecordsLengthMap;
 
 type StandAloneModulesMap = {
   api: BadgerAPI;

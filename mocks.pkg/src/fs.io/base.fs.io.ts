@@ -9,19 +9,12 @@ export class BaseFsIo {
   }
 
   write<T>(fileName: string, data: T, path = '', rootDir = '') {
-    const fullPath = resolve(
-      __dirname,
-      `../../${rootDir || this.rootDir}`,
-      path,
-    );
+    const fullPath = resolve(__dirname, `../../${rootDir || this.rootDir}`, path);
 
     if (!existsSync(fullPath)) {
       mkdirSync(fullPath, { recursive: true });
     }
 
-    writeFileSync(
-      resolve(fullPath, `${fileName}.json`),
-      JSON.stringify(data, null, 2),
-    );
+    writeFileSync(resolve(fullPath, `${fileName}.json`), JSON.stringify(data, null, 2));
   }
 }

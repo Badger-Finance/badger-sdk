@@ -23,14 +23,10 @@ export const vaults = {
     strategy: '0xf2f3ab09e2d8986fbecbba59ae838a5418a6680c',
     token: '0xfbdca68601f835b27790d98bbb8ec7f05fdeaa9b',
     snapshot: '0x1862a18181346ebd9edaf800804f89190def24a5-18719',
-    badgerTreeDistr:
-      '0x0d69481518ed535f88bd698c76551437af98ca3b6dfdbdd1a58a353d853777f8-528',
-    userBalance:
-      '0x000e66639f17982ce2d1d71aafcf443154ed1e08-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28',
-    harvest:
-      '0x0fde871d95ce0280585eda95bf6cfdac0c4c066bdbe4f0b3a80f53ed3aeb246d-169',
-    transfer:
-      '0x001bbab32ed595532975cb96d01b26a09368cee1e2d644deee67117ff0b1f41d-92',
+    badgerTreeDistr: '0x0d69481518ed535f88bd698c76551437af98ca3b6dfdbdd1a58a353d853777f8-528',
+    userBalance: '0x000e66639f17982ce2d1d71aafcf443154ed1e08-0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28',
+    harvest: '0x0fde871d95ce0280585eda95bf6cfdac0c4c066bdbe4f0b3a80f53ed3aeb246d-169',
+    transfer: '0x001bbab32ed595532975cb96d01b26a09368cee1e2d644deee67117ff0b1f41d-92',
   },
   BVECVX: '0xfd05D3C7fe2924020620A8bE4961bBaA747e6305',
 };
