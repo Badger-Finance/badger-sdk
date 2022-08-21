@@ -2,6 +2,7 @@ import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
   clearMocks: true,
+  resetMocks: true,
   coveragePathIgnorePatterns: ['index.ts', '/node_modules/', '/interfaces/', '/enums/', 'test'],
   coverageThreshold: {
     global: {

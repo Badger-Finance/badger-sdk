@@ -15,6 +15,14 @@ export class BaseFsIo {
       mkdirSync(fullPath, { recursive: true });
     }
 
-    writeFileSync(resolve(fullPath, `${fileName}.json`), JSON.stringify(data, null, 2));
+    let stringifiedData = '';
+
+    try {
+      stringifiedData = JSON.stringify(data, null, 2);
+    } catch (error) {
+      throw new Error(`Failed to stringify data: ${error}`);
+    }
+
+    writeFileSync(resolve(fullPath, `${fileName}.json`), stringifiedData);
   }
 }
