@@ -13,7 +13,6 @@ export const methodsToSkip = [
   'verifyOrIncreaseAllowance',
   'getPendingYield', // vaultsV2 WIP method
   'getPendingHarvest', // vaultsV2 WIP method
-  'listHarvests', // failing for some reason, temp
   'mint',
   'redeem',
   'getMulticallProvider',
@@ -27,6 +26,7 @@ export const methodsToSkip = [
   'vaultPeak',
   'vaultZap',
   'tokenZap',
+  'emissionControl'
 ];
 
 export const relevantNetworks: RelevantNetworks[] = [Network.Ethereum];

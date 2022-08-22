@@ -1,6 +1,6 @@
 {
   "digg": {
-    "convert": "RZmmQyQaYGJtA/sjW3nKWR6CACZTPWX+9e+msFa71QU="
+    "convert": "xoqG+KqO4ZrNaXcV+A/5J3bRNhMnVn0eBH/XW/6mN5c="
   },
   "ibbtc": {
     "getPricePerFullShare": "ytUIwAccxjgPG4Ta/nOrgRfXAbbcBot9GJGwkruo62Y=",
@@ -10,15 +10,19 @@
   },
   "registry": {
     "hasRegistry": "pd9fi/lepugwbsCfryUTRCS181jM7ckvDAD+g88m8SM=",
-    "get": "WnwKKk6zqoDBQHWoJlDW6APOjcR24SGoIfw88Zdk2f8=",
-    "getProductionVaults": "A3GAzGJQcRHiIdgX2N1kIdASKwv7DcyF/N0XYHSL/eM=",
-    "getVaults": "W9hfSuneYVSTy6bMNYdz9za7lHEYTdZo2A7AV1f7AXs="
+    "get": "ghDo5zdF9c/vY9HRqIVLn0EpHtHuQsuM/qsyIgkv8hw=",
+    "keysCount": "HrHoGWBCgGJi7iHxt3LhLZwXx6s123xHtuylk68BB3M=",
+    "getVaults": "JYhX2OCmPWnepQbulrDTIXXvJUFdIW0DeXuUVMzTWgI=",
+    "getFilteredProductionVaults": "+HJzAANsb6oT37QsRvvq+9h8XjT3y5apVDPQJ8RhxVQ=",
+    "getProductionVaults": "d3oW5wnBKaL+gp8Y2t0YOk/zYXJHIJ+bzy62UcJYAXw="
   },
   "rewards": {
     "hasBadgerTree": "TgmjLihgk1JaoNpob14FZ2mWCp/SdePI1MQRvU1TFMc=",
     "hasRewardsLogger": "7KdtDTxRtqZ0PVBVXi8OWM+N74aI+1vyeneQzdt3CY4=",
+    "hasEmissionControl": "hbDcNnZibL3MidV0p6GYUIubCMj5QtT7LkVvkcjiecQ=",
     "loadActiveSchedules": "j5HeeSPBYfM7zWN+ap/oUPj3GkOIKx7uANnVzT3rEzM=",
-    "loadSchedules": "ngtJD7sEDkUAJJLCvaoUTkf3hYZ3p47/Y+VVVI7YG+Q="
+    "loadSchedules": "0xn0MAls4OqadBE36d5ERMJqLsHZXfc2320nbMLtXQA=",
+    "getBoostWeight": "ZIH/qjhaLCe2/WD9Jxr4IxJu2nZTIFcNOn0Bf7rY3Oo="
   },
   "tokens": {
     "loadTokens": "/MCQGxRlS5T18JEGXGHsay9BlBb/pLKKgc23LA6KzRk=",
@@ -29,8 +33,9 @@
     "loadAllowance": "ACgfq7efjGJ8ZK+4sfy7zhJLYOkGJkI3ADqw/BwTb3A="
   },
   "vaults": {
-    "loadVaults": "8zCfYzRS7iHPHz+L1N1s48+O5lfO+cjb9vQve1TRRiw=",
-    "loadVault": "HJyBRVFqWxNFPM9Xxzn6+T5Q+W52ojcdQweCQxPfOx4=",
+    "loadVaults": "k0EhA+6HqQoqI000FY/hOmHzlYOZNbpKy9fBF1SXXkI=",
+    "loadVault": "1uvCxO2QRmr4Yh1gPQoh2Pu0oMyFpEis/mKxN3lAUlA=",
+    "listHarvests": "aaT8CuTaovoT5SoE40RKqEpQ94kEmR7GWZaQRCJvfxs=",
     "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY=",
     "getDepositCaps": "bFNmc8VV/NSQMz1cIp9deMGT+YJT5eFKV0/IBC5G1Hk="
   },
