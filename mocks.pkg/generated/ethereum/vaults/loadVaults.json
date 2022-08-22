@@ -1,108 +1,13 @@
 [
   {
-    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "name": "Badger Vested Escrow Convex Token",
-    "symbol": "bveCVX",
-    "decimals": 18,
-    "version": "v1",
-    "state": "experimental",
-    "totalSupply": 1809210.1495799043,
-    "balance": 1809210.1495799043,
-    "available": 0,
-    "pricePerFullShare": 1,
-    "token": {
-      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-      "name": "Convex Token",
-      "symbol": "CVX",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x599D92B453C010b1050d31C364f6ee17E819f193",
-    "name": "Badger Sett Interest bearing mStable BTC",
-    "symbol": "bimBTC",
-    "decimals": 18,
-    "version": "v1",
-    "state": "guarded",
-    "totalSupply": 60.03335568165673,
-    "balance": 60.51232444078985,
-    "available": 0,
-    "pricePerFullShare": 1.0079783772486912,
-    "token": {
-      "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
-      "name": "Interest bearing mStable BTC",
-      "symbol": "imBTC",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x26B8efa69603537AC8ab55768b6740b67664D518",
-    "name": "Badger Sett mBTC/HBTC Feeder Pool",
-    "symbol": "bfPmBTC/HBTC",
-    "decimals": 18,
-    "version": "v1",
-    "state": "guarded",
-    "totalSupply": 0.1347195319350676,
-    "balance": 0.1364876666668777,
-    "available": 0,
-    "pricePerFullShare": 1.0131245611264614,
-    "token": {
-      "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
-      "name": "mBTC/HBTC Feeder Pool",
-      "symbol": "fPmBTC/HBTC",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28",
-    "name": "Badger Sett Badger",
-    "symbol": "bBADGER",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 910702.7800983231,
-    "balance": 1124610.1869700644,
-    "available": 1124610.1869700644,
-    "pricePerFullShare": 1.2348816886763505,
-    "token": {
-      "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
-      "name": "Badger",
-      "symbol": "BADGER",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
-    "name": "Badger Sett Curve.fi renBTC/wBTC",
-    "symbol": "bcrvRenWBTC",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 851.6752181534914,
-    "balance": 863.5351548693878,
-    "available": 0,
-    "pricePerFullShare": 1.0139254218780838,
-    "token": {
-      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
-      "name": "Curve.fi renBTC/wBTC",
-      "symbol": "crvRenWBTC",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
     "address": "0xd04c48A53c111300aD41190D63681ed3dAd998eC",
     "name": "Badger Sett Curve.fi renBTC/wBTC/sBTC",
     "symbol": "bcrvRenWSBTC",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 52.202882300862825,
-    "balance": 52.97264440213831,
+    "state": "discontinued",
+    "totalSupply": 45.701009420530994,
+    "balance": 46.37489759473583,
     "available": 0,
     "pricePerFullShare": 1.014745586208039,
     "token": {
@@ -111,7 +16,11 @@
       "symbol": "crvRenWSBTC",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "renBTC/wBTC/sBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0xb9D076fDe463dbc9f915E5392F807315Bf940334",
@@ -119,9 +28,9 @@
     "symbol": "btbtc/sbtcCrv",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 11.149924942206034,
-    "balance": 11.48272909517939,
+    "state": "discontinued",
+    "totalSupply": 10.099579637246524,
+    "balance": 10.401032971146345,
     "available": 0,
     "pricePerFullShare": 1.0298481070229977,
     "token": {
@@ -130,26 +39,11 @@
       "symbol": "tbtc/sbtcCrv",
       "decimals": 18
     },
-    "metadata": {}
-  },
-  {
-    "address": "0x235c9e24D3FB2FAFd58a2E49D454Fdcd2DBf7FF1",
-    "name": "Badger Sett Uniswap V2",
-    "symbol": "bUNI-V2",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 0.007067103091655238,
-    "balance": 0.012798646795794962,
-    "available": 0,
-    "pricePerFullShare": 1.8110174182838046,
-    "token": {
-      "address": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
-      "name": "Uniswap V2",
-      "symbol": "UNI-V2",
-      "decimals": 18
-    },
-    "metadata": {}
+    "metadata": {
+      "name": "tBTC/sBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87",
@@ -157,75 +51,45 @@
     "symbol": "bSupercrvRenWBTC",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 3.8559541023213475,
-    "balance": 3.963562498023537,
+    "state": "discontinued",
+    "totalSupply": 3.147852243850325,
+    "balance": 3.241441181956711,
     "available": 0,
-    "pricePerFullShare": 1.0279070737998173,
+    "pricePerFullShare": 1.029731045441927,
     "token": {
       "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
       "name": "Curve.fi renBTC/wBTC",
       "symbol": "crvRenWBTC",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "renBTC/wBTC",
+      "protocol": "Curve",
+      "behavior": "None"
+    }
   },
   {
-    "address": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
-    "name": "Badger Sett SushiSwap LP Token",
-    "symbol": "bSLP",
+    "address": "0x235c9e24D3FB2FAFd58a2E49D454Fdcd2DBf7FF1",
+    "name": "Badger Sett Uniswap V2",
+    "symbol": "bUNI-V2",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 0.00027928646473071,
-    "balance": 0.00027928646473071,
+    "state": "discontinued",
+    "totalSupply": 0.006185468345534932,
+    "balance": 0.011201990914006876,
     "available": 0,
-    "pricePerFullShare": 1,
+    "pricePerFullShare": 1.8110174182838057,
     "token": {
-      "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
-      "name": "SushiSwap LP Token",
-      "symbol": "SLP",
+      "address": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
+      "name": "Uniswap V2",
+      "symbol": "UNI-V2",
       "decimals": 18
     },
-    "metadata": {}
-  },
-  {
-    "address": "0x1862A18181346EBd9EdAf800804f89190DeF24a5",
-    "name": "Badger Sett SushiSwap LP Token",
-    "symbol": "bSLP",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 0.014026259948348215,
-    "balance": 0.0197220991708033,
-    "available": 0,
-    "pricePerFullShare": 1.4060839627548645,
-    "token": {
-      "address": "0x110492b31c59716AC47337E616804E3E3AdC0b4a",
-      "name": "SushiSwap LP Token",
-      "symbol": "SLP",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
-    "name": "Badger Sett Digg",
-    "symbol": "bDIGG",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 771.9709720245503,
-    "balance": 150.842130926,
-    "available": 0.350285119,
-    "pricePerFullShare": 1.500226690257168,
-    "token": {
-      "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-      "name": "Digg",
-      "symbol": "DIGG",
-      "decimals": 9
-    },
-    "metadata": {}
+    "metadata": {
+      "name": "wBTC/Badger",
+      "protocol": "Uniswap",
+      "behavior": "None"
+    }
   },
   {
     "address": "0xC17078FDd324CC473F8175Dc5290fae5f2E84714",
@@ -233,56 +97,45 @@
     "symbol": "bUNI-V2",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 2.710689111e-9,
-    "balance": 4.522077681e-9,
+    "state": "discontinued",
+    "totalSupply": 2.662996831e-9,
+    "balance": 4.442515554e-9,
     "available": 0,
-    "pricePerFullShare": 1.66823914356293,
+    "pricePerFullShare": 1.6682391440667848,
     "token": {
       "address": "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52",
       "name": "Uniswap V2",
       "symbol": "UNI-V2",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "wBTC/Digg",
+      "protocol": "Uniswap",
+      "behavior": "None"
+    }
   },
   {
-    "address": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
-    "name": "Badger Sett SushiSwap LP Token",
-    "symbol": "bSLP",
+    "address": "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28",
+    "name": "Badger Sett Badger",
+    "symbol": "bBADGER",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 1.6964284774e-8,
-    "balance": 2.9380410653e-8,
-    "available": 0,
-    "pricePerFullShare": 1.7318979871187583,
+    "state": "discontinued",
+    "totalSupply": 815183.6299506156,
+    "balance": 1006655.3375347335,
+    "available": 1006655.3375347335,
+    "pricePerFullShare": 1.2348816886763505,
     "token": {
-      "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
-      "name": "SushiSwap LP Token",
-      "symbol": "SLP",
+      "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "name": "Badger",
+      "symbol": "BADGER",
       "decimals": 18
     },
-    "metadata": {}
-  },
-  {
-    "address": "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
-    "name": "Badger WBTC yVault",
-    "symbol": "byvWBTC",
-    "decimals": 8,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 139.04789348,
-    "balance": 141.96804246,
-    "available": 0,
-    "pricePerFullShare": 1.02100103,
-    "token": {
-      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      "name": "Wrapped BTC",
-      "symbol": "WBTC",
-      "decimals": 8
-    },
-    "metadata": {}
+    "metadata": {
+      "name": "Badger",
+      "protocol": "Badger",
+      "behavior": "None"
+    }
   },
   {
     "address": "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE",
@@ -290,9 +143,9 @@
     "symbol": "bSLP",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 0.000128510422686157,
-    "balance": 0.000128510422686157,
+    "state": "discontinued",
+    "totalSupply": 0.000070903337063328,
+    "balance": 0.000070903337063328,
     "available": 0,
     "pricePerFullShare": 1,
     "token": {
@@ -301,7 +154,11 @@
       "symbol": "SLP",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "wBTC/ibBTC",
+      "protocol": "Sushiswap",
+      "behavior": "None"
+    }
   },
   {
     "address": "0x8c76970747afd5398e958bDfadA4cf0B9FcA16c4",
@@ -309,9 +166,9 @@
     "symbol": "bhCRV",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 0.2726967246323946,
-    "balance": 0.27393237070560966,
+    "state": "discontinued",
+    "totalSupply": 0.2593667135760708,
+    "balance": 0.26054195857244905,
     "available": 0,
     "pricePerFullShare": 1.0045312098078214,
     "token": {
@@ -320,7 +177,11 @@
       "symbol": "hCRV",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "hBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0x55912D0Cf83B75c492E761932ABc4DB4a5CB1b17",
@@ -328,9 +189,9 @@
     "symbol": "bpBTC/sbtcCRV",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 0.030344531820204006,
-    "balance": 0.03046218451007627,
+    "state": "discontinued",
+    "totalSupply": 0.007449730239945854,
+    "balance": 0.007478614547891209,
     "available": 0,
     "pricePerFullShare": 1.0038772287069504,
     "token": {
@@ -339,7 +200,11 @@
       "symbol": "pBTC/sbtcCRV",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "pBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0xf349c0faA80fC1870306Ac093f75934078e28991",
@@ -347,9 +212,9 @@
     "symbol": "boBTC/sbtcCRV",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 5.709288768372271,
-    "balance": 5.741269294503195,
+    "state": "discontinued",
+    "totalSupply": 5.636802730784535,
+    "balance": 5.668377227072996,
     "available": 0,
     "pricePerFullShare": 1.0056014903831958,
     "token": {
@@ -358,7 +223,11 @@
       "symbol": "oBTC/sbtcCRV",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "oBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0x5Dce29e92b1b939F8E8C60DcF15BDE82A85be4a9",
@@ -366,7 +235,7 @@
     "symbol": "bbBTC/sbtcCRV",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
+    "state": "discontinued",
     "totalSupply": 0.0106989518087916,
     "balance": 0.01073050870987165,
     "available": 0,
@@ -377,7 +246,11 @@
       "symbol": "bBTC/sbtcCRV",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "bBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2",
@@ -385,7 +258,7 @@
     "symbol": "bcrvTricrypto",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
+    "state": "discontinued",
     "totalSupply": 0.14846291327475586,
     "balance": 0.1610241919976674,
     "available": 0,
@@ -396,45 +269,11 @@
       "symbol": "crvTricrypto",
       "decimals": 18
     },
-    "metadata": {}
-  },
-  {
-    "address": "0x27E98fC7d05f54E544d16F58C194C2D7ba71e3B5",
-    "name": "Badger Sett Curve.fi USD-BTC-ETH",
-    "symbol": "bcrv3crypto",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 1646.9046284626709,
-    "balance": 1677.601292874765,
-    "available": 0,
-    "pricePerFullShare": 1.018639005490408,
-    "token": {
-      "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
-      "name": "Curve.fi USD-BTC-ETH",
-      "symbol": "crv3crypto",
-      "decimals": 18
-    },
-    "metadata": {}
-  },
-  {
-    "address": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
-    "name": "Badger Sett Convex CRV",
-    "symbol": "bcvxCRV",
-    "decimals": 18,
-    "version": "v1",
-    "state": "open",
-    "totalSupply": 2829004.0544120446,
-    "balance": 4182733.476519503,
-    "available": 0,
-    "pricePerFullShare": 1.478518021208282,
-    "token": {
-      "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
-      "name": "Convex CRV",
-      "symbol": "cvxCRV",
-      "decimals": 18
-    },
-    "metadata": {}
+    "metadata": {
+      "name": "Tricrypto",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
   },
   {
     "address": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
@@ -442,9 +281,9 @@
     "symbol": "bCVX",
     "decimals": 18,
     "version": "v1",
-    "state": "open",
-    "totalSupply": 33135.388940104625,
-    "balance": 36309.72139529907,
+    "state": "discontinued",
+    "totalSupply": 25723.32960352157,
+    "balance": 28187.595230936444,
     "available": 0,
     "pricePerFullShare": 1.0957988590667325,
     "token": {
@@ -453,6 +292,539 @@
       "symbol": "CVX",
       "decimals": 18
     },
-    "metadata": {}
+    "metadata": {
+      "name": "CVX",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x599D92B453C010b1050d31C364f6ee17E819f193",
+    "name": "Badger Sett Interest bearing mStable BTC",
+    "symbol": "bimBTC",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 57.48216689472634,
+    "balance": 57.940781307284695,
+    "available": 0,
+    "pricePerFullShare": 1.0079783772486912,
+    "token": {
+      "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
+      "name": "Interest bearing mStable BTC",
+      "symbol": "imBTC",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "imBTC",
+      "protocol": "mStable",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x26B8efa69603537AC8ab55768b6740b67664D518",
+    "name": "Badger Sett mBTC/HBTC Feeder Pool",
+    "symbol": "bfPmBTC/HBTC",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 0.1347195319350676,
+    "balance": 0.1364876666668777,
+    "available": 0,
+    "pricePerFullShare": 1.0131245611264614,
+    "token": {
+      "address": "0x48c59199Da51B7E30Ea200a74Ea07974e62C4bA7",
+      "name": "mBTC/HBTC Feeder Pool",
+      "symbol": "fPmBTC/HBTC",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "mhBTC",
+      "protocol": "mStable",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x19E4d89e0cB807ea21B8CEF02df5eAA99A110dA5",
+    "name": "Badger Sett Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+    "symbol": "bMIM-3LP3CRV-f",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 150.12219670527918,
+    "balance": 150.12219670527918,
+    "available": 0.7288598391322803,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
+      "name": "Curve.fi Factory USD Metapool: Magic Internet Money 3Pool",
+      "symbol": "MIM-3LP3CRV-f",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "MIM/3CRV",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x15cBC4ac1e81c97667780fE6DAdeDd04a6EEB47B",
+    "name": "Badger Sett Curve.fi Factory USD Metapool: Frax",
+    "symbol": "bFRAX3CRV-f",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 148.89773963942488,
+    "balance": 148.89773963942488,
+    "available": 0,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
+      "name": "Curve.fi Factory USD Metapool: Frax",
+      "symbol": "FRAX3CRV-f",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "FRAX/3CRV",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 8.938703972e-9,
+    "balance": 1.5480923435e-8,
+    "available": 0,
+    "pricePerFullShare": 1.7318979891820048,
+    "token": {
+      "address": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "wBTC/Digg",
+      "protocol": "Sushiswap",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
+    "name": "Badger Sett Digg",
+    "symbol": "bDIGG",
+    "decimals": 18,
+    "version": "v1",
+    "state": "discontinued",
+    "totalSupply": 424.2657195209476,
+    "balance": 82.90097387,
+    "available": 0,
+    "pricePerFullShare": 1.5002266942299445,
+    "token": {
+      "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
+      "name": "Digg",
+      "symbol": "DIGG",
+      "decimals": 9
+    },
+    "metadata": {
+      "name": "Digg",
+      "protocol": "Badger",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
+    "name": "Badger Sett Curve.fi renBTC/wBTC",
+    "symbol": "bcrvRenWBTC",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 736.4320658909754,
+    "balance": 746.6873210628669,
+    "available": 0,
+    "pricePerFullShare": 1.0139255956480981,
+    "token": {
+      "address": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
+      "name": "Curve.fi renBTC/wBTC",
+      "symbol": "crvRenWBTC",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "renBTC/wBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 0.000279279209006408,
+    "balance": 0.000279279209006408,
+    "available": 6.6628841e-11,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "wBTC/wETH",
+      "protocol": "Sushiswap",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x1862A18181346EBd9EdAf800804f89190DeF24a5",
+    "name": "Badger Sett SushiSwap LP Token",
+    "symbol": "bSLP",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 0.013428685753228925,
+    "balance": 0.018881859678489935,
+    "available": 0,
+    "pricePerFullShare": 1.4060839627548656,
+    "token": {
+      "address": "0x110492b31c59716AC47337E616804E3E3AdC0b4a",
+      "name": "SushiSwap LP Token",
+      "symbol": "SLP",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "wBTC/Badger",
+      "protocol": "Sushiswap",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0xeC1c717A3b02582A4Aa2275260C583095536b613",
+    "name": "Badger Sett Curve.fi Factory Crypto Pool: BADGER/WBTC",
+    "symbol": "bBADGERWBTC-f",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 4960.893516555232,
+    "balance": 4960.893516555232,
+    "available": 0,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
+      "name": "Curve.fi Factory Crypto Pool: BADGER/WBTC",
+      "symbol": "BADGERWBTC-f",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "BADGER/WBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
+    "name": "remBADGER",
+    "symbol": "remBADGER",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 1086.3252413472994,
+    "balance": 476968.9107444364,
+    "available": 290.5083158534967,
+    "pricePerFullShare": 439.0663979720129,
+    "token": {
+      "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+      "name": "Badger",
+      "symbol": "BADGER",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "remBadger",
+      "protocol": "Badger",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
+    "name": "Badger WBTC yVault",
+    "symbol": "byvWBTC",
+    "decimals": 8,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 81.06144248,
+    "balance": 82.77094318,
+    "available": 0,
+    "pricePerFullShare": 1.02108895,
+    "token": {
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8
+    },
+    "metadata": {
+      "name": "wBTC",
+      "protocol": "Yearn",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
+    "name": "Badger Sett Convex CRV",
+    "symbol": "bcvxCRV",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 2713767.7028001505,
+    "balance": 4155653.2974646925,
+    "available": 9669.630158168213,
+    "pricePerFullShare": 1.5313224094961257,
+    "token": {
+      "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+      "name": "Convex CRV",
+      "symbol": "cvxCRV",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "cvxCRV",
+      "protocol": "Convex",
+      "behavior": "Ecosystem Helper"
+    }
+  },
+  {
+    "address": "0x27E98fC7d05f54E544d16F58C194C2D7ba71e3B5",
+    "name": "Badger Sett Curve.fi USD-BTC-ETH",
+    "symbol": "bcrv3crypto",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 813.2427575629091,
+    "balance": 830.7993840956173,
+    "available": 0,
+    "pricePerFullShare": 1.0215884203940788,
+    "token": {
+      "address": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
+      "name": "Curve.fi USD-BTC-ETH",
+      "symbol": "crv3crypto",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "Tricrypto2",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "name": "Badger Vested Escrow Convex Token",
+    "symbol": "bveCVX",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 2515953.9936373075,
+    "balance": 2515953.9936373075,
+    "available": 28995.166645966903,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+      "name": "Convex Token",
+      "symbol": "CVX",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "bveCVX",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
+    "name": "Badger Sett Curve.fi Factory Plain Pool: Badger Locked CVX",
+    "symbol": "bbveCVX-CVX-f",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 165949.8370711379,
+    "balance": 165949.8370711379,
+    "available": 0,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
+      "name": "Curve.fi Factory Plain Pool: Badger Locked CVX",
+      "symbol": "bveCVX-CVX-f",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "CVX/bveCVX",
+      "protocol": "Curve",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
+    "name": "Badger Sett Curve.fi Factory BTC Metapool: ibBTC",
+    "symbol": "bibbtc/sbtcCRV-f",
+    "decimals": 18,
+    "version": "v1",
+    "state": "open",
+    "totalSupply": 1137.9501014704488,
+    "balance": 1137.9501014704488,
+    "available": 0,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
+      "name": "Curve.fi Factory BTC Metapool: ibBTC",
+      "symbol": "ibbtc/sbtcCRV-f",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "ibBTC/crvsBTC",
+      "protocol": "Convex",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
+    "name": "Badger Sett Aura BAL",
+    "symbol": "bauraBAL",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "guarded",
+    "totalSupply": 7493.788961581451,
+    "balance": 7697.885009714054,
+    "available": 11.263676408907779,
+    "pricePerFullShare": 1.027235361067538,
+    "token": {
+      "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+      "name": "Aura BAL",
+      "symbol": "auraBAL",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "auraBAL",
+      "protocol": "Aura",
+      "behavior": "Ecosystem Helper"
+    }
+  },
+  {
+    "address": "0x63ad745506BD6a3E57F764409A47ed004BEc40b1",
+    "name": "Badger Sett 20WBTC-80BADGER",
+    "symbol": "b20WBTC-80BADGER",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "guarded",
+    "totalSupply": 96023.73724584602,
+    "balance": 96023.73724584602,
+    "available": 62.69412394456112,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0xb460DAa847c45f1C4a41cb05BFB3b51c92e41B36",
+      "name": "20WBTC-80BADGER",
+      "symbol": "20WBTC-80BADGER",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "BADGER/WBTC",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x371B7C451858bd88eAf392B383Df8bd7B8955d5a",
+    "name": "Badger Sett 40WBTC-40DIGG-20graviAURA",
+    "symbol": "b40WBTC-40DIGG-20graviAURA",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "guarded",
+    "totalSupply": 418.7599726013609,
+    "balance": 418.7599726013609,
+    "available": 0.4701133471631086,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x8eB6c82C3081bBBd45DcAC5afA631aaC53478b7C",
+      "name": "40WBTC-40DIGG-20graviAURA",
+      "symbol": "40WBTC-40DIGG-20graviAURA",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "graviAURA/DIGG/WBTC",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
+    "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
+    "symbol": "bbb-a-USD",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "guarded",
+    "totalSupply": 254429.3925219669,
+    "balance": 254429.3925219669,
+    "available": 121.00974697872228,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
+      "name": "Balancer Aave Boosted StablePool (USD)",
+      "symbol": "bb-a-USD",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "bb-a-USD",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378",
+    "name": "Badger Sett 33auraBAL-33graviAURA-33WETH",
+    "symbol": "b33auraBAL-33graviAURA-33WETH",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "guarded",
+    "totalSupply": 2204.236185380036,
+    "balance": 2204.236185380036,
+    "available": 1.6087755887015456,
+    "pricePerFullShare": 1,
+    "token": {
+      "address": "0x0578292CB20a443bA1CdE459c985CE14Ca2bDEe5",
+      "name": "33auraBAL-33graviAURA-33WETH",
+      "symbol": "33auraBAL-33graviAURA-33WETH",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "graviAURA/auraBAL/WETH",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "name": "Gravitationally Bound AURA",
+    "symbol": "graviAURA",
+    "decimals": 18,
+    "version": "v1.5",
+    "state": "open",
+    "totalSupply": 871349.9485328611,
+    "balance": 909290.6729644808,
+    "available": 32.43876207467973,
+    "pricePerFullShare": 1.0435424647645903,
+    "token": {
+      "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+      "name": "Aura",
+      "symbol": "AURA",
+      "decimals": 18
+    },
+    "metadata": {
+      "name": "graviAURA",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
   }
 ]

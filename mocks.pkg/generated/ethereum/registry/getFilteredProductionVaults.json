@@ -1,0 +1,12 @@
+[
+  {
+    "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "state": "open",
+    "version": "v1.5",
+    "metadata": {
+      "name": "graviAURA",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  }
+]

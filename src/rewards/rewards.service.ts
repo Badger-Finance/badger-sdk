@@ -1,10 +1,12 @@
-import { ethers } from 'ethers';
+import { BigNumber, ethers } from 'ethers';
 
 import { TransactionStatus } from '../config';
 import { Network } from '../config/enums/network.enum';
 import {
   BadgerTree,
   BadgerTree__factory,
+  EmisisonControl__factory,
+  EmissionControl,
   RewardsLogger,
   RewardsLogger__factory,
 } from '../contracts';
@@ -20,6 +22,7 @@ export class RewardsService extends Service {
   private loading?: Promise<void>;
   private _badgerTree?: BadgerTree;
   private _rewardsLogger?: RewardsLogger;
+  private _emissionControl?: EmissionControl;
 
   async ready() {
     if (!this.loading) {
@@ -44,12 +47,25 @@ export class RewardsService extends Service {
     return this._rewardsLogger;
   }
 
+  get emissionControl(): EmissionControl {
+    if (!this._emissionControl) {
+      throw new Error(
+        `Emission Control is not defined for ${this.config.network}`,
+      );
+    }
+    return this._emissionControl;
+  }
+
   hasBadgerTree() {
     return this._badgerTree !== undefined;
   }
 
   hasRewardsLogger() {
     return this._rewardsLogger !== undefined;
+  }
+
+  hasEmissionControl() {
+    return this._emissionControl !== undefined;
   }
 
   async claim({
@@ -153,6 +169,13 @@ export class RewardsService extends Service {
     );
   }
 
+  async getBoostWeight(address: string): Promise<BigNumber> {
+    if (!this.hasEmissionControl()) {
+      return ethers.constants.Zero;
+    }
+    return this.emissionControl.boostedEmissionRate(address);
+  }
+
   private async init() {
     try {
       await this.sdk.registry.ready();
@@ -161,10 +184,12 @@ export class RewardsService extends Service {
         return;
       }
 
-      const [badgerTreeAddress, rewardsLoggerAddress] = await Promise.all([
-        this.sdk.registry.get(RegistryKey.BadgerTree),
-        this.sdk.registry.get(RegistryKey.RewardsLogger),
-      ]);
+      const [badgerTreeAddress, rewardsLoggerAddress, _emissionControlAddress] =
+        await Promise.all([
+          this.sdk.registry.get(RegistryKey.BadgerTree),
+          this.sdk.registry.get(RegistryKey.RewardsLogger),
+          this.sdk.registry.get(RegistryKey.EmissionControl),
+        ]);
 
       if (badgerTreeAddress) {
         this._badgerTree = BadgerTree__factory.connect(
@@ -175,6 +200,25 @@ export class RewardsService extends Service {
       if (rewardsLoggerAddress) {
         this._rewardsLogger = RewardsLogger__factory.connect(
           rewardsLoggerAddress,
+          this.connector,
+        );
+      }
+      // TODO: enable once emission control is on the registry
+      // if (emissionControlAddress) {
+      //   this._emissionControl = EmisisonControl__factory.connect(
+      //     emissionControlAddress,
+      //     this.connector,
+      //   );
+      // }
+      if (this.config.network === Network.Ethereum) {
+        this._emissionControl = EmisisonControl__factory.connect(
+          '0x31825c0a6278b89338970e3eb979b05b27faa263',
+          this.connector,
+        );
+      }
+      if (this.config.network === Network.Arbitrum) {
+        this._emissionControl = EmisisonControl__factory.connect(
+          '0x78418681f9ed228d627f785fb9607ed5175518fd',
           this.connector,
         );
       }

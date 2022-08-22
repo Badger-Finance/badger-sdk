@@ -4,9 +4,9 @@
   "symbol": "bCVX",
   "decimals": 18,
   "version": "v1",
-  "state": "open",
-  "totalSupply": 33135.388940104625,
-  "balance": 36309.72139529907,
+  "state": "discontinued",
+  "totalSupply": 25723.32960352157,
+  "balance": 28187.595230936444,
   "available": 0,
   "pricePerFullShare": 1.0957988590667325,
   "token": {
@@ -15,5 +15,9 @@
     "symbol": "CVX",
     "decimals": 18
   },
-  "metadata": {}
+  "metadata": {
+    "name": "CVX",
+    "protocol": "Convex",
+    "behavior": "None"
+  }
 }
