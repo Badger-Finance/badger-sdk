@@ -80,7 +80,7 @@ export const baseArgsConfig: ServicesArgsConfig = {
   [SdkServices.Vaults]: {
     loadVaults: { args: [] },
     loadVault: { args: [{ address: vaults.BCVX.addr }] },
-    listHarvests: { args: [{ address: vaults.BBADGER }] },
+    listHarvests: { args: [{ address: vaults.BCVXCRV, version: VaultVersion.v1, startBlock: 14603631 }] },
     getVaultStrategy: { args: [{ address: vaults.BCVX.addr }] },
     getPendingHarvest: { args: [vaults.BCVX.addr] },
     getDepositCaps: {
