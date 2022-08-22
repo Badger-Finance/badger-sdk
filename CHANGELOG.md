@@ -1,3 +1,10 @@
+## [1.17.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.3...v1.17.4) (2022-08-22)
+
+
+### Bug Fixes
+
+* add emission control ([5802dee](https://github.com/Badger-Finance/badger-sdk/commit/5802dee2a5da1b4a836bd06c76b8f16cd11ab34d))
+
 ## [1.17.3](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.2...v1.17.3) (2022-08-18)
 
 
