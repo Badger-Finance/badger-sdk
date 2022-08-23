@@ -33,9 +33,9 @@ export class MethodsCache {
 
   missMatchMethodsNum = 0;
 
-  private oldCacheRecords: MethodsCacheRecordsMap = cacheRecords;
-  private readonly newCacheRecords: MethodsCacheRecordsMap = {};
-  private fsIo: BaseFsIo;
+  protected oldCacheRecords: MethodsCacheRecordsMap = cacheRecords;
+  protected readonly newCacheRecords: MethodsCacheRecordsMap = {};
+  protected fsIo: BaseFsIo;
 
   readonly serviceClsMap: ServiceClsMap = {
     [SdkServices.Digg]: DiggService.prototype,
@@ -101,7 +101,7 @@ export class MethodsCache {
     this.fsIo.write<MethodsCacheRecordsMap>(this.cacheFileName, this.newCacheRecords);
   }
 
-  private genNewRecords() {
+  protected genNewRecords() {
     return ServicesConfig.listServices.reduce((acc, service) => {
       acc[service] = Object.getOwnPropertyNames(this.serviceClsMap[service])
         .filter((method) => !this.methodsToSkip.includes(method))
