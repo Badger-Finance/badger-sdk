@@ -1,9 +1,9 @@
 import { Network } from '../../../src';
-import { ServicesArgsConfig, NetworksArgsConfigMap, ServicesMethodsList } from './struct.types.config';
-import { ethArgsConfig } from './eth.config';
 import { SdkServices } from '../enums';
 import { RelevantNetworks } from '../types';
+import { ethArgsConfig } from './eth.config';
 import { polygonArgsConfig } from './polygon.config';
+import { NetworksArgsConfigMap, ServicesArgsConfig, ServicesMethodsList } from './struct.types.config';
 
 export class ServicesConfig {
   readonly network: RelevantNetworks;

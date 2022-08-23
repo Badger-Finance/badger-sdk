@@ -24,7 +24,7 @@ export const methodsToSkip = [
   'vaultPeak',
   'vaultZap',
   'tokenZap',
-  'emissionControl'
+  'emissionControl',
 ];
 
 export const relevantNetworks: RelevantNetworks[] = [Network.Ethereum];

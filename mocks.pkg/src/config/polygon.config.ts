@@ -1,7 +1,7 @@
-import { ServicesArgsConfig } from './struct.types.config';
-import { baseArgsConfig } from './base.config';
-import { objDeepCopy } from '../utils';
 import { SdkServices } from '../enums';
+import { objDeepCopy } from '../utils';
+import { baseArgsConfig } from './base.config';
+import { ServicesArgsConfig } from './struct.types.config';
 
 const polygonArgsConfigBase = objDeepCopy<ServicesArgsConfig>(baseArgsConfig);
 

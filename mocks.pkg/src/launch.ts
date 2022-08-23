@@ -1,5 +1,5 @@
-import { cliArgs } from './types';
 import { MocksProcessor } from './processor';
+import { cliArgs } from './types';
 
 async function main() {
   const args: cliArgs = process.argv.slice(2);

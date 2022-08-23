@@ -10,6 +10,13 @@ import {
   TokensService,
   VaultsService,
 } from '../../../src';
+import cacheRecords from '../../__cache__/methods.json';
+import { ServicesConfig } from '../config';
+import { ServicesMethodsList } from '../config/struct.types.config';
+import { methodsToSkip } from '../constants';
+import { SdkServices } from '../enums';
+import { BaseFsIo } from '../fs.io/base.fs.io';
+import { CACHE_FILE_NAME, ROOT_DIR } from './constants.cache';
 import {
   MethodsCacheRecordsDiffMap,
   MethodsCacheRecordsMap,
@@ -17,14 +24,6 @@ import {
   ServiceClsMap,
   ServicesMethodsBodies,
 } from './struct.types.cache';
-import { CACHE_FILE_NAME, ROOT_DIR } from './constants.cache';
-
-import cacheRecords from '../../__cache__/methods.json';
-import { ServicesConfig } from '../config';
-import { SdkServices } from '../enums';
-import { BaseFsIo } from '../fs.io/base.fs.io';
-import { ServicesMethodsList } from '../config/struct.types.config';
-import { methodsToSkip } from '../constants';
 
 export class MethodsCache {
   readonly rootDir: string = ROOT_DIR;
