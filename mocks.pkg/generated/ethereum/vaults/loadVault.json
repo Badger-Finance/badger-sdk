@@ -1,23 +1,23 @@
 {
-  "address": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-  "name": "Badger Sett Convex Token",
-  "symbol": "bCVX",
+  "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
+  "name": "Badger Sett Aura BAL",
+  "symbol": "bauraBAL",
   "decimals": 18,
-  "version": "v1",
-  "state": "discontinued",
-  "totalSupply": 25723.32960352157,
-  "balance": 28187.595230936444,
-  "available": 0,
-  "pricePerFullShare": 1.0957988590667325,
+  "version": "v1.5",
+  "state": "guarded",
+  "totalSupply": 7493.788961581451,
+  "balance": 7697.885009714054,
+  "available": 11.263676408907779,
+  "pricePerFullShare": 1.027235361067538,
   "token": {
-    "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-    "name": "Convex Token",
-    "symbol": "CVX",
+    "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+    "name": "Aura BAL",
+    "symbol": "auraBAL",
     "decimals": 18
   },
   "metadata": {
-    "name": "CVX",
-    "protocol": "Convex",
-    "behavior": "None"
+    "name": "auraBAL",
+    "protocol": "Aura",
+    "behavior": "Ecosystem Helper"
   }
 }

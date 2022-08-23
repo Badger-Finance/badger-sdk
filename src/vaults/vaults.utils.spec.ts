@@ -118,7 +118,11 @@ describe('vaults.utils', () => {
 
   describe('parseHarvestEvents', () => {
     it('converts vault events to typed usable events', async () => {
-      const result = await parseHarvestEvents(harvests, distributions);
+      const result = await parseHarvestEvents(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        harvests,
+        distributions,
+      );
       expect(result).toMatchSnapshot();
     });
 
@@ -135,7 +139,11 @@ describe('vaults.utils', () => {
             };
           }),
       );
-      const result = await parseHarvestEvents(harvests, distributions);
+      const result = await parseHarvestEvents(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        harvests,
+        distributions,
+      );
       expect(result).toMatchSnapshot();
     });
   });
@@ -256,10 +264,14 @@ describe('vaults.utils', () => {
           }
           return distributions;
         });
-      const result = await loadVaultPerformanceEvents(testStrategy, {
-        startBlock: 0,
-        endBlock: 100,
-      });
+      const result = await loadVaultPerformanceEvents(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        testStrategy,
+        {
+          startBlock: 0,
+          endBlock: 100,
+        },
+      );
       expect(result).toMatchSnapshot();
     });
 
@@ -271,10 +283,14 @@ describe('vaults.utils', () => {
       jest
         .spyOn(testStrategy, 'queryFilter')
         .mockImplementation(async () => []);
-      const result = await loadVaultPerformanceEvents(testStrategy, {
-        startBlock: 0,
-        endBlock: 100,
-      });
+      const result = await loadVaultPerformanceEvents(
+        '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
+        testStrategy,
+        {
+          startBlock: 0,
+          endBlock: 100,
+        },
+      );
       expect(result).toMatchSnapshot();
     });
   });

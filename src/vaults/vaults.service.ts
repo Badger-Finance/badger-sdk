@@ -157,19 +157,28 @@ export class VaultsService extends Service {
 
     const vaultDeployedAt = getBlockDeployedAt(address, this.config.network);
 
-    if (!startBlock) options.startBlock = vaultDeployedAt;
-    if (!endBlock) options.endBlock = await this.sdk.provider.getBlockNumber();
+    if (!startBlock) {
+      options.startBlock = vaultDeployedAt;
+    }
+    if (!endBlock) {
+      options.endBlock = await this.sdk.provider.getBlockNumber();
+    }
 
     if (version === VaultVersion.v1_5) {
-      const vault = VaultV15__factory.connect(address, this.sdk.provider);
+      const vault = VaultV15__factory.connect(address, this.connector);
       return loadVaultV15PerformanceEvents(vault, <RangeOptions>options);
     }
-    const strategyAddress = await this.getVaultStrategy({ address, version });
-    const strategy = Strategy__factory.connect(
-      strategyAddress,
-      this.sdk.provider,
+    const vault = Vault__factory.connect(address, this.connector);
+    const [strategyAddress, depositToken] = await Promise.all([
+      this.getVaultStrategy({ address, version }),
+      vault.token(),
+    ]);
+    const strategy = Strategy__factory.connect(strategyAddress, this.connector);
+    return loadVaultPerformanceEvents(
+      depositToken,
+      strategy,
+      <RangeOptions>options,
     );
-    return loadVaultPerformanceEvents(strategy, <RangeOptions>options);
   }
 
   async getVaultStrategy({
@@ -177,13 +186,13 @@ export class VaultsService extends Service {
     version = VaultVersion.v1,
   }: GetVaultStrategyOptions): Promise<string> {
     if (version === VaultVersion.v1_5) {
-      const vault = VaultV15__factory.connect(address, this.sdk.provider);
+      const vault = VaultV15__factory.connect(address, this.connector);
       return vault.strategy();
     }
-    const vault = Vault__factory.connect(address, this.sdk.provider);
+    const vault = Vault__factory.connect(address, this.connector);
     const controller = Controller__factory.connect(
       await vault.controller(),
-      this.sdk.provider,
+      this.connector,
     );
     return controller.strategies(await vault.token());
   }
@@ -386,7 +395,7 @@ export class VaultsService extends Service {
 
     const vault = Vault__factory.connect(
       ethers.utils.getAddress(address),
-      this.sdk.provider,
+      this.connector,
     );
 
     const [
@@ -437,7 +446,7 @@ export class VaultsService extends Service {
     if (isYearnWbtc) {
       const byvWbtc = Byvwbtc__factory.connect(
         ethers.utils.getAddress(this.wbtcYearnVault),
-        this.sdk.provider,
+        this.connector,
       );
 
       return [
@@ -456,14 +465,14 @@ export class VaultsService extends Service {
     harvest: boolean,
   ): Promise<{ lastHarvestedAt: number; tokenRewards: TokenBalance[] }> {
     const checksumAddress = ethers.utils.getAddress(address);
-    const vault = VaultV15__factory.connect(checksumAddress, this.sdk.provider);
+    const vault = VaultV15__factory.connect(checksumAddress, this.connector);
     const [lastHarvestedAt, strategyAddress] = await Promise.all([
       vault.lastHarvestedAt(),
       vault.strategy(),
     ]);
     const strategy = StrategyV15__factory.connect(
       strategyAddress,
-      this.sdk.provider,
+      this.connector,
     );
     let pendingRewards;
     if (harvest) {
