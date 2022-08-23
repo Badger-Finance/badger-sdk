@@ -1,7 +1,7 @@
-import { SdkServices } from '../enums';
 import { BadgerAPI, BadgerGraph } from '../../../src';
 import { Service } from '../../../src/service';
 import { ServicesMethodsList } from '../config/struct.types.config';
+import { SdkServices } from '../enums';
 
 export type MethodsCacheRecordsMap = {
   [key in SdkServices]?: MethodsMap;

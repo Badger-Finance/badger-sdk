@@ -1,17 +1,16 @@
-import { ProcessorClsArgs, ProcessorNetworksConfigMap } from './cls.types.processor';
-import { ProcessorError } from './base.error.processor';
-import { ServicesConfig } from '../config';
-import { relevantNetworks } from '../constants';
-import { RelevantNetworks } from '../types';
-import { MethodsCache } from '../cache';
-import { ServicesMethodsList } from '../config/struct.types.config';
-import { SdkServices } from '../enums';
-import { Network } from '../../../src';
-import { BadgerSDK } from '../../../src';
-import { ROOT_DIR } from './constants.processor';
-import { BaseFsIo } from '../fs.io/base.fs.io';
-import mocksPkgJSON from '../../package.json';
 import sdkPkgJSON from '../../../package.json';
+import { BadgerSDK, Network } from '../../../src';
+import mocksPkgJSON from '../../package.json';
+import { MethodsCache } from '../cache';
+import { ServicesConfig } from '../config';
+import { ServicesMethodsList } from '../config/struct.types.config';
+import { relevantNetworks } from '../constants';
+import { SdkServices } from '../enums';
+import { BaseFsIo } from '../fs.io/base.fs.io';
+import { RelevantNetworks } from '../types';
+import { ProcessorError } from './base.error.processor';
+import { ProcessorClsArgs, ProcessorNetworksConfigMap } from './cls.types.processor';
+import { ROOT_DIR } from './constants.processor';
 
 export class MocksProcessor {
   static readonly LAUNCH_ACTION = 'launch';

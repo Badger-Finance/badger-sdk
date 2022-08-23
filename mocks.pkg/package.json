@@ -14,6 +14,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --runInBand --detectOpenHandles",
+    "test:path": "jest --runInBand --detectOpenHandles --testPathPattern",
     "mocks:check": "ts-node ./src/launch.ts guard",
     "mocks:gen": "ts-node ./src/launch.ts launch",
     "mocks:gen:force": "yarn mocks:gen true"

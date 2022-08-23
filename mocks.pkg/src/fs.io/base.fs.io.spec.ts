@@ -1,7 +1,7 @@
-import { BaseFsIo } from './base.fs.io';
 import fs from 'fs';
-
 import { resolve } from 'path';
+
+import { BaseFsIo } from './base.fs.io';
 
 describe('BaseFsIo', () => {
   let baseFsIo: BaseFsIo;

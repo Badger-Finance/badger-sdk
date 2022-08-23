@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { SdkServices } from '../enums';
-import { MethodsCacheTestClsMock } from './mocks/methods.cache.test.cls.mock';
-import { cacheMethodsJSONMocks } from './mocks/__cache__.methods.mocks';
 import { ServicesConfig } from '../config';
-import { MethodsCacheTestWrapper } from './mocks/methods.chache.test.wrapper';
 import { methodsToSkip } from '../constants';
+import { SdkServices } from '../enums';
 import { BaseFsIo } from '../fs.io';
+import { cacheMethodsJSONMocks } from './mocks/__cache__.methods.mocks';
+import { MethodsCacheTestClsMock } from './mocks/methods.cache.test.cls.mock';
+import { MethodsCacheTestWrapper } from './mocks/methods.chache.test.wrapper';
 
 describe('MethodsCache', () => {
   const TEST_SERVICE = SdkServices.Vaults;

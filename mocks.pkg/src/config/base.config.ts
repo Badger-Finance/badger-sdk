@@ -1,7 +1,8 @@
-import { ServicesArgsConfig } from './struct.types.config';
-import { SdkServices } from '../enums';
-import { RegistryKey, VaultState, VaultVersion } from '../../../src';
 import { ethers } from 'ethers';
+
+import { RegistryKey, VaultState, VaultVersion } from '../../../src';
+import { SdkServices } from '../enums';
+import { ServicesArgsConfig } from './struct.types.config';
 
 export const baseServiceArgsConfig = {
   provider: [],
