@@ -1,3 +1,10 @@
+## [1.17.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.4...v1.17.5) (2022-08-23)
+
+
+### Bug Fixes
+
+* update vault method inputs ([74f2d51](https://github.com/Badger-Finance/badger-sdk/commit/74f2d511543cff89982284c3e0c9d0ae10be8929))
+
 ## [1.17.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.3...v1.17.4) (2022-08-22)
 
 
