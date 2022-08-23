@@ -16,5 +16,6 @@ module.exports = {
   testRegex: '.spec.ts$',
   testTimeout: 10000,
   transform: { '^.+\\.ts$': 'ts-jest' },
+  modulePathIgnorePatterns: ['<rootDir>/mocks.pkg/'],
   coveragePathIgnorePatterns: ['contracts', 'generated', 'tests', 'index.tsx'],
 };

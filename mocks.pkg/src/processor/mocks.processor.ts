@@ -1,7 +1,4 @@
-import {
-  ProcessorClsArgs,
-  ProcessorNetworksConfigMap,
-} from './cls.types.processor';
+import { ProcessorClsArgs, ProcessorNetworksConfigMap } from './cls.types.processor';
 import { ProcessorError } from './base.error.processor';
 import { ServicesConfig } from '../config';
 import { relevantNetworks } from '../constants';
@@ -71,25 +68,18 @@ export class MocksProcessor {
 
       const methodArgsConfig = <ServicesConfig>MocksProcessor.configs[network];
 
-      const services = this.forced
-        ? this.methodsCache.getRelevantServicesMethods()
-        : cacheMissMatch;
+      const services = this.forced ? this.methodsCache.getRelevantServicesMethods() : cacheMissMatch;
 
       for (const service of Object.keys(services)) {
         if (service === 'length') continue;
 
-        const methods = this.forced
-          ? services[<SdkServices>service]
-          : cacheMissMatch[<SdkServices>service];
+        const methods = this.forced ? services[<SdkServices>service] : cacheMissMatch[<SdkServices>service];
 
         if (!methods) return;
 
         for (const methodName of <SdkServices[]>methods) {
           try {
-            const { args, ignore } =
-              methodArgsConfig.servicesArgsMap[<SdkServices>service][
-                methodName
-              ];
+            const { args, ignore } = methodArgsConfig.servicesArgsMap[<SdkServices>service][methodName];
 
             if (ignore) continue;
 
@@ -160,12 +150,10 @@ export class MocksProcessor {
 
     for (const network of this.networks) {
       const relevantServices = this.methodsCache.getRelevantServicesMethods();
-      const methodArgsConfig = (<ServicesConfig>MocksProcessor.configs[network])
-        .servicesArgsMap;
+      const methodArgsConfig = (<ServicesConfig>MocksProcessor.configs[network]).servicesArgsMap;
 
       for (const service of Object.keys(relevantServices)) {
-        if (!(service in methodArgsConfig))
-          notImplementedServ.push(`${network}.${service}`);
+        if (!(service in methodArgsConfig)) notImplementedServ.push(`${network}.${service}`);
 
         const relevantMethods = relevantServices[<SdkServices>service];
         const cfgMethods = methodArgsConfig[<SdkServices>service];
@@ -173,28 +161,19 @@ export class MocksProcessor {
         if (!relevantMethods) continue;
 
         for (const method of relevantMethods) {
-          if (!(method in cfgMethods))
-            notImplementedMethods.push(`${network}.${service}.${method}`);
+          if (!(method in cfgMethods)) notImplementedMethods.push(`${network}.${service}.${method}`);
         }
       }
     }
 
     if (notImplementedServ.length > 0)
       throw new ProcessorError(`
-      Found not implemented services in cfg ${JSON.stringify(
-        notImplementedServ,
-        null,
-        2,
-      )}
+      Found not implemented services in cfg ${JSON.stringify(notImplementedServ, null, 2)}
     `);
 
     if (notImplementedMethods.length > 0)
       throw new ProcessorError(`
-      Found not implemented methods in cfg ${JSON.stringify(
-        notImplementedMethods,
-        null,
-        2,
-      )}
+      Found not implemented methods in cfg ${JSON.stringify(notImplementedMethods, null, 2)}
     `);
 
     console.log('Mock generator guard action finished');

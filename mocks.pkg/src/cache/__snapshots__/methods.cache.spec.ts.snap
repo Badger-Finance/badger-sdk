@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MethodsCache should get and return cache for relevant service methods 1`] = `
+Object {
+  "vaults": Object {
+    "method1ToCache": "Pi4wKneXjouJqKwvtr8FbB7evTd//IGyd4R/QzCla2I=",
+    "method2ToCache": "yS1KfNOUa3dbwO3JGZUtdZpPMTCILpyK20HWpwWvg3s=",
+  },
+}
+`;
+
+exports[`MethodsCache should return relevant service methods 1`] = `
+Object {
+  "vaults": Array [
+    "method1ToCache",
+    "method2ToCache",
+  ],
+}
+`;
+
+exports[`MethodsCache should return relevant service methods, but filter methodsToSkip 1`] = `
+Object {
+  "vaults": Array [
+    "method2ToCache",
+  ],
+}
+`;
