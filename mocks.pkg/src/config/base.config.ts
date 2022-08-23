@@ -16,6 +16,7 @@ export const tokens = {
 };
 
 export const vaults = {
+  AURABAL: '0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8',
   BCVXCRV: '0x2B5455aac8d64C14786c3a29858E43b5945819C0',
   BBADGER: '0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28',
   BCVX: {
@@ -79,10 +80,11 @@ export const baseArgsConfig: ServicesArgsConfig = {
   },
   [SdkServices.Vaults]: {
     loadVaults: { args: [] },
-    loadVault: { args: [{ address: vaults.BCVX.addr }] },
+    loadVault: { args: [{ address: vaults.AURABAL }] },
     listHarvests: { args: [{ address: vaults.BCVXCRV, version: VaultVersion.v1, startBlock: 14603631 }] },
-    getVaultStrategy: { args: [{ address: vaults.BCVX.addr }] },
-    getPendingHarvest: { args: [vaults.BCVX.addr] },
+    getVaultStrategy: { args: [{ address: vaults.AURABAL, version: VaultVersion.v1_5 }] },
+    getPendingHarvest: { args: [vaults.AURABAL] },
+    getPendingYield: { args: [vaults.AURABAL] },
     getDepositCaps: {
       args: [{ address: '0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378' }],
     },

@@ -18,7 +18,7 @@ Object {
           },
           "block": 1647315665,
           "timestamp": 0,
-          "token": "",
+          "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
         },
       ],
       "timestamp": 0,
@@ -33,7 +33,7 @@ Object {
           },
           "block": 1647275665,
           "timestamp": 1647284957,
-          "token": "",
+          "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
         },
       ],
       "timestamp": 1647284957,
@@ -73,7 +73,7 @@ Object {
           },
           "block": 1647355665,
           "timestamp": 1647287457,
-          "token": "",
+          "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
         },
       ],
       "timestamp": 1647287457,
@@ -196,7 +196,7 @@ Object {
       },
       "block": 1647275665,
       "timestamp": 1647284957,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
     Object {
       "amount": Object {
@@ -205,7 +205,7 @@ Object {
       },
       "block": 1647315665,
       "timestamp": 1647286207,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
     Object {
       "amount": Object {
@@ -214,7 +214,7 @@ Object {
       },
       "block": 1647355665,
       "timestamp": 1647287457,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
   ],
 }
@@ -250,7 +250,7 @@ Object {
       },
       "block": 1647275665,
       "timestamp": 1647284957,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
     Object {
       "amount": Object {
@@ -259,7 +259,7 @@ Object {
       },
       "block": 1647315665,
       "timestamp": 0,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
     Object {
       "amount": Object {
@@ -268,7 +268,7 @@ Object {
       },
       "block": 1647355665,
       "timestamp": 1647287457,
-      "token": "",
+      "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
     },
   ],
 }

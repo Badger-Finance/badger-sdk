@@ -11,8 +11,6 @@ export const methodsToSkip = [
   'revoke',
   'increaseAllowance',
   'verifyOrIncreaseAllowance',
-  'getPendingYield', // vaultsV2 WIP method
-  'getPendingHarvest', // vaultsV2 WIP method
   'mint',
   'redeem',
   'getMulticallProvider',

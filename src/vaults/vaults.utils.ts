@@ -32,6 +32,7 @@ import { vaultToChainEnumStateList } from './vautls.constants';
  * @returns Parsed harvest and distrubtion events with timestamps
  */
 export async function parseHarvestEvents(
+  token: string,
   harvestEvents: HarvestEvent[],
   treeDistributionEvents: TreeDistributionEvent[],
 ): Promise<{
@@ -46,7 +47,7 @@ export async function parseHarvestEvents(
           timestamp: block.timestamp,
           block: e.args[1].toNumber(),
           amount: e.args[0],
-          token: '',
+          token,
         };
       } catch (err) {
         console.log(err);
@@ -54,7 +55,7 @@ export async function parseHarvestEvents(
           timestamp: 0,
           block: e.args[1].toNumber(),
           amount: e.args[0],
-          token: '',
+          token,
         };
       }
     }),
@@ -181,6 +182,7 @@ export function timestampInRange(
 }
 
 export async function loadVaultPerformanceEvents<T extends RangeOptions>(
+  token: string,
   strategy: Strategy,
   options: T,
 ): Promise<{ data: VaultHarvestData[] }> {
@@ -203,6 +205,7 @@ export async function loadVaultPerformanceEvents<T extends RangeOptions>(
   ]);
 
   const { harvests, distributions } = await parseHarvestEvents(
+    token,
     allHarvestEvents,
     allTreeDistributionEvents,
   );

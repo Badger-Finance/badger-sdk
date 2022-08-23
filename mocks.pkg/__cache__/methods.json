@@ -35,8 +35,10 @@
   "vaults": {
     "loadVaults": "k0EhA+6HqQoqI000FY/hOmHzlYOZNbpKy9fBF1SXXkI=",
     "loadVault": "1uvCxO2QRmr4Yh1gPQoh2Pu0oMyFpEis/mKxN3lAUlA=",
-    "listHarvests": "aaT8CuTaovoT5SoE40RKqEpQ94kEmR7GWZaQRCJvfxs=",
-    "getVaultStrategy": "PTFM6Cae4ckQGad8+OGr0CUUQgYyMGsKp74zHhZJxcY=",
+    "listHarvests": "tXuypug8d6rAIr8X9+MfukLgTxcbiw+/3W+VPi5Y1h8=",
+    "getVaultStrategy": "qTRzNGXWZriYyVdzgjJ+mRBcshrm4uhYAx9TCHBvZqU=",
+    "getPendingYield": "ADVLcE53eMdURD3ACZ9BenJ7s8leFBIfMTieHF7+CJ0=",
+    "getPendingHarvest": "qOTdJ1lSDDtJtLtC2u3DQE1sL2Znkrz/fGfM8V9PLRs=",
     "getDepositCaps": "bFNmc8VV/NSQMz1cIp9deMGT+YJT5eFKV0/IBC5G1Hk="
   },
   "graph": {

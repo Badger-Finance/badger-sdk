@@ -1,0 +1,19 @@
+{
+  "lastHarvestedAt": 1660921721,
+  "tokenRewards": [
+    {
+      "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+      "name": "Aura BAL",
+      "symbol": "auraBAL",
+      "decimals": 18,
+      "balance": 18.00676375529277
+    },
+    {
+      "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+      "name": "Gravitationally Bound AURA",
+      "symbol": "graviAURA",
+      "decimals": 18,
+      "balance": 166.787607153999
+    }
+  ]
+}
