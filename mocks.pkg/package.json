@@ -1,6 +1,6 @@
 {
   "name": "@badger-dao/sdk-mocks",
-  "version": "1.17.5",
+  "version": "1.17.6",
   "description": "Badger SDK Mocks collection",
   "main": "src/index.ts",
   "repository": "https://github.com/Badger-Finance/badger-sdk",
@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest --runInBand --detectOpenHandles",
-    "test:path": "jest --runInBand --detectOpenHandles --testPathPattern",
+    "test:path": "yarn test --testPathPattern",
     "mocks:check": "ts-node ./src/launch.ts guard",
     "mocks:gen": "ts-node ./src/launch.ts launch",
     "mocks:gen:force": "yarn mocks:gen true"

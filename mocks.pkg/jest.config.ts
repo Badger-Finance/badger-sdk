@@ -15,6 +15,7 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ['js', 'json', 'ts', 'node'],
   moduleNameMapper: {
     '^uuid$': '<rootDir>/node_modules/uuid/dist/index.js',
+    'package.json': '<rootDir>/src/processor/mocks/package.mock.json',
   },
   testEnvironment: 'node',
   testRegex: '.spec.ts$',
