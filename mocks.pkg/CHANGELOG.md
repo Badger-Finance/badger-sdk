@@ -1,3 +1,10 @@
+## [1.17.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.5...sdk-mocks-v1.17.6) (2022-08-25)
+
+
+### Bug Fixes
+
+* utilize read only provider ([6a87312](https://github.com/Badger-Finance/badger-sdk/commit/6a87312113c7715fec482c1be7664e0becce789d))
+
 ## [1.17.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.4...sdk-mocks-v1.17.5) (2022-08-23)
 
 
