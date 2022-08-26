@@ -16,17 +16,17 @@ export class MocksProcessor {
   static readonly LAUNCH_ACTION = 'launch';
   static readonly GUARD_ACTION = 'guard';
 
-  private readonly rootDir = ROOT_DIR;
+  protected readonly rootDir = ROOT_DIR;
 
-  private readonly action: string;
-  private readonly forced: boolean;
+  protected readonly action: string;
+  protected readonly forced: boolean;
 
-  private readonly networks: RelevantNetworks[] = relevantNetworks;
+  protected readonly networks: RelevantNetworks[] = relevantNetworks;
 
-  private methodsCache: MethodsCache;
-  private fsIo: BaseFsIo;
+  protected methodsCache: MethodsCache;
+  protected fsIo: BaseFsIo;
 
-  private static configs: ProcessorNetworksConfigMap = {};
+  protected configs: ProcessorNetworksConfigMap = {};
 
   constructor({ action, forced }: ProcessorClsArgs) {
     this.action = action;
@@ -36,7 +36,7 @@ export class MocksProcessor {
     this.fsIo = new BaseFsIo(this.rootDir);
 
     for (const network of this.networks) {
-      MocksProcessor.configs[network] = new ServicesConfig(network);
+      this.configs[network] = new ServicesConfig(network);
     }
   }
 
@@ -53,7 +53,7 @@ export class MocksProcessor {
     }
   }
 
-  private async loadAndSave(cacheMissMatch: ServicesMethodsList) {
+  protected async loadAndSave(cacheMissMatch: ServicesMethodsList) {
     console.log('Responses loading and saving to .json files');
 
     for (const network of this.networks) {
@@ -65,7 +65,7 @@ export class MocksProcessor {
 
       await sdk.ready();
 
-      const methodArgsConfig = <ServicesConfig>MocksProcessor.configs[network];
+      const methodArgsConfig = <ServicesConfig>this.configs[network];
 
       const services = this.forced ? this.methodsCache.getRelevantServicesMethods() : cacheMissMatch;
 
@@ -101,7 +101,7 @@ export class MocksProcessor {
     }
   }
 
-  private static getNodeRpcUrl(network: RelevantNetworks): string {
+  protected static getNodeRpcUrl(network: RelevantNetworks): string {
     let networkForEnvVar = network.toUpperCase();
 
     if (network === Network.BinanceSmartChain) {
@@ -116,7 +116,7 @@ export class MocksProcessor {
     return rpcUrl;
   }
 
-  private async launch() {
+  protected async launch() {
     console.log('Mock generator launch action started');
 
     const cacheMissMatch = this.methodsCache.getMissMatch();
@@ -133,7 +133,7 @@ export class MocksProcessor {
     console.log('Mock generator launch action finished');
   }
 
-  private async guard() {
+  protected async guard() {
     console.log('Mock generator guard action started');
 
     if (mocksPkgJSON.version !== sdkPkgJSON.version) {
@@ -149,10 +149,13 @@ export class MocksProcessor {
 
     for (const network of this.networks) {
       const relevantServices = this.methodsCache.getRelevantServicesMethods();
-      const methodArgsConfig = (<ServicesConfig>MocksProcessor.configs[network]).servicesArgsMap;
+      const methodArgsConfig = (<ServicesConfig>this.configs[network]).servicesArgsMap;
 
       for (const service of Object.keys(relevantServices)) {
-        if (!(service in methodArgsConfig)) notImplementedServ.push(`${network}.${service}`);
+        if (!(service in methodArgsConfig)) {
+          notImplementedServ.push(`${network}.${service}`);
+          continue;
+        }
 
         const relevantMethods = relevantServices[<SdkServices>service];
         const cfgMethods = methodArgsConfig[<SdkServices>service];
