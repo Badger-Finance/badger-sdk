@@ -1,4 +1,4 @@
-import { BigNumber, ethers } from 'ethers';
+import { BigNumber, CallOverrides, ethers } from 'ethers';
 
 import {
   RegistryVault,
@@ -168,6 +168,7 @@ export class VaultsService extends Service {
       const vault = VaultV15__factory.connect(address, this.provider);
       return loadVaultV15PerformanceEvents(vault, <RangeOptions>options);
     }
+
     const vault = Vault__factory.connect(address, this.provider);
     const [strategyAddress, depositToken] = await Promise.all([
       this.getVaultStrategy({ address, version }),
@@ -181,20 +182,20 @@ export class VaultsService extends Service {
     );
   }
 
-  async getVaultStrategy({
-    address,
-    version = VaultVersion.v1,
-  }: GetVaultStrategyOptions): Promise<string> {
+  async getVaultStrategy(
+    { address, version = VaultVersion.v1 }: GetVaultStrategyOptions,
+    overrides?: CallOverrides,
+  ): Promise<string> {
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.provider);
-      return vault.strategy();
+      return vault.strategy(overrides);
     }
     const vault = Vault__factory.connect(address, this.provider);
     const controller = Controller__factory.connect(
-      await vault.controller(),
+      await vault.controller(overrides),
       this.provider,
     );
-    return controller.strategies(await vault.token());
+    return controller.strategies(await vault.token(overrides), overrides);
   }
 
   async getPendingYield(
