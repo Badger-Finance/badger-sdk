@@ -147,7 +147,6 @@ export class VaultsService extends Service {
 
   async listHarvests(
     options: ListHarvestOptions,
-    overrides?: CallOverrides,
   ): Promise<{ data: VaultHarvestData[] }> {
     const {
       address,
@@ -172,7 +171,7 @@ export class VaultsService extends Service {
 
     const vault = Vault__factory.connect(address, this.provider);
     const [strategyAddress, depositToken] = await Promise.all([
-      this.getVaultStrategy({ address, version }, overrides),
+      this.getVaultStrategy({ address, version }),
       vault.token(),
     ]);
     const strategy = Strategy__factory.connect(strategyAddress, this.provider);
