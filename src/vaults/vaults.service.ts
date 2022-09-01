@@ -188,14 +188,16 @@ export class VaultsService extends Service {
   ): Promise<string> {
     if (version === VaultVersion.v1_5) {
       const vault = VaultV15__factory.connect(address, this.provider);
-      return vault.strategy(overrides);
+      return vault.strategy({ ...overrides });
     }
     const vault = Vault__factory.connect(address, this.provider);
     const controller = Controller__factory.connect(
-      await vault.controller(overrides),
+      await vault.controller({ ...overrides }),
       this.provider,
     );
-    return controller.strategies(await vault.token(overrides), overrides);
+    return controller.strategies(await vault.token({ ...overrides }), {
+      ...overrides,
+    });
   }
 
   async getPendingYield(

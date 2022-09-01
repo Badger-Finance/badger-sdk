@@ -824,6 +824,56 @@
           }
         }
       ]
+    },
+    {
+      "timestamp": 1661499260,
+      "harvests": [
+        {
+          "timestamp": 1661499260,
+          "block": 15414105,
+          "amount": {
+            "type": "BigNumber",
+            "hex": "0x01f9d6e7636d265af965"
+          },
+          "token": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
+        }
+      ],
+      "treeDistributions": [
+        {
+          "timestamp": 1661499260,
+          "block": 15414105,
+          "token": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+          "amount": {
+            "type": "BigNumber",
+            "hex": "0x0ba595bce955f24994"
+          }
+        }
+      ]
+    },
+    {
+      "timestamp": 1661846840,
+      "harvests": [
+        {
+          "timestamp": 1661846840,
+          "block": 15439247,
+          "amount": {
+            "type": "BigNumber",
+            "hex": "0x01a51f0a9c91273d035b"
+          },
+          "token": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
+        }
+      ],
+      "treeDistributions": [
+        {
+          "timestamp": 1661846840,
+          "block": 15439247,
+          "token": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+          "amount": {
+            "type": "BigNumber",
+            "hex": "0x0a203dc07ed36cd278"
+          }
+        }
+      ]
     }
   ]
 }
