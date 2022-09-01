@@ -1,3 +1,10 @@
+## [1.17.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.6...v1.17.7) (2022-09-01)
+
+
+### Bug Fixes
+
+* support call overrides on read methods ([e92b0b2](https://github.com/Badger-Finance/badger-sdk/commit/e92b0b2d678b9f2bf7c3a1b74c97143ffe7e112d))
+
 ## [1.17.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.5...v1.17.6) (2022-08-24)
 
 
