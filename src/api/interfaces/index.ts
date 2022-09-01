@@ -16,6 +16,7 @@ export { UserBoostData } from './user-boost-data.interface';
 export { ValueSource } from './value-source.interface';
 export { VaultData } from './vault-data.interface';
 export { VaultDTO } from './vault-dto.interface';
+export { VaultDTOV3 } from './vault-dto-v3.interface';
 export { VaultEarning } from './vault-earning.interface';
 export { VaultSnapshot } from './vault-snapshot.interface';
 export { VaultStrategy } from './vault-strategy.interface';
