@@ -1,3 +1,11 @@
+## [1.17.7](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.6...sdk-mocks-v1.17.7) (2022-09-01)
+
+
+### Bug Fixes
+
+* support call overrides on read methods ([e92b0b2](https://github.com/Badger-Finance/badger-sdk/commit/e92b0b2d678b9f2bf7c3a1b74c97143ffe7e112d))
+* update overrides inputs + update mocks ([7f42082](https://github.com/Badger-Finance/badger-sdk/commit/7f42082dd41306291764115dd6faa41c6fd1ae4b))
+
 ## [1.17.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.5...sdk-mocks-v1.17.6) (2022-08-25)
 
 
