@@ -1,7 +1,7 @@
-import { YieldSummary } from './yield-summary.interface';
-
 export interface ValueSource {
   name: string;
-  apr: YieldSummary;
+  apr: number;
   boostable: boolean;
+  minApr: number;
+  maxApr: number;
 }
