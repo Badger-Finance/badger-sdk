@@ -1,3 +1,10 @@
+## [1.17.9](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.8...v1.17.9) (2022-09-01)
+
+
+### Bug Fixes
+
+* add vault dto v3 ([3ffb41a](https://github.com/Badger-Finance/badger-sdk/commit/3ffb41a7d9e4fd480a7ab1f1701b4d8610fb4e38))
+
 ## [1.17.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.7...v1.17.8) (2022-09-01)
 
 
