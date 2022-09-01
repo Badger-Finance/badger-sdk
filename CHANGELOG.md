@@ -1,3 +1,10 @@
+## [1.17.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.7...v1.17.8) (2022-09-01)
+
+
+### Bug Fixes
+
+* update overrides inputs + update mocks ([7f42082](https://github.com/Badger-Finance/badger-sdk/commit/7f42082dd41306291764115dd6faa41c6fd1ae4b))
+
 ## [1.17.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.6...v1.17.7) (2022-09-01)
 
 
