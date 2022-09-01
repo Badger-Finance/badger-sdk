@@ -64,6 +64,17 @@ export class BadgerAPI {
     });
   }
 
+  // TODO: enable and generate mocks once API conforms
+  // loadVaultsV3(
+  //   currency = Currency.USD,
+  //   network?: Network,
+  // ): Promise<i.VaultDTOV3[]> {
+  //   return this.get('/v3/vaults', {
+  //     chain: network ?? this.network,
+  //     currency,
+  //   });
+  // }
+
   loadVault(
     address: string,
     currency = Currency.USD,
@@ -74,6 +85,19 @@ export class BadgerAPI {
       currency,
     });
   }
+
+  // TODO: enable and generate mocks once API conforms
+  // loadVaultV3(
+  //   address: string,
+  //   currency = Currency.USD,
+  //   network?: Network,
+  // ): Promise<i.VaultDTO> {
+  //   return this.get(`/v3/vaults`, {
+  //     address,
+  //     chain: network ?? this.network,
+  //     currency,
+  //   });
+  // }
 
   loadVaultsHarvests(
     network?: Network,
