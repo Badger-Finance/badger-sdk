@@ -1,12 +1,12 @@
 import { VaultBehavior, VaultVersion } from '../../vaults';
 import { BouncerType, Protocol, VaultState, VaultType } from '../enums';
-import { BoostConfig, TokenValue, VaultStrategy, YieldSource } from '.';
+import { BoostConfig, TokenValue, VaultStrategy } from '.';
 import { VaultYieldProjection } from './vault-yield-projection.interface';
-import { YieldSummary } from './yield-summary.interface';
+import { VaultYieldSummary } from './vault-yield-summary.interface';
 
 export interface VaultDTOV3 {
-  apr: YieldSummary;
-  apy: YieldSummary;
+  apr: VaultYieldSummary;
+  apy: VaultYieldSummary;
   asset: string;
   available: number;
   balance: number;
@@ -17,8 +17,6 @@ export interface VaultDTOV3 {
   name: string;
   pricePerFullShare: number;
   protocol: Protocol;
-  sources: YieldSource[];
-  sourcesApy: YieldSource[];
   state: VaultState;
   strategy: VaultStrategy;
   tokens: TokenValue[];
