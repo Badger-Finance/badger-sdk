@@ -1,3 +1,10 @@
+## [1.17.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.9...sdk-mocks-v1.17.10) (2022-09-01)
+
+
+### Bug Fixes
+
+* update exports ([b1e1655](https://github.com/Badger-Finance/badger-sdk/commit/b1e16552a061f5eb7bd84ba31ee4bada8dde8cec))
+
 ## [1.17.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.7...sdk-mocks-v1.17.8) (2022-09-01)
 
 
