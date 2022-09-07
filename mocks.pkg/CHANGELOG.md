@@ -1,3 +1,10 @@
+## [1.17.11](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.10...sdk-mocks-v1.17.11) (2022-09-07)
+
+
+### Bug Fixes
+
+* update interfaces to support multi versioned api ([1ecc0ee](https://github.com/Badger-Finance/badger-sdk/commit/1ecc0ee451210809cb30a3296f096e4421a7bd18))
+
 ## [1.17.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.9...sdk-mocks-v1.17.10) (2022-09-01)
 
 
