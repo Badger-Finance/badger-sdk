@@ -57,7 +57,7 @@ export class BadgerAPI {
   loadVaults(
     currency = Currency.USD,
     network?: Network,
-  ): Promise<i.VaultDTO[]> {
+  ): Promise<i.VaultDTOV2[]> {
     return this.get('/v2/vaults', {
       chain: network ?? this.network,
       currency,
@@ -79,7 +79,7 @@ export class BadgerAPI {
     address: string,
     currency = Currency.USD,
     network?: Network,
-  ): Promise<i.VaultDTO> {
+  ): Promise<i.VaultDTOV2> {
     return this.get(`/v2/vaults/${address}`, {
       chain: network ?? this.network,
       currency,

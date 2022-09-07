@@ -1,4 +1,4 @@
-import { TokenRate, ValueSource } from '.';
+import { TokenRate } from '.';
 
 export interface VaultYieldProjection {
   harvestValue: number;
@@ -15,6 +15,4 @@ export interface VaultYieldProjection {
   yieldPeriodSources: TokenRate[];
   nonHarvestApr: number;
   nonHarvestApy: number;
-  nonHarvestSources: ValueSource[];
-  nonHarvestSourcesApy: ValueSource[];
 }

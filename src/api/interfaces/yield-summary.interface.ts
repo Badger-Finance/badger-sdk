@@ -1,5 +1,5 @@
 export interface YieldSummary {
-  yield: number;
+  baseYield: number;
   grossYield: number;
   minYield: number;
   maxYield: number;
