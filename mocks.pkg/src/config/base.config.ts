@@ -20,6 +20,7 @@ export const vaults = {
   AURABAL: '0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8',
   BCVXCRV: '0x2B5455aac8d64C14786c3a29858E43b5945819C0',
   BBADGER: '0x19d97d8fa813ee2f51ad4b4e04ea08baf4dffc28',
+  GRAVI_AURA: '0xBA485b556399123261a5F9c95d413B4f93107407',
   BCVX: {
     addr: '0x53c8e199eb2cb7c01543c137078a038937a68e40',
     user: '0x0077b5f1a8ba00cdef762ce1ebaf3e3fa03e35f1',
@@ -34,7 +35,6 @@ export const vaults = {
   BVECVX: '0xfd05D3C7fe2924020620A8bE4961bBaA747e6305',
 };
 
-export const bveCVXLP = '0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551';
 export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
 export const dexTrader = '0x36cc7b13029b5dee4034745fb4f24034f3f2ffc6';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
@@ -48,21 +48,21 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadPrices: { args: [] },
     loadRewardTree: { args: [badgerWhale] },
     loadVaults: { args: [] },
+    loadVaultsV3: { args: [] },
     loadVaultsHarvests: { args: [] },
     loadVaultHarvests: { args: [vaults.BVECVX] },
-    loadVault: { args: [bveCVXLP] },
-    loadSetts: { args: [] },
-    loadSett: { args: [bveCVXLP] },
+    loadVault: { args: [vaults.GRAVI_AURA] },
+    loadVaultV3: { args: [vaults.GRAVI_AURA] },
     loadAccount: { args: [badgerWhale] },
     loadTokens: { args: [] },
     loadProof: { args: [badgerWhale] },
     loadGasPrices: { args: [] },
-    loadVaultChart: { args: [bveCVXLP] },
+    loadVaultChart: { args: [vaults.AURABAL] },
     loadProtocolMetrics: { args: [] },
     loadProtocolSummary: { args: [] },
     loadLeaderboardSummary: { args: [] },
     loadSchedules: { args: [] },
-    loadSchedule: { args: [bveCVXLP] },
+    loadSchedule: { args: [vaults.BCVXCRV] },
     loadVaultSnapshots: {
       args: [vaults.BVECVX, [1632182660000, 1637182660000, 1642182660000]],
     },
