@@ -59,13 +59,14 @@ describe('vaults.utils', () => {
       ...block,
       timestamp: block.timestamp + 1250 * i,
     });
-    h.transactionHash = `0x-${i}`;
+    h.transactionHash = `0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172${i}`;
   });
 
   const harvestsV15: HarvestedEvent[] = [
     {
       args: ['0xTEST', harvestedOne, blockNumberOne, defaultTimestamp],
-      transactionHash: '0x-1',
+      transactionHash:
+        '0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172',
     },
     {
       args: [
@@ -74,7 +75,8 @@ describe('vaults.utils', () => {
         blockNumberTwo,
         defaultTimestamp.add(1250),
       ],
-      transactionHash: '0x-2',
+      transactionHash:
+        '0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172',
     },
     {
       args: [
@@ -83,7 +85,8 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(2500),
       ],
-      transactionHash: '0x-3',
+      transactionHash:
+        '0x30bc2ab3a59f7923ea20f7b99331dbc974130dc8b7152bb897d393fc2c506214',
     },
   ] as HarvestedEvent[];
 
@@ -96,7 +99,8 @@ describe('vaults.utils', () => {
   const distributions: TreeDistributionEvent[] = [
     {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
-      transactionHash: '0x-4',
+      transactionHash:
+        '0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb',
     },
     {
       args: [
@@ -105,14 +109,16 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(1250),
       ],
-      transactionHash: '0x-5',
+      transactionHash:
+        '0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb',
     },
   ] as TreeDistributionEvent[];
 
   const distributionsV15: TreeDistributionEventV15[] = [
     {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
-      transactionHash: '0x-6',
+      transactionHash:
+        '0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5',
     },
     {
       args: [
@@ -121,7 +127,7 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(1750),
       ],
-      transactionHash: '0x-7',
+      transactionHash: '0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5',
     },
   ] as TreeDistributionEventV15[];
 
