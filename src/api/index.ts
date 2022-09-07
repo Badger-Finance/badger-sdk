@@ -68,7 +68,7 @@ export class BadgerAPI {
     currency = Currency.USD,
     network?: Network,
   ): Promise<i.VaultDTOV3[]> {
-    return this.get('/v3/vaults', {
+    return this.get('/v3/vaults/list', {
       chain: network ?? this.network,
       currency,
     });
