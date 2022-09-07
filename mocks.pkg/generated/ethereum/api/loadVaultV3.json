@@ -1,0 +1,265 @@
+{
+  "name": "graviAURA",
+  "asset": "AURA",
+  "vaultAsset": "graviAURA",
+  "state": "open",
+  "underlyingToken": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+  "vaultToken": "0xBA485b556399123261a5F9c95d413B4f93107407",
+  "value": 2753168.24,
+  "available": 5.375525360340547,
+  "balance": 911645.114233279,
+  "protocol": "Aura",
+  "pricePerFullShare": 1.046195032952879,
+  "tokens": [
+    {
+      "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+      "name": "Aura",
+      "symbol": "AURA",
+      "decimals": 18,
+      "balance": 911645.114233279,
+      "value": 2753168.2449845024
+    }
+  ],
+  "apr": {
+    "baseYield": 79.33048725527928,
+    "minYield": 79.33048725527928,
+    "maxYield": 79.33048725527928,
+    "grossYield": 79.33048725527928,
+    "minGrossYield": 79.33048725527928,
+    "maxGrossYield": 79.33048725527928,
+    "sources": [
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_distribution_badger_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "distribution",
+        "name": "Badger",
+        "boostable": false,
+        "performance": {
+          "baseYield": 17.724880326237276,
+          "grossYield": 17.724880326237276,
+          "minYield": 17.724880326237276,
+          "maxYield": 17.724880326237276,
+          "minGrossYield": 17.724880326237276,
+          "maxGrossYield": 17.724880326237276
+        }
+      },
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_distribution_gravitationally_bound_aura_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "distribution",
+        "name": "Gravitationally Bound AURA",
+        "boostable": false,
+        "performance": {
+          "baseYield": 54.00091887718092,
+          "grossYield": 54.00091887718092,
+          "minYield": 54.00091887718092,
+          "maxYield": 54.00091887718092,
+          "minGrossYield": 54.00091887718092,
+          "maxGrossYield": 54.00091887718092
+        }
+      },
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_precompound_vault_compounding_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "precompound",
+        "name": "Vault Compounding",
+        "boostable": false,
+        "performance": {
+          "baseYield": 7.604688051861074,
+          "grossYield": 7.604688051861074,
+          "minYield": 7.604688051861074,
+          "maxYield": 7.604688051861074,
+          "minGrossYield": 7.604688051861074,
+          "maxGrossYield": 7.604688051861074
+        }
+      }
+    ]
+  },
+  "apy": {
+    "baseYield": 80.91081029312237,
+    "minYield": 80.91081029312237,
+    "maxYield": 80.91081029312237,
+    "grossYield": 80.91081029312237,
+    "minGrossYield": 80.91081029312237,
+    "maxGrossYield": 80.91081029312237,
+    "sources": [
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_distribution_badger_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "distribution",
+        "name": "Badger",
+        "boostable": false,
+        "performance": {
+          "baseYield": 17.724880326237276,
+          "grossYield": 17.724880326237276,
+          "minYield": 17.724880326237276,
+          "maxYield": 17.724880326237276,
+          "minGrossYield": 17.724880326237276,
+          "maxGrossYield": 17.724880326237276
+        }
+      },
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_compound_vault_compounding_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "compound",
+        "name": "Vault Compounding",
+        "boostable": false,
+        "performance": {
+          "baseYield": 7.888521113243696,
+          "grossYield": 7.888521113243696,
+          "minYield": 7.888521113243696,
+          "maxYield": 7.888521113243696,
+          "minGrossYield": 7.888521113243696,
+          "maxGrossYield": 7.888521113243696
+        }
+      },
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_distribution_gravitationally_bound_aura_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "distribution",
+        "name": "Gravitationally Bound AURA",
+        "boostable": false,
+        "performance": {
+          "baseYield": 54.00091887718092,
+          "grossYield": 54.00091887718092,
+          "minYield": 54.00091887718092,
+          "maxYield": 54.00091887718092,
+          "minGrossYield": 54.00091887718092,
+          "maxGrossYield": 54.00091887718092
+        }
+      },
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_flywheel_vault_flywheel_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "flywheel",
+        "name": "Vault Flywheel",
+        "boostable": false,
+        "performance": {
+          "baseYield": 1.296489976460478,
+          "grossYield": 1.296489976460478,
+          "minYield": 1.296489976460478,
+          "maxYield": 1.296489976460478,
+          "minGrossYield": 1.296489976460478,
+          "maxGrossYield": 1.296489976460478
+        }
+      }
+    ]
+  },
+  "boost": {
+    "enabled": false,
+    "weight": 5000
+  },
+  "bouncer": "none",
+  "strategy": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "withdrawFee": 0,
+    "performanceFee": 0,
+    "strategistFee": 0,
+    "aumFee": 0
+  },
+  "type": "standard",
+  "behavior": "None",
+  "yieldProjection": {
+    "id": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+    "harvestValue": 1018.2338208320001,
+    "harvestApr": 4.502870257432738,
+    "harvestTokens": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 337.1635168317881,
+        "value": 1018.2338208320001,
+        "apr": 4.604917592791402
+      }
+    ],
+    "harvestPeriodApr": 14.26260030826245,
+    "harvestPeriodApy": 15.329827937507567,
+    "harvestPeriodSources": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 1.2367573166282568,
+        "value": 3.735007096217336,
+        "apr": 15.329827937507567
+      }
+    ],
+    "harvestPeriodSourcesApy": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 1.2367573166282568,
+        "value": 3.735007096217336,
+        "apr": 15.329827937507567
+      }
+    ],
+    "yieldValue": 1043.6729112882635,
+    "yieldApr": 4.615367919019005,
+    "yieldTokens": [
+      {
+        "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+        "name": "Aura BAL",
+        "symbol": "auraBAL",
+        "decimals": 18,
+        "balance": 59.67356886165598,
+        "value": 1043.6729112882635,
+        "apr": 4.615367919019005
+      }
+    ],
+    "yieldPeriodApr": 3.9166028144001377,
+    "yieldPeriodSources": [
+      {
+        "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+        "name": "Aura BAL",
+        "symbol": "auraBAL",
+        "decimals": 18,
+        "balance": 0.058643495902131804,
+        "value": 1.0256572426260073,
+        "apr": 3.9166028144001377
+      }
+    ],
+    "nonHarvestApr": 0,
+    "nonHarvestApy": 1.296489976460478,
+    "nonHarvestSources": [],
+    "nonHarvestSourcesApy": [
+      {
+        "id": "ethereum-0xba485b556399123261a5f9c95d413b4f93107407_flywheel_vault_flywheel_flat",
+        "chainAddress": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+        "chain": "ethereum",
+        "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+        "type": "flywheel",
+        "name": "Vault Flywheel",
+        "boostable": false,
+        "performance": {
+          "baseYield": 1.296489976460478,
+          "grossYield": 1.296489976460478,
+          "minYield": 1.296489976460478,
+          "maxYield": 1.296489976460478,
+          "minGrossYield": 1.296489976460478,
+          "maxGrossYield": 1.296489976460478
+        }
+      }
+    ]
+  },
+  "lastHarvest": 1662331155000,
+  "version": "v1.5"
+}

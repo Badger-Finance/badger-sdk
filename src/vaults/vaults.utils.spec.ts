@@ -127,7 +127,8 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(1750),
       ],
-      transactionHash: '0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5',
+      transactionHash:
+        '0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5',
     },
   ] as TreeDistributionEventV15[];
 
