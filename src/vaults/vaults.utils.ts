@@ -47,6 +47,7 @@ export async function parseHarvestEvents(
           timestamp: block.timestamp,
           block: e.args[1].toNumber(),
           amount: e.args[0],
+          tx: e.transactionHash,
           token,
         };
       } catch (err) {
@@ -55,6 +56,7 @@ export async function parseHarvestEvents(
           timestamp: 0,
           block: e.args[1].toNumber(),
           amount: e.args[0],
+          tx: e.transactionHash,
           token,
         };
       }
@@ -65,6 +67,7 @@ export async function parseHarvestEvents(
     block: e.args[2].toNumber(),
     token: e.args[0],
     amount: e.args[1],
+    tx: e.transactionHash,
   }));
   return {
     harvests,
@@ -91,12 +94,14 @@ export async function parseHarvestV15Events(
     block: e.args[2].toNumber(),
     amount: e.args[1],
     token: e.args[0],
+    tx: e.transactionHash,
   }));
   const distributions = treeDistributionEvents.map((e) => ({
     timestamp: e.args[3].toNumber(),
     block: e.args[2].toNumber(),
     token: e.args[0],
     amount: e.args[1],
+    tx: e.transactionHash,
   }));
   return {
     harvests,

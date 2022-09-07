@@ -5,4 +5,5 @@ export interface VaultPerformanceEvent {
   block: number;
   token: string;
   amount: BigNumber;
+  tx: string;
 }

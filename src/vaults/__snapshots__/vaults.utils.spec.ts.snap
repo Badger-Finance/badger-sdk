@@ -19,6 +19,7 @@ Object {
           "block": 1647315665,
           "timestamp": 0,
           "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+          "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1721",
         },
       ],
       "timestamp": 0,
@@ -34,6 +35,7 @@ Object {
           "block": 1647275665,
           "timestamp": 1647284957,
           "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+          "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1720",
         },
       ],
       "timestamp": 1647284957,
@@ -46,6 +48,7 @@ Object {
           "block": 1647275665,
           "timestamp": 1647284957,
           "token": "0xBTC",
+          "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
         },
       ],
     },
@@ -61,6 +64,7 @@ Object {
           "block": 1647355665,
           "timestamp": 1647286207,
           "token": "0xBTC",
+          "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
         },
       ],
     },
@@ -74,6 +78,7 @@ Object {
           "block": 1647355665,
           "timestamp": 1647287457,
           "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+          "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1722",
         },
       ],
       "timestamp": 1647287457,
@@ -102,6 +107,7 @@ Object {
           "block": 1647275665,
           "timestamp": 1647284957,
           "token": "0xTEST",
+          "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172",
         },
       ],
       "timestamp": 1647284957,
@@ -114,6 +120,7 @@ Object {
           "block": 1647275665,
           "timestamp": 1647284957,
           "token": "0xBTC",
+          "tx": "0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5",
         },
       ],
     },
@@ -127,6 +134,7 @@ Object {
           "block": 1647315665,
           "timestamp": 1647286207,
           "token": "0xTEST",
+          "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172",
         },
       ],
       "timestamp": 1647286207,
@@ -144,6 +152,7 @@ Object {
           "block": 1647355665,
           "timestamp": 1647286707,
           "token": "0xBTC",
+          "tx": "0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5",
         },
       ],
     },
@@ -157,6 +166,7 @@ Object {
           "block": 1647355665,
           "timestamp": 1647287457,
           "token": "0xTEST",
+          "tx": "0x30bc2ab3a59f7923ea20f7b99331dbc974130dc8b7152bb897d393fc2c506214",
         },
       ],
       "timestamp": 1647287457,
@@ -177,6 +187,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0xBTC",
+      "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
     },
     Object {
       "amount": Object {
@@ -186,6 +197,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647286207,
       "token": "0xBTC",
+      "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
     },
   ],
   "harvests": Array [
@@ -197,6 +209,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1720",
     },
     Object {
       "amount": Object {
@@ -206,6 +219,7 @@ Object {
       "block": 1647315665,
       "timestamp": 1647286207,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1721",
     },
     Object {
       "amount": Object {
@@ -215,6 +229,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647287457,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1722",
     },
   ],
 }
@@ -231,6 +246,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0xBTC",
+      "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
     },
     Object {
       "amount": Object {
@@ -240,6 +256,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647286207,
       "token": "0xBTC",
+      "tx": "0x79ac9d3c0acfb293b07d539df3714cd873fc839e572894e346fea91c59b20afb",
     },
   ],
   "harvests": Array [
@@ -251,6 +268,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1720",
     },
     Object {
       "amount": Object {
@@ -260,6 +278,7 @@ Object {
       "block": 1647315665,
       "timestamp": 0,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1721",
     },
     Object {
       "amount": Object {
@@ -269,6 +288,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647287457,
       "token": "0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab1722",
     },
   ],
 }
@@ -285,6 +305,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0xBTC",
+      "tx": "0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5",
     },
     Object {
       "amount": Object {
@@ -294,6 +315,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647286707,
       "token": "0xBTC",
+      "tx": "0x93286e1f1405cdc8441fe0102dd8663e0d13eea88e032743e287c365cfe290e5",
     },
   ],
   "harvests": Array [
@@ -305,6 +327,7 @@ Object {
       "block": 1647275665,
       "timestamp": 1647284957,
       "token": "0xTEST",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172",
     },
     Object {
       "amount": Object {
@@ -314,6 +337,7 @@ Object {
       "block": 1647315665,
       "timestamp": 1647286207,
       "token": "0xTEST",
+      "tx": "0x6422091f26311d0442aa546f3f1444bcc111e361cbd506659f38082b1edab172",
     },
     Object {
       "amount": Object {
@@ -323,6 +347,7 @@ Object {
       "block": 1647355665,
       "timestamp": 1647287457,
       "token": "0xTEST",
+      "tx": "0x30bc2ab3a59f7923ea20f7b99331dbc974130dc8b7152bb897d393fc2c506214",
     },
   ],
 }
