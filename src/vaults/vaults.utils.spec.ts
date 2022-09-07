@@ -54,16 +54,19 @@ describe('vaults.utils', () => {
     { args: [harvestedTwo, blockNumberTwo] },
     { args: [harvestedThree, blockNumberThree] },
   ] as HarvestEvent[];
-  harvests.forEach(
-    (h, i) =>
-      (h.getBlock = async () => ({
-        ...block,
-        timestamp: block.timestamp + 1250 * i,
-      })),
-  );
+  harvests.forEach((h, i) => {
+    h.getBlock = async () => ({
+      ...block,
+      timestamp: block.timestamp + 1250 * i,
+    });
+    h.transactionHash = `0x-${i}`;
+  });
 
   const harvestsV15: HarvestedEvent[] = [
-    { args: ['0xTEST', harvestedOne, blockNumberOne, defaultTimestamp] },
+    {
+      args: ['0xTEST', harvestedOne, blockNumberOne, defaultTimestamp],
+      transactionHash: '0x-1',
+    },
     {
       args: [
         '0xTEST',
@@ -71,6 +74,7 @@ describe('vaults.utils', () => {
         blockNumberTwo,
         defaultTimestamp.add(1250),
       ],
+      transactionHash: '0x-2',
     },
     {
       args: [
@@ -79,6 +83,7 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(2500),
       ],
+      transactionHash: '0x-3',
     },
   ] as HarvestedEvent[];
 
@@ -91,6 +96,7 @@ describe('vaults.utils', () => {
   const distributions: TreeDistributionEvent[] = [
     {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
+      transactionHash: '0x-4',
     },
     {
       args: [
@@ -99,12 +105,14 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(1250),
       ],
+      transactionHash: '0x-5',
     },
   ] as TreeDistributionEvent[];
 
   const distributionsV15: TreeDistributionEventV15[] = [
     {
       args: ['0xBTC', distributedOne, blockNumberOne, defaultTimestamp],
+      transactionHash: '0x-6',
     },
     {
       args: [
@@ -113,6 +121,7 @@ describe('vaults.utils', () => {
         blockNumberThree,
         defaultTimestamp.add(1750),
       ],
+      transactionHash: '0x-7',
     },
   ] as TreeDistributionEventV15[];
 
