@@ -1,3 +1,16 @@
+# [1.18.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.11...sdk-mocks-v1.18.0) (2022-09-07)
+
+
+### Bug Fixes
+
+* update snapshots ([ff4685c](https://github.com/Badger-Finance/badger-sdk/commit/ff4685c0e22681bc102c76cbaa735378b64b0b62))
+* update tests snapshot with real txs ([d12be9b](https://github.com/Badger-Finance/badger-sdk/commit/d12be9b06dafc2134b35cb413dfb97a25de204fd))
+
+
+### Features
+
+* add txs string to vault performance events ([2f632ab](https://github.com/Badger-Finance/badger-sdk/commit/2f632ab0049bf80dc84ebd6a9b4025d70f480ad1))
+
 ## [1.17.11](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.17.10...sdk-mocks-v1.17.11) (2022-09-07)
 
 
