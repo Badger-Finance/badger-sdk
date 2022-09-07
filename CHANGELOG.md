@@ -1,3 +1,11 @@
+## [1.18.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.0...v1.18.1) (2022-09-07)
+
+
+### Bug Fixes
+
+* enable v3 vault loading ([836a79c](https://github.com/Badger-Finance/badger-sdk/commit/836a79c58fb04e49904679108be3a6504f2e6073))
+* update vault mocks ([3f6ab52](https://github.com/Badger-Finance/badger-sdk/commit/3f6ab52abbf38a7e398cad9dff3d160798bed28e))
+
 # [1.18.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.17.11...v1.18.0) (2022-09-07)
 
 
