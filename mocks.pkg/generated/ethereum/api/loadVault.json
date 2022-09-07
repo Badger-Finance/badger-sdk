@@ -1,75 +1,92 @@
 {
-  "name": "CVX/bveCVX",
-  "asset": "bveCVX-CVX-f",
-  "vaultAsset": "bbveCVX-CVX-f",
+  "name": "graviAURA",
+  "asset": "AURA",
+  "vaultAsset": "graviAURA",
   "state": "open",
-  "underlyingToken": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
-  "vaultToken": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
-  "value": 1234993.58,
-  "available": 281.3177887540157,
-  "balance": 166737.27405908523,
-  "protocol": "Curve",
-  "pricePerFullShare": 1,
+  "underlyingToken": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+  "vaultToken": "0xBA485b556399123261a5F9c95d413B4f93107407",
+  "value": 2744051.79,
+  "available": 5.375525360340547,
+  "balance": 911645.114233279,
+  "protocol": "Aura",
+  "pricePerFullShare": 1.046195032952879,
   "tokens": [
     {
-      "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
-      "name": "Convex Token",
-      "symbol": "CVX",
+      "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+      "name": "Aura",
+      "symbol": "AURA",
       "decimals": 18,
-      "balance": 78450.47515683877,
-      "value": 581318.0209121753
-    },
-    {
-      "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-      "name": "Badger Vested Escrow Convex Token",
-      "symbol": "bveCVX",
-      "decimals": 18,
-      "balance": 88680.22583183156,
-      "value": 656233.6711555535
+      "balance": 911645.114233279,
+      "value": 2744051.7938421695
     }
   ],
-  "apr": 20.45640493214394,
-  "apy": 20.45640493214394,
+  "apr": 79.33048725527928,
+  "apy": 80.91081029312237,
   "boost": {
     "enabled": false,
-    "weight": 0
+    "weight": 5000
   },
+  "minApr": 79.33048725527928,
+  "maxApr": 79.33048725527928,
+  "minApy": 80.91081029312237,
+  "maxApy": 80.91081029312237,
   "sources": [
     {
       "name": "Badger",
-      "apr": 20.40893186035129,
+      "apr": 17.724880326237276,
       "boostable": false,
-      "minApr": 20.40893186035129,
-      "maxApr": 20.40893186035129
+      "minApr": 17.724880326237276,
+      "maxApr": 17.724880326237276
     },
     {
-      "name": "Curve LP Fees",
-      "apr": 0.04747307179264748,
+      "name": "Gravitationally Bound AURA",
+      "apr": 54.00091887718092,
       "boostable": false,
-      "minApr": 0.04747307179264748,
-      "maxApr": 0.04747307179264748
+      "minApr": 54.00091887718092,
+      "maxApr": 54.00091887718092
+    },
+    {
+      "name": "Vault Compounding",
+      "apr": 7.604688051861074,
+      "boostable": false,
+      "minApr": 7.604688051861074,
+      "maxApr": 7.604688051861074
     }
   ],
   "sourcesApy": [
     {
       "name": "Badger",
-      "apr": 20.40893186035129,
+      "apr": 17.724880326237276,
       "boostable": false,
-      "minApr": 20.40893186035129,
-      "maxApr": 20.40893186035129
+      "minApr": 17.724880326237276,
+      "maxApr": 17.724880326237276
     },
     {
-      "name": "Curve LP Fees",
-      "apr": 0.04747307179264748,
+      "name": "Vault Compounding",
+      "apr": 7.888521113243696,
       "boostable": false,
-      "minApr": 0.04747307179264748,
-      "maxApr": 0.04747307179264748
+      "minApr": 7.888521113243696,
+      "maxApr": 7.888521113243696
+    },
+    {
+      "name": "Gravitationally Bound AURA",
+      "apr": 54.00091887718092,
+      "boostable": false,
+      "minApr": 54.00091887718092,
+      "maxApr": 54.00091887718092
+    },
+    {
+      "name": "Vault Flywheel",
+      "apr": 1.296489976460478,
+      "boostable": false,
+      "minApr": 1.296489976460478,
+      "maxApr": 1.296489976460478
     }
   ],
   "bouncer": "none",
   "strategy": {
-    "address": "0x98Ca7AFa876f0e15494E76E92C5b3658cdE1Ffe1",
-    "withdrawFee": 10,
+    "address": "0x0000000000000000000000000000000000000000",
+    "withdrawFee": 0,
     "performanceFee": 0,
     "strategistFee": 0,
     "aumFee": 0
@@ -77,39 +94,82 @@
   "type": "standard",
   "behavior": "None",
   "yieldProjection": {
-    "harvestValue": 0,
-    "harvestApr": 0,
-    "harvestPeriodApr": 0,
-    "harvestPeriodApy": 0,
-    "harvestTokens": [],
-    "harvestPeriodSources": [],
-    "harvestPeriodSourcesApy": [],
-    "yieldValue": 0,
-    "yieldApr": 0,
-    "yieldTokens": [],
-    "yieldPeriodApr": 0,
-    "yieldPeriodSources": [],
-    "nonHarvestApr": 0.04747307179264748,
-    "nonHarvestSources": [
+    "id": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+    "harvestValue": 1018.1035027455082,
+    "harvestApr": 4.501026679294113,
+    "harvestTokens": [
       {
-        "name": "Curve LP Fees",
-        "apr": 0.04747307179264748,
-        "boostable": false,
-        "minApr": 0.04747307179264748,
-        "maxApr": 0.04747307179264748
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 339.36783424850273,
+        "value": 1018.1035027455082,
+        "apr": 4.602983804358551
       }
     ],
-    "nonHarvestApy": 0.04747307179264748,
+    "harvestPeriodApr": 4.109544094129403,
+    "harvestPeriodApy": 4.19515372703283,
+    "harvestPeriodSources": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 0.3565054311101221,
+        "value": 1.0695162933303664,
+        "apr": 4.19515372703283
+      }
+    ],
+    "harvestPeriodSourcesApy": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Vault Compounding",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 0.3565054311101221,
+        "value": 1.0695162933303664,
+        "apr": 4.19515372703283
+      }
+    ],
+    "yieldValue": 1046.8393685383662,
+    "yieldApr": 4.628067690583709,
+    "yieldTokens": [
+      {
+        "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+        "name": "Aura BAL",
+        "symbol": "auraBAL",
+        "decimals": 18,
+        "balance": 60.0639024728604,
+        "value": 1046.8393685383662,
+        "apr": 4.628067690583709
+      }
+    ],
+    "yieldPeriodApr": 4.227678063468283,
+    "yieldPeriodSources": [
+      {
+        "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+        "name": "Aura BAL",
+        "symbol": "auraBAL",
+        "decimals": 18,
+        "balance": 0.06312903750562526,
+        "value": 1.1002608728043308,
+        "apr": 4.227678063468283
+      }
+    ],
+    "nonHarvestApr": 0,
+    "nonHarvestApy": 1.296489976460478,
+    "nonHarvestSources": [],
     "nonHarvestSourcesApy": [
       {
-        "name": "Curve LP Fees",
-        "apr": 0.04747307179264748,
+        "name": "Vault Flywheel",
+        "apr": 1.296489976460478,
         "boostable": false,
-        "minApr": 0.04747307179264748,
-        "maxApr": 0.04747307179264748
+        "minApr": 1.296489976460478,
+        "maxApr": 1.296489976460478
       }
     ]
   },
-  "lastHarvest": 1658844991000,
-  "version": "v1"
+  "lastHarvest": 1662331155000,
+  "version": "v1.5"
 }

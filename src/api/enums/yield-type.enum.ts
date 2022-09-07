@@ -1,4 +1,4 @@
-export enum HarvestType {
+export enum YieldType {
   Harvest = 'Harvest',
   TreeDistribution = 'TreeDistribution',
 }

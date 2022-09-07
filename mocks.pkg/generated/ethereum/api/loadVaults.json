@@ -6,7 +6,7 @@
     "state": "discontinued",
     "underlyingToken": "0x410e3E86ef427e30B9235497143881f717d93c2A",
     "vaultToken": "0x5Dce29e92b1b939F8E8C60DcF15BDE82A85be4a9",
-    "value": 258.42,
+    "value": 225.15,
     "available": 0,
     "balance": 0.01073050870987165,
     "protocol": "Convex",
@@ -17,16 +17,16 @@
         "name": "Binance Wrapped BTC",
         "symbol": "BBTC",
         "decimals": 8,
-        "balance": 0.007127302155841045,
-        "value": 169.83648307153626
+        "balance": 0.007505883491400808,
+        "value": 159.7552242309748
       },
       {
         "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
         "name": "Curve.fi renBTC/wBTC/sBTC",
         "symbol": "crvRenWSBTC",
         "decimals": 18,
-        "balance": 0.00369197957152277,
-        "value": 88.72426341820758
+        "balance": 0.003325862163023288,
+        "value": 65.31378126310678
       }
     ],
     "apr": 0.3067433490728799,
@@ -35,6 +35,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.3067433490728799,
+    "maxApr": 0.3067433490728799,
+    "minApy": 0.3067433490728799,
+    "maxApy": 0.3067433490728799,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -55,47 +59,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xF2F3AB09E2D8986fBECbBa59aE838a5418a6680c",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.3067433490728799,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.3067433490728799,
-          "boostable": false,
-          "minApr": 0.3067433490728799,
-          "maxApr": 0.3067433490728799
-        }
-      ],
-      "nonHarvestApy": 0.3067433490728799,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.3067433490728799,
-          "boostable": false,
-          "minApr": 0.3067433490728799,
-          "maxApr": 0.3067433490728799
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -107,43 +95,56 @@
     "state": "discontinued",
     "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
     "vaultToken": "0x53C8E199eb2Cb7c01543C137078a038937a68E40",
-    "value": 213213.9,
+    "value": 145814.41,
     "available": 0,
-    "balance": 28812.689146372955,
+    "balance": 27103.049523850525,
     "protocol": "Convex",
     "pricePerFullShare": 1.0957988590667325,
-    "tokens": [],
+    "tokens": [
+      {
+        "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": 18,
+        "balance": 27103.049523850525,
+        "value": 145814.4064383158
+      }
+    ],
     "apr": 0,
     "apy": 0,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
     "strategy": {
-      "address": "0xBCee2c6CfA7A4e29892c3665f464Be5536F16D95",
-      "withdrawFee": 10,
-      "performanceFee": 1000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
+      "harvestValue": 0,
       "nonHarvestApr": 0,
       "nonHarvestSources": [],
       "nonHarvestApy": 0,
@@ -159,19 +160,19 @@
     "state": "discontinued",
     "underlyingToken": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
     "vaultToken": "0x7e7E112A68d8D2E221E11047a72fFC1065c38e1a",
-    "value": 1061884.31,
-    "available": 0,
-    "balance": 85.177247837,
+    "value": 386200.06,
+    "available": 4.230709837,
+    "balance": 86.858750654,
     "protocol": "Badger",
-    "pricePerFullShare": 0.19539870891269878,
+    "pricePerFullShare": 0.19539870903651185,
     "tokens": [
       {
         "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
         "name": "Digg",
         "symbol": "DIGG",
         "decimals": 9,
-        "balance": 85.177247837,
-        "value": 1061884.306244398
+        "balance": 86.858750654,
+        "value": 386200.06303288025
       }
     ],
     "apr": 0,
@@ -180,11 +181,15 @@
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
     "strategy": {
-      "address": "0x4a8651F2edD68850B944AD93f2c67af817F39F62",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -193,18 +198,18 @@
     "type": "native",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
+      "harvestValue": 0,
       "nonHarvestApr": 0,
       "nonHarvestSources": [],
       "nonHarvestApy": 0,
@@ -220,9 +225,9 @@
     "state": "discontinued",
     "underlyingToken": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
     "vaultToken": "0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28",
-    "value": 4903573.63,
-    "available": 1006893.9700235977,
-    "balance": 1006893.9700235977,
+    "value": 4188289.32,
+    "available": 999591.7224477889,
+    "balance": 999591.7224477889,
     "protocol": "Badger",
     "pricePerFullShare": 1.2348816886763505,
     "tokens": [
@@ -231,8 +236,8 @@
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 1006893.9700235977,
-        "value": 4903573.634014921
+        "balance": 999591.7224477889,
+        "value": 4188289.317056236
       }
     ],
     "apr": 0,
@@ -241,11 +246,15 @@
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
     "strategy": {
-      "address": "0x75b8E21BD623012Efb3b69E1B562465A68944eE6",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -254,18 +263,18 @@
     "type": "native",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
+      "harvestValue": 0,
       "nonHarvestApr": 0,
       "nonHarvestSources": [],
       "nonHarvestApy": 0,
@@ -281,56 +290,60 @@
     "state": "discontinued",
     "underlyingToken": "0xcD7989894bc033581532D2cd88Da5db0A4b12859",
     "vaultToken": "0x235c9e24D3FB2FAFd58a2E49D454Fdcd2DBf7FF1",
-    "value": 975315.46,
+    "value": 814185.1,
     "available": 0,
-    "balance": 0.011245623654853307,
+    "balance": 0.011201990914006876,
     "protocol": "Uniswap",
-    "pricePerFullShare": 1.8110174182838055,
+    "pricePerFullShare": 1.8110174182838057,
     "tokens": [
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 20.359991329656204,
-        "value": 488497.2719724413
+        "balance": 21.002172846200445,
+        "value": 406747.4013385363
       },
       {
         "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 100067.18335138875,
-        "value": 487327.1829212632
+        "balance": 97364.90957054943,
+        "value": 407958.9711006021
       }
     ],
-    "apr": 37.96299633932472,
-    "apy": 37.96299633932472,
+    "apr": 13.690772618966921,
+    "apy": 13.690772618966921,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 13.690772618966921,
+    "maxApr": 13.690772618966921,
+    "minApy": 13.690772618966921,
+    "maxApy": 13.690772618966921,
     "sources": [
       {
         "name": "Uniswap LP Fees",
-        "apr": 37.96299633932472,
+        "apr": 13.690772618966921,
         "boostable": false,
-        "minApr": 37.96299633932472,
-        "maxApr": 37.96299633932472
+        "minApr": 13.690772618966921,
+        "maxApr": 13.690772618966921
       }
     ],
     "sourcesApy": [
       {
         "name": "Uniswap LP Fees",
-        "apr": 37.96299633932472,
+        "apr": 13.690772618966921,
         "boostable": false,
-        "minApr": 37.96299633932472,
-        "maxApr": 37.96299633932472
+        "minApr": 13.690772618966921,
+        "maxApr": 13.690772618966921
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x95826C65EB1f2d2F0EDBb7EcB176563B61C60bBf",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -339,38 +352,22 @@
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 37.96299633932472,
-      "nonHarvestSources": [
-        {
-          "name": "Uniswap LP Fees",
-          "apr": 37.96299633932472,
-          "boostable": false,
-          "minApr": 37.96299633932472,
-          "maxApr": 37.96299633932472
-        }
-      ],
-      "nonHarvestApy": 37.96299633932472,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Uniswap LP Fees",
-          "apr": 37.96299633932472,
-          "boostable": false,
-          "minApr": 37.96299633932472,
-          "maxApr": 37.96299633932472
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -382,9 +379,9 @@
     "state": "discontinued",
     "underlyingToken": "0x18d98D452072Ac2EB7b74ce3DB723374360539f1",
     "vaultToken": "0x8a8FFec8f4A0C8c9585Da95D9D97e8Cd6de273DE",
-    "value": 802291.12,
+    "value": 440265.65,
     "available": 0,
-    "balance": 0.000118933280672222,
+    "balance": 0.000070133062925641,
     "protocol": "Sushiswap",
     "pricePerFullShare": 1,
     "tokens": [
@@ -393,85 +390,73 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 12.00359983053613,
-        "value": 288002.3707340534
+        "balance": 7.0848371005755135,
+        "value": 137211.4733398779
       },
       {
         "address": "0xc4E15973E6fF2A35cC804c2CF9D2a1b817a8b40F",
         "name": "Interest-Bearing BTC",
         "symbol": "ibBTC",
         "decimals": 18,
-        "balance": 12.005712238669972,
-        "value": 514588.8379738723
+        "balance": 7.07456533911435,
+        "value": 303230.01956511923
       }
     ],
-    "apr": 0.20659857248414995,
-    "apy": 0.20659857248414995,
+    "apr": 0.24658044379105126,
+    "apy": 0.24658044379105126,
     "boost": {
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.24658044379105126,
+    "maxApr": 0.24658044379105126,
+    "minApy": 0.24658044379105126,
+    "maxApy": 0.24658044379105126,
     "sources": [
       {
         "name": "Sushiswap LP Fees",
-        "apr": 0.20659857248414995,
+        "apr": 0.24658044379105126,
         "boostable": false,
-        "minApr": 0.20659857248414995,
-        "maxApr": 0.20659857248414995
+        "minApr": 0.24658044379105126,
+        "maxApr": 0.24658044379105126
       }
     ],
     "sourcesApy": [
       {
         "name": "Sushiswap LP Fees",
-        "apr": 0.20659857248414995,
+        "apr": 0.24658044379105126,
         "boostable": false,
-        "minApr": 0.20659857248414995,
-        "maxApr": 0.20659857248414995
+        "minApr": 0.24658044379105126,
+        "maxApr": 0.24658044379105126
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xf4146A176b09C664978e03d28d07Db4431525dAd",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.20659857248414995,
-      "nonHarvestSources": [
-        {
-          "name": "Sushiswap LP Fees",
-          "apr": 0.20659857248414995,
-          "boostable": false,
-          "minApr": 0.20659857248414995,
-          "maxApr": 0.20659857248414995
-        }
-      ],
-      "nonHarvestApy": 0.20659857248414995,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Sushiswap LP Fees",
-          "apr": 0.20659857248414995,
-          "boostable": false,
-          "minApr": 0.20659857248414995,
-          "maxApr": 0.20659857248414995
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -483,129 +468,172 @@
     "state": "open",
     "underlyingToken": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
     "vaultToken": "0xBA485b556399123261a5F9c95d413B4f93107407",
-    "value": 2525602.06,
-    "available": 98671.53693966164,
-    "balance": 791724.7850013095,
+    "value": 2744051.79,
+    "available": 5.375525360340547,
+    "balance": 911645.114233279,
     "protocol": "Aura",
-    "pricePerFullShare": 1.0411694510952991,
-    "tokens": [],
-    "apr": 16.680073728869488,
-    "apy": 17.62129348458851,
+    "pricePerFullShare": 1.046195032952879,
+    "tokens": [
+      {
+        "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        "name": "Aura",
+        "symbol": "AURA",
+        "decimals": 18,
+        "balance": 911645.114233279,
+        "value": 2744051.7938421695
+      }
+    ],
+    "apr": 79.33048725527928,
+    "apy": 80.91081029312237,
     "boost": {
       "enabled": false,
       "weight": 5000
     },
+    "minApr": 79.33048725527928,
+    "maxApr": 79.33048725527928,
+    "minApy": 80.91081029312237,
+    "maxApy": 80.91081029312237,
     "sources": [
       {
         "name": "Badger",
-        "apr": 3.2017592114316327,
+        "apr": 17.724880326237276,
         "boostable": false,
-        "minApr": 3.2017592114316327,
-        "maxApr": 3.2017592114316327
+        "minApr": 17.724880326237276,
+        "maxApr": 17.724880326237276
+      },
+      {
+        "name": "Gravitationally Bound AURA",
+        "apr": 54.00091887718092,
+        "boostable": false,
+        "minApr": 54.00091887718092,
+        "maxApr": 54.00091887718092
       },
       {
         "name": "Vault Compounding",
-        "apr": 13.478314517437855,
+        "apr": 7.604688051861074,
         "boostable": false,
-        "minApr": 13.478314517437855,
-        "maxApr": 13.478314517437855
+        "minApr": 7.604688051861074,
+        "maxApr": 7.604688051861074
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger",
-        "apr": 3.2017592114316327,
+        "apr": 17.724880326237276,
         "boostable": false,
-        "minApr": 3.2017592114316327,
-        "maxApr": 3.2017592114316327
+        "minApr": 17.724880326237276,
+        "maxApr": 17.724880326237276
       },
       {
         "name": "Vault Compounding",
-        "apr": 14.419534273156875,
+        "apr": 7.888521113243696,
         "boostable": false,
-        "minApr": 14.419534273156875,
-        "maxApr": 14.419534273156875
+        "minApr": 7.888521113243696,
+        "maxApr": 7.888521113243696
+      },
+      {
+        "name": "Gravitationally Bound AURA",
+        "apr": 54.00091887718092,
+        "boostable": false,
+        "minApr": 54.00091887718092,
+        "maxApr": 54.00091887718092
+      },
+      {
+        "name": "Vault Flywheel",
+        "apr": 1.296489976460478,
+        "boostable": false,
+        "minApr": 1.296489976460478,
+        "maxApr": 1.296489976460478
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x3c0989eF27e3e3fAb87a2d7C38B35880C90E63b5",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 300,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 157.2207924588702,
-      "harvestApr": 2.589985966006246,
-      "harvestPeriodApr": 8.796275737063969,
-      "harvestPeriodApy": 8.79627573651348,
+      "id": "ethereum-0xBA485b556399123261a5F9c95d413B4f93107407",
+      "harvestValue": 1018.1035027455082,
+      "harvestApr": 4.501026679294113,
       "harvestTokens": [
         {
-          "apr": 2.6237230453813654,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Vault Compounding",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 49.28551487738878,
-          "value": 157.2207924588702
+          "balance": 339.36783424850273,
+          "value": 1018.1035027455082,
+          "apr": 4.602983804358551
         }
       ],
+      "harvestPeriodApr": 4.109544094129403,
+      "harvestPeriodApy": 4.19515372703283,
       "harvestPeriodSources": [
         {
-          "apr": 9.194741355144354,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Vault Compounding",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.5878618140235972,
-          "value": 1.875279186735275
+          "balance": 0.3565054311101221,
+          "value": 1.0695162933303664,
+          "apr": 4.19515372703283
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 9.194741355144354,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Vault Compounding",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.5878618140235972,
-          "value": 1.875279186735275
+          "balance": 0.3565054311101221,
+          "value": 1.0695162933303664,
+          "apr": 4.19515372703283
         }
       ],
-      "yieldValue": 160.96260060365145,
-      "yieldApr": 2.6516268624227086,
+      "yieldValue": 1046.8393685383662,
+      "yieldApr": 4.628067690583709,
       "yieldTokens": [
         {
-          "apr": 2.6516268624227086,
           "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
           "name": "Aura BAL",
           "symbol": "auraBAL",
           "decimals": 18,
-          "balance": 10.1504341788307,
-          "value": 160.96260060365145
+          "balance": 60.0639024728604,
+          "value": 1046.8393685383662,
+          "apr": 4.628067690583709
         }
       ],
-      "yieldPeriodApr": 10.289569093411838,
+      "yieldPeriodApr": 4.227678063468283,
       "yieldPeriodSources": [
         {
-          "apr": 10.289569093411838,
           "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
           "name": "Aura BAL",
           "symbol": "auraBAL",
           "decimals": 18,
-          "balance": 0.13833240443687345,
-          "value": 2.193634594700683
+          "balance": 0.06312903750562526,
+          "value": 1.1002608728043308,
+          "apr": 4.227678063468283
         }
       ],
       "nonHarvestApr": 0,
+      "nonHarvestApy": 1.296489976460478,
       "nonHarvestSources": [],
-      "nonHarvestApy": 0,
-      "nonHarvestSourcesApy": []
+      "nonHarvestSourcesApy": [
+        {
+          "name": "Vault Flywheel",
+          "apr": 1.296489976460478,
+          "boostable": false,
+          "minApr": 1.296489976460478,
+          "maxApr": 1.296489976460478
+        }
+      ]
     },
-    "lastHarvest": 1659897533000,
+    "lastHarvest": 1662331155000,
     "version": "v1.5"
   },
   {
@@ -615,56 +643,60 @@
     "state": "discontinued",
     "underlyingToken": "0xE86204c4eDDd2f70eE00EAd6805f917671F56c52",
     "vaultToken": "0xC17078FDd324CC473F8175Dc5290fae5f2E84714",
-    "value": 196465,
+    "value": 104491.88,
     "available": 0,
-    "balance": 4.511847294e-9,
+    "balance": 4.442515554e-9,
     "protocol": "Uniswap",
-    "pricePerFullShare": 1.6682391439811963,
+    "pricePerFullShare": 1.6682391440667848,
     "tokens": [
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 4.088060032386141,
-        "value": 98084.82435704069
+        "balance": 2.710454293878155,
+        "value": 52493.15147319472
       },
       {
         "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
         "name": "Digg",
         "symbol": "DIGG",
         "decimals": 9,
-        "balance": 7.916729458126863,
-        "value": 98695.96613939766
+        "balance": 11.720584954620747,
+        "value": 52113.236883730235
       }
     ],
-    "apr": 85.65931263386804,
-    "apy": 85.65931263386804,
+    "apr": 25.78134816514302,
+    "apy": 25.78134816514302,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 25.78134816514302,
+    "maxApr": 25.78134816514302,
+    "minApy": 25.78134816514302,
+    "maxApy": 25.78134816514302,
     "sources": [
       {
         "name": "Uniswap LP Fees",
-        "apr": 85.65931263386804,
+        "apr": 25.78134816514302,
         "boostable": false,
-        "minApr": 85.65931263386804,
-        "maxApr": 85.65931263386804
+        "minApr": 25.78134816514302,
+        "maxApr": 25.78134816514302
       }
     ],
     "sourcesApy": [
       {
         "name": "Uniswap LP Fees",
-        "apr": 85.65931263386804,
+        "apr": 25.78134816514302,
         "boostable": false,
-        "minApr": 85.65931263386804,
-        "maxApr": 85.65931263386804
+        "minApr": 25.78134816514302,
+        "maxApr": 25.78134816514302
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xadc8d7322f2E284c1d9254170dbe311E9D3356cf",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -673,38 +705,22 @@
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 85.65931263386804,
-      "nonHarvestSources": [
-        {
-          "name": "Uniswap LP Fees",
-          "apr": 85.65931263386804,
-          "boostable": false,
-          "minApr": 85.65931263386804,
-          "maxApr": 85.65931263386804
-        }
-      ],
-      "nonHarvestApy": 85.65931263386804,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Uniswap LP Fees",
-          "apr": 85.65931263386804,
-          "boostable": false,
-          "minApr": 85.65931263386804,
-          "maxApr": 85.65931263386804
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -716,7 +732,7 @@
     "state": "discontinued",
     "underlyingToken": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
     "vaultToken": "0x15cBC4ac1e81c97667780fE6DAdeDd04a6EEB47B",
-    "value": 150.4,
+    "value": 150.1,
     "available": 0,
     "balance": 148.89773963942488,
     "protocol": "Convex",
@@ -727,85 +743,73 @@
         "name": "Frax",
         "symbol": "FRAX",
         "decimals": 18,
-        "balance": 89.06722811506063,
-        "value": 89.15629534317569
+        "balance": 94.44999122545032,
+        "value": 94.44999122545032
       },
       {
         "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
         "name": "Curve.fi DAI/USDC/USDT",
         "symbol": "3Crv",
         "decimals": 18,
-        "balance": 59.76307322396204,
-        "value": 61.14979270771135
+        "balance": 54.501323099708195,
+        "value": 55.697044111306816
       }
     ],
-    "apr": 0.02326334679256803,
-    "apy": 0.02326334679256803,
+    "apr": 0.1450363379579711,
+    "apy": 0.1450363379579711,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0.1450363379579711,
+    "maxApr": 0.1450363379579711,
+    "minApy": 0.1450363379579711,
+    "maxApy": 0.1450363379579711,
     "sources": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.02326334679256803,
+        "apr": 0.1450363379579711,
         "boostable": false,
-        "minApr": 0.02326334679256803,
-        "maxApr": 0.02326334679256803
+        "minApr": 0.1450363379579711,
+        "maxApr": 0.1450363379579711
       }
     ],
     "sourcesApy": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.02326334679256803,
+        "apr": 0.1450363379579711,
         "boostable": false,
-        "minApr": 0.02326334679256803,
-        "maxApr": 0.02326334679256803
+        "minApr": 0.1450363379579711,
+        "maxApr": 0.1450363379579711
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xf1e6aB438136D391fdafff5263f129d434BC6efB",
-      "withdrawFee": 10,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
       "performanceFee": 0,
-      "strategistFee": 2000,
+      "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.02326334679256803,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.02326334679256803,
-          "boostable": false,
-          "minApr": 0.02326334679256803,
-          "maxApr": 0.02326334679256803
-        }
-      ],
-      "nonHarvestApy": 0.02326334679256803,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.02326334679256803,
-          "boostable": false,
-          "minApr": 0.02326334679256803,
-          "maxApr": 0.02326334679256803
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -817,52 +821,47 @@
     "state": "discontinued",
     "underlyingToken": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
     "vaultToken": "0x599D92B453C010b1050d31C364f6ee17E819f193",
-    "value": 265075.4,
+    "value": 0,
     "available": 0,
-    "balance": 57.940781307284695,
+    "balance": 0,
     "protocol": "mStable",
-    "pricePerFullShare": 1.0079783772486912,
-    "tokens": [
-      {
-        "address": "0x17d8CBB6Bce8cEE970a4027d1198F6700A7a6c24",
-        "name": "Interest bearing mStable BTC",
-        "symbol": "imBTC",
-        "decimals": 18,
-        "balance": 57.940781307284695,
-        "value": 265075.4006059977
-      }
-    ],
+    "pricePerFullShare": 1,
+    "tokens": [],
     "apr": 0,
     "apy": 0,
     "boost": {
       "enabled": false,
-      "weight": 10000
+      "weight": 0
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
     "strategy": {
-      "address": "0xd409C506742b7f76f164909025Ab29A47e06d30A",
-      "withdrawFee": 10,
-      "performanceFee": 1000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "aumFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
-      "aumFee": 0
+      "withdrawFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
+      "harvestValue": 0,
       "nonHarvestApr": 0,
       "nonHarvestSources": [],
       "nonHarvestApy": 0,
@@ -878,9 +877,9 @@
     "state": "open",
     "underlyingToken": "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
     "vaultToken": "0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
-    "value": 27471043.37,
-    "available": 3.9885192773743805,
-    "balance": 1167.3357608743054,
+    "value": 19779134.21,
+    "available": 0.14449464452513047,
+    "balance": 995.4024359372639,
     "protocol": "Convex",
     "pricePerFullShare": 1,
     "tokens": [
@@ -889,111 +888,105 @@
         "name": "Wrapped Interest-Bearing Bitcoin",
         "symbol": "wibBTC",
         "decimals": 18,
-        "balance": 572.3969207064521,
-        "value": 13284760.132676048
+        "balance": 535.0108686376633,
+        "value": 10784749.089998016
       },
       {
         "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
         "name": "Curve.fi renBTC/wBTC/sBTC",
         "symbol": "crvRenWSBTC",
         "decimals": 18,
-        "balance": 590.6797514051981,
-        "value": 14194993.456548423
+        "balance": 457.4509127410263,
+        "value": 8983489.810719112
       }
     ],
-    "apr": 16.7657873870332,
-    "apy": 16.7670933103552,
+    "apr": 20.318937584388845,
+    "apy": 20.318937584388845,
     "boost": {
       "enabled": true,
       "weight": 10000
     },
-    "minApr": 16.7657873870332,
-    "maxApr": 42.23906468098005,
-    "minApy": 16.7670933103552,
-    "maxApy": 42.24037060430205,
+    "minApr": 0.2096460426307751,
+    "maxApr": 56.187454133155086,
+    "minApy": 0.2096460426307751,
+    "maxApy": 56.187454133155086,
     "sources": [
       {
         "name": "Boosted Badger",
-        "apr": 16.73835032333524,
+        "apr": 20.10929154175807,
         "boostable": true,
         "minApr": 0,
-        "maxApr": 42.21162761728208
+        "maxApr": 55.977808090524306
       },
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 0.016243086916870517,
+        "apr": 0.013449955218595728,
         "boostable": false,
-        "minApr": 0.016243086916870517,
-        "maxApr": 0.016243086916870517
+        "minApr": 0.013449955218595728,
+        "maxApr": 0.013449955218595728
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 0.005841892634419752,
+        "apr": 0.002908908853469567,
         "boostable": false,
-        "minApr": 0.005841892634419752,
-        "maxApr": 0.005841892634419752
+        "minApr": 0.002908908853469567,
+        "maxApr": 0.002908908853469567
       },
       {
         "name": "Curve LP Fees",
-        "apr": 0.005352084146670322,
+        "apr": 0.1932871785587098,
         "boostable": false,
-        "minApr": 0.005352084146670322,
-        "maxApr": 0.005352084146670322
+        "minApr": 0.1932871785587098,
+        "maxApr": 0.1932871785587098
       }
     ],
     "sourcesApy": [
       {
         "name": "Boosted Badger",
-        "apr": 16.73835032333524,
+        "apr": 20.10929154175807,
         "boostable": true,
         "minApr": 0,
-        "maxApr": 42.21162761728208
+        "maxApr": 55.977808090524306
       },
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 0.016243086916870517,
+        "apr": 0.013449955218595728,
         "boostable": false,
-        "minApr": 0.016243086916870517,
-        "maxApr": 0.016243086916870517
+        "minApr": 0.013449955218595728,
+        "maxApr": 0.013449955218595728
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 0.005841892634419752,
+        "apr": 0.002908908853469567,
         "boostable": false,
-        "minApr": 0.005841892634419752,
-        "maxApr": 0.005841892634419752
+        "minApr": 0.002908908853469567,
+        "maxApr": 0.002908908853469567
       },
       {
         "name": "Curve LP Fees",
-        "apr": 0.005352084146670322,
+        "apr": 0.1932871785587098,
         "boostable": false,
-        "minApr": 0.005352084146670322,
-        "maxApr": 0.005352084146670322
-      },
-      {
-        "name": "Vault Flywheel",
-        "apr": 0.0013059233219989365,
-        "boostable": false,
-        "minApr": 0.0013059233219989365,
-        "maxApr": 0.0013059233219989365
+        "minApr": 0.1932871785587098,
+        "maxApr": 0.1932871785587098
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x6D4BA00Fd7BB73b5aa5b3D6180c6f1B0c89f70D1",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "boosted",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0xaE96fF08771a109dc6650a1BdCa62F2d558E40af",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -1001,49 +994,42 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 16.743702407481912,
+      "nonHarvestApr": 20.302578720316777,
+      "nonHarvestApy": 20.302578720316777,
       "nonHarvestSources": [
         {
           "name": "Boosted Badger",
-          "apr": 16.73835032333524,
+          "apr": 20.10929154175807,
           "boostable": true,
           "minApr": 0,
-          "maxApr": 42.21162761728208
+          "maxApr": 55.977808090524306
         },
         {
           "name": "Curve LP Fees",
-          "apr": 0.005352084146670322,
+          "apr": 0.1932871785587098,
           "boostable": false,
-          "minApr": 0.005352084146670322,
-          "maxApr": 0.005352084146670322
+          "minApr": 0.1932871785587098,
+          "maxApr": 0.1932871785587098
         }
       ],
-      "nonHarvestApy": 16.745008330803913,
       "nonHarvestSourcesApy": [
         {
           "name": "Boosted Badger",
-          "apr": 16.73835032333524,
+          "apr": 20.10929154175807,
           "boostable": true,
           "minApr": 0,
-          "maxApr": 42.21162761728208
+          "maxApr": 55.977808090524306
         },
         {
           "name": "Curve LP Fees",
-          "apr": 0.005352084146670322,
+          "apr": 0.1932871785587098,
           "boostable": false,
-          "minApr": 0.005352084146670322,
-          "maxApr": 0.005352084146670322
-        },
-        {
-          "name": "Vault Flywheel",
-          "apr": 0.0013059233219989365,
-          "boostable": false,
-          "minApr": 0.0013059233219989365,
-          "maxApr": 0.0013059233219989365
+          "minApr": 0.1932871785587098,
+          "maxApr": 0.1932871785587098
         }
       ]
     },
-    "lastHarvest": 1659756835000,
+    "lastHarvest": 1662534492000,
     "version": "v1"
   },
   {
@@ -1053,9 +1039,9 @@
     "state": "open",
     "underlyingToken": "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
     "vaultToken": "0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
-    "value": 1232537.77,
-    "available": 281.3177887540157,
-    "balance": 166737.27405908523,
+    "value": 827720.88,
+    "available": 0,
+    "balance": 153753.8441356917,
     "protocol": "Curve",
     "pricePerFullShare": 1,
     "tokens": [
@@ -1064,60 +1050,99 @@
         "name": "Convex Token",
         "symbol": "CVX",
         "decimals": 18,
-        "balance": 78450.47515683877,
-        "value": 580533.5161606069
+        "balance": 79024.42028315173,
+        "value": 425151.3811233563
       },
       {
         "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
         "name": "Badger Vested Escrow Convex Token",
         "symbol": "bveCVX",
         "decimals": 18,
-        "balance": 88680.22583183156,
-        "value": 654460.066638917
+        "balance": 75113.5454464367,
+        "value": 403359.7390473651
       }
     ],
-    "apr": 20.45640493214394,
-    "apy": 20.45640493214394,
+    "apr": 36.59308016816192,
+    "apy": 36.68144808169177,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 36.59308016816192,
+    "maxApr": 36.59308016816192,
+    "minApy": 36.68144808169177,
+    "maxApy": 36.68144808169177,
     "sources": [
       {
         "name": "Badger",
-        "apr": 20.40893186035129,
+        "apr": 24.48552432569799,
         "boostable": false,
-        "minApr": 20.40893186035129,
-        "maxApr": 20.40893186035129
+        "minApr": 24.48552432569799,
+        "maxApr": 24.48552432569799
+      },
+      {
+        "name": "Badger Sett Convex CRV",
+        "apr": 2.3385638361870953,
+        "boostable": false,
+        "minApr": 2.3385638361870953,
+        "maxApr": 2.3385638361870953
       },
       {
         "name": "Curve LP Fees",
-        "apr": 0.04747307179264748,
+        "apr": 1.240252692416166,
         "boostable": false,
-        "minApr": 0.04747307179264748,
-        "maxApr": 0.04747307179264748
+        "minApr": 1.240252692416166,
+        "maxApr": 1.240252692416166
+      },
+      {
+        "name": "Badger Vested Escrow Convex Token",
+        "apr": 8.528739313860669,
+        "boostable": false,
+        "minApr": 8.528739313860669,
+        "maxApr": 8.528739313860669
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger",
-        "apr": 20.40893186035129,
+        "apr": 24.48552432569799,
         "boostable": false,
-        "minApr": 20.40893186035129,
-        "maxApr": 20.40893186035129
+        "minApr": 24.48552432569799,
+        "maxApr": 24.48552432569799
+      },
+      {
+        "name": "Vault Flywheel",
+        "apr": 0.08836791352984918,
+        "boostable": false,
+        "minApr": 0.08836791352984918,
+        "maxApr": 0.08836791352984918
+      },
+      {
+        "name": "Badger Sett Convex CRV",
+        "apr": 2.3385638361870953,
+        "boostable": false,
+        "minApr": 2.3385638361870953,
+        "maxApr": 2.3385638361870953
       },
       {
         "name": "Curve LP Fees",
-        "apr": 0.04747307179264748,
+        "apr": 1.240252692416166,
         "boostable": false,
-        "minApr": 0.04747307179264748,
-        "maxApr": 0.04747307179264748
+        "minApr": 1.240252692416166,
+        "maxApr": 1.240252692416166
+      },
+      {
+        "name": "Badger Vested Escrow Convex Token",
+        "apr": 8.528739313860669,
+        "boostable": false,
+        "minApr": 8.528739313860669,
+        "maxApr": 8.528739313860669
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x98Ca7AFa876f0e15494E76E92C5b3658cdE1Ffe1",
-      "withdrawFee": 10,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
@@ -1125,11 +1150,12 @@
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x937B8E917d0F36eDEBBA8E459C5FB16F3b315551",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -1137,28 +1163,35 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 0.04747307179264748,
+      "nonHarvestApr": 1.240252692416166,
+      "nonHarvestApy": 1.3286206059460153,
       "nonHarvestSources": [
         {
           "name": "Curve LP Fees",
-          "apr": 0.04747307179264748,
+          "apr": 1.240252692416166,
           "boostable": false,
-          "minApr": 0.04747307179264748,
-          "maxApr": 0.04747307179264748
+          "minApr": 1.240252692416166,
+          "maxApr": 1.240252692416166
         }
       ],
-      "nonHarvestApy": 0.04747307179264748,
       "nonHarvestSourcesApy": [
         {
-          "name": "Curve LP Fees",
-          "apr": 0.04747307179264748,
+          "name": "Vault Flywheel",
+          "apr": 0.08836791352984918,
           "boostable": false,
-          "minApr": 0.04747307179264748,
-          "maxApr": 0.04747307179264748
+          "minApr": 0.08836791352984918,
+          "maxApr": 0.08836791352984918
+        },
+        {
+          "name": "Curve LP Fees",
+          "apr": 1.240252692416166,
+          "boostable": false,
+          "minApr": 1.240252692416166,
+          "maxApr": 1.240252692416166
         }
       ]
     },
-    "lastHarvest": 1658844991000,
+    "lastHarvest": 1662472503000,
     "version": "v1"
   },
   {
@@ -1168,84 +1201,94 @@
     "state": "open",
     "underlyingToken": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
     "vaultToken": "0x2B5455aac8d64C14786c3a29858E43b5945819C0",
-    "value": 5841390.45,
-    "available": 20457.379723807528,
-    "balance": 4202439.170246848,
+    "value": 3609918.33,
+    "available": 0,
+    "balance": 3464412.9867372485,
     "protocol": "Convex",
-    "pricePerFullShare": 1.5221363581848355,
-    "tokens": [],
-    "apr": 25.409658611515013,
-    "apy": 26.630114688196464,
+    "pricePerFullShare": 1.5420397130551038,
+    "tokens": [
+      {
+        "address": "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+        "name": "Convex CRV",
+        "symbol": "cvxCRV",
+        "decimals": 18,
+        "balance": 3464412.9867372485,
+        "value": 3609918.332180213
+      }
+    ],
+    "apr": 18.198437900808695,
+    "apy": 18.49362175656577,
     "boost": {
       "enabled": true,
       "weight": 10000
     },
-    "minApr": 25.409658611515013,
-    "maxApr": 40.89583733839628,
-    "minApy": 26.630114688196464,
-    "maxApy": 42.116293415077735,
+    "minApr": 8.808756640349523,
+    "maxApr": 34.912066317820084,
+    "minApy": 9.103940496106597,
+    "maxApy": 35.20725017357716,
     "sources": [
       {
         "name": "Vault Compounding",
-        "apr": 15.318392961569774,
+        "apr": 7.753474514773163,
         "boostable": false,
-        "minApr": 15.318392961569774,
-        "maxApr": 15.318392961569774
+        "minApr": 7.753474514773163,
+        "maxApr": 7.753474514773163
       },
       {
         "name": "Boosted Badger",
-        "apr": 6.749361804324903,
+        "apr": 9.389681260459176,
         "boostable": true,
         "minApr": 0,
-        "maxApr": 22.23554053120617
+        "maxApr": 26.103309677470556
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 3.341903845620335,
+        "apr": 1.0552821255763598,
         "boostable": false,
-        "minApr": 3.341903845620335,
-        "maxApr": 3.341903845620335
+        "minApr": 1.0552821255763598,
+        "maxApr": 1.0552821255763598
       }
     ],
     "sourcesApy": [
       {
         "name": "Vault Compounding",
-        "apr": 16.538849038251225,
+        "apr": 8.048658370530237,
         "boostable": false,
-        "minApr": 16.538849038251225,
-        "maxApr": 16.538849038251225
+        "minApr": 8.048658370530237,
+        "maxApr": 8.048658370530237
       },
       {
         "name": "Boosted Badger",
-        "apr": 6.749361804324903,
+        "apr": 9.389681260459176,
         "boostable": true,
         "minApr": 0,
-        "maxApr": 22.23554053120617
+        "maxApr": 26.103309677470556
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 3.341903845620335,
+        "apr": 1.0552821255763598,
         "boostable": false,
-        "minApr": 3.341903845620335,
-        "maxApr": 3.341903845620335
+        "minApr": 1.0552821255763598,
+        "maxApr": 1.0552821255763598
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x826048381d65a65DAa51342C51d464428d301896",
-      "withdrawFee": 10,
-      "performanceFee": 1000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "boosted",
     "behavior": "Ecosystem Helper",
     "yieldProjection": {
+      "id": "ethereum-0x2B5455aac8d64C14786c3a29858E43b5945819C0",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -1253,28 +1296,28 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 6.749361804324903,
+      "nonHarvestApr": 9.389681260459176,
+      "nonHarvestApy": 9.389681260459176,
       "nonHarvestSources": [
         {
           "name": "Boosted Badger",
-          "apr": 6.749361804324903,
+          "apr": 9.389681260459176,
           "boostable": true,
           "minApr": 0,
-          "maxApr": 22.23554053120617
+          "maxApr": 26.103309677470556
         }
       ],
-      "nonHarvestApy": 6.749361804324903,
       "nonHarvestSourcesApy": [
         {
           "name": "Boosted Badger",
-          "apr": 6.749361804324903,
+          "apr": 9.389681260459176,
           "boostable": true,
           "minApr": 0,
-          "maxApr": 22.23554053120617
+          "maxApr": 26.103309677470556
         }
       ]
     },
-    "lastHarvest": 1659762204000,
+    "lastHarvest": 1662539616000,
     "version": "v1"
   },
   {
@@ -1284,9 +1327,9 @@
     "state": "discontinued",
     "underlyingToken": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
     "vaultToken": "0xAf5A1DECfa95BAF63E0084a35c62592B774A2A87",
-    "value": 79326.52,
+    "value": 53801.06,
     "available": 0,
-    "balance": 3.241441181956711,
+    "balance": 2.723921083859205,
     "protocol": "Curve",
     "pricePerFullShare": 1.029731045441927,
     "tokens": [
@@ -1295,16 +1338,16 @@
         "name": "renBTC",
         "symbol": "renBTC",
         "decimals": 8,
-        "balance": 1.031643731096146,
-        "value": 24811.03173286231
+        "balance": 0.7006783143650502,
+        "value": 13574.626357267018
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 2.275802435971642,
-        "value": 54603.32784626761
+        "balance": 2.081732511015104,
+        "value": 40316.747002228636
       }
     ],
     "apr": 0.30455638989856926,
@@ -1313,6 +1356,10 @@
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0.30455638989856926,
+    "maxApr": 0.30455638989856926,
+    "minApy": 0.30455638989856926,
+    "maxApy": 0.30455638989856926,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -1333,7 +1380,7 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xaaE82E3c89e15E6F26F60724f115d5012363e030",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -1342,38 +1389,22 @@
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.30455638989856926,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.30455638989856926,
-          "boostable": false,
-          "minApr": 0.30455638989856926,
-          "maxApr": 0.30455638989856926
-        }
-      ],
-      "nonHarvestApy": 0.30455638989856926,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.30455638989856926,
-          "boostable": false,
-          "minApr": 0.30455638989856926,
-          "maxApr": 0.30455638989856926
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -1382,12 +1413,12 @@
     "name": "graviAURA/auraBAL/WETH",
     "asset": "33auraBAL-33graviAURA-33WETH",
     "vaultAsset": "b33auraBAL-33graviAURA-33WETH",
-    "state": "experimental",
+    "state": "open",
     "underlyingToken": "0x0578292CB20a443bA1CdE459c985CE14Ca2bDEe5",
     "vaultToken": "0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378",
-    "value": 73432.01,
-    "available": 2.4307153698228054,
-    "balance": 1577.0314023898266,
+    "value": 106159.69,
+    "available": 10.411332928582048,
+    "balance": 2291.479461747401,
     "protocol": "Aura",
     "pricePerFullShare": 1,
     "tokens": [
@@ -1396,232 +1427,237 @@
         "name": "Aura BAL",
         "symbol": "auraBAL",
         "decimals": 18,
-        "balance": 1516.9219500280976,
-        "value": 24054.902252212054
+        "balance": 1992.1896305840717,
+        "value": 34713.97597531475
       },
       {
         "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
         "name": "Gravitationally Bound AURA",
         "symbol": "graviAURA",
         "decimals": 18,
-        "balance": 7257.06539162004,
-        "value": 24405.346372849006
+        "balance": 11704.42901038758,
+        "value": 36735.3464826512
       },
       {
         "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "balance": 14.065481685266498,
-        "value": 25017.006380231844
+        "balance": 21.1923808400645,
+        "value": 34756.776120556184
       }
     ],
-    "apr": 147.67548293572162,
-    "apy": 154.7130881545712,
+    "apr": 55.4818262216012,
+    "apy": 56.93251954468249,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 55.4818262216012,
+    "maxApr": 55.4818262216012,
+    "minApy": 56.93251954468249,
+    "maxApy": 56.93251954468249,
     "sources": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 47.957057852764784,
+        "apr": 20.159188266671812,
         "boostable": false,
-        "minApr": 47.957057852764784,
-        "maxApr": 47.957057852764784
+        "minApr": 20.159188266671812,
+        "maxApr": 20.159188266671812
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 94.90479893522858,
+        "apr": 32.604166156612855,
         "boostable": false,
-        "minApr": 94.90479893522858,
-        "maxApr": 94.90479893522858
+        "minApr": 32.604166156612855,
+        "maxApr": 32.604166156612855
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 4.813626147728255,
+        "apr": 2.7184717983165343,
         "boostable": false,
-        "minApr": 4.813626147728255,
-        "maxApr": 4.813626147728255
+        "minApr": 2.7184717983165343,
+        "maxApr": 2.7184717983165343
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 47.957057852764784,
+        "apr": 20.159188266671812,
         "boostable": false,
-        "minApr": 47.957057852764784,
-        "maxApr": 47.957057852764784
+        "minApr": 20.159188266671812,
+        "maxApr": 20.159188266671812
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 94.90479893522858,
+        "apr": 32.604166156612855,
         "boostable": false,
-        "minApr": 94.90479893522858,
-        "maxApr": 94.90479893522858
+        "minApr": 32.604166156612855,
+        "maxApr": 32.604166156612855
       },
       {
         "name": "Vault Flywheel",
-        "apr": 7.037605218849587,
+        "apr": 1.4506933230812897,
         "boostable": false,
-        "minApr": 7.037605218849587,
-        "maxApr": 7.037605218849587
+        "minApr": 1.4506933230812897,
+        "maxApr": 1.4506933230812897
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 4.813626147728255,
+        "apr": 2.7184717983165343,
         "boostable": false,
-        "minApr": 4.813626147728255,
-        "maxApr": 4.813626147728255
+        "minApr": 2.7184717983165343,
+        "maxApr": 2.7184717983165343
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xA773b13A64D213291a063a1910b96C117b2438Df",
-      "withdrawFee": 10,
-      "performanceFee": 1000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 736.493771716878,
-      "harvestApr": 121.30081247605314,
-      "harvestPeriodApr": 149.1773902343396,
-      "harvestPeriodApy": 149.1773902343396,
+      "id": "ethereum-0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378",
+      "harvestValue": 262.3938233819186,
+      "harvestApr": 87.2303490113956,
       "harvestTokens": [
         {
-          "apr": 40.57150731349046,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 15.224057662985818,
-          "value": 246.3352209734823
+          "balance": 5.577820766058746,
+          "value": 100.73539242119963,
+          "apr": 33.48853004787101
         },
         {
-          "apr": 80.72930516256265,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 145.75136941976888,
-          "value": 490.1585507433956
+          "balance": 51.5067859780214,
+          "value": 161.65843096071896,
+          "apr": 53.741818963524594
         }
       ],
+      "harvestPeriodApr": 85.49874329115687,
+      "harvestPeriodApy": 85.49874329115687,
       "harvestPeriodSources": [
         {
-          "apr": 47.476996208611105,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.020833363502481106,
-          "value": 0.3370974621622691
+          "balance": 0.018280194542284356,
+          "value": 0.33014014755695575,
+          "apr": 32.82373833278737
         },
         {
-          "apr": 101.70039402572849,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.2147192319881981,
-          "value": 0.7220959088552831
+          "balance": 0.16880331684143357,
+          "value": 0.5298035748764367,
+          "apr": 52.6750049583695
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 47.476996208611105,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.020833363502481106,
-          "value": 0.3370974621622691
+          "balance": 0.018280194542284356,
+          "value": 0.33014014755695575,
+          "apr": 32.82373833278737
         },
         {
-          "apr": 101.70039402572849,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.2147192319881981,
-          "value": 0.7220959088552831
+          "balance": 0.16880331684143357,
+          "value": 0.5298035748764367,
+          "apr": 52.6750049583695
         }
       ],
-      "yieldValue": 730.5869850242078,
-      "yieldApr": 120.32796239576884,
+      "yieldValue": 263.03262733274414,
+      "yieldApr": 87.44271335314028,
       "yieldTokens": [
         {
-          "apr": 40.59840095038963,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 39.31395681221993,
-          "value": 246.49850921261893
+          "balance": 14.217979855824007,
+          "value": 101.37419637202517,
+          "apr": 33.700894389615684
         },
         {
-          "apr": 79.72956144537923,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 151.75187329516893,
-          "value": 484.0884758115889
+          "balance": 53.88614365357299,
+          "value": 161.65843096071896,
+          "apr": 53.741818963524594
         }
       ],
-      "yieldPeriodApr": 151.58561272539453,
+      "yieldPeriodApr": 85.70691220139402,
       "yieldPeriodSources": [
         {
-          "apr": 51.14466630369871,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 0.057916866556666946,
-          "value": 0.3631387533103017
+          "balance": 0.046596620481658135,
+          "value": 0.3322339040342225,
+          "apr": 33.03190724302428
         },
         {
-          "apr": 100.44094642169581,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.22355910490875885,
-          "value": 0.7131535446589408
+          "balance": 0.17660119162547971,
+          "value": 0.5298035748764391,
+          "apr": 52.67500495836974
         }
       ],
-      "nonHarvestApr": 4.813626147728255,
+      "nonHarvestApr": 2.7184717983165343,
+      "nonHarvestApy": 4.169165121397824,
       "nonHarvestSources": [
         {
           "name": "Balancer LP Fees",
-          "apr": 4.813626147728255,
+          "apr": 2.7184717983165343,
           "boostable": false,
-          "minApr": 4.813626147728255,
-          "maxApr": 4.813626147728255
+          "minApr": 2.7184717983165343,
+          "maxApr": 2.7184717983165343
         }
       ],
-      "nonHarvestApy": 11.851231366577842,
       "nonHarvestSourcesApy": [
         {
           "name": "Vault Flywheel",
-          "apr": 7.037605218849587,
+          "apr": 1.4506933230812897,
           "boostable": false,
-          "minApr": 7.037605218849587,
-          "maxApr": 7.037605218849587
+          "minApr": 1.4506933230812897,
+          "maxApr": 1.4506933230812897
         },
         {
           "name": "Balancer LP Fees",
-          "apr": 4.813626147728255,
+          "apr": 2.7184717983165343,
           "boostable": false,
-          "minApr": 4.813626147728255,
-          "maxApr": 4.813626147728255
+          "minApr": 2.7184717983165343,
+          "maxApr": 2.7184717983165343
         }
       ]
     },
-    "lastHarvest": 1659722968000,
+    "lastHarvest": 1662502232000,
     "version": "v1.5"
   },
   {
@@ -1631,96 +1667,84 @@
     "state": "discontinued",
     "underlyingToken": "0x9a13867048e01c663ce8Ce2fE0cDAE69Ff9F35E3",
     "vaultToken": "0x88128580ACdD9c04Ce47AFcE196875747bF2A9f6",
-    "value": 579766.91,
+    "value": 287920.73,
     "available": 0,
-    "balance": 1.564250099e-8,
+    "balance": 1.4410923248e-8,
     "protocol": "Sushiswap",
-    "pricePerFullShare": 1.7318979890428463,
+    "pricePerFullShare": 1.731897989589752,
     "tokens": [
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 12.114033526247356,
-        "value": 290652.0063952528
+        "balance": 7.420747003613211,
+        "value": 143717.01355921675
       },
       {
         "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
         "name": "Digg",
         "symbol": "DIGG",
         "decimals": 9,
-        "balance": 23.265504235792605,
-        "value": 290045.4575866098
+        "balance": 32.503178856453474,
+        "value": 144518.8841494491
       }
     ],
-    "apr": 7.705327957922593,
-    "apy": 7.705327957922593,
+    "apr": 5.212988686855535,
+    "apy": 5.212988686855535,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 5.212988686855535,
+    "maxApr": 5.212988686855535,
+    "minApy": 5.212988686855535,
+    "maxApy": 5.212988686855535,
     "sources": [
       {
         "name": "Sushiswap LP Fees",
-        "apr": 7.705327957922593,
+        "apr": 5.212988686855535,
         "boostable": false,
-        "minApr": 7.705327957922593,
-        "maxApr": 7.705327957922593
+        "minApr": 5.212988686855535,
+        "maxApr": 5.212988686855535
       }
     ],
     "sourcesApy": [
       {
         "name": "Sushiswap LP Fees",
-        "apr": 7.705327957922593,
+        "apr": 5.212988686855535,
         "boostable": false,
-        "minApr": 7.705327957922593,
-        "maxApr": 7.705327957922593
+        "minApr": 5.212988686855535,
+        "maxApr": 5.212988686855535
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xaa8dddfe7DFA3C3269f1910d89E4413dD006D08a",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 2000,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 7.705327957922593,
-      "nonHarvestSources": [
-        {
-          "name": "Sushiswap LP Fees",
-          "apr": 7.705327957922593,
-          "boostable": false,
-          "minApr": 7.705327957922593,
-          "maxApr": 7.705327957922593
-        }
-      ],
-      "nonHarvestApy": 7.705327957922593,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Sushiswap LP Fees",
-          "apr": 7.705327957922593,
-          "boostable": false,
-          "minApr": 7.705327957922593,
-          "maxApr": 7.705327957922593
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -1729,12 +1753,12 @@
     "name": "BADGER/WBTC",
     "asset": "20WBTC-80BADGER",
     "vaultAsset": "b20WBTC-80BADGER",
-    "state": "experimental",
+    "state": "open",
     "underlyingToken": "0xb460DAa847c45f1C4a41cb05BFB3b51c92e41B36",
     "vaultToken": "0x63ad745506BD6a3E57F764409A47ed004BEc40b1",
-    "value": 544870.85,
-    "available": 27.07850780938223,
-    "balance": 24702.88184643297,
+    "value": 2738036.25,
+    "available": 952.4336579584932,
+    "balance": 146004.21093762398,
     "protocol": "Aura",
     "pricePerFullShare": 1,
     "tokens": [
@@ -1743,475 +1767,453 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 4.571673869734372,
-        "value": 109688.17115653679
+        "balance": 28.203848127341203,
+        "value": 546221.6703743668
       },
       {
         "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 89383.36123505862,
-        "value": 435296.9692147355
+        "balance": 523273.17429814034,
+        "value": 2192514.6003092085
       }
     ],
-    "apr": 33.42707121798167,
-    "apy": 35.87544536941314,
+    "apr": 60.66827261932572,
+    "apy": 62.2627507631258,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 60.66827261932572,
+    "maxApr": 60.66827261932572,
+    "minApy": 62.2627507631258,
+    "maxApy": 62.2627507631258,
     "sources": [
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 22.170643570157072,
+        "apr": 36.646077145146606,
         "boostable": false,
-        "minApr": 22.170643570157072,
-        "maxApr": 22.170643570157072
+        "minApr": 36.646077145146606,
+        "maxApr": 36.646077145146606
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.059244556918814195,
+        "apr": 0.9521813469013315,
         "boostable": false,
-        "minApr": 0.059244556918814195,
-        "maxApr": 0.059244556918814195
+        "minApr": 0.9521813469013315,
+        "maxApr": 0.9521813469013315
       },
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 11.197183090905787,
+        "apr": 23.07001412727778,
         "boostable": false,
-        "minApr": 11.197183090905787,
-        "maxApr": 11.197183090905787
+        "minApr": 23.07001412727778,
+        "maxApr": 23.07001412727778
       }
     ],
     "sourcesApy": [
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 22.170643570157072,
+        "apr": 36.646077145146606,
         "boostable": false,
-        "minApr": 22.170643570157072,
-        "maxApr": 22.170643570157072
+        "minApr": 36.646077145146606,
+        "maxApr": 36.646077145146606
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.059244556918814195,
+        "apr": 0.9521813469013315,
         "boostable": false,
-        "minApr": 0.059244556918814195,
-        "maxApr": 0.059244556918814195
+        "minApr": 0.9521813469013315,
+        "maxApr": 0.9521813469013315
       },
       {
         "name": "Vault Flywheel",
-        "apr": 2.448374151431473,
+        "apr": 1.5944781438000826,
         "boostable": false,
-        "minApr": 2.448374151431473,
-        "maxApr": 2.448374151431473
+        "minApr": 1.5944781438000826,
+        "maxApr": 1.5944781438000826
       },
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 11.197183090905787,
+        "apr": 23.07001412727778,
         "boostable": false,
-        "minApr": 11.197183090905787,
-        "maxApr": 11.197183090905787
+        "minApr": 23.07001412727778,
+        "maxApr": 23.07001412727778
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xe43857fE16D18b6633A663389934d6c64D5E81FD",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 1051.8755579756307,
-      "harvestApr": 27.2938831955829,
-      "harvestPeriodApr": 31.782908232515165,
-      "harvestPeriodApy": 31.782908232515165,
+      "id": "ethereum-0x63ad745506BD6a3E57F764409A47ed004BEc40b1",
+      "harvestValue": 6667.38138845349,
+      "harvestApr": 153.4764573279678,
       "harvestTokens": [
         {
-          "apr": 9.128980031254478,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 21.743287119083355,
-          "value": 351.8206220534505
+          "balance": 141.73006077395297,
+          "value": 2559.64361150185,
+          "apr": 58.92043826918233
         },
         {
-          "apr": 18.164903164328422,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 208.16522618033937,
-          "value": 700.0549359221802
+          "balance": 1308.7864905894828,
+          "value": 4107.737776951641,
+          "apr": 94.55601905878548
         }
       ],
+      "harvestPeriodApr": 149.94112786410463,
+      "harvestPeriodApy": 149.94112786410463,
       "harvestPeriodSources": [
         {
-          "apr": 10.167093694753358,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.03325425851229369,
-          "value": 0.5380756760302874
+          "balance": 0.826742508482198,
+          "value": 14.930962201226823,
+          "apr": 57.56261903345427
         },
         {
-          "apr": 21.615814537761807,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.340168582525024,
-          "value": 1.1439792304022482
+          "balance": 7.634564868314101,
+          "value": 23.96173153196029,
+          "apr": 92.37850883065036
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 10.167093694753358,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.03325425851229369,
-          "value": 0.5380756760302874
+          "balance": 0.826742508482198,
+          "value": 14.930962201226823,
+          "apr": 57.56261903345427
         },
         {
-          "apr": 21.615814537761807,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.340168582525024,
-          "value": 1.1439792304022482
+          "balance": 7.634564868314101,
+          "value": 23.96173153196029,
+          "apr": 92.37850883065036
         }
       ],
-      "yieldValue": 1043.4399730679224,
-      "yieldApr": 27.07499811225564,
+      "yieldValue": 6683.654254494753,
+      "yieldApr": 153.85104244393412,
       "yieldTokens": [
         {
-          "apr": 9.135047309095365,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 56.149034787386725,
-          "value": 352.0544481169147
+          "balance": 361.27860835106776,
+          "value": 2575.916477543113,
+          "apr": 59.29502338514867
         },
         {
-          "apr": 17.93995080316027,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 216.73527427931276,
-          "value": 691.3855249510077
+          "balance": 1369.245925650547,
+          "value": 4107.737776951641,
+          "apr": 94.55601905878548
         }
       ],
-      "yieldPeriodApr": 32.218621399209496,
+      "yieldPeriodApr": 150.30803987396843,
       "yieldPeriodSources": [
         {
-          "apr": 10.870494967177018,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 0.09175469853560969,
-          "value": 0.5753019598182727
+          "balance": 2.1074522015795765,
+          "value": 15.02613419726238,
+          "apr": 57.92953104331778
         },
         {
-          "apr": 21.348126432032476,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.3541731363474696,
-          "value": 1.129812304948428
+          "balance": 7.987243843986789,
+          "value": 23.961731531960368,
+          "apr": 92.37850883065066
         }
       ],
-      "nonHarvestApr": 0.059244556918814195,
+      "nonHarvestApr": 0.9521813469013315,
+      "nonHarvestApy": 2.546659490701414,
       "nonHarvestSources": [
         {
           "name": "Balancer LP Fees",
-          "apr": 0.059244556918814195,
+          "apr": 0.9521813469013315,
           "boostable": false,
-          "minApr": 0.059244556918814195,
-          "maxApr": 0.059244556918814195
+          "minApr": 0.9521813469013315,
+          "maxApr": 0.9521813469013315
         }
       ],
-      "nonHarvestApy": 2.507618708350287,
       "nonHarvestSourcesApy": [
         {
           "name": "Balancer LP Fees",
-          "apr": 0.059244556918814195,
+          "apr": 0.9521813469013315,
           "boostable": false,
-          "minApr": 0.059244556918814195,
-          "maxApr": 0.059244556918814195
+          "minApr": 0.9521813469013315,
+          "maxApr": 0.9521813469013315
         },
         {
           "name": "Vault Flywheel",
-          "apr": 2.448374151431473,
+          "apr": 1.5944781438000826,
           "boostable": false,
-          "minApr": 2.448374151431473,
-          "maxApr": 2.448374151431473
+          "minApr": 1.5944781438000826,
+          "maxApr": 1.5944781438000826
         }
       ]
     },
-    "lastHarvest": 1659760822000,
+    "lastHarvest": 1662541725000,
     "version": "v1.5"
   },
   {
     "name": "auraBAL",
     "asset": "auraBAL",
     "vaultAsset": "bauraBAL",
-    "state": "experimental",
+    "state": "open",
     "underlyingToken": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
     "vaultToken": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
-    "value": 69938.79,
+    "value": 833158.99,
     "available": 0,
-    "balance": 4410.39798416719,
+    "balance": 47813.90379867133,
     "protocol": "Aura",
-    "pricePerFullShare": 1.018975122435505,
-    "tokens": [],
-    "apr": 68.57715460256718,
-    "apy": 72.96092124569134,
+    "pricePerFullShare": 1.0363552108377223,
+    "tokens": [
+      {
+        "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
+        "name": "Aura BAL",
+        "symbol": "auraBAL",
+        "decimals": 18,
+        "balance": 47813.90379867133,
+        "value": 833158.9936378008
+      }
+    ],
+    "apr": 14.447478329851728,
+    "apy": 14.912439147379288,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 14.447478329851728,
+    "maxApr": 14.447478329851728,
+    "minApy": 14.912439147379288,
+    "maxApy": 14.912439147379288,
     "sources": [
       {
         "name": "Vault Compounding",
-        "apr": 22.222852564233833,
+        "apr": 5.93031268207328,
         "boostable": false,
-        "minApr": 22.222852564233833,
-        "maxApr": 22.222852564233833
-      },
-      {
-        "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
-        "apr": 6.355371137327569,
-        "boostable": false,
-        "minApr": 6.355371137327569,
-        "maxApr": 6.355371137327569
+        "minApr": 5.93031268207328,
+        "maxApr": 5.93031268207328
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 39.99893090100578,
+        "apr": 8.517165647778448,
         "boostable": false,
-        "minApr": 39.99893090100578,
-        "maxApr": 39.99893090100578
+        "minApr": 8.517165647778448,
+        "maxApr": 8.517165647778448
       }
     ],
     "sourcesApy": [
       {
         "name": "Vault Compounding",
-        "apr": 24.851763275427995,
+        "apr": 6.102028664286352,
         "boostable": false,
-        "minApr": 24.851763275427995,
-        "maxApr": 24.851763275427995
-      },
-      {
-        "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
-        "apr": 6.355371137327569,
-        "boostable": false,
-        "minApr": 6.355371137327569,
-        "maxApr": 6.355371137327569
+        "minApr": 6.102028664286352,
+        "maxApr": 6.102028664286352
       },
       {
         "name": "Vault Flywheel",
-        "apr": 1.754855931930002,
+        "apr": 0.29324483531448836,
         "boostable": false,
-        "minApr": 1.754855931930002,
-        "maxApr": 1.754855931930002
+        "minApr": 0.29324483531448836,
+        "maxApr": 0.29324483531448836
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 39.99893090100578,
+        "apr": 8.517165647778448,
         "boostable": false,
-        "minApr": 39.99893090100578,
-        "maxApr": 39.99893090100578
+        "minApr": 8.517165647778448,
+        "maxApr": 8.517165647778448
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xED6d51A82065725e283fC035f488213e869FD976",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 1000,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "Ecosystem Helper",
     "yieldProjection": {
-      "harvestValue": 253.92881276521246,
-      "harvestApr": 81.32246674213535,
-      "harvestPeriodApr": 107.24950903973219,
-      "harvestPeriodApy": 107.24950903982564,
+      "id": "ethereum-0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
+      "harvestValue": 2561.31787241644,
+      "harvestApr": 34.75710981701262,
       "harvestTokens": [
         {
-          "apr": 6.6721148703075075,
-          "address": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
-          "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
-          "symbol": "bbb-a-USD",
-          "decimals": 18,
-          "balance": 20.526686359244813,
-          "value": 20.833630305664013
-        },
-        {
-          "apr": 28.315023693010843,
           "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
           "name": "Vault Compounding",
           "symbol": "auraBAL",
           "decimals": 18,
-          "balance": 4.911981823916061,
-          "value": 77.89276345876232
+          "balance": 56.423421410415024,
+          "value": 983.3902961390465,
+          "apr": 14.266983927908505
         },
         {
-          "apr": 49.704653127175526,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 46.15030192234207,
-          "value": 155.2024190007861
+          "balance": 502.7512482778355,
+          "value": 1577.9275762773937,
+          "apr": 21.412493405289023
         }
       ],
+      "harvestPeriodApr": 60.208032713240165,
+      "harvestPeriodApy": 63.09811833122731,
       "harvestPeriodSources": [
         {
-          "apr": 8.89757479297934,
-          "address": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
-          "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
-          "symbol": "bbb-a-USD",
-          "decimals": 18,
-          "balance": 0.059624580267882976,
-          "value": 0.06051617103176531
-        },
-        {
-          "apr": 37.807035610797236,
           "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
           "name": "Vault Compounding",
           "symbol": "auraBAL",
           "decimals": 18,
-          "balance": 0.01375427525864481,
-          "value": 0.21811125278435786
+          "balance": 0.10517647977992794,
+          "value": 1.8330956721910885,
+          "apr": 26.006217701980194
         },
         {
-          "apr": 66.28346144432484,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.13405438818508486,
-          "value": 0.4508218680563665
+          "balance": 0.9371630213984758,
+          "value": 2.9413658941625944,
+          "apr": 37.09190062924713
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 8.89757479297934,
-          "address": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
-          "name": "Badger Sett Balancer Aave Boosted StablePool (USD)",
-          "symbol": "bbb-a-USD",
-          "decimals": 18,
-          "balance": 0.059624580267882976,
-          "value": 0.06051617103176531
-        },
-        {
-          "apr": 37.807035610797236,
           "address": "0x616e8BfA43F920657B3497DBf40D6b1A02D4608d",
           "name": "Vault Compounding",
           "symbol": "auraBAL",
           "decimals": 18,
-          "balance": 0.01375427525864481,
-          "value": 0.21811125278435786
+          "balance": 0.10517647977992794,
+          "value": 1.8330956721910885,
+          "apr": 26.006217701980194
         },
         {
-          "apr": 66.28346144432484,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.13405438818508486,
-          "value": 0.4508218680563665
+          "balance": 0.9371630213984758,
+          "value": 2.9413658941625944,
+          "apr": 37.09190062924713
         }
       ],
-      "yieldValue": 252.17772476251878,
-      "yieldApr": 80.76166864163277,
+      "yieldValue": 2663.5973797973274,
+      "yieldApr": 36.145043781926404,
       "yieldTokens": [
         {
-          "apr": 24.996244333995612,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 12.448260238437104,
-          "value": 78.05059169500063
+          "balance": 138.77990996283145,
+          "value": 989.5007580349883,
+          "apr": 13.42753544236682
         },
         {
-          "apr": 49.08911562714859,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 48.05028452036722,
-          "value": 153.28040761997144
+          "balance": 525.9758587591311,
+          "value": 1577.9275762773934,
+          "apr": 21.41249340528902
         },
         {
-          "apr": 6.676308680488567,
           "address": "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
           "name": "Balancer Aave Boosted StablePool (USD)",
           "symbol": "bb-a-USD",
           "decimals": 18,
-          "balance": 20.526686359244813,
-          "value": 20.846725447546707
+          "balance": 94.83353015587912,
+          "value": 96.16904548494608,
+          "apr": 1.3050149342705608
         }
       ],
-      "yieldPeriodApr": 107.69943280542036,
+      "yieldPeriodApr": 62.61243596543578,
       "yieldPeriodSources": [
         {
-          "apr": 33.333651747374695,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 0.036158894757404525,
-          "value": 0.22671627012892637
+          "balance": 0.25869532930190076,
+          "value": 1.8444976979225525,
+          "apr": 23.259916577531538
         },
         {
-          "apr": 65.46261362457993,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.13957333376357894,
-          "value": 0.4452389347058168
+          "balance": 0.980455298054153,
+          "value": 2.941365894162459,
+          "apr": 37.09190062924542
         },
         {
-          "apr": 8.90316743346573,
           "address": "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
           "name": "Balancer Aave Boosted StablePool (USD)",
           "symbol": "bb-a-USD",
           "decimals": 18,
-          "balance": 0.059624580267882976,
-          "value": 0.06055420894614853
+          "balance": 0.17677624462439212,
+          "value": 0.17926573736100868,
+          "apr": 2.2606187586588247
         }
       ],
       "nonHarvestApr": 0,
+      "nonHarvestApy": 0.29324483531448836,
       "nonHarvestSources": [],
-      "nonHarvestApy": 1.754855931930002,
       "nonHarvestSourcesApy": [
         {
           "name": "Vault Flywheel",
-          "apr": 1.754855931930002,
+          "apr": 0.29324483531448836,
           "boostable": false,
-          "minApr": 1.754855931930002,
-          "maxApr": 1.754855931930002
+          "minApr": 0.29324483531448836,
+          "maxApr": 0.29324483531448836
         }
       ]
     },
-    "lastHarvest": 1659843326000,
+    "lastHarvest": 1662313116000,
     "version": "v1.5"
   },
   {
@@ -2221,83 +2223,88 @@
     "state": "open",
     "underlyingToken": "0x110492b31c59716AC47337E616804E3E3AdC0b4a",
     "vaultToken": "0x1862A18181346EBd9EdAf800804f89190DeF24a5",
-    "value": 1530831.47,
+    "value": 1222170.9,
     "available": 0,
-    "balance": 0.019229063236525026,
+    "balance": 0.018328973313781735,
     "protocol": "Sushiswap",
-    "pricePerFullShare": 1.4060839627548654,
+    "pricePerFullShare": 1.4060839627548658,
     "tokens": [
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 31.99037453208222,
-        "value": 767545.0561482487
+        "balance": 31.554470346367584,
+        "value": 611112.9028404732
       },
       {
         "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 156896.5456637475,
-        "value": 764086.1773824503
+        "balance": 146024.1486682187,
+        "value": 611841.1829198364
       }
     ],
-    "apr": 21.171803970313803,
-    "apy": 21.171803970313803,
+    "apr": 7.027290884094125,
+    "apy": 7.027290884094125,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 7.027290884094125,
+    "maxApr": 7.027290884094125,
+    "minApy": 7.027290884094125,
+    "maxApy": 7.027290884094125,
     "sources": [
       {
         "name": "SushiBar",
-        "apr": 3.1197634129480947,
+        "apr": 0.48176292117922614,
         "boostable": false,
-        "minApr": 3.1197634129480947,
-        "maxApr": 3.1197634129480947
+        "minApr": 0.48176292117922614,
+        "maxApr": 0.48176292117922614
       },
       {
         "name": "Sushiswap LP Fees",
-        "apr": 18.052040557365707,
+        "apr": 6.545527962914899,
         "boostable": false,
-        "minApr": 18.052040557365707,
-        "maxApr": 18.052040557365707
+        "minApr": 6.545527962914899,
+        "maxApr": 6.545527962914899
       }
     ],
     "sourcesApy": [
       {
         "name": "SushiBar",
-        "apr": 3.1197634129480947,
+        "apr": 0.48176292117922614,
         "boostable": false,
-        "minApr": 3.1197634129480947,
-        "maxApr": 3.1197634129480947
+        "minApr": 0.48176292117922614,
+        "maxApr": 0.48176292117922614
       },
       {
         "name": "Sushiswap LP Fees",
-        "apr": 18.052040557365707,
+        "apr": 6.545527962914899,
         "boostable": false,
-        "minApr": 18.052040557365707,
-        "maxApr": 18.052040557365707
+        "minApr": 6.545527962914899,
+        "maxApr": 6.545527962914899
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x3a494D79AA78118795daad8AeFF5825C6c8dF7F1",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 2000,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x1862A18181346EBd9EdAf800804f89190DeF24a5",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -2305,40 +2312,40 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 18.052040557365707,
+      "nonHarvestApr": 6.545527962914899,
+      "nonHarvestApy": 6.545527962914899,
       "nonHarvestSources": [
         {
           "name": "Sushiswap LP Fees",
-          "apr": 18.052040557365707,
+          "apr": 6.545527962914899,
           "boostable": false,
-          "minApr": 18.052040557365707,
-          "maxApr": 18.052040557365707
+          "minApr": 6.545527962914899,
+          "maxApr": 6.545527962914899
         }
       ],
-      "nonHarvestApy": 18.052040557365707,
       "nonHarvestSourcesApy": [
         {
           "name": "Sushiswap LP Fees",
-          "apr": 18.052040557365707,
+          "apr": 6.545527962914899,
           "boostable": false,
-          "minApr": 18.052040557365707,
-          "maxApr": 18.052040557365707
+          "minApr": 6.545527962914899,
+          "maxApr": 6.545527962914899
         }
       ]
     },
-    "lastHarvest": 1659879609000,
+    "lastHarvest": 1662315060000,
     "version": "v1"
   },
   {
     "name": "graviAURA/DIGG/WBTC",
     "asset": "40WBTC-40DIGG-20graviAURA",
     "vaultAsset": "b40WBTC-40DIGG-20graviAURA",
-    "state": "experimental",
+    "state": "open",
     "underlyingToken": "0x8eB6c82C3081bBBd45DcAC5afA631aaC53478b7C",
     "vaultToken": "0x371B7C451858bd88eAf392B383Df8bd7B8955d5a",
-    "value": 798702.8,
-    "available": 2.1050087450819217,
-    "balance": 263.9999876089479,
+    "value": 742041.19,
+    "available": 2.9025523019972392,
+    "balance": 404.9075699684393,
     "protocol": "Aura",
     "pricePerFullShare": 1,
     "tokens": [
@@ -2347,232 +2354,237 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 13.428331657968851,
-        "value": 322185.96146964666
+        "balance": 15.127218064249579,
+        "value": 292967.6220728765
       },
       {
         "address": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
         "name": "Digg",
         "symbol": "DIGG",
         "decimals": 9,
-        "balance": 25.60918586544017,
-        "value": 319263.5739798349
+        "balance": 66.03186898248332,
+        "value": 293597.4990568156
       },
       {
         "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
         "name": "Gravitationally Bound AURA",
         "symbol": "graviAURA",
         "decimals": 18,
-        "balance": 47065.40964781422,
-        "value": 158279.9055333461
+        "balance": 49741.406874042186,
+        "value": 156117.6384111334
       }
     ],
-    "apr": 210.52974755024252,
-    "apy": 219.17542158075122,
+    "apr": 42.817826889597754,
+    "apy": 43.99419077932872,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 42.817826889597754,
+    "maxApr": 42.817826889597754,
+    "minApy": 43.99419077932872,
+    "maxApy": 43.99419077932872,
     "sources": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 70.56335811310218,
+        "apr": 15.65310788347634,
         "boostable": false,
-        "minApr": 70.56335811310218,
-        "maxApr": 70.56335811310218
+        "minApr": 15.65310788347634,
+        "maxApr": 15.65310788347634
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.24122183156662494,
+        "apr": 2.248239229983433,
         "boostable": false,
-        "minApr": 0.24122183156662494,
-        "maxApr": 0.24122183156662494
+        "minApr": 2.248239229983433,
+        "maxApr": 2.248239229983433
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 139.72516760557372,
+        "apr": 24.916479776137983,
         "boostable": false,
-        "minApr": 139.72516760557372,
-        "maxApr": 139.72516760557372
+        "minApr": 24.916479776137983,
+        "maxApr": 24.916479776137983
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 70.56335811310218,
+        "apr": 15.65310788347634,
         "boostable": false,
-        "minApr": 70.56335811310218,
-        "maxApr": 70.56335811310218
+        "minApr": 15.65310788347634,
+        "maxApr": 15.65310788347634
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.24122183156662494,
+        "apr": 2.248239229983433,
         "boostable": false,
-        "minApr": 0.24122183156662494,
-        "maxApr": 0.24122183156662494
+        "minApr": 2.248239229983433,
+        "maxApr": 2.248239229983433
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 139.72516760557372,
+        "apr": 24.916479776137983,
         "boostable": false,
-        "minApr": 139.72516760557372,
-        "maxApr": 139.72516760557372
+        "minApr": 24.916479776137983,
+        "maxApr": 24.916479776137983
       },
       {
         "name": "Vault Flywheel",
-        "apr": 8.645674030508689,
+        "apr": 1.1763638897309614,
         "boostable": false,
-        "minApr": 8.645674030508689,
-        "maxApr": 8.645674030508689
+        "minApr": 1.1763638897309614,
+        "maxApr": 1.1763638897309614
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xD87F2cdE238D0122b3865164359CFF6b2431d927",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 3836.7960843066144,
-      "harvestApr": 229.28063804919256,
-      "harvestPeriodApr": 288.5958704002278,
-      "harvestPeriodApy": 288.5958704002278,
+      "id": "ethereum-0x371B7C451858bd88eAf392B383Df8bd7B8955d5a",
+      "harvestValue": 85.26582588844008,
+      "harvestApr": 1.539194515218691,
       "harvestTokens": [
         {
-          "apr": 76.68682659301365,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 79.30964603490997,
-          "value": 1283.2820010159217
+          "balance": 1.8125335187802945,
+          "value": 32.7343389020234,
+          "apr": 0.5909110053449342
         },
         {
-          "apr": 152.59381145617888,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 759.3016053842633,
-          "value": 2553.5140832906927
+          "balance": 16.737314851051842,
+          "value": 52.53148698641668,
+          "apr": 0.9482835098737566
         }
       ],
+      "harvestPeriodApr": 1.6542947715281038,
+      "harvestPeriodApy": 1.6542947715281038,
       "harvestPeriodSources": [
         {
-          "apr": 95.37382048103534,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.45608541834545235,
-          "value": 7.379760691794144
+          "balance": 0.0024637514748304667,
+          "value": 0.0444953292790589,
+          "apr": 0.6350990203061891
         },
         {
-          "apr": 193.22204991919244,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 4.445758268814075,
-          "value": 14.950984259512627
+          "balance": 0.022750800294979,
+          "value": 0.07140532279292978,
+          "apr": 1.0191957512219147
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 95.37382048103534,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.45608541834545235,
-          "value": 7.379760691794144
+          "balance": 0.0024637514748304667,
+          "value": 0.0444953292790589,
+          "apr": 0.6350990203061891
         },
         {
-          "apr": 193.22204991919244,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 4.445758268814075,
-          "value": 14.950984259512627
+          "balance": 0.022750800294979,
+          "value": 0.07140532279292978,
+          "apr": 1.0191957512219147
         }
       ],
-      "yieldValue": 3806.042254080452,
-      "yieldApr": 227.44283962004164,
+      "yieldValue": 85.47339571228747,
+      "yieldApr": 1.5429415068306507,
       "yieldTokens": [
         {
-          "apr": 76.73873480728291,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 204.80871391028833,
-          "value": 1284.1506362175078
+          "balance": 4.62018355201554,
+          "value": 32.941908725870796,
+          "apr": 0.5946579969568941
         },
         {
-          "apr": 150.70410481275874,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 790.561635693713,
-          "value": 2521.8916178629443
+          "balance": 17.510495662138894,
+          "value": 52.53148698641668,
+          "apr": 0.9482835098737566
         }
       ],
-      "yieldPeriodApr": 287.999698621123,
+      "yieldPeriodApr": 1.658322022656667,
       "yieldPeriodSources": [
         {
-          "apr": 97.17049142537985,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 1.1991677970061119,
-          "value": 7.518782087228321
+          "balance": 0.006280151520926758,
+          "value": 0.044777480344207775,
+          "apr": 0.6391262714347414
         },
         {
-          "apr": 190.82920719574318,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 4.628787696443737,
-          "value": 14.76583275165552
+          "balance": 0.023801774264310183,
+          "value": 0.07140532279293055,
+          "apr": 1.0191957512219258
         }
       ],
-      "nonHarvestApr": 0.24122183156662494,
+      "nonHarvestApr": 2.248239229983433,
+      "nonHarvestApy": 3.4246031197143942,
       "nonHarvestSources": [
         {
           "name": "Balancer LP Fees",
-          "apr": 0.24122183156662494,
+          "apr": 2.248239229983433,
           "boostable": false,
-          "minApr": 0.24122183156662494,
-          "maxApr": 0.24122183156662494
+          "minApr": 2.248239229983433,
+          "maxApr": 2.248239229983433
         }
       ],
-      "nonHarvestApy": 8.886895862075313,
       "nonHarvestSourcesApy": [
         {
           "name": "Balancer LP Fees",
-          "apr": 0.24122183156662494,
+          "apr": 2.248239229983433,
           "boostable": false,
-          "minApr": 0.24122183156662494,
-          "maxApr": 0.24122183156662494
+          "minApr": 2.248239229983433,
+          "maxApr": 2.248239229983433
         },
         {
           "name": "Vault Flywheel",
-          "apr": 8.645674030508689,
+          "apr": 1.1763638897309614,
           "boostable": false,
-          "minApr": 8.645674030508689,
-          "maxApr": 8.645674030508689
+          "minApr": 1.1763638897309614,
+          "maxApr": 1.1763638897309614
         }
       ]
     },
-    "lastHarvest": 1659917518000,
+    "lastHarvest": 1662354711000,
     "version": "v1.5"
   },
   {
@@ -2582,9 +2594,9 @@
     "state": "open",
     "underlyingToken": "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
     "vaultToken": "0xeC1c717A3b02582A4Aa2275260C583095536b613",
-    "value": 3998479.6,
-    "available": 0.001404021340351875,
-    "balance": 5828.333868227443,
+    "value": 2704238.56,
+    "available": 36.5124801854535,
+    "balance": 4727.8770582834495,
     "protocol": "Convex",
     "pricePerFullShare": 1,
     "tokens": [
@@ -2593,79 +2605,84 @@
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 412472.18999303685,
-        "value": 2008739.5652660897
+        "balance": 321197.68680285674,
+        "value": 1345818.3077039698
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 83.01652355765262,
-        "value": 1991815.4497187592
+        "balance": 70.23127017264298,
+        "value": 1360163.3909319625
       }
     ],
-    "apr": 18.211336137372705,
-    "apy": 19.15395606292933,
+    "apr": 4.631766786720994,
+    "apy": 4.770016222505529,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 4.631766786720994,
+    "maxApr": 4.631766786720994,
+    "minApy": 4.770016222505529,
+    "maxApy": 4.770016222505529,
     "sources": [
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 13.422158679689012,
+        "apr": 3.6155991642745007,
         "boostable": false,
-        "minApr": 13.422158679689012,
-        "maxApr": 13.422158679689012
+        "minApr": 3.6155991642745007,
+        "maxApr": 3.6155991642745007
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 4.789177457683692,
+        "apr": 1.016167622446493,
         "boostable": false,
-        "minApr": 4.789177457683692,
-        "maxApr": 4.789177457683692
+        "minApr": 1.016167622446493,
+        "maxApr": 1.016167622446493
       }
     ],
     "sourcesApy": [
       {
         "name": "Vault Flywheel",
-        "apr": 0.9426199255566243,
+        "apr": 0.13824943578453516,
         "boostable": false,
-        "minApr": 0.9426199255566243,
-        "maxApr": 0.9426199255566243
+        "minApr": 0.13824943578453516,
+        "maxApr": 0.13824943578453516
       },
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 13.422158679689012,
+        "apr": 3.6155991642745007,
         "boostable": false,
-        "minApr": 13.422158679689012,
-        "maxApr": 13.422158679689012
+        "minApr": 3.6155991642745007,
+        "maxApr": 3.6155991642745007
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 4.789177457683692,
+        "apr": 1.016167622446493,
         "boostable": false,
-        "minApr": 4.789177457683692,
-        "maxApr": 4.789177457683692
+        "minApr": 1.016167622446493,
+        "maxApr": 1.016167622446493
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x1905FD2D2D09792eE058C2b46a05F11630a1EcA1",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0xeC1c717A3b02582A4Aa2275260C583095536b613",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -2674,19 +2691,19 @@
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
       "nonHarvestApr": 0,
+      "nonHarvestApy": 0.13824943578453516,
       "nonHarvestSources": [],
-      "nonHarvestApy": 0.9426199255566243,
       "nonHarvestSourcesApy": [
         {
           "name": "Vault Flywheel",
-          "apr": 0.9426199255566243,
+          "apr": 0.13824943578453516,
           "boostable": false,
-          "minApr": 0.9426199255566243,
-          "maxApr": 0.9426199255566243
+          "minApr": 0.13824943578453516,
+          "maxApr": 0.13824943578453516
         }
       ]
     },
-    "lastHarvest": 1659917124000,
+    "lastHarvest": 1662276824000,
     "version": "v1"
   },
   {
@@ -2696,19 +2713,19 @@
     "state": "open",
     "underlyingToken": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     "vaultToken": "0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
-    "value": 2942012.48,
+    "value": 1562606.79,
     "available": 0,
-    "balance": 122.61961724,
+    "balance": 80.68432107,
     "protocol": "Yearn",
-    "pricePerFullShare": 1.02108894,
+    "pricePerFullShare": 1.02108895,
     "tokens": [
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 122.61961724,
-        "value": 2942012.47643932
+        "balance": 80.68432107,
+        "value": 1562606.791417004
       }
     ],
     "apr": 0,
@@ -2717,6 +2734,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
@@ -2730,11 +2751,12 @@
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x4b92d19c11435614CD49Af1b589001b7c08cD4D5",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -2743,8 +2765,8 @@
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
       "nonHarvestApr": 0,
-      "nonHarvestSources": [],
       "nonHarvestApy": 0,
+      "nonHarvestSources": [],
       "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
@@ -2757,9 +2779,9 @@
     "state": "discontinued",
     "underlyingToken": "0xb19059ebb43466C323583928285a49f558E572Fd",
     "vaultToken": "0x8c76970747afd5398e958bDfadA4cf0B9FcA16c4",
-    "value": 6614.73,
+    "value": 5125.7,
     "available": 0,
-    "balance": 0.27393237070560966,
+    "balance": 0.26054195857244905,
     "protocol": "Convex",
     "pricePerFullShare": 1.0045312098078214,
     "tokens": [
@@ -2768,16 +2790,16 @@
         "name": "Huobi BTC",
         "symbol": "HBTC",
         "decimals": 18,
-        "balance": 0.1522611100705729,
-        "value": 3658.8344749958674
+        "balance": 0.1600014163947261,
+        "value": 3135.291754821216
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 0.12410800220713888,
-        "value": 2977.723296955883
+        "balance": 0.10296844801135287,
+        "value": 1994.18169516003
       }
     ],
     "apr": 0.12762116228770548,
@@ -2786,6 +2808,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.12762116228770548,
+    "maxApr": 0.12762116228770548,
+    "minApy": 0.12762116228770548,
+    "maxApy": 0.12762116228770548,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -2806,47 +2832,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x8c26D9B6B80684CC642ED9eb1Ac1729Af3E819eE",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.12762116228770548,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.12762116228770548,
-          "boostable": false,
-          "minApr": 0.12762116228770548,
-          "maxApr": 0.12762116228770548
-        }
-      ],
-      "nonHarvestApy": 0.12762116228770548,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.12762116228770548,
-          "boostable": false,
-          "minApr": 0.12762116228770548,
-          "maxApr": 0.12762116228770548
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -2858,48 +2868,52 @@
     "state": "open",
     "underlyingToken": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
     "vaultToken": "0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
-    "value": 2266644.24,
-    "available": 442158.5280124648,
-    "balance": 465430.0294868051,
+    "value": 2043155.98,
+    "available": 274.04888297466425,
+    "balance": 487626.7255757171,
     "protocol": "Badger",
-    "pricePerFullShare": 428.4444582264903,
+    "pricePerFullShare": 449.6979421019579,
     "tokens": [
       {
         "address": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
         "name": "Badger",
         "symbol": "BADGER",
         "decimals": 18,
-        "balance": 465430.0294868051,
-        "value": 2266644.243600741
+        "balance": 487626.7255757171,
+        "value": 2043155.9801622548
       }
     ],
-    "apr": 30.7415258616478,
-    "apy": 30.7415258616478,
+    "apr": 27.391472588999267,
+    "apy": 27.391472588999267,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 27.391472588999267,
+    "maxApr": 27.391472588999267,
+    "minApy": 27.391472588999267,
+    "maxApy": 27.391472588999267,
     "sources": [
       {
         "name": "Badger",
-        "apr": 30.7415258616478,
+        "apr": 27.391472588999267,
         "boostable": false,
-        "minApr": 30.7415258616478,
-        "maxApr": 30.7415258616478
+        "minApr": 27.391472588999267,
+        "maxApr": 27.391472588999267
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger",
-        "apr": 30.7415258616478,
+        "apr": 27.391472588999267,
         "boostable": false,
-        "minApr": 30.7415258616478,
-        "maxApr": 30.7415258616478
+        "minApr": 27.391472588999267,
+        "maxApr": 27.391472588999267
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xD8d8aE4A5363edb6C3E01759576Da04bcc3a947e",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
       "performanceFee": 0,
       "strategistFee": 0,
@@ -2908,11 +2922,12 @@
     "type": "native",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x6aF7377b5009d7d154F36FE9e235aE1DA27Aea22",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -2920,24 +2935,24 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 30.7415258616478,
+      "nonHarvestApr": 27.391472588999267,
+      "nonHarvestApy": 27.391472588999267,
       "nonHarvestSources": [
         {
           "name": "Badger",
-          "apr": 30.7415258616478,
+          "apr": 27.391472588999267,
           "boostable": false,
-          "minApr": 30.7415258616478,
-          "maxApr": 30.7415258616478
+          "minApr": 27.391472588999267,
+          "maxApr": 27.391472588999267
         }
       ],
-      "nonHarvestApy": 30.7415258616478,
       "nonHarvestSourcesApy": [
         {
           "name": "Badger",
-          "apr": 30.7415258616478,
+          "apr": 27.391472588999267,
           "boostable": false,
-          "minApr": 30.7415258616478,
-          "maxApr": 30.7415258616478
+          "minApr": 27.391472588999267,
+          "maxApr": 27.391472588999267
         }
       ]
     },
@@ -2951,9 +2966,9 @@
     "state": "open",
     "underlyingToken": "0xCEfF51756c56CeFFCA006cD410B03FFC46dd3a58",
     "vaultToken": "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
-    "value": 9057468.33,
-    "available": 6.6628841e-11,
-    "balance": 0.000279279209006408,
+    "value": 7790902.99,
+    "available": 0,
+    "balance": 0.000277769575398293,
     "protocol": "Sushiswap",
     "pricePerFullShare": 1,
     "tokens": [
@@ -2962,58 +2977,77 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 188.9314601423553,
-        "value": 4533032.52319553
+        "balance": 201.25553434129202,
+        "value": 3897699.833145055
       },
       {
         "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "balance": 2554.434905454499,
-        "value": 4543343.467190427
+        "balance": 2380.5500527696154,
+        "value": 3904244.919545335
       }
     ],
-    "apr": 2.6019878806988763,
-    "apy": 2.6019878806988763,
+    "apr": 2.2349382545477297,
+    "apy": 2.2349382545477297,
     "boost": {
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 2.2349382545477297,
+    "maxApr": 2.2349382545477297,
+    "minApy": 2.2349382545477297,
+    "maxApy": 2.2349382545477297,
     "sources": [
       {
-        "name": "Sushiswap LP Fees",
-        "apr": 2.6019878806988763,
+        "name": "SushiBar",
+        "apr": 0.0905168776913932,
         "boostable": false,
-        "minApr": 2.6019878806988763,
-        "maxApr": 2.6019878806988763
+        "minApr": 0.0905168776913932,
+        "maxApr": 0.0905168776913932
+      },
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 2.1444213768563363,
+        "boostable": false,
+        "minApr": 2.1444213768563363,
+        "maxApr": 2.1444213768563363
       }
     ],
     "sourcesApy": [
       {
-        "name": "Sushiswap LP Fees",
-        "apr": 2.6019878806988763,
+        "name": "SushiBar",
+        "apr": 0.0905168776913932,
         "boostable": false,
-        "minApr": 2.6019878806988763,
-        "maxApr": 2.6019878806988763
+        "minApr": 0.0905168776913932,
+        "maxApr": 0.0905168776913932
+      },
+      {
+        "name": "Sushiswap LP Fees",
+        "apr": 2.1444213768563363,
+        "boostable": false,
+        "minApr": 2.1444213768563363,
+        "maxApr": 2.1444213768563363
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x7A56d65254705B4Def63c68488C0182968C452ce",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x758A43EE2BFf8230eeb784879CdcFF4828F2544D",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -3021,40 +3055,40 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 2.6019878806988763,
+      "nonHarvestApr": 2.1444213768563363,
+      "nonHarvestApy": 2.1444213768563363,
       "nonHarvestSources": [
         {
           "name": "Sushiswap LP Fees",
-          "apr": 2.6019878806988763,
+          "apr": 2.1444213768563363,
           "boostable": false,
-          "minApr": 2.6019878806988763,
-          "maxApr": 2.6019878806988763
+          "minApr": 2.1444213768563363,
+          "maxApr": 2.1444213768563363
         }
       ],
-      "nonHarvestApy": 2.6019878806988763,
       "nonHarvestSourcesApy": [
         {
           "name": "Sushiswap LP Fees",
-          "apr": 2.6019878806988763,
+          "apr": 2.1444213768563363,
           "boostable": false,
-          "minApr": 2.6019878806988763,
-          "maxApr": 2.6019878806988763
+          "minApr": 2.1444213768563363,
+          "maxApr": 2.1444213768563363
         }
       ]
     },
-    "lastHarvest": 1645445282000,
+    "lastHarvest": 1662311098000,
     "version": "v1"
   },
   {
     "name": "bb-a-USD",
     "asset": "bb-a-USD",
     "vaultAsset": "bbb-a-USD",
-    "state": "experimental",
+    "state": "open",
     "underlyingToken": "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
     "vaultToken": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
-    "value": 101576.74,
-    "available": 143.2571648087233,
-    "balance": 100017.3316810706,
+    "value": 204805.45,
+    "available": 10.513344573520515,
+    "balance": 201898.5707959075,
     "protocol": "Aura",
     "pricePerFullShare": 1,
     "tokens": [
@@ -3063,232 +3097,237 @@
         "name": "Balancer Aave Boosted Pool (USDT)",
         "symbol": "bb-a-USDT",
         "decimals": 18,
-        "balance": 27781.45759163183,
-        "value": 28337.086743464468
+        "balance": 63598.47822240978,
+        "value": 64552.45539574593
       },
       {
         "address": "0x804CdB9116a10bB78768D3252355a1b18067bF8f",
         "name": "Balancer Aave Boosted Pool (DAI)",
         "symbol": "bb-a-DAI",
         "decimals": 18,
-        "balance": 36464.388537267834,
-        "value": 36901.96119971505
+        "balance": 68268.99102269941,
+        "value": 69019.9499239491
       },
       {
         "address": "0x9210F1204b5a24742Eba12f710636D76240dF3d0",
         "name": "Balancer Aave Boosted Pool (USDC)",
         "symbol": "bb-a-USDC",
         "decimals": 18,
-        "balance": 36025.197001225715,
-        "value": 36385.44897123797
+        "balance": 70527.77001448996,
+        "value": 71233.04771463486
       }
     ],
-    "apr": 6.225473795229056,
-    "apy": 6.746859616023928,
+    "apr": 1.6961967293517346,
+    "apy": 1.7543859407024387,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 1.6961967293517346,
+    "maxApr": 1.6961967293517346,
+    "minApy": 1.7543859407024387,
+    "maxApy": 1.7543859407024387,
     "sources": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 2.0833950647088018,
+        "apr": 0.6305375746161139,
         "boostable": false,
-        "minApr": 2.0833950647088018,
-        "maxApr": 2.0833950647088018
+        "minApr": 0.6305375746161139,
+        "maxApr": 0.6305375746161139
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 4.131703135195521,
+        "apr": 1.0210327187341846,
         "boostable": false,
-        "minApr": 4.131703135195521,
-        "maxApr": 4.131703135195521
+        "minApr": 1.0210327187341846,
+        "maxApr": 1.0210327187341846
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.010375595324732007,
+        "apr": 0.044626436001436114,
         "boostable": false,
-        "minApr": 0.010375595324732007,
-        "maxApr": 0.010375595324732007
+        "minApr": 0.044626436001436114,
+        "maxApr": 0.044626436001436114
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Sett Aura BAL",
-        "apr": 2.0833950647088018,
+        "apr": 0.6305375746161139,
         "boostable": false,
-        "minApr": 2.0833950647088018,
-        "maxApr": 2.0833950647088018
+        "minApr": 0.6305375746161139,
+        "maxApr": 0.6305375746161139
       },
       {
         "name": "Vault Flywheel",
-        "apr": 0.5213858207948718,
+        "apr": 0.05818921135070413,
         "boostable": false,
-        "minApr": 0.5213858207948718,
-        "maxApr": 0.5213858207948718
+        "minApr": 0.05818921135070413,
+        "maxApr": 0.05818921135070413
       },
       {
         "name": "Gravitationally Bound AURA",
-        "apr": 4.131703135195521,
+        "apr": 1.0210327187341846,
         "boostable": false,
-        "minApr": 4.131703135195521,
-        "maxApr": 4.131703135195521
+        "minApr": 1.0210327187341846,
+        "maxApr": 1.0210327187341846
       },
       {
         "name": "Balancer LP Fees",
-        "apr": 0.010375595324732007,
+        "apr": 0.044626436001436114,
         "boostable": false,
-        "minApr": 0.010375595324732007,
-        "maxApr": 0.010375595324732007
+        "minApr": 0.044626436001436114,
+        "maxApr": 0.044626436001436114
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x2eDc46AC0eE850081e14a6E6cF09d69A29D61563",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 1000,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
-    "behavior": "Ecosystem Helper",
+    "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 11.469041637879512,
-      "harvestApr": 5.630320473003925,
-      "harvestPeriodApr": 7.074948994956119,
-      "harvestPeriodApy": 7.074948994956119,
+      "id": "ethereum-0x06D756861De0724FAd5B5636124e0f252d3C1404",
+      "harvestValue": 100.16200199074055,
+      "harvestApr": 6.40646922993121,
       "harvestTokens": [
         {
-          "apr": 1.8831772425278386,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.23707683462422333,
-          "value": 3.836058410816476
+          "balance": 2.1291881228901905,
+          "value": 38.45311817888589,
+          "apr": 2.4595027406771934
         },
         {
-          "apr": 3.7471432304760857,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 2.2697099875443802,
-          "value": 7.632983227063035
+          "balance": 19.66137028889082,
+          "value": 61.70888381185466,
+          "apr": 3.946966489254016
         }
       ],
+      "harvestPeriodApr": 6.202623754461772,
+      "harvestPeriodApy": 6.202623754461772,
       "harvestPeriodSources": [
         {
-          "apr": 2.3395155617245162,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.0014332269516069696,
-          "value": 0.023190550485606243
+          "balance": 0.002568737364759155,
+          "value": 0.04639137349851632,
+          "apr": 2.3812443619655053
         },
         {
-          "apr": 4.735433433231603,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.013957926793078279,
-          "value": 0.04694019133757591
+          "balance": 0.023720263807454955,
+          "value": 0.07444806652707396,
+          "apr": 3.821379392496268
         }
       ],
       "harvestPeriodSourcesApy": [
         {
-          "apr": 2.3395155617245162,
           "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
           "name": "Badger Sett Aura BAL",
           "symbol": "bauraBAL",
           "decimals": 18,
-          "balance": 0.0014332269516069696,
-          "value": 0.023190550485606243
+          "balance": 0.002568737364759155,
+          "value": 0.04639137349851632,
+          "apr": 2.3812443619655053
         },
         {
-          "apr": 4.735433433231603,
           "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
           "name": "Gravitationally Bound AURA",
           "symbol": "graviAURA",
           "decimals": 18,
-          "balance": 0.013957926793078279,
-          "value": 0.04694019133757591
+          "balance": 0.023720263807454955,
+          "value": 0.07444806652707396,
+          "apr": 3.821379392496268
         }
       ],
-      "yieldValue": 11.377049720223553,
-      "yieldApr": 5.585160293654798,
+      "yieldValue": 100.40583557777583,
+      "yieldApr": 6.422065088056226,
       "yieldTokens": [
         {
-          "apr": 1.884421313710924,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 0.6122157258748966,
-          "value": 3.838592601235601
+          "balance": 5.4273424636635585,
+          "value": 38.69695176592117,
+          "apr": 2.4750985988022105
         },
         {
-          "apr": 3.700738979943875,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 2.363152701877101,
-          "value": 7.538457118987952
+          "balance": 20.569627937284885,
+          "value": 61.708883811854655,
+          "apr": 3.946966489254016
         }
       ],
-      "yieldPeriodApr": 7.058218263295575,
+      "yieldPeriodApr": 6.217723725697689,
       "yieldPeriodSources": [
         {
-          "apr": 2.3814279685559767,
           "address": "0xba100000625a3754423978a60c9317c58a424e3D",
           "name": "Balancer",
           "symbol": "BAL",
           "decimals": 18,
-          "balance": 0.0037649137247610653,
-          "value": 0.023606009054251878
+          "balance": 0.006547763107042748,
+          "value": 0.04668555095321479,
+          "apr": 2.3963443332013323
         },
         {
-          "apr": 4.676790294739598,
           "address": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
           "name": "Aura",
           "symbol": "AURA",
           "decimals": 18,
-          "balance": 0.014532566977577765,
-          "value": 0.046358888658473076
+          "balance": 0.0248160221756919,
+          "value": 0.0744480665270757,
+          "apr": 3.8213793924963566
         }
       ],
-      "nonHarvestApr": 0.010375595324732007,
+      "nonHarvestApr": 0.044626436001436114,
+      "nonHarvestApy": 0.10281564735214024,
       "nonHarvestSources": [
         {
           "name": "Balancer LP Fees",
-          "apr": 0.010375595324732007,
+          "apr": 0.044626436001436114,
           "boostable": false,
-          "minApr": 0.010375595324732007,
-          "maxApr": 0.010375595324732007
+          "minApr": 0.044626436001436114,
+          "maxApr": 0.044626436001436114
         }
       ],
-      "nonHarvestApy": 0.5317614161196038,
       "nonHarvestSourcesApy": [
         {
           "name": "Vault Flywheel",
-          "apr": 0.5213858207948718,
+          "apr": 0.05818921135070413,
           "boostable": false,
-          "minApr": 0.5213858207948718,
-          "maxApr": 0.5213858207948718
+          "minApr": 0.05818921135070413,
+          "maxApr": 0.05818921135070413
         },
         {
           "name": "Balancer LP Fees",
-          "apr": 0.010375595324732007,
+          "apr": 0.044626436001436114,
           "boostable": false,
-          "minApr": 0.010375595324732007,
-          "maxApr": 0.010375595324732007
+          "minApr": 0.044626436001436114,
+          "maxApr": 0.044626436001436114
         }
       ]
     },
-    "lastHarvest": 1659920789000,
+    "lastHarvest": 1662351171000,
     "version": "v1.5"
   },
   {
@@ -3298,7 +3337,7 @@
     "state": "discontinued",
     "underlyingToken": "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
     "vaultToken": "0x19E4d89e0cB807ea21B8CEF02df5eAA99A110dA5",
-    "value": 151.26,
+    "value": 151.02,
     "available": 0.7288598391322803,
     "balance": 150.12219670527918,
     "protocol": "Convex",
@@ -3309,85 +3348,73 @@
         "name": "Magic Internet Money",
         "symbol": "MIM",
         "decimals": 18,
-        "balance": 117.07955479491886,
-        "value": 116.87279230115102
+        "balance": 116.77666220759943,
+        "value": 116.77666220759943
       },
       {
         "address": "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
         "name": "Curve.fi DAI/USDC/USDT",
         "symbol": "3Crv",
         "decimals": 18,
-        "balance": 33.47588052374643,
-        "value": 34.25264204643416
+        "balance": 33.78398224903198,
+        "value": 34.52517925367605
       }
     ],
-    "apr": 0.2874963161253463,
-    "apy": 0.2874963161253463,
+    "apr": 0.13429250590133446,
+    "apy": 0.13429250590133446,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0.13429250590133446,
+    "maxApr": 0.13429250590133446,
+    "minApy": 0.13429250590133446,
+    "maxApy": 0.13429250590133446,
     "sources": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.2874963161253463,
+        "apr": 0.13429250590133446,
         "boostable": false,
-        "minApr": 0.2874963161253463,
-        "maxApr": 0.2874963161253463
+        "minApr": 0.13429250590133446,
+        "maxApr": 0.13429250590133446
       }
     ],
     "sourcesApy": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.2874963161253463,
+        "apr": 0.13429250590133446,
         "boostable": false,
-        "minApr": 0.2874963161253463,
-        "maxApr": 0.2874963161253463
+        "minApr": 0.13429250590133446,
+        "maxApr": 0.13429250590133446
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x6D1de7B7F586f17d573BB57ce39159ff6245A285",
-      "withdrawFee": 10,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
       "performanceFee": 0,
-      "strategistFee": 2000,
+      "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.2874963161253463,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.2874963161253463,
-          "boostable": false,
-          "minApr": 0.2874963161253463,
-          "maxApr": 0.2874963161253463
-        }
-      ],
-      "nonHarvestApy": 0.2874963161253463,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.2874963161253463,
-          "boostable": false,
-          "minApr": 0.2874963161253463,
-          "maxApr": 0.2874963161253463
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -3399,7 +3426,7 @@
     "state": "discontinued",
     "underlyingToken": "0x2fE94ea3d5d4a175184081439753DE15AeF9d614",
     "vaultToken": "0xf349c0faA80fC1870306Ac093f75934078e28991",
-    "value": 218520.55,
+    "value": 212014.2,
     "available": 0,
     "balance": 5.668377227072996,
     "protocol": "Convex",
@@ -3410,16 +3437,16 @@
         "name": "BoringDAO BTC",
         "symbol": "oBTC",
         "decimals": 18,
-        "balance": 4.037609567838592,
-        "value": 178926.66799876723
+        "balance": 4.064436711835996,
+        "value": 180115.51288501217
       },
       {
         "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
         "name": "Curve.fi renBTC/wBTC/sBTC",
         "symbol": "crvRenWSBTC",
         "decimals": 18,
-        "balance": 1.6485856649029762,
-        "value": 39618.190178664285
+        "balance": 1.6223545587020143,
+        "value": 31860.042775177844
       }
     ],
     "apr": 0.06360018384128363,
@@ -3428,6 +3455,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.06360018384128363,
+    "maxApr": 0.06360018384128363,
+    "minApy": 0.06360018384128363,
+    "maxApy": 0.06360018384128363,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -3448,47 +3479,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x5dd69c6D81f0a403c03b99C5a44Ef2D49b66d388",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.06360018384128363,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.06360018384128363,
-          "boostable": false,
-          "minApr": 0.06360018384128363,
-          "maxApr": 0.06360018384128363
-        }
-      ],
-      "nonHarvestApy": 0.06360018384128363,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.06360018384128363,
-          "boostable": false,
-          "minApr": 0.06360018384128363,
-          "maxApr": 0.06360018384128363
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -3500,7 +3515,7 @@
     "state": "discontinued",
     "underlyingToken": "0xDE5331AC4B3630f94853Ff322B66407e0D6331E8",
     "vaultToken": "0x55912D0Cf83B75c492E761932ABc4DB4a5CB1b17",
-    "value": 176.14,
+    "value": 146.29,
     "available": 0,
     "balance": 0.007478614547891209,
     "protocol": "Convex",
@@ -3511,16 +3526,16 @@
         "name": "pTokens BTC",
         "symbol": "pBTC",
         "decimals": 18,
-        "balance": 0.0049992445327322315,
-        "value": 115.8624912906022
+        "balance": 0.004390519249036834,
+        "value": 85.23613573464141
       },
       {
         "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
         "name": "Curve.fi renBTC/wBTC/sBTC",
         "symbol": "crvRenWSBTC",
         "decimals": 18,
-        "balance": 0.0025098179809468785,
-        "value": 60.315001033832615
+        "balance": 0.003109219854134358,
+        "value": 61.05932702491804
       }
     ],
     "apr": 0.11649723710949189,
@@ -3529,6 +3544,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.11649723710949189,
+    "maxApr": 0.11649723710949189,
+    "minApy": 0.11649723710949189,
+    "maxApy": 0.11649723710949189,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -3549,47 +3568,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xA9A646668Df5Cec5344941646F5c6b269551e53D",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.11649723710949189,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.11649723710949189,
-          "boostable": false,
-          "minApr": 0.11649723710949189,
-          "maxApr": 0.11649723710949189
-        }
-      ],
-      "nonHarvestApy": 0.11649723710949189,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.11649723710949189,
-          "boostable": false,
-          "minApr": 0.11649723710949189,
-          "maxApr": 0.11649723710949189
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -3601,42 +3604,46 @@
     "state": "open",
     "underlyingToken": "0x49849C98ae39Fff122806C06791Fa73784FB3675",
     "vaultToken": "0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
-    "value": 18683480.86,
-    "available": 0.2658069680409815,
-    "balance": 763.4446581760374,
+    "value": 13579625.18,
+    "available": 0,
+    "balance": 687.5297727147605,
     "protocol": "Convex",
-    "pricePerFullShare": 1.0139255471972513,
+    "pricePerFullShare": 1.0139256332598963,
     "tokens": [
       {
         "address": "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
         "name": "renBTC",
         "symbol": "renBTC",
         "decimals": 8,
-        "balance": 242.97923406116192,
-        "value": 5843650.579170943
+        "balance": 176.85431677009063,
+        "value": 3426295.948661189
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 536.0113342416857,
-        "value": 12860519.942460766
+        "balance": 525.4385263332839,
+        "value": 10176125.904414602
       }
     ],
-    "apr": 1.91186300293815,
-    "apy": 2.006058786157071,
+    "apr": 0.898621244722404,
+    "apy": 0.9172419797519158,
     "boost": {
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.898621244722404,
+    "maxApr": 0.898621244722404,
+    "minApy": 0.9172419797519158,
+    "maxApy": 0.9172419797519158,
     "sources": [
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 1.186418820437209,
+        "apr": 0.4716417790636181,
         "boostable": false,
-        "minApr": 1.186418820437209,
-        "maxApr": 1.186418820437209
+        "minApr": 0.4716417790636181,
+        "maxApr": 0.4716417790636181
       },
       {
         "name": "Curve LP Fees",
@@ -3647,19 +3654,19 @@
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 0.42088779260237175,
+        "apr": 0.1224230757602167,
         "boostable": false,
-        "minApr": 0.42088779260237175,
-        "maxApr": 0.42088779260237175
+        "minApr": 0.1224230757602167,
+        "maxApr": 0.1224230757602167
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 1.186418820437209,
+        "apr": 0.4716417790636181,
         "boostable": false,
-        "minApr": 1.186418820437209,
-        "maxApr": 1.186418820437209
+        "minApr": 0.4716417790636181,
+        "maxApr": 0.4716417790636181
       },
       {
         "name": "Curve LP Fees",
@@ -3670,35 +3677,36 @@
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 0.42088779260237175,
+        "apr": 0.1224230757602167,
         "boostable": false,
-        "minApr": 0.42088779260237175,
-        "maxApr": 0.42088779260237175
+        "minApr": 0.1224230757602167,
+        "maxApr": 0.1224230757602167
       },
       {
         "name": "Vault Flywheel",
-        "apr": 0.09419578321892104,
+        "apr": 0.018620735029511795,
         "boostable": false,
-        "minApr": 0.09419578321892104,
-        "maxApr": 0.09419578321892104
+        "minApr": 0.018620735029511795,
+        "maxApr": 0.018620735029511795
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x61e16b46F74aEd8f9c2Ec6CB2dCb2258Bdfc7071",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x6dEf55d2e18486B9dDfaA075bc4e4EE0B28c1545",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -3707,6 +3715,7 @@
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
       "nonHarvestApr": 0.30455638989856926,
+      "nonHarvestApy": 0.32317712492808104,
       "nonHarvestSources": [
         {
           "name": "Curve LP Fees",
@@ -3716,7 +3725,6 @@
           "maxApr": 0.30455638989856926
         }
       ],
-      "nonHarvestApy": 0.3987521731174903,
       "nonHarvestSourcesApy": [
         {
           "name": "Curve LP Fees",
@@ -3727,14 +3735,14 @@
         },
         {
           "name": "Vault Flywheel",
-          "apr": 0.09419578321892104,
+          "apr": 0.018620735029511795,
           "boostable": false,
-          "minApr": 0.09419578321892104,
-          "maxApr": 0.09419578321892104
+          "minApr": 0.018620735029511795,
+          "maxApr": 0.018620735029511795
         }
       ]
     },
-    "lastHarvest": 1659787588000,
+    "lastHarvest": 1662570336000,
     "version": "v1"
   },
   {
@@ -3744,87 +3752,101 @@
     "state": "open",
     "underlyingToken": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
     "vaultToken": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "value": 18108360.63,
-    "available": 437.49956498035715,
-    "balance": 2447075.7604420255,
+    "value": 13738302.07,
+    "available": 8117.962310960525,
+    "balance": 2553587.7457130044,
     "protocol": "Convex",
     "pricePerFullShare": 1,
-    "tokens": [],
-    "apr": 27.671116643932915,
-    "apy": 28.040207230861306,
+    "tokens": [
+      {
+        "address": "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B",
+        "name": "Convex Token",
+        "symbol": "CVX",
+        "decimals": 18,
+        "balance": 2553587.7457130044,
+        "value": 13738302.071935963
+      }
+    ],
+    "apr": 28.139879238417333,
+    "apy": 28.321380602719294,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 28.139879238417333,
+    "maxApr": 28.139879238417333,
+    "minApy": 28.321380602719294,
+    "maxApy": 28.321380602719294,
     "sources": [
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 4.82944055347939,
+        "apr": 4.803242600401742,
         "boostable": false,
-        "minApr": 4.82944055347939,
-        "maxApr": 4.82944055347939
+        "minApr": 4.803242600401742,
+        "maxApr": 4.803242600401742
       },
       {
         "name": "Badger",
-        "apr": 5.997333899442396,
+        "apr": 5.819217029385648,
         "boostable": false,
-        "minApr": 5.997333899442396,
-        "maxApr": 5.997333899442396
+        "minApr": 5.819217029385648,
+        "maxApr": 5.819217029385648
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 16.84434219101113,
+        "apr": 17.517419608629943,
         "boostable": false,
-        "minApr": 16.84434219101113,
-        "maxApr": 16.84434219101113
+        "minApr": 17.517419608629943,
+        "maxApr": 17.517419608629943
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Sett Convex CRV",
-        "apr": 4.82944055347939,
+        "apr": 4.803242600401742,
         "boostable": false,
-        "minApr": 4.82944055347939,
-        "maxApr": 4.82944055347939
+        "minApr": 4.803242600401742,
+        "maxApr": 4.803242600401742
       },
       {
         "name": "Badger",
-        "apr": 5.997333899442396,
+        "apr": 5.819217029385648,
         "boostable": false,
-        "minApr": 5.997333899442396,
-        "maxApr": 5.997333899442396
+        "minApr": 5.819217029385648,
+        "maxApr": 5.819217029385648
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 16.84434219101113,
+        "apr": 17.517419608629943,
         "boostable": false,
-        "minApr": 16.84434219101113,
-        "maxApr": 16.84434219101113
+        "minApr": 17.517419608629943,
+        "maxApr": 17.517419608629943
       },
       {
         "name": "Vault Flywheel",
-        "apr": 0.36909058692839103,
+        "apr": 0.18150136430196254,
         "boostable": false,
-        "minApr": 0.36909058692839103,
-        "maxApr": 0.36909058692839103
+        "minApr": 0.18150136430196254,
+        "maxApr": 0.18150136430196254
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x898111d1F4eB55025D0036568212425EE2274082",
-      "withdrawFee": 10,
-      "performanceFee": 1500,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -3833,19 +3855,19 @@
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
       "nonHarvestApr": 0,
+      "nonHarvestApy": 0.18150136430196254,
       "nonHarvestSources": [],
-      "nonHarvestApy": 0.36909058692839103,
       "nonHarvestSourcesApy": [
         {
           "name": "Vault Flywheel",
-          "apr": 0.36909058692839103,
+          "apr": 0.18150136430196254,
           "boostable": false,
-          "minApr": 0.36909058692839103,
-          "maxApr": 0.36909058692839103
+          "minApr": 0.18150136430196254,
+          "maxApr": 0.18150136430196254
         }
       ]
     },
-    "lastHarvest": 1659760481000,
+    "lastHarvest": 1662538148000,
     "version": "v1"
   },
   {
@@ -3876,31 +3898,35 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0,
+    "maxApr": 0,
+    "minApy": 0,
+    "maxApy": 0,
     "sources": [],
     "sourcesApy": [],
     "bouncer": "none",
     "strategy": {
-      "address": "0x54D06A0E1cE55a7a60Ee175AbCeaC7e363f603f3",
-      "withdrawFee": 10,
-      "performanceFee": 1000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
+      "harvestValue": 0,
       "nonHarvestApr": 0,
       "nonHarvestSources": [],
       "nonHarvestApy": 0,
@@ -3916,9 +3942,9 @@
     "state": "discontinued",
     "underlyingToken": "0x64eda51d3Ad40D56b9dFc5554E06F94e1Dd786Fd",
     "vaultToken": "0xb9D076fDe463dbc9f915E5392F807315Bf940334",
-    "value": 250752.01,
+    "value": 220518.73,
     "available": 0,
-    "balance": 10.419940424429157,
+    "balance": 10.401032971146345,
     "protocol": "Convex",
     "pricePerFullShare": 1.0298481070229977,
     "tokens": [
@@ -3927,16 +3953,16 @@
         "name": "tBTC",
         "symbol": "TBTC",
         "decimals": 18,
-        "balance": 3.411339344364077,
-        "value": 82035.88855326733
+        "balance": 3.5715924462643485,
+        "value": 76671.37504395677
       },
       {
         "address": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
         "name": "Curve.fi renBTC/wBTC/sBTC",
         "symbol": "crvRenWSBTC",
         "decimals": 18,
-        "balance": 7.023761951450584,
-        "value": 168792.40350462
+        "balance": 6.846455749985155,
+        "value": 134451.72751103542
       }
     ],
     "apr": 0.16147843646641125,
@@ -3945,6 +3971,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.16147843646641125,
+    "maxApr": 0.16147843646641125,
+    "minApy": 0.16147843646641125,
+    "maxApy": 0.16147843646641125,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -3965,47 +3995,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xAB73Ec65a1Ef5a2e5b56D5d6F36Bee4B2A1D3FFb",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.16147843646641125,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.16147843646641125,
-          "boostable": false,
-          "minApr": 0.16147843646641125,
-          "maxApr": 0.16147843646641125
-        }
-      ],
-      "nonHarvestApy": 0.16147843646641125,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.16147843646641125,
-          "boostable": false,
-          "minApr": 0.16147843646641125,
-          "maxApr": 0.16147843646641125
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -4017,126 +4031,110 @@
     "state": "open",
     "underlyingToken": "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
     "vaultToken": "0x27E98fC7d05f54E544d16F58C194C2D7ba71e3B5",
-    "value": 893363.25,
+    "value": 813938.99,
     "available": 0,
-    "balance": 835.5757526053328,
+    "balance": 838.4480022846403,
     "protocol": "Convex",
-    "pricePerFullShare": 1.0211313338462829,
+    "pricePerFullShare": 1.0221861829263807,
     "tokens": [
       {
         "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
         "name": "Tether USD",
         "symbol": "USDT",
         "decimals": 6,
-        "balance": 299250.9970858052,
-        "value": 299550.248082891
+        "balance": 271997.7326374214,
+        "value": 271997.7326374214
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 12.41999594541942,
-        "value": 297992.96271844814
+        "balance": 14.021459470850003,
+        "value": 271552.4838551943
       },
       {
         "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "balance": 167.01737772270386,
-        "value": 297058.7781913783
+        "balance": 165.18981222414058,
+        "value": 270921.203436324
       }
     ],
-    "apr": 13.980701903829338,
-    "apy": 14.579209338228104,
+    "apr": 2.1360604080059558,
+    "apy": 2.13610851673984,
     "boost": {
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 2.1360604080059558,
+    "maxApr": 2.1360604080059558,
+    "minApy": 2.13610851673984,
+    "maxApy": 2.13610851673984,
     "sources": [
       {
         "name": "Vault Compounding",
-        "apr": 1.8924934990990425,
+        "apr": 0.10015504489011713,
         "boostable": false,
-        "minApr": 1.8924934990990425,
-        "maxApr": 1.8924934990990425
+        "minApr": 0.10015504489011713,
+        "maxApr": 0.10015504489011713
       },
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 2.500280342905607,
+        "apr": 0.3259234802165581,
         "boostable": false,
-        "minApr": 2.500280342905607,
-        "maxApr": 2.500280342905607
-      },
-      {
-        "name": "Badger Sett Convex CRV",
-        "apr": 7.934309165311458,
-        "boostable": false,
-        "minApr": 7.934309165311458,
-        "maxApr": 7.934309165311458
+        "minApr": 0.3259234802165581,
+        "maxApr": 0.3259234802165581
       },
       {
         "name": "Curve LP Fees",
-        "apr": 1.6536188965132315,
+        "apr": 1.7099818828992808,
         "boostable": false,
-        "minApr": 1.6536188965132315,
-        "maxApr": 1.6536188965132315
+        "minApr": 1.7099818828992808,
+        "maxApr": 1.7099818828992808
       }
     ],
     "sourcesApy": [
       {
         "name": "Badger Vested Escrow Convex Token",
-        "apr": 2.500280342905607,
+        "apr": 0.3259234802165581,
         "boostable": false,
-        "minApr": 2.500280342905607,
-        "maxApr": 2.500280342905607
+        "minApr": 0.3259234802165581,
+        "maxApr": 0.3259234802165581
       },
       {
         "name": "Vault Compounding",
-        "apr": 1.9103133856302135,
+        "apr": 0.10020315362400112,
         "boostable": false,
-        "minApr": 1.9103133856302135,
-        "maxApr": 1.9103133856302135
-      },
-      {
-        "name": "Vault Flywheel",
-        "apr": 0.5806875478675939,
-        "boostable": false,
-        "minApr": 0.5806875478675939,
-        "maxApr": 0.5806875478675939
-      },
-      {
-        "name": "Badger Sett Convex CRV",
-        "apr": 7.934309165311458,
-        "boostable": false,
-        "minApr": 7.934309165311458,
-        "maxApr": 7.934309165311458
+        "minApr": 0.10020315362400112,
+        "maxApr": 0.10020315362400112
       },
       {
         "name": "Curve LP Fees",
-        "apr": 1.6536188965132315,
+        "apr": 1.7099818828992808,
         "boostable": false,
-        "minApr": 1.6536188965132315,
-        "maxApr": 1.6536188965132315
+        "minApr": 1.7099818828992808,
+        "maxApr": 1.7099818828992808
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x647eeb5C5ED5A71621183f09F6CE8fa66b96827d",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
+      "id": "ethereum-0x27E98fC7d05f54E544d16F58C194C2D7ba71e3B5",
       "harvestValue": 0,
       "harvestApr": 0,
+      "harvestTokens": [],
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
-      "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
       "yieldValue": 0,
@@ -4144,35 +4142,28 @@
       "yieldTokens": [],
       "yieldPeriodApr": 0,
       "yieldPeriodSources": [],
-      "nonHarvestApr": 1.6536188965132315,
+      "nonHarvestApr": 1.7099818828992808,
+      "nonHarvestApy": 1.7099818828992808,
       "nonHarvestSources": [
         {
           "name": "Curve LP Fees",
-          "apr": 1.6536188965132315,
+          "apr": 1.7099818828992808,
           "boostable": false,
-          "minApr": 1.6536188965132315,
-          "maxApr": 1.6536188965132315
+          "minApr": 1.7099818828992808,
+          "maxApr": 1.7099818828992808
         }
       ],
-      "nonHarvestApy": 2.2343064443808256,
       "nonHarvestSourcesApy": [
         {
-          "name": "Vault Flywheel",
-          "apr": 0.5806875478675939,
-          "boostable": false,
-          "minApr": 0.5806875478675939,
-          "maxApr": 0.5806875478675939
-        },
-        {
           "name": "Curve LP Fees",
-          "apr": 1.6536188965132315,
+          "apr": 1.7099818828992808,
           "boostable": false,
-          "minApr": 1.6536188965132315,
-          "maxApr": 1.6536188965132315
+          "minApr": 1.7099818828992808,
+          "maxApr": 1.7099818828992808
         }
       ]
     },
-    "lastHarvest": 1659873882000,
+    "lastHarvest": 1662306226000,
     "version": "v1"
   },
   {
@@ -4182,7 +4173,7 @@
     "state": "discontinued",
     "underlyingToken": "0xcA3d75aC011BF5aD07a98d02f18225F9bD9A6BDF",
     "vaultToken": "0xBE08Ef12e4a553666291E9fFC24fCCFd354F2Dd2",
-    "value": 171.78,
+    "value": 155.76,
     "available": 0,
     "balance": 0.1610241919976674,
     "protocol": "Convex",
@@ -4193,93 +4184,81 @@
         "name": "Tether USD",
         "symbol": "USDT",
         "decimals": 6,
-        "balance": 58.39145398450557,
-        "value": 58.449845438490065
+        "balance": 51.56155704926832,
+        "value": 51.56155704926832
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 0.0023876080775220914,
-        "value": 57.28588060398754
+        "balance": 0.0027436258946293627,
+        "value": 53.1355832112153
       },
       {
         "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "name": "Wrapped Ether",
         "symbol": "WETH",
         "decimals": 18,
-        "balance": 0.03164247636693748,
-        "value": 56.279624890998676
+        "balance": 0.03122592277237418,
+        "value": 51.21238690206
       }
     ],
-    "apr": 0.4651593983580282,
-    "apy": 0.4651593983580282,
+    "apr": 0.4145302631080927,
+    "apy": 0.4145302631080927,
     "boost": {
       "enabled": false,
       "weight": 0
     },
+    "minApr": 0.4145302631080927,
+    "maxApr": 0.4145302631080927,
+    "minApy": 0.4145302631080927,
+    "maxApy": 0.4145302631080927,
     "sources": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.4651593983580282,
+        "apr": 0.4145302631080927,
         "boostable": false,
-        "minApr": 0.4651593983580282,
-        "maxApr": 0.4651593983580282
+        "minApr": 0.4145302631080927,
+        "maxApr": 0.4145302631080927
       }
     ],
     "sourcesApy": [
       {
         "name": "Curve LP Fees",
-        "apr": 0.4651593983580282,
+        "apr": 0.4145302631080927,
         "boostable": false,
-        "minApr": 0.4651593983580282,
-        "maxApr": 0.4651593983580282
+        "minApr": 0.4145302631080927,
+        "maxApr": 0.4145302631080927
       }
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0x05eC4356e1acd89CC2d16adC7415c8c95E736AC1",
+      "address": "0x0000000000000000000000000000000000000000",
       "withdrawFee": 0,
-      "performanceFee": 1000,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.4651593983580282,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.4651593983580282,
-          "boostable": false,
-          "minApr": 0.4651593983580282,
-          "maxApr": 0.4651593983580282
-        }
-      ],
-      "nonHarvestApy": 0.4651593983580282,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.4651593983580282,
-          "boostable": false,
-          "minApr": 0.4651593983580282,
-          "maxApr": 0.4651593983580282
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
@@ -4291,9 +4270,9 @@
     "state": "discontinued",
     "underlyingToken": "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
     "vaultToken": "0xd04c48A53c111300aD41190D63681ed3dAd998eC",
-    "value": 1138843.4,
+    "value": 636261.51,
     "available": 0,
-    "balance": 47.38936575210488,
+    "balance": 32.39925832158996,
     "protocol": "Convex",
     "pricePerFullShare": 1.014745586208039,
     "tokens": [
@@ -4302,24 +4281,24 @@
         "name": "renBTC",
         "symbol": "renBTC",
         "decimals": 8,
-        "balance": 16.79754509517192,
-        "value": 403980.9595388847
+        "balance": 11.699709872380865,
+        "value": 226664.9141980643
       },
       {
         "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         "name": "Wrapped BTC",
         "symbol": "WBTC",
         "decimals": 8,
-        "balance": 18.71941222295297,
-        "value": 449134.85746531055
+        "balance": 14.27215644191085,
+        "value": 276407.71203797206
       },
       {
         "address": "0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6",
         "name": "Synth sBTC",
         "symbol": "sBTC",
         "decimals": 18,
-        "balance": 12.5043394654188,
-        "value": 286699.49526312225
+        "balance": 6.90030675773856,
+        "value": 134701.9232638281
       }
     ],
     "apr": 0.201284298172677,
@@ -4328,6 +4307,10 @@
       "enabled": false,
       "weight": 10000
     },
+    "minApr": 0.201284298172677,
+    "maxApr": 0.201284298172677,
+    "minApy": 0.201284298172677,
+    "maxApy": 0.201284298172677,
     "sources": [
       {
         "name": "Curve LP Fees",
@@ -4348,47 +4331,31 @@
     ],
     "bouncer": "none",
     "strategy": {
-      "address": "0xCce0D2d1Eb2310F7e67e128bcFE3CE870A3D3a3d",
-      "withdrawFee": 10,
-      "performanceFee": 2000,
+      "address": "0x0000000000000000000000000000000000000000",
+      "withdrawFee": 0,
+      "performanceFee": 0,
       "strategistFee": 0,
       "aumFee": 0
     },
     "type": "standard",
     "behavior": "None",
     "yieldProjection": {
-      "harvestValue": 0,
+      "yieldApr": 0,
+      "yieldTokens": [],
+      "yieldPeriodApr": 0,
+      "yieldPeriodSources": [],
+      "yieldValue": 0,
       "harvestApr": 0,
       "harvestPeriodApr": 0,
       "harvestPeriodApy": 0,
       "harvestTokens": [],
       "harvestPeriodSources": [],
       "harvestPeriodSourcesApy": [],
-      "yieldValue": 0,
-      "yieldApr": 0,
-      "yieldTokens": [],
-      "yieldPeriodApr": 0,
-      "yieldPeriodSources": [],
-      "nonHarvestApr": 0.201284298172677,
-      "nonHarvestSources": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.201284298172677,
-          "boostable": false,
-          "minApr": 0.201284298172677,
-          "maxApr": 0.201284298172677
-        }
-      ],
-      "nonHarvestApy": 0.201284298172677,
-      "nonHarvestSourcesApy": [
-        {
-          "name": "Curve LP Fees",
-          "apr": 0.201284298172677,
-          "boostable": false,
-          "minApr": 0.201284298172677,
-          "maxApr": 0.201284298172677
-        }
-      ]
+      "harvestValue": 0,
+      "nonHarvestApr": 0,
+      "nonHarvestSources": [],
+      "nonHarvestApy": 0,
+      "nonHarvestSourcesApy": []
     },
     "lastHarvest": 0,
     "version": "v1"
