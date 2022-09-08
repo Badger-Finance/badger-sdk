@@ -1,3 +1,10 @@
+## [1.18.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.3...sdk-mocks-v1.18.4) (2022-09-08)
+
+
+### Bug Fixes
+
+* update mocks witch yield txs ([09d81fb](https://github.com/Badger-Finance/badger-sdk/commit/09d81fb0eb4bf773ccbd316a44cc763e28894469))
+
 ## [1.18.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.2...sdk-mocks-v1.18.3) (2022-09-08)
 
 
