@@ -1,0 +1,18 @@
+{
+  "directory": [
+    "./src/api/interfaces",
+    "./src/api/enums",
+    "./src/api/types",
+    "./src/ibbtc/interfaces",
+    "./src/ibbtc/enums",
+    "./src/registry/enums",
+    "./src/registry/interfaces",
+    "./src/rewards/interfaces",
+    "./src/tokens/interfaces",
+    "./src/vaults/interfaces",
+    "./src/vaults/enums"
+  ],
+  "exclude": ["__snapshots__", "mocks", ".spec.ts"],
+  "delete": true,
+  "singleQuotes": true
+}

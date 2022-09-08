@@ -25,7 +25,8 @@
     "test:path": "yarn test --no-cache --testPathPattern",
     "test:clean": "jest --clearCache",
     "prepublishOnly": "yarn run build",
-    "scripts:deployed": "ts-node -r dotenv/config scripts/deployed.at.ts"
+    "scripts:deployed": "ts-node -r dotenv/config scripts/deployed.at.ts",
+    "barrels": "barrelsby --config barrelsby.config.json"
   },
   "dependencies": {
     "@0xsequence/indexer": "^0.39.6",
@@ -51,6 +52,7 @@
     "@types/jest": "27.0.2",
     "@typescript-eslint/eslint-plugin": "5.33.0",
     "@typescript-eslint/parser": "5.33.0",
+    "barrelsby": "^2.4.0",
     "commitlint": "16.2.1",
     "eslint": "8.21.0",
     "eslint-config-prettier": "8.5.0",
