@@ -1,12 +1,33 @@
 [
   {
+    "timestamp": 1662658323000,
+    "block": 15497905,
+    "token": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "amount": 8430.156528456673,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 602457.6037953616,
+    "estimatedApr": 34.04950117100534,
+    "tx": "0x0f40ae4625d6a2b6f36584f47e105007f21cdfc84255da35db24e4908ba0a1f5"
+  },
+  {
+    "timestamp": 1662658323000,
+    "block": 15497905,
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 2027.0744638185138,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 602457.6037953616,
+    "estimatedApr": 11.221489709451081,
+    "tx": "0x0f40ae4625d6a2b6f36584f47e105007f21cdfc84255da35db24e4908ba0a1f5"
+  },
+  {
     "timestamp": 1662331155000,
     "block": 15474279,
     "token": "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
     "amount": 595.9035778737378,
     "eventType": "Harvest",
     "strategyBalance": 590778.6221824347,
-    "estimatedApr": 2.347554165157984
+    "estimatedApr": 2.346065715721174,
+    "tx": "0xf26ba85918b8cb0b08f3fafc3b3eb9a1724edf900568d10eb71a54079fa34ed1"
   },
   {
     "timestamp": 1661983794000,
@@ -15,7 +36,8 @@
     "amount": 592.2155494859402,
     "eventType": "Harvest",
     "strategyBalance": 543027.0623524452,
-    "estimatedApr": 2.600616435146362
+    "estimatedApr": 2.600616435146362,
+    "tx": "0x1b62a3e90febdcf88ce839a2c25ea4f05fa72b4af8be00cf144f55e3dfc8f787"
   },
   {
     "timestamp": 1661862847000,
@@ -24,7 +46,18 @@
     "amount": 11959.63699574414,
     "eventType": "Tree Distribution",
     "strategyBalance": 538912.7437349632,
-    "estimatedApr": 54.00091887718092
+    "estimatedApr": 54.00091887718092,
+    "tx": "0x4827ec41a0305e6b19375411092b3b73b87f81a3ca89bb186edf88d1e8b425eb"
+  },
+  {
+    "timestamp": 1661862847000,
+    "block": 15440382,
+    "token": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "amount": 11959.63699574414,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 538912.7437349632,
+    "estimatedApr": 54.00091887718092,
+    "tx": "0x4827ec41a0305e6b19375411092b3b73b87f81a3ca89bb186edf88d1e8b425eb"
   },
   {
     "timestamp": 1661862847000,
@@ -33,7 +66,18 @@
     "amount": 3500.675995,
     "eventType": "Tree Distribution",
     "strategyBalance": 538912.7437349632,
-    "estimatedApr": 17.724880326237276
+    "estimatedApr": 17.724880326237276,
+    "tx": "0x4827ec41a0305e6b19375411092b3b73b87f81a3ca89bb186edf88d1e8b425eb"
+  },
+  {
+    "timestamp": 1661862847000,
+    "block": 15440382,
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 3500.675995,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 538912.7437349632,
+    "estimatedApr": 17.724880326237276,
+    "tx": "0x4827ec41a0305e6b19375411092b3b73b87f81a3ca89bb186edf88d1e8b425eb"
   },
   {
     "timestamp": 1661634576000,
@@ -42,7 +86,8 @@
     "amount": 596.8399299756685,
     "eventType": "Harvest",
     "strategyBalance": 533789.1079222762,
-    "estimatedApr": 2.656517451556728
+    "estimatedApr": 2.656517451556728,
+    "tx": "0xa8861665db6066c8084d0b4b43a01f3316e05493d502b98cd34161776fc03505"
   },
   {
     "timestamp": 1661285427000,
@@ -51,7 +96,8 @@
     "amount": 597.96982905694,
     "eventType": "Harvest",
     "strategyBalance": 215960.76116567338,
-    "estimatedApr": 6.59916602845974
+    "estimatedApr": 6.59916602845974,
+    "tx": "0xb92f21a6cf551a058def9d3f971911bf139a899794aaae2bb8c5373ccc2f2936"
   },
   {
     "timestamp": 1660938029000,
@@ -60,7 +106,8 @@
     "amount": 729.4953393168697,
     "eventType": "Harvest",
     "strategyBalance": 188183.06773299538,
-    "estimatedApr": 9.222244067851449
+    "estimatedApr": 9.222244067851449,
+    "tx": "0xf53c61b37125262cbb93cee5ad14d2389ac08c90336e9249621105322869dbfe"
   },
   {
     "timestamp": 1660590866000,
@@ -69,7 +116,8 @@
     "amount": 757.1855804448799,
     "eventType": "Harvest",
     "strategyBalance": 96238.30785895383,
-    "estimatedApr": 18.478417328512084
+    "estimatedApr": 18.478417328512084,
+    "tx": "0x34e019a1654c706e076ef0a9e009b575caad71849f5a144588747cd6678a0d00"
   },
   {
     "timestamp": 1660571222000,
@@ -78,7 +126,18 @@
     "amount": 4449.482190168705,
     "eventType": "Tree Distribution",
     "strategyBalance": 99624.99825130752,
-    "estimatedApr": 108.67827873982839
+    "estimatedApr": 108.67827873982839,
+    "tx": "0x33eb98453cda3e19da1edaac2b3fd21b223d79d0ccf02e8b28e6b0faa0cfd647"
+  },
+  {
+    "timestamp": 1660571222000,
+    "block": 15346355,
+    "token": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "amount": 4449.482190168705,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 99624.99825130752,
+    "estimatedApr": 108.67827873982839,
+    "tx": "0x33eb98453cda3e19da1edaac2b3fd21b223d79d0ccf02e8b28e6b0faa0cfd647"
   },
   {
     "timestamp": 1660244757000,
@@ -87,7 +146,8 @@
     "amount": 544.9574334316303,
     "eventType": "Harvest",
     "strategyBalance": 82413.34470969299,
-    "estimatedApr": 16.139151562119782
+    "estimatedApr": 16.139151562119782,
+    "tx": "0xc538572fd9d84d52d47d1c4c82389e4d0eda1dbc7fa7239fbd5610b4809275db"
   },
   {
     "timestamp": 1659897533000,
@@ -96,7 +156,8 @@
     "amount": 1142.4885610950244,
     "eventType": "Harvest",
     "strategyBalance": 78889.99405527627,
-    "estimatedApr": 34.82072641550521
+    "estimatedApr": 34.82072641550521,
+    "tx": "0xfff289ef45060a90a2e5f494f4a0a98c166432ebd0997a68726579f5cac62038"
   },
   {
     "timestamp": 1659637339000,
@@ -105,7 +166,18 @@
     "amount": 622.3657458791511,
     "eventType": "Tree Distribution",
     "strategyBalance": 100361.14705992711,
-    "estimatedApr": 20.62708409062376
+    "estimatedApr": 20.62708409062376,
+    "tx": "0xa925367cebccaa81d34ff52ea1b9d58c02e35ed22b90f91667b09006a8b22c97"
+  },
+  {
+    "timestamp": 1659637339000,
+    "block": 15277427,
+    "token": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
+    "amount": 622.3657458791511,
+    "eventType": "TreeDistribution",
+    "strategyBalance": 100361.14705992711,
+    "estimatedApr": 20.62708409062376,
+    "tx": "0xa925367cebccaa81d34ff52ea1b9d58c02e35ed22b90f91667b09006a8b22c97"
   },
   {
     "timestamp": 1659549984000,
@@ -114,7 +186,8 @@
     "amount": 1035.1995321593843,
     "eventType": "Harvest",
     "strategyBalance": 114125.51612864446,
-    "estimatedApr": 21.336134215637
+    "estimatedApr": 21.336134215637,
+    "tx": "0x362839e980c96f781fd3867e7020b960dccf8b3f53eb497d2b6e83ff15c05a8a"
   },
   {
     "timestamp": 1659202724000,
@@ -123,7 +196,8 @@
     "amount": 382.5367547020661,
     "eventType": "Harvest",
     "strategyBalance": 121328.31753877382,
-    "estimatedApr": 7.56264172220337
+    "estimatedApr": 7.56264172220337,
+    "tx": "0xdf2e3dafcc24b362ee082cfa3fa63a14bb392529da76ed165941dca351b56d5e"
   },
   {
     "timestamp": 1658855920000,
@@ -132,7 +206,8 @@
     "amount": 747.1841492146484,
     "eventType": "Harvest",
     "strategyBalance": 125529.938513514,
-    "estimatedApr": 14.19525540260074
+    "estimatedApr": 14.19525540260074,
+    "tx": "0x8a50c5b530b0954709170df8d953b8f201ae28e07275fa4f1e59dd5c8f95aa98"
   },
   {
     "timestamp": 1658545671000,
@@ -141,7 +216,8 @@
     "amount": 692.3228740295186,
     "eventType": "Harvest",
     "strategyBalance": 121898.67323610664,
-    "estimatedApr": 13.674888684790313
+    "estimatedApr": 13.674888684790313,
+    "tx": "0x032d0809b16cdc6379f4052fe02a471048abd04bcdc73600216a083a6f997263"
   },
   {
     "timestamp": 1658198147000,
@@ -150,7 +226,8 @@
     "amount": 471.6830716469455,
     "eventType": "Harvest",
     "strategyBalance": 234834.58430601587,
-    "estimatedApr": 4.729618390410427
+    "estimatedApr": 4.729618390410427,
+    "tx": "0xea4f191e7e97dff38de5960d2945f924a92103a0fbd727598ab2ce5b2867a333"
   },
   {
     "timestamp": 1657849010000,
@@ -159,7 +236,8 @@
     "amount": 218.03668779666089,
     "eventType": "Harvest",
     "strategyBalance": 325947.05555756437,
-    "estimatedApr": 1.580859787533727
+    "estimatedApr": 1.580859787533727,
+    "tx": "0x9e4ad08a2e158cb491ab095dc5da58a54f51a14a2a56bef971aff59d8b916036"
   },
   {
     "timestamp": 1657501649000,
@@ -168,7 +246,8 @@
     "amount": 143.77112078088174,
     "eventType": "Harvest",
     "strategyBalance": 333422.1746586755,
-    "estimatedApr": 1.0594135916309981
+    "estimatedApr": 1.0594135916309981,
+    "tx": "0xab3c7fc5ee0071a41275151a0e46f2f14ec0c30b87d50698f807eb656781312e"
   },
   {
     "timestamp": 1657154273000,
@@ -177,7 +256,8 @@
     "amount": 197.48687849631875,
     "eventType": "Harvest",
     "strategyBalance": 313954.97639577615,
-    "estimatedApr": 1.5808536273898328
+    "estimatedApr": 1.5808536273898328,
+    "tx": "0x91f96190731a0739644e2383c97b522c36c554a711d20e9cc958d91d2c2baa1e"
   },
   {
     "timestamp": 1656707131000,
@@ -186,6 +266,7 @@
     "amount": 78.18023828116534,
     "eventType": "Harvest",
     "strategyBalance": 274767.853377094,
-    "estimatedApr": 0.697225579936184
+    "estimatedApr": 0.697225579936184,
+    "tx": "0xaff3c7017e95b95d5d91987190507a7b616a393dbe88afa350ac9328eb6bd507"
   }
 ]
