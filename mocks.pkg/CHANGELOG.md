@@ -1,3 +1,10 @@
+## [1.18.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.4...sdk-mocks-v1.18.5) (2022-09-08)
+
+
+### Bug Fixes
+
+* update api mocks for harvest endpoints ([7a5b428](https://github.com/Badger-Finance/badger-sdk/commit/7a5b428bb68207bdca83251d2b1c0b2942c3907c))
+
 ## [1.18.4](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.3...sdk-mocks-v1.18.4) (2022-09-08)
 
 
