@@ -1,3 +1,11 @@
+## [1.18.2](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.1...v1.18.2) (2022-09-08)
+
+
+### Bug Fixes
+
+* add v3 harvests support ([2fd526a](https://github.com/Badger-Finance/badger-sdk/commit/2fd526a38733d819136a0873cb70a68184bb4d65))
+* reindex after changes ([7d566e8](https://github.com/Badger-Finance/badger-sdk/commit/7d566e866ab57ad4ed013d1e1ece00b21c72ccfb))
+
 ## [1.18.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.0...v1.18.1) (2022-09-07)
 
 
