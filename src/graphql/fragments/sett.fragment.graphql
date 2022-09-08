@@ -27,6 +27,7 @@ fragment Sett on Sett {
   status
   isProduction
   createdAt
+  createdAtBlock
   lastUpdatedAt
   releasedAt
 }
