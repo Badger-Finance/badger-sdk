@@ -26,5 +26,6 @@ export { VaultYieldProjection } from './vault-yield-projection.interface';
 export { VaultYieldProjectionV2 } from './vault-yield-projection-v2.interface';
 export { VaultYieldProjectionV3 } from './vault-yield-projection-v3.interface';
 export { VaultYieldSummary } from './vault-yield-summary.interface';
+export { YieldEvent } from './yield-event.interface';
 export { YieldSource } from './yield-source.interface';
 export { YieldSummary } from './yield-summary.interface';

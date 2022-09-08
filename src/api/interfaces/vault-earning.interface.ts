@@ -1,10 +1,10 @@
-import { HarvestType } from '..';
+import { YieldType } from '../enums';
 
 export interface VaultEarning {
   timestamp: number;
   block: number;
   token: string;
-  eventType: HarvestType;
+  eventType: YieldType;
   amount: number;
   strategyBalance?: number;
   estimatedApr?: number;

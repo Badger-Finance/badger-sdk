@@ -114,6 +114,16 @@ export class BadgerAPI {
     });
   }
 
+  loadVaultHarvestsV3(
+    address: string,
+    network?: Network,
+  ): Promise<i.YieldEvent[]> {
+    return this.get(`/v3/vaults/harvests`, {
+      chain: network ?? this.network,
+      address,
+    });
+  }
+
   loadAccount(address: string, network?: Network): Promise<i.Account> {
     return this.get(`/v2/accounts/${address}`, {
       chain: network ?? this.network,

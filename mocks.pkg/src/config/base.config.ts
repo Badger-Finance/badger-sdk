@@ -35,7 +35,7 @@ export const vaults = {
   BVECVX: '0xfd05D3C7fe2924020620A8bE4961bBaA747e6305',
 };
 
-export const badgerWhale = '0x3BD517f6d564aC5793d0cb2358d1a03054c00fc8';
+export const badgerWhale = '0x48D93dabF29Aa5d86424A90eE60F419f1837649F';
 export const dexTrader = '0x36cc7b13029b5dee4034745fb4f24034f3f2ffc6';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
 export const ibbtc = '0xaE96fF08771a109dc6650a1BdCa62F2d558E40af';
@@ -50,7 +50,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
     loadVaults: { args: [] },
     loadVaultsV3: { args: [] },
     loadVaultsHarvests: { args: [] },
-    loadVaultHarvests: { args: [vaults.BVECVX] },
+    loadVaultHarvests: { args: [vaults.GRAVI_AURA] },
+    loadVaultHarvestsV3: { args: [vaults.GRAVI_AURA] },
     loadVault: { args: [vaults.GRAVI_AURA] },
     loadVaultV3: { args: [vaults.GRAVI_AURA] },
     loadAccount: { args: [badgerWhale] },
