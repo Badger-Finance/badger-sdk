@@ -1,3 +1,10 @@
+## [1.18.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.5...sdk-mocks-v1.18.6) (2022-09-10)
+
+
+### Bug Fixes
+
+* add missing yield type ([ca9e80b](https://github.com/Badger-Finance/badger-sdk/commit/ca9e80bd7be4d742ea1e886b7859b3b231a9d310))
+
 ## [1.18.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.4...sdk-mocks-v1.18.5) (2022-09-08)
 
 
