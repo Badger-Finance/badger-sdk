@@ -1,3 +1,10 @@
+## [1.18.8](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.7...v1.18.8) (2022-09-12)
+
+
+### Bug Fixes
+
+* update graph mocks ([9605c12](https://github.com/Badger-Finance/badger-sdk/commit/9605c12cd7af8836b2ece70276e8eac05ac7acf1))
+
 ## [1.18.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.6...v1.18.7) (2022-09-12)
 
 
