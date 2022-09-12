@@ -1,11 +1,11 @@
 {
   "sett": {
     "id": "0x53c8e199eb2cb7c01543c137078a038937a68e40",
-    "name": "Badger Sett Convex Token",
+    "name": "CVX",
     "symbol": "bCVX",
     "available": "0",
     "decimals": "18",
-    "totalSupply": "39449387400797086399452",
+    "totalSupply": "24339943504861442554032",
     "token": {
       "id": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
       "name": "Convex Token",
@@ -13,20 +13,27 @@
       "decimals": "18",
       "totalSupply": "52842757666481041544194387"
     },
-    "balance": "43228593704674976603264",
+    "balance": "26671682322375893374355",
     "pricePerFullShare": "1095798859066732433",
-    "netDeposit": "-6581283447163764257326",
-    "netShareDeposit": "39449387400797086399452",
+    "netDeposit": "-23138194829462847472971",
+    "netShareDeposit": "24339943504861442554032",
     "grossDeposit": "3250655428532204057456976",
     "grossShareDeposit": "3106247094657867999727729",
-    "grossWithdraw": "3257236711979367821714302",
-    "grossShareWithdraw": "3066797707257070913328277",
+    "grossWithdraw": "3273793623361666904929947",
+    "grossShareWithdraw": "3081907151153006557173697",
     "controller": {
       "id": "0x9b4efa18c0c6b4822225b81d150f3518160f8609"
     },
     "strategy": {
       "id": "0xbcee2c6cfa7a4e29892c3665f464be5536f16d95",
-      "balance": "43228593704674976603264"
-    }
+      "balance": "26671682322375893374355"
+    },
+    "version": "v1",
+    "status": 0,
+    "isProduction": true,
+    "createdAt": "1624474959",
+    "createdAtBlock": "12692153",
+    "lastUpdatedAt": "1654738224",
+    "releasedAt": "1654738224"
   }
 }
