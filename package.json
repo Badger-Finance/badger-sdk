@@ -29,10 +29,10 @@
     "barrels": "barrelsby --config barrelsby.config.json"
   },
   "dependencies": {
-    "@0xsequence/indexer": "^0.39.6",
-    "@0xsequence/multicall": "^0.39.6",
-    "@0xsequence/provider": "^0.39.6",
-    "@0xsequence/relayer": "^0.39.6",
+    "@0xsequence/indexer": "^0.40.6",
+    "@0xsequence/multicall": "^0.40.6",
+    "@0xsequence/provider": "^0.40.6",
+    "@0xsequence/relayer": "^0.40.6",
     "axios": "^0.24.0",
     "ethers": "^5.5.2",
     "graphql": "^16.5.0",

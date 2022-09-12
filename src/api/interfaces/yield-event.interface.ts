@@ -6,6 +6,7 @@ export interface YieldEvent {
   balance: number;
   block: number;
   earned: number;
+  duration: number;
   grossApr: number;
   timestamp: number;
   token: string;
