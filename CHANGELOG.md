@@ -1,3 +1,11 @@
+## [1.18.7](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.6...v1.18.7) (2022-09-12)
+
+
+### Bug Fixes
+
+* add yield event duration ([c13e7cb](https://github.com/Badger-Finance/badger-sdk/commit/c13e7cba3f131a3ed0d00447d128aa6dcc6c19cf))
+* update eslint version ([a282002](https://github.com/Badger-Finance/badger-sdk/commit/a28200233b3a288025f4da130f1c4e3f24cd5210))
+
 ## [1.18.6](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.5...v1.18.6) (2022-09-10)
 
 
