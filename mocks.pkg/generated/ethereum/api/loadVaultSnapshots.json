@@ -1,26 +1,29 @@
 [
   {
-    "timestamp": 1632182660000,
     "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "balance": 40,
-    "ratio": 1,
-    "value": 1080,
-    "pricePerFullShare": 1
-  },
-  {
-    "timestamp": 1637182660000,
-    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "balance": 1146434.465341443,
-    "ratio": 1,
-    "value": 31389375.661,
-    "pricePerFullShare": 1
-  },
-  {
+    "id": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305_ethereum",
+    "balance": 1233411.8230533565,
+    "value": 55466529.6827,
     "timestamp": 1642182660000,
-    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
-    "balance": 1233410.8832503564,
     "ratio": 1,
-    "value": 55454153.3109,
+    "pricePerFullShare": 1
+  },
+  {
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "id": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305_ethereum",
+    "balance": 1214109.789133305,
+    "value": 26552581.0883,
+    "timestamp": 1637182660000,
+    "ratio": 1,
+    "pricePerFullShare": 1
+  },
+  {
+    "address": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305",
+    "id": "0xfd05D3C7fe2924020620A8bE4961bBaA747e6305_ethereum",
+    "balance": 40,
+    "value": 346,
+    "timestamp": 1632182660000,
+    "ratio": 1,
     "pricePerFullShare": 1
   }
 ]

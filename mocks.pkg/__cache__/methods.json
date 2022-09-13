@@ -14,7 +14,9 @@
     "keysCount": "HrHoGWBCgGJi7iHxt3LhLZwXx6s123xHtuylk68BB3M=",
     "getVaults": "JYhX2OCmPWnepQbulrDTIXXvJUFdIW0DeXuUVMzTWgI=",
     "getFilteredProductionVaults": "+HJzAANsb6oT37QsRvvq+9h8XjT3y5apVDPQJ8RhxVQ=",
-    "getProductionVaults": "d3oW5wnBKaL+gp8Y2t0YOk/zYXJHIJ+bzy62UcJYAXw="
+    "getProductionVaults": "75l6PxuZF8on30STKrr8lFKYo1tFKTBGO1Q82EXju74=",
+    "getDevelopmentVaults": "N8zYVUui+y1xmzB5SigtRLaOODLNG8pwL2QbaaSPUCk=",
+    "getAuthorVaults": "1U1f7XL0w5ARy4ZwLH5hexnWiln1m9W95W1JcbtJNfA="
   },
   "rewards": {
     "hasBadgerTree": "TgmjLihgk1JaoNpob14FZ2mWCp/SdePI1MQRvU1TFMc=",
@@ -34,7 +36,7 @@
   },
   "vaults": {
     "loadVaults": "k0EhA+6HqQoqI000FY/hOmHzlYOZNbpKy9fBF1SXXkI=",
-    "loadVault": "1uvCxO2QRmr4Yh1gPQoh2Pu0oMyFpEis/mKxN3lAUlA=",
+    "loadVault": "to2wVFMFnRRHL26usYC9EpseZZnhyfb+WYkUSMx8IdU=",
     "listHarvests": "P+csZ512ParhdAsp9LoegTs8VfK+ghj1Lw7NYhbF4VQ=",
     "getVaultStrategy": "AJHokwzpn3NT0gDWmAMRTLtlQY9vECmgdk0n+ggAWyA=",
     "getPendingYield": "ADVLcE53eMdURD3ACZ9BenJ7s8leFBIfMTieHF7+CJ0=",

@@ -40,6 +40,7 @@ export const dexTrader = '0x36cc7b13029b5dee4034745fb4f24034f3f2ffc6';
 export const bcrvBadgerAuthor = '0xeE8b29AA52dD5fF2559da2C50b1887ADee257556';
 export const ibbtc = '0xaE96fF08771a109dc6650a1BdCa62F2d558E40af';
 export const router = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
+export const registryACL = '0x1233a3885b8015f369287ca53716f66cc755651c';
 
 export const lastIbBTCBlock = 14504479;
 
@@ -109,6 +110,8 @@ export const baseArgsConfig: ServicesArgsConfig = {
   [SdkServices.Registry]: {
     get: { args: [RegistryKey.BadgerTree] },
     getProductionVaults: { args: [] },
+    getDevelopmentVaults: { args: [] },
+    getAuthorVaults: { args: [registryACL] },
     getVaults: { args: [VaultVersion.v1, bcrvBadgerAuthor] },
     hasRegistry: { args: [] },
     keysCount: { args: [] },

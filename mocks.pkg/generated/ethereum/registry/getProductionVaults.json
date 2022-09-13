@@ -300,8 +300,18 @@
     }
   },
   {
+    "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
+    "state": "open",
+    "version": "v1.5",
+    "metadata": {
+      "name": "graviAURA",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
     "address": "0x37d9D2C6035b744849C15F1BFEE8F268a20fCBd8",
-    "state": "guarded",
+    "state": "open",
     "version": "v1.5",
     "metadata": {
       "name": "auraBAL",
@@ -311,7 +321,7 @@
   },
   {
     "address": "0x63ad745506BD6a3E57F764409A47ed004BEc40b1",
-    "state": "guarded",
+    "state": "open",
     "version": "v1.5",
     "metadata": {
       "name": "BADGER/WBTC",
@@ -321,7 +331,7 @@
   },
   {
     "address": "0x371B7C451858bd88eAf392B383Df8bd7B8955d5a",
-    "state": "guarded",
+    "state": "open",
     "version": "v1.5",
     "metadata": {
       "name": "graviAURA/DIGG/WBTC",
@@ -331,7 +341,7 @@
   },
   {
     "address": "0x06D756861De0724FAd5B5636124e0f252d3C1404",
-    "state": "guarded",
+    "state": "open",
     "version": "v1.5",
     "metadata": {
       "name": "bb-a-USD",
@@ -341,20 +351,10 @@
   },
   {
     "address": "0xf8f5677B6bCecdb9be94AE8f6770a05a6C53C378",
-    "state": "guarded",
-    "version": "v1.5",
-    "metadata": {
-      "name": "graviAURA/auraBAL/WETH",
-      "protocol": "Aura",
-      "behavior": "None"
-    }
-  },
-  {
-    "address": "0xBA485b556399123261a5F9c95d413B4f93107407",
     "state": "open",
     "version": "v1.5",
     "metadata": {
-      "name": "graviAURA",
+      "name": "graviAURA/auraBAL/WETH",
       "protocol": "Aura",
       "behavior": "None"
     }
