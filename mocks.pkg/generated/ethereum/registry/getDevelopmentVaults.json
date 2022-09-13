@@ -1,0 +1,22 @@
+[
+  {
+    "address": "0xA484427CF91bbd945c39eF87dF0A02Bb8625dC97",
+    "state": "experimental",
+    "version": "v1.5",
+    "metadata": {
+      "name": "rETH/WETH",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  },
+  {
+    "address": "0x41466b8ec544e3192Aa1aA30f65fC60FAb4D52Bf",
+    "state": "experimental",
+    "version": "v1.5",
+    "metadata": {
+      "name": "wstETH/WETH",
+      "protocol": "Aura",
+      "behavior": "None"
+    }
+  }
+]
