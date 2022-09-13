@@ -13,6 +13,7 @@ export interface VaultSnapshot {
   strategy: VaultStrategy;
   boostWeight: number;
   apr: number;
+  grossApr: number;
   yieldApr: number;
   harvestApr: number;
 }
