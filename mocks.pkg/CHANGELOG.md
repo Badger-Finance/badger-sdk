@@ -1,3 +1,10 @@
+## [1.18.9](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.8...sdk-mocks-v1.18.9) (2022-09-13)
+
+
+### Bug Fixes
+
+* update vault snapshot base object ([fc92bb3](https://github.com/Badger-Finance/badger-sdk/commit/fc92bb320f889bad52f3d4092d3b28de6e073001))
+
 ## [1.18.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.7...sdk-mocks-v1.18.8) (2022-09-12)
 
 
