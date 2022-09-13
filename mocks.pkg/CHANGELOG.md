@@ -1,3 +1,10 @@
+## [1.18.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.9...sdk-mocks-v1.18.10) (2022-09-13)
+
+
+### Bug Fixes
+
+* allow registry acl lookups ([574f6a9](https://github.com/Badger-Finance/badger-sdk/commit/574f6a99fc03c6b374deccd54fd96272f8512563))
+
 ## [1.18.9](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.8...sdk-mocks-v1.18.9) (2022-09-13)
 
 
