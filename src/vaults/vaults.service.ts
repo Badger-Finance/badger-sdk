@@ -87,10 +87,9 @@ export class VaultsService extends Service {
     requireRegistry = true,
     version = VaultVersion.v1_5,
     state = VaultState.Guarded,
-    useV2Reg = false,
   }: LoadVaultOptions): Promise<RegistryVault> {
     // vaults may be loaded without a registry but require extra information
-    if (!requireRegistry && !useV2Reg && (!state || !version)) {
+    if (!requireRegistry && !version) {
       throw new Error(
         'State and version fields are required when requireRegistry is false',
       );
@@ -236,7 +235,6 @@ export class VaultsService extends Service {
     const { name: token, token: depositToken } =
       await this.sdk.vaults.loadVault({
         address: vault,
-        useV2Reg: true,
         requireRegistry: false,
       });
     const vaultBalance = await this.sdk.tokens.loadBalance(

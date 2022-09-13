@@ -1,5 +1,6 @@
 import { VaultState } from '../api';
 import { RegistryV2, RegistryV2__factory } from '../contracts';
+import { BadgerRegistry } from '../contracts/RegistryV2';
 import { Service } from '../service';
 import {
   apiVaultStatusToChainValue,
@@ -80,9 +81,8 @@ export class RegistryService extends Service {
       return [];
     }
 
-    const prdVaults = await this.registry.getProductionVaults();
-
-    return prdVaults
+    const productionVaults = await this.registry.getProductionVaults();
+    return productionVaults
       .flatMap((vaultInfo) => {
         return vaultInfo.list.map((metaVault) => ({
           address: metaVault.vault,
@@ -91,6 +91,36 @@ export class RegistryService extends Service {
           metadata: parseRegVaultMetadata(metaVault.metadata),
         }));
       })
+      .filter((v) => !!v);
+  }
+
+  async getDevelopmentVaults(): Promise<VaultRegistryEntry[]> {
+    const developer = await this.registry.developer();
+    return this.getAuthorVaults(developer);
+  }
+
+  async getAuthorVaults(author: string): Promise<VaultRegistryEntry[]> {
+    if (!this.hasRegistry()) {
+      this.debug(
+        `${this.config.network} does not have a registry. No vaults are discoverable.`,
+      );
+      return [];
+    }
+
+    let developerVaults: BadgerRegistry.VaultInfoStructOutput[] = [];
+
+    for (const version of Object.values(VaultVersion)) {
+      const versionedVaults = await this.registry.getVaults(version, author);
+      developerVaults = developerVaults.concat(versionedVaults);
+    }
+
+    return developerVaults
+      .map((vaultInfo) => ({
+        address: vaultInfo.vault,
+        state: getVaultRegv2State(vaultInfo.status),
+        version: getVaultVersion(vaultInfo.version),
+        metadata: parseRegVaultMetadata(vaultInfo.metadata),
+      }))
       .filter((v) => !!v);
   }
 
