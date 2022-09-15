@@ -100,9 +100,13 @@ export class VaultsService extends Service {
     const cachedVault = this.vaults[checksumAddress];
     if (!cachedVault) {
       const vaultsRegistry = await this.sdk.registry.getProductionVaults();
+      const developmentRegistry =
+        await this.sdk.registry.getDevelopmentVaults();
 
       const vaultMap = Object.fromEntries(
-        vaultsRegistry.map((vault) => [vault.address, vault]),
+        vaultsRegistry
+          .concat(developmentRegistry)
+          .map((vault) => [vault.address, vault]),
       );
 
       const vaultRegistration = vaultMap[checksumAddress];
