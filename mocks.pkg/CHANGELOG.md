@@ -1,3 +1,10 @@
+## [1.18.11](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.10...sdk-mocks-v1.18.11) (2022-09-15)
+
+
+### Bug Fixes
+
+* allow development vaults on load ([8040260](https://github.com/Badger-Finance/badger-sdk/commit/8040260d02a920e25e279a39f736e7519855766e))
+
 ## [1.18.10](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.18.9...sdk-mocks-v1.18.10) (2022-09-13)
 
 
