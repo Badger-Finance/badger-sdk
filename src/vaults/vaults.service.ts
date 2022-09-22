@@ -99,13 +99,17 @@ export class VaultsService extends Service {
     const checksumAddress = ethers.utils.getAddress(address);
     const cachedVault = this.vaults[checksumAddress];
     if (!cachedVault) {
-      const vaultsRegistry = await this.sdk.registry.getProductionVaults();
-      const developmentRegistry =
-        await this.sdk.registry.getDevelopmentVaults();
+      const productionVaults = await this.sdk.registry.getProductionVaults();
+      let developmentVaults = await this.sdk.registry.getDevelopmentVaults();
+
+      const productionVaultAddresses = productionVaults.map((v) => v.address);
+      developmentVaults = developmentVaults.filter(
+        (v) => !productionVaultAddresses.includes(v.address),
+      );
 
       const vaultMap = Object.fromEntries(
-        vaultsRegistry
-          .concat(developmentRegistry)
+        productionVaults
+          .concat(developmentVaults)
           .map((vault) => [vault.address, vault]),
       );
 
