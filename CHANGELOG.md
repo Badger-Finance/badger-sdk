@@ -1,3 +1,10 @@
+## [1.18.12](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.11...v1.18.12) (2022-09-22)
+
+
+### Bug Fixes
+
+* avoid overwriting production vaults with development definitions ([755a042](https://github.com/Badger-Finance/badger-sdk/commit/755a042d48a286916fe6cb96943d97f350b78e06))
+
 ## [1.18.11](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.10...v1.18.11) (2022-09-15)
 
 
