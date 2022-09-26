@@ -1,3 +1,10 @@
+## [1.18.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.12...v1.18.13) (2022-09-26)
+
+
+### Bug Fixes
+
+* update harvests mocks ([3e109f0](https://github.com/Badger-Finance/badger-sdk/commit/3e109f01c64a544f4127155ab65b0c879c9ab03a))
+
 ## [1.18.12](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.11...v1.18.12) (2022-09-22)
 
 
