@@ -1,3 +1,10 @@
+## [1.18.14](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.13...v1.18.14) (2022-10-19)
+
+
+### Bug Fixes
+
+* update connector init paths ([2d9baaf](https://github.com/Badger-Finance/badger-sdk/commit/2d9baafa3ff7e9ce01b91d3d3f1d3706cf76ed5b))
+
 ## [1.18.13](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.12...v1.18.13) (2022-09-26)
 
 
