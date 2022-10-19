@@ -40,6 +40,7 @@ export class ibBTCService extends Service {
     '0xe8E40093017A3A55B5c2BC3E9CA6a4d208c07734',
   );
 
+  private loading?: Promise<void>;
   private _ibBTC?: Ibbtc;
   private _vaultPeak?: VaultPeak;
   private _vaultZap?: VaultZap;
@@ -47,24 +48,6 @@ export class ibBTCService extends Service {
 
   constructor(sdk: BadgerSDK) {
     super(sdk);
-    if (this.config.network === Network.Ethereum) {
-      this._ibBTC = Ibbtc__factory.connect(
-        ibBTCService.IBBTC_ADDRESS,
-        this.connector,
-      );
-      this._vaultPeak = VaultPeak__factory.connect(
-        ibBTCService.VAULT_PEAK,
-        this.connector,
-      );
-      this._vaultZap = VaultZap__factory.connect(
-        ibBTCService.VAULT_ZAP,
-        this.connector,
-      );
-      this._tokenZap = TokenZap__factory.connect(
-        ibBTCService.TOKEN_ZAP,
-        this.connector,
-      );
-    }
   }
 
   get ibBTC(): Ibbtc {
@@ -99,6 +82,13 @@ export class ibBTCService extends Service {
       );
     }
     return this._vaultZap;
+  }
+
+  async ready() {
+    if (!this.loading) {
+      this.loading = this.#init();
+    }
+    return this.loading;
   }
 
   async getPricePerFullShare(overrides?: Overrides): Promise<number> {
@@ -320,5 +310,26 @@ export class ibBTCService extends Service {
       return IbBtcZapType.Token;
     }
     throw new Error(`${tokenAddress} not a supported zap token!`);
+  }
+
+  async #init() {
+    if (this.config.network === Network.Ethereum) {
+      this._ibBTC = Ibbtc__factory.connect(
+        ibBTCService.IBBTC_ADDRESS,
+        this.connector,
+      );
+      this._vaultPeak = VaultPeak__factory.connect(
+        ibBTCService.VAULT_PEAK,
+        this.connector,
+      );
+      this._vaultZap = VaultZap__factory.connect(
+        ibBTCService.VAULT_ZAP,
+        this.connector,
+      );
+      this._tokenZap = TokenZap__factory.connect(
+        ibBTCService.TOKEN_ZAP,
+        this.connector,
+      );
+    }
   }
 }
