@@ -60,11 +60,13 @@ export class BadgerSDK {
     this.vaults = new VaultsService(this);
   }
 
-  ready() {
+  async ready() {
+    // initialize must be called first to correctly pass signer to the connectors
+    await this.#initialize();
     return Promise.all([
-      this.#initialize(),
       this.registry.ready(),
       this.rewards.ready(),
+      this.ibbtc.ready(),
     ]);
   }
 
