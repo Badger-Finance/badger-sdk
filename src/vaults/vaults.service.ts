@@ -283,13 +283,13 @@ export class VaultsService extends Service {
         onTransferPrompt({ token, amount });
       }
       let depositTx;
-      try {
+      if (proof.length > 0) {
         depositTx = await vaultContract['deposit(uint256,bytes32[])'](
           amount,
           proof,
           { ...overrides },
         );
-      } catch {
+      } else {
         depositTx = await vaultContract['deposit(uint256)'](amount, {
           ...overrides,
         });
