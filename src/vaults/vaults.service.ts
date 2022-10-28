@@ -282,11 +282,18 @@ export class VaultsService extends Service {
       if (onTransferPrompt) {
         onTransferPrompt({ token, amount });
       }
-      const depositTx = await vaultContract['deposit(uint256,bytes32[])'](
-        amount,
-        proof,
-        { ...overrides },
-      );
+      let depositTx;
+      if (proof.length > 0) {
+        depositTx = await vaultContract['deposit(uint256,bytes32[])'](
+          amount,
+          proof,
+          { ...overrides },
+        );
+      } else {
+        depositTx = await vaultContract['deposit(uint256)'](amount, {
+          ...overrides,
+        });
+      }
       result = TransactionStatus.Pending;
       if (onTransferSigned) {
         onTransferSigned({ token: tokenName, amount, transaction: depositTx });
