@@ -1,3 +1,10 @@
+## [1.18.15](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.14...v1.18.15) (2022-10-28)
+
+
+### Bug Fixes
+
+* update vault deposit attempt ([1a863a8](https://github.com/Badger-Finance/badger-sdk/commit/1a863a8f57a7b97b1a83960312562c006964172e))
+
 ## [1.18.14](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.13...v1.18.14) (2022-10-19)
 
 
