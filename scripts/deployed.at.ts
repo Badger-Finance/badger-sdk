@@ -18,6 +18,9 @@ const DEPLOYED_AT_SAVE_PATH = 'src/data';
 
 const ADDRS_TO_SCAN = {
   [`${Network.Ethereum}`]: [],
+  [`${Network.Arbitrum}`]: [
+    '0xC4611233328559Dd1849947bC1e2b3B6b8714fa9', // Timelock Controller
+  ],
 };
 
 let currentChain: string;
