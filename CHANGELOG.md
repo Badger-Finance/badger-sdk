@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.15...v1.19.0) (2022-11-09)
+
+
+### Features
+
+* add governance service to sdk ([2dd2e09](https://github.com/Badger-Finance/badger-sdk/commit/2dd2e09b779aefec3e604d922adf8bcdf66d8b20))
+
 ## [1.18.15](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.14...v1.18.15) (2022-10-28)
 
 
