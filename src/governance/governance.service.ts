@@ -55,7 +55,7 @@ export class GovernanceService extends Service {
     } as T,
   ) {
     const options = { startBlock, endBlock };
-    await this.#processEventsScanRange(this.timelockAddress, options);
+    await this.processEventsScanRange(this.timelockAddress, options);
 
     const scheduledProposalsFilter =
       this.timelockController.filters.CallScheduled();
@@ -79,7 +79,7 @@ export class GovernanceService extends Service {
     } as T,
   ) {
     const options = { startBlock, endBlock };
-    await this.#processEventsScanRange(this.timelockAddress, options);
+    await this.processEventsScanRange(this.timelockAddress, options);
 
     const executedProposalsFilter =
       this.timelockController.filters.CallExecuted();
@@ -125,7 +125,7 @@ export class GovernanceService extends Service {
     } as T,
   ) {
     const options = { startBlock, endBlock };
-    await this.#processEventsScanRange(this.timelockAddress, options);
+    await this.processEventsScanRange(this.timelockAddress, options);
 
     const disputesOpenedFilter = this.timelockController.filters.CallDisputed();
     const disputesResolvedFilter =
@@ -161,10 +161,9 @@ export class GovernanceService extends Service {
     );
   }
 
-  async #processEventsScanRange<T extends Required<BlocksRangeOptions>>(
-    contractAdress: string,
-    options: T,
-  ) {
+  protected async processEventsScanRange<
+    T extends Required<BlocksRangeOptions>,
+  >(contractAdress: string, options: T) {
     const timelockDeployedAt = getBlockDeployedAt(
       contractAdress,
       this.config.network,
