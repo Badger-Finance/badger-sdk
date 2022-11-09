@@ -17,20 +17,32 @@ import {
   VaultV15,
   VaultV15__factory,
 } from '../contracts';
+import { GovernanceService } from '../governance/governance.service';
+import { ibBTCService } from '../ibbtc';
 import { RegistryService } from '../registry';
 import { RewardsService } from '../rewards';
 import { BadgerSDK } from '../sdk';
 import { MockVaultSystem } from './interfaces/mock-vault-system.interface';
+import { TestServiceEnum } from './service.enum';
 import { TEST_ADDR } from './tests.constants';
 
-export function mockSDK(): BadgerSDK {
+export function mockSDK(
+  network: Network = Network.Fantom,
+  testingService: TestServiceEnum | null = null,
+): BadgerSDK {
   const mockSigner = mock<JsonRpcSigner>();
   mockSigner.getAddress.calledWith().mockImplementation(async () => TEST_ADDR);
   const mockProvider = mock<JsonRpcProvider>();
   mockProvider.getSigner.calledWith().mockImplementation(() => mockSigner);
 
-  jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
-  jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
+  testingService !== TestServiceEnum.registry &&
+    jest.spyOn(RegistryService.prototype, 'ready').mockImplementation();
+  testingService !== TestServiceEnum.rewards &&
+    jest.spyOn(RewardsService.prototype, 'ready').mockImplementation();
+  testingService !== TestServiceEnum.governance &&
+    jest.spyOn(GovernanceService.prototype, 'ready').mockImplementation();
+  testingService !== TestServiceEnum.ibbtc &&
+    jest.spyOn(ibBTCService.prototype, 'ready').mockImplementation();
 
   const mockMulticall = mock<providers.MulticallProvider>();
   jest
@@ -39,7 +51,7 @@ export function mockSDK(): BadgerSDK {
     .mockImplementation((_p) => mockMulticall);
 
   const sdk = new BadgerSDK({
-    network: Network.Fantom,
+    network,
     provider: mockProvider,
   });
 
