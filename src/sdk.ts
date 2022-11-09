@@ -5,6 +5,7 @@ import { ethers } from 'ethers';
 import { APIOptions, BadgerAPI, LogLevel } from './api';
 import { getNetworkConfig, NetworkConfig, SDKProvider } from './config';
 import { DiggService } from './digg/digg.service';
+import { GovernanceService } from './governance/governance.service';
 import { BadgerGraph } from './graphql';
 import { ibBTCService } from './ibbtc/ibbtc.service';
 import { RegistryService } from './registry/registry.service';
@@ -32,6 +33,7 @@ export class BadgerSDK {
   readonly rewards: RewardsService;
   readonly tokens: TokensService;
   readonly vaults: VaultsService;
+  readonly governance: GovernanceService;
 
   constructor({
     network,
@@ -58,6 +60,7 @@ export class BadgerSDK {
     this.rewards = new RewardsService(this);
     this.tokens = new TokensService(this);
     this.vaults = new VaultsService(this);
+    this.governance = new GovernanceService(this);
   }
 
   async ready() {
@@ -67,6 +70,7 @@ export class BadgerSDK {
       this.registry.ready(),
       this.rewards.ready(),
       this.ibbtc.ready(),
+      this.governance.ready(),
     ]);
   }
 
