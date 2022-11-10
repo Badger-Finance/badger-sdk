@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.19.0...v1.19.1) (2022-11-10)
+
+
+### Bug Fixes
+
+* removed filter Helper ([a8ca5ce](https://github.com/Badger-Finance/badger-sdk/commit/a8ca5ce568deac77cf8fd8bdd9e1c933686c6236))
+
 # [1.19.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.18.15...v1.19.0) (2022-11-09)
 
 
