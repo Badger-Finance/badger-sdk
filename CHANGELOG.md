@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.19.1...v1.20.0) (2022-11-21)
+
+
+### Features
+
+* governance proposals methods in api service ([d374fb7](https://github.com/Badger-Finance/badger-sdk/commit/d374fb7395ee0c64e64bb30ba2c6096ba079d0cb))
+
 ## [1.19.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.19.0...v1.19.1) (2022-11-10)
 
 
