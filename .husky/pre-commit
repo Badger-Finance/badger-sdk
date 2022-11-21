@@ -4,6 +4,7 @@
 if [[ $CI != true ]]; then
   yarn lint
   yarn pretty-quick --staged
+  yarn barrels
   cd ./mocks.pkg
   yarn mocks:check
   yarn lint
