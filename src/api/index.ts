@@ -8,6 +8,8 @@ import { EmissionSchedule } from '../rewards';
 import { ApiError } from './api.error';
 import { ChartTimeFrame, Currency, LogLevel } from './enums';
 import * as i from './interfaces';
+import { GovernanceProposal } from './interfaces/governance-proposal.interface';
+import { GovernanceProposalsList } from './interfaces/governance-proposals-list.interface';
 import {
   GasPrices,
   MerkleProof,
@@ -222,6 +224,28 @@ export class BadgerAPI {
       tokens: tokens.join(','),
       timestamps: timestamps.join(','),
       chain: network ?? this.network,
+    });
+  }
+
+  loadGovernanceProposal(
+    proposalId: string,
+    network?: Network,
+  ): Promise<GovernanceProposal> {
+    return this.get(`v3/governance/proposal`, {
+      id: proposalId,
+      chain: network ?? this.network,
+    });
+  }
+
+  loadGovernanceProposals(
+    network?: Network,
+    page = 1,
+    perSize = 10,
+  ): Promise<GovernanceProposalsList> {
+    return this.get(`v3/governance/proposals/list`, {
+      chain: network ?? this.network,
+      page,
+      perSize,
     });
   }
 
