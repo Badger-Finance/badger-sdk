@@ -14,6 +14,9 @@ export const methodsToSkip = [
   'mint',
   'redeem',
   'getMulticallProvider',
+  // temp, till figure out data on stg
+  'loadGovernanceProposal',
+  'loadGovernanceProposals',
 
   // temporary, getters with expected sdk backing failing
   'digg',
