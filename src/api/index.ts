@@ -240,12 +240,12 @@ export class BadgerAPI {
   loadGovernanceProposals(
     network?: Network,
     page = 1,
-    perSize = 10,
+    perPage = 10,
   ): Promise<GovernanceProposalsList> {
     return this.get(`v3/governance/proposals/list`, {
       chain: network ?? this.network,
       page,
-      perSize,
+      perPage,
     });
   }
 
