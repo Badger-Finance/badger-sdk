@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.0...sdk-mocks-v1.20.1) (2022-11-29)
+
+
+### Bug Fixes
+
+* correct typo in param for governance list in api service ([d92e7bb](https://github.com/Badger-Finance/badger-sdk/commit/d92e7bb1e7511aa4ad937bd8d3d6c7a2b4bfbd02))
+
 # [1.20.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.19.1...sdk-mocks-v1.20.0) (2022-11-21)
 
 
