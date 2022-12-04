@@ -4,16 +4,17 @@ import { GovernanceProposalsStatus } from './governance-proposals-status.interfa
 
 export interface GovernanceProposal {
   proposalId: string;
-  createdAt: string;
+  createdAt: number;
   contractAddr: string;
   targetAddr: string;
-  value: string;
+  value: number;
   callData: string;
-  readyTime: string;
+  decodedCallData: string | null;
+  readyTime: number;
   sender: string;
   currentStatus: string;
-  creationBlock: string;
-  updateBlock: string;
+  creationBlock: number;
+  updateBlock: number;
   statuses: GovernanceProposalsStatus[];
   disputes: GovernanceProposalsDispute[];
   children: GovernanceProposalChild[];

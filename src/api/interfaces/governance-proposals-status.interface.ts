@@ -2,8 +2,8 @@ export interface GovernanceProposalsStatus {
   name: string;
   sender: string;
   status: string;
-  value: string;
+  value: number;
   transactionHash: string;
-  blockNumber: string;
-  updatedAt: string;
+  blockNumber: number;
+  updatedAt: number;
 }
