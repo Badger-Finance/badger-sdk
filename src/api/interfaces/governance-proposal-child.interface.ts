@@ -1,9 +1,12 @@
+import { GovernanceProposalsStatus } from './governance-proposals-status.interface';
+
 export interface GovernanceProposalChild {
-  name: string;
+  index: number;
+  value: number;
+  callData: string;
+  decodedCallData: string | null;
+  targetAddr: string;
+  predecessor: string;
+  executed: GovernanceProposalsStatus[];
   sender: string;
-  status: string;
-  value: string;
-  transactionHash: string;
-  blockNumber: string;
-  updatedAt: string;
 }
