@@ -1,3 +1,10 @@
+## [1.20.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.1...sdk-mocks-v1.20.2) (2022-12-05)
+
+
+### Bug Fixes
+
+* governance typing, plus decoded data ([4035f93](https://github.com/Badger-Finance/badger-sdk/commit/4035f936f88f49db0d9af071472dcefe9529932f))
+
 ## [1.20.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.0...sdk-mocks-v1.20.1) (2022-11-29)
 
 
