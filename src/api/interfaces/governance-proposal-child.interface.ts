@@ -6,6 +6,7 @@ export interface GovernanceProposalChild {
   callData: string;
   decodedCallData: string | null;
   targetAddr: string;
+  transactionHash: string;
   predecessor: string;
   executed: GovernanceProposalsStatus[];
   sender: string;
