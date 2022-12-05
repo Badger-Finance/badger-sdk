@@ -14,6 +14,7 @@ export interface GovernanceProposal {
   sender: string;
   currentStatus: string;
   creationBlock: number;
+  transactionHash: string;
   updateBlock: number;
   statuses: GovernanceProposalsStatus[];
   disputes: GovernanceProposalsDispute[];
