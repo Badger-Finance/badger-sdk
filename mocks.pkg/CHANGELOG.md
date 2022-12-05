@@ -1,3 +1,10 @@
+## [1.20.3](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.2...sdk-mocks-v1.20.3) (2022-12-05)
+
+
+### Bug Fixes
+
+* extend governance with tx hash, plus dispute type fix ([2b7f0e2](https://github.com/Badger-Finance/badger-sdk/commit/2b7f0e25aea27090aa8e913031583324ace58bd0))
+
 ## [1.20.2](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.1...sdk-mocks-v1.20.2) (2022-12-05)
 
 
