@@ -8,6 +8,6 @@ export interface GovernanceProposalChild {
   targetAddr: string;
   transactionHash: string;
   predecessor: string;
-  executed: GovernanceProposalsStatus[];
+  executed: GovernanceProposalsStatus;
   sender: string;
 }
