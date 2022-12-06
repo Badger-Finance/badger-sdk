@@ -1,3 +1,10 @@
+## [1.20.5](https://github.com/Badger-Finance/badger-sdk/compare/v1.20.4...v1.20.5) (2022-12-06)
+
+
+### Bug Fixes
+
+* proposals child typing ([f748b5f](https://github.com/Badger-Finance/badger-sdk/commit/f748b5fe05d3c47d28c14ed908fa45d0d10e292b))
+
 ## [1.20.4](https://github.com/Badger-Finance/badger-sdk/compare/v1.20.3...v1.20.4) (2022-12-06)
 
 
