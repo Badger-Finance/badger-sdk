@@ -1,4 +1,5 @@
 import { GovernanceProposalChild } from './governance-proposal-child.interface';
+import { GovernanceProposalsDecodedData } from './governance-proposals-decoded-data.interface';
 import { GovernanceProposalsDispute } from './governance-proposals-dispute.interface';
 import { GovernanceProposalsStatus } from './governance-proposals-status.interface';
 
@@ -9,7 +10,7 @@ export interface GovernanceProposal {
   targetAddr: string;
   value: number;
   callData: string;
-  decodedCallData: string | null;
+  decodedCallData: GovernanceProposalsDecodedData;
   readyTime: number;
   sender: string;
   currentStatus: string;
