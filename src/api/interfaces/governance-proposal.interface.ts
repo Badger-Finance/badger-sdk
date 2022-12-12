@@ -10,7 +10,7 @@ export interface GovernanceProposal {
   targetAddr: string;
   value: number;
   callData: string;
-  decodedCallData: GovernanceProposalsDecodedData;
+  decodedCallData: GovernanceProposalsDecodedData | null;
   readyTime: number;
   sender: string;
   currentStatus: string;
