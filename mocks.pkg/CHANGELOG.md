@@ -1,3 +1,10 @@
+## [1.20.7](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.6...sdk-mocks-v1.20.7) (2022-12-12)
+
+
+### Bug Fixes
+
+* allow null in decodedCallData if empty ([e75cde9](https://github.com/Badger-Finance/badger-sdk/commit/e75cde9878b763c424cdfc80aa10ba4e02f5b2db))
+
 ## [1.20.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.5...sdk-mocks-v1.20.6) (2022-12-12)
 
 
