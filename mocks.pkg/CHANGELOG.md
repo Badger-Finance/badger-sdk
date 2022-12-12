@@ -1,3 +1,11 @@
+## [1.20.6](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.5...sdk-mocks-v1.20.6) (2022-12-12)
+
+
+### Bug Fixes
+
+* add decoded call data interface ([3a7c6b3](https://github.com/Badger-Finance/badger-sdk/commit/3a7c6b30d261fe0f1244dc2ac67bec55ba88420c))
+* tsc build ([ea515d1](https://github.com/Badger-Finance/badger-sdk/commit/ea515d1c37018c5651238ddce501d2ce70512dc8))
+
 ## [1.20.5](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.4...sdk-mocks-v1.20.5) (2022-12-06)
 
 
