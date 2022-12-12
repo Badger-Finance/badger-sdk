@@ -8,6 +8,7 @@ export * from './boost-config.interface';
 export * from './gas-fees.interface';
 export * from './governance-proposal-child.interface';
 export * from './governance-proposal.interface';
+export * from './governance-proposals-decoded-data.interface';
 export * from './governance-proposals-dispute.interface';
 export * from './governance-proposals-list.interface';
 export * from './governance-proposals-status.interface';
