@@ -5,7 +5,7 @@ export interface GovernanceProposalChild {
   index: number;
   value: number;
   callData: string;
-  decodedCallData: GovernanceProposalsDecodedData;
+  decodedCallData: GovernanceProposalsDecodedData | null;
   targetAddr: string;
   transactionHash: string;
   predecessor: string;
