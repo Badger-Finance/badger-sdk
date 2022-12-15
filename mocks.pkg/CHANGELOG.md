@@ -1,3 +1,10 @@
+## [1.20.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.7...sdk-mocks-v1.20.8) (2022-12-15)
+
+
+### Bug Fixes
+
+* proposals types ([1d2c789](https://github.com/Badger-Finance/badger-sdk/commit/1d2c789442f905ab95f7d5788e3c51d9a1a443db))
+
 ## [1.20.7](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.6...sdk-mocks-v1.20.7) (2022-12-12)
 
 
