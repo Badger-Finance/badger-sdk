@@ -6,7 +6,7 @@ export * from './account.interface';
 export * from './api-options.interface';
 export * from './boost-config.interface';
 export * from './gas-fees.interface';
-export * from './governance-proposal-child.interface';
+export * from './governance-proposal-action.interface';
 export * from './governance-proposal.interface';
 export * from './governance-proposals-decoded-data.interface';
 export * from './governance-proposals-dispute.interface';

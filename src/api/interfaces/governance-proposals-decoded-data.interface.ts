@@ -11,10 +11,7 @@ export type decodedParams =
 
 export interface GovernanceProposalsDecodedData {
   name: string;
-
   signatureHash: string;
-
   inputTypes: RawAbiDefinition['inputs'];
-
   decodedParams: decodedParams[];
 }
