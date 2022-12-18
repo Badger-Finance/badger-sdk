@@ -4,14 +4,14 @@ import { TimelockController, TimelockController__factory } from '../contracts';
 import {
   CallDisputedEvent,
   CallDisputedEventFilter,
-  CallDisputedResolvedEvent,
-  CallDisputedResolvedEventFilter,
   CallExecutedEvent,
   CallExecutedEventFilter,
   CallScheduledEvent,
   CallScheduledEventFilter,
   CancelledEvent,
   CancelledEventFilter,
+  RejectedEvent,
+  RejectedEventFilter,
 } from '../contracts/TimelockController';
 import { Service } from '../service';
 import { chunkQueryFilter } from '../utils';
@@ -19,7 +19,7 @@ import { getBlockDeployedAt } from '../utils/deployed-at.util';
 
 export class GovernanceService extends Service {
   static readonly TIMELOCK_CONTRACT_ADDR_MAP = {
-    [`${Network.Arbitrum}`]: '0xC4611233328559Dd1849947bC1e2b3B6b8714fa9',
+    [`${Network.Arbitrum}`]: '0xd2ac6abdd6acbdfab7228f5d4983de2f643d5735',
   };
 
   private loading?: Promise<void>;
@@ -84,33 +84,46 @@ export class GovernanceService extends Service {
     const executedProposalsFilter =
       this.timelockController.filters.CallExecuted();
     const canceledProposalsFilter = this.timelockController.filters.Cancelled();
+    const rejectedProposalsFilter = this.timelockController.filters.Rejected();
 
-    const [executedProposals, canceledProposals] = await Promise.all([
-      chunkQueryFilter<
-        TimelockController,
-        CallExecutedEventFilter,
-        CallExecutedEvent
-      >(
-        this.timelockController,
-        executedProposalsFilter,
-        options.startBlock,
-        options.endBlock,
-      ),
-      chunkQueryFilter<
-        TimelockController,
-        CancelledEventFilter,
-        CancelledEvent
-      >(
-        this.timelockController,
-        canceledProposalsFilter,
-        options.startBlock,
-        options.endBlock,
-      ),
-    ]);
+    const [executedProposals, canceledProposals, rejectedProposals] =
+      await Promise.all([
+        chunkQueryFilter<
+          TimelockController,
+          CallExecutedEventFilter,
+          CallExecutedEvent
+        >(
+          this.timelockController,
+          executedProposalsFilter,
+          options.startBlock,
+          options.endBlock,
+        ),
+        chunkQueryFilter<
+          TimelockController,
+          CancelledEventFilter,
+          CancelledEvent
+        >(
+          this.timelockController,
+          canceledProposalsFilter,
+          options.startBlock,
+          options.endBlock,
+        ),
+        chunkQueryFilter<
+          TimelockController,
+          RejectedEventFilter,
+          RejectedEvent
+        >(
+          this.timelockController,
+          rejectedProposalsFilter,
+          options.startBlock,
+          options.endBlock,
+        ),
+      ]);
 
     const proposalsStatusChangeEvents = [
       ...executedProposals,
       ...canceledProposals,
+      ...rejectedProposals,
     ];
 
     return proposalsStatusChangeEvents.sort(
@@ -128,42 +141,23 @@ export class GovernanceService extends Service {
     await this.processEventsScanRange(this.timelockAddress, options);
 
     const disputesOpenedFilter = this.timelockController.filters.CallDisputed();
-    const disputesResolvedFilter =
-      this.timelockController.filters.CallDisputedResolved();
 
-    const [disputesOpened, disputesResolved] = await Promise.all([
-      chunkQueryFilter<
-        TimelockController,
-        CallDisputedEventFilter,
-        CallDisputedEvent
-      >(
-        this.timelockController,
-        disputesOpenedFilter,
-        options.startBlock,
-        options.endBlock,
-      ),
-      chunkQueryFilter<
-        TimelockController,
-        CallDisputedResolvedEventFilter,
-        CallDisputedResolvedEvent
-      >(
-        this.timelockController,
-        disputesResolvedFilter,
-        options.startBlock,
-        options.endBlock,
-      ),
-    ]);
-
-    const proposalsDisputesEvents = [...disputesOpened, ...disputesResolved];
-
-    return proposalsDisputesEvents.sort(
-      (a, b) => a.blockNumber - b.blockNumber,
+    return chunkQueryFilter<
+      TimelockController,
+      CallDisputedEventFilter,
+      CallDisputedEvent
+    >(
+      this.timelockController,
+      disputesOpenedFilter,
+      options.startBlock,
+      options.endBlock,
     );
   }
 
-  protected async processEventsScanRange<
-    T extends Required<BlocksRangeOptions>,
-  >(contractAdress: string, options: T) {
+  async processEventsScanRange<T extends Required<BlocksRangeOptions>>(
+    contractAdress: string,
+    options: T,
+  ) {
     const timelockDeployedAt = getBlockDeployedAt(
       contractAdress,
       this.config.network,

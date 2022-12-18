@@ -1,4 +1,4 @@
-export const PROPOSALS_RESOLVED_EVENTS = [
+export const PROPOSALS_REJECTED_EVENTS = [
   {
     blockNumber: 34941482,
     blockHash:
@@ -15,14 +15,13 @@ export const PROPOSALS_RESOLVED_EVENTS = [
     transactionHash:
       '0xdb286638e5dc3a62c2c814fe61016ad0e49349bbba0fcce2b36640a42b70cac3',
     logIndex: 6,
-    event: 'CallDisputedResolved',
-    eventSignature: 'CallDisputedResolved(bytes32,bool,bytes,address,string)',
+    event: 'Rejected',
+    eventSignature: 'Rejected(bytes32,address,string,string)',
     args: [
       '0xe9bfab585a583ae5cc2395f40bfb61b5c93dee4356079f1c642d7157be8300c8',
-      true,
       '0xFc13209cAfE8fb3bb5fbD929eC9F11a39e8Ac041',
-      '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
-      'Resolved',
+      'For lots of reasons',
+      'Rejected',
     ],
   },
   {
@@ -41,14 +40,13 @@ export const PROPOSALS_RESOLVED_EVENTS = [
     transactionHash:
       '0xdb286638e5dc3a62c2c814fe61016ad0e49349bbba0fcce2b36640a42b70cac3',
     logIndex: 7,
-    event: 'CallDisputedResolved',
-    eventSignature: 'CallDisputedResolved(bytes32,bool,bytes,address,string)',
+    event: 'Rejected',
+    eventSignature: 'Rejected(bytes32,address,string,string)',
     args: [
       '0xe9bfab585a583ae5cc2395f40bfb61b5c93dee4356079f1c642d7157be8300c8',
-      true,
       '0xFc13209cAfE8fb3bb5fbD929eC9F11a39e8Ac041',
-      '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
-      'Proposed',
+      'For lots of reasons',
+      'Rejected',
     ],
   },
 ];

@@ -17,7 +17,7 @@ export const PROPOSALS_SCHEDULED_EVENTS = [
     logIndex: 6,
     event: 'CallScheduled',
     eventSignature:
-      'CallScheduled(bytes32,uint256,address,uint256,bytes,bytes32,uint256,address,string)',
+      'CallScheduled(bytes32,uint256,address,uint256,bytes,bytes32,uint256,address,string,string)',
     args: [
       '0xe9bfab585a583ae5cc2395f40bfb61b5c93dee4356079f1c642d7157be8300c8',
       {
@@ -36,6 +36,7 @@ export const PROPOSALS_SCHEDULED_EVENTS = [
         hex: '0x638bc098',
       },
       '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
+      'Lets invest all treasury funds into Luna tokens',
       'Proposed',
     ],
   },
@@ -76,6 +77,7 @@ export const PROPOSALS_SCHEDULED_EVENTS = [
         hex: '0x638bc098',
       },
       '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
+      'Lets invest all treasury funds into Luna tokens',
       'Proposed',
     ],
   },

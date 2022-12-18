@@ -7,11 +7,10 @@ import { mockSDK } from '../tests';
 import { TestServiceEnum } from '../tests/service.enum';
 import * as deployedAtUtils from '../utils/deployed-at.util';
 import { GovernanceService } from './governance.service';
-import { GovernanceProxyMock } from './mocks/governance.proxy.mock';
 import { PROPOSALS_CANCELLED_EVENTS } from './mocks/proposal.cancelled.event';
 import { PROPOSALS_EXECUTED_EVENTS } from './mocks/proposal.executed.event';
 import { PROPOSALS_DISPUTED_EVENTS } from './mocks/proposals.disputed.event';
-import { PROPOSALS_RESOLVED_EVENTS } from './mocks/proposals.resolved.event';
+import { PROPOSALS_REJECTED_EVENTS } from './mocks/proposals.rejected.event';
 import { PROPOSALS_SCHEDULED_EVENTS } from './mocks/proposals.scheduled.event';
 
 describe('governance.service', () => {
@@ -84,10 +83,10 @@ describe('governance.service', () => {
   });
 
   describe('processEventsScanRange', () => {
-    let governance: GovernanceProxyMock;
+    let governance: GovernanceService;
 
     beforeEach(() => {
-      governance = new GovernanceProxyMock(sdk);
+      governance = new GovernanceService(sdk);
     });
 
     it('should return options values if they are defined', async () => {
@@ -96,7 +95,7 @@ describe('governance.service', () => {
         endBlock: 2,
       };
 
-      await governance.processEventsScanRangePr(
+      await governance.processEventsScanRange(
         governance.timelockAddress,
         options,
       );
@@ -119,7 +118,7 @@ describe('governance.service', () => {
         endBlock: 0,
       };
 
-      await governance.processEventsScanRangePr(
+      await governance.processEventsScanRange(
         governance.timelockAddress,
         options,
       );
@@ -171,6 +170,7 @@ describe('governance.service', () => {
     };
 
     const eventCallExecuted = 'CallExecuted';
+    const eventCallRejected = 'CallRejected';
     const eventCallCanceled = 'Canceled';
 
     beforeEach(() => {
@@ -190,6 +190,10 @@ describe('governance.service', () => {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             return PROPOSALS_CANCELLED_EVENTS.filter(filterFunc);
+          } else if (ef.topics?.includes(eventCallRejected)) {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            return PROPOSALS_REJECTED_EVENTS.filter(filterFunc);
           }
 
           return [];
@@ -201,9 +205,12 @@ describe('governance.service', () => {
       timeLockControllerMock.filters.Cancelled = jest.fn().mockReturnValue({
         topics: [eventCallCanceled],
       });
+      timeLockControllerMock.filters.Rejected = jest.fn().mockReturnValue({
+        topics: [eventCallRejected],
+      });
     });
 
-    it('should return events with status changes for proposals in sorted way', async () => {
+    it('should return events with status changes for proposals', async () => {
       const events = await sdk.governance.loadProposalsStatusChange(
         defaultRangeOpts,
       );
@@ -228,7 +235,6 @@ describe('governance.service', () => {
     };
 
     const eventCallDisputed = 'CallDisputed';
-    const eventDisputedResolved = 'CallDisputedResolved';
 
     beforeEach(() => {
       timeLockControllerMock.queryFilter.mockImplementation(
@@ -243,10 +249,6 @@ describe('governance.service', () => {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             return PROPOSALS_DISPUTED_EVENTS.filter(filterFunc);
-          } else if (ef.topics?.includes(eventDisputedResolved)) {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            return PROPOSALS_RESOLVED_EVENTS.filter(filterFunc);
           }
 
           return [];
@@ -255,14 +257,9 @@ describe('governance.service', () => {
       timeLockControllerMock.filters.CallDisputed = jest.fn().mockReturnValue({
         topics: [eventCallDisputed],
       });
-      timeLockControllerMock.filters.CallDisputedResolved = jest
-        .fn()
-        .mockReturnValue({
-          topics: [eventDisputedResolved],
-        });
     });
 
-    it('should return events with status changes for proposals in sorted way', async () => {
+    it('should return events with status changes for proposals', async () => {
       const events = await sdk.governance.loadProposalsDisputes(
         defaultRangeOpts,
       );
