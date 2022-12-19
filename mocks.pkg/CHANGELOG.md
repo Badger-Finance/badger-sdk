@@ -1,3 +1,15 @@
+# [1.21.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.8...sdk-mocks-v1.21.0) (2022-12-19)
+
+
+### Bug Fixes
+
+* update snapshots ([7abaa9f](https://github.com/Badger-Finance/badger-sdk/commit/7abaa9f38cac951c44c90e38f15958257b613a8c))
+
+
+### Features
+
+* update governance contract abi with relevant data ([bf3badd](https://github.com/Badger-Finance/badger-sdk/commit/bf3baddf15d380cbe31677330afb1329baed6f63))
+
 ## [1.20.8](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.20.7...sdk-mocks-v1.20.8) (2022-12-15)
 
 
