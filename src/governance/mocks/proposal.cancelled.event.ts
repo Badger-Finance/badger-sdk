@@ -16,11 +16,11 @@ export const PROPOSALS_CANCELLED_EVENTS = [
       '0xdb286638e5dc3a62c2c814fe61016ad0e49349bbba0fcce2b36640a42b70cac3',
     logIndex: 6,
     event: 'Cancelled',
-    eventSignature:
-      'Cancelled(bytes32,uint256,address,uint256,bytes,address,string)',
+    eventSignature: 'Cancelled(bytes32,address,string,string)',
     args: [
       '0xe9bfab585a583ae5cc2395f40bfb61b5c93dee4356079f1c642d7157be8300c8',
       '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
+      'Was kind bad',
       'Cencelled',
     ],
   },
@@ -41,11 +41,11 @@ export const PROPOSALS_CANCELLED_EVENTS = [
       '0xdb286638e5dc3a62c2c814fe61016ad0e49349bbba0fcce2b36640a42b70cac3',
     logIndex: 7,
     event: 'Cancelled',
-    eventSignature:
-      'Cancelled(bytes32,uint256,address,uint256,bytes,address,string)',
+    eventSignature: 'Cancelled(bytes32,address,string,string)',
     args: [
       '0xe9bfab585a583ae5cc2395f40bfb61b5c93dee4356079f1c642d7157be8300c8',
       '0xef42D748e09A2d9eF89238c053CE0B6f00236210',
+      'Was kind bad',
       'Cencelled',
     ],
   },
