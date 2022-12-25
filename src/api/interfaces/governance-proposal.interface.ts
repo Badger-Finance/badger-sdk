@@ -10,6 +10,7 @@ export interface GovernanceProposal {
   currentStatus: string;
   creationBlock: number;
   updateBlock: number;
+  description: string;
   statuses: GovernanceProposalsStatus[];
   disputes: GovernanceProposalsDispute[];
   actions: GovernanceProposalAction[];
