@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.21.0...v1.21.1) (2022-12-25)
+
+
+### Bug Fixes
+
+* update governance types for relevant TimeLock events ([e5cf870](https://github.com/Badger-Finance/badger-sdk/commit/e5cf870eb4f87ae3ba74248eb73d7b30588fcb56))
+
 # [1.21.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.20.8...v1.21.0) (2022-12-19)
 
 
