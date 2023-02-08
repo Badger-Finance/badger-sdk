@@ -2,6 +2,7 @@ import { mock, MockProxy } from 'jest-mock-extended';
 
 import { Network } from '../config';
 import { TimelockController, TimelockController__factory } from '../contracts';
+import { RegistryService } from '../registry';
 import { BadgerSDK } from '../sdk';
 import { mockSDK } from '../tests';
 import { TestServiceEnum } from '../tests/service.enum';
@@ -26,6 +27,12 @@ describe('governance.service', () => {
       .spyOn(TimelockController__factory, 'connect')
       .mockImplementation(() => timelockController);
 
+    jest
+      .spyOn(RegistryService.prototype, 'get')
+      .mockImplementation(
+        async () => '0xd2ac6abdd6acbdfab7228f5d4983de2f643d5735',
+      );
+
     timeLockControllerMock = timelockController;
 
     await sdk.ready();
@@ -33,52 +40,14 @@ describe('governance.service', () => {
 
   describe('timelock controller address getter', () => {
     it('should return the timeLock address', async function () {
-      expect(
-        Object.keys(GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP).length,
-      ).toBeGreaterThan(0);
-      expect(
-        Object.values(GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP).length,
-      ).toBeGreaterThan(0);
+      expect(await sdk.governance.getTimelockAddress()).toMatchSnapshot();
       expect(sdk.governance.timelockAddress).toMatchSnapshot();
     });
 
-    it('should be undefined if the network is not supported', async function () {
-      const tempTimelockAddressMap = {
-        ...GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP,
-      };
+    it('should be undefined if no record in registry', async function () {
+      jest.spyOn(RegistryService.prototype, 'get').mockImplementation();
 
-      Object.defineProperty(GovernanceService, 'TIMELOCK_CONTRACT_ADDR_MAP', {
-        value: {},
-      });
-
-      expect(sdk.governance.timelockAddress).toBeUndefined();
-
-      Object.defineProperty(GovernanceService, 'TIMELOCK_CONTRACT_ADDR_MAP', {
-        value: tempTimelockAddressMap,
-      });
-    });
-  });
-
-  describe('timelock contract getter', () => {
-    it('should return the timelock contract', async () => {
-      expect(sdk.governance.timelockController).toBe(timeLockControllerMock);
-    });
-
-    it('should throw an error if it not deployed on the network', () => {
-      const tempTimelockAddressMap = {
-        ...GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP,
-      };
-      sdk = mockSDK(Network.Fantom, TestServiceEnum.governance);
-
-      Object.defineProperty(GovernanceService, 'TIMELOCK_CONTRACT_ADDR_MAP', {
-        value: {},
-      });
-
-      expect(() => sdk.governance.timelockController).toThrowError();
-
-      Object.defineProperty(GovernanceService, 'TIMELOCK_CONTRACT_ADDR_MAP', {
-        value: tempTimelockAddressMap,
-      });
+      await expect(sdk.governance.getTimelockAddress()).rejects.toThrowError();
     });
   });
 

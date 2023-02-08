@@ -66,8 +66,10 @@ export class BadgerSDK {
   async ready() {
     // initialize must be called first to correctly pass signer to the connectors
     await this.#initialize();
+    // same for the registry, it can be used by other services to get relevant addresses
+    await this.registry.ready();
+
     return Promise.all([
-      this.registry.ready(),
       this.rewards.ready(),
       this.ibbtc.ready(),
       this.governance.ready(),
