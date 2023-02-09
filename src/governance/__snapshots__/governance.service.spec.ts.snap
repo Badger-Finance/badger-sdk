@@ -292,3 +292,5 @@ Array [
 `;
 
 exports[`governance.service timelock controller address getter should return the timeLock address 1`] = `"0xd2ac6abdd6acbdfab7228f5d4983de2f643d5735"`;
+
+exports[`governance.service timelock controller address getter should return the timeLock address 2`] = `"0xd2ac6abdd6acbdfab7228f5d4983de2f643d5735"`;

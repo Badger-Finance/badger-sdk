@@ -1,5 +1,6 @@
+import { isAddress } from 'ethers/lib/utils';
+
 import { BlocksRangeOptions } from '../common';
-import { Network } from '../config';
 import { TimelockController, TimelockController__factory } from '../contracts';
 import {
   CallDisputedEvent,
@@ -18,9 +19,8 @@ import { chunkQueryFilter } from '../utils';
 import { getBlockDeployedAt } from '../utils/deployed-at.util';
 
 export class GovernanceService extends Service {
-  static readonly TIMELOCK_CONTRACT_ADDR_MAP = {
-    [`${Network.Arbitrum}`]: '0xd2ac6abdd6acbdfab7228f5d4983de2f643d5735',
-  };
+  readonly TIMELOCK_REGISTRY_KEY = 'governanceTimelock';
+  timelockAddress!: string;
 
   private loading?: Promise<void>;
   private _timelockController?: TimelockController;
@@ -33,10 +33,20 @@ export class GovernanceService extends Service {
     return this.loading;
   }
 
-  get timelockAddress() {
-    return GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP[
-      this.sdk.config.network
-    ];
+  async getTimelockAddress() {
+    const timeLockAddr = await this.sdk.registry.get(
+      this.TIMELOCK_REGISTRY_KEY,
+    );
+
+    if (!timeLockAddr) {
+      throw Error('TimeLock address is not defined in registry');
+    }
+
+    if (!isAddress(timeLockAddr)) {
+      throw Error('TimeLock should be a valid address');
+    }
+
+    return timeLockAddr;
   }
 
   get timelockController(): TimelockController {
@@ -55,6 +65,7 @@ export class GovernanceService extends Service {
     } as T,
   ) {
     const options = { startBlock, endBlock };
+
     await this.processEventsScanRange(this.timelockAddress, options);
 
     const scheduledProposalsFilter =
@@ -173,6 +184,8 @@ export class GovernanceService extends Service {
 
   async #init() {
     try {
+      this.timelockAddress = await this.getTimelockAddress();
+
       const deployed = await this.provider.getCode(this.timelockAddress);
 
       if (deployed === '0x') {
@@ -183,12 +196,12 @@ export class GovernanceService extends Service {
       }
 
       this._timelockController = TimelockController__factory.connect(
-        GovernanceService.TIMELOCK_CONTRACT_ADDR_MAP[this.sdk.config.network],
+        this.timelockAddress,
         this.provider,
       );
     } catch (err) {
       this.debug(
-        `Failed to initialize registry for ${this.sdk.config.network}`,
+        `Failed to initialize governance for ${this.sdk.config.network}`,
         err,
       );
     }
