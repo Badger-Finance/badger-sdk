@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.21.1...sdk-mocks-v1.22.0) (2023-02-16)
+
+
+### Features
+
+* featch governance addr from registry ([90fda07](https://github.com/Badger-Finance/badger-sdk/commit/90fda0711385dce9252d9fc8ba160b0cf8b722fe))
+
 ## [1.21.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.21.0...sdk-mocks-v1.21.1) (2022-12-25)
 
 
