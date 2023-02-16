@@ -67,6 +67,9 @@ Consider to use package lock file, while installing node dependencies:
 
 ```sh
 yarn install --frozen-lockfile
+# This will auto-generete contracts and the graph code
+# for further development
+yarn init:sdk
 ```
 
 General knowledge for contributing to the repository is kept in [Documentation](./docs).
