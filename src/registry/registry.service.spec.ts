@@ -7,13 +7,13 @@ import { mock, MockProxy } from 'jest-mock-extended';
 import { VaultState } from '../api';
 import { Network } from '../config';
 import { RegistryV2, RegistryV2__factory } from '../contracts';
+import { GovernanceService } from '../governance/governance.service';
 import { RewardsService } from '../rewards';
 import { BadgerSDK } from '../sdk';
 import { TEST_ADDR } from '../tests/tests.constants';
 import { VaultVersion } from '../vaults';
 import { registryAllProductionVaultsMock } from './mocks/registry-all-production-vaults.mock';
 import { registryProductionVaultsMock } from './mocks/registry-production-vaults.mock';
-import { GovernanceService } from "../governance/governance.service";
 
 describe('RegistryService', () => {
   function prepareSdkMocks(currBlock = 39039987): {

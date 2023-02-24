@@ -15,6 +15,7 @@ import { VaultsService } from './vaults/vaults.service';
 
 export interface SDKOptions extends APIOptions {
   provider: SDKProvider | string;
+  signer?: Signer;
 }
 
 export class BadgerSDK {
@@ -38,13 +39,14 @@ export class BadgerSDK {
   constructor({
     network,
     provider,
+    signer,
     baseURL,
     logLevel = LogLevel.Error,
   }: SDKOptions) {
     this.logLevel = logLevel;
     const sdkProvider = this.#getSdkProvider(provider);
     this.provider = this.getMulticallProvider(sdkProvider);
-    this.signer = sdkProvider.getSigner();
+    this.signer = signer ? signer : sdkProvider.getSigner();
     this.config = getNetworkConfig(network);
     this.api = new BadgerAPI({
       baseURL,
