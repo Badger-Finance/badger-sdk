@@ -143,6 +143,8 @@ describe('vaults.utils', () => {
     });
 
     it('returns zero for timestamp on getBlock error', async () => {
+      console.log = jest.fn();
+
       harvests.forEach(
         (h, i) =>
           (h.getBlock = async () => {
@@ -261,6 +263,8 @@ describe('vaults.utils', () => {
 
   describe('loadVaultPerformanceEvents', () => {
     it('loads recent vault harvests and tree distributions', async () => {
+      console.log = jest.fn();
+
       const testStrategy = Strategy__factory.connect(
         '0x1ccca1ce62c62f7be95d4a67722a8fdbed6eecb4',
         new ethers.providers.JsonRpcProvider(''),

@@ -19,6 +19,8 @@ describe('tokens.service', () => {
   let token: MockProxy<Erc20>;
 
   beforeEach(async () => {
+    console.error = jest.fn();
+
     sdk = mockSDK();
     token = mockToken();
 
