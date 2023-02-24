@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.22.0...sdk-mocks-v1.22.1) (2023-02-24)
+
+
+### Bug Fixes
+
+* clean tests output, add export for governance module ([ec7cf12](https://github.com/Badger-Finance/badger-sdk/commit/ec7cf121d50fbfcac3d952531649e9aeb8f7abc4))
+
 # [1.22.0](https://github.com/Badger-Finance/badger-sdk/compare/sdk-mocks-v1.21.1...sdk-mocks-v1.22.0) (2023-02-16)
 
 
