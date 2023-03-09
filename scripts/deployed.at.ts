@@ -4,9 +4,8 @@
 
 // Improvment, we can probably add a schedule range and integrate with githook
 
-import { BadgerSDK, Network, NETWORK_CONFIGS } from '../src';
+import { BadgerSDK, getContractDeployedAtBlock, Network } from '../src';
 import { ethers } from 'ethers';
-import axios from 'axios';
 import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { DeployedAtMap } from '../src/utils/deployed-at.util';
@@ -23,8 +22,6 @@ const ADDRS_TO_SCAN = {
   ],
 };
 
-let currentChain: string;
-
 async function main() {
   console.log('Fetching of deployed at block for vault started');
 
@@ -34,13 +31,9 @@ async function main() {
 
   for (const chain of chains) {
     console.log(`Work started for ${chain}`);
-    currentChain = chain;
 
     if (!deployedAtMap[chain]) deployedAtMap[chain] = {};
 
-    const networkConfig = NETWORK_CONFIGS[chain];
-
-    const scanApiUrl = formScanApiUrl(networkConfig.explorerUrl);
     const rpcUrl = getNodeRpcUrl(chain);
 
     const sdk = new BadgerSDK({
@@ -67,7 +60,7 @@ async function main() {
 
     for (const addr of addrasses) {
       try {
-        const deployedAtBlock = await fetchDeployedAt(scanApiUrl, addr);
+        const deployedAtBlock = await getContractDeployedAtBlock(addr, chain);
 
         // here we must trottle, coz free scans accs limited
         // if u want to boost this, add secret key from ur acc in fetchDeployedAt
@@ -92,32 +85,6 @@ async function main() {
 
 main();
 
-async function fetchDeployedAt(
-  scanUrl: string,
-  address: string,
-): Promise<number | unknown> {
-  const scanResp = await axios.get<{
-    result: { blockNumber: string }[];
-  }>(
-    `${scanUrl}?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=1&sort=asc`,
-  );
-
-  const scanRespJson = scanResp.data;
-
-  if (scanResp.status !== 200) return null;
-
-  if (
-    !scanRespJson ||
-    !scanRespJson?.result ||
-    scanRespJson?.result?.length === 0
-  ) {
-    console.warn(`Failed to get deployed at for ${address} on ${currentChain}`);
-    return null;
-  }
-
-  return Number(scanRespJson.result[0].blockNumber);
-}
-
 async function sleep(sec: number) {
   const secInMillisec = sec * 1000;
 
@@ -126,11 +93,6 @@ async function sleep(sec: number) {
       res(true);
     }, secInMillisec);
   });
-}
-
-function formScanApiUrl(explorerUrl: string): string {
-  const expUrlObj = new URL(explorerUrl);
-  return `${expUrlObj.protocol}//api.${expUrlObj.host}/api`;
 }
 
 function getNodeRpcUrl(network: Network): string | unknown {
