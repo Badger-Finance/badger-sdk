@@ -35,6 +35,7 @@ import BadgerSDK, { Network } from '@badger-dao/sdk';
 const sdk = new BadgerSDK({
   network: Network.Ethereum,
   provider: 'https://eth-archival.gateway.pokt.network/v1/lb/<APP_ID>',
+  graphURL: '<Graph API URl>', // optional
 });
 ```
 
@@ -53,7 +54,10 @@ Badger subgraph is also available for use:
 ```js
 import { BadgerGraph, Network } from '@badger-dao/sdk';
 
-const subgraph = new BadgerGraph({ network: Network.Ethereum });
+const subgraph = new BadgerGraph({
+  network: Network.Ethereum,
+  baseURL: '<Graph API URl>', // optional
+});
 
 await subgraph.loadSetts({
   orderBy: 'id',

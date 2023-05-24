@@ -6,4 +6,5 @@ export interface APIOptions {
   baseURL?: string;
   logLevel?: LogLevel;
   network: Networkish;
+  graphURL?: string;
 }

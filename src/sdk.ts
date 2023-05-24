@@ -40,6 +40,7 @@ export class BadgerSDK {
     provider,
     baseURL,
     logLevel = LogLevel.Error,
+    graphURL,
   }: SDKOptions) {
     this.logLevel = logLevel;
     const sdkProvider = this.#getSdkProvider(provider);
@@ -53,6 +54,7 @@ export class BadgerSDK {
     });
     this.graph = new BadgerGraph({
       network: this.config.network,
+      baseURL: graphURL,
     });
     this.digg = new DiggService(this);
     this.ibbtc = new ibBTCService(this);
