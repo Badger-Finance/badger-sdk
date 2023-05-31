@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/Badger-Finance/badger-sdk/compare/v1.22.1...v1.23.0) (2023-05-31)
+
+
+### Features
+
+* badger sdk accepting graph api url ([86b67cb](https://github.com/Badger-Finance/badger-sdk/commit/86b67cb9eaeec1b3fd55ad56852b3d7f83648e3e))
+
 ## [1.22.1](https://github.com/Badger-Finance/badger-sdk/compare/v1.22.0...v1.22.1) (2023-02-24)
 
 
