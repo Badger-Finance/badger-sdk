@@ -1,5 +1,81 @@
+import axios from 'axios';
+
 import { Network } from '../config';
-import { getBlockDeployedAt } from './deployed-at.util';
+import {
+  formScanApiUrl,
+  getBlockDeployedAt,
+  getContractDeployedAtBlock,
+} from './deployed-at.util';
+import * as utils from './deployed-at.util';
+
+describe('getContractDeployedAtBlock', () => {
+  it('should return deployed at block for vault', async () => {
+    const expectedBlock = 12345678;
+    const scanUrl = 'https://etherscan.io';
+    const scanApiUrl = 'https://api.etherscan.io/api';
+
+    const formScanApiUrlSpy = jest
+      .spyOn(utils, 'formScanApiUrl')
+      .mockReturnValue(scanApiUrl);
+
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      status: 200,
+      data: { result: [{ blockNumber: expectedBlock }] },
+    });
+
+    const deployedAtBlock = await getContractDeployedAtBlock(
+      '0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28',
+      Network.Ethereum,
+    );
+
+    expect(formScanApiUrlSpy).toBeCalledWith(scanUrl);
+    expect(deployedAtBlock).toBe(expectedBlock);
+  });
+
+  it('should return null if deployed at block is not found', async () => {
+    console.warn = jest.fn();
+
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      status: 200,
+      data: { result: [] },
+    });
+
+    const deployedAtBlock = await getContractDeployedAtBlock(
+      '0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28',
+      Network.Ethereum,
+    );
+
+    expect(deployedAtBlock).toBeNull();
+  });
+
+  it('should return null if request failed', async () => {
+    console.warn = jest.fn();
+
+    jest.spyOn(axios, 'get').mockResolvedValue({
+      status: 500,
+      data: {},
+    });
+
+    const deployedAtBlock = await getContractDeployedAtBlock(
+      '0x19D97D8fA813EE2f51aD4B4e04EA08bAf4DFfC28',
+      Network.Ethereum,
+    );
+
+    expect(deployedAtBlock).toBeNull();
+  });
+});
+
+describe('formScanApiUrl', () => {
+  it('should return correct api url', () => {
+    const apiUrl = formScanApiUrl('https://etherscan.io');
+
+    expect(apiUrl).toBe('https://api.etherscan.io/api');
+  });
+
+  it('should throw error if url is invalid', () => {
+    expect(() => formScanApiUrl('invalid-url')).toThrow();
+  });
+});
 
 describe('vaultBlockDeployedAt', () => {
   describe('given valid vault addr from eth chain', () => {
